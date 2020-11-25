@@ -28,7 +28,7 @@ The CDM for Real Estate is being developed in a series of interconnected working
 * Documentation 
 * Order Management
 
-![IBPDI Clusters](https://user-images.githubusercontent.com/74652518/100233382-f5447100-2f29-11eb-8dcc-6134da4d33c4.png)
+![IBPDI Clusters](https://user-images.githubusercontent.com/74652518/100233548-2f157780-2f2a-11eb-9c8c-2a39105a4b3b.png)
 
 
 # Versioning
