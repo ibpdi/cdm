@@ -1,5 +1,3 @@
-[press me](https://ibpdi.github.io)
-
 # Common Data Model (CDM)
 A Common Data Model (CDM) is a declarative specification, and definition of standard entities that represent commonly used concepts and activities across business and productivity applications, and is being extended to observational and analytical data as well. The CDM provides well-defined, modular, and extensible business entities such as for example Account, Business Unit, Case, Contact, Lead, Opportunity, and Product, as well as interactions with vendors, workers, and customers, such as activities and service level agreements. Anyone can freely build on and extend or customize CDM definitions to capture additional business-specific ideas.
 
@@ -30,7 +28,8 @@ The CDM for Real Estate is being developed in a series of interconnected working
 * Documentation 
 * Order Management
 
-![IBPDI Clusters](https://user-images.githubusercontent.com/74652518/100234059-d5fa1380-2f2a-11eb-8c45-b204483ffc41.png)
+![IBPDI Clusters](https://user-images.githubusercontent.com/74652518/100234059-d5fa1380-2f2a-11eb-8c45-b204483ffc41.png) 
+To see the current version of the CDM for Real Estate please go to [here](https://ibpdi.github.io).
 
 
 # Versioning
