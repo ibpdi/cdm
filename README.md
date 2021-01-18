@@ -28,19 +28,16 @@ The CDM for Real Estate is being developed in a series of interconnected working
 * Documentation 
 * Order Management
 
-<<<<<<< HEAD
-=======
 ![IBPDI Clusters](https://user-images.githubusercontent.com/74652518/100234059-d5fa1380-2f2a-11eb-8c45-b204483ffc41.png) 
->>>>>>> main
 To see the current version of the CDM for Real Estate please go to [here](https://ibpdi.github.io).
 
 
 # Versioning
 Maintaining forward and backward compatibility is a key goal of the CDM for Real Estate. Therefore, the CDM uses only additive versioning, which means any revision of the CDM following a "V01" release will not:
 
-Introduce new mandatory attributes on previously published entities, or change an optional attribute to be mandatory
-Rename previously published attributes or entities
-Remove previously published attributes
+* Introduce new mandatory attributes on previously published entities, or change an optional attribute to be mandatory
+* Rename previously published attributes or entities
+* Remove previously published attributes
 
 
 # Legal Notice
