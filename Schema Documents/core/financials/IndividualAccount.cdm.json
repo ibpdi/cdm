@@ -1,0 +1,205 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "Account.cdm.json"
+    },
+    {
+      "corpusPath": "/core/organisationalManagement/Organisation.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "IndividualAccount",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "IndividualAccountId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Account. to IndividualAccount.",
+          "entity": {
+            "entityReference": "Account",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Account/(resolvedAttributes)/AccountId"
+                ]
+              }
+            ]
+          },
+          "name": "AccountId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "AccountId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Reference to account",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "explanation": "fk Organisation. to IndividualAccount.",
+          "entity": {
+            "entityReference": "Organisation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Organisation/(resolvedAttributes)/OrganisationId"
+                ]
+              }
+            ]
+          },
+          "name": "OrganisationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OrganisationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Reference to organisation",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "Project",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Individual Account project (project aligned with RICS naming convention)",
+          "maximumLength": 50
+        },
+        {
+          "name": "Category",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Account category according to IBPDI charts of accounts (category aligned with RICS naming convention)",
+          "maximumLength": 75,
+          "appliedTraits": [
+            "means.category"
+          ]
+        },
+        {
+          "name": "Group",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Account group according IBPDI charts of accounts (group aligned with RICS naming convention)",
+          "maximumLength": 75,
+          "appliedTraits": [
+            "means.category"
+          ]
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "StatementType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "BalanceStatement",
+                        "BalanceStatement",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "P&L",
+                        "P&L",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Statement type (Balance statement or P&L account)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "RecordType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Debit",
+                        "Debit",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Credit",
+                        "Credit",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Record type (Debit or Credit)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Version",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Account version",
+          "maximumLength": 50
+        },
+        {
+          "name": "GAAP",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "GAAP type used (if applicable)",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "IndividualAccount",
+      "description": "Company account number based on specific chart of account"
+    }
+  ]
+}

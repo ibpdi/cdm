@@ -1,0 +1,208 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "IndividualAccount.cdm.json"
+    },
+    {
+      "corpusPath": "CostCenter.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Transaction",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "TransactionId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk IndividualAccount. to Transaction.",
+          "entity": {
+            "entityReference": "IndividualAccount",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "IndividualAccount/(resolvedAttributes)/IndividualAccountId"
+                ]
+              }
+            ]
+          },
+          "name": "IndividualAccountId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "IndividualAccountId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "explanation": "fk CostCenter. to Transaction.",
+          "entity": {
+            "entityReference": "CostCenter",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "CostCenter/(resolvedAttributes)/CostCenterId"
+                ]
+              }
+            ]
+          },
+          "name": "CostCenterId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CostCenterId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Actual",
+                        "Actual",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Budget",
+                        "Budget",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Forecast",
+                        "Forecast",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of transaction",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "BookingType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "debit",
+                        "debit",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "credit",
+                        "credit",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Booking type",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Value",
+          "purpose": "hasA",
+          "dataType": "currency",
+          "description": "Cost/Income value of specific transaction",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "BookingCurrency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Currency of booking",
+          "maximumLength": 50
+        },
+        {
+          "name": "PostingDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "description": "Date transaction is posted in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "DocumentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Reference to document",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Transaction",
+      "description": "Individual transaction or account balance at specific reporting date"
+    }
+  ]
+}

@@ -1,0 +1,922 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Space.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Space",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Space",
+        "definition": "resolvedFrom/Space",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Space/attributeContext/Space",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Space/attributeContext/Space/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceId",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceId",
+            "contents": [
+              "Space/hasAttributes/SpaceId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FloorId",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/FloorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Floor",
+                "parent": "Space/attributeContext/Space/FloorId",
+                "definition": "resolvedFrom/Floor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Space/attributeContext/Space/FloorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Space/attributeContext/Space/FloorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Space/attributeContext/Space/FloorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Space/hasAttributes/FloorId/resolutionGuidance/foreignKeyAttribute/FloorId",
+                        "contents": [
+                          "Space/hasAttributes/FloorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Space/attributeContext/Space/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Space/attributeContext/Space/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Space/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceCode",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceCode",
+            "contents": [
+              "Space/hasAttributes/SpaceCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceNumber",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceNumber",
+            "contents": [
+              "Space/hasAttributes/SpaceNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/Type",
+            "contents": [
+              "Space/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Space/attributeContext/Space/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Space/attributeContext/Space/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Space/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Space/attributeContext/Space/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Space/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceHeightUsable",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceHeightUsable",
+            "contents": [
+              "Space/hasAttributes/SpaceHeightUsable"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceHeight",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceHeight",
+            "contents": [
+              "Space/hasAttributes/SpaceHeight"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceVolumeGross",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceVolumeGross",
+            "contents": [
+              "Space/hasAttributes/SpaceVolumeGross"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceVolumeNet",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/SpaceVolumeNet",
+            "contents": [
+              "Space/hasAttributes/SpaceVolumeNet"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryFloorMaterial",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/PrimaryFloorMaterial",
+            "contents": [
+              "Space/hasAttributes/PrimaryFloorMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryWallMaterial",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/PrimaryWallMaterial",
+            "contents": [
+              "Space/hasAttributes/PrimaryWallMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCeilingMaterial",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/PrimaryCeilingMaterial",
+            "contents": [
+              "Space/hasAttributes/PrimaryCeilingMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Rentability",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/Rentability",
+            "contents": [
+              "Space/hasAttributes/Rentability"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EffectZonesHeating",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/EffectZonesHeating",
+            "contents": [
+              "Space/hasAttributes/EffectZonesHeating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EffectZonesCooling",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/EffectZonesCooling",
+            "contents": [
+              "Space/hasAttributes/EffectZonesCooling"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EffectZonesVentilation",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/EffectZonesVentilation",
+            "contents": [
+              "Space/hasAttributes/EffectZonesVentilation"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ClimateHeated",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/ClimateHeated",
+            "contents": [
+              "Space/hasAttributes/ClimateHeated"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ClimateCooled",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/ClimateCooled",
+            "contents": [
+              "Space/hasAttributes/ClimateCooled"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoUseArea",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/CoUseArea",
+            "contents": [
+              "Space/hasAttributes/CoUseArea"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaximumOccupancy",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/MaximumOccupancy",
+            "contents": [
+              "Space/hasAttributes/MaximumOccupancy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VentilationType",
+            "parent": "Space/attributeContext/Space",
+            "definition": "resolvedFrom/Space/hasAttributes/VentilationType",
+            "contents": [
+              "Space/hasAttributes/VentilationType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SpaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FloorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Floor.cdm.json/Floor",
+                        "FloorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/FloorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Reference to the floor which the space belongs to",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Space/attributeContext/Space/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "SpaceCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific Space Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "SpaceNumber",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceNumber",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Number of space"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/Type",
+          "dataFormat": "String",
+          "description": "Type of space",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Residential",
+              "attributeValue": "Residential",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office",
+              "attributeValue": "Office",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial",
+              "attributeValue": "Industrial",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail",
+              "attributeValue": "Retail",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Storage",
+              "attributeValue": "Storage",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Parking space",
+              "attributeValue": "Parking space",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Shaft",
+              "attributeValue": "Shaft",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Staircase",
+              "attributeValue": "Staircase",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other",
+              "attributeValue": "Other",
+              "displayOrder": "8"
+            }
+          ]
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SpaceHeightUsable",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.measurement.size.height",
+            {
+              "traitReference": "means.measurement.units.si.meter",
+              "arguments": [
+                {
+                  "name": "unit",
+                  "value": "meter"
+                },
+                {
+                  "name": "dimension",
+                  "value": "length"
+                },
+                {
+                  "name": "symbol",
+                  "value": "m"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceHeightUsable",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Usable Height of space"
+        },
+        {
+          "name": "SpaceHeight",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.measurement.size.height",
+            {
+              "traitReference": "means.measurement.units.si.meter",
+              "arguments": [
+                {
+                  "name": "unit",
+                  "value": "meter"
+                },
+                {
+                  "name": "dimension",
+                  "value": "length"
+                },
+                {
+                  "name": "symbol",
+                  "value": "m"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceHeight",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Actual space height e.g: 3.6 m"
+        },
+        {
+          "name": "SpaceVolumeGross",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.measurement.size.volume",
+            {
+              "traitReference": "means.measurement.units.si"
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceVolumeGross",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Gross volume of space including surrounding walls"
+        },
+        {
+          "name": "SpaceVolumeNet",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.measurement.size.volume",
+            {
+              "traitReference": "means.measurement.units.si"
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/SpaceVolumeNet",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Gross volume of space excluding surrounding  walls"
+        },
+        {
+          "name": "PrimaryFloorMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/PrimaryFloorMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material of floor",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Timber",
+              "attributeValue": "Timber",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Laminate",
+              "attributeValue": "Laminate",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Vinyl",
+              "attributeValue": "Vinyl",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Bamboo",
+              "attributeValue": "Bamboo",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Cork",
+              "attributeValue": "Cork",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tile (porcelain or ceramic)",
+              "attributeValue": "Tile (porcelain or ceramic)",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tile (natural stone)",
+              "attributeValue": "Tile (natural stone)",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Carpet",
+              "attributeValue": "Carpet",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rubber",
+              "attributeValue": "Rubber",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Poured floors (mastic asphalt and polymeric)",
+              "attributeValue": "Poured floors (mastic asphalt and polymeric)",
+              "displayOrder": "9"
+            }
+          ]
+        },
+        {
+          "name": "PrimaryWallMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/PrimaryWallMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material of wall",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Timber",
+              "attributeValue": "Timber",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Paint",
+              "attributeValue": "Paint",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tiles",
+              "attributeValue": "Tiles",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Glass",
+              "attributeValue": "Glass",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Brick",
+              "attributeValue": "Brick",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Metal",
+              "attributeValue": "Metal",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Vinyl",
+              "attributeValue": "Vinyl",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Stone",
+              "attributeValue": "Stone",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Concrete",
+              "attributeValue": "Concrete",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Ceramic Tiles",
+              "attributeValue": "Ceramic Tiles",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Plastic",
+              "attributeValue": "Plastic",
+              "displayOrder": "10"
+            }
+          ]
+        },
+        {
+          "name": "PrimaryCeilingMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/PrimaryCeilingMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material of ceiling e.g: cement",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Timber",
+              "attributeValue": "Timber",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Glypsum",
+              "attributeValue": "Glypsum",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Vinyl",
+              "attributeValue": "Vinyl",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Fibre-cement",
+              "attributeValue": "Fibre-cement",
+              "displayOrder": "3"
+            }
+          ]
+        },
+        {
+          "name": "Rentability",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Space/attributeContext/Space/Rentability",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Status of the space is eligible for renting out (Y/N)"
+        },
+        {
+          "name": "EffectZonesHeating",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "means.measurement.units.si"
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/EffectZonesHeating",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Area that is heated"
+        },
+        {
+          "name": "EffectZonesCooling",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "means.measurement.units.si"
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/EffectZonesCooling",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Area that is cooled"
+        },
+        {
+          "name": "EffectZonesVentilation",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "means.measurement.units.si"
+            }
+          ],
+          "attributeContext": "Space/attributeContext/Space/EffectZonesVentilation",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Area that is ventilated"
+        },
+        {
+          "name": "ClimateHeated",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Space/attributeContext/Space/ClimateHeated",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Define if space is climate heated (Y/N)"
+        },
+        {
+          "name": "ClimateCooled",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Space/attributeContext/Space/ClimateCooled",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Define if space is climate cooled (Y/N)"
+        },
+        {
+          "name": "CoUseArea",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Space/attributeContext/Space/CoUseArea",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is the space used by multiple tenants (Y/N)"
+        },
+        {
+          "name": "MaximumOccupancy",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "Space/attributeContext/Space/MaximumOccupancy",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Define maximum occupancy of space"
+        },
+        {
+          "name": "VentilationType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Space/attributeContext/Space/VentilationType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Define the ventilation type e.g: exhaust, supply, balanced, and heat-recovery",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Exhaust",
+              "attributeValue": "Exhaust",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Supply",
+              "attributeValue": "Supply",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Balanced",
+              "attributeValue": "Balanced",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Heat-recovery",
+              "attributeValue": "Heat-recovery",
+              "displayOrder": "3"
+            }
+          ]
+        }
+      ],
+      "displayName": "Space",
+      "description": "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.",
+      "version": "4.3"
+    }
+  ]
+}

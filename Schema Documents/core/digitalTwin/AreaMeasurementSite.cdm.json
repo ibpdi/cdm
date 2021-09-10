@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "AreaMeasurement.cdm.json"
+    },
+    {
+      "corpusPath": "Site.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurementSite",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk AreaMeasurement. to AreaMeasurementSite.",
+          "entity": {
+            "entityReference": "AreaMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "AreaMeasurement/(resolvedAttributes)/AreaMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "AreaMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "AreaMeasurementId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Site. to AreaMeasurementSite.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "AreaMeasurementSite",
+      "description": "Linking entity between AreaMeasurement and Site"
+    }
+  ]
+}

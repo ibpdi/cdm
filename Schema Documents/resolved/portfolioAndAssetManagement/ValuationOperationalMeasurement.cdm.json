@@ -1,0 +1,183 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/ValuationOperationalMeasurement.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ValuationOperationalMeasurement",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ValuationOperationalMeasurement",
+        "definition": "resolvedFrom/ValuationOperationalMeasurement",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValuationId",
+            "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement",
+            "definition": "resolvedFrom/ValuationOperationalMeasurement/hasAttributes/ValuationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Valuation",
+                "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/ValuationId",
+                "definition": "resolvedFrom/Valuation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/ValuationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/ValuationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/ValuationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ValuationOperationalMeasurement/hasAttributes/ValuationId/resolutionGuidance/foreignKeyAttribute/ValuationId",
+                        "contents": [
+                          "ValuationOperationalMeasurement/hasAttributes/ValuationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement",
+            "definition": "resolvedFrom/ValuationOperationalMeasurement/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "OperationalMeasurement",
+                "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/OperationalMeasurementId",
+                "definition": "resolvedFrom/OperationalMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/OperationalMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/OperationalMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ValuationOperationalMeasurement/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "contents": [
+                          "ValuationOperationalMeasurement/hasAttributes/OperationalMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ValuationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/portfolioAndAssetManagement/Valuation.cdm.json/Valuation",
+                        "ValuationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/ValuationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
+                        "OperationalMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ValuationOperationalMeasurement/attributeContext/ValuationOperationalMeasurement/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 36
+        }
+      ],
+      "displayName": "ValuationOperationalMeasurement",
+      "description": "Linking entity between Valuation and OperationalMeasurement",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "propertyManagement",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Dunning",
+      "entityPath": "Dunning.1.0.cdm.json/Dunning",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalContract",
+      "entityPath": "RentalContract.1.0.cdm.json/RentalContract",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalContractRentalUnit",
+      "entityPath": "RentalContractRentalUnit.1.0.cdm.json/RentalContractRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalContractRole",
+      "entityPath": "RentalContractRole.1.0.cdm.json/RentalContractRole",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalOption",
+      "entityPath": "RentalOption.1.0.cdm.json/RentalOption",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalPayment",
+      "entityPath": "RentalPayment.1.0.cdm.json/RentalPayment",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnit",
+      "entityPath": "RentalUnit.1.0.cdm.json/RentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitAreaMeasurement",
+      "entityPath": "RentalUnitAreaMeasurement.1.0.cdm.json/RentalUnitAreaMeasurement",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitBuilding",
+      "entityPath": "RentalUnitBuilding.1.0.cdm.json/RentalUnitBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitFloor",
+      "entityPath": "RentalUnitFloor.1.0.cdm.json/RentalUnitFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitLand",
+      "entityPath": "RentalUnitLand.1.0.cdm.json/RentalUnitLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitSpace",
+      "entityPath": "RentalUnitSpace.1.0.cdm.json/RentalUnitSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitUnit",
+      "entityPath": "RentalUnitUnit.1.0.cdm.json/RentalUnitUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TenantCommunication",
+      "entityPath": "TenantCommunication.1.0.cdm.json/TenantCommunication",
+      "dataPartitionPatterns": []
+    },
+
+    {
+      "type": "LocalEntity",
+      "entityName": "TenantCommunicationRole",
+      "entityPath": "TenantCommunicationRole.1.0.cdm.json/TenantCommunicationRole",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

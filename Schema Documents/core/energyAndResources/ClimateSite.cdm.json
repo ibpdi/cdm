@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Climate.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Site.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ClimateSite",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Climate. to ClimateSite.",
+          "entity": {
+            "entityReference": "Climate",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Climate/(resolvedAttributes)/ClimateId"
+                ]
+              }
+            ]
+          },
+          "name": "ClimateId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ClimateId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 36
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Site. to ClimateSite.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "ClimateSite",
+      "description": "Linking entity between Climate and Site"
+    }
+  ]
+}

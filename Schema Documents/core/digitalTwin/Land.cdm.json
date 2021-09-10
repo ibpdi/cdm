@@ -1,0 +1,212 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "Site.cdm.json"
+    },
+    {
+      "corpusPath": "Servitudes.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Land",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "LandId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Site. to Land.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Reference to the site which the land belongs to",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "explanation": "fk Servitudes. to Land.",
+          "entity": {
+            "entityReference": "Servitudes",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Servitudes/(resolvedAttributes)/ServitudeId"
+                ]
+              }
+            ]
+          },
+          "name": "ServitudeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ServitudeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "isNullable": true,
+                "description": "Reference to the Servitude which belongs to the land",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "LandCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific Land Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Agricultural",
+                        "Agricultural",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Recreational",
+                        "Recreational",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Industrial",
+                        "Industrial",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Non-industrial",
+                        "Non-industrial",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Traffic",
+                        "Traffic",
+                        "4"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of land",
+          "maximumLength": 75,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "LandCoverage",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Fully",
+                        "Fully",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Partially",
+                        "Partially",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Not covered",
+                        "Not covered",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Development level of land",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "LandParcelNr",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "District/Zoning number registered for the Plot of land",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "GeorefId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "A reference to Guid from the geo-coordinate entity",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Land",
+      "description": "A defined area of land, possibly covered with water, on which the project construction is to be completed or already completed"
+    }
+  ]
+}

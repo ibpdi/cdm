@@ -1,0 +1,307 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/Organisation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Organisation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Organisation",
+        "definition": "resolvedFrom/Organisation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Organisation/attributeContext/Organisation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Organisation/attributeContext/Organisation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/OrganisationId",
+            "contents": [
+              "Organisation/hasAttributes/OrganisationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ParentId",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/ParentId",
+            "contents": [
+              "Organisation/hasAttributes/ParentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Organisation/attributeContext/Organisation/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Organisation/attributeContext/Organisation/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Organisation/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Industry",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/Industry",
+            "contents": [
+              "Organisation/hasAttributes/Industry"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContactInfo",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/ContactInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ContactInfo",
+                "parent": "Organisation/attributeContext/Organisation/ContactInfo",
+                "definition": "resolvedFrom/ContactInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Email",
+                    "parent": "Organisation/attributeContext/Organisation/ContactInfo/ContactInfo",
+                    "definition": "resolvedFrom/ContactInfo/members/Email",
+                    "contents": [
+                      "Organisation/hasAttributes/Email"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Telephone",
+                    "parent": "Organisation/attributeContext/Organisation/ContactInfo/ContactInfo",
+                    "definition": "resolvedFrom/ContactInfo/members/Telephone",
+                    "contents": [
+                      "Organisation/hasAttributes/Telephone"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Fax",
+                    "parent": "Organisation/attributeContext/Organisation/ContactInfo/ContactInfo",
+                    "definition": "resolvedFrom/ContactInfo/members/Fax",
+                    "contents": [
+                      "Organisation/hasAttributes/Fax"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VatNumber",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/VatNumber",
+            "contents": [
+              "Organisation/hasAttributes/VatNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LegalEntity",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/LegalEntity",
+            "contents": [
+              "Organisation/hasAttributes/LegalEntity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FiscalYearStartDate",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/FiscalYearStartDate",
+            "contents": [
+              "Organisation/hasAttributes/FiscalYearStartDate"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/OrganisationId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ParentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/ParentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "Industry",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/Industry",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Industry of organisation",
+          "maximumLength": 50
+        },
+        {
+          "name": "Email",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.service.email"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/ContactInfo/ContactInfo/Email",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Email address of contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "Telephone",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.service.phone"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/ContactInfo/ContactInfo/Telephone",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Phone number of contact person",
+          "maximumLength": 50
+        },
+        {
+          "name": "Fax",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.service.phone.fax"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/ContactInfo/ContactInfo/Fax",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fax number of contact person",
+          "maximumLength": 50
+        },
+        {
+          "name": "VatNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/VatNumber",
+          "dataFormat": "String",
+          "description": "Vat number of organisation",
+          "maximumLength": 50
+        },
+        {
+          "name": "LegalEntity",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/LegalEntity",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is the organisation an legal entity (Y/N)"
+        },
+        {
+          "name": "FiscalYearStartDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/FiscalYearStartDate",
+          "dataFormat": "DateTime",
+          "description": "Start date of fiscal year for organisation in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Organisation",
+      "description": "Information about organisations (internal and external)",
+      "version": "4.3"
+    }
+  ]
+}

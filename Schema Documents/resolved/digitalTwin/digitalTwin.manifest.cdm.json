@@ -1,0 +1,786 @@
+{
+  "manifestName": "digitalTwin",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurement",
+      "entityPath": "AreaMeasurement.cdm.json/AreaMeasurement"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementBuilding",
+      "entityPath": "AreaMeasurementBuilding.cdm.json/AreaMeasurementBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementFloor",
+      "entityPath": "AreaMeasurementFloor.cdm.json/AreaMeasurementFloor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementLand",
+      "entityPath": "AreaMeasurementLand.cdm.json/AreaMeasurementLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementSite",
+      "entityPath": "AreaMeasurementSite.cdm.json/AreaMeasurementSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementSpace",
+      "entityPath": "AreaMeasurementSpace.cdm.json/AreaMeasurementSpace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementUnit",
+      "entityPath": "AreaMeasurementUnit.cdm.json/AreaMeasurementUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Building",
+      "entityPath": "Building.cdm.json/Building"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Certificate",
+      "entityPath": "Certificate.cdm.json/Certificate"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateBuilding",
+      "entityPath": "CertificateBuilding.cdm.json/CertificateBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateComponent",
+      "entityPath": "CertificateComponent.cdm.json/CertificateComponent"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateSystem",
+      "entityPath": "CertificateSystem.cdm.json/CertificateSystem"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateValuation",
+      "entityPath": "CertificateValuation.cdm.json/CertificateValuation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Component",
+      "entityPath": "Component.cdm.json/Component"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentBuilding",
+      "entityPath": "ComponentBuilding.cdm.json/ComponentBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentFloor",
+      "entityPath": "ComponentFloor.cdm.json/ComponentFloor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentSite",
+      "entityPath": "ComponentSite.cdm.json/ComponentSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentSpace",
+      "entityPath": "ComponentSpace.cdm.json/ComponentSpace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentSystem",
+      "entityPath": "ComponentSystem.cdm.json/ComponentSystem"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentType",
+      "entityPath": "ComponentType.cdm.json/ComponentType"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentUnit",
+      "entityPath": "ComponentUnit.cdm.json/ComponentUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Floor",
+      "entityPath": "Floor.cdm.json/Floor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Land",
+      "entityPath": "Land.cdm.json/Land"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Servitudes",
+      "entityPath": "Servitudes.cdm.json/Servitudes"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Site",
+      "entityPath": "Site.cdm.json/Site"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Space",
+      "entityPath": "Space.cdm.json/Space"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "System",
+      "entityPath": "System.cdm.json/System"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Unit",
+      "entityPath": "Unit.cdm.json/Unit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitBuilding",
+      "entityPath": "UnitBuilding.cdm.json/UnitBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitFloor",
+      "entityPath": "UnitFloor.cdm.json/UnitFloor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitLand",
+      "entityPath": "UnitLand.cdm.json/UnitLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitSite",
+      "entityPath": "UnitSite.cdm.json/UnitSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitSpace",
+      "entityPath": "UnitSpace.cdm.json/UnitSpace"
+    }
+  ],
+  "relationships": [
+    {
+      "fromEntity": "AreaMeasurementBuilding.cdm.json/AreaMeasurementBuilding",
+      "fromEntityAttribute": "AreaMeasurementId",
+      "toEntity": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "toEntityAttribute": "AreaMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementFloor.cdm.json/AreaMeasurementFloor",
+      "fromEntityAttribute": "AreaMeasurementId",
+      "toEntity": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "toEntityAttribute": "AreaMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementLand.cdm.json/AreaMeasurementLand",
+      "fromEntityAttribute": "AreaMeasurementId",
+      "toEntity": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "toEntityAttribute": "AreaMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementSite.cdm.json/AreaMeasurementSite",
+      "fromEntityAttribute": "AreaMeasurementId",
+      "toEntity": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "toEntityAttribute": "AreaMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementSpace.cdm.json/AreaMeasurementSpace",
+      "fromEntityAttribute": "AreaMeasurementId",
+      "toEntity": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "toEntityAttribute": "AreaMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementUnit.cdm.json/AreaMeasurementUnit",
+      "fromEntityAttribute": "AreaMeasurementId",
+      "toEntity": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "toEntityAttribute": "AreaMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementBuilding.cdm.json/AreaMeasurementBuilding",
+      "fromEntityAttribute": "BuildingId",
+      "toEntity": "Building.cdm.json/Building",
+      "toEntityAttribute": "BuildingId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementFloor.cdm.json/AreaMeasurementFloor",
+      "fromEntityAttribute": "FloorId",
+      "toEntity": "Floor.cdm.json/Floor",
+      "toEntityAttribute": "FloorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementLand.cdm.json/AreaMeasurementLand",
+      "fromEntityAttribute": "LandId",
+      "toEntity": "Land.cdm.json/Land",
+      "toEntityAttribute": "LandId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementSite.cdm.json/AreaMeasurementSite",
+      "fromEntityAttribute": "SiteId",
+      "toEntity": "Site.cdm.json/Site",
+      "toEntityAttribute": "SiteId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementSpace.cdm.json/AreaMeasurementSpace",
+      "fromEntityAttribute": "SpaceId",
+      "toEntity": "Space.cdm.json/Space",
+      "toEntityAttribute": "SpaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AreaMeasurementUnit.cdm.json/AreaMeasurementUnit",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Building.cdm.json/Building",
+      "fromEntityAttribute": "SiteId",
+      "toEntity": "Site.cdm.json/Site",
+      "toEntityAttribute": "SiteId"
+    },
+    {
+      "fromEntity": "CertificateBuilding.cdm.json/CertificateBuilding",
+      "fromEntityAttribute": "BuildingId",
+      "toEntity": "Building.cdm.json/Building",
+      "toEntityAttribute": "BuildingId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentBuilding.cdm.json/ComponentBuilding",
+      "fromEntityAttribute": "BuildingId",
+      "toEntity": "Building.cdm.json/Building",
+      "toEntityAttribute": "BuildingId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Floor.cdm.json/Floor",
+      "fromEntityAttribute": "BuildingId",
+      "toEntity": "Building.cdm.json/Building",
+      "toEntityAttribute": "BuildingId"
+    },
+    {
+      "fromEntity": "UnitBuilding.cdm.json/UnitBuilding",
+      "fromEntityAttribute": "BuildingId",
+      "toEntity": "Building.cdm.json/Building",
+      "toEntityAttribute": "BuildingId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CertificateBuilding.cdm.json/CertificateBuilding",
+      "fromEntityAttribute": "CertificateId",
+      "toEntity": "Certificate.cdm.json/Certificate",
+      "toEntityAttribute": "CertificateId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CertificateComponent.cdm.json/CertificateComponent",
+      "fromEntityAttribute": "CertificateId",
+      "toEntity": "Certificate.cdm.json/Certificate",
+      "toEntityAttribute": "CertificateId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CertificateSystem.cdm.json/CertificateSystem",
+      "fromEntityAttribute": "CertificateId",
+      "toEntity": "Certificate.cdm.json/Certificate",
+      "toEntityAttribute": "CertificateId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CertificateValuation.cdm.json/CertificateValuation",
+      "fromEntityAttribute": "CertificateId",
+      "toEntity": "Certificate.cdm.json/Certificate",
+      "toEntityAttribute": "CertificateId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CertificateComponent.cdm.json/CertificateComponent",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CertificateSystem.cdm.json/CertificateSystem",
+      "fromEntityAttribute": "SystemId",
+      "toEntity": "System.cdm.json/System",
+      "toEntityAttribute": "SystemId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Component.cdm.json/Component",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "ComponentBuilding.cdm.json/ComponentBuilding",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentFloor.cdm.json/ComponentFloor",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentSite.cdm.json/ComponentSite",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentSpace.cdm.json/ComponentSpace",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentSystem.cdm.json/ComponentSystem",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentUnit.cdm.json/ComponentUnit",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentFloor.cdm.json/ComponentFloor",
+      "fromEntityAttribute": "FloorId",
+      "toEntity": "Floor.cdm.json/Floor",
+      "toEntityAttribute": "FloorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentSite.cdm.json/ComponentSite",
+      "fromEntityAttribute": "SiteId",
+      "toEntity": "Site.cdm.json/Site",
+      "toEntityAttribute": "SiteId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentSpace.cdm.json/ComponentSpace",
+      "fromEntityAttribute": "SpaceId",
+      "toEntity": "Space.cdm.json/Space",
+      "toEntityAttribute": "SpaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentSystem.cdm.json/ComponentSystem",
+      "fromEntityAttribute": "SystemId",
+      "toEntity": "System.cdm.json/System",
+      "toEntityAttribute": "SystemId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ComponentUnit.cdm.json/ComponentUnit",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Space.cdm.json/Space",
+      "fromEntityAttribute": "FloorId",
+      "toEntity": "Floor.cdm.json/Floor",
+      "toEntityAttribute": "FloorId"
+    },
+    {
+      "fromEntity": "UnitFloor.cdm.json/UnitFloor",
+      "fromEntityAttribute": "FloorId",
+      "toEntity": "Floor.cdm.json/Floor",
+      "toEntityAttribute": "FloorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Land.cdm.json/Land",
+      "fromEntityAttribute": "SiteId",
+      "toEntity": "Site.cdm.json/Site",
+      "toEntityAttribute": "SiteId"
+    },
+    {
+      "fromEntity": "Land.cdm.json/Land",
+      "fromEntityAttribute": "ServitudeId",
+      "toEntity": "Servitudes.cdm.json/Servitudes",
+      "toEntityAttribute": "ServitudeId"
+    },
+    {
+      "fromEntity": "UnitLand.cdm.json/UnitLand",
+      "fromEntityAttribute": "LandId",
+      "toEntity": "Land.cdm.json/Land",
+      "toEntityAttribute": "LandId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitSite.cdm.json/UnitSite",
+      "fromEntityAttribute": "SiteId",
+      "toEntity": "Site.cdm.json/Site",
+      "toEntityAttribute": "SiteId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitSpace.cdm.json/UnitSpace",
+      "fromEntityAttribute": "SpaceId",
+      "toEntity": "Space.cdm.json/Space",
+      "toEntityAttribute": "SpaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitBuilding.cdm.json/UnitBuilding",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitFloor.cdm.json/UnitFloor",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitLand.cdm.json/UnitLand",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitSite.cdm.json/UnitSite",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "UnitSpace.cdm.json/UnitSpace",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0"
+}

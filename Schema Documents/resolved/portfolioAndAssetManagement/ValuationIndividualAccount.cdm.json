@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/ValuationIndividualAccount.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ValuationIndividualAccount",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ValuationIndividualAccount",
+        "definition": "resolvedFrom/ValuationIndividualAccount",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValuationId",
+            "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount",
+            "definition": "resolvedFrom/ValuationIndividualAccount/hasAttributes/ValuationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Valuation",
+                "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/ValuationId",
+                "definition": "resolvedFrom/Valuation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/ValuationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/ValuationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/ValuationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ValuationIndividualAccount/hasAttributes/ValuationId/resolutionGuidance/foreignKeyAttribute/ValuationId",
+                        "contents": [
+                          "ValuationIndividualAccount/hasAttributes/ValuationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IndividualAccountId",
+            "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount",
+            "definition": "resolvedFrom/ValuationIndividualAccount/hasAttributes/IndividualAccountId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "IndividualAccount",
+                "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/IndividualAccountId",
+                "definition": "resolvedFrom/IndividualAccount"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/IndividualAccountId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/IndividualAccountId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ValuationIndividualAccount/hasAttributes/IndividualAccountId/resolutionGuidance/foreignKeyAttribute/IndividualAccountId",
+                        "contents": [
+                          "ValuationIndividualAccount/hasAttributes/IndividualAccountId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ValuationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/portfolioAndAssetManagement/Valuation.cdm.json/Valuation",
+                        "ValuationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/ValuationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "IndividualAccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/IndividualAccount.cdm.json/IndividualAccount",
+                        "IndividualAccountId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ValuationIndividualAccount/attributeContext/ValuationIndividualAccount/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ValuationAccount",
+      "description": "Linking entity between Valuation and IndividualAccount",
+      "version": "4.3"
+    }
+  ]
+}

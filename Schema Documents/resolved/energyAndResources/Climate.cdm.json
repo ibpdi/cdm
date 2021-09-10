@@ -1,0 +1,585 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/Climate.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Climate",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Climate",
+        "definition": "resolvedFrom/Climate",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Climate/attributeContext/Climate",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Climate/attributeContext/Climate/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ClimateId",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/ClimateId",
+            "contents": [
+              "Climate/hasAttributes/ClimateId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Experiment",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Experiment",
+            "contents": [
+              "Climate/hasAttributes/Experiment"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TemporalResolution",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/TemporalResolution",
+            "contents": [
+              "Climate/hasAttributes/TemporalResolution"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpatialResolution",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/SpatialResolution",
+            "contents": [
+              "Climate/hasAttributes/SpatialResolution"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GCM",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/GCM",
+            "contents": [
+              "Climate/hasAttributes/GCM"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RCM",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/RCM",
+            "contents": [
+              "Climate/hasAttributes/RCM"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SimV",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/SimV",
+            "contents": [
+              "Climate/hasAttributes/SimV"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EnsM",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/EnsM",
+            "contents": [
+              "Climate/hasAttributes/EnsM"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Value",
+            "contents": [
+              "Climate/hasAttributes/Value"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Unit",
+            "contents": [
+              "Climate/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Climate/attributeContext/Climate/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Climate/attributeContext/Climate/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Climate/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Climate/attributeContext/Climate/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Climate/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LocationType",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/LocationType",
+            "contents": [
+              "Climate/hasAttributes/LocationType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoordinateSystem",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/CoordinateSystem",
+            "contents": [
+              "Climate/hasAttributes/CoordinateSystem"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Location",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Location",
+            "contents": [
+              "Climate/hasAttributes/Location"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Latitude",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Latitude",
+            "contents": [
+              "Climate/hasAttributes/Latitude"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Longitude",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Longitude",
+            "contents": [
+              "Climate/hasAttributes/Longitude"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PosX",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/PosX",
+            "contents": [
+              "Climate/hasAttributes/PosX"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PosY",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/PosY",
+            "contents": [
+              "Climate/hasAttributes/PosY"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Variable",
+            "parent": "Climate/attributeContext/Climate",
+            "definition": "resolvedFrom/Climate/hasAttributes/Variable",
+            "contents": [
+              "Climate/hasAttributes/Variable"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ClimateId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/ClimateId",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "Experiment",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Experiment",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of simulation of regional climate model e.g. Historical, Evaluation, RCP2.6",
+          "maximumLength": 75
+        },
+        {
+          "name": "TemporalResolution",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/TemporalResolution",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Temporal resolution of data (can be the time period over which raw data is aggregated)",
+          "maximumLength": 50
+        },
+        {
+          "name": "SpatialResolution",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/SpatialResolution",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Spatial resolution of data",
+          "maximumLength": 50
+        },
+        {
+          "name": "GCM",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/GCM",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Global climate model used",
+          "maximumLength": 75
+        },
+        {
+          "name": "RCM",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/RCM",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Regional climate model used",
+          "maximumLength": 75
+        },
+        {
+          "name": "SimV",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/SimV",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Run number of certain climate model or model combination",
+          "maximumLength": 75
+        },
+        {
+          "name": "EnsM",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/EnsM",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Information on members of a model ensemble and changed conditions ('realisation', 'initialisation', 'physics'). Control member; 'r1i1p1'",
+          "maximumLength": 75
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "is.dataFormat.big",
+            {
+              "traitReference": "means.measurement.dimension.temperature",
+              "arguments": [
+                "temperature"
+              ]
+            },
+            {
+              "traitReference": "means.measurement.units.si.celsius",
+              "arguments": [
+                {
+                  "name": "unit",
+                  "value": "celsius"
+                },
+                {
+                  "name": "dimension",
+                  "value": "temperature"
+                },
+                {
+                  "name": "symbol",
+                  "value": "C"
+                }
+              ]
+            },
+            {
+              "traitReference": "has.measurement.fundamentalComponent.kelvin",
+              "arguments": [
+                {
+                  "name": "fundamentalUnit",
+                  "value": "kelvin"
+                },
+                {
+                  "name": "symbol",
+                  "value": "K"
+                },
+                {
+                  "name": "dimension",
+                  "value": "temperature"
+                },
+                {
+                  "name": "fundamentalExponent",
+                  "value": "1"
+                },
+                {
+                  "name": "fundamentalScale",
+                  "value": "1"
+                },
+                {
+                  "name": "fundamentalOffset",
+                  "value": "273.15"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Value",
+          "dataFormat": "Double",
+          "description": "Value of entity."
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Unit",
+          "dataFormat": "String",
+          "description": "Unit of observed value",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "LocationType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/LocationType",
+          "dataFormat": "String",
+          "description": "Type of spatial reference e.g. Zip code or geographic coordinates",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "NUTS3",
+              "attributeValue": "NUTS3",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Zip Code",
+              "attributeValue": "Zip Code",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Geographic coordinates",
+              "attributeValue": "Geographic coordinates",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projected coordinates",
+              "attributeValue": "Projected coordinates",
+              "displayOrder": "3"
+            }
+          ]
+        },
+        {
+          "name": "CoordinateSystem",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/CoordinateSystem",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Specific coordinate system used",
+          "maximumLength": 50
+        },
+        {
+          "name": "Location",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.geo"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Location",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Localisation of observed data in case of non-grid location types",
+          "maximumLength": 50
+        },
+        {
+          "name": "Latitude",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.location.latitude"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Latitude",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Latitude coordinate in case of geographic coordinates"
+        },
+        {
+          "name": "Longitude",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.location.longitude"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Longitude",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Longitude coordinate in case of geographic coordinates"
+        },
+        {
+          "name": "PosX",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.location.geo.centroid.X"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/PosX",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Vertical coordinate in case of projected coordinates"
+        },
+        {
+          "name": "PosY",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.location.geo.centroid.y"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/PosY",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Vertical coordinate in case of projected coordinates"
+        },
+        {
+          "name": "Variable",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Climate/attributeContext/Climate/Variable",
+          "dataFormat": "String",
+          "description": "Observed variable",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Climate",
+      "description": "Regional information on past and future amount of heating and cooling degree days (for potential climate normalisation and projection of energy demand)",
+      "version": "4.3"
+    }
+  ]
+}

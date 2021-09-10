@@ -1,0 +1,74 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "Component.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Certificate",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "CertificateId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Type of Certificate e.g: LEED, BREEAM, DGNB",
+          "maximumLength": 50
+        },
+        {
+          "name": "Value",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Value of entity."
+        },
+        {
+          "name": "IssuingDate",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Date certificate was issued in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "CertificateUrl",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Certificate Url",
+          "maximumLength": 200,
+          "appliedTraits": [
+            "means.reference.URL"
+          ]
+        },
+        {
+          "name": "DocumentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Certificate",
+      "description": "Any official document related to building, equipment, system etc."
+    }
+  ]
+}

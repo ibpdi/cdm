@@ -1,0 +1,457 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/propertyManagement/RentalContract.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalContract",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RentalContract",
+        "definition": "resolvedFrom/RentalContract",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RentalContract/attributeContext/RentalContract/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalContractId",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/RentalContractId",
+            "contents": [
+              "RentalContract/hasAttributes/RentalContractId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainContractId",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/MainContractId",
+            "contents": [
+              "RentalContract/hasAttributes/MainContractId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContractCode",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/ContractCode",
+            "contents": [
+              "RentalContract/hasAttributes/ContractCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContractType",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/ContractType",
+            "contents": [
+              "RentalContract/hasAttributes/ContractType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CompanyCode",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/CompanyCode",
+            "contents": [
+              "RentalContract/hasAttributes/CompanyCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContractName",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/ContractName",
+            "contents": [
+              "RentalContract/hasAttributes/ContractName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContractGroup",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/ContractGroup",
+            "contents": [
+              "RentalContract/hasAttributes/ContractGroup"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentBeginDate",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/RentBeginDate",
+            "contents": [
+              "RentalContract/hasAttributes/RentBeginDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentEndDate",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/RentEndDate",
+            "contents": [
+              "RentalContract/hasAttributes/RentEndDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "RentalContract/attributeContext/RentalContract/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "RentalContract/attributeContext/RentalContract/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "RentalContract/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "RentalContract/attributeContext/RentalContract/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "RentalContract/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PeriodOfNotice",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/PeriodOfNotice",
+            "contents": [
+              "RentalContract/hasAttributes/PeriodOfNotice"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PaymentInAdvance",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/PaymentInAdvance",
+            "contents": [
+              "RentalContract/hasAttributes/PaymentInAdvance"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PaymentFrequency",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/PaymentFrequency",
+            "contents": [
+              "RentalContract/hasAttributes/PaymentFrequency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ShortTermLease",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/ShortTermLease",
+            "contents": [
+              "RentalContract/hasAttributes/ShortTermLease"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TenantSector",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/TenantSector",
+            "contents": [
+              "RentalContract/hasAttributes/TenantSector"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TurnoverReportingInterval",
+            "parent": "RentalContract/attributeContext/RentalContract",
+            "definition": "resolvedFrom/RentalContract/hasAttributes/TurnoverReportingInterval",
+            "contents": [
+              "RentalContract/hasAttributes/TurnoverReportingInterval"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RentalContractId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/RentalContractId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainContractId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/MainContractId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Main contract code",
+          "maximumLength": 50
+        },
+        {
+          "name": "ContractCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ContractCode",
+          "dataFormat": "String",
+          "description": "Contract Code (e.g. SAP)",
+          "maximumLength": 70
+        },
+        {
+          "name": "ContractType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ContractType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Contract type",
+          "maximumLength": 50
+        },
+        {
+          "name": "CompanyCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/CompanyCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Company Code (e.g. SAP code)",
+          "maximumLength": 70
+        },
+        {
+          "name": "ContractName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ContractName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Contract name",
+          "maximumLength": 200
+        },
+        {
+          "name": "ContractGroup",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ContractGroup",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Contract group",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentBeginDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/RentBeginDate",
+          "dataFormat": "DateTime",
+          "description": "Date original contract starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "RentEndDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/RentEndDate",
+          "dataFormat": "DateTime",
+          "description": "Date original contract ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PeriodOfNotice",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/PeriodOfNotice",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Period of notice e.g. monthly; 3 month; 6 month etc.",
+          "maximumLength": 50
+        },
+        {
+          "name": "PaymentInAdvance",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/PaymentInAdvance",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Does the payment have to be conducted in advance (Y/N)"
+        },
+        {
+          "name": "PaymentFrequency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/PaymentFrequency",
+          "dataFormat": "String",
+          "description": "Frequency of payment e.g. weekly, monthly, quarterly etc.",
+          "maximumLength": 50
+        },
+        {
+          "name": "ShortTermLease",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/ShortTermLease",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is this a short term lease (Y/N)"
+        },
+        {
+          "name": "TenantSector",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/TenantSector",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Sector / Business area of the tenant",
+          "maximumLength": 50
+        },
+        {
+          "name": "TurnoverReportingInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalContract/attributeContext/RentalContract/TurnoverReportingInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "If turnover rent, reporting interval for the tenant turnover: monthly, quarterly, etc.",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RentalContract",
+      "description": "Agreement identifying all information regarding the rental relationship",
+      "version": "4.3"
+    }
+  ]
+}

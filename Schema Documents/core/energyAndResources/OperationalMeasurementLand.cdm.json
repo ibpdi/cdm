@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "OperationalMeasurement.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Land.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "OperationalMeasurementLand",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk OperationalMeasurement. to OperationalMeasurementLand.",
+          "entity": {
+            "entityReference": "OperationalMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "OperationalMeasurement/(resolvedAttributes)/OperationalMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "OperationalMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OperationalMeasurementId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 36
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Land. to OperationalMeasurementLand.",
+          "entity": {
+            "entityReference": "Land",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Land/(resolvedAttributes)/LandId"
+                ]
+              }
+            ]
+          },
+          "name": "LandId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "LandId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "OperationalMeasurementLand",
+      "description": "Linking entity between OperationalMeasurement and Land"
+    }
+  ]
+}

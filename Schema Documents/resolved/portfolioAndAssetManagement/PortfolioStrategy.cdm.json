@@ -1,0 +1,414 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/PortfolioStrategy.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PortfolioStrategy",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PortfolioStrategy",
+        "definition": "resolvedFrom/PortfolioStrategy",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortfolioStrategyId",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/PortfolioStrategyId",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/PortfolioStrategyId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortfolioId",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/PortfolioId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Portfolio",
+                "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/PortfolioId",
+                "definition": "resolvedFrom/Portfolio"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/PortfolioId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/PortfolioId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/PortfolioId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/PortfolioId/resolutionGuidance/foreignKeyAttribute/PortfolioId",
+                        "contents": [
+                          "PortfolioStrategy/hasAttributes/PortfolioId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "PortfolioStrategy/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InvestmentType",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/InvestmentType",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/InvestmentType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "PortfolioStrategy/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "PortfolioStrategy/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StrategyObjectiveTargetsSteering",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/StrategyObjectiveTargetsSteering",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/StrategyObjectiveTargetsSteering"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StrategyObjectiveValuesSteering",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/StrategyObjectiveValuesSteering",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/StrategyObjectiveValuesSteering"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StrategyObjectiveUnitSteering",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/StrategyObjectiveUnitSteering",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/StrategyObjectiveUnitSteering"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StrategyObjectiveTargets",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/StrategyObjectiveTargets",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/StrategyObjectiveTargets"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StrategyObjectiveValues",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/StrategyObjectiveValues",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/StrategyObjectiveValues"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StrategyObjectiveUnit",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/StrategyObjectiveUnit",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/StrategyObjectiveUnit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Source",
+            "parent": "PortfolioStrategy/attributeContext/PortfolioStrategy",
+            "definition": "resolvedFrom/PortfolioStrategy/hasAttributes/Source",
+            "contents": [
+              "PortfolioStrategy/hasAttributes/Source"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PortfolioStrategyId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/PortfolioStrategyId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Customer ID from previous system (ID before onboarding data to CDM)",
+          "maximumLength": 50
+        },
+        {
+          "name": "PortfolioId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/portfolioAndAssetManagement/Portfolio.cdm.json/Portfolio",
+                        "PortfolioId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/PortfolioId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "InvestmentType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/InvestmentType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of Strategy",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "StrategyObjectiveTargetsSteering",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveTargetsSteering",
+          "dataFormat": "String",
+          "description": "Steering target type of Portfolio Strategy",
+          "maximumLength": 50
+        },
+        {
+          "name": "StrategyObjectiveValuesSteering",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveValuesSteering",
+          "dataFormat": "Float",
+          "description": "Value of the portfolio strategy steering targets"
+        },
+        {
+          "name": "StrategyObjectiveUnitSteering",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveUnitSteering",
+          "dataFormat": "String",
+          "description": "Unit of strategy objective values steering",
+          "maximumLength": 50
+        },
+        {
+          "name": "StrategyObjectiveTargets",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveTargets",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Target type of Portfolio Strategy",
+          "maximumLength": 50
+        },
+        {
+          "name": "StrategyObjectiveValues",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveValues",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Value of the portfolio strategy targets"
+        },
+        {
+          "name": "StrategyObjectiveUnit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveUnit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of strategy objective values",
+          "maximumLength": 50
+        },
+        {
+          "name": "Source",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/Source",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Source of Portfolio strategy",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "PortfolioStrategy",
+      "description": "Strategy and strategic targets for the use of real estate assets in a portfolio",
+      "version": "4.3"
+    }
+  ]
+}

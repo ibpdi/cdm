@@ -1,0 +1,449 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/Portfolio.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Portfolio",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Portfolio",
+        "definition": "resolvedFrom/Portfolio",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Portfolio/attributeContext/Portfolio/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortfolioId",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/PortfolioId",
+            "contents": [
+              "Portfolio/hasAttributes/PortfolioId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IndividualAccountId",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/IndividualAccountId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "IndividualAccount",
+                "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId",
+                "definition": "resolvedFrom/IndividualAccount"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Portfolio/hasAttributes/IndividualAccountId/resolutionGuidance/foreignKeyAttribute/IndividualAccountId",
+                        "contents": [
+                          "Portfolio/hasAttributes/IndividualAccountId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Portfolio/attributeContext/Portfolio/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Portfolio/attributeContext/Portfolio/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Portfolio/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortfolioCode",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/PortfolioCode",
+            "contents": [
+              "Portfolio/hasAttributes/PortfolioCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "Portfolio/attributeContext/Portfolio/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "Portfolio/attributeContext/Portfolio/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "Portfolio/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AssetCategory",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/AssetCategory",
+            "contents": [
+              "Portfolio/hasAttributes/AssetCategory"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OwnershipType",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/OwnershipType",
+            "contents": [
+              "Portfolio/hasAttributes/OwnershipType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Portfolio/attributeContext/Portfolio/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Portfolio/attributeContext/Portfolio/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Portfolio/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Portfolio/attributeContext/Portfolio/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Portfolio/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryUsageType",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/PrimaryUsageType",
+            "contents": [
+              "Portfolio/hasAttributes/PrimaryUsageType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryUsageType",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/SecondaryUsageType",
+            "contents": [
+              "Portfolio/hasAttributes/SecondaryUsageType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MarketValue",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/MarketValue",
+            "contents": [
+              "Portfolio/hasAttributes/MarketValue"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/Currency",
+            "contents": [
+              "Portfolio/hasAttributes/Currency"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PortfolioId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/PortfolioId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Customer ID from previous system (ID before onboarding data to CDM)",
+          "maximumLength": 50
+        },
+        {
+          "name": "IndividualAccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/IndividualAccount.cdm.json/IndividualAccount",
+                        "IndividualAccountId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "PortfolioCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/PortfolioCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific Portfolio Code e.g: MR003",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity",
+          "maximumLength": 75
+        },
+        {
+          "name": "AssetCategory",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/AssetCategory",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Describes the asset category",
+          "maximumLength": 50
+        },
+        {
+          "name": "OwnershipType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/OwnershipType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Describes the ownership structure of the portfolio",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryUsageType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/PrimaryUsageType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Definition of the primary usage type/asset class of the portfolio (individual by portfolio owner)",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryUsageType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/SecondaryUsageType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Definition of the secondary usage type/asset class of the portfolio (individual by portfolio owner)",
+          "maximumLength": 50
+        },
+        {
+          "name": "MarketValue",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/MarketValue",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Current market value of Portfolio"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Main/default currency of portfolio (depending on user it should be able to change this)",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Portfolio",
+      "description": "Grouping of real estate assets",
+      "version": "4.3"
+    }
+  ]
+}

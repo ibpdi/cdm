@@ -1,0 +1,134 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ComponentType",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ComponentTypeId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "attributeGroupReference": "Class"
+        },
+        {
+          "attributeGroupReference": "Counter"
+        },
+        {
+          "name": "Manufacturer",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Name of manufacturer",
+          "maximumLength": 100
+        },
+        {
+          "name": "ManufacturerCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Manufacturer code",
+          "maximumLength": 70
+        },
+        {
+          "name": "ExpectedLifeYear",
+          "purpose": "hasA",
+          "isNullable": true,
+          "dataFormat": "Int16",
+
+          "appliedTraits": [
+            {
+              "traitReference": "means.measurement.duration.years"
+            }
+          ],
+          "description": "Life span of product in years"
+        },
+        {
+          "name": "MaintenanceGroup",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Maintenance group",
+          "maximumLength": 50
+        },
+        {
+          "name": "MaintenanceRelevance",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "High",
+                        "High",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Medium",
+                        "Medium",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Low",
+                        "Low",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Relevance of maintenance",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "UrlLibrary",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Product website",
+          "maximumLength": 200,
+          "appliedTraits": [
+            "means.reference.URL"
+          ]
+        },
+        {
+          "name": "CeIdentification",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "European identification number",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.identity.SKU"
+          ]
+        }
+      ],
+      "displayName": "ComponentType",
+      "description": "Type is a specification for components including information on equipment, product types and materials"
+    }
+  ]
+}

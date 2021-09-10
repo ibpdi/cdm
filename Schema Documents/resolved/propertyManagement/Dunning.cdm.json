@@ -1,0 +1,313 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/propertyManagement/Dunning.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Dunning",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Dunning",
+        "definition": "resolvedFrom/Dunning",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Dunning/attributeContext/Dunning",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Dunning/attributeContext/Dunning/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DunningId",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/DunningId",
+            "contents": [
+              "Dunning/hasAttributes/DunningId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalPaymentId",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/RentalPaymentId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalPayment",
+                "parent": "Dunning/attributeContext/Dunning/RentalPaymentId",
+                "definition": "resolvedFrom/RentalPayment"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Dunning/attributeContext/Dunning/RentalPaymentId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Dunning/attributeContext/Dunning/RentalPaymentId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Dunning/attributeContext/Dunning/RentalPaymentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Dunning/hasAttributes/RentalPaymentId/resolutionGuidance/foreignKeyAttribute/RentalPaymentId",
+                        "contents": [
+                          "Dunning/hasAttributes/RentalPaymentId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DunningLevel",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/DunningLevel",
+            "contents": [
+              "Dunning/hasAttributes/DunningLevel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DunningAmount",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/DunningAmount",
+            "contents": [
+              "Dunning/hasAttributes/DunningAmount"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Currency",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Currency",
+                "parent": "Dunning/attributeContext/Dunning/Currency",
+                "definition": "resolvedFrom/Currency",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Currency",
+                    "parent": "Dunning/attributeContext/Dunning/Currency/Currency",
+                    "definition": "resolvedFrom/Currency/members/Currency",
+                    "contents": [
+                      "Dunning/hasAttributes/Currency"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PaymentAmount",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/PaymentAmount",
+            "contents": [
+              "Dunning/hasAttributes/PaymentAmount"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InitialDueData",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/InitialDueData",
+            "contents": [
+              "Dunning/hasAttributes/InitialDueData"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PaymentDate",
+            "parent": "Dunning/attributeContext/Dunning",
+            "definition": "resolvedFrom/Dunning/hasAttributes/PaymentDate",
+            "contents": [
+              "Dunning/hasAttributes/PaymentDate"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "DunningId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/DunningId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalPaymentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalPayment.cdm.json/RentalPayment",
+                        "RentalPaymentId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/RentalPaymentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "DunningLevel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/DunningLevel",
+          "dataFormat": "String",
+          "description": "Dunning level",
+          "maximumLength": 50
+        },
+        {
+          "name": "DunningAmount",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/DunningAmount",
+          "dataFormat": "Decimal",
+          "description": "Dunning Amount"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/Currency/Currency/Currency",
+          "dataFormat": "String",
+          "description": "Currency of payment",
+          "maximumLength": 50
+        },
+        {
+          "name": "PaymentAmount",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/PaymentAmount",
+          "dataFormat": "Decimal",
+          "description": "Value of payment"
+        },
+        {
+          "name": "InitialDueData",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/InitialDueData",
+          "dataFormat": "DateTime",
+          "description": "Initial due date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PaymentDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Dunning/attributeContext/Dunning/PaymentDate",
+          "dataFormat": "DateTime",
+          "description": "Payment date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Dunning",
+      "description": "Information about outstanding rent receivables",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,187 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Account",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "AccountId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "Project",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Assets",
+                        "Assets",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Liabilities",
+                        "Liabilities",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Equity",
+                        "Equity",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Revenue",
+                        "Revenue",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Expenses",
+                        "Expenses",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Other (Non-Operating) Income and expenses",
+                        "Other (Non-Operating) Income and expenses",
+                        "5"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Account type (project aligned with RICS naming convention)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Category",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Account category according to IBPDI charts of accounts (category aligned with RICS naming convention)",
+          "maximumLength": 75,
+          "appliedTraits": [
+            "means.category"
+          ]
+        },
+        {
+          "name": "Group",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Account group according IBPDI charts of accounts (group aligned with RICS naming convention)",
+          "maximumLength": 75,
+          "appliedTraits": [
+            "means.category"
+          ]
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "StatementType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "BalanceStatement",
+                        "BalanceStatement",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "P&L",
+                        "P&L",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Statement type (Balance statement or P&L account)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "RecordType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Debit",
+                        "Debit",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Credit",
+                        "Credit",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Record type (Debit or Credit)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Version",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Account version",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Account",
+      "description": "BPDI defined account number based on standardized chart of account"
+    }
+  ]
+}

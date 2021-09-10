@@ -1,0 +1,290 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/propertyManagement/RentalOption.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalOption",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RentalOption",
+        "definition": "resolvedFrom/RentalOption",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RentalOption/attributeContext/RentalOption/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalOptionId",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "definition": "resolvedFrom/RentalOption/hasAttributes/RentalOptionId",
+            "contents": [
+              "RentalOption/hasAttributes/RentalOptionId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalContractId",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "definition": "resolvedFrom/RentalOption/hasAttributes/RentalContractId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalContract",
+                "parent": "RentalOption/attributeContext/RentalOption/RentalContractId",
+                "definition": "resolvedFrom/RentalContract"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RentalOption/attributeContext/RentalOption/RentalContractId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RentalOption/attributeContext/RentalOption/RentalContractId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RentalOption/attributeContext/RentalOption/RentalContractId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RentalOption/hasAttributes/RentalContractId/resolutionGuidance/foreignKeyAttribute/RentalContractId",
+                        "contents": [
+                          "RentalOption/hasAttributes/RentalContractId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "RentalOption/attributeContext/RentalOption/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "RentalOption/attributeContext/RentalOption/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "RentalOption/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubType",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "definition": "resolvedFrom/RentalOption/hasAttributes/SubType",
+            "contents": [
+              "RentalOption/hasAttributes/SubType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "RentalOption/attributeContext/RentalOption/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "RentalOption/attributeContext/RentalOption/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "RentalOption/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "RentalOption/attributeContext/RentalOption/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "RentalOption/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": " DocumentId",
+            "parent": "RentalOption/attributeContext/RentalOption",
+            "definition": "resolvedFrom/RentalOption/hasAttributes/ DocumentId",
+            "contents": [
+              "RentalOption/hasAttributes/ DocumentId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RentalOptionId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/RentalOptionId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalContractId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalContract.cdm.json/RentalContract",
+                        "RentalContractId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/RentalContractId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity.",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/SubType",
+          "dataFormat": "String",
+          "description": "Subtype of the option",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": " DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalOption/attributeContext/RentalOption/ DocumentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reference to document",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RentalOption",
+      "description": "Information about rental option of rental contract",
+      "version": "4.3"
+    }
+  ]
+}

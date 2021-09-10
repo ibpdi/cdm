@@ -1,0 +1,357 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ComponentType.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ComponentType",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ComponentType",
+        "definition": "resolvedFrom/ComponentType",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ComponentType/attributeContext/ComponentType/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/ComponentTypeId",
+            "contents": [
+              "ComponentType/hasAttributes/ComponentTypeId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "ComponentType/attributeContext/ComponentType/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "ComponentType/attributeContext/ComponentType/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "ComponentType/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Class",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/Class",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Class",
+                "parent": "ComponentType/attributeContext/ComponentType/Class",
+                "definition": "resolvedFrom/Class",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Class",
+                    "parent": "ComponentType/attributeContext/ComponentType/Class/Class",
+                    "definition": "resolvedFrom/Class/members/Class",
+                    "contents": [
+                      "ComponentType/hasAttributes/Class"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Counter",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/Counter",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Counter",
+                "parent": "ComponentType/attributeContext/ComponentType/Counter",
+                "definition": "resolvedFrom/Counter",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Counter",
+                    "parent": "ComponentType/attributeContext/ComponentType/Counter/Counter",
+                    "definition": "resolvedFrom/Counter/members/Counter",
+                    "contents": [
+                      "ComponentType/hasAttributes/Counter"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Manufacturer",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/Manufacturer",
+            "contents": [
+              "ComponentType/hasAttributes/Manufacturer"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ManufacturerCode",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/ManufacturerCode",
+            "contents": [
+              "ComponentType/hasAttributes/ManufacturerCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExpectedLifeYear",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/ExpectedLifeYear",
+            "contents": [
+              "ComponentType/hasAttributes/ExpectedLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceGroup",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/MaintenanceGroup",
+            "contents": [
+              "ComponentType/hasAttributes/MaintenanceGroup"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceRelevance",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/MaintenanceRelevance",
+            "contents": [
+              "ComponentType/hasAttributes/MaintenanceRelevance"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UrlLibrary",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/UrlLibrary",
+            "contents": [
+              "ComponentType/hasAttributes/UrlLibrary"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CeIdentification",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/CeIdentification",
+            "contents": [
+              "ComponentType/hasAttributes/CeIdentification"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/ComponentTypeId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "Class",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Class/Class/Class",
+          "dataFormat": "String",
+          "description": "Class entity belongs to",
+          "maximumLength": 200
+        },
+        {
+          "name": "Counter",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Counter/Counter/Counter",
+          "dataFormat": "Int32",
+          "description": "Counter of entity"
+        },
+        {
+          "name": "Manufacturer",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Manufacturer",
+          "dataFormat": "String",
+          "description": "Name of manufacturer",
+          "maximumLength": 100
+        },
+        {
+          "name": "ManufacturerCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/ManufacturerCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Manufacturer code",
+          "maximumLength": 70
+        },
+        {
+          "name": "ExpectedLifeYear",
+          "appliedTraits": [
+            "means.measurement.duration.years",
+            "is.dataFormat.integer",
+            "is.dataFormat.small"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/ExpectedLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int16",
+          "description": "Life span of product in years"
+        },
+        {
+          "name": "MaintenanceGroup",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/MaintenanceGroup",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Maintenance group",
+          "maximumLength": 50
+        },
+        {
+          "name": "MaintenanceRelevance",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/MaintenanceRelevance",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Relevance of maintenance",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "High",
+              "attributeValue": "High",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Medium",
+              "attributeValue": "Medium",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Low",
+              "attributeValue": "Low",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "UrlLibrary",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.reference.URL"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/UrlLibrary",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Product website",
+          "maximumLength": 200
+        },
+        {
+          "name": "CeIdentification",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.SKU"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/CeIdentification",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "European identification number",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ComponentType",
+      "description": "Type is a specification for components including information on equipment, product types and materials",
+      "version": "4.3"
+    }
+  ]
+}

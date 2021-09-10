@@ -1,0 +1,135 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Portfolio",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "PortfolioId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Customer ID from previous system (ID before onboarding data to CDM)",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk IndividualAccount. to Portfolio.",
+          "entity": {
+            "entityReference": "IndividualAccount",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "IndividualAccount/(resolvedAttributes)/IndividualAccountId"
+                ]
+              }
+            ]
+          },
+          "name": "IndividualAccountId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "IndividualAccountId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "PortfolioCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "maximumLength": 70,
+          "description": "User specific Portfolio Code e.g: MR003"
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "name": "AssetCategory",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Describes the asset category",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.category"
+          ]
+        },
+        {
+          "name": "OwnershipType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Describes the ownership structure of the portfolio",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "PrimaryUsageType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Definition of the primary usage type/asset class of the portfolio (individual by portfolio owner)",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryUsageType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Definition of the secondary usage type/asset class of the portfolio (individual by portfolio owner)",
+          "maximumLength": 50
+        },
+        {
+          "name": "MarketValue",
+          "purpose": "hasA",
+          "dataType": "currency",
+          "isNullable": true,
+          "description": "Current market value of Portfolio",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Currency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Main/default currency of portfolio (depending on user it should be able to change this)",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Portfolio",
+      "description": "Grouping of real estate assets"
+    }
+  ]
+}

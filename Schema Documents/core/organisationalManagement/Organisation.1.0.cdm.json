@@ -1,0 +1,70 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Organisation",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "OrganisationId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ParentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "Industry",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Industry of organisation",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ContactInfo"
+        },
+        {
+          "name": "VatNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Vat number of organisation",
+          "maximumLength": 50
+        },
+        {
+          "name": "LegalEntity",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is the organisation an legal entity (Y/N)"
+        },
+        {
+          "name": "FiscalYearStartDate",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "description": "Start date of fiscal year for organisation in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        }
+      ],
+      "displayName": "Organisation",
+      "description": "Information about organisations (internal and external)"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "organisationalManagement",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Address",
+      "entityPath": "Address.cdm.json/Address",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressBuilding",
+      "entityPath": "AddressBuilding.cdm.json/AddressBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressContact",
+      "entityPath": "AddressContact.cdm.json/AddressContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressLand",
+      "entityPath": "AddressLand.cdm.json/AddressLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressOrganisation",
+      "entityPath": "AddressOrganisation.cdm.json/AddressOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressRentalUnit",
+      "entityPath": "AddressRentalUnit.cdm.json/AddressRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressSite",
+      "entityPath": "AddressSite.cdm.json/AddressSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Contact",
+      "entityPath": "Contact.cdm.json/Contact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Organisation",
+      "entityPath": "Organisation.cdm.json/Organisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Role",
+      "entityPath": "Role.cdm.json/Role",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleBuilding",
+      "entityPath": "RoleBuilding.cdm.json/RoleBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleContact",
+      "entityPath": "RoleContact.cdm.json/RoleContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleLand",
+      "entityPath": "RoleLand.cdm.json/RoleLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleOrganisation",
+      "entityPath": "RoleOrganisation.cdm.json/RoleOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolio",
+      "entityPath": "RolePortfolio.cdm.json/RolePortfolio",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioStrategy",
+      "entityPath": "RolePortfolioStrategy.cdm.json/RolePortfolioStrategy",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalUnit",
+      "entityPath": "RoleRentalUnit.cdm.json/RoleRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSite",
+      "entityPath": "RoleSite.cdm.json/RoleSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleValuation",
+      "entityPath": "RoleValuation.cdm.json/RoleValuation",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

@@ -1,0 +1,378 @@
+{
+  "manifestName": "organisationalManagement",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Address",
+      "entityPath": "Address.cdm.json/Address"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressBuilding",
+      "entityPath": "AddressBuilding.cdm.json/AddressBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressContact",
+      "entityPath": "AddressContact.cdm.json/AddressContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressLand",
+      "entityPath": "AddressLand.cdm.json/AddressLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressOrganisation",
+      "entityPath": "AddressOrganisation.cdm.json/AddressOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressRentalUnit",
+      "entityPath": "AddressRentalUnit.cdm.json/AddressRentalUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AddressSite",
+      "entityPath": "AddressSite.cdm.json/AddressSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Contact",
+      "entityPath": "Contact.cdm.json/Contact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Organisation",
+      "entityPath": "Organisation.cdm.json/Organisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Role",
+      "entityPath": "Role.cdm.json/Role"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleBuilding",
+      "entityPath": "RoleBuilding.cdm.json/RoleBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleContact",
+      "entityPath": "RoleContact.cdm.json/RoleContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleLand",
+      "entityPath": "RoleLand.cdm.json/RoleLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleOrganisation",
+      "entityPath": "RoleOrganisation.cdm.json/RoleOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolio",
+      "entityPath": "RolePortfolio.cdm.json/RolePortfolio"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioStrategy",
+      "entityPath": "RolePortfolioStrategy.cdm.json/RolePortfolioStrategy"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalUnit",
+      "entityPath": "RoleRentalUnit.cdm.json/RoleRentalUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSite",
+      "entityPath": "RoleSite.cdm.json/RoleSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleValuation",
+      "entityPath": "RoleValuation.cdm.json/RoleValuation"
+    }
+  ],
+  "relationships": [
+    {
+      "fromEntity": "AddressBuilding.cdm.json/AddressBuilding",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressContact.cdm.json/AddressContact",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressLand.cdm.json/AddressLand",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressOrganisation.cdm.json/AddressOrganisation",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressRentalUnit.cdm.json/AddressRentalUnit",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressSite.cdm.json/AddressSite",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressContact.cdm.json/AddressContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AddressOrganisation.cdm.json/AddressOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Contact.cdm.json/Contact",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId"
+    },
+    {
+      "fromEntity": "RoleContact.cdm.json/RoleContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleOrganisation.cdm.json/RoleOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleBuilding.cdm.json/RoleBuilding",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleContact.cdm.json/RoleContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleLand.cdm.json/RoleLand",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleOrganisation.cdm.json/RoleOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolio.cdm.json/RolePortfolio",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioStrategy.cdm.json/RolePortfolioStrategy",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalUnit.cdm.json/RoleRentalUnit",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSite.cdm.json/RoleSite",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleValuation.cdm.json/RoleValuation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0"
+}

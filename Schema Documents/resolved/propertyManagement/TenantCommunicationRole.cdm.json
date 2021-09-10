@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/propertyManagement/TenantCommunicationRole.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TenantCommunicationRole",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "TenantCommunicationRole",
+        "definition": "resolvedFrom/TenantCommunicationRole",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TenantCommunicationId",
+            "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole",
+            "definition": "resolvedFrom/TenantCommunicationRole/hasAttributes/TenantCommunicationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "TenantCommunication",
+                "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/TenantCommunicationId",
+                "definition": "resolvedFrom/TenantCommunication"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/TenantCommunicationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/TenantCommunicationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/TenantCommunicationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TenantCommunicationRole/hasAttributes/TenantCommunicationId/resolutionGuidance/foreignKeyAttribute/TenantCommunicationId",
+                        "contents": [
+                          "TenantCommunicationRole/hasAttributes/TenantCommunicationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole",
+            "definition": "resolvedFrom/TenantCommunicationRole/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TenantCommunicationRole/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "TenantCommunicationRole/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TenantCommunicationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/TenantCommunication.cdm.json/TenantCommunication",
+                        "TenantCommunicationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/TenantCommunicationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TenantCommunicationRole/attributeContext/TenantCommunicationRole/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "TenantCommunicationRole",
+      "description": "Linking entity between TenantCommunication and Role",
+      "version": "4.3"
+    }
+  ]
+}

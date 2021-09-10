@@ -1,0 +1,78 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "RentalContract.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalOption",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "RentalOptionId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk RentalContract. to RentalOption.",
+          "entity": {
+            "entityReference": "RentalContract",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "RentalContract/(resolvedAttributes)/RentalContractId"
+                ]
+              }
+            ]
+          },
+          "name": "RentalContractId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RentalContractId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "name": "SubType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Subtype of the option",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": " DocumentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Reference to document",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RentalOption",
+      "description": "Information about rental option of rental contract"
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "Valuation.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Land.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ValuationLand",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Valuation. to ValuationLand.",
+          "entity": {
+            "entityReference": "Valuation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Valuation/(resolvedAttributes)/ValuationId"
+                ]
+              }
+            ]
+          },
+          "name": "ValuationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ValuationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Land. to ValuationLand.",
+          "entity": {
+            "entityReference": "Land",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Land/(resolvedAttributes)/LandId"
+                ]
+              }
+            ]
+          },
+          "name": "LandId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "LandId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "ValuationLand",
+      "description": "Linking entity between Valuation and Land"
+    }
+  ]
+}

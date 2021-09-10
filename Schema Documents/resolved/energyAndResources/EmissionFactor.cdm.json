@@ -1,0 +1,877 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/EmissionFactor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "EmissionFactor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "EmissionFactor",
+        "definition": "resolvedFrom/EmissionFactor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "EmissionFactor/attributeContext/EmissionFactor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmissionFactorId",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/EmissionFactorId",
+            "contents": [
+              "EmissionFactor/hasAttributes/EmissionFactorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "OperationalMeasurement",
+                "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId",
+                "definition": "resolvedFrom/OperationalMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/EmissionFactor/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "contents": [
+                          "EmissionFactor/hasAttributes/OperationalMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Country",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Country",
+            "contents": [
+              "EmissionFactor/hasAttributes/Country"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Type",
+            "contents": [
+              "EmissionFactor/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "EmissionFactor/attributeContext/EmissionFactor/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "EmissionFactor/attributeContext/EmissionFactor/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "EmissionFactor/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "EmissionFactor/attributeContext/EmissionFactor/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "EmissionFactor/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/Value",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "EmissionFactor/attributeContext/EmissionFactor/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "EmissionFactor/attributeContext/EmissionFactor/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "EmissionFactor/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Unit",
+            "contents": [
+              "EmissionFactor/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Source",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Source",
+            "contents": [
+              "EmissionFactor/hasAttributes/Source"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceType",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/SpaceType",
+            "contents": [
+              "EmissionFactor/hasAttributes/SpaceType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Region",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Region",
+            "contents": [
+              "EmissionFactor/hasAttributes/Region"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "City",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/City",
+            "contents": [
+              "EmissionFactor/hasAttributes/City"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Scenario",
+            "parent": "EmissionFactor/attributeContext/EmissionFactor",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Scenario",
+            "contents": [
+              "EmissionFactor/hasAttributes/Scenario"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "EmissionFactorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/EmissionFactorId",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
+                        "OperationalMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "Country",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.country"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Country",
+          "dataFormat": "String",
+          "description": "Country in which the emission factor is valid",
+          "maximumLength": 75
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Type",
+          "dataFormat": "String",
+          "description": "Type of resource consumption the emission factor refers to",
+          "maximumLength": 100,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Electricity from grid (green electricity contract)",
+              "attributeValue": "Electricity from grid (green electricity contract)",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity self-generated & consumed",
+              "attributeValue": "Electricity self-generated & consumed",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "REC",
+              "attributeValue": "REC",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Natural gas (standard mix)",
+              "attributeValue": "Natural gas (standard mix)",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Green natural gas",
+              "attributeValue": "Green natural gas",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Oil-based fuels",
+              "attributeValue": "Oil-based fuels",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District heating",
+              "attributeValue": "District heating",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District cooling",
+              "attributeValue": "District cooling",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biomass",
+              "attributeValue": "Biomass",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Solar thermal",
+              "attributeValue": "Solar thermal",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Reclaimed water",
+              "attributeValue": "Reclaimed water",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water discharge",
+              "attributeValue": "Water discharge",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Recyclable or reusable waste",
+              "attributeValue": "Recyclable or reusable waste",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Non-recyclable waste (to be burned)",
+              "attributeValue": "Non-recyclable waste (to be burned)",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biodegradable",
+              "attributeValue": "Biodegradable",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Hazardous waste",
+              "attributeValue": "Hazardous waste",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste (unspecified)",
+              "attributeValue": "Waste (unspecified)",
+              "displayOrder": "16"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity from grid (normal contract)",
+              "attributeValue": "Electricity from grid (normal contract)",
+              "displayOrder": "17"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Carbon dioxide (CO2)",
+              "attributeValue": "Carbon dioxide (CO2)",
+              "displayOrder": "18"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Methane (CH4)",
+              "attributeValue": "Methane (CH4)",
+              "displayOrder": "19"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Nitrous oxide (N20)",
+              "attributeValue": "Nitrous oxide (N20)",
+              "displayOrder": "20"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "attributeValue": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+              "attributeValue": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+              "displayOrder": "22"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+              "attributeValue": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+              "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+              "attributeValue": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+              "displayOrder": "24"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+              "attributeValue": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+              "displayOrder": "25"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+              "attributeValue": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+              "displayOrder": "26"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+              "attributeValue": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+              "displayOrder": "27"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+              "attributeValue": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+              "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+              "attributeValue": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+              "displayOrder": "29"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-10 | Carbon tetrachloride (CCl4)",
+              "attributeValue": "R-10 | Carbon tetrachloride (CCl4)",
+              "displayOrder": "30"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Bromomethane | Methyl bromide (CH3Br)",
+              "attributeValue": "Bromomethane | Methyl bromide (CH3Br)",
+              "displayOrder": "31"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+              "attributeValue": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+              "displayOrder": "33"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+              "attributeValue": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+              "displayOrder": "34"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+              "attributeValue": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+              "displayOrder": "35"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+              "attributeValue": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+              "displayOrder": "36"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+              "attributeValue": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+              "displayOrder": "37"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+              "attributeValue": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+              "displayOrder": "38"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+              "attributeValue": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+              "attributeValue": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+              "displayOrder": "40"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+              "attributeValue": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+              "displayOrder": "41"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-23 | HFC-23 | ",
+              "attributeValue": "R-23 | HFC-23 | ",
+              "displayOrder": "42"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-32 | HFC-32 | ",
+              "attributeValue": "R-32 | HFC-32 | ",
+              "displayOrder": "43"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-41 | HFC-41 | ",
+              "attributeValue": "R-41 | HFC-41 | ",
+              "displayOrder": "44"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-125 | HFC-125 | ",
+              "attributeValue": "R-125 | HFC-125 | ",
+              "displayOrder": "45"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-134 | HFC-134 | ",
+              "attributeValue": "R-134 | HFC-134 | ",
+              "displayOrder": "46"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-134a | HFC-134a | ",
+              "attributeValue": "R-134a | HFC-134a | ",
+              "displayOrder": "47"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-143 | HFC-143 | ",
+              "attributeValue": "R-143 | HFC-143 | ",
+              "displayOrder": "48"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-143a | HFC-143a | ",
+              "attributeValue": "R-143a | HFC-143a | ",
+              "displayOrder": "49"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-152 | HFC-152 | ",
+              "attributeValue": "R-152 | HFC-152 | ",
+              "displayOrder": "50"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-152a | HFC-152a | ",
+              "attributeValue": "R-152a | HFC-152a | ",
+              "displayOrder": "51"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-161 | HFC-161 | ",
+              "attributeValue": "R-161 | HFC-161 | ",
+              "displayOrder": "52"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-227ea | HFC-227ea | ",
+              "attributeValue": "R-227ea | HFC-227ea | ",
+              "displayOrder": "53"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-236cb | HFC-236cb | ",
+              "attributeValue": "R-236cb | HFC-236cb | ",
+              "displayOrder": "54"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-236ea | HFC-236ea | ",
+              "attributeValue": "R-236ea | HFC-236ea | ",
+              "displayOrder": "55"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-236fa | HFC-236fa | ",
+              "attributeValue": "R-236fa | HFC-236fa | ",
+              "displayOrder": "56"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-245ca | HFC-245ca | ",
+              "attributeValue": "R-245ca | HFC-245ca | ",
+              "displayOrder": "57"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-245fa | HFC-245fa | ",
+              "attributeValue": "R-245fa | HFC-245fa | ",
+              "displayOrder": "58"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-365mfc | HFC-365mfc | ",
+              "attributeValue": "R-365mfc | HFC-365mfc | ",
+              "displayOrder": "59"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-43-10mee | HFC-43-10mee | ",
+              "attributeValue": "R-43-10mee | HFC-43-10mee | ",
+              "displayOrder": "60"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Sulfur hexafluoride (SF6)",
+              "attributeValue": "Sulfur hexafluoride (SF6)",
+              "displayOrder": "61"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Nitrogen trifluoride (NF3)",
+              "attributeValue": "Nitrogen trifluoride (NF3)",
+              "displayOrder": "62"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water supply",
+              "attributeValue": "Water supply",
+              "displayOrder": "63"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Non-hazardous waste",
+              "attributeValue": "Non-hazardous waste",
+              "displayOrder": "64"
+            }
+          ]
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Value/Value/Value",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Value of entity."
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Unit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of emission factor in terms of kgCO2e per unit of resource consumption",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "kgCO2e/kWh",
+              "attributeValue": "kgCO2e/kWh",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "kgCO2e/kg",
+              "attributeValue": "kgCO2e/kg",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "kgCO2e/m�",
+              "attributeValue": "kgCO2e/m�",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "Source",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Source",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Source of emission factor e.g. 'International Energy Agency'",
+          "maximumLength": 200
+        },
+        {
+          "name": "SpaceType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/SpaceType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Differentiated emission factor for certain space type (within a building)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Shared services/Common spaces",
+              "attributeValue": "Shared services/Common spaces",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tenant space",
+              "attributeValue": "Tenant space",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Landlord space",
+              "attributeValue": "Landlord space",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Whole building",
+              "attributeValue": "Whole building",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Shared services",
+              "attributeValue": "Shared services",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Common spaces",
+              "attributeValue": "Common spaces",
+              "displayOrder": "6"
+            }
+          ]
+        },
+        {
+          "name": "Region",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.region"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Region",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Areas that are broadly divided by physical characteristics, human impact characteristics, and the interaction of humanity and the environment",
+          "maximumLength": 75
+        },
+        {
+          "name": "City",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.city"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/City",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc",
+          "maximumLength": 100
+        },
+        {
+          "name": "Scenario",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Scenario",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific emission factor scenario",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "EmissionFactor",
+      "description": "Emission factors that are applied to convert energy consumption data into greenhouse gas emissions. The entity also includes global warming potential data for non-CO2 greenhouse gases in order to calculate CO2-equivalents (CO2e)",
+      "version": "4.3"
+    }
+  ]
+}

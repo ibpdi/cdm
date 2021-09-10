@@ -1,0 +1,313 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/Address.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Address",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Address",
+        "definition": "resolvedFrom/Address",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Address/attributeContext/Address",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Address/attributeContext/Address/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AddressId",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/AddressId",
+            "contents": [
+              "Address/hasAttributes/AddressId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "Address/attributeContext/Address/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "Address/attributeContext/Address/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "Address/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StreetName",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/StreetName",
+            "contents": [
+              "Address/hasAttributes/StreetName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HouseNumber",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/HouseNumber",
+            "contents": [
+              "Address/hasAttributes/HouseNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AdditionalInformation",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/AdditionalInformation",
+            "contents": [
+              "Address/hasAttributes/AdditionalInformation"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AppartmentOrUnit",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/AppartmentOrUnit",
+            "contents": [
+              "Address/hasAttributes/AppartmentOrUnit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "District",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/District",
+            "contents": [
+              "Address/hasAttributes/District"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "City",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/City",
+            "contents": [
+              "Address/hasAttributes/City"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PostalCode",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/PostalCode",
+            "contents": [
+              "Address/hasAttributes/PostalCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StateProvincePrefecture",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/StateProvincePrefecture",
+            "contents": [
+              "Address/hasAttributes/StateProvincePrefecture"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Country",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/Country",
+            "contents": [
+              "Address/hasAttributes/Country"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AddressId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Address/attributeContext/Address/AddressId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Address/attributeContext/Address/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity.",
+          "maximumLength": 75
+        },
+        {
+          "name": "StreetName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.address.street"
+          ],
+          "attributeContext": "Address/attributeContext/Address/StreetName",
+          "dataFormat": "String",
+          "description": "Name of the street",
+          "maximumLength": 150
+        },
+        {
+          "name": "HouseNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.address"
+          ],
+          "attributeContext": "Address/attributeContext/Address/HouseNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "House number of the street",
+          "maximumLength": 50
+        },
+        {
+          "name": "AdditionalInformation",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.address"
+          ],
+          "attributeContext": "Address/attributeContext/Address/AdditionalInformation",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Additional information that can not be displayed in the other attributes such as Building, Door Nr. etc. ",
+          "maximumLength": 100
+        },
+        {
+          "name": "AppartmentOrUnit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.address.building"
+          ],
+          "attributeContext": "Address/attributeContext/Address/AppartmentOrUnit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit number",
+          "maximumLength": 50
+        },
+        {
+          "name": "District",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.address"
+          ],
+          "attributeContext": "Address/attributeContext/Address/District",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Boroughs or districts within a city that serve some official purpose",
+          "maximumLength": 50
+        },
+        {
+          "name": "City",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.city"
+          ],
+          "attributeContext": "Address/attributeContext/Address/City",
+          "dataFormat": "String",
+          "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc.",
+          "maximumLength": 100
+        },
+        {
+          "name": "PostalCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.postalCode"
+          ],
+          "attributeContext": "Address/attributeContext/Address/PostalCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Postal codes used for mail sorting",
+          "maximumLength": 15
+        },
+        {
+          "name": "StateProvincePrefecture",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.stateOrProvince"
+          ],
+          "attributeContext": "Address/attributeContext/Address/StateProvincePrefecture",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "First-level administrative division, depending on the continent or country if might be named differently.",
+          "maximumLength": 50
+        },
+        {
+          "name": "Country",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.location.country"
+          ],
+          "attributeContext": "Address/attributeContext/Address/Country",
+          "dataFormat": "String",
+          "description": "Sovereign nations and their dependent territories, anything with an ISO-3166 code",
+          "maximumLength": 75
+        }
+      ],
+      "displayName": "Address",
+      "description": "Collection of information used to give the location of a building, apartment, or other structure or a plot of land",
+      "version": "4.3"
+    }
+  ]
+}

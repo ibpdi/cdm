@@ -1,0 +1,70 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "attributeGroupName": "Name",
+      "members": [
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "entityName",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        }
+      ]
+    },
+    {
+      "attributeGroupName": "Value",
+      "members": [
+        {
+          "name": "Value",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Value of entity."
+        }
+      ]
+    },
+    {
+      "attributeGroupName": "Parent",
+      "members": [
+        {
+          "name": "ParentId",
+          "purpose": "hasA",
+          "dataType": "guid",
+          "isNullable": true,
+          "description": "Parent (Guid) of entity.",
+          "maximumLength": 36
+        }
+      ]
+    },
+    {
+      "attributeGroupName": "ValidityInfo",
+      "members": [
+        {
+          "name": "ValidFrom",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "ValidUntil",
+          "purpose": "endedOn",
+          "dataType": "dateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        }
+      ]
+    }
+  ]
+}

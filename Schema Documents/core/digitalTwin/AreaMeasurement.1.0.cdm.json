@@ -1,0 +1,401 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurement",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "AreaMeasurementId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "name": "Standard",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "DIN 277-1",
+                        "DIN 277-1",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "MFG",
+                        "MFG",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "IPMS",
+                        "IPMS",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "RICS",
+                        "RICS",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "BOMA",
+                        "BOMA",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "NA",
+                        "NA",
+                        "5"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Area measurement standard",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Gross floor area",
+                        "Gross floor area",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Construction area",
+                        "Construction area",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Net room area",
+                        "Net room area",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Circulation area",
+                        "Circulation area",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Net usable area",
+                        "Net usable area",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Technical area",
+                        "Technical area",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Living/residence area",
+                        "Living/residence area",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Office area",
+                        "Office area",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Production/laboratory area",
+                        "Production/laboratory area",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Storage/distribution/selling area",
+                        "Storage/distribution/selling area",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Education/teaching/culture area",
+                        "Education/teaching/culture area",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "Healing/care area",
+                        "Healing/care area",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "Other uses",
+                        "Other uses",
+                        "12"
+                      ],
+                      [
+                        "en",
+                        "Rentable exclusion",
+                        "Rentable exclusion",
+                        "13"
+                      ],
+                      [
+                        "en",
+                        "Rentable area",
+                        "Rentable area",
+                        "14"
+                      ],
+                      [
+                        "en",
+                        "Rentable area common occupancy",
+                        "Rentable area common occupancy",
+                        "15"
+                      ],
+                      [
+                        "en",
+                        "Rentable area exclusive occupancy",
+                        "Rentable area exclusive occupancy",
+                        "16"
+                      ],
+                      [
+                        "en",
+                        "Gross external area",
+                        "Gross external area",
+                        "17"
+                      ],
+                      [
+                        "en",
+                        "External Wall area",
+                        "External Wall area",
+                        "18"
+                      ],
+                      [
+                        "en",
+                        "Gross internal area",
+                        "Gross internal area",
+                        "19"
+                      ],
+                      [
+                        "en",
+                        "A-Vertical penetrations",
+                        "A-Vertical penetrations",
+                        "20"
+                      ],
+                      [
+                        "en",
+                        "B-Structural elements",
+                        "B-Structural elements",
+                        "21"
+                      ],
+                      [
+                        "en",
+                        "C-Technical services",
+                        "C-Technical services",
+                        "22"
+                      ],
+                      [
+                        "en",
+                        "D-Hygiene areas",
+                        "D-Hygiene areas",
+                        "23"
+                      ],
+                      [
+                        "en",
+                        "E-Circulation areas",
+                        "E-Circulation areas",
+                        "24"
+                      ],
+                      [
+                        "en",
+                        "F-Amenities",
+                        "F-Amenities",
+                        "25"
+                      ],
+                      [
+                        "en",
+                        "G-Workspace",
+                        "G-Workspace",
+                        "26"
+                      ],
+                      [
+                        "en",
+                        "H-Other areas",
+                        "H-Other areas",
+                        "27"
+                      ],
+                      [
+                        "en",
+                        "Boundary area",
+                        "Boundary area",
+                        "28"
+                      ],
+                      [
+                        "en",
+                        "Rentable area common occupancy",
+                        "Rentable area common occupancy",
+                        "29"
+                      ],
+                      [
+                        "en",
+                        "Building amenity area",
+                        "Building amenity area",
+                        "30"
+                      ],
+                      [
+                        "en",
+                        "Building service area",
+                        "Building service area",
+                        "31"
+                      ],
+                      [
+                        "en",
+                        "Floor service area",
+                        "Floor service area",
+                        "32"
+                      ],
+                      [
+                        "en",
+                        "Rentable area exclusive occupancy",
+                        "Rentable area exclusive occupancy",
+                        "33"
+                      ],
+                      [
+                        "en",
+                        "Tenant ancillary area",
+                        "Tenant ancillary area",
+                        "34"
+                      ],
+                      [
+                        "en",
+                        "Tenant area",
+                        "Tenant area",
+                        "35"
+                      ],
+                      [
+                        "en",
+                        "Major vertical penetrations",
+                        "Major vertical penetrations",
+                        "36"
+                      ],
+                      [
+                        "en",
+                        "Occupant Storage area",
+                        "Occupant Storage area",
+                        "37"
+                      ],
+                      [
+                        "en",
+                        "Parking area",
+                        "Parking area",
+                        "38"
+                      ],
+                      [
+                        "en",
+                        "Unenclosed Building Feature: Covered Gallery",
+                        "Unenclosed Building Feature: Covered Gallery",
+                        "39"
+                      ],
+                      [
+                        "en",
+                        "Vacant area",
+                        "Vacant area",
+                        "40"
+                      ],
+                      [
+                        "en",
+                        "NA",
+                        "NA",
+                        "41"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of the standard area",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "Value"
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "means.measurement.units.si",
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "m²",
+                        "square meter",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "ft²",
+                        "square feet",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Unit area is measured with",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "AreaMeasurement",
+      "description": "Information about the area measurements within the physical building"
+    }
+  ]
+}

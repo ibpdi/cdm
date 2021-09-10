@@ -1,0 +1,184 @@
+{
+  "manifestName": "portfolioAndAssetManagement",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Portfolio",
+      "entityPath": "Portfolio.cdm.json/Portfolio"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioBuilding",
+      "entityPath": "PortfolioBuilding.cdm.json/PortfolioBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioLand",
+      "entityPath": "PortfolioLand.cdm.json/PortfolioLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioSite",
+      "entityPath": "PortfolioSite.cdm.json/PortfolioSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioStrategy",
+      "entityPath": "PortfolioStrategy.cdm.json/PortfolioStrategy"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioUnit",
+      "entityPath": "PortfolioUnit.cdm.json/PortfolioUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Valuation",
+      "entityPath": "Valuation.cdm.json/Valuation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationBuilding",
+      "entityPath": "ValuationBuilding.cdm.json/ValuationBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationIndividualAccount",
+      "entityPath": "ValuationIndividualAccount.cdm.json/ValuationIndividualAccount"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationLand",
+      "entityPath": "ValuationLand.cdm.json/ValuationLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationOperationalMeasurement",
+      "entityPath": "ValuationOperationalMeasurement.cdm.json/ValuationOperationalMeasurement"
+    }
+  ],
+  "relationships": [
+    {
+      "fromEntity": "PortfolioBuilding.cdm.json/PortfolioBuilding",
+      "fromEntityAttribute": "PortfolioId",
+      "toEntity": "Portfolio.cdm.json/Portfolio",
+      "toEntityAttribute": "PortfolioId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "PortfolioLand.cdm.json/PortfolioLand",
+      "fromEntityAttribute": "PortfolioId",
+      "toEntity": "Portfolio.cdm.json/Portfolio",
+      "toEntityAttribute": "PortfolioId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "PortfolioSite.cdm.json/PortfolioSite",
+      "fromEntityAttribute": "PortfolioId",
+      "toEntity": "Portfolio.cdm.json/Portfolio",
+      "toEntityAttribute": "PortfolioId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "PortfolioStrategy.cdm.json/PortfolioStrategy",
+      "fromEntityAttribute": "PortfolioId",
+      "toEntity": "Portfolio.cdm.json/Portfolio",
+      "toEntityAttribute": "PortfolioId"
+    },
+    {
+      "fromEntity": "PortfolioUnit.cdm.json/PortfolioUnit",
+      "fromEntityAttribute": "PortfolioId",
+      "toEntity": "Portfolio.cdm.json/Portfolio",
+      "toEntityAttribute": "PortfolioId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ValuationBuilding.cdm.json/ValuationBuilding",
+      "fromEntityAttribute": "ValuationId",
+      "toEntity": "Valuation.cdm.json/Valuation",
+      "toEntityAttribute": "ValuationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ValuationIndividualAccount.cdm.json/ValuationIndividualAccount",
+      "fromEntityAttribute": "ValuationId",
+      "toEntity": "Valuation.cdm.json/Valuation",
+      "toEntityAttribute": "ValuationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ValuationLand.cdm.json/ValuationLand",
+      "fromEntityAttribute": "ValuationId",
+      "toEntity": "Valuation.cdm.json/Valuation",
+      "toEntityAttribute": "ValuationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "ValuationOperationalMeasurement.cdm.json/ValuationOperationalMeasurement",
+      "fromEntityAttribute": "ValuationId",
+      "toEntity": "Valuation.cdm.json/Valuation",
+      "toEntityAttribute": "ValuationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0"
+}

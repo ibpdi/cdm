@@ -1,0 +1,1502 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Building.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Building",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Building",
+        "definition": "resolvedFrom/Building",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Building/attributeContext/Building",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Building/attributeContext/Building/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BuildingId",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/BuildingId",
+            "contents": [
+              "Building/hasAttributes/BuildingId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SiteId",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/SiteId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Site",
+                "parent": "Building/attributeContext/Building/SiteId",
+                "definition": "resolvedFrom/Site"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Building/attributeContext/Building/SiteId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Building/attributeContext/Building/SiteId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Building/attributeContext/Building/SiteId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Building/hasAttributes/SiteId/resolutionGuidance/foreignKeyAttribute/SiteId",
+                        "contents": [
+                          "Building/hasAttributes/SiteId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Building/attributeContext/Building/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Building/attributeContext/Building/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Building/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BuildingCode",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/BuildingCode",
+            "contents": [
+              "Building/hasAttributes/BuildingCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryTypeOfBuilding",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/PrimaryTypeOfBuilding",
+            "contents": [
+              "Building/hasAttributes/PrimaryTypeOfBuilding"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryTypeOfBuilding",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/SecondaryTypeOfBuilding",
+            "contents": [
+              "Building/hasAttributes/SecondaryTypeOfBuilding"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EnergyEfficiencyClass",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/EnergyEfficiencyClass",
+            "contents": [
+              "Building/hasAttributes/EnergyEfficiencyClass"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Building/attributeContext/Building/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Building/attributeContext/Building/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Building/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Building/attributeContext/Building/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Building/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConstructionYear",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/ConstructionYear",
+            "contents": [
+              "Building/hasAttributes/ConstructionYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "YearOfLastRefurbishment",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/YearOfLastRefurbishment",
+            "contents": [
+              "Building/hasAttributes/YearOfLastRefurbishment"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MonumentProtection",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/MonumentProtection",
+            "contents": [
+              "Building/hasAttributes/MonumentProtection"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TypeOfOwnership",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/TypeOfOwnership",
+            "contents": [
+              "Building/hasAttributes/TypeOfOwnership"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SelfUse",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/SelfUse",
+            "contents": [
+              "Building/hasAttributes/SelfUse"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TenantStructure",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/TenantStructure",
+            "contents": [
+              "Building/hasAttributes/TenantStructure"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ParkingSpaces",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/ParkingSpaces",
+            "contents": [
+              "Building/hasAttributes/ParkingSpaces"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryEnergyType",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/PrimaryEnergyType",
+            "contents": [
+              "Building/hasAttributes/PrimaryEnergyType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryWaterType",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/PrimaryWaterType",
+            "contents": [
+              "Building/hasAttributes/PrimaryWaterType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryHeatingType",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/PrimaryHeatingType",
+            "contents": [
+              "Building/hasAttributes/PrimaryHeatingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryHeatingType",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/SecondaryHeatingType",
+            "contents": [
+              "Building/hasAttributes/SecondaryHeatingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AirConditioning",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/AirConditioning",
+            "contents": [
+              "Building/hasAttributes/AirConditioning"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "BuildingId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/BuildingId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SiteId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Site.cdm.json/Site",
+                        "SiteId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Building/attributeContext/Building/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Reference to the Site which the building belongs to",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Building/attributeContext/Building/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "BuildingCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/BuildingCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific Building Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "PrimaryTypeOfBuilding",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/PrimaryTypeOfBuilding",
+          "dataFormat": "String",
+          "description": "Type of building use",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Retail",
+              "attributeValue": "Retail",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, High Street",
+              "attributeValue": "Retail, High Street",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Retail Centers",
+              "attributeValue": "Retail, Retail Centers",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Shopping Center",
+              "attributeValue": "Retail, Shopping Center",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Strip Mall",
+              "attributeValue": "Retail, Strip Mall",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Lifestyle Center",
+              "attributeValue": "Retail, Lifestyle Center",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Warehouse",
+              "attributeValue": "Retail, Warehouse",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Restaurants/Bars",
+              "attributeValue": "Retail, Restaurants/Bars",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Other",
+              "attributeValue": "Retail, Other",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office",
+              "attributeValue": "Office",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Corporate",
+              "attributeValue": "Office, Corporate",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Low-Rise Office",
+              "attributeValue": "Office, Low-Rise Office",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Mid-Rise Office",
+              "attributeValue": "Office, Mid-Rise Office",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, High-Rise Office",
+              "attributeValue": "Office, High-Rise Office",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Medical Office",
+              "attributeValue": "Office, Medical Office",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Business Park",
+              "attributeValue": "Office, Business Park",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Other",
+              "attributeValue": "Office, Other",
+              "displayOrder": "16"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial",
+              "attributeValue": "Industrial",
+              "displayOrder": "17"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Distribution Warehouse",
+              "attributeValue": "Industrial, Distribution Warehouse",
+              "displayOrder": "18"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Industrial Park",
+              "attributeValue": "Industrial, Industrial Park",
+              "displayOrder": "19"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Manufacturing",
+              "attributeValue": "Industrial, Manufacturing",
+              "displayOrder": "20"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Other",
+              "attributeValue": "Industrial, Other",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential",
+              "attributeValue": "Residential",
+              "displayOrder": "22"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Multi-Family",
+              "attributeValue": "Residential, Multi-Family",
+              "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Low-Rise Multi-Family",
+              "attributeValue": "Residential, Low-Rise Multi-Family",
+              "displayOrder": "24"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Mid-Rise Multi-Family",
+              "attributeValue": "Residential, Mid-Rise Multi-Family",
+              "displayOrder": "25"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, High-Rise Multi-Family",
+              "attributeValue": "Residential, High-Rise Multi-Family",
+              "displayOrder": "26"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Family Homes",
+              "attributeValue": "Residential, Family Homes",
+              "displayOrder": "27"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Student Housing",
+              "attributeValue": "Residential, Student Housing",
+              "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Retirement Living",
+              "attributeValue": "Residential, Retirement Living",
+              "displayOrder": "29"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Other",
+              "attributeValue": "Residential, Other",
+              "displayOrder": "30"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Hotel",
+              "attributeValue": "Hotel",
+              "displayOrder": "31"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation",
+              "attributeValue": "Lodging, Leisure & Recreation",
+              "displayOrder": "32"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Indoor Arena",
+              "attributeValue": "Lodging, Leisure & Recreation, Indoor Arena",
+              "displayOrder": "33"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Fitness Center",
+              "attributeValue": "Lodging, Leisure & Recreation, Fitness Center",
+              "displayOrder": "34"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Performing Arts",
+              "attributeValue": "Lodging, Leisure & Recreation, Performing Arts",
+              "displayOrder": "35"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Swimming Center",
+              "attributeValue": "Lodging, Leisure & Recreation, Swimming Center",
+              "displayOrder": "36"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Museum/Gallery",
+              "attributeValue": "Lodging, Leisure & Recreation, Museum/Gallery",
+              "displayOrder": "37"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Other",
+              "attributeValue": "Lodging, Leisure & Recreation, Other",
+              "displayOrder": "38"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education",
+              "attributeValue": "Education",
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, School",
+              "attributeValue": "Education, School",
+              "displayOrder": "40"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, University",
+              "attributeValue": "Education, University",
+              "displayOrder": "41"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, Library",
+              "attributeValue": "Education, Library",
+              "displayOrder": "42"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, Other",
+              "attributeValue": "Education, Other",
+              "displayOrder": "43"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science",
+              "attributeValue": "Technology/Science",
+              "displayOrder": "44"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science, Data Center",
+              "attributeValue": "Technology/Science, Data Center",
+              "displayOrder": "45"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science, Laboratory/Life sciences",
+              "attributeValue": "Technology/Science, Laboratory/Life sciences",
+              "displayOrder": "46"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science, Other",
+              "attributeValue": "Technology/Science, Other",
+              "displayOrder": "47"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care",
+              "attributeValue": "Health Care",
+              "displayOrder": "50"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care, Health Care Center",
+              "attributeValue": "Health Care, Health Care Center",
+              "displayOrder": "51"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care, Senior Homes",
+              "attributeValue": "Health Care, Senior Homes",
+              "displayOrder": "52"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care, Other",
+              "attributeValue": "Health Care, Other",
+              "displayOrder": "53"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use",
+              "attributeValue": "Mixed Use",
+              "displayOrder": "54"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Office/Retail",
+              "attributeValue": "Mixed Use, Office/Retail",
+              "displayOrder": "55"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Office/Residential",
+              "attributeValue": "Mixed Use, Office/Residential",
+              "displayOrder": "56"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Office/Industrial",
+              "attributeValue": "Mixed Use, Office/Industrial",
+              "displayOrder": "57"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Other",
+              "attributeValue": "Mixed Use, Other",
+              "displayOrder": "58"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other",
+              "attributeValue": "Other",
+              "displayOrder": "59"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other, Parking (Indoors)",
+              "attributeValue": "Other, Parking (Indoors)",
+              "displayOrder": "60"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other, Self-Storage",
+              "attributeValue": "Other, Self-Storage",
+              "displayOrder": "61"
+            }
+          ]
+        },
+        {
+          "name": "SecondaryTypeOfBuilding",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/SecondaryTypeOfBuilding",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Second type of building use",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Retail",
+              "attributeValue": "Retail",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, High Street",
+              "attributeValue": "Retail, High Street",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Retail Centers",
+              "attributeValue": "Retail, Retail Centers",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Shopping Center",
+              "attributeValue": "Retail, Shopping Center",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Strip Mall",
+              "attributeValue": "Retail, Strip Mall",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Lifestyle Center",
+              "attributeValue": "Retail, Lifestyle Center",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Warehouse",
+              "attributeValue": "Retail, Warehouse",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Restaurants/Bars",
+              "attributeValue": "Retail, Restaurants/Bars",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail, Other",
+              "attributeValue": "Retail, Other",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office",
+              "attributeValue": "Office",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Corporate",
+              "attributeValue": "Office, Corporate",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Low-Rise Office",
+              "attributeValue": "Office, Low-Rise Office",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Mid-Rise Office",
+              "attributeValue": "Office, Mid-Rise Office",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, High-Rise Office",
+              "attributeValue": "Office, High-Rise Office",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Medical Office",
+              "attributeValue": "Office, Medical Office",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Business Park",
+              "attributeValue": "Office, Business Park",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office, Other",
+              "attributeValue": "Office, Other",
+              "displayOrder": "16"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial",
+              "attributeValue": "Industrial",
+              "displayOrder": "17"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Distribution Warehouse",
+              "attributeValue": "Industrial, Distribution Warehouse",
+              "displayOrder": "18"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Industrial Park",
+              "attributeValue": "Industrial, Industrial Park",
+              "displayOrder": "19"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Manufacturing",
+              "attributeValue": "Industrial, Manufacturing",
+              "displayOrder": "20"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial, Other",
+              "attributeValue": "Industrial, Other",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential",
+              "attributeValue": "Residential",
+              "displayOrder": "22"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Multi-Family",
+              "attributeValue": "Residential, Multi-Family",
+              "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Low-Rise Multi-Family",
+              "attributeValue": "Residential, Low-Rise Multi-Family",
+              "displayOrder": "24"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Mid-Rise Multi-Family",
+              "attributeValue": "Residential, Mid-Rise Multi-Family",
+              "displayOrder": "25"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, High-Rise Multi-Family",
+              "attributeValue": "Residential, High-Rise Multi-Family",
+              "displayOrder": "26"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Family Homes",
+              "attributeValue": "Residential, Family Homes",
+              "displayOrder": "27"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Student Housing",
+              "attributeValue": "Residential, Student Housing",
+              "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Retirement Living",
+              "attributeValue": "Residential, Retirement Living",
+              "displayOrder": "29"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential, Other",
+              "attributeValue": "Residential, Other",
+              "displayOrder": "30"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Hotel",
+              "attributeValue": "Hotel",
+              "displayOrder": "31"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation",
+              "attributeValue": "Lodging, Leisure & Recreation",
+              "displayOrder": "32"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Indoor Arena",
+              "attributeValue": "Lodging, Leisure & Recreation, Indoor Arena",
+              "displayOrder": "33"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Fitness Center",
+              "attributeValue": "Lodging, Leisure & Recreation, Fitness Center",
+              "displayOrder": "34"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Performing Arts",
+              "attributeValue": "Lodging, Leisure & Recreation, Performing Arts",
+              "displayOrder": "35"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Swimming Center",
+              "attributeValue": "Lodging, Leisure & Recreation, Swimming Center",
+              "displayOrder": "36"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Museum/Gallery",
+              "attributeValue": "Lodging, Leisure & Recreation, Museum/Gallery",
+              "displayOrder": "37"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation, Other",
+              "attributeValue": "Lodging, Leisure & Recreation, Other",
+              "displayOrder": "38"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education",
+              "attributeValue": "Education",
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, School",
+              "attributeValue": "Education, School",
+              "displayOrder": "40"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, University",
+              "attributeValue": "Education, University",
+              "displayOrder": "41"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, Library",
+              "attributeValue": "Education, Library",
+              "displayOrder": "42"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education, Other",
+              "attributeValue": "Education, Other",
+              "displayOrder": "43"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science",
+              "attributeValue": "Technology/Science",
+              "displayOrder": "44"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science, Data Center",
+              "attributeValue": "Technology/Science, Data Center",
+              "displayOrder": "45"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science, Laboratory/Life sciences",
+              "attributeValue": "Technology/Science, Laboratory/Life sciences",
+              "displayOrder": "46"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science, Other",
+              "attributeValue": "Technology/Science, Other",
+              "displayOrder": "47"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care",
+              "attributeValue": "Health Care",
+              "displayOrder": "50"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care, Health Care Center",
+              "attributeValue": "Health Care, Health Care Center",
+              "displayOrder": "51"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care, Senior Homes",
+              "attributeValue": "Health Care, Senior Homes",
+              "displayOrder": "52"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care, Other",
+              "attributeValue": "Health Care, Other",
+              "displayOrder": "53"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use",
+              "attributeValue": "Mixed Use",
+              "displayOrder": "54"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Office/Retail",
+              "attributeValue": "Mixed Use, Office/Retail",
+              "displayOrder": "55"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Office/Residential",
+              "attributeValue": "Mixed Use, Office/Residential",
+              "displayOrder": "56"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Office/Industrial",
+              "attributeValue": "Mixed Use, Office/Industrial",
+              "displayOrder": "57"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use, Other",
+              "attributeValue": "Mixed Use, Other",
+              "displayOrder": "58"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other",
+              "attributeValue": "Other",
+              "displayOrder": "59"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other, Parking (Indoors)",
+              "attributeValue": "Other, Parking (Indoors)",
+              "displayOrder": "60"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other, Self-Storage",
+              "attributeValue": "Other, Self-Storage",
+              "displayOrder": "61"
+            }
+          ]
+        },
+        {
+          "name": "EnergyEfficiencyClass",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/EnergyEfficiencyClass",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Energy Efficiency Class of Building",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Building/attributeContext/Building/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Building/attributeContext/Building/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ConstructionYear",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Building/attributeContext/Building/ConstructionYear",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Year of construction in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z"
+        },
+        {
+          "name": "YearOfLastRefurbishment",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Building/attributeContext/Building/YearOfLastRefurbishment",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Year of last refurbishment took place in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z."
+        },
+        {
+          "name": "MonumentProtection",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Building/attributeContext/Building/MonumentProtection",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "The building is declared to be an ancient monument with national importance by the government"
+        },
+        {
+          "name": "TypeOfOwnership",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/TypeOfOwnership",
+          "dataFormat": "String",
+          "description": "Is the building owned or leased.",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Owner",
+              "attributeValue": "Owner",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tenant",
+              "attributeValue": "Tenant",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "SelfUse",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Building/attributeContext/Building/SelfUse",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is building self used or not (Y/N)"
+        },
+        {
+          "name": "TenantStructure",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/TenantStructure",
+          "dataFormat": "String",
+          "description": "Is there multiple tenants in the building or only one",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Single-tenant",
+              "attributeValue": "Single-tenant",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Multi-tenant",
+              "attributeValue": "Multi-tenant",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "ParkingSpaces",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "Building/attributeContext/Building/ParkingSpaces",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of parking spaces"
+        },
+        {
+          "name": "PrimaryEnergyType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/PrimaryEnergyType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of energy used",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Natural Gas",
+              "attributeValue": "Natural Gas",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Coal",
+              "attributeValue": "Coal",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Nuclear",
+              "attributeValue": "Nuclear",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Petroleum",
+              "attributeValue": "Petroleum",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Hydropower",
+              "attributeValue": "Hydropower",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Wind",
+              "attributeValue": "Wind",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biomass",
+              "attributeValue": "Biomass",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Geothermal",
+              "attributeValue": "Geothermal",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Solar",
+              "attributeValue": "Solar",
+              "displayOrder": "8"
+            }
+          ]
+        },
+        {
+          "name": "PrimaryWaterType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/PrimaryWaterType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of water used",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryHeatingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/PrimaryHeatingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary Type of heating",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "District heating",
+              "attributeValue": "District heating",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Natural gas",
+              "attributeValue": "Natural gas",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Oil-based fuels",
+              "attributeValue": "Oil-based fuels",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Solar thermal",
+              "attributeValue": "Solar thermal",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Heat pump",
+              "attributeValue": "Heat pump",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity (radiator)",
+              "attributeValue": "Electricity (radiator)",
+              "displayOrder": "6"
+            }
+          ]
+        },
+        {
+          "name": "SecondaryHeatingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/SecondaryHeatingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary Type of heating",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "District heating",
+              "attributeValue": "District heating",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Natural gas",
+              "attributeValue": "Natural gas",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Oil-based fuels",
+              "attributeValue": "Oil-based fuels",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Solar thermal",
+              "attributeValue": "Solar thermal",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Heat pump",
+              "attributeValue": "Heat pump",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity (radiator)",
+              "attributeValue": "Electricity (radiator)",
+              "displayOrder": "6"
+            }
+          ]
+        },
+        {
+          "name": "AirConditioning",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Building/attributeContext/Building/AirConditioning",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Does the building have air conditioning (Y/N) (Needed for precise  future emissions projection of building)"
+        }
+      ],
+      "displayName": "Building",
+      "description": "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)",
+      "version": "4.3"
+    }
+  ]
+}

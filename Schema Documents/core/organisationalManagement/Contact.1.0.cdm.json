@@ -1,0 +1,124 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Organisation.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Contact",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ContactId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Organisation. to Contact.",
+          "entity": {
+            "entityReference": "Organisation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Organisation/(resolvedAttributes)/OrganisationId"
+                ]
+              }
+            ]
+          },
+          "name": "OrganisationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OrganisationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "isNullable": true,
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Salutation",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Title of Business Partner",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.identity.person.prefix"
+          ]
+        },
+        {
+          "name": "JobTitle",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Job title of the contact to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.identity.title"
+          ]
+        },
+        {
+          "name": "FirstName",
+          "purpose": "hasA",
+          "dataType": "firstName",
+          "description": "First Name of Business Partner or responsible contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "LastName",
+          "purpose": "hasA",
+          "dataType": "lastName",
+          "description": "Surname of Business Partner or responsible contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "EmployeeId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organisation",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ContactInfo"
+        },
+        {
+          "name": "ValidFrom",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "isNullable": true,
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "ValidUntil",
+          "purpose": "endedOn",
+          "dataType": "dateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "isNullable": true,
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        }
+      ],
+      "displayName": "Contact",
+      "description": "Contact details"
+    }
+  ]
+}

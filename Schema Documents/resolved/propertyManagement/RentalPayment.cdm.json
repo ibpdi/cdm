@@ -1,0 +1,408 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/propertyManagement/RentalPayment.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalPayment",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RentalPayment",
+        "definition": "resolvedFrom/RentalPayment",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RentalPayment/attributeContext/RentalPayment/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalPaymentId",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/RentalPaymentId",
+            "contents": [
+              "RentalPayment/hasAttributes/RentalPaymentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalContractId",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/RentalContractId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalContract",
+                "parent": "RentalPayment/attributeContext/RentalPayment/RentalContractId",
+                "definition": "resolvedFrom/RentalContract"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RentalPayment/attributeContext/RentalPayment/RentalContractId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RentalPayment/attributeContext/RentalPayment/RentalContractId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RentalPayment/attributeContext/RentalPayment/RentalContractId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RentalPayment/hasAttributes/RentalContractId/resolutionGuidance/foreignKeyAttribute/RentalContractId",
+                        "contents": [
+                          "RentalPayment/hasAttributes/RentalContractId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "RentalPayment/attributeContext/RentalPayment/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "RentalPayment/attributeContext/RentalPayment/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "RentalPayment/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "RentalPayment/attributeContext/RentalPayment/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "RentalPayment/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "RentalPayment/attributeContext/RentalPayment/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "RentalPayment/attributeContext/RentalPayment/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "RentalPayment/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/Currency",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Currency",
+                "parent": "RentalPayment/attributeContext/RentalPayment/Currency",
+                "definition": "resolvedFrom/Currency",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Currency",
+                    "parent": "RentalPayment/attributeContext/RentalPayment/Currency/Currency",
+                    "definition": "resolvedFrom/Currency/members/Currency",
+                    "contents": [
+                      "RentalPayment/hasAttributes/Currency"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValueMonth",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/ValueMonth",
+            "contents": [
+              "RentalPayment/hasAttributes/ValueMonth"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValueYear",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/ValueYear",
+            "contents": [
+              "RentalPayment/hasAttributes/ValueYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DiscountInPercentage",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/DiscountInPercentage",
+            "contents": [
+              "RentalPayment/hasAttributes/DiscountInPercentage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VatOpted",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/VatOpted",
+            "contents": [
+              "RentalPayment/hasAttributes/VatOpted"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IndexId",
+            "parent": "RentalPayment/attributeContext/RentalPayment",
+            "definition": "resolvedFrom/RentalPayment/hasAttributes/IndexId",
+            "contents": [
+              "RentalPayment/hasAttributes/IndexId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RentalPaymentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/RentalPaymentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalContractId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalContract.cdm.json/RentalContract",
+                        "RentalContractId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/RentalContractId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity.",
+          "maximumLength": 50
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/Currency/Currency/Currency",
+          "dataFormat": "String",
+          "description": "Currency of payment",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValueMonth",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/ValueMonth",
+          "dataFormat": "Decimal",
+          "description": "Value of payment per month"
+        },
+        {
+          "name": "ValueYear",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/ValueYear",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Value of payment per year"
+        },
+        {
+          "name": "DiscountInPercentage",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.measurement.percent"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/DiscountInPercentage",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Discount percentage of payment"
+        },
+        {
+          "name": "VatOpted",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/VatOpted",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is the vat payable  (Y/N)"
+        },
+        {
+          "name": "IndexId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalPayment/attributeContext/RentalPayment/IndexId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reference to index table",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RentalPayment",
+      "description": "Information about payments related to rental contract",
+      "version": "4.3"
+    }
+  ]
+}

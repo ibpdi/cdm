@@ -1,0 +1,393 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/Contact.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Contact",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Contact",
+        "definition": "resolvedFrom/Contact",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Contact/attributeContext/Contact",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Contact/attributeContext/Contact/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContactId",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/ContactId",
+            "contents": [
+              "Contact/hasAttributes/ContactId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/OrganisationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Organisation",
+                "parent": "Contact/attributeContext/Contact/OrganisationId",
+                "definition": "resolvedFrom/Organisation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Contact/attributeContext/Contact/OrganisationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Contact/attributeContext/Contact/OrganisationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Contact/attributeContext/Contact/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Contact/hasAttributes/OrganisationId/resolutionGuidance/foreignKeyAttribute/OrganisationId",
+                        "contents": [
+                          "Contact/hasAttributes/OrganisationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Salutation",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/Salutation",
+            "contents": [
+              "Contact/hasAttributes/Salutation"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "JobTitle",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/JobTitle",
+            "contents": [
+              "Contact/hasAttributes/JobTitle"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FirstName",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/FirstName",
+            "contents": [
+              "Contact/hasAttributes/FirstName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LastName",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/LastName",
+            "contents": [
+              "Contact/hasAttributes/LastName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmployeeId",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/EmployeeId",
+            "contents": [
+              "Contact/hasAttributes/EmployeeId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContactInfo",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/ContactInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ContactInfo",
+                "parent": "Contact/attributeContext/Contact/ContactInfo",
+                "definition": "resolvedFrom/ContactInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Email",
+                    "parent": "Contact/attributeContext/Contact/ContactInfo/ContactInfo",
+                    "definition": "resolvedFrom/ContactInfo/members/Email",
+                    "contents": [
+                      "Contact/hasAttributes/Email"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Telephone",
+                    "parent": "Contact/attributeContext/Contact/ContactInfo/ContactInfo",
+                    "definition": "resolvedFrom/ContactInfo/members/Telephone",
+                    "contents": [
+                      "Contact/hasAttributes/Telephone"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Fax",
+                    "parent": "Contact/attributeContext/Contact/ContactInfo/ContactInfo",
+                    "definition": "resolvedFrom/ContactInfo/members/Fax",
+                    "contents": [
+                      "Contact/hasAttributes/Fax"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidFrom",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/ValidFrom",
+            "contents": [
+              "Contact/hasAttributes/ValidFrom"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidUntil",
+            "parent": "Contact/attributeContext/Contact",
+            "definition": "resolvedFrom/Contact/hasAttributes/ValidUntil",
+            "contents": [
+              "Contact/hasAttributes/ValidUntil"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ContactId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/ContactId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Organisation.cdm.json/Organisation",
+                        "OrganisationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Salutation",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.person.prefix"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/Salutation",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Title of Business Partner",
+          "maximumLength": 50
+        },
+        {
+          "name": "JobTitle",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.title"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/JobTitle",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Job title of the contact to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns",
+          "maximumLength": 50
+        },
+        {
+          "name": "FirstName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.person.firstName"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/FirstName",
+          "dataFormat": "String",
+          "description": "First Name of Business Partner or responsible contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "LastName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.person.lastName"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/LastName",
+          "dataFormat": "String",
+          "description": "Surname of Business Partner or responsible contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "EmployeeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/EmployeeId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organisation",
+          "maximumLength": 50
+        },
+        {
+          "name": "Email",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.service.email"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/ContactInfo/ContactInfo/Email",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Email address of contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "Telephone",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.service.phone"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/ContactInfo/ContactInfo/Telephone",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Phone number of contact person",
+          "maximumLength": 50
+        },
+        {
+          "name": "Fax",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.identity.service.phone.fax"
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/ContactInfo/ContactInfo/Fax",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fax number of contact person",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/ValidFrom",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Contact/attributeContext/Contact/ValidUntil",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Contact",
+      "description": "Contact details",
+      "version": "4.3"
+    }
+  ]
+}

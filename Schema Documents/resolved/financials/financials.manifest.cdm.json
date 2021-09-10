@@ -1,0 +1,182 @@
+{
+  "manifestName": "financials",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Account",
+      "entityPath": "Account.cdm.json/Account"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenter",
+      "entityPath": "CostCenter.cdm.json/CostCenter"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterBuilding",
+      "entityPath": "CostCenterBuilding.cdm.json/CostCenterBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterPortfolio",
+      "entityPath": "CostCenterPortfolio.cdm.json/CostCenterPortfolio"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterRentalUnit",
+      "entityPath": "CostCenterRentalUnit.cdm.json/CostCenterRentalUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterSite",
+      "entityPath": "CostCenterSite.cdm.json/CostCenterSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccount",
+      "entityPath": "IndividualAccount.cdm.json/IndividualAccount"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccountBuilding",
+      "entityPath": "IndividualAccountBuilding.cdm.json/IndividualAccountBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccountPortfolio",
+      "entityPath": "IndividualAccountPortfolio.cdm.json/IndividualAccountPortfolio"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccountSite",
+      "entityPath": "IndividualAccountSite.cdm.json/IndividualAccountSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Transaction",
+      "entityPath": "Transaction.cdm.json/Transaction"
+    }
+  ],
+  "relationships": [
+    {
+      "fromEntity": "IndividualAccount.cdm.json/IndividualAccount",
+      "fromEntityAttribute": "AccountId",
+      "toEntity": "Account.cdm.json/Account",
+      "toEntityAttribute": "AccountId"
+    },
+    {
+      "fromEntity": "CostCenterBuilding.cdm.json/CostCenterBuilding",
+      "fromEntityAttribute": "CostCenterId",
+      "toEntity": "CostCenter.cdm.json/CostCenter",
+      "toEntityAttribute": "CostCenterId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CostCenterPortfolio.cdm.json/CostCenterPortfolio",
+      "fromEntityAttribute": "CostCenterId",
+      "toEntity": "CostCenter.cdm.json/CostCenter",
+      "toEntityAttribute": "CostCenterId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CostCenterRentalUnit.cdm.json/CostCenterRentalUnit",
+      "fromEntityAttribute": "CostCenterId",
+      "toEntity": "CostCenter.cdm.json/CostCenter",
+      "toEntityAttribute": "CostCenterId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CostCenterSite.cdm.json/CostCenterSite",
+      "fromEntityAttribute": "CostCenterId",
+      "toEntity": "CostCenter.cdm.json/CostCenter",
+      "toEntityAttribute": "CostCenterId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Transaction.cdm.json/Transaction",
+      "fromEntityAttribute": "CostCenterId",
+      "toEntity": "CostCenter.cdm.json/CostCenter",
+      "toEntityAttribute": "CostCenterId"
+    },
+    {
+      "fromEntity": "IndividualAccountBuilding.cdm.json/IndividualAccountBuilding",
+      "fromEntityAttribute": "IndividualAccountId",
+      "toEntity": "IndividualAccount.cdm.json/IndividualAccount",
+      "toEntityAttribute": "IndividualAccountId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "IndividualAccountPortfolio.cdm.json/IndividualAccountPortfolio",
+      "fromEntityAttribute": "IndividualAccountId",
+      "toEntity": "IndividualAccount.cdm.json/IndividualAccount",
+      "toEntityAttribute": "IndividualAccountId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "IndividualAccountSite.cdm.json/IndividualAccountSite",
+      "fromEntityAttribute": "IndividualAccountId",
+      "toEntity": "IndividualAccount.cdm.json/IndividualAccount",
+      "toEntityAttribute": "IndividualAccountId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Transaction.cdm.json/Transaction",
+      "fromEntityAttribute": "IndividualAccountId",
+      "toEntity": "IndividualAccount.cdm.json/IndividualAccount",
+      "toEntityAttribute": "IndividualAccountId"
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0"
+}

@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "CostCenter.cdm.json"
+    },
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/Portfolio.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CostCenterPortfolio",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk CostCenter. to CostCenterPortfolio.",
+          "entity": {
+            "entityReference": "CostCenter",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "CostCenter/(resolvedAttributes)/CostCenterId"
+                ]
+              }
+            ]
+          },
+          "name": "CostCenterId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CostCenterId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Portfolio. to CostCenterPortfolio.",
+          "entity": {
+            "entityReference": "Portfolio",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Portfolio/(resolvedAttributes)/PortfolioId"
+                ]
+              }
+            ]
+          },
+          "name": "PortfolioId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "PortfolioId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CostCenterPortfolio",
+      "description": "Linking entity between CostCenter and Portfolio"
+    }
+  ]
+}

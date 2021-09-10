@@ -1,0 +1,128 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Site",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "SiteId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "SiteCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific Site Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Education",
+                        "Education",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Health Care",
+                        "Health Care",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Hotel",
+                        "Hotel",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Industrial",
+                        "Industrial",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation",
+                        "Lodging, Leisure & Recreation",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use",
+                        "Mixed Use",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Office",
+                        "Office",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Residential",
+                        "Residential",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Retail",
+                        "Retail",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science",
+                        "Technology/Science",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Other",
+                        "Other",
+                        "10"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of site",
+          "maximumLength": 75,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "Site",
+      "description": "Grouping of multiple buildings and lands"
+    }
+  ]
+}

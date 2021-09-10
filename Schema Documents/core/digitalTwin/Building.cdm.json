@@ -1,0 +1,1187 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "Site.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Building",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "BuildingId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Site. to Building.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Reference to the Site which the building belongs to",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "BuildingCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific Building Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "PrimaryTypeOfBuilding",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Retail",
+                        "Retail",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Retail, High Street",
+                        "Retail, High Street",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Retail, Retail Centers",
+                        "Retail, Retail Centers",
+                        "2"
+                      ],
+
+                      [
+                        "en",
+                        "Retail, Shopping Center",
+                        "Retail, Shopping Center",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Retail, Strip Mall",
+                        "Retail, Strip Mall",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Retail, Lifestyle Center",
+                        "Retail, Lifestyle Center",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Retail, Warehouse",
+                        "Retail, Warehouse",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Retail, Restaurants/Bars",
+                        "Retail, Restaurants/Bars",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Retail, Other",
+                        "Retail, Other",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Office",
+                        "Office",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Office, Corporate",
+                        "Office, Corporate",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "Office, Low-Rise Office",
+                        "Office, Low-Rise Office",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "Office, Mid-Rise Office",
+                        "Office, Mid-Rise Office",
+                        "12"
+                      ],
+                      [
+                        "en",
+                        "Office, High-Rise Office",
+                        "Office, High-Rise Office",
+                        "13"
+                      ],
+                      [
+                        "en",
+                        "Office, Medical Office",
+                        "Office, Medical Office",
+                        "14"
+                      ],
+                      [
+                        "en",
+                        "Office, Business Park",
+                        "Office, Business Park",
+                        "15"
+                      ],
+                      [
+                        "en",
+                        "Office, Other",
+                        "Office, Other",
+                        "16"
+                      ],
+                      [
+                        "en",
+                        "Industrial",
+                        "Industrial",
+                        "17"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Distribution Warehouse",
+                        "Industrial, Distribution Warehouse",
+                        "18"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Industrial Park",
+                        "Industrial, Industrial Park",
+                        "19"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Manufacturing",
+                        "Industrial, Manufacturing",
+                        "20"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Other",
+                        "Industrial, Other",
+                        "21"
+                      ],
+                      [
+                        "en",
+                        "Residential",
+                        "Residential",
+                        "22"
+                      ],
+                      [
+                        "en",
+                        "Residential, Multi-Family",
+                        "Residential, Multi-Family",
+                        "23"
+                      ],
+                      [
+                        "en",
+                        "Residential, Low-Rise Multi-Family",
+                        "Residential, Low-Rise Multi-Family",
+                        "24"
+                      ],
+                      [
+                        "en",
+                        "Residential, Mid-Rise Multi-Family",
+                        "Residential, Mid-Rise Multi-Family",
+                        "25"
+                      ],
+                      [
+                        "en",
+                        "Residential, High-Rise Multi-Family",
+                        "Residential, High-Rise Multi-Family",
+                        "26"
+                      ],
+                      [
+                        "en",
+                        "Residential, Family Homes",
+                        "Residential, Family Homes",
+                        "27"
+                      ],
+                      [
+                        "en",
+                        "Residential, Student Housing",
+                        "Residential, Student Housing",
+                        "28"
+                      ],
+                      [
+                        "en",
+                        "Residential, Retirement Living",
+                        "Residential, Retirement Living",
+                        "29"
+                      ],
+                      [
+                        "en",
+                        "Residential, Other",
+                        "Residential, Other",
+                        "30"
+                      ],
+                      [
+                        "en",
+                        "Hotel",
+                        "Hotel",
+                        "31"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation",
+                        "Lodging, Leisure & Recreation",
+                        "32"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Indoor Arena",
+                        "Lodging, Leisure & Recreation, Indoor Arena",
+                        "33"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Fitness Center",
+                        "Lodging, Leisure & Recreation, Fitness Center",
+                        "34"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Performing Arts",
+                        "Lodging, Leisure & Recreation, Performing Arts",
+                        "35"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Swimming Center",
+                        "Lodging, Leisure & Recreation, Swimming Center",
+                        "36"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Museum/Gallery",
+                        "Lodging, Leisure & Recreation, Museum/Gallery",
+                        "37"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Other",
+                        "Lodging, Leisure & Recreation, Other",
+                        "38"
+                      ],
+                      [
+                        "en",
+                        "Education",
+                        "Education",
+                        "39"
+                      ],
+                      [
+                        "en",
+                        "Education, School",
+                        "Education, School",
+                        "40"
+                      ],
+                      [
+                        "en",
+                        "Education, University",
+                        "Education, University",
+                        "41"
+                      ],
+                      [
+                        "en",
+                        "Education, Library",
+                        "Education, Library",
+                        "42"
+                      ],
+                      [
+                        "en",
+                        "Education, Other",
+                        "Education, Other",
+                        "43"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science",
+                        "Technology/Science",
+                        "44"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science, Data Center",
+                        "Technology/Science, Data Center",
+                        "45"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science, Laboratory/Life sciences",
+                        "Technology/Science, Laboratory/Life sciences",
+                        "46"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science, Other",
+                        "Technology/Science, Other",
+                        "47"
+                      ],
+                      [
+                        "en",
+                        "Health Care",
+                        "Health Care",
+                        "50"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Health Care Center",
+                        "Health Care, Health Care Center",
+                        "51"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Senior Homes",
+                        "Health Care, Senior Homes",
+                        "52"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Other",
+                        "Health Care, Other",
+                        "53"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use",
+                        "Mixed Use",
+                        "54"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Retail",
+                        "55"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Office/Residential",
+                        "56"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Office/Industrial",
+                        "Mixed Use, Office/Industrial",
+                        "57"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Other",
+                        "Mixed Use, Other",
+                        "58"
+                      ],
+                      [
+                        "en",
+                        "Other",
+                        "Other",
+                        "59"
+                      ],
+                      [
+                        "en",
+                        "Other, Parking (Indoors)",
+                        "Other, Parking (Indoors)",
+                        "60"
+                      ],
+                      [
+                        "en",
+                        "Other, Self-Storage",
+                        "Other, Self-Storage",
+                        "61"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of building use",
+          "maximumLength": 75,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SecondaryTypeOfBuilding",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Retail",
+                        "Retail",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Retail, High Street",
+                        "Retail, High Street",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Retail, Retail Centers",
+                        "Retail, Retail Centers",
+                        "2"
+                      ],
+
+                      [
+                        "en",
+                        "Retail, Shopping Center",
+                        "Retail, Shopping Center",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Retail, Strip Mall",
+                        "Retail, Strip Mall",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Retail, Lifestyle Center",
+                        "Retail, Lifestyle Center",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Retail, Warehouse",
+                        "Retail, Warehouse",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Retail, Restaurants/Bars",
+                        "Retail, Restaurants/Bars",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Retail, Other",
+                        "Retail, Other",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Office",
+                        "Office",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Office, Corporate",
+                        "Office, Corporate",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "Office, Low-Rise Office",
+                        "Office, Low-Rise Office",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "Office, Mid-Rise Office",
+                        "Office, Mid-Rise Office",
+                        "12"
+                      ],
+                      [
+                        "en",
+                        "Office, High-Rise Office",
+                        "Office, High-Rise Office",
+                        "13"
+                      ],
+                      [
+                        "en",
+                        "Office, Medical Office",
+                        "Office, Medical Office",
+                        "14"
+                      ],
+                      [
+                        "en",
+                        "Office, Business Park",
+                        "Office, Business Park",
+                        "15"
+                      ],
+                      [
+                        "en",
+                        "Office, Other",
+                        "Office, Other",
+                        "16"
+                      ],
+                      [
+                        "en",
+                        "Industrial",
+                        "Industrial",
+                        "17"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Distribution Warehouse",
+                        "Industrial, Distribution Warehouse",
+                        "18"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Industrial Park",
+                        "Industrial, Industrial Park",
+                        "19"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Manufacturing",
+                        "Industrial, Manufacturing",
+                        "20"
+                      ],
+                      [
+                        "en",
+                        "Industrial, Other",
+                        "Industrial, Other",
+                        "21"
+                      ],
+                      [
+                        "en",
+                        "Residential",
+                        "Residential",
+                        "22"
+                      ],
+                      [
+                        "en",
+                        "Residential, Multi-Family",
+                        "Residential, Multi-Family",
+                        "23"
+                      ],
+                      [
+                        "en",
+                        "Residential, Low-Rise Multi-Family",
+                        "Residential, Low-Rise Multi-Family",
+                        "24"
+                      ],
+                      [
+                        "en",
+                        "Residential, Mid-Rise Multi-Family",
+                        "Residential, Mid-Rise Multi-Family",
+                        "25"
+                      ],
+                      [
+                        "en",
+                        "Residential, High-Rise Multi-Family",
+                        "Residential, High-Rise Multi-Family",
+                        "26"
+                      ],
+                      [
+                        "en",
+                        "Residential, Family Homes",
+                        "Residential, Family Homes",
+                        "27"
+                      ],
+                      [
+                        "en",
+                        "Residential, Student Housing",
+                        "Residential, Student Housing",
+                        "28"
+                      ],
+                      [
+                        "en",
+                        "Residential, Retirement Living",
+                        "Residential, Retirement Living",
+                        "29"
+                      ],
+                      [
+                        "en",
+                        "Residential, Other",
+                        "Residential, Other",
+                        "30"
+                      ],
+                      [
+                        "en",
+                        "Hotel",
+                        "Hotel",
+                        "31"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation",
+                        "Lodging, Leisure & Recreation",
+                        "32"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Indoor Arena",
+                        "Lodging, Leisure & Recreation, Indoor Arena",
+                        "33"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Fitness Center",
+                        "Lodging, Leisure & Recreation, Fitness Center",
+                        "34"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Performing Arts",
+                        "Lodging, Leisure & Recreation, Performing Arts",
+                        "35"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Swimming Center",
+                        "Lodging, Leisure & Recreation, Swimming Center",
+                        "36"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Museum/Gallery",
+                        "Lodging, Leisure & Recreation, Museum/Gallery",
+                        "37"
+                      ],
+                      [
+                        "en",
+                        "Lodging, Leisure & Recreation, Other",
+                        "Lodging, Leisure & Recreation, Other",
+                        "38"
+                      ],
+                      [
+                        "en",
+                        "Education",
+                        "Education",
+                        "39"
+                      ],
+                      [
+                        "en",
+                        "Education, School",
+                        "Education, School",
+                        "40"
+                      ],
+                      [
+                        "en",
+                        "Education, University",
+                        "Education, University",
+                        "41"
+                      ],
+                      [
+                        "en",
+                        "Education, Library",
+                        "Education, Library",
+                        "42"
+                      ],
+                      [
+                        "en",
+                        "Education, Other",
+                        "Education, Other",
+                        "43"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science",
+                        "Technology/Science",
+                        "44"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science, Data Center",
+                        "Technology/Science, Data Center",
+                        "45"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science, Laboratory/Life sciences",
+                        "Technology/Science, Laboratory/Life sciences",
+                        "46"
+                      ],
+                      [
+                        "en",
+                        "Technology/Science, Other",
+                        "Technology/Science, Other",
+                        "47"
+                      ],
+                      [
+                        "en",
+                        "Health Care",
+                        "Health Care",
+                        "50"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Health Care Center",
+                        "Health Care, Health Care Center",
+                        "51"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Senior Homes",
+                        "Health Care, Senior Homes",
+                        "52"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Other",
+                        "Health Care, Other",
+                        "53"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use",
+                        "Mixed Use",
+                        "54"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Retail",
+                        "55"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Office/Residential",
+                        "56"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Office/Industrial",
+                        "Mixed Use, Office/Industrial",
+                        "57"
+                      ],
+                      [
+                        "en",
+                        "Mixed Use, Other",
+                        "Mixed Use, Other",
+                        "58"
+                      ],
+                      [
+                        "en",
+                        "Other",
+                        "Other",
+                        "59"
+                      ],
+                      [
+                        "en",
+                        "Other, Parking (Indoors)",
+                        "Other, Parking (Indoors)",
+                        "60"
+                      ],
+                      [
+                        "en",
+                        "Other, Self-Storage",
+                        "Other, Self-Storage",
+                        "61"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Second type of building use",
+          "maximumLength": 75,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "EnergyEfficiencyClass",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Energy Efficiency Class of Building",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "ConstructionYear",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Year of construction in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "YearOfLastRefurbishment",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Year of last refurbishment took place in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z.",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "MonumentProtection",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "The building is declared to be an ancient monument with national importance by the government"
+        },
+        {
+          "name": "TypeOfOwnership",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Owner",
+                        "Owner",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Tenant",
+                        "Tenant",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Is the building owned or leased.",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SelfUse",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is building self used or not (Y/N)"
+        },
+        {
+          "name": "TenantStructure",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Single-tenant",
+                        "Single-tenant",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Multi-tenant",
+                        "Multi-tenant",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Is there multiple tenants in the building or only one",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "ParkingSpaces",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Number of parking spaces",
+          "appliedTraits": [
+            "means.measurement.count"
+          ]
+        },
+        {
+          "name": "PrimaryEnergyType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Natural Gas",
+                        "Natural Gas",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Coal",
+                        "Coal",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Nuclear",
+                        "Nuclear",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Petroleum",
+                        "Petroleum",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Hydropower",
+                        "Hydropower",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Wind",
+                        "Wind",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Biomass",
+                        "Biomass",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Geothermal",
+                        "Geothermal",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Solar",
+                        "Solar",
+                        "8"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Type of energy used",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "PrimaryWaterType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of water used",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryHeatingType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "District heating",
+                        "District heating",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Natural gas",
+                        "Natural gas",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Oil-based fuels",
+                        "Oil-based fuels",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Solar thermal",
+                        "Solar thermal",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Heat pump",
+                        "Heat pump",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Electricity (radiator)",
+                        "Electricity (radiator)",
+                        "6"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Primary Type of heating",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SecondaryHeatingType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "District heating",
+                        "District heating",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Natural gas",
+                        "Natural gas",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Oil-based fuels",
+                        "Oil-based fuels",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Solar thermal",
+                        "Solar thermal",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Heat pump",
+                        "Heat pump",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Electricity (radiator)",
+                        "Electricity (radiator)",
+                        "6"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Secondary Type of heating",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "AirConditioning",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Does the building have air conditioning (Y/N) (Needed for precise  future emissions projection of building)"
+        }
+      ],
+      "displayName": "Building",
+      "description": "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)"
+    }
+  ]
+}

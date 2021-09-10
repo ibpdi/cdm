@@ -1,0 +1,295 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Certificate.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Certificate",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Certificate",
+        "definition": "resolvedFrom/Certificate",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Certificate/attributeContext/Certificate",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Certificate/attributeContext/Certificate/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CertificateId",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Certificate/hasAttributes/CertificateId",
+            "contents": [
+              "Certificate/hasAttributes/CertificateId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Certificate/attributeContext/Certificate/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Certificate/attributeContext/Certificate/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Certificate/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Certificate/hasAttributes/Type",
+            "contents": [
+              "Certificate/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Certificate/hasAttributes/Value",
+            "contents": [
+              "Certificate/hasAttributes/Value"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IssuingDate",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Certificate/hasAttributes/IssuingDate",
+            "contents": [
+              "Certificate/hasAttributes/IssuingDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Certificate/attributeContext/Certificate/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Certificate/attributeContext/Certificate/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Certificate/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Certificate/attributeContext/Certificate/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Certificate/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CertificateUrl",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Certificate/hasAttributes/CertificateUrl",
+            "contents": [
+              "Certificate/hasAttributes/CertificateUrl"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DocumentId",
+            "parent": "Certificate/attributeContext/Certificate",
+            "definition": "resolvedFrom/Certificate/hasAttributes/DocumentId",
+            "contents": [
+              "Certificate/hasAttributes/DocumentId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CertificateId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/CertificateId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/Type",
+          "dataFormat": "String",
+          "description": "Type of Certificate e.g: LEED, BREEAM, DGNB",
+          "maximumLength": 50
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/Value",
+          "dataFormat": "String",
+          "description": "Value of entity."
+        },
+        {
+          "name": "IssuingDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/IssuingDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Date certificate was issued in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "CertificateUrl",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.reference.URL"
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/CertificateUrl",
+          "dataFormat": "String",
+          "description": "Certificate Url",
+          "maximumLength": 200
+        },
+        {
+          "name": "DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Certificate/attributeContext/Certificate/DocumentId",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Certificate",
+      "description": "Any official document related to building, equipment, system etc.",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Climate",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ClimateId",
+          "purpose": "identifiedBy",
+          "dataType": "guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "Experiment",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of simulation of regional climate model e.g. Historical, Evaluation, RCP2.6",
+          "maximumLength": 75
+        },
+        {
+          "name": "TemporalResolution",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Temporal resolution of data (can be the time period over which raw data is aggregated)",
+          "maximumLength": 50
+        },
+        {
+          "name": "SpatialResolution",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Spatial resolution of data",
+          "maximumLength": 50
+        },
+        {
+          "name": "GCM",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Global climate model used",
+          "maximumLength": 75
+        },
+        {
+          "name": "RCM",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Regional climate model used",
+          "maximumLength": 75
+        },
+        {
+          "name": "SimV",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Run number of certain climate model or model combination",
+          "maximumLength": 75
+        },
+        {
+          "name": "EnsM",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Information on members of a model ensemble and changed conditions ('realisation', 'initialisation', 'physics'). Control member; 'r1i1p1'",
+          "maximumLength": 75
+        },
+        {
+          "name": "Value",
+          "purpose": "hasA",
+          "dataType": "celsius",
+          "description": "Value of entity."
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Unit of observed value",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "LocationType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "NUTS3",
+                        "NUTS3",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Zip Code",
+                        "Zip Code",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Geographic coordinates",
+                        "Geographic coordinates",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Projected coordinates",
+                        "Projected coordinates",
+                        "3"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of spatial reference e.g. Zip code or geographic coordinates",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "CoordinateSystem",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Specific coordinate system used",
+          "maximumLength": 50
+        },
+        {
+          "name": "Location",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Localisation of observed data in case of non-grid location types",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.location.geo"
+          ]
+        },
+        {
+          "name": "Latitude",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Latitude coordinate in case of geographic coordinates",
+          "appliedTraits": [
+            "means.location.latitude"
+          ]
+        },
+        {
+          "name": "Longitude",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Longitude coordinate in case of geographic coordinates",
+          "appliedTraits": [
+            "means.location.longitude"
+          ]
+        },
+        {
+          "name": "PosX",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "description": "Vertical coordinate in case of projected coordinates",
+          "isNullable": true,
+          "appliedTraits": [
+            "means.location.geo.centroid.X"
+          ]
+        },
+        {
+          "name": "PosY",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Vertical coordinate in case of projected coordinates",
+          "appliedTraits": [
+            "means.location.geo.centroid.y"
+          ]
+        },
+        {
+          "name": "Variable",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Observed variable",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Climate",
+      "description": "Regional information on past and future amount of heating and cooling degree days (for potential climate normalisation and projection of energy demand)"
+    }
+  ]
+}
