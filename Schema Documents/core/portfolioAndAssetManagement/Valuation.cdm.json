@@ -1,0 +1,254 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Valuation",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ValuationId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreviousValuationId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "Description",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Description of valuation implementation",
+          "maximumLength": 200
+        },
+        {
+          "name": "Text",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Text field",
+          "maximumLength": 200
+        },
+        {
+          "name": "Keywords",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Important keywords",
+          "maximumLength": 200
+        },
+        {
+          "name": "Url",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "URL if existent",
+          "maximumLength": 200,
+          "appliedTraits": [
+            "means.reference.URL"
+          ]
+        },
+        {
+          "name": "JurisdictionType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of Jurisdiction",
+          "maximumLength": 50
+        },
+        {
+          "name": "ProfessionalStandard",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of professional valuation standard used",
+          "maximumLength": 50
+        },
+        {
+          "name": "AccountingStandard",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of Accounting standard used",
+          "maximumLength": 50
+        },
+        {
+          "name": "JurisdictionStandard",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of Jurisdiction type used",
+          "maximumLength": 50
+        },
+        {
+          "name": "Value",
+          "purpose": "hasA",
+          "dataType": "currency",
+          "description": "Value of Valuation",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Unit of valuation",
+          "maximumLength": 50
+        },
+        {
+          "name": "Assumptions",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Concluded assumptions",
+          "maximumLength": 200
+        },
+        {
+          "name": "SpecialAssumptions",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Concluded special assumptions",
+          "maximumLength": 200
+        },
+        {
+          "name": "Constrains",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Existing constrains",
+          "maximumLength": 50
+        },
+        {
+          "name": "Approach",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Valuation approach",
+          "maximumLength": 50
+        },
+        {
+          "name": "MaintenanceBacklog",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Does a maintenance backlog exist (Y/N)"
+        },
+        {
+          "name": "SingleTenant",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Valuation of single tenant building (Y/N)"
+        },
+        {
+          "name": "DiscountRate",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Discount rate included",
+          "appliedTraits": [
+            "means.measurement.rate"
+          ]
+        },
+        {
+          "name": "DiscountPremiums",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Discount premiums included"
+        },
+        {
+          "name": "Uncertainty",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "LoV for uncertainty",
+          "maximumLength": 50
+        },
+        {
+          "name": "Liquidity",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Amount of cash",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SpaceEfficiency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Space usage efficiency",
+          "maximumLength": 50
+        },
+        {
+          "name": "EnergyEfficiency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Stating the energy efficiency class",
+          "maximumLength": 50
+        },
+        {
+          "name": " DocumentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Valuation",
+      "description": "Financial valuation of buildings or whole portfolios"
+    }
+  ]
+}

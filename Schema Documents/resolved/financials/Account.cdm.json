@@ -1,0 +1,379 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/financials/Account.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Account",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Account",
+        "definition": "resolvedFrom/Account",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Account/attributeContext/Account",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Account/attributeContext/Account/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AccountId",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/AccountId",
+            "contents": [
+              "Account/hasAttributes/AccountId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Account/attributeContext/Account/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Account/attributeContext/Account/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Account/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Project",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/Project",
+            "contents": [
+              "Account/hasAttributes/Project"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Category",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/Category",
+            "contents": [
+              "Account/hasAttributes/Category"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Group",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/Group",
+            "contents": [
+              "Account/hasAttributes/Group"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Account/attributeContext/Account/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Account/attributeContext/Account/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Account/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Account/attributeContext/Account/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Account/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StatementType",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/StatementType",
+            "contents": [
+              "Account/hasAttributes/StatementType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RecordType",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/RecordType",
+            "contents": [
+              "Account/hasAttributes/RecordType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Version",
+            "parent": "Account/attributeContext/Account",
+            "definition": "resolvedFrom/Account/hasAttributes/Version",
+            "contents": [
+              "Account/hasAttributes/Version"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Account/attributeContext/Account/AccountId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Account/attributeContext/Account/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "Project",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Account/attributeContext/Account/Project",
+          "dataFormat": "String",
+          "description": "Account type (project aligned with RICS naming convention)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Assets",
+              "attributeValue": "Assets",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Liabilities",
+              "attributeValue": "Liabilities",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Equity",
+              "attributeValue": "Equity",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Revenue",
+              "attributeValue": "Revenue",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Expenses",
+              "attributeValue": "Expenses",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other (Non-Operating) Income and expenses",
+              "attributeValue": "Other (Non-Operating) Income and expenses",
+              "displayOrder": "5"
+            }
+          ]
+        },
+        {
+          "name": "Category",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "Account/attributeContext/Account/Category",
+          "dataFormat": "String",
+          "description": "Account category according to IBPDI charts of accounts (category aligned with RICS naming convention)",
+          "maximumLength": 75
+        },
+        {
+          "name": "Group",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "Account/attributeContext/Account/Group",
+          "dataFormat": "String",
+          "description": "Account group according IBPDI charts of accounts (group aligned with RICS naming convention)",
+          "maximumLength": 75
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Account/attributeContext/Account/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Account/attributeContext/Account/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "StatementType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Account/attributeContext/Account/StatementType",
+          "dataFormat": "String",
+          "description": "Statement type (Balance statement or P&L account)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "BalanceStatement",
+              "attributeValue": "BalanceStatement",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "P&L",
+              "attributeValue": "P&L",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "RecordType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Account/attributeContext/Account/RecordType",
+          "dataFormat": "String",
+          "description": "Record type (Debit or Credit)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Debit",
+              "attributeValue": "Debit",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Credit",
+              "attributeValue": "Credit",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "Version",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Account/attributeContext/Account/Version",
+          "dataFormat": "String",
+          "description": "Account version",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Account",
+      "description": "BPDI defined account number based on standardized chart of account",
+      "version": "4.3"
+    }
+  ]
+}

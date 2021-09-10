@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "GhgEmissions.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Site.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "GhgEmissionsSite",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk GhgEmissions. to GhgEmissionsSite.",
+          "entity": {
+            "entityReference": "GhgEmissions",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "GhgEmissions/(resolvedAttributes)/GhgEmissionsId"
+                ]
+              }
+            ]
+          },
+          "name": "GhgEmissionsId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "GhgEmissionsId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 36
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Site. to GhgEmissionsSite.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "GhgEmissionsSite",
+      "description": "Linking entity between GhgEmissions and Site"
+    }
+  ]
+}

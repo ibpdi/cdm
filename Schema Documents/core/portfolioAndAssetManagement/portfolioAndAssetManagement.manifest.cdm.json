@@ -1,0 +1,75 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "portfolioAndAssetManagement",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Portfolio",
+      "entityPath": "Portfolio.cdm.json/Portfolio",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioBuilding",
+      "entityPath": "PortfolioBuilding.cdm.json/PortfolioBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioLand",
+      "entityPath": "PortfolioLand.cdm.json/PortfolioLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioSite",
+      "entityPath": "PortfolioSite.cdm.json/PortfolioSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioStrategy",
+      "entityPath": "PortfolioStrategy.cdm.json/PortfolioStrategy",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PortfolioUnit",
+      "entityPath": "PortfolioUnit.cdm.json/PortfolioUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Valuation",
+      "entityPath": "Valuation.cdm.json/Valuation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationBuilding",
+      "entityPath": "ValuationBuilding.cdm.json/ValuationBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationIndividualAccount",
+      "entityPath": "ValuationIndividualAccount.cdm.json/ValuationIndividualAccount",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationLand",
+      "entityPath": "ValuationLand.cdm.json/ValuationLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ValuationOperationalMeasurement",
+      "entityPath": "ValuationOperationalMeasurement.cdm.json/ValuationOperationalMeasurement",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

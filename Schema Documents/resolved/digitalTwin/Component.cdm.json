@@ -1,0 +1,303 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Component.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Component",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Component",
+        "definition": "resolvedFrom/Component",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Component/attributeContext/Component",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Component/attributeContext/Component/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentId",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/ComponentId",
+            "contents": [
+              "Component/hasAttributes/ComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Component/attributeContext/Component/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Component/attributeContext/Component/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Component/attributeContext/Component/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Component/attributeContext/Component/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Component/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Component/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Counter",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/Counter",
+            "contents": [
+              "Component/hasAttributes/Counter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConditionStatus",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/ConditionStatus",
+            "contents": [
+              "Component/hasAttributes/ConditionStatus"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DurationLifeYear",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/DurationLifeYear",
+            "contents": [
+              "Component/hasAttributes/DurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WarrantyGuarantor",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/WarrantyGuarantor",
+            "contents": [
+              "Component/hasAttributes/WarrantyGuarantor"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WarrantyStartDate",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/WarrantyStartDate",
+            "contents": [
+              "Component/hasAttributes/WarrantyStartDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SerialNumber",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/SerialNumber",
+            "contents": [
+              "Component/hasAttributes/SerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TagNumber",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/TagNumber",
+            "contents": [
+              "Component/hasAttributes/TagNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/ComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Component/attributeContext/Component/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Counter",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "Component/attributeContext/Component/Counter",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Counter of component"
+        },
+        {
+          "name": "ConditionStatus",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/ConditionStatus",
+          "dataFormat": "String",
+          "description": "Condition of component",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Defect",
+              "attributeValue": "Defect",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Good",
+              "attributeValue": "Good",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Not Available",
+              "attributeValue": "Not Available",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "DurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "is.dataFormat.small"
+          ],
+          "attributeContext": "Component/attributeContext/Component/DurationLifeYear",
+          "dataFormat": "Int16",
+          "description": "Life span of component in years"
+        },
+        {
+          "name": "WarrantyGuarantor",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/WarrantyGuarantor",
+          "dataFormat": "String",
+          "description": "Warranty Guarantor ",
+          "maximumLength": 200
+        },
+        {
+          "name": "WarrantyStartDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Component/attributeContext/Component/WarrantyStartDate",
+          "dataFormat": "DateTime",
+          "description": "Warranty start date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/SerialNumber",
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "TagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/TagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Component",
+      "description": "Component [component, part, apparatus] is a named and individually defined physical object and may require management efforts such as inspections, maintenance, service, or replacement during the use phase",
+      "version": "4.3"
+    }
+  ]
+}

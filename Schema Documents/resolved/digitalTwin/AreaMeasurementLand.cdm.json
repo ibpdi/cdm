@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AreaMeasurementLand.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurementLand",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AreaMeasurementLand",
+        "definition": "resolvedFrom/AreaMeasurementLand",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AreaMeasurementId",
+            "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand",
+            "definition": "resolvedFrom/AreaMeasurementLand/hasAttributes/AreaMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "AreaMeasurement",
+                "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/AreaMeasurementId",
+                "definition": "resolvedFrom/AreaMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/AreaMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/AreaMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AreaMeasurementLand/hasAttributes/AreaMeasurementId/resolutionGuidance/foreignKeyAttribute/AreaMeasurementId",
+                        "contents": [
+                          "AreaMeasurementLand/hasAttributes/AreaMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LandId",
+            "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand",
+            "definition": "resolvedFrom/AreaMeasurementLand/hasAttributes/LandId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Land",
+                "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/LandId",
+                "definition": "resolvedFrom/Land"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/LandId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/LandId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/LandId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AreaMeasurementLand/hasAttributes/LandId/resolutionGuidance/foreignKeyAttribute/LandId",
+                        "contents": [
+                          "AreaMeasurementLand/hasAttributes/LandId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AreaMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/AreaMeasurement.cdm.json/AreaMeasurement",
+                        "AreaMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "LandId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Land.cdm.json/Land",
+                        "LandId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurementLand/attributeContext/AreaMeasurementLand/LandId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AreaMeasurementLand",
+      "description": "Linking entity between AreaMeasurement and Land",
+      "version": "4.3"
+    }
+  ]
+}

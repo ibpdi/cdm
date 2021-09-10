@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ComponentFloor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ComponentFloor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ComponentFloor",
+        "definition": "resolvedFrom/ComponentFloor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ComponentFloor/attributeContext/ComponentFloor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ComponentFloor/attributeContext/ComponentFloor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentId",
+            "parent": "ComponentFloor/attributeContext/ComponentFloor",
+            "definition": "resolvedFrom/ComponentFloor/hasAttributes/ComponentId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Component",
+                "parent": "ComponentFloor/attributeContext/ComponentFloor/ComponentId",
+                "definition": "resolvedFrom/Component"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ComponentFloor/attributeContext/ComponentFloor/ComponentId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ComponentFloor/attributeContext/ComponentFloor/ComponentId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ComponentFloor/attributeContext/ComponentFloor/ComponentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ComponentFloor/hasAttributes/ComponentId/resolutionGuidance/foreignKeyAttribute/ComponentId",
+                        "contents": [
+                          "ComponentFloor/hasAttributes/ComponentId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FloorId",
+            "parent": "ComponentFloor/attributeContext/ComponentFloor",
+            "definition": "resolvedFrom/ComponentFloor/hasAttributes/FloorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Floor",
+                "parent": "ComponentFloor/attributeContext/ComponentFloor/FloorId",
+                "definition": "resolvedFrom/Floor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ComponentFloor/attributeContext/ComponentFloor/FloorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ComponentFloor/attributeContext/ComponentFloor/FloorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ComponentFloor/attributeContext/ComponentFloor/FloorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ComponentFloor/hasAttributes/FloorId/resolutionGuidance/foreignKeyAttribute/FloorId",
+                        "contents": [
+                          "ComponentFloor/hasAttributes/FloorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Component.cdm.json/Component",
+                        "ComponentId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ComponentFloor/attributeContext/ComponentFloor/ComponentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FloorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Floor.cdm.json/Floor",
+                        "FloorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ComponentFloor/attributeContext/ComponentFloor/FloorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ComponentFloor",
+      "description": "Linking entity between component and floor",
+      "version": "4.3"
+    }
+  ]
+}

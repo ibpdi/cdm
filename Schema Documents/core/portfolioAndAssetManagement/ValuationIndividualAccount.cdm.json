@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Valuation.cdm.json"
+    },
+    {
+      "corpusPath": "/core/financials/IndividualAccount.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ValuationIndividualAccount",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Valuation. to ValuationIndividualAccount.",
+          "entity": {
+            "entityReference": "Valuation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Valuation/(resolvedAttributes)/ValuationId"
+                ]
+              }
+            ]
+          },
+          "name": "ValuationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ValuationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk IndividualAccount. to ValuationIndividualAccount.",
+          "entity": {
+            "entityReference": "IndividualAccount",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "IndividualAccount/(resolvedAttributes)/IndividualAccountId"
+                ]
+              }
+            ]
+          },
+          "name": "IndividualAccountId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "IndividualAccountId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "ValuationAccount",
+      "description": "Linking entity between Valuation and IndividualAccount"
+    }
+  ]
+}

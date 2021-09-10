@@ -1,0 +1,28 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Role",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Type"
+        }
+      ],
+      "displayName": "Role",
+      "description": "Defining the role of the organisation or contact"
+    }
+  ]
+}

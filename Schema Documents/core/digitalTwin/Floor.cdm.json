@@ -1,0 +1,76 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "Building.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Floor",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "FloorId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Building. to Floor.",
+          "entity": {
+            "entityReference": "Building",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Building/(resolvedAttributes)/BuildingId"
+                ]
+              }
+            ]
+          },
+          "name": "BuildingId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "BuildingId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Reference to the Building which the Floor belongs to",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "FloorCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific Floor Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "FloorNumber",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "description": "Number of floor"
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "Floor",
+      "description": "The floor has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."
+    }
+  ]
+}

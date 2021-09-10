@@ -1,0 +1,94 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "RentalUnit.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TenantCommunication",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "TenantCommunicationId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk RentalUnit. to TenantCommunication.",
+          "entity": {
+            "entityReference": "RentalUnit",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "RentalUnit/(resolvedAttributes)/RentalUnitId"
+                ]
+              }
+            ]
+          },
+          "name": "RentalUnitId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RentalUnitId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "name": "Medium",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Medium of communication",
+          "maximumLength": 50
+        },
+        {
+          "name": "Description",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Description of communciation",
+          "maximumLength": 200
+        },
+        {
+          "name": "ValidFrom",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "description": "Date communication occurred in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Date communication is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Status",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Status of communication",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "TenantCommunication",
+      "description": "Communication between different parties involved in operation, control, and oversight of the real estate"
+    }
+  ]
+}

@@ -1,0 +1,1423 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/OperationalMeasurement.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "OperationalMeasurement",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "OperationalMeasurement",
+        "definition": "resolvedFrom/OperationalMeasurement",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/OperationalMeasurementId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "OperationalMeasurement/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Parent",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/Parent",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Parent",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Parent",
+                "definition": "resolvedFrom/Parent",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ParentId",
+                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Parent/Parent",
+                    "definition": "resolvedFrom/Parent/members/ParentId",
+                    "contents": [
+                      "OperationalMeasurement/hasAttributes/ParentId"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Purpose",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/Purpose",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/Purpose"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Accuracy",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/Accuracy",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/Accuracy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/Type",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubType",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/SubType",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/SubType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "OperationalMeasurement/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/Value",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "OperationalMeasurement/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/Unit",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ProcuredBy",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/ProcuredBy",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/ProcuredBy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceType",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/SpaceType",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/SpaceType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LCA",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/LCA",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/LCA"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PostingDate",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/PostingDate",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/PostingDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MeasurementDate",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/MeasurementDate",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/MeasurementDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "OperationalMeasurement/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "OperationalMeasurement/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ProjectionBaseYear",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/ProjectionBaseYear",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/ProjectionBaseYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ProjectionBaseId",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/ProjectionBaseId",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/ProjectionBaseId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MeterNumber",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/MeterNumber",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/MeterNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MeterId",
+            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/MeterId",
+            "contents": [
+              "OperationalMeasurement/hasAttributes/MeterId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/OperationalMeasurementId",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "name": "ParentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Parent/Parent/ParentId",
+          "isNullable": true,
+          "dataFormat": "Guid",
+          "description": "Parent (Guid) of entity.",
+          "maximumLength": 36
+        },
+        {
+          "name": "Purpose",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Purpose",
+          "dataFormat": "String",
+          "description": "Specific purpose of resource consumption e.g. 'space heating' in case of burning natural gas",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Space heating",
+              "attributeValue": "Space heating",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water heating",
+              "attributeValue": "Water heating",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Heating (unspecified)",
+              "attributeValue": "Heating (unspecified)",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Cooling",
+              "attributeValue": "Cooling",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lighting",
+              "attributeValue": "Lighting",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Elevator",
+              "attributeValue": "Elevator",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Appliances",
+              "attributeValue": "Appliances",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Heat pump",
+              "attributeValue": "Heat pump",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other",
+              "attributeValue": "Other",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "9"
+            }
+          ]
+        },
+        {
+          "name": "Accuracy",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Accuracy",
+          "dataFormat": "String",
+          "description": "Information on accuracy of value e.g. 'metered' or 'extrapolated'",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Estimated",
+              "attributeValue": "Estimated",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Metered",
+              "attributeValue": "Metered",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Extrapolated",
+              "attributeValue": "Extrapolated",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Planned",
+              "attributeValue": "Planned",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Simulated",
+              "attributeValue": "Simulated",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projection based on estimated data",
+              "attributeValue": "Projection based on estimated data",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projection based on metered data",
+              "attributeValue": "Projection based on metered data",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projection based on extrapolated data",
+              "attributeValue": "Projection based on extrapolated data",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projection based on planned data",
+              "attributeValue": "Projection based on planned data",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projection based on simulated data",
+              "attributeValue": "Projection based on simulated data",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Projection based on data with unspecified accuracy",
+              "attributeValue": "Projection based on data with unspecified accuracy",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Missing",
+              "attributeValue": "Missing",
+              "displayOrder": "12"
+            }
+          ]
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Type",
+          "dataFormat": "String",
+          "description": "General type of operational measurement e.g. energy, water or waste",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Energy",
+              "attributeValue": "Energy",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water",
+              "attributeValue": "Water",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste",
+              "attributeValue": "Waste",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Fugitive",
+              "attributeValue": "Fugitive",
+              "displayOrder": "3"
+            }
+          ]
+        },
+        {
+          "name": "SubType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/SubType",
+          "dataFormat": "String",
+          "description": "Specific type of operational measurement e.g. district heating or water discharge",
+          "maximumLength": 100,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Electricity from grid (green electricity contract)",
+              "attributeValue": "Electricity from grid (green electricity contract)",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity self-generated & exported",
+              "attributeValue": "Electricity self-generated & exported",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity self-generated & consumed",
+              "attributeValue": "Electricity self-generated & consumed",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity (unspecified)",
+              "attributeValue": "Electricity (unspecified)",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "REC",
+              "attributeValue": "REC",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Natural gas (standard mix)",
+              "attributeValue": "Natural gas (standard mix)",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Green natural gas",
+              "attributeValue": "Green natural gas",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Natural gas (unspecified)",
+              "attributeValue": "Natural gas (unspecified)",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Oil-based fuels",
+              "attributeValue": "Oil-based fuels",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Fuel (unspecified)",
+              "attributeValue": "Fuel (unspecified)",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District heating",
+              "attributeValue": "District heating",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District cooling",
+              "attributeValue": "District cooling",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biomass",
+              "attributeValue": "Biomass",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Solar thermal",
+              "attributeValue": "Solar thermal",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Fresh water (municipal water supply)",
+              "attributeValue": "Fresh water (municipal water supply)",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Ground water (collected on site)",
+              "attributeValue": "Ground water (collected on site)",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rain water (collected on site)",
+              "attributeValue": "Rain water (collected on site)",
+              "displayOrder": "16"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Reclaimed water",
+              "attributeValue": "Reclaimed water",
+              "displayOrder": "17"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water discharge",
+              "attributeValue": "Water discharge",
+              "displayOrder": "18"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water consumption (unspecified)",
+              "attributeValue": "Water consumption (unspecified)",
+              "displayOrder": "19"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Recyclable or reusable waste",
+              "attributeValue": "Recyclable or reusable waste",
+              "displayOrder": "20"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Non-recyclable waste (to be burned)",
+              "attributeValue": "Non-recyclable waste (to be burned)",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biodegradable",
+              "attributeValue": "Biodegradable",
+              "displayOrder": "22"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Hazardous waste",
+              "attributeValue": "Hazardous waste",
+              "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste (unspecified)",
+              "attributeValue": "Waste (unspecified)",
+              "displayOrder": "24"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity from grid (normal contract)",
+              "attributeValue": "Electricity from grid (normal contract)",
+              "displayOrder": "25"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Carbon dioxide (CO2)",
+              "attributeValue": "Carbon dioxide (CO2)",
+              "displayOrder": "26"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Methane (CH4)",
+              "attributeValue": "Methane (CH4)",
+              "displayOrder": "27"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Nitrous oxide (N20)",
+              "attributeValue": "Nitrous oxide (N20)",
+              "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "attributeValue": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "displayOrder": "29"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+              "attributeValue": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+              "displayOrder": "30"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+              "attributeValue": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+              "displayOrder": "31"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+              "attributeValue": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+              "displayOrder": "32"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+              "attributeValue": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+              "displayOrder": "33"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+              "attributeValue": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+              "displayOrder": "34"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+              "attributeValue": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+              "displayOrder": "35"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+              "attributeValue": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+              "displayOrder": "36"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+              "attributeValue": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+              "displayOrder": "37"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-10 | Carbon tetrachloride (CCl4)",
+              "attributeValue": "R-10 | Carbon tetrachloride (CCl4)",
+              "displayOrder": "38"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Bromomethane | Methyl bromide (CH3Br)",
+              "attributeValue": "Bromomethane | Methyl bromide (CH3Br)",
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+              "attributeValue": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+              "displayOrder": "40"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+              "attributeValue": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+              "displayOrder": "41"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+              "attributeValue": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+              "displayOrder": "42"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+              "attributeValue": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+              "displayOrder": "43"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+              "attributeValue": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+              "displayOrder": "44"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+              "attributeValue": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+              "displayOrder": "45"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+              "attributeValue": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+              "displayOrder": "46"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+              "attributeValue": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+              "displayOrder": "47"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+              "attributeValue": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+              "displayOrder": "48"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-23 | HFC-23 | ",
+              "attributeValue": "R-23 | HFC-23 | ",
+              "displayOrder": "49"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-32 | HFC-32 | ",
+              "attributeValue": "R-32 | HFC-32 | ",
+              "displayOrder": "50"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-41 | HFC-41 | ",
+              "attributeValue": "R-41 | HFC-41 | ",
+              "displayOrder": "51"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-125 | HFC-125 | ",
+              "attributeValue": "R-125 | HFC-125 | ",
+              "displayOrder": "52"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-134 | HFC-134 | ",
+              "attributeValue": "R-134 | HFC-134 | ",
+              "displayOrder": "53"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-134a | HFC-134a | ",
+              "attributeValue": "R-134a | HFC-134a | ",
+              "displayOrder": "54"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-143 | HFC-143 | ",
+              "attributeValue": "R-143 | HFC-143 | ",
+              "displayOrder": "55"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-143a | HFC-143a | ",
+              "attributeValue": "R-143a | HFC-143a | ",
+              "displayOrder": "56"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-152 | HFC-152 | ",
+              "attributeValue": "R-152 | HFC-152 | ",
+              "displayOrder": "57"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-152a | HFC-152a | ",
+              "attributeValue": "R-152a | HFC-152a | ",
+              "displayOrder": "58"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-161 | HFC-161 | ",
+              "attributeValue": "R-161 | HFC-161 | ",
+              "displayOrder": "59"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-227ea | HFC-227ea | ",
+              "attributeValue": "R-227ea | HFC-227ea | ",
+              "displayOrder": "60"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-236cb | HFC-236cb | ",
+              "attributeValue": "R-236cb | HFC-236cb | ",
+              "displayOrder": "61"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-236ea | HFC-236ea | ",
+              "attributeValue": "R-236ea | HFC-236ea | ",
+              "displayOrder": "62"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-236fa | HFC-236fa | ",
+              "attributeValue": "R-236fa | HFC-236fa | ",
+              "displayOrder": "63"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-245ca | HFC-245ca | ",
+              "attributeValue": "R-245ca | HFC-245ca | ",
+              "displayOrder": "64"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-245fa | HFC-245fa | ",
+              "attributeValue": "R-245fa | HFC-245fa | ",
+              "displayOrder": "65"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-365mfc | HFC-365mfc | ",
+              "attributeValue": "R-365mfc | HFC-365mfc | ",
+              "displayOrder": "66"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-43-10mee | HFC-43-10mee | ",
+              "attributeValue": "R-43-10mee | HFC-43-10mee | ",
+              "displayOrder": "67"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Sulfur hexafluoride (SF6)",
+              "attributeValue": "Sulfur hexafluoride (SF6)",
+              "displayOrder": "68"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Nitrogen trifluoride (NF3)",
+              "attributeValue": "Nitrogen trifluoride (NF3)",
+              "displayOrder": "69"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water supply",
+              "attributeValue": "Water supply",
+              "displayOrder": "70"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Non-hazardous waste",
+              "attributeValue": "Non-hazardous waste",
+              "displayOrder": "71"
+            }
+          ]
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Value/Value/Value",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Value of entity."
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Unit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of operational measurement e.g. 'kWh' or 'm³'",
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "kWh",
+              "attributeValue": "kWh",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "m³",
+              "attributeValue": "m³",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "kg",
+              "attributeValue": "kg",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "ProcuredBy",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ProcuredBy",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Information on operational control ('who bought it?') of resource consumption according to Greenhouse Gas Protocol",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Procured by third party",
+              "attributeValue": "Procured by third party",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Self-procured",
+              "attributeValue": "Self-procured",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "SpaceType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/SpaceType",
+          "dataFormat": "String",
+          "description": "Reference to specific space type (or 'whole building')",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Shared services/Common spaces",
+              "attributeValue": "Shared services/Common spaces",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tenant space",
+              "attributeValue": "Tenant space",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Landlord space",
+              "attributeValue": "Landlord space",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Whole building",
+              "attributeValue": "Whole building",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified",
+              "attributeValue": "Unspecified",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Shared services",
+              "attributeValue": "Shared services",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Common spaces",
+              "attributeValue": "Common spaces",
+              "displayOrder": "6"
+            }
+          ]
+        },
+        {
+          "name": "LCA",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/LCA",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Related life cycle assessment stage according to ISO 14040",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "A1",
+              "attributeValue": "A1",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "A2",
+              "attributeValue": "A2",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "A3",
+              "attributeValue": "A3",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "A4",
+              "attributeValue": "A4",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "A5",
+              "attributeValue": "A5",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B1",
+              "attributeValue": "B1",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B2",
+              "attributeValue": "B2",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B3",
+              "attributeValue": "B3",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B4",
+              "attributeValue": "B4",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B5",
+              "attributeValue": "B5",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B6",
+              "attributeValue": "B6",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B7",
+              "attributeValue": "B7",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "C1",
+              "attributeValue": "C1",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "C2",
+              "attributeValue": "C2",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "C3",
+              "attributeValue": "C3",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "C4",
+              "attributeValue": "C4",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "D",
+              "attributeValue": "D",
+              "displayOrder": "16"
+            }
+          ]
+        },
+        {
+          "name": "PostingDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/PostingDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Date of measurement posting in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MeasurementDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/MeasurementDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Date of measurement was taken in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ProjectionBaseYear",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ProjectionBaseYear",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Base year of operational value projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00."
+        },
+        {
+          "name": "ProjectionBaseId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ProjectionBaseId",
+          "isNullable": true,
+          "dataFormat": "Guid",
+          "description": "Identifier (Guid) of operational value projected into the future",
+          "maximumLength": 36
+        },
+        {
+          "name": "MeterNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/MeterNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of meter providing value (user-provided)",
+          "maximumLength": 200
+        },
+        {
+          "name": "MeterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/MeterId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Identifier of meter providing value",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "OperationalMeasurement",
+      "description": "Represents individual data on energy consumption, water consumption/withdrawal, waste output or fugitive emissions including various further information (procured by, subtypes, purpose, covered time period)",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,287 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Floor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Floor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Floor",
+        "definition": "resolvedFrom/Floor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Floor/attributeContext/Floor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Floor/attributeContext/Floor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FloorId",
+            "parent": "Floor/attributeContext/Floor",
+            "definition": "resolvedFrom/Floor/hasAttributes/FloorId",
+            "contents": [
+              "Floor/hasAttributes/FloorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BuildingId",
+            "parent": "Floor/attributeContext/Floor",
+            "definition": "resolvedFrom/Floor/hasAttributes/BuildingId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Building",
+                "parent": "Floor/attributeContext/Floor/BuildingId",
+                "definition": "resolvedFrom/Building"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Floor/attributeContext/Floor/BuildingId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Floor/attributeContext/Floor/BuildingId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Floor/attributeContext/Floor/BuildingId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Floor/hasAttributes/BuildingId/resolutionGuidance/foreignKeyAttribute/BuildingId",
+                        "contents": [
+                          "Floor/hasAttributes/BuildingId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Floor/attributeContext/Floor",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Floor/attributeContext/Floor/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Floor/attributeContext/Floor/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Floor/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FloorCode",
+            "parent": "Floor/attributeContext/Floor",
+            "definition": "resolvedFrom/Floor/hasAttributes/FloorCode",
+            "contents": [
+              "Floor/hasAttributes/FloorCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FloorNumber",
+            "parent": "Floor/attributeContext/Floor",
+            "definition": "resolvedFrom/Floor/hasAttributes/FloorNumber",
+            "contents": [
+              "Floor/hasAttributes/FloorNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Floor/attributeContext/Floor",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Floor/attributeContext/Floor/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Floor/attributeContext/Floor/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Floor/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Floor/attributeContext/Floor/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Floor/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FloorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/FloorId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "name": "BuildingId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Building.cdm.json/Building",
+                        "BuildingId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/BuildingId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Reference to the Building which the Floor belongs to",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "FloorCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/FloorCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific Floor Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "FloorNumber",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/FloorNumber",
+          "dataFormat": "Int32",
+          "description": "Number of floor"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Floor/attributeContext/Floor/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Floor",
+      "description": "The floor has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound.",
+      "version": "4.3"
+    }
+  ]
+}

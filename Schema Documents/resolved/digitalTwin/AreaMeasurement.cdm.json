@@ -1,0 +1,553 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AreaMeasurement.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurement",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AreaMeasurement",
+        "definition": "resolvedFrom/AreaMeasurement",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AreaMeasurement/attributeContext/AreaMeasurement/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AreaMeasurementId",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/AreaMeasurement/hasAttributes/AreaMeasurementId",
+            "contents": [
+              "AreaMeasurement/hasAttributes/AreaMeasurementId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Standard",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/AreaMeasurement/hasAttributes/Standard",
+            "contents": [
+              "AreaMeasurement/hasAttributes/Standard"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/AreaMeasurement/hasAttributes/Type",
+            "contents": [
+              "AreaMeasurement/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/Value",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "AreaMeasurement/attributeContext/AreaMeasurement/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "AreaMeasurement/attributeContext/AreaMeasurement/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "AreaMeasurement/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/AreaMeasurement/hasAttributes/Unit",
+            "contents": [
+              "AreaMeasurement/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "AreaMeasurement/attributeContext/AreaMeasurement/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "AreaMeasurement/attributeContext/AreaMeasurement/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "AreaMeasurement/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "AreaMeasurement/attributeContext/AreaMeasurement/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "AreaMeasurement/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AreaMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/AreaMeasurementId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "name": "Standard",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/Standard",
+          "dataFormat": "String",
+          "description": "Area measurement standard",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "DIN 277-1",
+              "attributeValue": "DIN 277-1",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MFG",
+              "attributeValue": "MFG",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IPMS",
+              "attributeValue": "IPMS",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "RICS",
+              "attributeValue": "RICS",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BOMA",
+              "attributeValue": "BOMA",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NA",
+              "attributeValue": "NA",
+              "displayOrder": "5"
+            }
+          ]
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/Type",
+          "dataFormat": "String",
+          "description": "Type of the standard area",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Gross floor area",
+              "attributeValue": "Gross floor area",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Construction area",
+              "attributeValue": "Construction area",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Net room area",
+              "attributeValue": "Net room area",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Circulation area",
+              "attributeValue": "Circulation area",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Net usable area",
+              "attributeValue": "Net usable area",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technical area",
+              "attributeValue": "Technical area",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Living/residence area",
+              "attributeValue": "Living/residence area",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office area",
+              "attributeValue": "Office area",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Production/laboratory area",
+              "attributeValue": "Production/laboratory area",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Storage/distribution/selling area",
+              "attributeValue": "Storage/distribution/selling area",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Education/teaching/culture area",
+              "attributeValue": "Education/teaching/culture area",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Healing/care area",
+              "attributeValue": "Healing/care area",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other uses",
+              "attributeValue": "Other uses",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rentable exclusion",
+              "attributeValue": "Rentable exclusion",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rentable area",
+              "attributeValue": "Rentable area",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rentable area common occupancy",
+              "attributeValue": "Rentable area common occupancy",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rentable area exclusive occupancy",
+              "attributeValue": "Rentable area exclusive occupancy",
+              "displayOrder": "16"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Gross external area",
+              "attributeValue": "Gross external area",
+              "displayOrder": "17"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "External Wall area",
+              "attributeValue": "External Wall area",
+              "displayOrder": "18"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Gross internal area",
+              "attributeValue": "Gross internal area",
+              "displayOrder": "19"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "A-Vertical penetrations",
+              "attributeValue": "A-Vertical penetrations",
+              "displayOrder": "20"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "B-Structural elements",
+              "attributeValue": "B-Structural elements",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "C-Technical services",
+              "attributeValue": "C-Technical services",
+              "displayOrder": "22"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "D-Hygiene areas",
+              "attributeValue": "D-Hygiene areas",
+              "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "E-Circulation areas",
+              "attributeValue": "E-Circulation areas",
+              "displayOrder": "24"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "F-Amenities",
+              "attributeValue": "F-Amenities",
+              "displayOrder": "25"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "G-Workspace",
+              "attributeValue": "G-Workspace",
+              "displayOrder": "26"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "H-Other areas",
+              "attributeValue": "H-Other areas",
+              "displayOrder": "27"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Boundary area",
+              "attributeValue": "Boundary area",
+              "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rentable area common occupancy",
+              "attributeValue": "Rentable area common occupancy",
+              "displayOrder": "29"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Building amenity area",
+              "attributeValue": "Building amenity area",
+              "displayOrder": "30"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Building service area",
+              "attributeValue": "Building service area",
+              "displayOrder": "31"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Floor service area",
+              "attributeValue": "Floor service area",
+              "displayOrder": "32"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Rentable area exclusive occupancy",
+              "attributeValue": "Rentable area exclusive occupancy",
+              "displayOrder": "33"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tenant ancillary area",
+              "attributeValue": "Tenant ancillary area",
+              "displayOrder": "34"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tenant area",
+              "attributeValue": "Tenant area",
+              "displayOrder": "35"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Major vertical penetrations",
+              "attributeValue": "Major vertical penetrations",
+              "displayOrder": "36"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Occupant Storage area",
+              "attributeValue": "Occupant Storage area",
+              "displayOrder": "37"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Parking area",
+              "attributeValue": "Parking area",
+              "displayOrder": "38"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unenclosed Building Feature: Covered Gallery",
+              "attributeValue": "Unenclosed Building Feature: Covered Gallery",
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Vacant area",
+              "attributeValue": "Vacant area",
+              "displayOrder": "40"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NA",
+              "attributeValue": "NA",
+              "displayOrder": "41"
+            }
+          ]
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/Value/Value/Value",
+          "dataFormat": "Float",
+          "description": "Value of entity"
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "means.measurement.units.si"
+            }
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/Unit",
+          "dataFormat": "String",
+          "description": "Unit area is measured with",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "m�",
+              "attributeValue": "square meter",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ft�",
+              "attributeValue": "square feet",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "AreaMeasurement",
+      "description": "Information about the area measurements within the physical building",
+      "version": "4.3"
+    }
+  ]
+}

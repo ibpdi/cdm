@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AreaMeasurementUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurementUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AreaMeasurementUnit",
+        "definition": "resolvedFrom/AreaMeasurementUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AreaMeasurementId",
+            "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit",
+            "definition": "resolvedFrom/AreaMeasurementUnit/hasAttributes/AreaMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "AreaMeasurement",
+                "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/AreaMeasurementId",
+                "definition": "resolvedFrom/AreaMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/AreaMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/AreaMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AreaMeasurementUnit/hasAttributes/AreaMeasurementId/resolutionGuidance/foreignKeyAttribute/AreaMeasurementId",
+                        "contents": [
+                          "AreaMeasurementUnit/hasAttributes/AreaMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UnitId",
+            "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit",
+            "definition": "resolvedFrom/AreaMeasurementUnit/hasAttributes/UnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Unit",
+                "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/UnitId",
+                "definition": "resolvedFrom/Unit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/UnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/UnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/UnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AreaMeasurementUnit/hasAttributes/UnitId/resolutionGuidance/foreignKeyAttribute/UnitId",
+                        "contents": [
+                          "AreaMeasurementUnit/hasAttributes/UnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AreaMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/AreaMeasurement.cdm.json/AreaMeasurement",
+                        "AreaMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "UnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Unit.cdm.json/Unit",
+                        "UnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurementUnit/attributeContext/AreaMeasurementUnit/UnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AreaMeasurementUnit",
+      "description": "Linking entity between AreaMeasurement and Unit",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,754 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/Valuation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Valuation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Valuation",
+        "definition": "resolvedFrom/Valuation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Valuation/attributeContext/Valuation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Valuation/attributeContext/Valuation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValuationId",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/ValuationId",
+            "contents": [
+              "Valuation/hasAttributes/ValuationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreviousValuationId",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/PreviousValuationId",
+            "contents": [
+              "Valuation/hasAttributes/PreviousValuationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Valuation/attributeContext/Valuation/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Valuation/attributeContext/Valuation/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Valuation/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "Valuation/attributeContext/Valuation/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "Valuation/attributeContext/Valuation/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "Valuation/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Valuation/attributeContext/Valuation/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Valuation/attributeContext/Valuation/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Valuation/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Valuation/attributeContext/Valuation/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Valuation/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Description",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Description",
+            "contents": [
+              "Valuation/hasAttributes/Description"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Text",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Text",
+            "contents": [
+              "Valuation/hasAttributes/Text"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Keywords",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Keywords",
+            "contents": [
+              "Valuation/hasAttributes/Keywords"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Url",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Url",
+            "contents": [
+              "Valuation/hasAttributes/Url"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "JurisdictionType",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/JurisdictionType",
+            "contents": [
+              "Valuation/hasAttributes/JurisdictionType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ProfessionalStandard",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/ProfessionalStandard",
+            "contents": [
+              "Valuation/hasAttributes/ProfessionalStandard"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AccountingStandard",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/AccountingStandard",
+            "contents": [
+              "Valuation/hasAttributes/AccountingStandard"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "JurisdictionStandard",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/JurisdictionStandard",
+            "contents": [
+              "Valuation/hasAttributes/JurisdictionStandard"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Value",
+            "contents": [
+              "Valuation/hasAttributes/Value"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Unit",
+            "contents": [
+              "Valuation/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Assumptions",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Assumptions",
+            "contents": [
+              "Valuation/hasAttributes/Assumptions"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpecialAssumptions",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/SpecialAssumptions",
+            "contents": [
+              "Valuation/hasAttributes/SpecialAssumptions"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Constrains",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Constrains",
+            "contents": [
+              "Valuation/hasAttributes/Constrains"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Approach",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Approach",
+            "contents": [
+              "Valuation/hasAttributes/Approach"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceBacklog",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/MaintenanceBacklog",
+            "contents": [
+              "Valuation/hasAttributes/MaintenanceBacklog"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SingleTenant",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/SingleTenant",
+            "contents": [
+              "Valuation/hasAttributes/SingleTenant"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DiscountRate",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/DiscountRate",
+            "contents": [
+              "Valuation/hasAttributes/DiscountRate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DiscountPremiums",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/DiscountPremiums",
+            "contents": [
+              "Valuation/hasAttributes/DiscountPremiums"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Uncertainty",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Uncertainty",
+            "contents": [
+              "Valuation/hasAttributes/Uncertainty"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Liquidity",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/Liquidity",
+            "contents": [
+              "Valuation/hasAttributes/Liquidity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceEfficiency",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/SpaceEfficiency",
+            "contents": [
+              "Valuation/hasAttributes/SpaceEfficiency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EnergyEfficiency",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/EnergyEfficiency",
+            "contents": [
+              "Valuation/hasAttributes/EnergyEfficiency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": " DocumentId",
+            "parent": "Valuation/attributeContext/Valuation",
+            "definition": "resolvedFrom/Valuation/hasAttributes/ DocumentId",
+            "contents": [
+              "Valuation/hasAttributes/ DocumentId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ValuationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/ValuationId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreviousValuationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/PreviousValuationId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity",
+          "maximumLength": 75
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Description",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Description",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Description of valuation implementation",
+          "maximumLength": 200
+        },
+        {
+          "name": "Text",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Text",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Text field",
+          "maximumLength": 200
+        },
+        {
+          "name": "Keywords",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Keywords",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Important keywords",
+          "maximumLength": 200
+        },
+        {
+          "name": "Url",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.reference.URL"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Url",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "URL if existent",
+          "maximumLength": 200
+        },
+        {
+          "name": "JurisdictionType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/JurisdictionType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of Jurisdiction",
+          "maximumLength": 50
+        },
+        {
+          "name": "ProfessionalStandard",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/ProfessionalStandard",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of professional valuation standard used",
+          "maximumLength": 50
+        },
+        {
+          "name": "AccountingStandard",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/AccountingStandard",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Accounting standard used",
+          "maximumLength": 50
+        },
+        {
+          "name": "JurisdictionStandard",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/JurisdictionStandard",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Jurisdiction type used",
+          "maximumLength": 50
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Value",
+          "dataFormat": "Decimal",
+          "description": "Value of Valuation"
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Unit",
+          "dataFormat": "String",
+          "description": "Unit of valuation",
+          "maximumLength": 50
+        },
+        {
+          "name": "Assumptions",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Assumptions",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Concluded assumptions",
+          "maximumLength": 200
+        },
+        {
+          "name": "SpecialAssumptions",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/SpecialAssumptions",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Concluded special assumptions",
+          "maximumLength": 200
+        },
+        {
+          "name": "Constrains",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Constrains",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Existing constrains",
+          "maximumLength": 50
+        },
+        {
+          "name": "Approach",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Approach",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Valuation approach",
+          "maximumLength": 50
+        },
+        {
+          "name": "MaintenanceBacklog",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/MaintenanceBacklog",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Does a maintenance backlog exist (Y/N)"
+        },
+        {
+          "name": "SingleTenant",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/SingleTenant",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Valuation of single tenant building (Y/N)"
+        },
+        {
+          "name": "DiscountRate",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint",
+            "means.measurement.rate"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/DiscountRate",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Discount rate included"
+        },
+        {
+          "name": "DiscountPremiums",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/DiscountPremiums",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Discount premiums included"
+        },
+        {
+          "name": "Uncertainty",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Uncertainty",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "LoV for uncertainty",
+          "maximumLength": 50
+        },
+        {
+          "name": "Liquidity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/Liquidity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Amount of cash"
+        },
+        {
+          "name": "SpaceEfficiency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/SpaceEfficiency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Space usage efficiency",
+          "maximumLength": 50
+        },
+        {
+          "name": "EnergyEfficiency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/EnergyEfficiency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Stating the energy efficiency class",
+          "maximumLength": 50
+        },
+        {
+          "name": " DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Valuation/attributeContext/Valuation/ DocumentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Valuation",
+      "description": "Financial valuation of buildings or whole portfolios",
+      "version": "4.3"
+    }
+  ]
+}

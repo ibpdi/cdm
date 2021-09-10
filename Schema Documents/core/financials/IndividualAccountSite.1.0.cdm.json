@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "IndividualAccount.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Site.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "IndividualAccountSite",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk IndividualAccount. to IndividualAccountSite.",
+          "entity": {
+            "entityReference": "IndividualAccount",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "IndividualAccount/(resolvedAttributes)/IndividualAccountId"
+                ]
+              }
+            ]
+          },
+          "name": "IndividualAccountId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "IndividualAccountId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Site. to IndividualAccountSite.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "IndividualAccountSite",
+      "description": "Linking entity between IndividualAccount and Site"
+    }
+  ]
+}

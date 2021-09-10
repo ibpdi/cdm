@@ -1,0 +1,1073 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "/core/organisationalManagement/Role.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "OperationalMeasurement",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "OperationalMeasurementId",
+          "purpose": "identifiedBy",
+          "dataType": "guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "explanation": "fk Role. to OperationalMeasurement.",
+          "entity": {
+            "entityReference": "Role",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Role/(resolvedAttributes)/RoleId"
+                ]
+              }
+            ]
+          },
+          "name": "RoleId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RoleId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Parent"
+        },
+        {
+          "name": "Purpose",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Space heating",
+                        "Space heating",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Water heating",
+                        "Water heating",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Heating (unspecified)",
+                        "Heating (unspecified)",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Cooling",
+                        "Cooling",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Lighting",
+                        "Lighting",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Elevator",
+                        "Elevator",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Appliances",
+                        "Appliances",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Heat pump",
+                        "Heat pump",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Other",
+                        "Other",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "9"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Specific purpose of resource consumption e.g. 'space heating' in case of burning natural gas",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Accuracy",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Estimated",
+                        "Estimated",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Metered",
+                        "Metered",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Extrapolated",
+                        "Extrapolated",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Planned",
+                        "Planned",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Simulated",
+                        "Simulated",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Projection based on estimated data",
+                        "Projection based on estimated data",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Projection based on metered data",
+                        "Projection based on metered data",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Projection based on extrapolated data",
+                        "Projection based on extrapolated data",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Projection based on planned data",
+                        "Projection based on planned data",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Projection based on simulated data",
+                        "Projection based on simulated data",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "Projection based on data with unspecified accuracy",
+                        "Projection based on data with unspecified accuracy",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "Missing",
+                        "Missing",
+                        "12"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Information on accuracy of value e.g. 'metered' or 'extrapolated'",
+          "maximumLength": 75,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Energy",
+                        "Energy",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Water",
+                        "Water",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Waste",
+                        "Waste",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Fugitive",
+                        "Fugitive",
+                        "3"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "General type of operational measurement e.g. energy, water or waste",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SubType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Electricity from grid (green electricity contract)",
+                        "Electricity from grid (green electricity contract)",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Electricity self-generated & exported",
+                        "Electricity self-generated & exported",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Electricity self-generated & consumed",
+                        "Electricity self-generated & consumed",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Electricity (unspecified)",
+                        "Electricity (unspecified)",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "REC",
+                        "REC",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Natural gas (standard mix)",
+                        "Natural gas (standard mix)",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Green natural gas",
+                        "Green natural gas",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Natural gas (unspecified)",
+                        "Natural gas (unspecified)",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Oil-based fuels",
+                        "Oil-based fuels",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Fuel (unspecified)",
+                        "Fuel (unspecified)",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "District heating",
+                        "District heating",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "District cooling",
+                        "District cooling",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "Biomass",
+                        "Biomass",
+                        "12"
+                      ],
+                      [
+                        "en",
+                        "Solar thermal",
+                        "Solar thermal",
+                        "13"
+                      ],
+                      [
+                        "en",
+                        "Fresh water (municipal water supply)",
+                        "Fresh water (municipal water supply)",
+                        "14"
+                      ],
+                      [
+                        "en",
+                        "Ground water (collected on site)",
+                        "Ground water (collected on site)",
+                        "15"
+                      ],
+                      [
+                        "en",
+                        "Rain water (collected on site)",
+                        "Rain water (collected on site)",
+                        "16"
+                      ],
+                      [
+                        "en",
+                        "Reclaimed water",
+                        "Reclaimed water",
+                        "17"
+                      ],
+                      [
+                        "en",
+                        "Water discharge",
+                        "Water discharge",
+                        "18"
+                      ],
+                      [
+                        "en",
+                        "Water consumption (unspecified)",
+                        "Water consumption (unspecified)",
+                        "19"
+                      ],
+                      [
+                        "en",
+                        "Recyclable or reusable waste",
+                        "Recyclable or reusable waste",
+                        "20"
+                      ],
+                      [
+                        "en",
+                        "Non-recyclable waste (to be burned)",
+                        "Non-recyclable waste (to be burned)",
+                        "21"
+                      ],
+                      [
+                        "en",
+                        "Biodegradable",
+                        "Biodegradable",
+                        "22"
+                      ],
+                      [
+                        "en",
+                        "Hazardous waste",
+                        "Hazardous waste",
+                        "23"
+                      ],
+                      [
+                        "en",
+                        "Waste (unspecified)",
+                        "Waste (unspecified)",
+                        "24"
+                      ],
+                      [
+                        "en",
+                        "Electricity from grid (normal contract)",
+                        "Electricity from grid (normal contract)",
+                        "25"
+                      ],
+                      [
+                        "en",
+                        "Carbon dioxide (CO2)",
+                        "Carbon dioxide (CO2)",
+                        "26"
+                      ],
+                      [
+                        "en",
+                        "Methane (CH4)",
+                        "Methane (CH4)",
+                        "27"
+                      ],
+                      [
+                        "en",
+                        "Nitrous oxide (N20)",
+                        "Nitrous oxide (N20)",
+                        "28"
+                      ],
+                      [
+                        "en",
+                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "29"
+                      ],
+                      [
+                        "en",
+                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+                        "30"
+                      ],
+                      [
+                        "en",
+                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+                        "31"
+                      ],
+                      [
+                        "en",
+                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+                        "32"
+                      ],
+                      [
+                        "en",
+                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+                        "33"
+                      ],
+                      [
+                        "en",
+                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+                        "34"
+                      ],
+                      [
+                        "en",
+                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+                        "35"
+                      ],
+                      [
+                        "en",
+                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+                        "36"
+                      ],
+                      [
+                        "en",
+                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+                        "37"
+                      ],
+                      [
+                        "en",
+                        "R-10 | Carbon tetrachloride (CCl4)",
+                        "R-10 | Carbon tetrachloride (CCl4)",
+                        "38"
+                      ],
+                      [
+                        "en",
+                        "Bromomethane | Methyl bromide (CH3Br)",
+                        "Bromomethane | Methyl bromide (CH3Br)",
+                        "39"
+                      ],
+                      [
+                        "en",
+                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+                        "40"
+                      ],
+                      [
+                        "en",
+                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+                        "41"
+                      ],
+                      [
+                        "en",
+                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+                        "42"
+                      ],
+                      [
+                        "en",
+                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+                        "43"
+                      ],
+                      [
+                        "en",
+                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+                        "44"
+                      ],
+                      [
+                        "en",
+                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+                        "45"
+                      ],
+                      [
+                        "en",
+                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+                        "46"
+                      ],
+                      [
+                        "en",
+                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+                        "47"
+                      ],
+                      [
+                        "en",
+                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+                        "48"
+                      ],
+                      [
+                        "en",
+                        "R-23 | HFC-23 | ",
+                        "R-23 | HFC-23 | ",
+                        "49"
+                      ],
+                      [
+                        "en",
+                        "R-32 | HFC-32 | ",
+                        "R-32 | HFC-32 | ",
+                        "50"
+                      ],
+                      [
+                        "en",
+                        "R-41 | HFC-41 | ",
+                        "R-41 | HFC-41 | ",
+                        "51"
+                      ],
+                      [
+                        "en",
+                        "R-125 | HFC-125 | ",
+                        "R-125 | HFC-125 | ",
+                        "52"
+                      ],
+                      [
+                        "en",
+                        "R-134 | HFC-134 | ",
+                        "R-134 | HFC-134 | ",
+                        "53"
+                      ],
+                      [
+                        "en",
+                        "R-134a | HFC-134a | ",
+                        "R-134a | HFC-134a | ",
+                        "54"
+                      ],
+                      [
+                        "en",
+                        "R-143 | HFC-143 | ",
+                        "R-143 | HFC-143 | ",
+                        "55"
+                      ],
+                      [
+                        "en",
+                        "R-143a | HFC-143a | ",
+                        "R-143a | HFC-143a | ",
+                        "56"
+                      ],
+                      [
+                        "en",
+                        "R-152 | HFC-152 | ",
+                        "R-152 | HFC-152 | ",
+                        "57"
+                      ],
+                      [
+                        "en",
+                        "R-152a | HFC-152a | ",
+                        "R-152a | HFC-152a | ",
+                        "58"
+                      ],
+                      [
+                        "en",
+                        "R-161 | HFC-161 | ",
+                        "R-161 | HFC-161 | ",
+                        "59"
+                      ],
+                      [
+                        "en",
+                        "R-227ea | HFC-227ea | ",
+                        "R-227ea | HFC-227ea | ",
+                        "60"
+                      ],
+                      [
+                        "en",
+                        "R-236cb | HFC-236cb | ",
+                        "R-236cb | HFC-236cb | ",
+                        "61"
+                      ],
+                      [
+                        "en",
+                        "R-236ea | HFC-236ea | ",
+                        "R-236ea | HFC-236ea | ",
+                        "62"
+                      ],
+                      [
+                        "en",
+                        "R-236fa | HFC-236fa | ",
+                        "R-236fa | HFC-236fa | ",
+                        "63"
+                      ],
+                      [
+                        "en",
+                        "R-245ca | HFC-245ca | ",
+                        "R-245ca | HFC-245ca | ",
+                        "64"
+                      ],
+                      [
+                        "en",
+                        "R-245fa | HFC-245fa | ",
+                        "R-245fa | HFC-245fa | ",
+                        "65"
+                      ],
+                      [
+                        "en",
+                        "R-365mfc | HFC-365mfc | ",
+                        "R-365mfc | HFC-365mfc | ",
+                        "66"
+                      ],
+                      [
+                        "en",
+                        "R-43-10mee | HFC-43-10mee | ",
+                        "R-43-10mee | HFC-43-10mee | ",
+                        "67"
+                      ],
+                      [
+                        "en",
+                        "Sulfur hexafluoride (SF6)",
+                        "Sulfur hexafluoride (SF6)",
+                        "68"
+                      ],
+                      [
+                        "en",
+                        "Nitrogen trifluoride (NF3)",
+                        "Nitrogen trifluoride (NF3)",
+                        "69"
+                      ],
+                      [
+                        "en",
+                        "Water supply",
+                        "Water supply",
+                        "70"
+                      ],
+                      [
+                        "en",
+                        "Non-hazardous waste",
+                        "Non-hazardous waste",
+                        "71"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Specific type of operational measurement e.g. district heating or water discharge",
+          "maximumLength": 100,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "attributeGroupReference": "Value"
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "kWh",
+                        "kWh",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "m³",
+                        "m³",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "kg",
+                        "kg",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Unit of operational measurement e.g. 'kWh' or 'm³'",
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "ProcuredBy",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Procured by third party",
+                        "Procured by third party",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Self-procured",
+                        "Self-procured",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Information on operational control ('who bought it?') of resource consumption according to Greenhouse Gas Protocol",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "isNullable": true
+        },
+        {
+          "name": "SpaceType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Shared services/Common spaces",
+                        "Shared services/Common spaces",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Tenant space",
+                        "Tenant space",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Landlord space",
+                        "Landlord space",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Whole building",
+                        "Whole building",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Shared services",
+                        "Shared services",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Common spaces",
+                        "Common spaces",
+                        "6"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Reference to specific space type (or 'whole building')",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "LCA",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "A1",
+                        "A1",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "A2",
+                        "A2",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "A3",
+                        "A3",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "A4",
+                        "A4",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "A5",
+                        "A5",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "B1",
+                        "B1",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "B2",
+                        "B2",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "B3",
+                        "B3",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "B4",
+                        "B4",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "B5",
+                        "B5",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "B6",
+                        "B6",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "B7",
+                        "B7",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "C1",
+                        "C1",
+                        "12"
+                      ],
+                      [
+                        "en",
+                        "C2",
+                        "C2",
+                        "13"
+                      ],
+                      [
+                        "en",
+                        "C3",
+                        "C3",
+                        "14"
+                      ],
+                      [
+                        "en",
+                        "C4",
+                        "C4",
+                        "15"
+                      ],
+                      [
+                        "en",
+                        "D",
+                        "D",
+                        "16"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Related life cycle assessment stage according to ISO 14040",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "PostingDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Date of measurement posting in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MeasurementDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Date of measurement was taken in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "ProjectionBaseYear",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Base year of operational value projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00."
+        },
+        {
+          "name": "ProjectionBaseId",
+          "purpose": "hasA",
+          "dataType": "guid",
+          "isNullable": true,
+          "description": "Identifier (Guid) of operational value projected into the future",
+          "maximumLength": 36
+        },
+        {
+          "name": "MeterNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of meter providing value (user-provided)",
+          "maximumLength": 200
+        },
+        {
+          "name": "MeterId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Identifier of meter providing value",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "OperationalMeasurement",
+      "description": "Represents individual data on energy consumption, water consumption/withdrawal, waste output or fugitive emissions including various further information (procured by, subtypes, purpose, covered time period)"
+    }
+  ]
+}

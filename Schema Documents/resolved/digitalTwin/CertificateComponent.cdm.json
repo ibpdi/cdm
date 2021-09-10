@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/CertificateComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CertificateComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CertificateComponent",
+        "definition": "resolvedFrom/CertificateComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CertificateComponent/attributeContext/CertificateComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CertificateComponent/attributeContext/CertificateComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CertificateId",
+            "parent": "CertificateComponent/attributeContext/CertificateComponent",
+            "definition": "resolvedFrom/CertificateComponent/hasAttributes/CertificateId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Certificate",
+                "parent": "CertificateComponent/attributeContext/CertificateComponent/CertificateId",
+                "definition": "resolvedFrom/Certificate"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CertificateComponent/attributeContext/CertificateComponent/CertificateId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CertificateComponent/attributeContext/CertificateComponent/CertificateId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CertificateComponent/attributeContext/CertificateComponent/CertificateId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CertificateComponent/hasAttributes/CertificateId/resolutionGuidance/foreignKeyAttribute/CertificateId",
+                        "contents": [
+                          "CertificateComponent/hasAttributes/CertificateId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentId",
+            "parent": "CertificateComponent/attributeContext/CertificateComponent",
+            "definition": "resolvedFrom/CertificateComponent/hasAttributes/ComponentId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Component",
+                "parent": "CertificateComponent/attributeContext/CertificateComponent/ComponentId",
+                "definition": "resolvedFrom/Component"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CertificateComponent/attributeContext/CertificateComponent/ComponentId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CertificateComponent/attributeContext/CertificateComponent/ComponentId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CertificateComponent/attributeContext/CertificateComponent/ComponentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CertificateComponent/hasAttributes/ComponentId/resolutionGuidance/foreignKeyAttribute/ComponentId",
+                        "contents": [
+                          "CertificateComponent/hasAttributes/ComponentId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CertificateId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Certificate.cdm.json/Certificate",
+                        "CertificateId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CertificateComponent/attributeContext/CertificateComponent/CertificateId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Component.cdm.json/Component",
+                        "ComponentId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CertificateComponent/attributeContext/CertificateComponent/ComponentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CertificateComponent",
+      "description": "Linking entity between certificate and component",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/CertificateValuation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CertificateValuation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CertificateValuation",
+        "definition": "resolvedFrom/CertificateValuation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CertificateValuation/attributeContext/CertificateValuation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CertificateValuation/attributeContext/CertificateValuation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CertificateId",
+            "parent": "CertificateValuation/attributeContext/CertificateValuation",
+            "definition": "resolvedFrom/CertificateValuation/hasAttributes/CertificateId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Certificate",
+                "parent": "CertificateValuation/attributeContext/CertificateValuation/CertificateId",
+                "definition": "resolvedFrom/Certificate"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CertificateValuation/attributeContext/CertificateValuation/CertificateId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CertificateValuation/attributeContext/CertificateValuation/CertificateId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CertificateValuation/attributeContext/CertificateValuation/CertificateId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CertificateValuation/hasAttributes/CertificateId/resolutionGuidance/foreignKeyAttribute/CertificateId",
+                        "contents": [
+                          "CertificateValuation/hasAttributes/CertificateId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValuationId",
+            "parent": "CertificateValuation/attributeContext/CertificateValuation",
+            "definition": "resolvedFrom/CertificateValuation/hasAttributes/ValuationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Valuation",
+                "parent": "CertificateValuation/attributeContext/CertificateValuation/ValuationId",
+                "definition": "resolvedFrom/Valuation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CertificateValuation/attributeContext/CertificateValuation/ValuationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CertificateValuation/attributeContext/CertificateValuation/ValuationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CertificateValuation/attributeContext/CertificateValuation/ValuationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CertificateValuation/hasAttributes/ValuationId/resolutionGuidance/foreignKeyAttribute/ValuationId",
+                        "contents": [
+                          "CertificateValuation/hasAttributes/ValuationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CertificateId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Certificate.cdm.json/Certificate",
+                        "CertificateId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CertificateValuation/attributeContext/CertificateValuation/CertificateId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValuationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/portfolioAndAssetManagement/Valuation.cdm.json/Valuation",
+                        "ValuationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CertificateValuation/attributeContext/CertificateValuation/ValuationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CertificateValuation",
+      "description": "Linking entity between certificate and valuation",
+      "version": "4.3"
+    }
+  ]
+}

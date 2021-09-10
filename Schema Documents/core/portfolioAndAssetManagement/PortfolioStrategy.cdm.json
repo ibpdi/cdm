@@ -1,0 +1,121 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "Portfolio.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PortfolioStrategy",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "PortfolioStrategyId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Customer ID from previous system (ID before onboarding data to CDM)",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Portfolio. to PortfolioStrategy.",
+          "entity": {
+            "entityReference": "Portfolio",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Portfolio/(resolvedAttributes)/PortfolioId"
+                ]
+              }
+            ]
+          },
+          "name": "PortfolioId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "PortfolioId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "InvestmentType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of Strategy",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "StrategyObjectiveTargetsSteering",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Steering target type of Portfolio Strategy",
+          "maximumLength": 50
+        },
+        {
+          "name": "StrategyObjectiveValuesSteering",
+          "purpose": "hasA",
+          "dataType": "float",
+          "description": "Value of the portfolio strategy steering targets"
+        },
+        {
+          "name": "StrategyObjectiveUnitSteering",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Unit of strategy objective values steering",
+          "maximumLength": 50
+        },
+        {
+          "name": "StrategyObjectiveTargets",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Target type of Portfolio Strategy",
+          "maximumLength": 50
+        },
+        {
+          "name": "StrategyObjectiveValues",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Value of the portfolio strategy targets"
+        },
+        {
+          "name": "StrategyObjectiveUnit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unit of strategy objective values",
+          "maximumLength": 50
+        },
+        {
+          "name": "Source",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Source of Portfolio strategy",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "PortfolioStrategy",
+      "description": "Strategy and strategic targets for the use of real estate assets in a portfolio"
+    }
+  ]
+}

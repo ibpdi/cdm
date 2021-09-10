@@ -1,0 +1,207 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "digitalTwin",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurement",
+      "entityPath": "AreaMeasurement.cdm.json/AreaMeasurement",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementBuilding",
+      "entityPath": "AreaMeasurementBuilding.cdm.json/AreaMeasurementBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementFloor",
+      "entityPath": "AreaMeasurementFloor.cdm.json/AreaMeasurementFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementLand",
+      "entityPath": "AreaMeasurementLand.cdm.json/AreaMeasurementLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementSite",
+      "entityPath": "AreaMeasurementSite.cdm.json/AreaMeasurementSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementSpace",
+      "entityPath": "AreaMeasurementSpace.cdm.json/AreaMeasurementSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AreaMeasurementUnit",
+      "entityPath": "AreaMeasurementUnit.cdm.json/AreaMeasurementUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Building",
+      "entityPath": "Building.cdm.json/Building",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Certificate",
+      "entityPath": "Certificate.cdm.json/Certificate",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateBuilding",
+      "entityPath": "CertificateBuilding.cdm.json/CertificateBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateComponent",
+      "entityPath": "CertificateComponent.cdm.json/CertificateComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateSystem",
+      "entityPath": "CertificateSystem.cdm.json/CertificateSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CertificateValuation",
+      "entityPath": "CertificateValuation.cdm.json/CertificateValuation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Component",
+      "entityPath": "Component.cdm.json/Component",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentBuilding",
+      "entityPath": "ComponentBuilding.cdm.json/ComponentBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentFloor",
+      "entityPath": "ComponentFloor.cdm.json/ComponentFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentSite",
+      "entityPath": "ComponentSite.cdm.json/ComponentSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentSpace",
+      "entityPath": "ComponentSpace.cdm.json/ComponentSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentSystem",
+      "entityPath": "ComponentSystem.cdm.json/ComponentSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentType",
+      "entityPath": "ComponentType.cdm.json/ComponentType",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentUnit",
+      "entityPath": "ComponentUnit.cdm.json/ComponentUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Floor",
+      "entityPath": "Floor.cdm.json/Floor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Land",
+      "entityPath": "Land.cdm.json/Land",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Servitudes",
+      "entityPath": "Servitudes.cdm.json/Servitudes",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Site",
+      "entityPath": "Site.cdm.json/Site",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Space",
+      "entityPath": "Space.cdm.json/Space",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "System",
+      "entityPath": "System.cdm.json/System",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Unit",
+      "entityPath": "Unit.cdm.json/Unit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitBuilding",
+      "entityPath": "UnitBuilding.cdm.json/UnitBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitFloor",
+      "entityPath": "UnitFloor.cdm.json/UnitFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitLand",
+      "entityPath": "UnitLand.cdm.json/UnitLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitSite",
+      "entityPath": "UnitSite.cdm.json/UnitSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UnitSpace",
+      "entityPath": "UnitSpace.cdm.json/UnitSpace",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

@@ -1,0 +1,266 @@
+{
+  "manifestName": "propertyManagement",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Dunning",
+      "entityPath": "Dunning.cdm.json/Dunning"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalContract",
+      "entityPath": "RentalContract.cdm.json/RentalContract"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalContractRentalUnit",
+      "entityPath": "RentalContractRentalUnit.cdm.json/RentalContractRentalUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalContractRole",
+      "entityPath": "RentalContractRole.cdm.json/RentalContractRole"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalOption",
+      "entityPath": "RentalOption.cdm.json/RentalOption"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalPayment",
+      "entityPath": "RentalPayment.cdm.json/RentalPayment"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnit",
+      "entityPath": "RentalUnit.cdm.json/RentalUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitAreaMeasurement",
+      "entityPath": "RentalUnitAreaMeasurement.cdm.json/RentalUnitAreaMeasurement"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitBuilding",
+      "entityPath": "RentalUnitBuilding.cdm.json/RentalUnitBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitFloor",
+      "entityPath": "RentalUnitFloor.cdm.json/RentalUnitFloor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitLand",
+      "entityPath": "RentalUnitLand.cdm.json/RentalUnitLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitSpace",
+      "entityPath": "RentalUnitSpace.cdm.json/RentalUnitSpace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RentalUnitUnit",
+      "entityPath": "RentalUnitUnit.cdm.json/RentalUnitUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TenantCommunication",
+      "entityPath": "TenantCommunication.cdm.json/TenantCommunication"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TenantCommunicationRole",
+      "entityPath": "TenantCommunicationRole.cdm.json/TenantCommunicationRole"
+    }
+  ],
+  "relationships": [
+    {
+      "fromEntity": "Dunning.cdm.json/Dunning",
+      "fromEntityAttribute": "RentalPaymentId",
+      "toEntity": "RentalPayment.cdm.json/RentalPayment",
+      "toEntityAttribute": "RentalPaymentId"
+    },
+    {
+      "fromEntity": "RentalContractRentalUnit.cdm.json/RentalContractRentalUnit",
+      "fromEntityAttribute": "RentalContractId",
+      "toEntity": "RentalContract.cdm.json/RentalContract",
+      "toEntityAttribute": "RentalContractId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalContractRole.cdm.json/RentalContractRole",
+      "fromEntityAttribute": "RentalContractId",
+      "toEntity": "RentalContract.cdm.json/RentalContract",
+      "toEntityAttribute": "RentalContractId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalOption.cdm.json/RentalOption",
+      "fromEntityAttribute": "RentalContractId",
+      "toEntity": "RentalContract.cdm.json/RentalContract",
+      "toEntityAttribute": "RentalContractId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalPayment.cdm.json/RentalPayment",
+      "fromEntityAttribute": "RentalContractId",
+      "toEntity": "RentalContract.cdm.json/RentalContract",
+      "toEntityAttribute": "RentalContractId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalContractRentalUnit.cdm.json/RentalContractRentalUnit",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalUnitAreaMeasurement.cdm.json/RentalUnitAreaMeasurement",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalUnitBuilding.cdm.json/RentalUnitBuilding",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalUnitFloor.cdm.json/RentalUnitFloor",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalUnitLand.cdm.json/RentalUnitLand",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalUnitSpace.cdm.json/RentalUnitSpace",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RentalUnitUnit.cdm.json/RentalUnitUnit",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "TenantCommunication.cdm.json/TenantCommunication",
+      "fromEntityAttribute": "RentalUnitId",
+      "toEntity": "RentalUnit.cdm.json/RentalUnit",
+      "toEntityAttribute": "RentalUnitId"
+    },
+    {
+      "fromEntity": "TenantCommunicationRole.cdm.json/TenantCommunicationRole",
+      "fromEntityAttribute": "TenantCommunicationId",
+      "toEntity": "TenantCommunication.cdm.json/TenantCommunication",
+      "toEntityAttribute": "TenantCommunicationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0"
+}

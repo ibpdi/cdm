@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "AreaMeasurement.cdm.json"
+    },
+    {
+      "corpusPath": "Building.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurementBuilding",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk AreaMeasurement. to AreaMeasurementBuilding.",
+          "entity": {
+            "entityReference": "AreaMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "AreaMeasurement/(resolvedAttributes)/AreaMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "AreaMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "AreaMeasurementId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Building. to AreaMeasurementBuilding.",
+          "entity": {
+            "entityReference": "Building",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Building/(resolvedAttributes)/BuildingId"
+                ]
+              }
+            ]
+          },
+          "name": "BuildingId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "BuildingId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "AreaMeasurementBuilding",
+      "description": "Linking entity between AreaMeasurement and Building"
+    }
+  ]
+}

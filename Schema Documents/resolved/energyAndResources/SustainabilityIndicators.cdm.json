@@ -1,0 +1,722 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/SustainabilityIndicators.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SustainabilityIndicators",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SustainabilityIndicators",
+        "definition": "resolvedFrom/SustainabilityIndicators",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SustainabilityIndicatorsId",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/SustainabilityIndicatorsId",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/SustainabilityIndicatorsId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BuildingId",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/BuildingId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Building",
+                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId",
+                "definition": "resolvedFrom/Building"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/BuildingId/resolutionGuidance/foreignKeyAttribute/BuildingId",
+                        "contents": [
+                          "SustainabilityIndicators/hasAttributes/BuildingId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Category",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Category",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/Category"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Type",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubType",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/SubType",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/SubType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Source",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Source",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/Source"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReferenceArea",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/ReferenceArea",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/ReferenceArea"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReportingType",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/ReportingType",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/ReportingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BaseYear",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/BaseYear",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/BaseYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/Value",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "SustainabilityIndicators/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmissionFactorScenario",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/EmissionFactorScenario",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/EmissionFactorScenario"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Unit",
+            "contents": [
+              "SustainabilityIndicators/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "SustainabilityIndicators/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "SustainabilityIndicators/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SustainabilityIndicatorsId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/SustainabilityIndicatorsId",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "BuildingId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Building.cdm.json/Building",
+                        "BuildingId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Identifier of building",
+          "maximumLength": 50
+        },
+        {
+          "name": "Category",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Category",
+          "dataFormat": "String",
+          "description": "Overall category of sustainability indicator e.g. energy, greenhouse gas emissions or costs",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Costs",
+              "attributeValue": "Costs",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Energy",
+              "attributeValue": "Energy",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Ghg",
+              "attributeValue": "Ghg",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Area",
+              "attributeValue": "Area",
+              "displayOrder": "3"
+            }
+          ]
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of sustainability indicator e.g. absolute or intensity figures or stranding",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Absolute",
+              "attributeValue": "Absolute",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Intensity",
+              "attributeValue": "Intensity",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Excess emissions",
+              "attributeValue": "Excess emissions",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Stranding",
+              "attributeValue": "Stranding",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Target",
+              "attributeValue": "Target",
+              "displayOrder": "4"
+            }
+          ]
+        },
+        {
+          "name": "SubType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/SubType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Subtype of sustainability indicator e.g. net-energy or  emission scope",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Total",
+              "attributeValue": "Total",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Scope 1",
+              "attributeValue": "Scope 1",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Scope 2",
+              "attributeValue": "Scope 2",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Scope 3",
+              "attributeValue": "Scope 3",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unspecified scope",
+              "attributeValue": "Unspecified scope",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Net energy",
+              "attributeValue": "Net energy",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Consumption",
+              "attributeValue": "Consumption",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Renewable on-site",
+              "attributeValue": "Renewable on-site",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Renewable including off-site",
+              "attributeValue": "Renewable including off-site",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CRREM 1.5°C",
+              "attributeValue": "CRREM 1.5°C",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CRREM 2°C",
+              "attributeValue": "CRREM 2°C",
+              "displayOrder": "10"
+            }
+          ]
+        },
+        {
+          "name": "Source",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Source",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Operational source of energy or emission figures e.g. electricity or water",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Energy",
+              "attributeValue": "Energy",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "All",
+              "attributeValue": "All",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Fuels",
+              "attributeValue": "Fuels",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Electricity",
+              "attributeValue": "Electricity",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District heating",
+              "attributeValue": "District heating",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District cooling",
+              "attributeValue": "District cooling",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Fugitive",
+              "attributeValue": "Fugitive",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water supply",
+              "attributeValue": "Water supply",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water discharge",
+              "attributeValue": "Water discharge",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Water",
+              "attributeValue": "Water",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste",
+              "attributeValue": "Waste",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "District heating & fuel",
+              "attributeValue": "District heating & fuel",
+              "displayOrder": "11"
+            }
+          ]
+        },
+        {
+          "name": "ReferenceArea",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ReferenceArea",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reference area of building used as denominator in intensity calculation",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Net rentable area",
+              "attributeValue": "Net rentable area",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Gross internal area",
+              "attributeValue": "Gross internal area",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "ReportingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ReportingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Approach of reporting emissions e.g. from 'green electricity consumption': Market-based or location-based",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Location-based",
+              "attributeValue": "Location-based",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Market-based",
+              "attributeValue": "Market-based",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "BaseYear",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BaseYear",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Base year of values projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). In case no exact date is used please use xxxx-01-01 00:00:00."
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            "is.dataFormat.floatingPoint"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Value/Value/Value",
+          "isNullable": true,
+          "dataFormat": "Float",
+          "description": "Value of entity."
+        },
+        {
+          "name": "EmissionFactorScenario",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/EmissionFactorScenario",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific emission factor scenario",
+          "maximumLength": 50
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Unit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of sustainability indicator value",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "kgCO2e",
+              "attributeValue": "kgCO2e",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "kgCO2e/m²",
+              "attributeValue": "kgCO2e/m²",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "kWh",
+              "attributeValue": "kWh",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "kWh/m²",
+              "attributeValue": "kWh/m²",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "€",
+              "attributeValue": "€",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "m²",
+              "attributeValue": "m²",
+              "displayOrder": "5"
+            }
+          ]
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "SustainabilityIndicators",
+      "description": "Sustainability-related information on building-level: energy consumption, net energy demand, carbon emissions (total, separated in emissions scopes, market- and location-based, alignment with targets, excess emissions, carbon costs and penalties)",
+      "version": "4.3"
+    }
+  ]
+}

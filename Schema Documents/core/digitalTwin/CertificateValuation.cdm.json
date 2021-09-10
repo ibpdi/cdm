@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Certificate.cdm.json"
+    },
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/Valuation.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CertificateValuation",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Certificate. to CertificateValuation.",
+          "entity": {
+            "entityReference": "Certificate",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Certificate/(resolvedAttributes)/CertificateId"
+                ]
+              }
+            ]
+          },
+          "name": "CertificateId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CertificateId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Valuation. to CertificateValuation.",
+          "entity": {
+            "entityReference": "Valuation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Valuation/(resolvedAttributes)/ValuationId"
+                ]
+              }
+            ]
+          },
+          "name": "ValuationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ValuationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CertificateValuation",
+      "description": "Linking entity between certificate and valuation"
+    }
+  ]
+}

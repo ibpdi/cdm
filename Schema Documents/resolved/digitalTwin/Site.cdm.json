@@ -1,0 +1,294 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Site.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Site",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Site",
+        "definition": "resolvedFrom/Site",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Site/attributeContext/Site",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Site/attributeContext/Site/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SiteId",
+            "parent": "Site/attributeContext/Site",
+            "definition": "resolvedFrom/Site/hasAttributes/SiteId",
+            "contents": [
+              "Site/hasAttributes/SiteId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Site/attributeContext/Site",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Site/attributeContext/Site/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Site/attributeContext/Site/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Site/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SiteCode",
+            "parent": "Site/attributeContext/Site",
+            "definition": "resolvedFrom/Site/hasAttributes/SiteCode",
+            "contents": [
+              "Site/hasAttributes/SiteCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Site/attributeContext/Site",
+            "definition": "resolvedFrom/Site/hasAttributes/Type",
+            "contents": [
+              "Site/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Site/attributeContext/Site",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Site/attributeContext/Site/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Site/attributeContext/Site/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Site/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Site/attributeContext/Site/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Site/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SiteId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Site/attributeContext/Site/SiteId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Site/attributeContext/Site/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "SiteCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Site/attributeContext/Site/SiteCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific Site Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Site/attributeContext/Site/Type",
+          "dataFormat": "String",
+          "description": "Type of site",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Education",
+              "attributeValue": "Education",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Health Care",
+              "attributeValue": "Health Care",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Hotel",
+              "attributeValue": "Hotel",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial",
+              "attributeValue": "Industrial",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Lodging, Leisure & Recreation",
+              "attributeValue": "Lodging, Leisure & Recreation",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Mixed Use",
+              "attributeValue": "Mixed Use",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Office",
+              "attributeValue": "Office",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Residential",
+              "attributeValue": "Residential",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Retail",
+              "attributeValue": "Retail",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Technology/Science",
+              "attributeValue": "Technology/Science",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other",
+              "attributeValue": "Other",
+              "displayOrder": "10"
+            }
+          ]
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Site/attributeContext/Site/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Site/attributeContext/Site/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Site",
+      "description": "Grouping of multiple buildings and lands",
+      "version": "4.3"
+    }
+  ]
+}

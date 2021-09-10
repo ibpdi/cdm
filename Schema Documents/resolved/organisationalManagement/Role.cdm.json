@@ -1,0 +1,109 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/Role.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Role",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Role",
+        "definition": "resolvedFrom/Role",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Role/attributeContext/Role",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Role/attributeContext/Role/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "Role/attributeContext/Role",
+            "definition": "resolvedFrom/Role/hasAttributes/RoleId",
+            "contents": [
+              "Role/hasAttributes/RoleId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Role/attributeContext/Role",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "Role/attributeContext/Role/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "Role/attributeContext/Role/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "Role/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Role/attributeContext/Role/RoleId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Role/attributeContext/Role/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity.",
+          "maximumLength": 75
+        }
+      ],
+      "displayName": "Role",
+      "description": "Defining the role of the organisation or contact",
+      "version": "4.3"
+    }
+  ]
+}

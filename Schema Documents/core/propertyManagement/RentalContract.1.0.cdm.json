@@ -1,0 +1,141 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalContract",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "RentalContractId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainContractId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Main contract code",
+          "maximumLength": 50
+        },
+        {
+          "name": "ContractCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Contract Code (e.g. SAP)",
+          "maximumLength": 70
+        },
+        {
+          "name": "ContractType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Contract type",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.category"
+          ]
+        },
+        {
+          "name": "CompanyCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Company Code (e.g. SAP code)",
+          "maximumLength": 70
+        },
+        {
+          "name": "ContractName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Contract name",
+          "maximumLength": 200
+        },
+        {
+          "name": "ContractGroup",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Contract group",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentBeginDate",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "description": "Date original contract starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "RentEndDate",
+          "purpose": "endedOn",
+          "dataType": "dateTime",
+          "description": "Date original contract ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "PeriodOfNotice",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Period of notice e.g. monthly; 3 month; 6 month etc.",
+          "maximumLength": 50
+        },
+        {
+          "name": "PaymentInAdvance",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Does the payment have to be conducted in advance (Y/N)"
+        },
+        {
+          "name": "PaymentFrequency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Frequency of payment e.g. weekly, monthly, quarterly etc.",
+          "maximumLength": 50
+        },
+        {
+          "name": "ShortTermLease",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is this a short term lease (Y/N)"
+        },
+        {
+          "name": "TenantSector",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Sector / Business area of the tenant",
+          "maximumLength": 50
+        },
+        {
+          "name": "TurnoverReportingInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "If turnover rent, reporting interval for the tenant turnover: monthly, quarterly, etc.",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RentalContract",
+      "description": "Agreement identifying all information regarding the rental relationship"
+    }
+  ]
+}

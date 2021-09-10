@@ -1,0 +1,183 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/OperationalMeasurementSite.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "OperationalMeasurementSite",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "OperationalMeasurementSite",
+        "definition": "resolvedFrom/OperationalMeasurementSite",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite",
+            "definition": "resolvedFrom/OperationalMeasurementSite/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "OperationalMeasurement",
+                "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/OperationalMeasurementId",
+                "definition": "resolvedFrom/OperationalMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/OperationalMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/OperationalMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/OperationalMeasurementSite/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "contents": [
+                          "OperationalMeasurementSite/hasAttributes/OperationalMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SiteId",
+            "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite",
+            "definition": "resolvedFrom/OperationalMeasurementSite/hasAttributes/SiteId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Site",
+                "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/SiteId",
+                "definition": "resolvedFrom/Site"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/SiteId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/SiteId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/OperationalMeasurementSite/hasAttributes/SiteId/resolutionGuidance/foreignKeyAttribute/SiteId",
+                        "contents": [
+                          "OperationalMeasurementSite/hasAttributes/SiteId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
+                        "OperationalMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 36
+        },
+        {
+          "name": "SiteId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Site.cdm.json/Site",
+                        "SiteId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurementSite/attributeContext/OperationalMeasurementSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "OperationalMeasurementSite",
+      "description": "Linking entity between OperationalMeasurement and Site",
+      "version": "4.3"
+    }
+  ]
+}

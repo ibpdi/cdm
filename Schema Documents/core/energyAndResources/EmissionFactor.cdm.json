@@ -1,0 +1,620 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "OperationalMeasurement.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "EmissionFactor",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "EmissionFactorId",
+          "purpose": "identifiedBy",
+          "dataType": "guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "explanation": "fk OperationalMeasurement. to EmissionFactor.",
+          "entity": {
+            "entityReference": "OperationalMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "OperationalMeasurement/(resolvedAttributes)/OperationalMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "OperationalMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OperationalMeasurementId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "isNullable": true,
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                "maximumLength": 36
+              }
+            }
+          }
+        },
+        {
+          "name": "Country",
+          "purpose": "hasA",
+          "dataType": "country",
+          "description": "Country in which the emission factor is valid",
+          "maximumLength": 75
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Electricity from grid (green electricity contract)",
+                        "Electricity from grid (green electricity contract)",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Electricity self-generated & consumed",
+                        "Electricity self-generated & consumed",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "REC",
+                        "REC",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Natural gas (standard mix)",
+                        "Natural gas (standard mix)",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Green natural gas",
+                        "Green natural gas",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Oil-based fuels",
+                        "Oil-based fuels",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "District heating",
+                        "District heating",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "District cooling",
+                        "District cooling",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Biomass",
+                        "Biomass",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Solar thermal",
+                        "Solar thermal",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Reclaimed water",
+                        "Reclaimed water",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "Water discharge",
+                        "Water discharge",
+                        "11"
+                      ],
+                      [
+                        "en",
+                        "Recyclable or reusable waste",
+                        "Recyclable or reusable waste",
+                        "12"
+                      ],
+                      [
+                        "en",
+                        "Non-recyclable waste (to be burned)",
+                        "Non-recyclable waste (to be burned)",
+                        "13"
+                      ],
+                      [
+                        "en",
+                        "Biodegradable",
+                        "Biodegradable",
+                        "14"
+                      ],
+                      [
+                        "en",
+                        "Hazardous waste",
+                        "Hazardous waste",
+                        "15"
+                      ],
+                      [
+                        "en",
+                        "Waste (unspecified)",
+                        "Waste (unspecified)",
+                        "16"
+                      ],
+                      [
+                        "en",
+                        "Electricity from grid (normal contract)",
+                        "Electricity from grid (normal contract)",
+                        "17"
+                      ],
+                      [
+                        "en",
+                        "Carbon dioxide (CO2)",
+                        "Carbon dioxide (CO2)",
+                        "18"
+                      ],
+                      [
+                        "en",
+                        "Methane (CH4)",
+                        "Methane (CH4)",
+                        "19"
+                      ],
+                      [
+                        "en",
+                        "Nitrous oxide (N20)",
+                        "Nitrous oxide (N20)",
+                        "20"
+                      ],
+                      [
+                        "en",
+                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "21"
+                      ],
+                      [
+                        "en",
+                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+                        "22"
+                      ],
+                      [
+                        "en",
+                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+                        "23"
+                      ],
+                      [
+                        "en",
+                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+                        "24"
+                      ],
+                      [
+                        "en",
+                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+                        "25"
+                      ],
+                      [
+                        "en",
+                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+                        "26"
+                      ],
+                      [
+                        "en",
+                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+                        "27"
+                      ],
+                      [
+                        "en",
+                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+                        "28"
+                      ],
+                      [
+                        "en",
+                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+                        "29"
+                      ],
+                      [
+                        "en",
+                        "R-10 | Carbon tetrachloride (CCl4)",
+                        "R-10 | Carbon tetrachloride (CCl4)",
+                        "30"
+                      ],
+                      [
+                        "en",
+                        "Bromomethane | Methyl bromide (CH3Br)",
+                        "Bromomethane | Methyl bromide (CH3Br)",
+                        "31"
+                      ],
+                      [
+                        "en",
+                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+                        "33"
+                      ],
+                      [
+                        "en",
+                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+                        "34"
+                      ],
+                      [
+                        "en",
+                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+                        "35"
+                      ],
+                      [
+                        "en",
+                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+                        "36"
+                      ],
+                      [
+                        "en",
+                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+                        "37"
+                      ],
+                      [
+                        "en",
+                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+                        "38"
+                      ],
+                      [
+                        "en",
+                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+                        "39"
+                      ],
+                      [
+                        "en",
+                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+                        "40"
+                      ],
+                      [
+                        "en",
+                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+                        "41"
+                      ],
+                      [
+                        "en",
+                        "R-23 | HFC-23 | ",
+                        "R-23 | HFC-23 | ",
+                        "42"
+                      ],
+                      [
+                        "en",
+                        "R-32 | HFC-32 | ",
+                        "R-32 | HFC-32 | ",
+                        "43"
+                      ],
+                      [
+                        "en",
+                        "R-41 | HFC-41 | ",
+                        "R-41 | HFC-41 | ",
+                        "44"
+                      ],
+                      [
+                        "en",
+                        "R-125 | HFC-125 | ",
+                        "R-125 | HFC-125 | ",
+                        "45"
+                      ],
+                      [
+                        "en",
+                        "R-134 | HFC-134 | ",
+                        "R-134 | HFC-134 | ",
+                        "46"
+                      ],
+                      [
+                        "en",
+                        "R-134a | HFC-134a | ",
+                        "R-134a | HFC-134a | ",
+                        "47"
+                      ],
+                      [
+                        "en",
+                        "R-143 | HFC-143 | ",
+                        "R-143 | HFC-143 | ",
+                        "48"
+                      ],
+                      [
+                        "en",
+                        "R-143a | HFC-143a | ",
+                        "R-143a | HFC-143a | ",
+                        "49"
+                      ],
+                      [
+                        "en",
+                        "R-152 | HFC-152 | ",
+                        "R-152 | HFC-152 | ",
+                        "50"
+                      ],
+                      [
+                        "en",
+                        "R-152a | HFC-152a | ",
+                        "R-152a | HFC-152a | ",
+                        "51"
+                      ],
+                      [
+                        "en",
+                        "R-161 | HFC-161 | ",
+                        "R-161 | HFC-161 | ",
+                        "52"
+                      ],
+                      [
+                        "en",
+                        "R-227ea | HFC-227ea | ",
+                        "R-227ea | HFC-227ea | ",
+                        "53"
+                      ],
+                      [
+                        "en",
+                        "R-236cb | HFC-236cb | ",
+                        "R-236cb | HFC-236cb | ",
+                        "54"
+                      ],
+                      [
+                        "en",
+                        "R-236ea | HFC-236ea | ",
+                        "R-236ea | HFC-236ea | ",
+                        "55"
+                      ],
+                      [
+                        "en",
+                        "R-236fa | HFC-236fa | ",
+                        "R-236fa | HFC-236fa | ",
+                        "56"
+                      ],
+                      [
+                        "en",
+                        "R-245ca | HFC-245ca | ",
+                        "R-245ca | HFC-245ca | ",
+                        "57"
+                      ],
+                      [
+                        "en",
+                        "R-245fa | HFC-245fa | ",
+                        "R-245fa | HFC-245fa | ",
+                        "58"
+                      ],
+                      [
+                        "en",
+                        "R-365mfc | HFC-365mfc | ",
+                        "R-365mfc | HFC-365mfc | ",
+                        "59"
+                      ],
+                      [
+                        "en",
+                        "R-43-10mee | HFC-43-10mee | ",
+                        "R-43-10mee | HFC-43-10mee | ",
+                        "60"
+                      ],
+                      [
+                        "en",
+                        "Sulfur hexafluoride (SF6)",
+                        "Sulfur hexafluoride (SF6)",
+                        "61"
+                      ],
+                      [
+                        "en",
+                        "Nitrogen trifluoride (NF3)",
+                        "Nitrogen trifluoride (NF3)",
+                        "62"
+                      ],
+                      [
+                        "en",
+                        "Water supply",
+                        "Water supply",
+                        "63"
+                      ],
+                      [
+                        "en",
+                        "Non-hazardous waste",
+                        "Non-hazardous waste",
+                        "64"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of resource consumption the emission factor refers to",
+          "maximumLength": 100,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "attributeGroupReference": "Value"
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "kgCO2e/kWh",
+                        "kgCO2e/kWh",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "kgCO2e/kg",
+                        "kgCO2e/kg",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "kgCO2e/m³",
+                        "kgCO2e/m³",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Unit of emission factor in terms of kgCO2e per unit of resource consumption",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Source",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Source of emission factor e.g. 'International Energy Agency'",
+          "maximumLength": 200
+        },
+        {
+          "name": "SpaceType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Shared services/Common spaces",
+                        "Shared services/Common spaces",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Tenant space",
+                        "Tenant space",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Landlord space",
+                        "Landlord space",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Whole building",
+                        "Whole building",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Unspecified",
+                        "Unspecified",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Shared services",
+                        "Shared services",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Common spaces",
+                        "Common spaces",
+                        "6"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Differentiated emission factor for certain space type (within a building)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Region",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Areas that are broadly divided by physical characteristics, human impact characteristics, and the interaction of humanity and the environment",
+          "maximumLength": 75,
+          "appliedTraits": [
+            "means.location.region"
+          ]
+        },
+        {
+          "name": "City",
+          "purpose": "hasA",
+          "dataType": "city",
+          "isNullable": true,
+          "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc",
+          "maximumLength": 100
+        },
+        {
+          "name": "Scenario",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific emission factor scenario",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "EmissionFactor",
+      "description": "Emission factors that are applied to convert energy consumption data into greenhouse gas emissions. The entity also includes global warming potential data for non-CO2 greenhouse gases in order to calculate CO2-equivalents (CO2e)"
+    }
+  ]
+}

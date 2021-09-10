@@ -1,0 +1,500 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Building.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SustainabilityIndicators",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "SustainabilityIndicatorsId",
+          "purpose": "identifiedBy",
+          "dataType": "guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "explanation": "fk Building. to SustainabilityIndicators.",
+          "entity": {
+            "entityReference": "Building",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Building/(resolvedAttributes)/BuildingId"
+                ]
+              }
+            ]
+          },
+          "name": "BuildingId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "BuildingId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Identifier of building",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Category",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            "means.category",
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Costs",
+                        "Costs",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Energy",
+                        "Energy",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Ghg",
+                        "Ghg",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Area",
+                        "Area",
+                        "3"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Overall category of sustainability indicator e.g. energy, greenhouse gas emissions or costs",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Absolute",
+                        "Absolute",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Intensity",
+                        "Intensity",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Excess emissions",
+                        "Excess emissions",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Stranding",
+                        "Stranding",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Target",
+                        "Target",
+                        "4"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of sustainability indicator e.g. absolute or intensity figures or stranding",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SubType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Total",
+                        "Total",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Scope 1",
+                        "Scope 1",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Scope 2",
+                        "Scope 2",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Scope 3",
+                        "Scope 3",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "Unspecified scope",
+                        "Unspecified scope",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "Net energy",
+                        "Net energy",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Consumption",
+                        "Consumption",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Renewable on-site",
+                        "Renewable on-site",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Renewable including off-site",
+                        "Renewable including off-site",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "CRREM 1.5°C",
+                        "CRREM 1.5°C",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "CRREM 2°C",
+                        "CRREM 2°C",
+                        "10"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Subtype of sustainability indicator e.g. net-energy or  emission scope",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "Source",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Energy",
+                        "Energy",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "All",
+                        "All",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Fuels",
+                        "Fuels",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Electricity",
+                        "Electricity",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "District heating",
+                        "District heating",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "District cooling",
+                        "District cooling",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Fugitive",
+                        "Fugitive",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Water supply",
+                        "Water supply",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Water discharge",
+                        "Water discharge",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Water",
+                        "Water",
+                        "9"
+                      ],
+                      [
+                        "en",
+                        "Waste",
+                        "Waste",
+                        "10"
+                      ],
+                      [
+                        "en",
+                        "District heating & fuel",
+                        "District heating & fuel",
+                        "11"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Operational source of energy or emission figures e.g. electricity or water",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "ReferenceArea",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Net rentable area",
+                        "Net rentable area",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Gross internal area",
+                        "Gross internal area",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Reference area of building used as denominator in intensity calculation",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "ReportingType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Location-based",
+                        "Location-based",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Market-based",
+                        "Market-based",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Approach of reporting emissions e.g. from 'green electricity consumption': Market-based or location-based",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "BaseYear",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Base year of values projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). In case no exact date is used please use xxxx-01-01 00:00:00.",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "attributeGroupReference": "Value"
+        },
+        {
+          "name": "EmissionFactorScenario",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific emission factor scenario",
+          "maximumLength": 50
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "kgCO2e",
+                        "kgCO2e",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "kgCO2e/m²",
+                        "kgCO2e/m²",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "kWh",
+                        "kWh",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "kWh/m²",
+                        "kWh/m²",
+                        "3"
+                      ],
+                      [
+                        "en",
+                        "€",
+                        "€",
+                        "4"
+                      ],
+                      [
+                        "en",
+                        "m²",
+                        "m²",
+                        "5"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Unit of sustainability indicator value",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "SustainabilityIndicators",
+      "description": "Sustainability-related information on building-level: energy consumption, net energy demand, carbon emissions (total, separated in emissions scopes, market- and location-based, alignment with targets, excess emissions, carbon costs and penalties)"
+    }
+  ]
+}

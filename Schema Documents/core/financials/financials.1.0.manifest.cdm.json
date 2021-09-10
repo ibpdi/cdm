@@ -1,0 +1,75 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "financials",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Account",
+      "entityPath": "Account.1.0.cdm.json/Account",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenter",
+      "entityPath": "CostCenter.1.0.cdm.json/CostCenter",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterBuilding",
+      "entityPath": "CostCenterBuilding.1.0.cdm.json/CostCenterBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterPortfolio",
+      "entityPath": "CostCenterPortfolio.1.0.cdm.json/CostCenterPortfolio",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterRentalUnit",
+      "entityPath": "CostCenterRentalUnit.1.0.cdm.json/CostCenterRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CostCenterSite",
+      "entityPath": "CostCenterSite.1.0.cdm.json/CostCenterSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccount",
+      "entityPath": "IndividualAccount.1.0.cdm.json/IndividualAccount",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccountBuilding",
+      "entityPath": "IndividualAccountBuilding.1.0.cdm.json/IndividualAccountBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccountPortfolio",
+      "entityPath": "IndividualAccountPortfolio.1.0.cdm.json/IndividualAccountPortfolio",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IndividualAccountSite",
+      "entityPath": "IndividualAccountSite.1.0.cdm.json/IndividualAccountSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Transaction",
+      "entityPath": "Transaction.1.0.cdm.json/Transaction",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

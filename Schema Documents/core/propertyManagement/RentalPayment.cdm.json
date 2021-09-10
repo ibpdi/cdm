@@ -1,0 +1,134 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "RentalContract.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalPayment",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "RentalPaymentId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk RentalContract. to RentalPayment.",
+          "entity": {
+            "entityReference": "RentalContract",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "RentalContract/(resolvedAttributes)/RentalContractId"
+                ]
+              }
+            ]
+          },
+          "name": "RentalContractId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RentalContractId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "attributeGroupReference": "Currency"
+        },
+        {
+          "name": "ValueMonth",
+          "purpose": "hasA",
+          "dataType": "currency",
+          "description": "Value of payment per month",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ValueYear",
+          "purpose": "hasA",
+          "dataType": "currency",
+          "isNullable": true,
+          "description": "Value of payment per year",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DiscountInPercentage",
+          "purpose": "hasA",
+          "dataType": "float",
+          "isNullable": true,
+          "description": "Discount percentage of payment",
+          "appliedTraits": [
+            "means.measurement.percent"
+          ]
+        },
+        {
+          "name": "VatOpted",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is the vat payable  (Y/N)"
+        },
+        {
+          "name": "IndexId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Reference to index table",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RentalPayment",
+      "description": "Information about payments related to rental contract"
+    }
+  ]
+}

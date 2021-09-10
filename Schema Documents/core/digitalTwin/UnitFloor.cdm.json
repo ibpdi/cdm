@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Unit.cdm.json"
+    },
+    {
+      "corpusPath": "Floor.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "UnitFloor",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Unit. to UnitFloor.",
+          "entity": {
+            "entityReference": "Unit",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Unit/(resolvedAttributes)/UnitId"
+                ]
+              }
+            ]
+          },
+          "name": "UnitId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "UnitId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Floor. to UnitFloor.",
+          "entity": {
+            "entityReference": "Floor",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Floor/(resolvedAttributes)/FloorId"
+                ]
+              }
+            ]
+          },
+          "name": "FloorId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "FloorId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "UnitFloor",
+      "description": "Linking entity between Unit and Floor"
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Unit",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "UnitId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "UnitCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific unit code",
+          "maximumLength": 70
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "Unit",
+      "description": "A unit is a physical quantity, with a value of one, which is used as a standard in terms of which other quantities are expressed. In the case of a building it can be a grouping of areas, spaces, floors, etc."
+    }
+  ]
+}

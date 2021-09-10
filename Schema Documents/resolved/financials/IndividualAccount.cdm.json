@@ -1,0 +1,492 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/financials/IndividualAccount.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "IndividualAccount",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "IndividualAccount",
+        "definition": "resolvedFrom/IndividualAccount",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IndividualAccountId",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/IndividualAccountId",
+            "contents": [
+              "IndividualAccount/hasAttributes/IndividualAccountId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AccountId",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/AccountId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Account",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/AccountId",
+                "definition": "resolvedFrom/Account"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/AccountId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "IndividualAccount/attributeContext/IndividualAccount/AccountId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "IndividualAccount/attributeContext/IndividualAccount/AccountId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/IndividualAccount/hasAttributes/AccountId/resolutionGuidance/foreignKeyAttribute/AccountId",
+                        "contents": [
+                          "IndividualAccount/hasAttributes/AccountId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/OrganisationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Organisation",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/OrganisationId",
+                "definition": "resolvedFrom/Organisation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/OrganisationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "IndividualAccount/attributeContext/IndividualAccount/OrganisationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "IndividualAccount/attributeContext/IndividualAccount/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/IndividualAccount/hasAttributes/OrganisationId/resolutionGuidance/foreignKeyAttribute/OrganisationId",
+                        "contents": [
+                          "IndividualAccount/hasAttributes/OrganisationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "IndividualAccount/attributeContext/IndividualAccount/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "IndividualAccount/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Project",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/Project",
+            "contents": [
+              "IndividualAccount/hasAttributes/Project"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Category",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/Category",
+            "contents": [
+              "IndividualAccount/hasAttributes/Category"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Group",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/Group",
+            "contents": [
+              "IndividualAccount/hasAttributes/Group"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "IndividualAccount/attributeContext/IndividualAccount/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "IndividualAccount/attributeContext/IndividualAccount/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "IndividualAccount/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "IndividualAccount/attributeContext/IndividualAccount/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "IndividualAccount/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StatementType",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/StatementType",
+            "contents": [
+              "IndividualAccount/hasAttributes/StatementType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RecordType",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/RecordType",
+            "contents": [
+              "IndividualAccount/hasAttributes/RecordType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Version",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/Version",
+            "contents": [
+              "IndividualAccount/hasAttributes/Version"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GAAP",
+            "parent": "IndividualAccount/attributeContext/IndividualAccount",
+            "definition": "resolvedFrom/IndividualAccount/hasAttributes/GAAP",
+            "contents": [
+              "IndividualAccount/hasAttributes/GAAP"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "IndividualAccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/IndividualAccountId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "AccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/Account.cdm.json/Account",
+                        "AccountId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/AccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Reference to account",
+          "maximumLength": 50
+        },
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Organisation.cdm.json/Organisation",
+                        "OrganisationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Reference to organisation",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "Project",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/Project",
+          "dataFormat": "String",
+          "description": "Individual Account project (project aligned with RICS naming convention)",
+          "maximumLength": 50
+        },
+        {
+          "name": "Category",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/Category",
+          "dataFormat": "String",
+          "description": "Account category according to IBPDI charts of accounts (category aligned with RICS naming convention)",
+          "maximumLength": 75
+        },
+        {
+          "name": "Group",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.category"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/Group",
+          "dataFormat": "String",
+          "description": "Account group according IBPDI charts of accounts (group aligned with RICS naming convention)",
+          "maximumLength": 75
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "StatementType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/StatementType",
+          "dataFormat": "String",
+          "description": "Statement type (Balance statement or P&L account)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "BalanceStatement",
+              "attributeValue": "BalanceStatement",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "P&L",
+              "attributeValue": "P&L",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "RecordType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/RecordType",
+          "dataFormat": "String",
+          "description": "Record type (Debit or Credit)",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Debit",
+              "attributeValue": "Debit",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Credit",
+              "attributeValue": "Credit",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "Version",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/Version",
+          "dataFormat": "String",
+          "description": "Account version",
+          "maximumLength": 50
+        },
+        {
+          "name": "GAAP",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/GAAP",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "GAAP type used (if applicable)",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "IndividualAccount",
+      "description": "Company account number based on specific chart of account",
+      "version": "4.3"
+    }
+  ]
+}

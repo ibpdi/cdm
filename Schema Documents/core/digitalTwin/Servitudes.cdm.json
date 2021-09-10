@@ -1,0 +1,69 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Servitudes",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ServitudeId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Easements",
+                        "Easements",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Covenants",
+                        "Covenants",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Profits",
+                        "Profits",
+                        "2"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Type of servitude ",
+          "maximumLength": 75,
+          "valueConstrainedToList": true
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "Servitudes",
+      "description": "The subjection of property to an easement"
+    }
+  ]
+}

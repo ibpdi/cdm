@@ -1,0 +1,192 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/propertyManagement/RentalUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RentalUnit",
+        "definition": "resolvedFrom/RentalUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RentalUnit/attributeContext/RentalUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitId",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/RentalUnit/hasAttributes/RentalUnitId",
+            "contents": [
+              "RentalUnit/hasAttributes/RentalUnitId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "RentalUnit/attributeContext/RentalUnit/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "RentalUnit/attributeContext/RentalUnit/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "RentalUnit/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitCode",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/RentalUnit/hasAttributes/RentalUnitCode",
+            "contents": [
+              "RentalUnit/hasAttributes/RentalUnitCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentedOut",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/RentalUnit/hasAttributes/RentedOut",
+            "contents": [
+              "RentalUnit/hasAttributes/RentedOut"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UsageType",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/RentalUnit/hasAttributes/UsageType",
+            "contents": [
+              "RentalUnit/hasAttributes/UsageType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Vacancy",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/RentalUnit/hasAttributes/Vacancy",
+            "contents": [
+              "RentalUnit/hasAttributes/Vacancy"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RentalUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/RentalUnitId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        },
+        {
+          "name": "RentalUnitCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/RentalUnitCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific RentalUnit Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "RentedOut",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/RentedOut",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is the RentalUnit rented out (Y/N)"
+        },
+        {
+          "name": "UsageType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/UsageType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Usage type of the rental unit",
+          "maximumLength": 50
+        },
+        {
+          "name": "Vacancy",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/Vacancy",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is the rental unit vacant (Y/N)"
+        }
+      ],
+      "displayName": "RentalUnit",
+      "description": "Structure or part of a structure rented out to a third party as a home, residence, office or for any other use",
+      "version": "4.3"
+    }
+  ]
+}

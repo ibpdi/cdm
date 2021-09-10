@@ -1,0 +1,231 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/System.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "System",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "System",
+        "definition": "resolvedFrom/System",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "System/attributeContext/System",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "System/attributeContext/System/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/SystemId",
+            "contents": [
+              "System/hasAttributes/SystemId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "System/attributeContext/System/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "System/attributeContext/System/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "System/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Class",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/Class",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Class",
+                "parent": "System/attributeContext/System/Class",
+                "definition": "resolvedFrom/Class",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Class",
+                    "parent": "System/attributeContext/System/Class/Class",
+                    "definition": "resolvedFrom/Class/members/Class",
+                    "contents": [
+                      "System/hasAttributes/Class"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Counter",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/Counter",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Counter",
+                "parent": "System/attributeContext/System/Counter",
+                "definition": "resolvedFrom/Counter",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Counter",
+                    "parent": "System/attributeContext/System/Counter/Counter",
+                    "definition": "resolvedFrom/Counter/members/Counter",
+                    "contents": [
+                      "System/hasAttributes/Counter"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WarrantyGuarantor",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/WarrantyGuarantor",
+            "contents": [
+              "System/hasAttributes/WarrantyGuarantor"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WarrantyStartDate",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/WarrantyStartDate",
+            "contents": [
+              "System/hasAttributes/WarrantyStartDate"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/SystemId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "System/attributeContext/System/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "Class",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/Class/Class/Class",
+          "dataFormat": "String",
+          "description": "Class entity belongs to",
+          "maximumLength": 200
+        },
+        {
+          "name": "Counter",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "System/attributeContext/System/Counter/Counter/Counter",
+          "dataFormat": "Int32",
+          "description": "Counter of entity"
+        },
+        {
+          "name": "WarrantyGuarantor",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/WarrantyGuarantor",
+          "dataFormat": "String",
+          "description": "Warranty Guarantor ",
+          "maximumLength": 200
+        },
+        {
+          "name": "WarrantyStartDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "System/attributeContext/System/WarrantyStartDate",
+          "dataFormat": "DateTime",
+          "description": "Warranty start date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "System",
+      "description": "Entirety of manageable components with a common function (supply air of a ventilation system)",
+      "version": "4.3"
+    }
+  ]
+}

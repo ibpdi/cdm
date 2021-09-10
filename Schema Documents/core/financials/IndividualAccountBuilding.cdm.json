@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "IndividualAccount.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Building.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "IndividualAccountBuilding",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk IndividualAccount. to IndividualAccountBuilding.",
+          "entity": {
+            "entityReference": "IndividualAccount",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "IndividualAccount/(resolvedAttributes)/IndividualAccountId"
+                ]
+              }
+            ]
+          },
+          "name": "IndividualAccountId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "IndividualAccountId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Building. to IndividualAccountBuilding.",
+          "entity": {
+            "entityReference": "Building",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Building/(resolvedAttributes)/BuildingId"
+                ]
+              }
+            ]
+          },
+          "name": "BuildingId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "BuildingId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "IndividualAccountBuilding",
+      "description": "Linking entity between IndividualAccount and Building"
+    }
+  ]
+}

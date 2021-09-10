@@ -1,0 +1,33 @@
+{
+  "$schema": "CdmManifest.cdm.json",
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "documentVersion": "1.0",
+  "manifestName": "core",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "subManifests": [
+    {
+      "manifestName": "digitalTwin",
+      "definition": "digitalTwin/digitalTwin.manifest.cdm.json"
+    },
+    {
+      "manifestName": "energyAndResources",
+      "definition": "energyAndResources/energyAndResources.manifest.cdm.json"
+    },
+    {
+      "manifestName": "financials",
+      "definition": "financials/financials.manifest.cdm.json"
+    },
+    {
+      "manifestName": "organisationalManagement",
+      "definition": "organisationalManagement/organisationalManagement.manifest.cdm.json"
+    },
+    {
+      "manifestName": "portfolioAndAssetManagement",
+      "definition": "portfolioAndAssetManagement/portfolioAndAssetManagement.manifest.cdm.json"
+    },
+    {
+      "manifestName": "propertyManagement",
+      "definition": "propertyManagement/propertyManagement.manifest.cdm.json"
+    }
+  ]
+}

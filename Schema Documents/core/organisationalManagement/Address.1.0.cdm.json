@@ -1,0 +1,112 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Address",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "AddressId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "name": "StreetName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Name of the street",
+          "maximumLength": 150,
+          "appliedTraits": [
+            "means.location.address.street"
+          ]
+        },
+        {
+          "name": "HouseNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "House number of the street",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.location.address"
+          ]
+        },
+        {
+          "name": "AdditionalInformation",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Additional information that can not be displayed in the other attributes such as Building, Door Nr. etc. ",
+          "maximumLength": 100,
+          "appliedTraits": [
+            "means.location.address"
+          ]
+        },
+        {
+          "name": "AppartmentOrUnit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unit number",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.location.address.building"
+          ]
+        },
+        {
+          "name": "District",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Boroughs or districts within a city that serve some official purpose",
+          "maximumLength": 50,
+          "appliedTraits": [
+            "means.location.address"
+          ]
+        },
+        {
+          "name": "City",
+          "purpose": "hasA",
+          "dataType": "city",
+          "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc.",
+          "maximumLength": 100
+        },
+        {
+          "name": "PostalCode",
+          "purpose": "hasA",
+          "dataType": "postalCode",
+          "isNullable": true,
+          "description": "Postal codes used for mail sorting",
+          "maximumLength": 15
+        },
+        {
+          "name": "StateProvincePrefecture",
+          "purpose": "hasA",
+          "dataType": "stateOrProvince",
+          "isNullable": true,
+          "description": "First-level administrative division, depending on the continent or country if might be named differently.",
+          "maximumLength": 50
+        },
+        {
+          "name": "Country",
+          "purpose": "hasA",
+          "dataType": "country",
+          "description": "Sovereign nations and their dependent territories, anything with an ISO-3166 code",
+          "maximumLength": 75
+        }
+      ],
+      "displayName": "Address",
+      "description": "Collection of information used to give the location of a building, apartment, or other structure or a plot of land"
+    }
+  ]
+}

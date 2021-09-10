@@ -1,0 +1,475 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Land.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Land",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Land",
+        "definition": "resolvedFrom/Land",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Land/attributeContext/Land",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Land/attributeContext/Land/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LandId",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/LandId",
+            "contents": [
+              "Land/hasAttributes/LandId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SiteId",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/SiteId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Site",
+                "parent": "Land/attributeContext/Land/SiteId",
+                "definition": "resolvedFrom/Site"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Land/attributeContext/Land/SiteId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Land/attributeContext/Land/SiteId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Land/attributeContext/Land/SiteId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Land/hasAttributes/SiteId/resolutionGuidance/foreignKeyAttribute/SiteId",
+                        "contents": [
+                          "Land/hasAttributes/SiteId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ServitudeId",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/ServitudeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Servitudes",
+                "parent": "Land/attributeContext/Land/ServitudeId",
+                "definition": "resolvedFrom/Servitudes"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Land/attributeContext/Land/ServitudeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Land/attributeContext/Land/ServitudeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Land/attributeContext/Land/ServitudeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Land/hasAttributes/ServitudeId/resolutionGuidance/foreignKeyAttribute/ServitudeId",
+                        "contents": [
+                          "Land/hasAttributes/ServitudeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Land/attributeContext/Land/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Land/attributeContext/Land/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Land/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LandCode",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/LandCode",
+            "contents": [
+              "Land/hasAttributes/LandCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/Type",
+            "contents": [
+              "Land/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LandCoverage",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/LandCoverage",
+            "contents": [
+              "Land/hasAttributes/LandCoverage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LandParcelNr",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/LandParcelNr",
+            "contents": [
+              "Land/hasAttributes/LandParcelNr"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Land/attributeContext/Land/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Land/attributeContext/Land/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Land/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Land/attributeContext/Land/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Land/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GeorefId",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/GeorefId",
+            "contents": [
+              "Land/hasAttributes/GeorefId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "LandId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/LandId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "name": "SiteId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Site.cdm.json/Site",
+                        "SiteId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Land/attributeContext/Land/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Reference to the site which the land belongs to",
+          "maximumLength": 50
+        },
+        {
+          "name": "ServitudeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Servitudes.cdm.json/Servitudes",
+                        "ServitudeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Land/attributeContext/Land/ServitudeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reference to the Servitude which belongs to the land",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Land/attributeContext/Land/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "LandCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/LandCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific Land Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/Type",
+          "dataFormat": "String",
+          "description": "Type of land",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Agricultural",
+              "attributeValue": "Agricultural",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Recreational",
+              "attributeValue": "Recreational",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Industrial",
+              "attributeValue": "Industrial",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Non-industrial",
+              "attributeValue": "Non-industrial",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Traffic",
+              "attributeValue": "Traffic",
+              "displayOrder": "4"
+            }
+          ]
+        },
+        {
+          "name": "LandCoverage",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/LandCoverage",
+          "dataFormat": "String",
+          "description": "Development level of land",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Fully",
+              "attributeValue": "Fully",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Partially",
+              "attributeValue": "Partially",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Not covered",
+              "attributeValue": "Not covered",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "LandParcelNr",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/LandParcelNr",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "District/Zoning number registered for the Plot of land",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Land/attributeContext/Land/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Land/attributeContext/Land/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "GeorefId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/GeorefId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "A reference to Guid from the geo-coordinate entity",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Land",
+      "description": "A defined area of land, possibly covered with water, on which the project construction is to be completed or already completed",
+      "version": "4.3"
+    }
+  ]
+}

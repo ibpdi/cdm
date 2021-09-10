@@ -1,0 +1,58 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RentalUnit",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "RentalUnitId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "RentalUnitCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific RentalUnit Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "RentedOut",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is the RentalUnit rented out (Y/N)"
+        },
+        {
+          "name": "UsageType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Usage type of the rental unit",
+          "maximumLength": 50
+        },
+        {
+          "name": "Vacancy",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is the rental unit vacant (Y/N)"
+        }
+      ],
+      "displayName": "RentalUnit",
+      "description": "Structure or part of a structure rented out to a third party as a home, residence, office or for any other use"
+    }
+  ]
+}

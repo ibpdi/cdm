@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/UnitSpace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "UnitSpace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "UnitSpace",
+        "definition": "resolvedFrom/UnitSpace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "UnitSpace/attributeContext/UnitSpace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "UnitSpace/attributeContext/UnitSpace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UnitId",
+            "parent": "UnitSpace/attributeContext/UnitSpace",
+            "definition": "resolvedFrom/UnitSpace/hasAttributes/UnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Unit",
+                "parent": "UnitSpace/attributeContext/UnitSpace/UnitId",
+                "definition": "resolvedFrom/Unit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "UnitSpace/attributeContext/UnitSpace/UnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "UnitSpace/attributeContext/UnitSpace/UnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "UnitSpace/attributeContext/UnitSpace/UnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/UnitSpace/hasAttributes/UnitId/resolutionGuidance/foreignKeyAttribute/UnitId",
+                        "contents": [
+                          "UnitSpace/hasAttributes/UnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceId",
+            "parent": "UnitSpace/attributeContext/UnitSpace",
+            "definition": "resolvedFrom/UnitSpace/hasAttributes/SpaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Space",
+                "parent": "UnitSpace/attributeContext/UnitSpace/SpaceId",
+                "definition": "resolvedFrom/Space"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "UnitSpace/attributeContext/UnitSpace/SpaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "UnitSpace/attributeContext/UnitSpace/SpaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "UnitSpace/attributeContext/UnitSpace/SpaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/UnitSpace/hasAttributes/SpaceId/resolutionGuidance/foreignKeyAttribute/SpaceId",
+                        "contents": [
+                          "UnitSpace/hasAttributes/SpaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "UnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Unit.cdm.json/Unit",
+                        "UnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitSpace/attributeContext/UnitSpace/UnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SpaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Space.cdm.json/Space",
+                        "SpaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitSpace/attributeContext/UnitSpace/SpaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "UnitSpace",
+      "description": "Linking entity between Unit and Space",
+      "version": "4.3"
+    }
+  ]
+}

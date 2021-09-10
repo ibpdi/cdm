@@ -1,0 +1,117 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "energyAndResources",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "Climate",
+      "entityPath": "Climate.cdm.json/Climate",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ClimateBuilding",
+      "entityPath": "ClimateBuilding.cdm.json/ClimateBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ClimateSite",
+      "entityPath": "ClimateSite.cdm.json/ClimateSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "EmissionFactor",
+      "entityPath": "EmissionFactor.cdm.json/EmissionFactor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "EmissionFactorBuilding",
+      "entityPath": "EmissionFactorBuilding.cdm.json/EmissionFactorBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "EmissionFactorRole",
+      "entityPath": "EmissionFactorRole.cdm.json/EmissionFactorRole",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "EmissionFactorSite",
+      "entityPath": "EmissionFactorSite.cdm.json/EmissionFactorSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "GhgEmissions",
+      "entityPath": "GhgEmissions.cdm.json/GhgEmissions",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "GhgEmissionsBuilding",
+      "entityPath": "GhgEmissionsBuilding.cdm.json/GhgEmissionsBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "GhgEmissionsSite",
+      "entityPath": "GhgEmissionsSite.cdm.json/GhgEmissionsSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurement",
+      "entityPath": "OperationalMeasurement.cdm.json/OperationalMeasurement",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurementBuilding",
+      "entityPath": "OperationalMeasurementBuilding.cdm.json/OperationalMeasurementBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurementFloor",
+      "entityPath": "OperationalMeasurementFloor.cdm.json/OperationalMeasurementFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurementLand",
+      "entityPath": "OperationalMeasurementLand.cdm.json/OperationalMeasurementLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurementSite",
+      "entityPath": "OperationalMeasurementSite.cdm.json/OperationalMeasurementSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurementSpace",
+      "entityPath": "OperationalMeasurementSpace.cdm.json/OperationalMeasurementSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OperationalMeasurementUnit",
+      "entityPath": "OperationalMeasurementUnit.cdm.json/OperationalMeasurementUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SustainabilityIndicators",
+      "entityPath": "SustainabilityIndicators.cdm.json/SustainabilityIndicators",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

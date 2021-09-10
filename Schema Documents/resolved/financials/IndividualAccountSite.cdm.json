@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/financials/IndividualAccountSite.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "IndividualAccountSite",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "IndividualAccountSite",
+        "definition": "resolvedFrom/IndividualAccountSite",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IndividualAccountId",
+            "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite",
+            "definition": "resolvedFrom/IndividualAccountSite/hasAttributes/IndividualAccountId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "IndividualAccount",
+                "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/IndividualAccountId",
+                "definition": "resolvedFrom/IndividualAccount"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/IndividualAccountId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/IndividualAccountId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/IndividualAccountSite/hasAttributes/IndividualAccountId/resolutionGuidance/foreignKeyAttribute/IndividualAccountId",
+                        "contents": [
+                          "IndividualAccountSite/hasAttributes/IndividualAccountId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SiteId",
+            "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite",
+            "definition": "resolvedFrom/IndividualAccountSite/hasAttributes/SiteId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Site",
+                "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/SiteId",
+                "definition": "resolvedFrom/Site"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/SiteId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/SiteId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "IndividualAccountSite/attributeContext/IndividualAccountSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/IndividualAccountSite/hasAttributes/SiteId/resolutionGuidance/foreignKeyAttribute/SiteId",
+                        "contents": [
+                          "IndividualAccountSite/hasAttributes/SiteId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "IndividualAccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/IndividualAccount.cdm.json/IndividualAccount",
+                        "IndividualAccountId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "IndividualAccountSite/attributeContext/IndividualAccountSite/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SiteId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Site.cdm.json/Site",
+                        "SiteId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "IndividualAccountSite/attributeContext/IndividualAccountSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "IndividualAccountSite",
+      "description": "Linking entity between IndividualAccount and Site",
+      "version": "4.3"
+    }
+  ]
+}

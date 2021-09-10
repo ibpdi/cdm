@@ -1,0 +1,381 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/financials/Transaction.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Transaction",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Transaction",
+        "definition": "resolvedFrom/Transaction",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Transaction/attributeContext/Transaction",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Transaction/attributeContext/Transaction/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TransactionId",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/TransactionId",
+            "contents": [
+              "Transaction/hasAttributes/TransactionId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IndividualAccountId",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/IndividualAccountId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "IndividualAccount",
+                "parent": "Transaction/attributeContext/Transaction/IndividualAccountId",
+                "definition": "resolvedFrom/IndividualAccount"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Transaction/attributeContext/Transaction/IndividualAccountId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Transaction/attributeContext/Transaction/IndividualAccountId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Transaction/attributeContext/Transaction/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Transaction/hasAttributes/IndividualAccountId/resolutionGuidance/foreignKeyAttribute/IndividualAccountId",
+                        "contents": [
+                          "Transaction/hasAttributes/IndividualAccountId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CostCenterId",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/CostCenterId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CostCenter",
+                "parent": "Transaction/attributeContext/Transaction/CostCenterId",
+                "definition": "resolvedFrom/CostCenter"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Transaction/attributeContext/Transaction/CostCenterId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Transaction/attributeContext/Transaction/CostCenterId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Transaction/attributeContext/Transaction/CostCenterId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Transaction/hasAttributes/CostCenterId/resolutionGuidance/foreignKeyAttribute/CostCenterId",
+                        "contents": [
+                          "Transaction/hasAttributes/CostCenterId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/Type",
+            "contents": [
+              "Transaction/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BookingType",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/BookingType",
+            "contents": [
+              "Transaction/hasAttributes/BookingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/Value",
+            "contents": [
+              "Transaction/hasAttributes/Value"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BookingCurrency",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/BookingCurrency",
+            "contents": [
+              "Transaction/hasAttributes/BookingCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PostingDate",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/PostingDate",
+            "contents": [
+              "Transaction/hasAttributes/PostingDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DocumentId",
+            "parent": "Transaction/attributeContext/Transaction",
+            "definition": "resolvedFrom/Transaction/hasAttributes/DocumentId",
+            "contents": [
+              "Transaction/hasAttributes/DocumentId"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TransactionId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/TransactionId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "IndividualAccountId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/IndividualAccount.cdm.json/IndividualAccount",
+                        "IndividualAccountId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "name": "CostCenterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/CostCenter.cdm.json/CostCenter",
+                        "CostCenterId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/CostCenterId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/Type",
+          "dataFormat": "String",
+          "description": "Type of transaction",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Actual",
+              "attributeValue": "Actual",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Budget",
+              "attributeValue": "Budget",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Forecast",
+              "attributeValue": "Forecast",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "BookingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/BookingType",
+          "dataFormat": "String",
+          "description": "Booking type",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "debit",
+              "attributeValue": "debit",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "credit",
+              "attributeValue": "credit",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
+            "means.measurement.currency"
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/Value",
+          "dataFormat": "Decimal",
+          "description": "Cost/Income value of specific transaction"
+        },
+        {
+          "name": "BookingCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/BookingCurrency",
+          "dataFormat": "String",
+          "description": "Currency of booking",
+          "maximumLength": 50
+        },
+        {
+          "name": "PostingDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/PostingDate",
+          "dataFormat": "DateTime",
+          "description": "Date transaction is posted in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transaction/attributeContext/Transaction/DocumentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reference to document",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Transaction",
+      "description": "Individual transaction or account balance at specific reporting date",
+      "version": "4.3"
+    }
+  ]
+}
