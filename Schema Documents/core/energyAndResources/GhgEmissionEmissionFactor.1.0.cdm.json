@@ -5,37 +5,37 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "GhgEmissions.cdm.json"
+      "corpusPath": "GhgEmission.1.0.cdm.json"
     },
     {
-      "corpusPath": "/core/digitalTwin/Building.cdm.json"
+      "corpusPath": "EmissionFactor.1.0.cdm.json"
     }
   ],
   "definitions": [
     {
-      "entityName": "GhgEmissionsBuilding",
+      "entityName": "GhgEmissionEmissionFactor",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk GhgEmissions. to GhgEmissionsBuilding.",
+          "explanation": "fk GhgEmission. to GhgEmissionEmissionFactor.",
           "entity": {
-            "entityReference": "GhgEmissions",
+            "entityReference": "GhgEmission",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "GhgEmissions/(resolvedAttributes)/GhgEmissionsId"
+                  "GhgEmission/(resolvedAttributes)/GhgEmissionId"
                 ]
               }
             ]
           },
-          "name": "GhgEmissionsId",
+          "name": "GhgEmissionId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "GhgEmissionsId",
+                "name": "GhgEmissionId",
                 "purpose": "hasA",
                 "dataType": "guid",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
@@ -46,37 +46,37 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Building. to GhgEmissionsBuilding.",
+          "explanation": "fk EmissionFactor. to GhgEmissionEmissionFactor.",
           "entity": {
-            "entityReference": "Building",
+            "entityReference": "EmissionFactor",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "Building/(resolvedAttributes)/BuildingId"
+                  "EmissionFactor/(resolvedAttributes)/EmissionFactorId"
                 ]
               }
             ]
           },
-          "name": "BuildingId",
+          "name": "EmissionFactorId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "BuildingId",
+                "name": "EmissionFactorId",
                 "purpose": "hasA",
-                "dataType": "string",
+                "dataType": "guid",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-                "maximumLength": 50
+                "maximumLength": 36
               }
             }
           },
           "purpose": "identifiedBy"
         }
       ],
-      "displayName": "GhgEmissionsBuilding",
-      "description": "Linking entity between GhgEmissions and Building"
+      "displayName": "GhgEmissionEmissionFactor",
+      "description": "Linking entity between GhgEmission and EmissionFactor"
     }
   ]
 }

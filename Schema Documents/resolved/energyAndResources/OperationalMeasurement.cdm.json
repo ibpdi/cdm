@@ -49,43 +49,6 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "RoleId",
-            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/RoleId",
-            "contents": [
-              {
-                "type": "entity",
-                "name": "Role",
-                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId",
-                "definition": "resolvedFrom/Role"
-              },
-              {
-                "type": "generatedSet",
-                "name": "_generatedAttributeSet",
-                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId",
-                "contents": [
-                  {
-                    "type": "generatedRound",
-                    "name": "_generatedAttributeRound0",
-                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId/_generatedAttributeSet",
-                    "contents": [
-                      {
-                        "type": "addedAttributeIdentity",
-                        "name": "_foreignKey",
-                        "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
-                        "contents": [
-                          "OperationalMeasurement/hasAttributes/RoleId"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "Parent",
             "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
             "definition": "resolvedFrom/Parent",
@@ -224,11 +187,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "LCA",
+            "name": "LifeCycleAssessment",
             "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/LCA",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/LifeCycleAssessment",
             "contents": [
-              "OperationalMeasurement/hasAttributes/LCA"
+              "OperationalMeasurement/hasAttributes/LifeCycleAssessment"
             ]
           },
           {
@@ -285,38 +248,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "ProjectionBaseYear",
+            "name": "SensorId",
             "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/ProjectionBaseYear",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/SensorId",
             "contents": [
-              "OperationalMeasurement/hasAttributes/ProjectionBaseYear"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "ProjectionBaseId",
-            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/ProjectionBaseId",
-            "contents": [
-              "OperationalMeasurement/hasAttributes/ProjectionBaseId"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "MeterNumber",
-            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/MeterNumber",
-            "contents": [
-              "OperationalMeasurement/hasAttributes/MeterNumber"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "MeterId",
-            "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/MeterId",
-            "contents": [
-              "OperationalMeasurement/hasAttributes/MeterId"
+              "OperationalMeasurement/hasAttributes/SensorId"
             ]
           }
         ]
@@ -335,34 +271,6 @@
           "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
           "maximumLength": 36
-        },
-        {
-          "name": "RoleId",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array",
-            {
-              "traitReference": "is.linkedEntity.identifier",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "entityShape": "entityGroupSet",
-                    "constantValues": [
-                      [
-                        "/core/organisationalManagement/Role.cdm.json/Role",
-                        "RoleId"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
-          "dataFormat": "String",
-          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-          "maximumLength": 50
         },
         {
           "name": "ParentId",
@@ -1180,13 +1088,13 @@
           ]
         },
         {
-          "name": "LCA",
+          "name": "LifeCycleAssessment",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/LCA",
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/LifeCycleAssessment",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Related life cycle assessment stage according to ISO 14040",
@@ -1362,56 +1270,16 @@
           "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "ProjectionBaseYear",
-          "appliedTraits": [
-            "is.dataFormat.date",
-            "means.measurement.date",
-            "is.dataFormat.time",
-            "means.measurement.time"
-          ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ProjectionBaseYear",
-          "isNullable": true,
-          "dataFormat": "DateTime",
-          "description": "Base year of operational value projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00."
-        },
-        {
-          "name": "ProjectionBaseId",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array",
-            "is.dataFormat.guid"
-          ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/ProjectionBaseId",
-          "isNullable": true,
-          "dataFormat": "Guid",
-          "description": "Identifier (Guid) of operational value projected into the future",
-          "maximumLength": 36
-        },
-        {
-          "name": "MeterNumber",
+          "name": "SensorId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/MeterNumber",
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/SensorId",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Name of meter providing value (user-provided)",
-          "maximumLength": 200
-        },
-        {
-          "name": "MeterId",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/MeterId",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Identifier of meter providing value",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
           "maximumLength": 50
         }
       ],

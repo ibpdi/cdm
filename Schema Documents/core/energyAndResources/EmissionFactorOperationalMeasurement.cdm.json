@@ -2,40 +2,40 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "GhgEmissions.1.0.cdm.json"
+      "corpusPath": "EmissionFactor.cdm.json"
     },
     {
-      "corpusPath": "/core/digitalTwin/Site.1.0.cdm.json"
+      "corpusPath": "OperationalMeasurement.cdm.json"
     }
   ],
   "definitions": [
     {
-      "entityName": "GhgEmissionsSite",
+      "entityName": "EmissionFactorOperationalMeasurement",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk GhgEmissions. to GhgEmissionsSite.",
+          "explanation": "fk EmissionFactor. to EmissionFactorOperationalMeasurement.",
           "entity": {
-            "entityReference": "GhgEmissions",
+            "entityReference": "EmissionFactor",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "GhgEmissions/(resolvedAttributes)/GhgEmissionsId"
+                  "EmissionFactor/(resolvedAttributes)/EmissionFactorId"
                 ]
               }
             ]
           },
-          "name": "GhgEmissionsId",
+          "name": "EmissionFactorId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "GhgEmissionsId",
+                "name": "EmissionFactorId",
                 "purpose": "hasA",
                 "dataType": "guid",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
@@ -46,37 +46,37 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Site. to GhgEmissionsSite.",
+          "explanation": "fk OperationalMeasurement. to EmissionFactorOperationalMeasurement.",
           "entity": {
-            "entityReference": "Site",
+            "entityReference": "OperationalMeasurement",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "Site/(resolvedAttributes)/SiteId"
+                  "OperationalMeasurement/(resolvedAttributes)/OperationalMeasurementId"
                 ]
               }
             ]
           },
-          "name": "SiteId",
+          "name": "OperationalMeasurementId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SiteId",
+                "name": "OperationalMeasurementId",
                 "purpose": "hasA",
-                "dataType": "string",
+                "dataType": "guid",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-                "maximumLength": 50
+                "maximumLength": 36
               }
             }
           },
           "purpose": "identifiedBy"
         }
       ],
-      "displayName": "GhgEmissionsSite",
-      "description": "Linking entity between GhgEmissions and Site"
+      "displayName": "EmissionFactorOperationalMeasurement",
+      "description": "Linking entity between EmissionFactor and OperationalMeasurement"
     }
   ]
 }

@@ -21,34 +21,6 @@
           "maximumLength": 36
         },
         {
-          "explanation": "fk Role. to OperationalMeasurement.",
-          "entity": {
-            "entityReference": "Role",
-            "appliedTraits": [
-              {
-                "traitReference": "is.identifiedBy",
-                "arguments": [
-                  "Role/(resolvedAttributes)/RoleId"
-                ]
-              }
-            ]
-          },
-          "name": "RoleId",
-          "resolutionGuidance": {
-            "renameFormat": "{m}",
-            "entityByReference": {
-              "allowReference": true,
-              "foreignKeyAttribute": {
-                "name": "RoleId",
-                "purpose": "hasA",
-                "dataType": "string",
-                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-                "maximumLength": 50
-              }
-            }
-          }
-        },
-        {
           "attributeGroupReference": "Parent"
         },
         {
@@ -892,7 +864,7 @@
           "valueConstrainedToList": true
         },
         {
-          "name": "LCA",
+          "name": "LifeCycleAssessment",
           "purpose": "hasA",
           "dataType": "string",
           "appliedTraits": [
@@ -1035,34 +1007,11 @@
           "attributeGroupReference": "ValidityInfo"
         },
         {
-          "name": "ProjectionBaseYear",
-          "purpose": "hasA",
-          "dataType": "dateTime",
-          "isNullable": true,
-          "description": "Base year of operational value projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00."
-        },
-        {
-          "name": "ProjectionBaseId",
-          "purpose": "hasA",
-          "dataType": "guid",
-          "isNullable": true,
-          "description": "Identifier (Guid) of operational value projected into the future",
-          "maximumLength": 36
-        },
-        {
-          "name": "MeterNumber",
+          "name": "SensorId",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Name of meter providing value (user-provided)",
-          "maximumLength": 200
-        },
-        {
-          "name": "MeterId",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Identifier of meter providing value",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
           "maximumLength": 50
         }
       ],

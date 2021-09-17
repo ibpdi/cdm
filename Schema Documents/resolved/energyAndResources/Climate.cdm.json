@@ -76,38 +76,38 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "GCM",
+            "name": "GlobalCirculationModel",
             "parent": "Climate/attributeContext/Climate",
-            "definition": "resolvedFrom/Climate/hasAttributes/GCM",
+            "definition": "resolvedFrom/Climate/hasAttributes/GlobalCirculationModel",
             "contents": [
-              "Climate/hasAttributes/GCM"
+              "Climate/hasAttributes/GlobalCirculationModel"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "RCM",
+            "name": "RegionalClimateModel",
             "parent": "Climate/attributeContext/Climate",
-            "definition": "resolvedFrom/Climate/hasAttributes/RCM",
+            "definition": "resolvedFrom/Climate/hasAttributes/RegionalClimateModel",
             "contents": [
-              "Climate/hasAttributes/RCM"
+              "Climate/hasAttributes/RegionalClimateModel"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SimV",
+            "name": "SimulationVersion",
             "parent": "Climate/attributeContext/Climate",
-            "definition": "resolvedFrom/Climate/hasAttributes/SimV",
+            "definition": "resolvedFrom/Climate/hasAttributes/SimulationVersion",
             "contents": [
-              "Climate/hasAttributes/SimV"
+              "Climate/hasAttributes/SimulationVersion"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "EnsM",
+            "name": "EnsembleMember",
             "parent": "Climate/attributeContext/Climate",
-            "definition": "resolvedFrom/Climate/hasAttributes/EnsM",
+            "definition": "resolvedFrom/Climate/hasAttributes/EnsembleMember",
             "contents": [
-              "Climate/hasAttributes/EnsM"
+              "Climate/hasAttributes/EnsembleMember"
             ]
           },
           {
@@ -291,52 +291,52 @@
           "maximumLength": 50
         },
         {
-          "name": "GCM",
+          "name": "GlobalCirculationModel",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Climate/attributeContext/Climate/GCM",
+          "attributeContext": "Climate/attributeContext/Climate/GlobalCirculationModel",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Global climate model used",
+          "description": "Global circulation model used",
           "maximumLength": 75
         },
         {
-          "name": "RCM",
+          "name": "RegionalClimateModel",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Climate/attributeContext/Climate/RCM",
+          "attributeContext": "Climate/attributeContext/Climate/RegionalClimateModel",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Regional climate model used",
           "maximumLength": 75
         },
         {
-          "name": "SimV",
+          "name": "SimulationVersion",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Climate/attributeContext/Climate/SimV",
+          "attributeContext": "Climate/attributeContext/Climate/SimulationVersion",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Run number of certain climate model or model combination",
           "maximumLength": 75
         },
         {
-          "name": "EnsM",
+          "name": "EnsembleMember",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Climate/attributeContext/Climate/EnsM",
+          "attributeContext": "Climate/attributeContext/Climate/EnsembleMember",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Information on members of a model ensemble and changed conditions ('realisation', 'initialisation', 'physics'). Control member; 'r1i1p1'",

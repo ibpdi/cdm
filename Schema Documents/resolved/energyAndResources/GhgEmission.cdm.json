@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "/core/energyAndResources/GhgEmissions.cdm.json",
+      "corpusPath": "/core/energyAndResources/GhgEmission.cdm.json",
       "moniker": "resolvedFrom"
     }
   ],
   "definitions": [
     {
-      "entityName": "GhgEmissions",
+      "entityName": "GhgEmission",
       "exhibitsTraits": [
         {
           "traitReference": "has.entitySchemaAbstractionLevel",
@@ -22,60 +22,60 @@
       ],
       "attributeContext": {
         "type": "entity",
-        "name": "GhgEmissions",
-        "definition": "resolvedFrom/GhgEmissions",
+        "name": "GhgEmission",
+        "definition": "resolvedFrom/GhgEmission",
         "contents": [
           {
             "type": "entityReferenceExtends",
             "name": "extends",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
             "contents": [
               {
                 "type": "entity",
                 "name": "CdmEntity",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/extends",
+                "parent": "GhgEmission/attributeContext/GhgEmission/extends",
                 "definition": "resolvedFrom/CdmEntity"
               }
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "GhgEmissionsId",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/GhgEmissionsId",
+            "name": "GhgEmissionId",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/GhgEmissionId",
             "contents": [
-              "GhgEmissions/hasAttributes/GhgEmissionsId"
+              "GhgEmission/hasAttributes/GhgEmissionId"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "OperationalMeasurementId",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/OperationalMeasurementId",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/OperationalMeasurementId",
             "contents": [
               {
                 "type": "entity",
                 "name": "OperationalMeasurement",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/OperationalMeasurementId",
+                "parent": "GhgEmission/attributeContext/GhgEmission/OperationalMeasurementId",
                 "definition": "resolvedFrom/OperationalMeasurement"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/OperationalMeasurementId",
+                "parent": "GhgEmission/attributeContext/GhgEmission/OperationalMeasurementId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "GhgEmissions/attributeContext/GhgEmissions/OperationalMeasurementId/_generatedAttributeSet",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/OperationalMeasurementId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "GhgEmissions/attributeContext/GhgEmissions/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/GhgEmissions/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "parent": "GhgEmission/attributeContext/GhgEmission/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GhgEmission/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
                         "contents": [
-                          "GhgEmissions/hasAttributes/OperationalMeasurementId"
+                          "GhgEmission/hasAttributes/OperationalMeasurementId"
                         ]
                       }
                     ]
@@ -87,22 +87,22 @@
           {
             "type": "attributeDefinition",
             "name": "Parent",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
             "definition": "resolvedFrom/Parent",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "Parent",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/Parent",
+                "parent": "GhgEmission/attributeContext/GhgEmission/Parent",
                 "definition": "resolvedFrom/Parent",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "ParentId",
-                    "parent": "GhgEmissions/attributeContext/GhgEmissions/Parent/Parent",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/Parent/Parent",
                     "definition": "resolvedFrom/Parent/members/ParentId",
                     "contents": [
-                      "GhgEmissions/hasAttributes/ParentId"
+                      "GhgEmission/hasAttributes/ParentId"
                     ]
                   }
                 ]
@@ -112,22 +112,22 @@
           {
             "type": "attributeDefinition",
             "name": "Name",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
             "definition": "resolvedFrom/Name",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "Name",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/Name",
+                "parent": "GhgEmission/attributeContext/GhgEmission/Name",
                 "definition": "resolvedFrom/Name",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "Name",
-                    "parent": "GhgEmissions/attributeContext/GhgEmissions/Name/Name",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/Name/Name",
                     "definition": "resolvedFrom/Name/members/Name",
                     "contents": [
-                      "GhgEmissions/hasAttributes/Name"
+                      "GhgEmission/hasAttributes/Name"
                     ]
                   }
                 ]
@@ -137,85 +137,76 @@
           {
             "type": "attributeDefinition",
             "name": "EmissionScope",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/EmissionScope",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/EmissionScope",
             "contents": [
-              "GhgEmissions/hasAttributes/EmissionScope"
+              "GhgEmission/hasAttributes/EmissionScope"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "ReportingType",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/ReportingType",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/ReportingType",
             "contents": [
-              "GhgEmissions/hasAttributes/ReportingType"
+              "GhgEmission/hasAttributes/ReportingType"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Type",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/Type",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/Type",
             "contents": [
-              "GhgEmissions/hasAttributes/Type"
+              "GhgEmission/hasAttributes/Type"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "SubType",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/SubType",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/SubType",
             "contents": [
-              "GhgEmissions/hasAttributes/SubType"
+              "GhgEmission/hasAttributes/SubType"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "LCA",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/LCA",
+            "name": "LifeCycleAssessment",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/LifeCycleAssessment",
             "contents": [
-              "GhgEmissions/hasAttributes/LCA"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "ProjectionBaseYear",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/ProjectionBaseYear",
-            "contents": [
-              "GhgEmissions/hasAttributes/ProjectionBaseYear"
+              "GhgEmission/hasAttributes/LifeCycleAssessment"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "ValidityInfo",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
             "definition": "resolvedFrom/ValidityInfo",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "ValidityInfo",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/ValidityInfo",
+                "parent": "GhgEmission/attributeContext/GhgEmission/ValidityInfo",
                 "definition": "resolvedFrom/ValidityInfo",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "ValidFrom",
-                    "parent": "GhgEmissions/attributeContext/GhgEmissions/ValidityInfo/ValidityInfo",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/ValidityInfo/ValidityInfo",
                     "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
                     "contents": [
-                      "GhgEmissions/hasAttributes/ValidFrom"
+                      "GhgEmission/hasAttributes/ValidFrom"
                     ]
                   },
                   {
                     "type": "attributeDefinition",
                     "name": "ValidUntil",
-                    "parent": "GhgEmissions/attributeContext/GhgEmissions/ValidityInfo/ValidityInfo",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/ValidityInfo/ValidityInfo",
                     "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
                     "contents": [
-                      "GhgEmissions/hasAttributes/ValidUntil"
+                      "GhgEmission/hasAttributes/ValidUntil"
                     ]
                   }
                 ]
@@ -225,22 +216,22 @@
           {
             "type": "attributeDefinition",
             "name": "Value",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
             "definition": "resolvedFrom/Value",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "Value",
-                "parent": "GhgEmissions/attributeContext/GhgEmissions/Value",
+                "parent": "GhgEmission/attributeContext/GhgEmission/Value",
                 "definition": "resolvedFrom/Value",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "Value",
-                    "parent": "GhgEmissions/attributeContext/GhgEmissions/Value/Value",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/Value/Value",
                     "definition": "resolvedFrom/Value/members/Value",
                     "contents": [
-                      "GhgEmissions/hasAttributes/Value"
+                      "GhgEmission/hasAttributes/Value"
                     ]
                   }
                 ]
@@ -250,42 +241,33 @@
           {
             "type": "attributeDefinition",
             "name": "Unit",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/Unit",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/Unit",
             "contents": [
-              "GhgEmissions/hasAttributes/Unit"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "EmissionFactorScenario",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/EmissionFactorScenario",
-            "contents": [
-              "GhgEmissions/hasAttributes/EmissionFactorScenario"
+              "GhgEmission/hasAttributes/Unit"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Accuracy",
-            "parent": "GhgEmissions/attributeContext/GhgEmissions",
-            "definition": "resolvedFrom/GhgEmissions/hasAttributes/Accuracy",
+            "parent": "GhgEmission/attributeContext/GhgEmission",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/Accuracy",
             "contents": [
-              "GhgEmissions/hasAttributes/Accuracy"
+              "GhgEmission/hasAttributes/Accuracy"
             ]
           }
         ]
       },
       "hasAttributes": [
         {
-          "name": "GhgEmissionsId",
+          "name": "GhgEmissionId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array",
             "is.dataFormat.guid"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/GhgEmissionsId",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/GhgEmissionId",
           "isPrimaryKey": true,
           "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
@@ -315,7 +297,7 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "isNullable": true,
           "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
@@ -329,7 +311,7 @@
             "is.dataFormat.array",
             "is.dataFormat.guid"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/Parent/Parent/ParentId",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Parent/Parent/ParentId",
           "isNullable": true,
           "dataFormat": "Guid",
           "description": "Parent (Guid) of entity.",
@@ -343,7 +325,7 @@
             "is.dataFormat.array",
             "means.entityName"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/Name/Name/Name",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Name/Name/Name",
           "dataFormat": "String",
           "description": "Name of entity.",
           "maximumLength": 200
@@ -355,7 +337,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/EmissionScope",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/EmissionScope",
           "dataFormat": "String",
           "description": "Emission scope 1, 2 or 3 according to the Greenhouse Gas Protocol",
           "maximumLength": 50,
@@ -394,7 +376,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/ReportingType",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/ReportingType",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Approach of reporting emissions e.g. from 'green electricity consumption': Market-based or location-based",
@@ -422,7 +404,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/Type",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Type",
           "dataFormat": "String",
           "description": "General source of emission e.g. energy, water or waste",
           "maximumLength": 50,
@@ -467,7 +449,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/SubType",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/SubType",
           "dataFormat": "String",
           "description": "Specific type of operational measurement e.g. district heating or water discharge",
           "maximumLength": 100,
@@ -583,27 +565,21 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Water discharge",
-              "attributeValue": "Water discharge",
-              "displayOrder": "18"
-            },
-            {
-              "languageTag": "en",
               "displayText": "Water consumption (unspecified)",
               "attributeValue": "Water consumption (unspecified)",
-              "displayOrder": "19"
+              "displayOrder": "18"
             },
             {
               "languageTag": "en",
               "displayText": "Recyclable or reusable waste",
               "attributeValue": "Recyclable or reusable waste",
-              "displayOrder": "20"
+              "displayOrder": "19"
             },
             {
               "languageTag": "en",
               "displayText": "Non-recyclable waste (to be burned)",
               "attributeValue": "Non-recyclable waste (to be burned)",
-              "displayOrder": "21"
+              "displayOrder": "20"
             },
             {
               "languageTag": "en",
@@ -615,306 +591,300 @@
               "languageTag": "en",
               "displayText": "Hazardous waste",
               "attributeValue": "Hazardous waste",
-              "displayOrder": "23"
+              "displayOrder": "22"
             },
             {
               "languageTag": "en",
               "displayText": "Waste (unspecified)",
               "attributeValue": "Waste (unspecified)",
-              "displayOrder": "24"
+              "displayOrder": "23"
             },
             {
               "languageTag": "en",
               "displayText": "Electricity from grid (normal contract)",
               "attributeValue": "Electricity from grid (normal contract)",
-              "displayOrder": "25"
+              "displayOrder": "24"
             },
             {
               "languageTag": "en",
               "displayText": "Carbon dioxide (CO2)",
               "attributeValue": "Carbon dioxide (CO2)",
-              "displayOrder": "26"
+              "displayOrder": "25"
             },
             {
               "languageTag": "en",
               "displayText": "Methane (CH4)",
               "attributeValue": "Methane (CH4)",
-              "displayOrder": "27"
+              "displayOrder": "26"
             },
             {
               "languageTag": "en",
               "displayText": "Nitrous oxide (N20)",
               "attributeValue": "Nitrous oxide (N20)",
-              "displayOrder": "28"
+              "displayOrder": "27"
             },
             {
               "languageTag": "en",
               "displayText": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
               "attributeValue": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
-              "displayOrder": "29"
+              "displayOrder": "28"
             },
             {
               "languageTag": "en",
               "displayText": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
               "attributeValue": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
-              "displayOrder": "30"
+              "displayOrder": "29"
             },
             {
               "languageTag": "en",
               "displayText": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
               "attributeValue": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
-              "displayOrder": "31"
+              "displayOrder": "30"
             },
             {
               "languageTag": "en",
               "displayText": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
               "attributeValue": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
-              "displayOrder": "32"
+              "displayOrder": "31"
             },
             {
               "languageTag": "en",
               "displayText": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
               "attributeValue": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
-              "displayOrder": "33"
+              "displayOrder": "32"
             },
             {
               "languageTag": "en",
               "displayText": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
               "attributeValue": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
-              "displayOrder": "34"
+              "displayOrder": "33"
             },
             {
               "languageTag": "en",
               "displayText": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
               "attributeValue": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
-              "displayOrder": "35"
+              "displayOrder": "34"
             },
             {
               "languageTag": "en",
               "displayText": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
               "attributeValue": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
-              "displayOrder": "36"
+              "displayOrder": "35"
             },
             {
               "languageTag": "en",
               "displayText": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
               "attributeValue": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
-              "displayOrder": "37"
+              "displayOrder": "36"
             },
             {
               "languageTag": "en",
               "displayText": "R-10 | Carbon tetrachloride (CCl4)",
               "attributeValue": "R-10 | Carbon tetrachloride (CCl4)",
-              "displayOrder": "38"
+              "displayOrder": "37"
             },
             {
               "languageTag": "en",
               "displayText": "Bromomethane | Methyl bromide (CH3Br)",
               "attributeValue": "Bromomethane | Methyl bromide (CH3Br)",
-              "displayOrder": "39"
+              "displayOrder": "38"
             },
             {
               "languageTag": "en",
               "displayText": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
               "attributeValue": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
-              "displayOrder": "40"
+              "displayOrder": "39"
             },
             {
               "languageTag": "en",
               "displayText": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
               "attributeValue": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
-              "displayOrder": "41"
+              "displayOrder": "40"
             },
             {
               "languageTag": "en",
               "displayText": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
               "attributeValue": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
-              "displayOrder": "42"
+              "displayOrder": "41"
             },
             {
               "languageTag": "en",
               "displayText": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
               "attributeValue": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
-              "displayOrder": "43"
+              "displayOrder": "42"
             },
             {
               "languageTag": "en",
               "displayText": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
               "attributeValue": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
-              "displayOrder": "44"
+              "displayOrder": "43"
             },
             {
               "languageTag": "en",
               "displayText": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
               "attributeValue": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
-              "displayOrder": "45"
+              "displayOrder": "44"
             },
             {
               "languageTag": "en",
               "displayText": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
               "attributeValue": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
-              "displayOrder": "46"
+              "displayOrder": "45"
             },
             {
               "languageTag": "en",
               "displayText": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
               "attributeValue": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
-              "displayOrder": "47"
+              "displayOrder": "46"
             },
             {
               "languageTag": "en",
               "displayText": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
               "attributeValue": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
-              "displayOrder": "48"
+              "displayOrder": "47"
             },
             {
               "languageTag": "en",
               "displayText": "R-23 | HFC-23 | ",
               "attributeValue": "R-23 | HFC-23 | ",
-              "displayOrder": "49"
+              "displayOrder": "48"
             },
             {
               "languageTag": "en",
               "displayText": "R-32 | HFC-32 | ",
               "attributeValue": "R-32 | HFC-32 | ",
-              "displayOrder": "50"
+              "displayOrder": "49"
             },
             {
               "languageTag": "en",
               "displayText": "R-41 | HFC-41 | ",
               "attributeValue": "R-41 | HFC-41 | ",
-              "displayOrder": "51"
+              "displayOrder": "50"
             },
             {
               "languageTag": "en",
               "displayText": "R-125 | HFC-125 | ",
               "attributeValue": "R-125 | HFC-125 | ",
-              "displayOrder": "52"
+              "displayOrder": "51"
             },
             {
               "languageTag": "en",
               "displayText": "R-134 | HFC-134 | ",
               "attributeValue": "R-134 | HFC-134 | ",
-              "displayOrder": "53"
+              "displayOrder": "52"
             },
             {
               "languageTag": "en",
               "displayText": "R-134a | HFC-134a | ",
               "attributeValue": "R-134a | HFC-134a | ",
-              "displayOrder": "54"
+              "displayOrder": "53"
             },
             {
               "languageTag": "en",
               "displayText": "R-143 | HFC-143 | ",
               "attributeValue": "R-143 | HFC-143 | ",
-              "displayOrder": "55"
+              "displayOrder": "54"
             },
             {
               "languageTag": "en",
               "displayText": "R-143a | HFC-143a | ",
               "attributeValue": "R-143a | HFC-143a | ",
-              "displayOrder": "56"
+              "displayOrder": "55"
             },
             {
               "languageTag": "en",
               "displayText": "R-152 | HFC-152 | ",
               "attributeValue": "R-152 | HFC-152 | ",
-              "displayOrder": "57"
+              "displayOrder": "56"
             },
             {
               "languageTag": "en",
               "displayText": "R-152a | HFC-152a | ",
               "attributeValue": "R-152a | HFC-152a | ",
-              "displayOrder": "58"
+              "displayOrder": "57"
             },
             {
               "languageTag": "en",
               "displayText": "R-161 | HFC-161 | ",
               "attributeValue": "R-161 | HFC-161 | ",
-              "displayOrder": "59"
+              "displayOrder": "58"
             },
             {
               "languageTag": "en",
               "displayText": "R-227ea | HFC-227ea | ",
               "attributeValue": "R-227ea | HFC-227ea | ",
-              "displayOrder": "60"
+              "displayOrder": "59"
             },
             {
               "languageTag": "en",
               "displayText": "R-236cb | HFC-236cb | ",
               "attributeValue": "R-236cb | HFC-236cb | ",
-              "displayOrder": "61"
+              "displayOrder": "60"
             },
             {
               "languageTag": "en",
               "displayText": "R-236ea | HFC-236ea | ",
               "attributeValue": "R-236ea | HFC-236ea | ",
-              "displayOrder": "62"
+              "displayOrder": "61"
             },
             {
               "languageTag": "en",
               "displayText": "R-236fa | HFC-236fa | ",
               "attributeValue": "R-236fa | HFC-236fa | ",
-              "displayOrder": "63"
+              "displayOrder": "62"
             },
             {
               "languageTag": "en",
               "displayText": "R-245ca | HFC-245ca | ",
               "attributeValue": "R-245ca | HFC-245ca | ",
-              "displayOrder": "64"
+              "displayOrder": "63"
             },
             {
               "languageTag": "en",
               "displayText": "R-245fa | HFC-245fa | ",
               "attributeValue": "R-245fa | HFC-245fa | ",
-              "displayOrder": "65"
+              "displayOrder": "64"
             },
             {
               "languageTag": "en",
               "displayText": "R-365mfc | HFC-365mfc | ",
               "attributeValue": "R-365mfc | HFC-365mfc | ",
-              "displayOrder": "66"
+              "displayOrder": "65"
             },
             {
               "languageTag": "en",
               "displayText": "R-43-10mee | HFC-43-10mee | ",
               "attributeValue": "R-43-10mee | HFC-43-10mee | ",
-              "displayOrder": "67"
+              "displayOrder": "66"
             },
             {
               "languageTag": "en",
               "displayText": "Sulfur hexafluoride (SF6)",
               "attributeValue": "Sulfur hexafluoride (SF6)",
-              "displayOrder": "68"
+              "displayOrder": "67"
             },
             {
               "languageTag": "en",
               "displayText": "Nitrogen trifluoride (NF3)",
               "attributeValue": "Nitrogen trifluoride (NF3)",
-              "displayOrder": "69"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Water supply",
-              "attributeValue": "Water supply",
-              "displayOrder": "70"
+              "displayOrder": "68"
             },
             {
               "languageTag": "en",
               "displayText": "Non-hazardous waste",
               "attributeValue": "Non-hazardous waste",
-              "displayOrder": "71"
+              "displayOrder": "69"
             }
           ]
         },
         {
-          "name": "LCA",
+          "name": "LifeCycleAssessment",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/LCA",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/LifeCycleAssessment",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Related life cycle assessment stage according to ISO 14040",
@@ -1026,25 +996,6 @@
           ]
         },
         {
-          "name": "ProjectionBaseYear",
-          "appliedTraits": [
-            "is.dataFormat.date",
-            "means.measurement.date",
-            "is.dataFormat.time",
-            "means.measurement.time",
-            {
-              "traitReference": "is.formatted.dateTime",
-              "arguments": [
-                "YYYY-MM-DDThh:mmZ"
-              ]
-            }
-          ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/ProjectionBaseYear",
-          "isNullable": true,
-          "dataFormat": "DateTime",
-          "description": "Base year of emissions projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00."
-        },
-        {
           "name": "ValidFrom",
           "appliedTraits": [
             "is.dataFormat.date",
@@ -1059,7 +1010,7 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/ValidityInfo/ValidityInfo/ValidFrom",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/ValidityInfo/ValidityInfo/ValidFrom",
           "dataFormat": "DateTime",
           "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
@@ -1078,7 +1029,7 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/ValidityInfo/ValidityInfo/ValidUntil",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/ValidityInfo/ValidityInfo/ValidUntil",
           "dataFormat": "DateTime",
           "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
@@ -1087,7 +1038,7 @@
           "appliedTraits": [
             "is.dataFormat.floatingPoint"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/Value/Value/Value",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Value/Value/Value",
           "isNullable": true,
           "dataFormat": "Float",
           "description": "Value of entity."
@@ -1099,7 +1050,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/Unit",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Unit",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Unit of emission value: kgCO2e",
@@ -1115,26 +1066,13 @@
           ]
         },
         {
-          "name": "EmissionFactorScenario",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/EmissionFactorScenario",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "User specific Emission Factor Scenario (BM default can be used)",
-          "maximumLength": 50
-        },
-        {
           "name": "Accuracy",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "GhgEmissions/attributeContext/GhgEmissions/Accuracy",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Accuracy",
           "dataFormat": "String",
           "description": "Information on accuracy of value e.g. 'metered' or 'extrapolated'",
           "maximumLength": 75,
@@ -1311,7 +1249,7 @@
           ]
         }
       ],
-      "displayName": "GhgEmissions",
+      "displayName": "GhgEmission",
       "description": "Greenhouse gas (Ghg) emissions (in CO2e) corresponding to individual operational measurements.",
       "version": "4.3"
     }

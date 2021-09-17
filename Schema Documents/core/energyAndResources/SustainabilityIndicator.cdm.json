@@ -10,18 +10,18 @@
   ],
   "definitions": [
     {
-      "entityName": "SustainabilityIndicators",
+      "entityName": "SustainabilityIndicator",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "SustainabilityIndicatorsId",
+          "name": "SustainabilityIndicatorId",
           "purpose": "identifiedBy",
           "dataType": "guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
           "maximumLength": 36
         },
         {
-          "explanation": "fk Building. to SustainabilityIndicators.",
+          "explanation": "fk Building. to SustainabilityIndicator.",
           "entity": {
             "entityReference": "Building",
             "appliedTraits": [
@@ -422,14 +422,6 @@
           "attributeGroupReference": "Value"
         },
         {
-          "name": "EmissionFactorScenario",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "User specific emission factor scenario",
-          "maximumLength": 50
-        },
-        {
           "name": "Unit",
           "purpose": "hasA",
           "dataType": "string",
@@ -493,7 +485,7 @@
           "attributeGroupReference": "ValidityInfo"
         }
       ],
-      "displayName": "SustainabilityIndicators",
+      "displayName": "SustainabilityIndicator",
       "description": "Sustainability-related information on building-level: energy consumption, net energy demand, carbon emissions (total, separated in emissions scopes, market- and location-based, alignment with targets, excess emissions, carbon costs and penalties)"
     }
   ]
