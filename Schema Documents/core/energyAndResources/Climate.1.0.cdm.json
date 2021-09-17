@@ -42,15 +42,15 @@
           "maximumLength": 50
         },
         {
-          "name": "GCM",
+          "name": "GlobalCirculationModel",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Global climate model used",
+          "description": "Global circulation model used",
           "maximumLength": 75
         },
         {
-          "name": "RCM",
+          "name": "RegionalClimateModel",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
@@ -58,7 +58,7 @@
           "maximumLength": 75
         },
         {
-          "name": "SimV",
+          "name": "SimulationVersion",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
@@ -66,7 +66,7 @@
           "maximumLength": 75
         },
         {
-          "name": "EnsM",
+          "name": "EnsembleMember",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,

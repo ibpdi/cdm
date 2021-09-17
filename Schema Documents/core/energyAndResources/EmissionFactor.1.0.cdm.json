@@ -21,33 +21,12 @@
           "maximumLength": 36
         },
         {
-          "explanation": "fk OperationalMeasurement. to EmissionFactor.",
-          "entity": {
-            "entityReference": "OperationalMeasurement",
-            "appliedTraits": [
-              {
-                "traitReference": "is.identifiedBy",
-                "arguments": [
-                  "OperationalMeasurement/(resolvedAttributes)/OperationalMeasurementId"
-                ]
-              }
-            ]
-          },
-          "name": "OperationalMeasurementId",
-          "resolutionGuidance": {
-            "renameFormat": "{m}",
-            "entityByReference": {
-              "allowReference": true,
-              "foreignKeyAttribute": {
-                "name": "OperationalMeasurementId",
-                "purpose": "hasA",
-                "dataType": "guid",
-                "isNullable": true,
-                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-                "maximumLength": 36
-              }
-            }
-          }
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific emission factor name (this can also be the name of a scenario)",
+          "maximumLength": 200
         },
         {
           "name": "Country",
@@ -603,14 +582,6 @@
           "isNullable": true,
           "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc",
           "maximumLength": 100
-        },
-        {
-          "name": "Scenario",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "User specific emission factor scenario",
-          "maximumLength": 50
         }
       ],
       "displayName": "EmissionFactor",

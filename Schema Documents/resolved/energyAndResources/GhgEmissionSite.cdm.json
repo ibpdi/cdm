@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "/core/energyAndResources/GhgEmissionsSite.cdm.json",
+      "corpusPath": "/core/energyAndResources/GhgEmissionSite.cdm.json",
       "moniker": "resolvedFrom"
     }
   ],
   "definitions": [
     {
-      "entityName": "GhgEmissionsSite",
+      "entityName": "GhgEmissionSite",
       "exhibitsTraits": [
         {
           "traitReference": "has.entitySchemaAbstractionLevel",
@@ -22,51 +22,51 @@
       ],
       "attributeContext": {
         "type": "entity",
-        "name": "GhgEmissionsSite",
-        "definition": "resolvedFrom/GhgEmissionsSite",
+        "name": "GhgEmissionSite",
+        "definition": "resolvedFrom/GhgEmissionSite",
         "contents": [
           {
             "type": "entityReferenceExtends",
             "name": "extends",
-            "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite",
+            "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite",
             "contents": [
               {
                 "type": "entity",
                 "name": "CdmEntity",
-                "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/extends",
+                "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/extends",
                 "definition": "resolvedFrom/CdmEntity"
               }
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "GhgEmissionsId",
-            "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite",
-            "definition": "resolvedFrom/GhgEmissionsSite/hasAttributes/GhgEmissionsId",
+            "name": "GhgEmissionId",
+            "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite",
+            "definition": "resolvedFrom/GhgEmissionSite/hasAttributes/GhgEmissionId",
             "contents": [
               {
                 "type": "entity",
-                "name": "GhgEmissions",
-                "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/GhgEmissionsId",
-                "definition": "resolvedFrom/GhgEmissions"
+                "name": "GhgEmission",
+                "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/GhgEmissionId",
+                "definition": "resolvedFrom/GhgEmission"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/GhgEmissionsId",
+                "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/GhgEmissionId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/GhgEmissionsId/_generatedAttributeSet",
+                    "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/GhgEmissionId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/GhgEmissionsId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/GhgEmissionsSite/hasAttributes/GhgEmissionsId/resolutionGuidance/foreignKeyAttribute/GhgEmissionsId",
+                        "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/GhgEmissionId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GhgEmissionSite/hasAttributes/GhgEmissionId/resolutionGuidance/foreignKeyAttribute/GhgEmissionId",
                         "contents": [
-                          "GhgEmissionsSite/hasAttributes/GhgEmissionsId"
+                          "GhgEmissionSite/hasAttributes/GhgEmissionId"
                         ]
                       }
                     ]
@@ -78,32 +78,32 @@
           {
             "type": "attributeDefinition",
             "name": "SiteId",
-            "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite",
-            "definition": "resolvedFrom/GhgEmissionsSite/hasAttributes/SiteId",
+            "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite",
+            "definition": "resolvedFrom/GhgEmissionSite/hasAttributes/SiteId",
             "contents": [
               {
                 "type": "entity",
                 "name": "Site",
-                "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/SiteId",
+                "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/SiteId",
                 "definition": "resolvedFrom/Site"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/SiteId",
+                "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/SiteId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/SiteId/_generatedAttributeSet",
+                    "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/SiteId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/GhgEmissionsSite/hasAttributes/SiteId/resolutionGuidance/foreignKeyAttribute/SiteId",
+                        "parent": "GhgEmissionSite/attributeContext/GhgEmissionSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GhgEmissionSite/hasAttributes/SiteId/resolutionGuidance/foreignKeyAttribute/SiteId",
                         "contents": [
-                          "GhgEmissionsSite/hasAttributes/SiteId"
+                          "GhgEmissionSite/hasAttributes/SiteId"
                         ]
                       }
                     ]
@@ -116,7 +116,7 @@
       },
       "hasAttributes": [
         {
-          "name": "GhgEmissionsId",
+          "name": "GhgEmissionId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -130,8 +130,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/energyAndResources/GhgEmissions.cdm.json/GhgEmissions",
-                        "GhgEmissionsId"
+                        "/core/energyAndResources/GhgEmission.cdm.json/GhgEmission",
+                        "GhgEmissionId"
                       ]
                     ]
                   }
@@ -139,7 +139,7 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/GhgEmissionsId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "GhgEmissionSite/attributeContext/GhgEmissionSite/GhgEmissionId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "isPrimaryKey": true,
           "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
@@ -168,15 +168,15 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissionsSite/attributeContext/GhgEmissionsSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "GhgEmissionSite/attributeContext/GhgEmissionSite/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         }
       ],
-      "displayName": "GhgEmissionsSite",
-      "description": "Linking entity between GhgEmissions and Site",
+      "displayName": "GhgEmissionSite",
+      "description": "Linking entity between GhgEmission and Site",
       "version": "4.3"
     }
   ]

@@ -49,39 +49,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "OperationalMeasurementId",
+            "name": "Name",
             "parent": "EmissionFactor/attributeContext/EmissionFactor",
-            "definition": "resolvedFrom/EmissionFactor/hasAttributes/OperationalMeasurementId",
+            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Name",
             "contents": [
-              {
-                "type": "entity",
-                "name": "OperationalMeasurement",
-                "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId",
-                "definition": "resolvedFrom/OperationalMeasurement"
-              },
-              {
-                "type": "generatedSet",
-                "name": "_generatedAttributeSet",
-                "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId",
-                "contents": [
-                  {
-                    "type": "generatedRound",
-                    "name": "_generatedAttributeRound0",
-                    "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId/_generatedAttributeSet",
-                    "contents": [
-                      {
-                        "type": "addedAttributeIdentity",
-                        "name": "_foreignKey",
-                        "parent": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/EmissionFactor/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
-                        "contents": [
-                          "EmissionFactor/hasAttributes/OperationalMeasurementId"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
+              "EmissionFactor/hasAttributes/Name"
             ]
           },
           {
@@ -205,15 +177,6 @@
             "contents": [
               "EmissionFactor/hasAttributes/City"
             ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "Scenario",
-            "parent": "EmissionFactor/attributeContext/EmissionFactor",
-            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Scenario",
-            "contents": [
-              "EmissionFactor/hasAttributes/Scenario"
-            ]
           }
         ]
       },
@@ -233,34 +196,17 @@
           "maximumLength": 36
         },
         {
-          "name": "OperationalMeasurementId",
+          "name": "Name",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
-            "is.dataFormat.array",
-            "is.dataFormat.guid",
-            {
-              "traitReference": "is.linkedEntity.identifier",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "entityShape": "entityGroupSet",
-                    "constantValues": [
-                      [
-                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
-                        "OperationalMeasurementId"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
+            "is.dataFormat.array"
           ],
-          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Name",
           "isNullable": true,
-          "dataFormat": "Guid",
-          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-          "maximumLength": 36
+          "dataFormat": "String",
+          "description": "User specific emission factor name (this can also be the name of a scenario)",
+          "maximumLength": 200
         },
         {
           "name": "Country",
@@ -854,19 +800,6 @@
           "dataFormat": "String",
           "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc",
           "maximumLength": 100
-        },
-        {
-          "name": "Scenario",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Scenario",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "User specific emission factor scenario",
-          "maximumLength": 50
         }
       ],
       "displayName": "EmissionFactor",

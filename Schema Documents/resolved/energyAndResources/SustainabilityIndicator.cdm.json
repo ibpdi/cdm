@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "/core/energyAndResources/SustainabilityIndicators.cdm.json",
+      "corpusPath": "/core/energyAndResources/SustainabilityIndicator.cdm.json",
       "moniker": "resolvedFrom"
     }
   ],
   "definitions": [
     {
-      "entityName": "SustainabilityIndicators",
+      "entityName": "SustainabilityIndicator",
       "exhibitsTraits": [
         {
           "traitReference": "has.entitySchemaAbstractionLevel",
@@ -22,60 +22,60 @@
       ],
       "attributeContext": {
         "type": "entity",
-        "name": "SustainabilityIndicators",
-        "definition": "resolvedFrom/SustainabilityIndicators",
+        "name": "SustainabilityIndicator",
+        "definition": "resolvedFrom/SustainabilityIndicator",
         "contents": [
           {
             "type": "entityReferenceExtends",
             "name": "extends",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
             "contents": [
               {
                 "type": "entity",
                 "name": "CdmEntity",
-                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/extends",
+                "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/extends",
                 "definition": "resolvedFrom/CdmEntity"
               }
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SustainabilityIndicatorsId",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/SustainabilityIndicatorsId",
+            "name": "SustainabilityIndicatorId",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/SustainabilityIndicatorId",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/SustainabilityIndicatorsId"
+              "SustainabilityIndicator/hasAttributes/SustainabilityIndicatorId"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "BuildingId",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/BuildingId",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/BuildingId",
             "contents": [
               {
                 "type": "entity",
                 "name": "Building",
-                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId",
+                "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/BuildingId",
                 "definition": "resolvedFrom/Building"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId",
+                "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/BuildingId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId/_generatedAttributeSet",
+                    "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/BuildingId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/BuildingId/resolutionGuidance/foreignKeyAttribute/BuildingId",
+                        "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/BuildingId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/BuildingId/resolutionGuidance/foreignKeyAttribute/BuildingId",
                         "contents": [
-                          "SustainabilityIndicators/hasAttributes/BuildingId"
+                          "SustainabilityIndicator/hasAttributes/BuildingId"
                         ]
                       }
                     ]
@@ -87,85 +87,85 @@
           {
             "type": "attributeDefinition",
             "name": "Category",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Category",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/Category",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/Category"
+              "SustainabilityIndicator/hasAttributes/Category"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Type",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Type",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/Type",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/Type"
+              "SustainabilityIndicator/hasAttributes/Type"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "SubType",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/SubType",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/SubType",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/SubType"
+              "SustainabilityIndicator/hasAttributes/SubType"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Source",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Source",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/Source",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/Source"
+              "SustainabilityIndicator/hasAttributes/Source"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "ReferenceArea",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/ReferenceArea",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/ReferenceArea",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/ReferenceArea"
+              "SustainabilityIndicator/hasAttributes/ReferenceArea"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "ReportingType",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/ReportingType",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/ReportingType",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/ReportingType"
+              "SustainabilityIndicator/hasAttributes/ReportingType"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "BaseYear",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/BaseYear",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/BaseYear",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/BaseYear"
+              "SustainabilityIndicator/hasAttributes/BaseYear"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Value",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
             "definition": "resolvedFrom/Value",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "Value",
-                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Value",
+                "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Value",
                 "definition": "resolvedFrom/Value",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "Value",
-                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Value/Value",
+                    "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Value/Value",
                     "definition": "resolvedFrom/Value/members/Value",
                     "contents": [
-                      "SustainabilityIndicators/hasAttributes/Value"
+                      "SustainabilityIndicator/hasAttributes/Value"
                     ]
                   }
                 ]
@@ -174,50 +174,41 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "EmissionFactorScenario",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/EmissionFactorScenario",
-            "contents": [
-              "SustainabilityIndicators/hasAttributes/EmissionFactorScenario"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "Unit",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
-            "definition": "resolvedFrom/SustainabilityIndicators/hasAttributes/Unit",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
+            "definition": "resolvedFrom/SustainabilityIndicator/hasAttributes/Unit",
             "contents": [
-              "SustainabilityIndicators/hasAttributes/Unit"
+              "SustainabilityIndicator/hasAttributes/Unit"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "ValidityInfo",
-            "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators",
+            "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator",
             "definition": "resolvedFrom/ValidityInfo",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "ValidityInfo",
-                "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo",
+                "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ValidityInfo",
                 "definition": "resolvedFrom/ValidityInfo",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "ValidFrom",
-                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo",
+                    "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ValidityInfo/ValidityInfo",
                     "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
                     "contents": [
-                      "SustainabilityIndicators/hasAttributes/ValidFrom"
+                      "SustainabilityIndicator/hasAttributes/ValidFrom"
                     ]
                   },
                   {
                     "type": "attributeDefinition",
                     "name": "ValidUntil",
-                    "parent": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo",
+                    "parent": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ValidityInfo/ValidityInfo",
                     "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
                     "contents": [
-                      "SustainabilityIndicators/hasAttributes/ValidUntil"
+                      "SustainabilityIndicator/hasAttributes/ValidUntil"
                     ]
                   }
                 ]
@@ -228,14 +219,14 @@
       },
       "hasAttributes": [
         {
-          "name": "SustainabilityIndicatorsId",
+          "name": "SustainabilityIndicatorId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array",
             "is.dataFormat.guid"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/SustainabilityIndicatorsId",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/SustainabilityIndicatorId",
           "isPrimaryKey": true,
           "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
@@ -264,7 +255,7 @@
               ]
             }
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BuildingId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/BuildingId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Identifier of building",
           "maximumLength": 50
@@ -277,7 +268,7 @@
             "is.dataFormat.array",
             "means.category"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Category",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Category",
           "dataFormat": "String",
           "description": "Overall category of sustainability indicator e.g. energy, greenhouse gas emissions or costs",
           "maximumLength": 50,
@@ -316,7 +307,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Type",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Type",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Type of sustainability indicator e.g. absolute or intensity figures or stranding",
@@ -362,7 +353,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/SubType",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/SubType",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Subtype of sustainability indicator e.g. net-energy or  emission scope",
@@ -444,7 +435,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Source",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Source",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Operational source of energy or emission figures e.g. electricity or water",
@@ -532,7 +523,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ReferenceArea",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ReferenceArea",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Reference area of building used as denominator in intensity calculation",
@@ -560,7 +551,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ReportingType",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ReportingType",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Approach of reporting emissions e.g. from 'green electricity consumption': Market-based or location-based",
@@ -595,7 +586,7 @@
               ]
             }
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/BaseYear",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/BaseYear",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Base year of values projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). In case no exact date is used please use xxxx-01-01 00:00:00."
@@ -605,23 +596,10 @@
           "appliedTraits": [
             "is.dataFormat.floatingPoint"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Value/Value/Value",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Value/Value/Value",
           "isNullable": true,
           "dataFormat": "Float",
           "description": "Value of entity."
-        },
-        {
-          "name": "EmissionFactorScenario",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/EmissionFactorScenario",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "User specific emission factor scenario",
-          "maximumLength": 50
         },
         {
           "name": "Unit",
@@ -630,7 +608,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/Unit",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Unit",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Unit of sustainability indicator value",
@@ -690,7 +668,7 @@
               ]
             }
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo/ValidFrom",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ValidityInfo/ValidityInfo/ValidFrom",
           "dataFormat": "DateTime",
           "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
@@ -709,12 +687,12 @@
               ]
             }
           ],
-          "attributeContext": "SustainabilityIndicators/attributeContext/SustainabilityIndicators/ValidityInfo/ValidityInfo/ValidUntil",
+          "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/ValidityInfo/ValidityInfo/ValidUntil",
           "dataFormat": "DateTime",
           "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         }
       ],
-      "displayName": "SustainabilityIndicators",
+      "displayName": "SustainabilityIndicator",
       "description": "Sustainability-related information on building-level: energy consumption, net energy demand, carbon emissions (total, separated in emissions scopes, market- and location-based, alignment with targets, excess emissions, carbon costs and penalties)",
       "version": "4.3"
     }

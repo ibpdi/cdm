@@ -10,18 +10,18 @@
   ],
   "definitions": [
     {
-      "entityName": "GhgEmissions",
+      "entityName": "GhgEmission",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "GhgEmissionsId",
+          "name": "GhgEmissionId",
           "purpose": "identifiedBy",
           "dataType": "guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
           "maximumLength": 36
         },
         {
-          "explanation": "fk OperationalMeasurement. to GhgEmissions.",
+          "explanation": "fk OperationalMeasurement. to GhgEmission.",
           "entity": {
             "entityReference": "OperationalMeasurement",
             "appliedTraits": [
@@ -314,27 +314,21 @@
                       ],
                       [
                         "en",
-                        "Water discharge",
-                        "Water discharge",
+                        "Water consumption (unspecified)",
+                        "Water consumption (unspecified)",
                         "18"
                       ],
                       [
                         "en",
-                        "Water consumption (unspecified)",
-                        "Water consumption (unspecified)",
+                        "Recyclable or reusable waste",
+                        "Recyclable or reusable waste",
                         "19"
                       ],
                       [
                         "en",
-                        "Recyclable or reusable waste",
-                        "Recyclable or reusable waste",
+                        "Non-recyclable waste (to be burned)",
+                        "Non-recyclable waste (to be burned)",
                         "20"
-                      ],
-                      [
-                        "en",
-                        "Non-recyclable waste (to be burned)",
-                        "Non-recyclable waste (to be burned)",
-                        "21"
                       ],
                       [
                         "en",
@@ -346,295 +340,289 @@
                         "en",
                         "Hazardous waste",
                         "Hazardous waste",
+                        "22"
+                      ],
+                      [
+                        "en",
+                        "Waste (unspecified)",
+                        "Waste (unspecified)",
                         "23"
                       ],
                       [
                         "en",
-                        "Waste (unspecified)",
-                        "Waste (unspecified)",
+                        "Electricity from grid (normal contract)",
+                        "Electricity from grid (normal contract)",
                         "24"
                       ],
                       [
                         "en",
-                        "Electricity from grid (normal contract)",
-                        "Electricity from grid (normal contract)",
+                        "Carbon dioxide (CO2)",
+                        "Carbon dioxide (CO2)",
                         "25"
                       ],
                       [
                         "en",
-                        "Carbon dioxide (CO2)",
-                        "Carbon dioxide (CO2)",
+                        "Methane (CH4)",
+                        "Methane (CH4)",
                         "26"
                       ],
                       [
                         "en",
-                        "Methane (CH4)",
-                        "Methane (CH4)",
+                        "Nitrous oxide (N20)",
+                        "Nitrous oxide (N20)",
                         "27"
                       ],
                       [
                         "en",
-                        "Nitrous oxide (N20)",
-                        "Nitrous oxide (N20)",
+                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
                         "28"
                       ],
                       [
                         "en",
-                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
-                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
                         "29"
                       ],
                       [
                         "en",
-                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
-                        "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
+                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
                         "30"
                       ],
                       [
                         "en",
-                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
-                        "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
+                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
                         "31"
                       ],
                       [
                         "en",
-                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
-                        "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
+                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
                         "32"
                       ],
                       [
                         "en",
-                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
-                        "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
+                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
                         "33"
                       ],
                       [
                         "en",
-                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
-                        "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
+                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
                         "34"
                       ],
                       [
                         "en",
-                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
-                        "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
+                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
                         "35"
                       ],
                       [
                         "en",
-                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
-                        "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
+                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
                         "36"
                       ],
                       [
                         "en",
-                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
-                        "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
+                        "R-10 | Carbon tetrachloride (CCl4)",
+                        "R-10 | Carbon tetrachloride (CCl4)",
                         "37"
                       ],
                       [
                         "en",
-                        "R-10 | Carbon tetrachloride (CCl4)",
-                        "R-10 | Carbon tetrachloride (CCl4)",
+                        "Bromomethane | Methyl bromide (CH3Br)",
+                        "Bromomethane | Methyl bromide (CH3Br)",
                         "38"
                       ],
                       [
                         "en",
-                        "Bromomethane | Methyl bromide (CH3Br)",
-                        "Bromomethane | Methyl bromide (CH3Br)",
+                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
                         "39"
                       ],
                       [
                         "en",
-                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
-                        "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
+                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
                         "40"
                       ],
                       [
                         "en",
-                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
-                        "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
+                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
                         "41"
                       ],
                       [
                         "en",
-                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
-                        "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
+                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
                         "42"
                       ],
                       [
                         "en",
-                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
-                        "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
+                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
                         "43"
                       ],
                       [
                         "en",
-                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
-                        "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
+                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
                         "44"
                       ],
                       [
                         "en",
-                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
-                        "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
+                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
                         "45"
                       ],
                       [
                         "en",
-                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
-                        "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
+                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
                         "46"
                       ],
                       [
                         "en",
-                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
-                        "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
+                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
                         "47"
                       ],
                       [
                         "en",
-                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
-                        "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
+                        "R-23 | HFC-23 | ",
+                        "R-23 | HFC-23 | ",
                         "48"
                       ],
                       [
                         "en",
-                        "R-23 | HFC-23 | ",
-                        "R-23 | HFC-23 | ",
+                        "R-32 | HFC-32 | ",
+                        "R-32 | HFC-32 | ",
                         "49"
                       ],
                       [
                         "en",
-                        "R-32 | HFC-32 | ",
-                        "R-32 | HFC-32 | ",
+                        "R-41 | HFC-41 | ",
+                        "R-41 | HFC-41 | ",
                         "50"
                       ],
                       [
                         "en",
-                        "R-41 | HFC-41 | ",
-                        "R-41 | HFC-41 | ",
+                        "R-125 | HFC-125 | ",
+                        "R-125 | HFC-125 | ",
                         "51"
                       ],
                       [
                         "en",
-                        "R-125 | HFC-125 | ",
-                        "R-125 | HFC-125 | ",
+                        "R-134 | HFC-134 | ",
+                        "R-134 | HFC-134 | ",
                         "52"
                       ],
                       [
                         "en",
-                        "R-134 | HFC-134 | ",
-                        "R-134 | HFC-134 | ",
+                        "R-134a | HFC-134a | ",
+                        "R-134a | HFC-134a | ",
                         "53"
                       ],
                       [
                         "en",
-                        "R-134a | HFC-134a | ",
-                        "R-134a | HFC-134a | ",
+                        "R-143 | HFC-143 | ",
+                        "R-143 | HFC-143 | ",
                         "54"
                       ],
                       [
                         "en",
-                        "R-143 | HFC-143 | ",
-                        "R-143 | HFC-143 | ",
+                        "R-143a | HFC-143a | ",
+                        "R-143a | HFC-143a | ",
                         "55"
                       ],
                       [
                         "en",
-                        "R-143a | HFC-143a | ",
-                        "R-143a | HFC-143a | ",
+                        "R-152 | HFC-152 | ",
+                        "R-152 | HFC-152 | ",
                         "56"
                       ],
                       [
                         "en",
-                        "R-152 | HFC-152 | ",
-                        "R-152 | HFC-152 | ",
+                        "R-152a | HFC-152a | ",
+                        "R-152a | HFC-152a | ",
                         "57"
                       ],
                       [
                         "en",
-                        "R-152a | HFC-152a | ",
-                        "R-152a | HFC-152a | ",
+                        "R-161 | HFC-161 | ",
+                        "R-161 | HFC-161 | ",
                         "58"
                       ],
                       [
                         "en",
-                        "R-161 | HFC-161 | ",
-                        "R-161 | HFC-161 | ",
+                        "R-227ea | HFC-227ea | ",
+                        "R-227ea | HFC-227ea | ",
                         "59"
                       ],
                       [
                         "en",
-                        "R-227ea | HFC-227ea | ",
-                        "R-227ea | HFC-227ea | ",
+                        "R-236cb | HFC-236cb | ",
+                        "R-236cb | HFC-236cb | ",
                         "60"
                       ],
                       [
                         "en",
-                        "R-236cb | HFC-236cb | ",
-                        "R-236cb | HFC-236cb | ",
+                        "R-236ea | HFC-236ea | ",
+                        "R-236ea | HFC-236ea | ",
                         "61"
                       ],
                       [
                         "en",
-                        "R-236ea | HFC-236ea | ",
-                        "R-236ea | HFC-236ea | ",
+                        "R-236fa | HFC-236fa | ",
+                        "R-236fa | HFC-236fa | ",
                         "62"
                       ],
                       [
                         "en",
-                        "R-236fa | HFC-236fa | ",
-                        "R-236fa | HFC-236fa | ",
+                        "R-245ca | HFC-245ca | ",
+                        "R-245ca | HFC-245ca | ",
                         "63"
                       ],
                       [
                         "en",
-                        "R-245ca | HFC-245ca | ",
-                        "R-245ca | HFC-245ca | ",
+                        "R-245fa | HFC-245fa | ",
+                        "R-245fa | HFC-245fa | ",
                         "64"
                       ],
                       [
                         "en",
-                        "R-245fa | HFC-245fa | ",
-                        "R-245fa | HFC-245fa | ",
+                        "R-365mfc | HFC-365mfc | ",
+                        "R-365mfc | HFC-365mfc | ",
                         "65"
                       ],
                       [
                         "en",
-                        "R-365mfc | HFC-365mfc | ",
-                        "R-365mfc | HFC-365mfc | ",
+                        "R-43-10mee | HFC-43-10mee | ",
+                        "R-43-10mee | HFC-43-10mee | ",
                         "66"
                       ],
                       [
                         "en",
-                        "R-43-10mee | HFC-43-10mee | ",
-                        "R-43-10mee | HFC-43-10mee | ",
+                        "Sulfur hexafluoride (SF6)",
+                        "Sulfur hexafluoride (SF6)",
                         "67"
                       ],
                       [
                         "en",
-                        "Sulfur hexafluoride (SF6)",
-                        "Sulfur hexafluoride (SF6)",
+                        "Nitrogen trifluoride (NF3)",
+                        "Nitrogen trifluoride (NF3)",
                         "68"
                       ],
                       [
                         "en",
-                        "Nitrogen trifluoride (NF3)",
-                        "Nitrogen trifluoride (NF3)",
+                        "Non-hazardous waste",
+                        "Non-hazardous waste",
                         "69"
-                      ],
-                      [
-                        "en",
-                        "Water supply",
-                        "Water supply",
-                        "70"
-                      ],
-                      [
-                        "en",
-                        "Non-hazardous waste",
-                        "Non-hazardous waste",
-                        "71"
                       ]
                     ]
                   }
@@ -647,7 +635,7 @@
           "valueConstrainedToList": true
         },
         {
-          "name": "LCA",
+          "name": "LifeCycleAssessment",
           "purpose": "hasA",
           "dataType": "string",
           "appliedTraits": [
@@ -773,16 +761,6 @@
           "valueConstrainedToList": true
         },
         {
-          "name": "ProjectionBaseYear",
-          "purpose": "hasA",
-          "dataType": "dateTime",
-          "isNullable": true,
-          "description": "Base year of emissions projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00.",
-          "appliedTraits": [
-            "is.formatted.dateTime"
-          ]
-        },
-        {
           "attributeGroupReference": "ValidityInfo"
         },
         {
@@ -817,14 +795,6 @@
           "description": "Unit of emission value: kgCO2e",
           "maximumLength": 50,
           "valueConstrainedToList": true
-        },
-        {
-          "name": "EmissionFactorScenario",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "User specific Emission Factor Scenario (BM default can be used)",
-          "maximumLength": 50
         },
         {
           "name": "Accuracy",
@@ -1018,7 +988,7 @@
           "valueConstrainedToList": true
         }
       ],
-      "displayName": "GhgEmissions",
+      "displayName": "GhgEmission",
       "description": "Greenhouse gas (Ghg) emissions (in CO2e) corresponding to individual operational measurements."
     }
   ]

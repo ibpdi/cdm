@@ -29,6 +29,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "EmissionFactorOperationalMeasurement",
+      "entityPath": "EmissionFactorOperationalMeasurement.cdm.json/EmissionFactorOperationalMeasurement"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "EmissionFactorRole",
       "entityPath": "EmissionFactorRole.cdm.json/EmissionFactorRole"
     },
@@ -39,18 +44,23 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "GhgEmissions",
-      "entityPath": "GhgEmissions.cdm.json/GhgEmissions"
+      "entityName": "GhgEmission",
+      "entityPath": "GhgEmission.cdm.json/GhgEmission"
     },
     {
       "type": "LocalEntity",
-      "entityName": "GhgEmissionsBuilding",
-      "entityPath": "GhgEmissionsBuilding.cdm.json/GhgEmissionsBuilding"
+      "entityName": "GhgEmissionBuilding",
+      "entityPath": "GhgEmissionBuilding.cdm.json/GhgEmissionBuilding"
     },
     {
       "type": "LocalEntity",
-      "entityName": "GhgEmissionsSite",
-      "entityPath": "GhgEmissionsSite.cdm.json/GhgEmissionsSite"
+      "entityName": "GhgEmissionEmissionFactor",
+      "entityPath": "GhgEmissionEmissionFactor.cdm.json/GhgEmissionEmissionFactor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "GhgEmissionSite",
+      "entityPath": "GhgEmissionSite.cdm.json/GhgEmissionSite"
     },
     {
       "type": "LocalEntity",
@@ -74,6 +84,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "OperationalMeasurementRole",
+      "entityPath": "OperationalMeasurementRole.cdm.json/OperationalMeasurementRole"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "OperationalMeasurementSite",
       "entityPath": "OperationalMeasurementSite.cdm.json/OperationalMeasurementSite"
     },
@@ -89,8 +104,13 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "SustainabilityIndicators",
-      "entityPath": "SustainabilityIndicators.cdm.json/SustainabilityIndicators"
+      "entityName": "SustainabilityIndicator",
+      "entityPath": "SustainabilityIndicator.cdm.json/SustainabilityIndicator"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SustainabilityIndicatorEmissionFactor",
+      "entityPath": "SustainabilityIndicatorEmissionFactor.cdm.json/SustainabilityIndicatorEmissionFactor"
     }
   ],
   "relationships": [
@@ -123,13 +143,21 @@
       ]
     },
     {
-      "fromEntity": "EmissionFactor.cdm.json/EmissionFactor",
-      "fromEntityAttribute": "OperationalMeasurementId",
-      "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
-      "toEntityAttribute": "OperationalMeasurementId"
+      "fromEntity": "EmissionFactorBuilding.cdm.json/EmissionFactorBuilding",
+      "fromEntityAttribute": "EmissionFactorId",
+      "toEntity": "EmissionFactor.cdm.json/EmissionFactor",
+      "toEntityAttribute": "EmissionFactorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
     },
     {
-      "fromEntity": "EmissionFactorBuilding.cdm.json/EmissionFactorBuilding",
+      "fromEntity": "EmissionFactorOperationalMeasurement.cdm.json/EmissionFactorOperationalMeasurement",
       "fromEntityAttribute": "EmissionFactorId",
       "toEntity": "EmissionFactor.cdm.json/EmissionFactor",
       "toEntityAttribute": "EmissionFactorId",
@@ -171,16 +199,10 @@
       ]
     },
     {
-      "fromEntity": "GhgEmissions.cdm.json/GhgEmissions",
-      "fromEntityAttribute": "OperationalMeasurementId",
-      "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
-      "toEntityAttribute": "OperationalMeasurementId"
-    },
-    {
-      "fromEntity": "GhgEmissionsBuilding.cdm.json/GhgEmissionsBuilding",
-      "fromEntityAttribute": "GhgEmissionsId",
-      "toEntity": "GhgEmissions.cdm.json/GhgEmissions",
-      "toEntityAttribute": "GhgEmissionsId",
+      "fromEntity": "GhgEmissionEmissionFactor.cdm.json/GhgEmissionEmissionFactor",
+      "fromEntityAttribute": "EmissionFactorId",
+      "toEntity": "EmissionFactor.cdm.json/EmissionFactor",
+      "toEntityAttribute": "EmissionFactorId",
       "exhibitsTraits": [
         {
           "traitReference": "is.identifiedBy",
@@ -191,10 +213,72 @@
       ]
     },
     {
-      "fromEntity": "GhgEmissionsSite.cdm.json/GhgEmissionsSite",
-      "fromEntityAttribute": "GhgEmissionsId",
-      "toEntity": "GhgEmissions.cdm.json/GhgEmissions",
-      "toEntityAttribute": "GhgEmissionsId",
+      "fromEntity": "SustainabilityIndicatorEmissionFactor.cdm.json/SustainabilityIndicatorEmissionFactor",
+      "fromEntityAttribute": "EmissionFactorId",
+      "toEntity": "EmissionFactor.cdm.json/EmissionFactor",
+      "toEntityAttribute": "EmissionFactorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "EmissionFactorOperationalMeasurement.cdm.json/EmissionFactorOperationalMeasurement",
+      "fromEntityAttribute": "OperationalMeasurementId",
+      "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
+      "toEntityAttribute": "OperationalMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "GhgEmission.cdm.json/GhgEmission",
+      "fromEntityAttribute": "OperationalMeasurementId",
+      "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
+      "toEntityAttribute": "OperationalMeasurementId"
+    },
+    {
+      "fromEntity": "GhgEmissionBuilding.cdm.json/GhgEmissionBuilding",
+      "fromEntityAttribute": "GhgEmissionId",
+      "toEntity": "GhgEmission.cdm.json/GhgEmission",
+      "toEntityAttribute": "GhgEmissionId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "GhgEmissionEmissionFactor.cdm.json/GhgEmissionEmissionFactor",
+      "fromEntityAttribute": "GhgEmissionId",
+      "toEntity": "GhgEmission.cdm.json/GhgEmission",
+      "toEntityAttribute": "GhgEmissionId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "GhgEmissionSite.cdm.json/GhgEmissionSite",
+      "fromEntityAttribute": "GhgEmissionId",
+      "toEntity": "GhgEmission.cdm.json/GhgEmission",
+      "toEntityAttribute": "GhgEmissionId",
       "exhibitsTraits": [
         {
           "traitReference": "is.identifiedBy",
@@ -247,6 +331,20 @@
       ]
     },
     {
+      "fromEntity": "OperationalMeasurementRole.cdm.json/OperationalMeasurementRole",
+      "fromEntityAttribute": "OperationalMeasurementId",
+      "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
+      "toEntityAttribute": "OperationalMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
       "fromEntity": "OperationalMeasurementSite.cdm.json/OperationalMeasurementSite",
       "fromEntityAttribute": "OperationalMeasurementId",
       "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
@@ -279,6 +377,20 @@
       "fromEntityAttribute": "OperationalMeasurementId",
       "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
       "toEntityAttribute": "OperationalMeasurementId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SustainabilityIndicatorEmissionFactor.cdm.json/SustainabilityIndicatorEmissionFactor",
+      "fromEntityAttribute": "SustainabilityIndicatorId",
+      "toEntity": "SustainabilityIndicator.cdm.json/SustainabilityIndicator",
+      "toEntityAttribute": "SustainabilityIndicatorId",
       "exhibitsTraits": [
         {
           "traitReference": "is.identifiedBy",

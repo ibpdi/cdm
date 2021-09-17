@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "/core/energyAndResources/GhgEmissionsBuilding.cdm.json",
+      "corpusPath": "/core/energyAndResources/GhgEmissionEmissionFactor.cdm.json",
       "moniker": "resolvedFrom"
     }
   ],
   "definitions": [
     {
-      "entityName": "GhgEmissionsBuilding",
+      "entityName": "GhgEmissionEmissionFactor",
       "exhibitsTraits": [
         {
           "traitReference": "has.entitySchemaAbstractionLevel",
@@ -22,51 +22,51 @@
       ],
       "attributeContext": {
         "type": "entity",
-        "name": "GhgEmissionsBuilding",
-        "definition": "resolvedFrom/GhgEmissionsBuilding",
+        "name": "GhgEmissionEmissionFactor",
+        "definition": "resolvedFrom/GhgEmissionEmissionFactor",
         "contents": [
           {
             "type": "entityReferenceExtends",
             "name": "extends",
-            "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding",
+            "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor",
             "contents": [
               {
                 "type": "entity",
                 "name": "CdmEntity",
-                "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/extends",
+                "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/extends",
                 "definition": "resolvedFrom/CdmEntity"
               }
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "GhgEmissionsId",
-            "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding",
-            "definition": "resolvedFrom/GhgEmissionsBuilding/hasAttributes/GhgEmissionsId",
+            "name": "GhgEmissionId",
+            "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor",
+            "definition": "resolvedFrom/GhgEmissionEmissionFactor/hasAttributes/GhgEmissionId",
             "contents": [
               {
                 "type": "entity",
-                "name": "GhgEmissions",
-                "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/GhgEmissionsId",
-                "definition": "resolvedFrom/GhgEmissions"
+                "name": "GhgEmission",
+                "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/GhgEmissionId",
+                "definition": "resolvedFrom/GhgEmission"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/GhgEmissionsId",
+                "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/GhgEmissionId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/GhgEmissionsId/_generatedAttributeSet",
+                    "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/GhgEmissionId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/GhgEmissionsId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/GhgEmissionsBuilding/hasAttributes/GhgEmissionsId/resolutionGuidance/foreignKeyAttribute/GhgEmissionsId",
+                        "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/GhgEmissionId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GhgEmissionEmissionFactor/hasAttributes/GhgEmissionId/resolutionGuidance/foreignKeyAttribute/GhgEmissionId",
                         "contents": [
-                          "GhgEmissionsBuilding/hasAttributes/GhgEmissionsId"
+                          "GhgEmissionEmissionFactor/hasAttributes/GhgEmissionId"
                         ]
                       }
                     ]
@@ -77,33 +77,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "BuildingId",
-            "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding",
-            "definition": "resolvedFrom/GhgEmissionsBuilding/hasAttributes/BuildingId",
+            "name": "EmissionFactorId",
+            "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor",
+            "definition": "resolvedFrom/GhgEmissionEmissionFactor/hasAttributes/EmissionFactorId",
             "contents": [
               {
                 "type": "entity",
-                "name": "Building",
-                "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/BuildingId",
-                "definition": "resolvedFrom/Building"
+                "name": "EmissionFactor",
+                "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/EmissionFactorId",
+                "definition": "resolvedFrom/EmissionFactor"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/BuildingId",
+                "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/EmissionFactorId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/BuildingId/_generatedAttributeSet",
+                    "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/EmissionFactorId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/BuildingId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/GhgEmissionsBuilding/hasAttributes/BuildingId/resolutionGuidance/foreignKeyAttribute/BuildingId",
+                        "parent": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GhgEmissionEmissionFactor/hasAttributes/EmissionFactorId/resolutionGuidance/foreignKeyAttribute/EmissionFactorId",
                         "contents": [
-                          "GhgEmissionsBuilding/hasAttributes/BuildingId"
+                          "GhgEmissionEmissionFactor/hasAttributes/EmissionFactorId"
                         ]
                       }
                     ]
@@ -116,7 +116,7 @@
       },
       "hasAttributes": [
         {
-          "name": "GhgEmissionsId",
+          "name": "GhgEmissionId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -130,8 +130,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/energyAndResources/GhgEmissions.cdm.json/GhgEmissions",
-                        "GhgEmissionsId"
+                        "/core/energyAndResources/GhgEmission.cdm.json/GhgEmission",
+                        "GhgEmissionId"
                       ]
                     ]
                   }
@@ -139,18 +139,19 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/GhgEmissionsId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/GhgEmissionId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "isPrimaryKey": true,
           "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 36
         },
         {
-          "name": "BuildingId",
+          "name": "EmissionFactorId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array",
+            "is.dataFormat.guid",
             {
               "traitReference": "is.linkedEntity.identifier",
               "arguments": [
@@ -159,8 +160,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/Building.cdm.json/Building",
-                        "BuildingId"
+                        "/core/energyAndResources/EmissionFactor.cdm.json/EmissionFactor",
+                        "EmissionFactorId"
                       ]
                     ]
                   }
@@ -168,15 +169,15 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmissionsBuilding/attributeContext/GhgEmissionsBuilding/BuildingId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "GhgEmissionEmissionFactor/attributeContext/GhgEmissionEmissionFactor/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "isPrimaryKey": true,
-          "dataFormat": "String",
+          "dataFormat": "Guid",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-          "maximumLength": 50
+          "maximumLength": 36
         }
       ],
-      "displayName": "GhgEmissionsBuilding",
-      "description": "Linking entity between GhgEmissions and Building",
+      "displayName": "GhgEmissionEmissionFactor",
+      "description": "Linking entity between GhgEmission and EmissionFactor",
       "version": "4.3"
     }
   ]

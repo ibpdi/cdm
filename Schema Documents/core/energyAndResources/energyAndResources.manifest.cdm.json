@@ -37,6 +37,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "EmissionFactorOperationalMeasurement",
+      "entityPath": "EmissionFactorOperationalMeasurement.cdm.json/EmissionFactorOperationalMeasurement",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "EmissionFactorRole",
       "entityPath": "EmissionFactorRole.cdm.json/EmissionFactorRole",
       "dataPartitionPatterns": []
@@ -49,20 +55,26 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "GhgEmissions",
-      "entityPath": "GhgEmissions.cdm.json/GhgEmissions",
+      "entityName": "GhgEmission",
+      "entityPath": "GhgEmission.cdm.json/GhgEmission",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "GhgEmissionsBuilding",
-      "entityPath": "GhgEmissionsBuilding.cdm.json/GhgEmissionsBuilding",
+      "entityName": "GhgEmissionBuilding",
+      "entityPath": "GhgEmissionBuilding.cdm.json/GhgEmissionBuilding",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "GhgEmissionsSite",
-      "entityPath": "GhgEmissionsSite.cdm.json/GhgEmissionsSite",
+      "entityName": "GhgEmissionEmissionFactor",
+      "entityPath": "GhgEmissionEmissionFactor.cdm.json/GhgEmissionEmissionFactor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "GhgEmissionSite",
+      "entityPath": "GhgEmissionSite.cdm.json/GhgEmissionSite",
       "dataPartitionPatterns": []
     },
     {
@@ -91,6 +103,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "OperationalMeasurementRole",
+      "entityPath": "OperationalMeasurementRole.cdm.json/OperationalMeasurementRole",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "OperationalMeasurementSite",
       "entityPath": "OperationalMeasurementSite.cdm.json/OperationalMeasurementSite",
       "dataPartitionPatterns": []
@@ -109,8 +127,14 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "SustainabilityIndicators",
-      "entityPath": "SustainabilityIndicators.cdm.json/SustainabilityIndicators",
+      "entityName": "SustainabilityIndicator",
+      "entityPath": "SustainabilityIndicator.cdm.json/SustainabilityIndicator",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SustainabilityIndicatorEmissionFactor",
+      "entityPath": "SustainabilityIndicatorEmissionFactor.cdm.json/SustainabilityIndicatorEmissionFactor",
       "dataPartitionPatterns": []
     }
   ]

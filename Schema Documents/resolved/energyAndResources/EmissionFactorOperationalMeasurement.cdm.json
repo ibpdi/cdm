@@ -1,0 +1,184 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/EmissionFactorOperationalMeasurement.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "EmissionFactorOperationalMeasurement",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "EmissionFactorOperationalMeasurement",
+        "definition": "resolvedFrom/EmissionFactorOperationalMeasurement",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmissionFactorId",
+            "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement",
+            "definition": "resolvedFrom/EmissionFactorOperationalMeasurement/hasAttributes/EmissionFactorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "EmissionFactor",
+                "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/EmissionFactorId",
+                "definition": "resolvedFrom/EmissionFactor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/EmissionFactorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/EmissionFactorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/EmissionFactorOperationalMeasurement/hasAttributes/EmissionFactorId/resolutionGuidance/foreignKeyAttribute/EmissionFactorId",
+                        "contents": [
+                          "EmissionFactorOperationalMeasurement/hasAttributes/EmissionFactorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement",
+            "definition": "resolvedFrom/EmissionFactorOperationalMeasurement/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "OperationalMeasurement",
+                "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/OperationalMeasurementId",
+                "definition": "resolvedFrom/OperationalMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/OperationalMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/OperationalMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/EmissionFactorOperationalMeasurement/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "contents": [
+                          "EmissionFactorOperationalMeasurement/hasAttributes/OperationalMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "EmissionFactorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/EmissionFactor.cdm.json/EmissionFactor",
+                        "EmissionFactorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 36
+        },
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
+                        "OperationalMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "EmissionFactorOperationalMeasurement/attributeContext/EmissionFactorOperationalMeasurement/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 36
+        }
+      ],
+      "displayName": "EmissionFactorOperationalMeasurement",
+      "description": "Linking entity between EmissionFactor and OperationalMeasurement",
+      "version": "4.3"
+    }
+  ]
+}

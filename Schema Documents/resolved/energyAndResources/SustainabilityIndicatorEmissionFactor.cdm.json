@@ -1,0 +1,184 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/SustainabilityIndicatorEmissionFactor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SustainabilityIndicatorEmissionFactor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SustainabilityIndicatorEmissionFactor",
+        "definition": "resolvedFrom/SustainabilityIndicatorEmissionFactor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SustainabilityIndicatorId",
+            "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor",
+            "definition": "resolvedFrom/SustainabilityIndicatorEmissionFactor/hasAttributes/SustainabilityIndicatorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SustainabilityIndicator",
+                "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/SustainabilityIndicatorId",
+                "definition": "resolvedFrom/SustainabilityIndicator"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/SustainabilityIndicatorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/SustainabilityIndicatorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/SustainabilityIndicatorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SustainabilityIndicatorEmissionFactor/hasAttributes/SustainabilityIndicatorId/resolutionGuidance/foreignKeyAttribute/SustainabilityIndicatorId",
+                        "contents": [
+                          "SustainabilityIndicatorEmissionFactor/hasAttributes/SustainabilityIndicatorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmissionFactorId",
+            "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor",
+            "definition": "resolvedFrom/SustainabilityIndicatorEmissionFactor/hasAttributes/EmissionFactorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "EmissionFactor",
+                "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/EmissionFactorId",
+                "definition": "resolvedFrom/EmissionFactor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/EmissionFactorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/EmissionFactorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SustainabilityIndicatorEmissionFactor/hasAttributes/EmissionFactorId/resolutionGuidance/foreignKeyAttribute/EmissionFactorId",
+                        "contents": [
+                          "SustainabilityIndicatorEmissionFactor/hasAttributes/EmissionFactorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SustainabilityIndicatorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/SustainabilityIndicator.cdm.json/SustainabilityIndicator",
+                        "SustainabilityIndicatorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/SustainabilityIndicatorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 36
+        },
+        {
+          "name": "EmissionFactorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/EmissionFactor.cdm.json/EmissionFactor",
+                        "EmissionFactorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SustainabilityIndicatorEmissionFactor/attributeContext/SustainabilityIndicatorEmissionFactor/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 36
+        }
+      ],
+      "displayName": "SustainabilityIndicatorEmissionFactor",
+      "description": "Linking entity between SustainabilityIndicator and EmissionFactor",
+      "version": "4.3"
+    }
+  ]
+}
