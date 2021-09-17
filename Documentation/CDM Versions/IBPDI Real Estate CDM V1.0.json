@@ -1448,7 +1448,7 @@
                         "Heat pump",
                         "Electricity (radiator)"
                     ],
-                    "sample": "Solar Thermal",
+                    "sample": "Solar thermal",
                     "minLength": 1,
                     "maxLength": 50,
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
@@ -4425,20 +4425,21 @@
                 },
                 {
                     "type": "string",
-                    "name": "GCM",
+                    "name": "GlobalCirculationModel",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f8762323-bd2a-11eb-81e7-9735ef069f63",
-                    "description": "Global climate model used",
+                    "description": "Global circulation model used",
                     "minLength": 1,
                     "maxLength": 75,
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
                     "sample": "MPI-M-MPI-ESM-LR",
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {}
                 },
                 {
                     "type": "string",
-                    "name": "RCM",
+                    "name": "RegionalClimateModel",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f8762324-bd2a-11eb-81e7-9735ef069f63",
@@ -4447,11 +4448,12 @@
                     "maxLength": 75,
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
                     "sample": "AWI-HIRHAM5",
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {}
                 },
                 {
                     "type": "string",
-                    "name": "SimV",
+                    "name": "SimulationVersion",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f8762325-bd2a-11eb-81e7-9735ef069f63",
@@ -4459,11 +4461,12 @@
                     "minLength": 1,
                     "maxLength": 75,
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {}
                 },
                 {
                     "type": "string",
-                    "name": "EnsM",
+                    "name": "EnsembleMember",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f8762326-bd2a-11eb-81e7-9735ef069f63",
@@ -4472,7 +4475,8 @@
                     "maxLength": 75,
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
                     "sample": "r1i1p1",
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {}
                 },
                 {
                     "type": "numeric",
@@ -4775,30 +4779,26 @@
                     "childRelationships": [
                         "52cabbf0-d019-11eb-828a-45fbb7fcbc3e",
                         "609ace50-d019-11eb-828a-45fbb7fcbc3e",
-                        "75df9980-d019-11eb-828a-45fbb7fcbc3e"
+                        "75df9980-d019-11eb-828a-45fbb7fcbc3e",
+                        "bd0b7ac0-1788-11ec-a29b-1de31d010040",
+                        "3ef33820-17b1-11ec-a29b-1de31d010040",
+                        "eb7004c0-17b1-11ec-a29b-1de31d010040"
                     ],
                     "foreignField": [],
                     "comments": "[{\"dataType\":\"guid\"}]"
                 },
                 {
                     "type": "string",
-                    "name": "OperationalMeasurementId",
+                    "name": "Name",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "GUID": "f81bce2b-bd2a-11eb-81e7-9735ef069f63",
-                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-                    "minLength": 36,
-                    "maxLength": 36,
-                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
-                    "sample": "271ef573-3521-474a-a3de-08c32b8156d6",
-                    "foreignCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
-                    "foreignField": [
-                        "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
-                        "f7f3acb0-bd2a-11eb-81e7-9735ef069f63"
-                    ],
-                    "relationshipType": "Foreign Key",
-                    "parentRelationship": "6c2a6690-d019-11eb-828a-45fbb7fcbc3e",
-                    "comments": "[{\"dataType\":\"guid\"}]"
+                    "GUID": "f81bce2a-bd2a-11eb-81e7-9735ef069f63",
+                    "description": "User specific emission factor name (this can also be the name of a scenario)",
+                    "minLength": 1,
+                    "maxLength": 200,
+                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
+                    "sample": "BM default",
+                    "foreignField": []
                 },
                 {
                     "type": "string",
@@ -5209,19 +5209,6 @@
                     "sample": "Berlin",
                     "foreignField": [],
                     "description": "Any official settlement including cities, towns, villages, hamlets, localities, etc."
-                },
-                {
-                    "type": "string",
-                    "name": "Scenario",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "f81bce2a-bd2a-11eb-81e7-9735ef069f63",
-                    "description": "User specific emission factor scenario",
-                    "minLength": 1,
-                    "maxLength": 50,
-                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "sample": "BM default",
-                    "foreignField": []
                 }
             ],
             "definitions": {
@@ -5291,6 +5278,78 @@
             "GUID": "f7f385a6-bd2a-11eb-81e7-9735ef069f63",
             "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
             "description": "Linking entity between EmissionFactor and Building"
+        },
+        {
+            "collectionName": "EmissionFactorOperationalMeasurement",
+            "type": "object",
+            "properties": [
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "relationshipType": "Foreign Key",
+                    "GUID": "aa87a450-1788-11ec-a29b-1de31d010040",
+                    "name": "EmissionFactorId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "eb40c43b-8950-47b5-902f-0adac685f19e",
+                    "childRelationships": [],
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                        "f7f3acb1-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "parentRelationship": "bd0b7ac0-1788-11ec-a29b-1de31d010040"
+                },
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "relationshipType": "Foreign Key",
+                    "GUID": "a7dfb5d0-1788-11ec-a29b-1de31d010040",
+                    "name": "OperationalMeasurementId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "childRelationships": [],
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "271ef573-3521-474a-a3de-08c32b8156d6",
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+                        "f7f3acb0-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "parentRelationship": "cc4640b0-1788-11ec-a29b-1de31d010040"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "7e0ac970-1788-11ec-a29b-1de31d010040"
+            },
+            "isActivated": true,
+            "GUID": "7e04fd10-1788-11ec-a29b-1de31d010040",
+            "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
+            "hackoladeMeta": {},
+            "description": "Linking entity between EmissionFactor and OperationalMeasurement"
         },
         {
             "collectionName": "EmissionFactorRole",
@@ -5413,7 +5472,7 @@
         },
         {
             "GUID": "f7f385a3-bd2a-11eb-81e7-9735ef069f63",
-            "collectionName": "GhgEmissions",
+            "collectionName": "GhgEmission",
             "code": "",
             "type": "object",
             "additionalProperties": false,
@@ -5423,7 +5482,7 @@
                     "primaryKey": true,
                     "relationshipType": "",
                     "GUID": "f7f3acb2-bd2a-11eb-81e7-9735ef069f63",
-                    "name": "GhgEmissionsId",
+                    "name": "GhgEmissionId",
                     "code": "",
                     "hackoladeMeta": {},
                     "isActivated": true,
@@ -5435,7 +5494,8 @@
                     "sample": "ba4900a3-8c7c-4966-9cd3-a5889f309c40",
                     "childRelationships": [
                         "32f30800-d019-11eb-828a-45fbb7fcbc3e",
-                        "3f07aec0-d019-11eb-828a-45fbb7fcbc3e"
+                        "3f07aec0-d019-11eb-828a-45fbb7fcbc3e",
+                        "da662420-17b1-11ec-a29b-1de31d010040"
                     ],
                     "foreignField": [],
                     "comments": "[{\"dataType\":\"guid\"}]"
@@ -5557,7 +5617,24 @@
                     "sample": "Waste",
                     "primaryKey": false,
                     "required": true,
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {
+                        "enum": false,
+                        "enums": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false
+                        ],
+                        "exampleItems": [
+                            false,
+                            false,
+                            false,
+                            false,
+                            false
+                        ]
+                    }
                 },
                 {
                     "type": "string",
@@ -5591,7 +5668,6 @@
                         "Ground water (collected on site)",
                         "Rain water (collected on site)",
                         "Reclaimed water",
-                        "Water discharge",
                         "Water consumption (unspecified)",
                         "Recyclable or reusable waste",
                         "Non-recyclable waste (to be burned)",
@@ -5643,7 +5719,6 @@
                         "R-43-10mee | HFC-43-10mee | ",
                         "Sulfur hexafluoride (SF6)",
                         "Nitrogen trifluoride (NF3)",
-                        "Water supply",
                         "Non-hazardous waste"
                     ],
                     "sample": "Solar thermal",
@@ -5806,7 +5881,7 @@
                     "primaryKey": false,
                     "relationshipType": "",
                     "GUID": "f8537ff6-bd2a-11eb-81e7-9735ef069f63",
-                    "name": "LCA",
+                    "name": "LifeCycleAssessment",
                     "code": "",
                     "hackoladeMeta": {},
                     "isActivated": true,
@@ -5834,22 +5909,8 @@
                         "C4",
                         "D"
                     ],
-                    "error": {
-                        "name": false,
-                        "code": false
-                    },
-                    "foreignField": []
-                },
-                {
-                    "type": "string",
-                    "name": "ProjectionBaseYear",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "f8537ff7-bd2a-11eb-81e7-9735ef069f63",
-                    "description": "Base year of emissions projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00.",
-                    "comments": "[{\"dataType\":\"dateTime\"}]",
-                    "format": "date-time",
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {}
                 },
                 {
                     "type": "string",
@@ -5915,23 +5976,6 @@
                         "name": false,
                         "code": false
                     },
-                    "foreignField": []
-                },
-                {
-                    "type": "string",
-                    "name": "EmissionFactorScenario",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "primaryKey": false,
-                    "code": "",
-                    "GUID": "f853a700-bd2a-11eb-81e7-9735ef069f63",
-                    "relationshipType": "",
-                    "description": "User specific Emission Factor Scenario (BM default can be used)",
-                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "minLength": 1,
-                    "required": false,
-                    "maxLength": 50,
-                    "sample": "BM default",
                     "foreignField": []
                 },
                 {
@@ -6053,12 +6097,12 @@
             "description": "Greenhouse gas (Ghg) emissions (in CO2e) corresponding to individual operational measurements."
         },
         {
-            "collectionName": "GhgEmissionsBuilding",
+            "collectionName": "GhgEmissionBuilding",
             "type": "object",
             "properties": [
                 {
                     "type": "string",
-                    "name": "GhgEmissionsId",
+                    "name": "GhgEmissionId",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f9096270-bd2a-11eb-81e7-9735ef069f63",
@@ -6108,15 +6152,87 @@
             "isActivated": true,
             "GUID": "f7f385a9-bd2a-11eb-81e7-9735ef069f63",
             "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
-            "description": "Linking entity between GhgEmissions and Building"
+            "description": "Linking entity between GhgEmission and Building"
         },
         {
-            "collectionName": "GhgEmissionsSite",
+            "collectionName": "GhgEmissionEmissionFactor",
             "type": "object",
             "properties": [
                 {
                     "type": "string",
-                    "name": "GhgEmissionsId",
+                    "primaryKey": true,
+                    "relationshipType": "Foreign Key",
+                    "GUID": "c648c1f0-17b1-11ec-a29b-1de31d010040",
+                    "name": "GhgEmissionId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "ba4900a3-8c7c-4966-9cd3-a5889f309c40",
+                    "childRelationships": [],
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a3-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a3-bd2a-11eb-81e7-9735ef069f63",
+                        "f7f3acb2-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "parentRelationship": "da662420-17b1-11ec-a29b-1de31d010040"
+                },
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "relationshipType": "Foreign Key",
+                    "GUID": "c8a576a0-17b1-11ec-a29b-1de31d010040",
+                    "name": "EmissionFactorId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "eb40c43b-8950-47b5-902f-0adac685f19e",
+                    "childRelationships": [],
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                        "f7f3acb1-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "parentRelationship": "eb7004c0-17b1-11ec-a29b-1de31d010040"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "c3fb0160-17b1-11ec-a29b-1de31d010040"
+            },
+            "isActivated": true,
+            "GUID": "c3f58320-17b1-11ec-a29b-1de31d010040",
+            "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
+            "hackoladeMeta": {},
+            "description": "Linking entity between GhgEmission and EmissionFactor"
+        },
+        {
+            "collectionName": "GhgEmissionSite",
+            "type": "object",
+            "properties": [
+                {
+                    "type": "string",
+                    "name": "GhgEmissionId",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f8e586c0-bd2a-11eb-81e7-9735ef069f63",
@@ -6166,7 +6282,7 @@
             "isActivated": true,
             "GUID": "f7f385a8-bd2a-11eb-81e7-9735ef069f63",
             "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
-            "description": "Linking entity between GhgEmissions and Site"
+            "description": "Linking entity between GhgEmission and Site"
         },
         {
             "GUID": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
@@ -6193,7 +6309,8 @@
                         "1370a000-d019-11eb-828a-45fbb7fcbc3e",
                         "1b9e2180-d019-11eb-828a-45fbb7fcbc3e",
                         "497c6120-d019-11eb-828a-45fbb7fcbc3e",
-                        "6c2a6690-d019-11eb-828a-45fbb7fcbc3e"
+                        "cc4640b0-1788-11ec-a29b-1de31d010040",
+                        "fc396120-1789-11ec-a29b-1de31d010040"
                     ],
                     "description": "Unique identifier either coming from previous system otherwise it needs to be define",
                     "required": true,
@@ -6203,28 +6320,6 @@
                     "sample": "271ef573-3521-474a-a3de-08c32b8156d6",
                     "foreignField": [],
                     "comments": "[{\"dataType\":\"guid\"}]"
-                },
-                {
-                    "type": "string",
-                    "name": "RoleId",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "ded6db90-c53a-11eb-b744-cdec50fb2044",
-                    "minLength": 1,
-                    "maxLength": 50,
-                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "required": true,
-                    "primaryKey": false,
-                    "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-                    "sample": "R-01",
-                    "childRelationships": [],
-                    "foreignCollection": "68f44c60-bf03-11eb-81e7-9735ef069f63",
-                    "foreignField": [
-                        "68f44c60-bf03-11eb-81e7-9735ef069f63",
-                        "70ab3e50-bf03-11eb-81e7-9735ef069f63"
-                    ],
-                    "relationshipType": "Foreign Key",
-                    "parentRelationship": "f01b7b40-c53a-11eb-b744-cdec50fb2044"
                 },
                 {
                     "type": "string",
@@ -6713,7 +6808,7 @@
                     "primaryKey": false,
                     "relationshipType": "",
                     "GUID": "f7f4700a-bd2a-11eb-81e7-9735ef069f63",
-                    "name": "LCA",
+                    "name": "LifeCycleAssessment",
                     "code": "",
                     "hackoladeMeta": {},
                     "isActivated": true,
@@ -6807,59 +6902,14 @@
                 },
                 {
                     "type": "string",
-                    "name": "ProjectionBaseYear",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "f7f4700f-bd2a-11eb-81e7-9735ef069f63",
-                    "comments": "[{\"dataType\":\"dateTime\"}]",
-                    "description": "Base year of operational value projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). If no exact date exists please use xxx-01-01 00:00:00.",
-                    "format": "date-time",
-                    "foreignField": []
-                },
-                {
-                    "type": "string",
-                    "name": "ProjectionBaseId",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "f7f47010-bd2a-11eb-81e7-9735ef069f63",
-                    "comments": "[{\"dataType\":\"guid\"}]",
-                    "description": "Identifier (Guid) of operational value projected into the future",
-                    "minLength": 36,
-                    "maxLength": 36,
-                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
-                    "sample": "271ef573-3521-474a-a3de-08c32b8156d6",
-                    "foreignField": []
-                },
-                {
-                    "type": "string",
-                    "name": "MeterNumber",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "primaryKey": false,
-                    "code": "",
-                    "description": "Name of meter providing value (user-provided)",
-                    "GUID": "f7f47011-bd2a-11eb-81e7-9735ef069f63",
-                    "relationshipType": "",
-                    "minLength": 1,
-                    "maxLength": 200,
-                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "sample": "201-Main Building",
-                    "error": {
-                        "name": false,
-                        "code": false
-                    },
-                    "foreignField": []
-                },
-                {
-                    "type": "string",
-                    "name": "MeterId",
+                    "name": "SensorId",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "primaryKey": false,
                     "code": "",
                     "GUID": "f7f47012-bd2a-11eb-81e7-9735ef069f63",
                     "relationshipType": "",
-                    "description": "Identifier of meter providing value",
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
                     "foreignField": [],
                     "minLength": 1,
                     "maxLength": 50,
@@ -7052,6 +7102,76 @@
             "description": "Linking entity between OperationalMeasurement and Land"
         },
         {
+            "collectionName": "OperationalMeasurementRole",
+            "type": "object",
+            "properties": [
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "relationshipType": "Foreign Key",
+                    "GUID": "f1e86360-1789-11ec-a29b-1de31d010040",
+                    "name": "OperationalMeasurementId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "childRelationships": [],
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "271ef573-3521-474a-a3de-08c32b8156d6",
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+                        "f7f3acb0-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "parentRelationship": "fc396120-1789-11ec-a29b-1de31d010040"
+                },
+                {
+                    "type": "string",
+                    "name": "RoleId",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "f55f61b0-1789-11ec-a29b-1de31d010040",
+                    "minLength": 1,
+                    "maxLength": 50,
+                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
+                    "required": true,
+                    "primaryKey": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                    "sample": "R-01",
+                    "childRelationships": [],
+                    "foreignCollection": "68f44c60-bf03-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "68f44c60-bf03-11eb-81e7-9735ef069f63",
+                        "70ab3e50-bf03-11eb-81e7-9735ef069f63"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "03fa1710-178a-11ec-a29b-1de31d010040"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "e975c290-1789-11ec-a29b-1de31d010040"
+            },
+            "isActivated": true,
+            "GUID": "e9704450-1789-11ec-a29b-1de31d010040",
+            "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
+            "hackoladeMeta": {},
+            "description": "Linking entity between OperationalMeasurement and Role"
+        },
+        {
             "collectionName": "OperationalMeasurementSite",
             "type": "object",
             "properties": [
@@ -7232,12 +7352,12 @@
             "description": "Linking entity between OperationalMeasurement and Unit"
         },
         {
-            "collectionName": "SustainabilityIndicators",
+            "collectionName": "SustainabilityIndicator",
             "type": "object",
             "properties": [
                 {
                     "type": "string",
-                    "name": "SustainabilityIndicatorsId",
+                    "name": "SustainabilityIndicatorId",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "f886c4f0-bd2a-11eb-81e7-9735ef069f63",
@@ -7249,7 +7369,10 @@
                     "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
                     "sample": "8462d997-6fd2-439e-88d0-d3b2e19517c8",
                     "foreignField": [],
-                    "comments": "[{\"dataType\":\"guid\"}]"
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "childRelationships": [
+                        "2df601b0-17b1-11ec-a29b-1de31d010040"
+                    ]
                 },
                 {
                     "type": "string",
@@ -7472,19 +7595,6 @@
                     "maximum": 100000000000000000,
                     "minimum": -100000000000000000,
                     "sample": 546372812.24,
-                    "foreignField": []
-                },
-                {
-                    "type": "string",
-                    "name": "EmissionFactorScenario",
-                    "hackoladeMeta": {},
-                    "isActivated": true,
-                    "GUID": "f8869de8-bd2a-11eb-81e7-9735ef069f63",
-                    "minLength": 1,
-                    "maxLength": 50,
-                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "sample": "BM default",
-                    "description": "User specific emission factor scenario",
                     "foreignField": []
                 },
                 {
@@ -12172,9 +12282,9 @@
                         "8448fd10-bfaf-11eb-81e7-9735ef069f63",
                         "9e35f390-bfaf-11eb-81e7-9735ef069f63",
                         "df883600-bfaf-11eb-81e7-9735ef069f63",
-                        "f01b7b40-c53a-11eb-b744-cdec50fb2044",
                         "340b9a11-c53b-11eb-b744-cdec50fb2044",
-                        "e68248a0-0cb3-11ec-b138-b99bd74af063"
+                        "e68248a0-0cb3-11ec-b138-b99bd74af063",
+                        "03fa1710-178a-11ec-a29b-1de31d010040"
                     ]
                 },
                 {
@@ -12875,6 +12985,76 @@
             "GUID": "523a4f80-bec5-11eb-81e7-9735ef069f63",
             "bucketId": "0805b530-bdee-11eb-81e7-9735ef069f63",
             "description": "Linking entity between TenantCommunication and Role"
+        },
+        {
+            "collectionName": "SustainabilityIndicatorEmissionFactor",
+            "type": "object",
+            "properties": [
+                {
+                    "type": "string",
+                    "name": "SustainabilityIndicatorId",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "252e8a20-17b1-11ec-a29b-1de31d010040",
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "primaryKey": true,
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "8462d997-6fd2-439e-88d0-d3b2e19517c8",
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a5-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a5-bd2a-11eb-81e7-9735ef069f63",
+                        "f886c4f0-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "2df601b0-17b1-11ec-a29b-1de31d010040"
+                },
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "relationshipType": "Foreign Key",
+                    "GUID": "26ccf7e0-17b1-11ec-a29b-1de31d010040",
+                    "name": "EmissionFactorId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+                    "required": true,
+                    "minLength": 36,
+                    "maxLength": 36,
+                    "pattern": "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$",
+                    "sample": "eb40c43b-8950-47b5-902f-0adac685f19e",
+                    "childRelationships": [],
+                    "comments": "[{\"dataType\":\"guid\"}]",
+                    "foreignCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                    "error": {
+                        "name": false,
+                        "code": false
+                    },
+                    "foreignField": [
+                        "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                        "f7f3acb1-bd2a-11eb-81e7-9735ef069f63"
+                    ],
+                    "parentRelationship": "3ef33820-17b1-11ec-a29b-1de31d010040"
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "0cecab90-17b1-11ec-a29b-1de31d010040"
+            },
+            "isActivated": true,
+            "GUID": "0ce75460-17b1-11ec-a29b-1de31d010040",
+            "bucketId": "f7f2c250-bd2a-11eb-81e7-9735ef069f63",
+            "hackoladeMeta": {},
+            "description": "Linking entity between SustainabilityIndicator and EmissionFactor"
         }
     ],
     "buckets": [
@@ -12954,7 +13134,11 @@
                 "f7f385b0-bd2a-11eb-81e7-9735ef069f63",
                 "f7f385b1-bd2a-11eb-81e7-9735ef069f63",
                 "f7f385b2-bd2a-11eb-81e7-9735ef069f63",
-                "0a0b1730-c767-11eb-b744-cdec50fb2044"
+                "0a0b1730-c767-11eb-b744-cdec50fb2044",
+                "7e04fd10-1788-11ec-a29b-1de31d010040",
+                "e9704450-1789-11ec-a29b-1de31d010040",
+                "0ce75460-17b1-11ec-a29b-1de31d010040",
+                "c3f58320-17b1-11ec-a29b-1de31d010040"
             ],
             "backgroundColor": {
                 "r": 51,
@@ -13251,7 +13435,7 @@
             "childCollection": "f7f385ae-bd2a-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk Building. to SustainabilityIndicators.",
+            "name": "fk Building. to SustainabilityIndicator.",
             "relationshipType": "Foreign Key",
             "parentField": [
                 [
@@ -13272,7 +13456,7 @@
             "childCollection": "f7f385a5-bd2a-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk Building. to gHgEmissionsBuilding.",
+            "name": "fk Building. to GhgEmissionBuilding.",
             "relationshipType": "Foreign Key",
             "parentField": [
                 [
@@ -13293,7 +13477,7 @@
             "childCollection": "f7f385a9-bd2a-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk Site. to gHgEmissionsSite.",
+            "name": "fk Site. to GhgEmissionSite.",
             "relationshipType": "Foreign Key",
             "parentField": [
                 [
@@ -15120,27 +15304,6 @@
             "childCollection": "d87a7e93-bd4d-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk Role. to OperationalMeasurement.",
-            "relationshipType": "Foreign Key",
-            "parentField": [
-                [
-                    "68f44c60-bf03-11eb-81e7-9735ef069f63",
-                    "70ab3e50-bf03-11eb-81e7-9735ef069f63"
-                ]
-            ],
-            "parentCardinality": "1",
-            "childField": [
-                [
-                    "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
-                    "ded6db90-c53a-11eb-b744-cdec50fb2044"
-                ]
-            ],
-            "childCardinality": "0..1",
-            "GUID": "f01b7b40-c53a-11eb-b744-cdec50fb2044",
-            "parentCollection": "68f44c60-bf03-11eb-81e7-9735ef069f63",
-            "childCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63"
-        },
-        {
             "name": "fk Role. to EmissionFactorRole.",
             "relationshipType": "Foreign Key",
             "parentField": [
@@ -15960,7 +16123,7 @@
             "childCollection": "f7f385ae-bd2a-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk GhgEmissions. to GhgEmissionsSite.",
+            "name": "fk GhgEmission. to GhgEmissionSite.",
             "relationshipType": "Foreign Key",
             "parentField": [
                 [
@@ -15981,7 +16144,7 @@
             "childCollection": "f7f385a8-bd2a-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk GhgEmissions. to GhgEmissionsBuilding.",
+            "name": "fk GhgEmission. to GhgEmissionBuilding.",
             "relationshipType": "Foreign Key",
             "parentField": [
                 [
@@ -16002,7 +16165,7 @@
             "childCollection": "f7f385a9-bd2a-11eb-81e7-9735ef069f63"
         },
         {
-            "name": "fk OperationalMeasurement. to GhgEmissions.",
+            "name": "fk OperationalMeasurement. to GhgEmission.",
             "relationshipType": "Foreign Key",
             "parentField": [
                 [
@@ -16063,27 +16226,6 @@
             "GUID": "609ace50-d019-11eb-828a-45fbb7fcbc3e",
             "parentCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
             "childCollection": "f7f385a6-bd2a-11eb-81e7-9735ef069f63"
-        },
-        {
-            "name": "fk OperationalMeasurement. to EmissionFactor.",
-            "relationshipType": "Foreign Key",
-            "parentField": [
-                [
-                    "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
-                    "f7f3acb0-bd2a-11eb-81e7-9735ef069f63"
-                ]
-            ],
-            "parentCardinality": "1",
-            "childField": [
-                [
-                    "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
-                    "f81bce2b-bd2a-11eb-81e7-9735ef069f63"
-                ]
-            ],
-            "childCardinality": "1..n",
-            "GUID": "6c2a6690-d019-11eb-828a-45fbb7fcbc3e",
-            "parentCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
-            "childCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63"
         },
         {
             "name": "fk EmissionFactor. to EmissionFactorRole.",
@@ -16630,6 +16772,174 @@
             "GUID": "e68248a0-0cb3-11ec-b138-b99bd74af063",
             "parentCollection": "68f44c60-bf03-11eb-81e7-9735ef069f63",
             "childCollection": "5102db90-beb2-11eb-81e7-9735ef069f63"
+        },
+        {
+            "name": "fk EmissionFactor. to EmissionFactorOperationalMeasurement.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                    "f7f3acb1-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "7e04fd10-1788-11ec-a29b-1de31d010040",
+                    "aa87a450-1788-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "bd0b7ac0-1788-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "7e04fd10-1788-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk OperationalMeasurement. to EmissionFactorOperationalMeasurement.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+                    "f7f3acb0-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "7e04fd10-1788-11ec-a29b-1de31d010040",
+                    "a7dfb5d0-1788-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "cc4640b0-1788-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "7e04fd10-1788-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk OperationalMeasurement. to OperationalMeasurementRole.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+                    "f7f3acb0-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e9704450-1789-11ec-a29b-1de31d010040",
+                    "f1e86360-1789-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..1",
+            "GUID": "fc396120-1789-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "e9704450-1789-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk Role. to OperationalMeasurementRole.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "68f44c60-bf03-11eb-81e7-9735ef069f63",
+                    "70ab3e50-bf03-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "e9704450-1789-11ec-a29b-1de31d010040",
+                    "f55f61b0-1789-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..1",
+            "GUID": "03fa1710-178a-11ec-a29b-1de31d010040",
+            "parentCollection": "68f44c60-bf03-11eb-81e7-9735ef069f63",
+            "childCollection": "e9704450-1789-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk SustainabilityIndicator. to SustainabilityIndicatorEmissionFactor.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a5-bd2a-11eb-81e7-9735ef069f63",
+                    "f886c4f0-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "0ce75460-17b1-11ec-a29b-1de31d010040",
+                    "252e8a20-17b1-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..1",
+            "GUID": "2df601b0-17b1-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a5-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "0ce75460-17b1-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk EmissionFactor. to SustainabilityIndicatorEmissionFactor.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                    "f7f3acb1-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "0ce75460-17b1-11ec-a29b-1de31d010040",
+                    "26ccf7e0-17b1-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "3ef33820-17b1-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "0ce75460-17b1-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk GhgEmission. to GhgEmissionEmissionFactor.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a3-bd2a-11eb-81e7-9735ef069f63",
+                    "f7f3acb2-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c3f58320-17b1-11ec-a29b-1de31d010040",
+                    "c648c1f0-17b1-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..1",
+            "GUID": "da662420-17b1-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a3-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "c3f58320-17b1-11ec-a29b-1de31d010040"
+        },
+        {
+            "name": "fk EmissionFactor. to GhgEmissionEmissionFactor.",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+                    "f7f3acb1-bd2a-11eb-81e7-9735ef069f63"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "c3f58320-17b1-11ec-a29b-1de31d010040",
+                    "c8a576a0-17b1-11ec-a29b-1de31d010040"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "eb7004c0-17b1-11ec-a29b-1de31d010040",
+            "parentCollection": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
+            "childCollection": "c3f58320-17b1-11ec-a29b-1de31d010040"
         }
     ],
     "users": [],
@@ -16779,15 +17089,12 @@
         "f7f47007-bd2a-11eb-81e7-9735ef069f63": "Unit",
         "f7f47008-bd2a-11eb-81e7-9735ef069f63": "ProcuredBy",
         "f7f47009-bd2a-11eb-81e7-9735ef069f63": "SpaceType",
-        "f7f4700a-bd2a-11eb-81e7-9735ef069f63": "LCA",
+        "f7f4700a-bd2a-11eb-81e7-9735ef069f63": "LifeCycleAssessment",
         "f7f4700b-bd2a-11eb-81e7-9735ef069f63": "PostingDate",
         "f7f4700c-bd2a-11eb-81e7-9735ef069f63": "MeasurementDate",
         "f7f4700d-bd2a-11eb-81e7-9735ef069f63": "ValidFrom",
         "f7f4700e-bd2a-11eb-81e7-9735ef069f63": "ValidUntil",
-        "f7f4700f-bd2a-11eb-81e7-9735ef069f63": "ProjectionBaseYear",
-        "f7f47010-bd2a-11eb-81e7-9735ef069f63": "ProjectionBaseId",
-        "f7f47011-bd2a-11eb-81e7-9735ef069f63": "MeterNumber",
-        "f7f47012-bd2a-11eb-81e7-9735ef069f63": "MeterId",
+        "f7f47012-bd2a-11eb-81e7-9735ef069f63": "SensorId",
         "f7f3acb0-bd2a-11eb-81e7-9735ef069f63": "OperationalMeasurementId",
         "f7f385a0-bd2a-11eb-81e7-9735ef069f63": "OperationalMeasurement",
         "f81bce20-bd2a-11eb-81e7-9735ef069f63": "Country",
@@ -16799,8 +17106,7 @@
         "f81bce27-bd2a-11eb-81e7-9735ef069f63": "SpaceType",
         "f81bce28-bd2a-11eb-81e7-9735ef069f63": "Region",
         "f81bce29-bd2a-11eb-81e7-9735ef069f63": "City",
-        "f81bce2a-bd2a-11eb-81e7-9735ef069f63": "Scenario",
-        "f81bce2b-bd2a-11eb-81e7-9735ef069f63": "OperationalMeasurementId",
+        "f81bce2a-bd2a-11eb-81e7-9735ef069f63": "Name",
         "f7f3acb1-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorId",
         "f7f385a1-bd2a-11eb-81e7-9735ef069f63": "EmissionFactor",
         "f8537ff0-bd2a-11eb-81e7-9735ef069f63": "Name",
@@ -16809,24 +17115,22 @@
         "f8537ff3-bd2a-11eb-81e7-9735ef069f63": "ReportingType",
         "f8537ff4-bd2a-11eb-81e7-9735ef069f63": "Type",
         "f8537ff5-bd2a-11eb-81e7-9735ef069f63": "SubType",
-        "f8537ff6-bd2a-11eb-81e7-9735ef069f63": "LCA",
-        "f8537ff7-bd2a-11eb-81e7-9735ef069f63": "ProjectionBaseYear",
+        "f8537ff6-bd2a-11eb-81e7-9735ef069f63": "LifeCycleAssessment",
         "f8537ff8-bd2a-11eb-81e7-9735ef069f63": "ValidFrom",
         "f8537ff9-bd2a-11eb-81e7-9735ef069f63": "ValidUntil",
         "f8537ffa-bd2a-11eb-81e7-9735ef069f63": "Value",
         "f8537ffb-bd2a-11eb-81e7-9735ef069f63": "Unit",
-        "f853a700-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorScenario",
         "f853a701-bd2a-11eb-81e7-9735ef069f63": "Accuracy",
         "f853a702-bd2a-11eb-81e7-9735ef069f63": "OperationalMeasurementId",
-        "f7f3acb2-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionsId",
-        "f7f385a3-bd2a-11eb-81e7-9735ef069f63": "GhgEmissions",
+        "f7f3acb2-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionId",
+        "f7f385a3-bd2a-11eb-81e7-9735ef069f63": "GhgEmission",
         "f8762320-bd2a-11eb-81e7-9735ef069f63": "Experiment",
         "f8762321-bd2a-11eb-81e7-9735ef069f63": "TemporalResolution",
         "f8762322-bd2a-11eb-81e7-9735ef069f63": "SpatialResolution",
-        "f8762323-bd2a-11eb-81e7-9735ef069f63": "GCM",
-        "f8762324-bd2a-11eb-81e7-9735ef069f63": "RCM",
-        "f8762325-bd2a-11eb-81e7-9735ef069f63": "SimV",
-        "f8762326-bd2a-11eb-81e7-9735ef069f63": "EnsM",
+        "f8762323-bd2a-11eb-81e7-9735ef069f63": "GlobalCirculationModel",
+        "f8762324-bd2a-11eb-81e7-9735ef069f63": "RegionalClimateModel",
+        "f8762325-bd2a-11eb-81e7-9735ef069f63": "SimulationVersion",
+        "f8762326-bd2a-11eb-81e7-9735ef069f63": "EnsembleMember",
         "f8762327-bd2a-11eb-81e7-9735ef069f63": "Value",
         "f8762328-bd2a-11eb-81e7-9735ef069f63": "Unit",
         "f8762329-bd2a-11eb-81e7-9735ef069f63": "ValidFrom",
@@ -16849,25 +17153,24 @@
         "f8869de5-bd2a-11eb-81e7-9735ef069f63": "ReportingType",
         "f8869de6-bd2a-11eb-81e7-9735ef069f63": "BaseYear",
         "f8869de7-bd2a-11eb-81e7-9735ef069f63": "Value",
-        "f8869de8-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorScenario",
         "f8869de9-bd2a-11eb-81e7-9735ef069f63": "Unit",
         "f8869dea-bd2a-11eb-81e7-9735ef069f63": "ValidFrom",
         "f8869deb-bd2a-11eb-81e7-9735ef069f63": "ValidUntil",
         "f8869dec-bd2a-11eb-81e7-9735ef069f63": "BuildingId",
-        "f886c4f0-bd2a-11eb-81e7-9735ef069f63": "SustainabilityIndicatorsId",
-        "f7f385a5-bd2a-11eb-81e7-9735ef069f63": "SustainabilityIndicators",
+        "f886c4f0-bd2a-11eb-81e7-9735ef069f63": "SustainabilityIndicatorId",
+        "f7f385a5-bd2a-11eb-81e7-9735ef069f63": "SustainabilityIndicator",
         "f8a04060-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorId",
         "f8a04062-bd2a-11eb-81e7-9735ef069f63": "BuildingId",
         "f7f385a6-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorBuilding",
         "f8c2e390-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorId",
         "f8c2e392-bd2a-11eb-81e7-9735ef069f63": "SiteId",
         "f7f385a7-bd2a-11eb-81e7-9735ef069f63": "EmissionFactorSite",
-        "f8e586c0-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionsId",
+        "f8e586c0-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionId",
         "f8e586c2-bd2a-11eb-81e7-9735ef069f63": "SiteId",
-        "f7f385a8-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionsSite",
-        "f9096270-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionsId",
+        "f7f385a8-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionSite",
+        "f9096270-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionId",
         "f9096272-bd2a-11eb-81e7-9735ef069f63": "BuildingId",
-        "f7f385a9-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionsBuilding",
+        "f7f385a9-bd2a-11eb-81e7-9735ef069f63": "GhgEmissionBuilding",
         "f92cf000-bd2a-11eb-81e7-9735ef069f63": "OperationalMeasurementId",
         "f92cf002-bd2a-11eb-81e7-9735ef069f63": "SiteId",
         "f7f385aa-bd2a-11eb-81e7-9735ef069f63": "OperationalMeasurementSite",
@@ -16899,9 +17202,9 @@
         "99460b80-bd2b-11eb-81e7-9735ef069f63": "fk Building. to OperationalMeasurementBuilding.",
         "a3562fb0-bd2b-11eb-81e7-9735ef069f63": "fk Floor. to OperationalMeasurementFloor.",
         "ae29f200-bd2b-11eb-81e7-9735ef069f63": "fk Space. to OperationalMeasurementSpace.",
-        "675115b0-bd2c-11eb-81e7-9735ef069f63": "fk Building. to SustainabilityIndicators.",
-        "79b86370-bd2c-11eb-81e7-9735ef069f63": "fk Building. to gHgEmissionsBuilding.",
-        "817ff730-bd2c-11eb-81e7-9735ef069f63": "fk Site. to gHgEmissionsSite.",
+        "675115b0-bd2c-11eb-81e7-9735ef069f63": "fk Building. to SustainabilityIndicator.",
+        "79b86370-bd2c-11eb-81e7-9735ef069f63": "fk Building. to GhgEmissionBuilding.",
+        "817ff730-bd2c-11eb-81e7-9735ef069f63": "fk Site. to GhgEmissionSite.",
         "8b0bf740-bd2c-11eb-81e7-9735ef069f63": "fk Site. to EmissionFactorSite.",
         "918b2c80-bd2c-11eb-81e7-9735ef069f63": "fk Building. to EmissionFactorBuilding.",
         "d87b1ad0-bd4d-11eb-81e7-9735ef069f63": "AccountId",
@@ -17365,8 +17668,6 @@
         "abc1db50-c531-11eb-b744-cdec50fb2044": "fk IndividualAccount. to IndividualAccountPortfolio.",
         "b9acc8b0-c531-11eb-b744-cdec50fb2044": "fk IndividualAccount. to IndividualAccountSite.",
         "51fd3f00-c532-11eb-b744-cdec50fb2044": "fk IndividualAccount. to IndividualAccountBuilding.",
-        "ded6db90-c53a-11eb-b744-cdec50fb2044": "RoleId",
-        "f01b7b40-c53a-11eb-b744-cdec50fb2044": "fk Role. to OperationalMeasurement.",
         "340b7300-c53b-11eb-b744-cdec50fb2044": "RoleId",
         "340b9a11-c53b-11eb-b744-cdec50fb2044": "fk Role. to EmissionFactorRole.",
         "0a0c4fb0-c767-11eb-b744-cdec50fb2044": "OperationalMeasurementId",
@@ -17413,12 +17714,11 @@
         "0bdd89c0-d019-11eb-828a-45fbb7fcbc3e": "fk OperationalMeasurement. to OperationalMeasurementUnit.",
         "1370a000-d019-11eb-828a-45fbb7fcbc3e": "fk OperationalMeasurement. to OperationalMeasurementFloor.",
         "1b9e2180-d019-11eb-828a-45fbb7fcbc3e": "fk OperationalMeasurement. to OperationalMeasurementSpace.",
-        "32f30800-d019-11eb-828a-45fbb7fcbc3e": "fk GhgEmissions. to GhgEmissionsSite.",
-        "3f07aec0-d019-11eb-828a-45fbb7fcbc3e": "fk GhgEmissions. to GhgEmissionsBuilding.",
-        "497c6120-d019-11eb-828a-45fbb7fcbc3e": "fk OperationalMeasurement. to GhgEmissions.",
+        "32f30800-d019-11eb-828a-45fbb7fcbc3e": "fk GhgEmission. to GhgEmissionSite.",
+        "3f07aec0-d019-11eb-828a-45fbb7fcbc3e": "fk GhgEmission. to GhgEmissionBuilding.",
+        "497c6120-d019-11eb-828a-45fbb7fcbc3e": "fk OperationalMeasurement. to GhgEmission.",
         "52cabbf0-d019-11eb-828a-45fbb7fcbc3e": "fk EmissionFactor. to EmissionFactorSite.",
         "609ace50-d019-11eb-828a-45fbb7fcbc3e": "fk EmissionFactor. to EmissionFactorBuilding.",
-        "6c2a6690-d019-11eb-828a-45fbb7fcbc3e": "fk OperationalMeasurement. to EmissionFactor.",
         "75df9980-d019-11eb-828a-45fbb7fcbc3e": "fk EmissionFactor. to EmissionFactorRole.",
         "849291d0-d019-11eb-828a-45fbb7fcbc3e": "fk Climate. to ClimateSite.",
         "90d6fb20-d019-11eb-828a-45fbb7fcbc3e": "fk Climate. to ClimateBuilding.",
@@ -17449,7 +17749,27 @@
         "0edfdcb0-0c03-11ec-b138-b99bd74af063": "fk Portfolio. to PortfolioStrategy.",
         "43044db0-0ca7-11ec-b138-b99bd74af063": "fk RentalContract. to RentalOption.",
         "90a36770-0cb3-11ec-b138-b99bd74af063": "fk Portfolio. to RolePortfolio.",
-        "e68248a0-0cb3-11ec-b138-b99bd74af063": "fk Role. to RolePortfolioStrategy."
+        "e68248a0-0cb3-11ec-b138-b99bd74af063": "fk Role. to RolePortfolioStrategy.",
+        "7e04fd10-1788-11ec-a29b-1de31d010040": "EmissionFactorOperationalMeasurement",
+        "a7dfb5d0-1788-11ec-a29b-1de31d010040": "OperationalMeasurementId",
+        "aa87a450-1788-11ec-a29b-1de31d010040": "EmissionFactorId",
+        "bd0b7ac0-1788-11ec-a29b-1de31d010040": "fk EmissionFactor. to EmissionFactorOperationalMeasurement.",
+        "cc4640b0-1788-11ec-a29b-1de31d010040": "fk OperationalMeasurement. to EmissionFactorOperationalMeasurement.",
+        "e9704450-1789-11ec-a29b-1de31d010040": "OperationalMeasurementRole",
+        "f1e86360-1789-11ec-a29b-1de31d010040": "OperationalMeasurementId",
+        "f55f61b0-1789-11ec-a29b-1de31d010040": "RoleId",
+        "fc396120-1789-11ec-a29b-1de31d010040": "fk OperationalMeasurement. to OperationalMeasurementRole.",
+        "03fa1710-178a-11ec-a29b-1de31d010040": "fk Role. to OperationalMeasurementRole.",
+        "0ce75460-17b1-11ec-a29b-1de31d010040": "SustainabilityIndicatorEmissionFactor",
+        "252e8a20-17b1-11ec-a29b-1de31d010040": "SustainabilityIndicatorId",
+        "26ccf7e0-17b1-11ec-a29b-1de31d010040": "EmissionFactorId",
+        "2df601b0-17b1-11ec-a29b-1de31d010040": "fk SustainabilityIndicator. to SustainabilityIndicatorEmissionFactor.",
+        "3ef33820-17b1-11ec-a29b-1de31d010040": "fk EmissionFactor. to SustainabilityIndicatorEmissionFactor.",
+        "c3f58320-17b1-11ec-a29b-1de31d010040": "GhgEmissionEmissionFactor",
+        "c648c1f0-17b1-11ec-a29b-1de31d010040": "GhgEmissionId",
+        "c8a576a0-17b1-11ec-a29b-1de31d010040": "EmissionFactorId",
+        "da662420-17b1-11ec-a29b-1de31d010040": "fk GhgEmission. to GhgEmissionEmissionFactor.",
+        "eb7004c0-17b1-11ec-a29b-1de31d010040": "fk EmissionFactor. to GhgEmissionEmissionFactor."
     },
     "definitions": {
         "type": "definitions",
@@ -17469,7 +17789,7 @@
     "creationTS": "2021-05-25T06:50:34.202Z",
     "GUID": "cbea3b10-00ec-11ec-8339-dd68234230e9",
     "isLineageEnabled": false,
-    "lastModifTS": "2021-09-09T15:23:49.763Z",
+    "lastModifTS": "2021-09-17T15:33:25.051Z",
     "persistenceSchemaVersion": "5",
     "isCreatedByPlugin": true,
     "pluginInformation": {
@@ -17485,160 +17805,160 @@
                 "erd": [
                     {
                         "GUID": "dfdb1a50-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1743.2479177189225,
-                        "y": 1161.6586623471082,
+                        "x": 1760.581251052256,
+                        "y": 1156.325329013775,
                         "width": 240,
                         "height": 140,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a51-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1675.6690189102635,
-                        "y": 1393.5177595099221,
+                        "x": 1693.0023522435968,
+                        "y": 1388.1844261765889,
                         "width": 328,
                         "height": 411,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1138.558444309274,
-                        "y": 1292.59070868501,
+                        "x": 1155.8917776426074,
+                        "y": 1287.2573753516767,
                         "width": 264,
                         "height": 225,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a53-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2103.7195563148634,
-                        "y": 1468.8432196297647,
+                        "x": 2121.052889648197,
+                        "y": 1463.5098862964314,
                         "width": 259,
                         "height": 164,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a54-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2403.4896840341917,
-                        "y": 1489.2113910174207,
+                        "x": 2420.823017367525,
+                        "y": 1483.8780576840875,
                         "width": 311,
                         "height": 475,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a55-bd25-11eb-81e7-9735ef069f63",
-                        "x": 857.381883087405,
-                        "y": 1418.0263076605677,
+                        "x": 874.7152164207383,
+                        "y": 1412.6929743272344,
                         "width": 247,
                         "height": 113,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a56-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1645.647659047133,
-                        "y": 2006.195362092114,
+                        "x": 1662.9809923804664,
+                        "y": 2000.8620287587808,
                         "width": 299,
                         "height": 166,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a57-bd25-11eb-81e7-9735ef069f63",
-                        "x": 914.9364731481314,
-                        "y": 2057.641868502261,
+                        "x": 932.2698064814648,
+                        "y": 2052.308535168928,
                         "width": 257,
                         "height": 195,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a58-bd25-11eb-81e7-9735ef069f63",
-                        "x": 850.0647381831444,
-                        "y": 1721.207989089582,
+                        "x": 867.3980715164778,
+                        "y": 1715.8746557562488,
                         "width": 240,
                         "height": 135,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a59-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2064.193939393939,
-                        "y": 2027.8787878787862,
+                        "x": 2081.5272727272727,
+                        "y": 2022.545454545453,
                         "width": 272,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a5a-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1203.5939393939395,
-                        "y": 1585.4787878787868,
+                        "x": 1220.9272727272728,
+                        "y": 1580.1454545454535,
                         "width": 177,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a5b-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2066.1939393939374,
-                        "y": 2200.7954545454522,
+                        "x": 2083.527272727271,
+                        "y": 2195.462121212119,
                         "width": 258,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a5c-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2069.027272727275,
-                        "y": 2276.7954545454513,
+                        "x": 2086.3606060606085,
+                        "y": 2271.4621212121183,
                         "width": 260,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a5d-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2067.1939393939365,
-                        "y": 1883.5454545454534,
+                        "x": 2084.52727272727,
+                        "y": 1878.21212121212,
                         "width": 258,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a5e-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2064.19393939394,
-                        "y": 1954.878787878785,
+                        "x": 2081.5272727272736,
+                        "y": 1949.5454545454518,
                         "width": 258,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a5f-bd25-11eb-81e7-9735ef069f63",
-                        "x": 2067.527272727273,
-                        "y": 2109.545454545453,
+                        "x": 2084.8606060606066,
+                        "y": 2104.21212121212,
                         "width": 258,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a60-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1196.4272727272735,
-                        "y": 1673.9287878787889,
+                        "x": 1213.7606060606067,
+                        "y": 1668.5954545454556,
                         "width": 181,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a61-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1196.3439393939398,
-                        "y": 1746.6454545454533,
+                        "x": 1213.6772727272732,
+                        "y": 1741.31212121212,
                         "width": 199,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a62-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1203.4272727272783,
-                        "y": 1826.2287878787872,
+                        "x": 1220.7606060606117,
+                        "y": 1820.895454545454,
                         "width": 182,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "dfdb1a63-bd25-11eb-81e7-9735ef069f63",
-                        "x": 1206.5939393939425,
-                        "y": 1897.1454545454553,
+                        "x": 1223.927272727276,
+                        "y": 1891.812121212122,
                         "width": 186,
                         "height": 61,
                         "color": {}
@@ -17646,62 +17966,62 @@
                     {
                         "GUID": "f7f385a0-bd2a-11eb-81e7-9735ef069f63",
                         "x": 2707.999999999999,
-                        "y": 2481.7710576922677,
+                        "y": 2545.7710576922677,
                         "width": 339,
-                        "height": 418,
+                        "height": 339,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a1-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 3200.0000000000073,
-                        "y": 3079.437724358938,
-                        "width": 339,
-                        "height": 267,
+                        "x": 3501.0000000000073,
+                        "y": 3139.437724358938,
+                        "width": 279,
+                        "height": 249,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a3-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 3212.4946153854853,
-                        "y": 2585.7948076918005,
+                        "x": 3223.4946153854853,
+                        "y": 2591.7948076918005,
                         "width": 339,
-                        "height": 328,
+                        "height": 285,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a4-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2245.333333333326,
+                        "x": 2243.333333333326,
                         "y": 3278.999999999998,
-                        "width": 297,
+                        "width": 315,
                         "height": 393,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a5-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2837.1333333333355,
+                        "x": 2835.1333333333355,
                         "y": 3390.199999999994,
-                        "width": 323,
-                        "height": 294,
+                        "width": 318,
+                        "height": 267,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a6-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 3023.9999999999995,
-                        "y": 2973.3333333333344,
+                        "x": 3094.9999999999995,
+                        "y": 3177.3333333333344,
                         "width": 253,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a7-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 3315.1666666666665,
-                        "y": 2924.5833333333344,
+                        "x": 3102.1666666666665,
+                        "y": 3105.5833333333344,
                         "width": 238,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "f7f385a8-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 3157.333333333331,
+                        "x": 3155.333333333331,
                         "y": 2490.666666666667,
                         "width": 232,
                         "height": 61,
@@ -17709,7 +18029,7 @@
                     },
                     {
                         "GUID": "f7f385a9-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 3479.916666666666,
+                        "x": 3477.916666666666,
                         "y": 2451.25,
                         "width": 246,
                         "height": 61,
@@ -17717,7 +18037,7 @@
                     },
                     {
                         "GUID": "f7f385aa-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2288.6499999999974,
+                        "x": 2286.6499999999974,
                         "y": 2472.583333333332,
                         "width": 298,
                         "height": 61,
@@ -17725,7 +18045,7 @@
                     },
                     {
                         "GUID": "f7f385ab-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2290.0000000000045,
+                        "x": 2288.0000000000045,
                         "y": 2534.3666666666622,
                         "width": 298,
                         "height": 61,
@@ -17733,7 +18053,7 @@
                     },
                     {
                         "GUID": "f7f385ac-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2291.150000000001,
+                        "x": 2289.150000000001,
                         "y": 2601.7499999999914,
                         "width": 313,
                         "height": 61,
@@ -17741,7 +18061,7 @@
                     },
                     {
                         "GUID": "f7f385ad-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2287.999999999997,
+                        "x": 2285.999999999997,
                         "y": 2778.533333333332,
                         "width": 298,
                         "height": 61,
@@ -17749,7 +18069,7 @@
                     },
                     {
                         "GUID": "f7f385ae-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2283.799999999999,
+                        "x": 2281.799999999999,
                         "y": 2863.316666666666,
                         "width": 301,
                         "height": 61,
@@ -17757,7 +18077,7 @@
                     },
                     {
                         "GUID": "f7f385b0-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2206.333333333331,
+                        "x": 2204.333333333331,
                         "y": 3157.166666666665,
                         "width": 196,
                         "height": 61,
@@ -17765,7 +18085,7 @@
                     },
                     {
                         "GUID": "f7f385b1-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2459.666666666668,
+                        "x": 2457.666666666668,
                         "y": 3167.3333333333385,
                         "width": 210,
                         "height": 61,
@@ -17773,8 +18093,8 @@
                     },
                     {
                         "GUID": "f7f385b2-bd2a-11eb-81e7-9735ef069f63",
-                        "x": 2748.999999999999,
-                        "y": 3074,
+                        "x": 3090.999999999999,
+                        "y": 3262,
                         "width": 238,
                         "height": 61,
                         "color": {}
@@ -18237,24 +18557,24 @@
                     },
                     {
                         "GUID": "2e634470-bfb7-11eb-81e7-9735ef069f63",
-                        "x": 3250.39393939394,
-                        "y": 1658.212121212121,
+                        "x": 3267.7272727272734,
+                        "y": 1652.8787878787878,
                         "width": 293,
                         "height": 209,
                         "color": {}
                     },
                     {
                         "GUID": "2e891bf0-bfb7-11eb-81e7-9735ef069f63",
-                        "x": 2986.39393939394,
-                        "y": 2064.212121212121,
+                        "x": 3003.7272727272734,
+                        "y": 2058.878787878788,
                         "width": 293,
                         "height": 142,
                         "color": {}
                     },
                     {
                         "GUID": "2eea27b2-bfb7-11eb-81e7-9735ef069f63",
-                        "x": 3421.39393939394,
-                        "y": 2006.212121212121,
+                        "x": 3438.7272727272734,
+                        "y": 2000.8787878787878,
                         "width": 273,
                         "height": 232,
                         "color": {}
@@ -18269,101 +18589,133 @@
                     },
                     {
                         "GUID": "f3529c90-bfb7-11eb-81e7-9735ef069f63",
-                        "x": 2793.39393939394,
-                        "y": 1858.212121212121,
+                        "x": 2810.7272727272734,
+                        "y": 1852.8787878787878,
                         "width": 222,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "1aa23640-bfbb-11eb-81e7-9735ef069f63",
-                        "x": 2799.39393939394,
-                        "y": 1785.212121212121,
+                        "x": 2816.7272727272734,
+                        "y": 1779.8787878787878,
                         "width": 219,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "1b198920-bfbb-11eb-81e7-9735ef069f63",
-                        "x": 2799.39393939394,
-                        "y": 1715.212121212121,
+                        "x": 2816.7272727272734,
+                        "y": 1709.8787878787878,
                         "width": 219,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "50242df0-bfbb-11eb-81e7-9735ef069f63",
-                        "x": 2799.39393939394,
-                        "y": 1643.212121212121,
+                        "x": 2816.7272727272734,
+                        "y": 1637.8787878787878,
                         "width": 234,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "50c06df0-bfbb-11eb-81e7-9735ef069f63",
-                        "x": 2798.39393939394,
-                        "y": 1574.212121212121,
+                        "x": 2815.7272727272734,
+                        "y": 1568.8787878787878,
                         "width": 219,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "8d980840-bfbc-11eb-81e7-9735ef069f63",
-                        "x": 3051.39393939394,
-                        "y": 1935.212121212121,
+                        "x": 3068.7272727272734,
+                        "y": 1929.8787878787878,
                         "width": 229,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "4514a570-c2cc-11eb-9137-d33b05f9cca8",
-                        "x": 1237.3333333333335,
-                        "y": 2004,
+                        "x": 1254.666666666667,
+                        "y": 1998.6666666666667,
                         "width": 225,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "6f512d40-c2cc-11eb-9137-d33b05f9cca8",
-                        "x": 1233.3333333333335,
-                        "y": 2073,
+                        "x": 1250.666666666667,
+                        "y": 2067.666666666667,
                         "width": 246,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "6fd74d30-c2cc-11eb-9137-d33b05f9cca8",
-                        "x": 1231.3333333333335,
-                        "y": 2225,
+                        "x": 1248.666666666667,
+                        "y": 2219.666666666667,
                         "width": 232,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "013f6c30-c2cd-11eb-9137-d33b05f9cca8",
-                        "x": 1232.3333333333335,
-                        "y": 2147,
+                        "x": 1249.666666666667,
+                        "y": 2141.666666666667,
                         "width": 220,
                         "height": 61,
                         "color": {}
                     },
                     {
                         "GUID": "0a0b1730-c767-11eb-b744-cdec50fb2044",
-                        "x": 2291.9999999999986,
+                        "x": 2289.9999999999986,
                         "y": 2690.5333333333306,
                         "width": 298,
                         "height": 61,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "7e04fd10-1788-11ec-a29b-1de31d010040",
+                        "x": 3197,
+                        "y": 2984,
+                        "width": 352,
+                        "height": 69,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "e9704450-1789-11ec-a29b-1de31d010040",
+                        "x": 2292,
+                        "y": 2944,
+                        "width": 298,
+                        "height": 69,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "0ce75460-17b1-11ec-a29b-1de31d010040",
+                        "x": 3216,
+                        "y": 3577,
+                        "width": 337,
+                        "height": 69,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "c3f58320-17b1-11ec-a29b-1de31d010040",
+                        "x": 3670,
+                        "y": 2800,
+                        "width": 286,
+                        "height": 69,
                         "color": {}
                     }
                 ],
                 "buckets": [
                     {
-                        "x": 810.0647381831444,
-                        "y": 1121.6586623471082,
+                        "x": 827.3980715164778,
+                        "y": 1116.325329013775,
                         "GUID": "dfda2ff0-bd25-11eb-81e7-9735ef069f63"
                     },
                     {
-                        "x": 2166.333333333331,
+                        "x": 2164.333333333331,
                         "y": 2411.25,
                         "GUID": "f7f2c250-bd2a-11eb-81e7-9735ef069f63"
                     },
