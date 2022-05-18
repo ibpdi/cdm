@@ -1,0 +1,252 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/FirePump.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FirePump",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "FirePump",
+        "definition": "resolvedFrom/FirePump",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "FirePump/attributeContext/FirePump",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "FirePump/attributeContext/FirePump/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FirePumpId",
+            "parent": "FirePump/attributeContext/FirePump",
+            "definition": "resolvedFrom/FirePump/hasAttributes/FirePumpId",
+            "contents": [
+              "FirePump/hasAttributes/FirePumpId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "FirePump/attributeContext/FirePump",
+            "definition": "resolvedFrom/FirePump/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FirePump/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "FirePump/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PumpingMedia",
+            "parent": "FirePump/attributeContext/FirePump",
+            "definition": "resolvedFrom/FirePump/hasAttributes/PumpingMedia",
+            "contents": [
+              "FirePump/hasAttributes/PumpingMedia"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "FirePump/attributeContext/FirePump",
+            "definition": "resolvedFrom/FirePump/hasAttributes/PressureCapacity",
+            "contents": [
+              "FirePump/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeadCapacity",
+            "parent": "FirePump/attributeContext/FirePump",
+            "definition": "resolvedFrom/FirePump/hasAttributes/HeadCapacity",
+            "contents": [
+              "FirePump/hasAttributes/HeadCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "FirePump/attributeContext/FirePump",
+            "definition": "resolvedFrom/FirePump/hasAttributes/FlowCapacity",
+            "contents": [
+              "FirePump/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FirePumpId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FirePump/attributeContext/FirePump/FirePumpId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FirePump/attributeContext/FirePump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PumpingMedia",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FirePump/attributeContext/FirePump/PumpingMedia",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pumping media",
+          "maximumLength": 100
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FirePump/attributeContext/FirePump/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity"
+        },
+        {
+          "name": "HeadCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FirePump/attributeContext/FirePump/HeadCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Head capacity"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FirePump/attributeContext/FirePump/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "FirePump",
+      "description": "Information about fire pump",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,646 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/CoolingTower.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CoolingTower",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CoolingTower",
+        "definition": "resolvedFrom/CoolingTower",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CoolingTower/attributeContext/CoolingTower/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoolingTowerId",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/CoolingTowerId",
+            "contents": [
+              "CoolingTower/hasAttributes/CoolingTowerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "CoolingTower/attributeContext/CoolingTower/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CoolingTower/attributeContext/CoolingTower/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CoolingTower/attributeContext/CoolingTower/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CoolingTower/attributeContext/CoolingTower/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CoolingTower/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "CoolingTower/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FlowCapacity",
+            "contents": [
+              "CoolingTower/hasAttributes/FlowCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalCoolingCapacity",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/NominalCoolingCapacity",
+            "contents": [
+              "CoolingTower/hasAttributes/NominalCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "CoolingTower/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanMotorPower",
+            "contents": [
+              "CoolingTower/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "CoolingTower/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "CoolingTower/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanDriveType",
+            "contents": [
+              "CoolingTower/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanName",
+            "contents": [
+              "CoolingTower/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanCommissionDate",
+            "contents": [
+              "CoolingTower/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "CoolingTower/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "CoolingTower/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "CoolingTower/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanInitialCost",
+            "contents": [
+              "CoolingTower/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/Currency",
+            "contents": [
+              "CoolingTower/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanInstallationDate",
+            "contents": [
+              "CoolingTower/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "CoolingTower/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "CoolingTower/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanModelNumber",
+            "contents": [
+              "CoolingTower/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanTagNumber",
+            "contents": [
+              "CoolingTower/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "CoolingTower/attributeContext/CoolingTower",
+            "definition": "resolvedFrom/CoolingTower/hasAttributes/FanSerialNumber",
+            "contents": [
+              "CoolingTower/hasAttributes/FanSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CoolingTowerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/CoolingTowerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        },
+        {
+          "name": "NominalCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/NominalCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal cooling capacity"
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoolingTower/attributeContext/CoolingTower/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CoolingTower",
+      "description": "Information about cooling tower",
+      "version": "4.3"
+    }
+  ]
+}

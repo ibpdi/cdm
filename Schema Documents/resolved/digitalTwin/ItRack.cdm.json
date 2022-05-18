@@ -1,0 +1,212 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ItRack.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ItRack",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ItRack",
+        "definition": "resolvedFrom/ItRack",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ItRack/attributeContext/ItRack",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ItRack/attributeContext/ItRack/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ItRackId",
+            "parent": "ItRack/attributeContext/ItRack",
+            "definition": "resolvedFrom/ItRack/hasAttributes/ItRackId",
+            "contents": [
+              "ItRack/hasAttributes/ItRackId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "ItRack/attributeContext/ItRack",
+            "definition": "resolvedFrom/ItRack/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "ItRack/attributeContext/ItRack/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ItRack/attributeContext/ItRack/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ItRack/attributeContext/ItRack/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ItRack/attributeContext/ItRack/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ItRack/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "ItRack/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "ItRack/attributeContext/ItRack",
+            "definition": "resolvedFrom/ItRack/hasAttributes/Type",
+            "contents": [
+              "ItRack/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Mounting",
+            "parent": "ItRack/attributeContext/ItRack",
+            "definition": "resolvedFrom/ItRack/hasAttributes/Mounting",
+            "contents": [
+              "ItRack/hasAttributes/Mounting"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeightRUs",
+            "parent": "ItRack/attributeContext/ItRack",
+            "definition": "resolvedFrom/ItRack/hasAttributes/HeightRUs",
+            "contents": [
+              "ItRack/hasAttributes/HeightRUs"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ItRackId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ItRack/attributeContext/ItRack/ItRackId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ItRack/attributeContext/ItRack/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ItRack/attributeContext/ItRack/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Mounting",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ItRack/attributeContext/ItRack/Mounting",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mounting details",
+          "maximumLength": 200
+        },
+        {
+          "name": "HeightRUs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ItRack/attributeContext/ItRack/HeightRUs",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Height of RUs (rack units)"
+        }
+      ],
+      "displayName": "ItRack",
+      "description": "Information about it rack",
+      "version": "4.3"
+    }
+  ]
+}

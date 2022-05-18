@@ -1,0 +1,71 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "DataNetworkEquipment",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "DataNetworkEquipmentId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk ComponentType. to DataNetworkEquipment.",
+          "entity": {
+            "entityReference": "ComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "ComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "MountedInRack",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Mounted in it rack"
+        },
+        {
+          "name": "RackPosition",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "It rack position",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "DataNetworkEquipment",
+      "description": "Information about data network equipment"
+    }
+  ]
+}

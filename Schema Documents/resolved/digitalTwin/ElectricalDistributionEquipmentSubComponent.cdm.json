@@ -1,0 +1,575 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ElectricalDistributionEquipmentSubComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalDistributionEquipmentSubComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ElectricalDistributionEquipmentSubComponent",
+        "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalDistributionEquipmentSubComponentId",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/ElectricalDistributionEquipmentSubComponentId",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/ElectricalDistributionEquipmentSubComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponent",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponent",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ShortCircuitRating",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/ShortCircuitRating",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/ShortCircuitRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InputVoltage",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/InputVoltage",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/InputVoltage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InputPhases",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/InputPhases",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/InputPhases"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusMaterial",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusMaterial",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusCurrentRating",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusCurrentRating",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusCurrentRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusName",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusName",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusCommissionDate",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusCommissionDate",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusExpectedEndOfLife",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusExpectedEndOfLife",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusDurationLifeYear",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusDurationLifeYear",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusExpectedReplacementCost",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusExpectedReplacementCost",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusInitialCost",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusInitialCost",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusInstallationDate",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusInstallationDate",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusMaintenanceInterval",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusMaintenanceInterval",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusTurnoverDate",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusTurnoverDate",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusModelNumber",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusModelNumber",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusTagNumber",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusTagNumber",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusSerialNumber",
+            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusSerialNumber",
+            "contents": [
+              "ElectricalDistributionEquipmentSubComponent/hasAttributes/MainBusSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElectricalDistributionEquipmentSubComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ElectricalDistributionEquipmentSubComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical distribution equipment sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "ShortCircuitRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ShortCircuitRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Short circuit rating"
+        },
+        {
+          "name": "InputVoltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/InputVoltage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Input voltage"
+        },
+        {
+          "name": "InputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/InputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Input phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusCurrentRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusCurrentRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Current rating"
+        },
+        {
+          "name": "MainBusName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Main bus name",
+          "maximumLength": 200
+        },
+        {
+          "name": "MainBusCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Electrical distribution equipment sub component commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Electrical distribution equipment sub component expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Electrical distribution equipment sub component life span of component in years"
+        },
+        {
+          "name": "MainBusExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Electrical distribution equipment sub component expected replacement costs"
+        },
+        {
+          "name": "MainBusInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Electrical distribution equipment sub component initial cost"
+        },
+        {
+          "name": "MainBusInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical distribution equipment sub component maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Electrical distribution equipment sub component turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of electrical distribution equipment sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical distribution equipment sub component tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/MainBusSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of electrical distribution equipment sub component",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ElectricalDistributionEquipmentSubComponent",
+      "description": "Information about electrical distribution equipment sub component",
+      "version": "4.3"
+    }
+  ]
+}

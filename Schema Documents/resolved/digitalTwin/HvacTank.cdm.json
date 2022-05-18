@@ -1,0 +1,274 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/HvacTank.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "HvacTank",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "HvacTank",
+        "definition": "resolvedFrom/HvacTank",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "HvacTank/attributeContext/HvacTank/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HvacTankId",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/HvacTankId",
+            "contents": [
+              "HvacTank/hasAttributes/HvacTankId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "HvacTank/attributeContext/HvacTank/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "HvacTank/attributeContext/HvacTank/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "HvacTank/attributeContext/HvacTank/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "HvacTank/attributeContext/HvacTank/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacTank/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "HvacTank/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/Type",
+            "contents": [
+              "HvacTank/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PumpingMedia",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/PumpingMedia",
+            "contents": [
+              "HvacTank/hasAttributes/PumpingMedia"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/PressureCapacity",
+            "contents": [
+              "HvacTank/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeadCapacity",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/HeadCapacity",
+            "contents": [
+              "HvacTank/hasAttributes/HeadCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "HvacTank/attributeContext/HvacTank",
+            "definition": "resolvedFrom/HvacTank/hasAttributes/FlowCapacity",
+            "contents": [
+              "HvacTank/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "HvacTankId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/HvacTankId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Hvac tank type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PumpingMedia",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/PumpingMedia",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pumping media",
+          "maximumLength": 100
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity of hvac pump"
+        },
+        {
+          "name": "HeadCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/HeadCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Head capacity"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacTank/attributeContext/HvacTank/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "HvacTank",
+      "description": "Information about hvac tank",
+      "version": "4.3"
+    }
+  ]
+}

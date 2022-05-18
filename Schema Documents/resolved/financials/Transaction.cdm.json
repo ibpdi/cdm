@@ -315,15 +315,14 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
-            },
-            "means.measurement.currency"
+            }
           ],
           "attributeContext": "Transaction/attributeContext/Transaction/Value",
           "dataFormat": "Decimal",

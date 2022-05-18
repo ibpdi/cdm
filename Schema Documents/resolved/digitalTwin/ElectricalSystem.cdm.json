@@ -1,0 +1,876 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ElectricalSystem.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalSystem",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ElectricalSystem",
+        "definition": "resolvedFrom/ElectricalSystem",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ElectricalSystem/attributeContext/ElectricalSystem/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalSystemId",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/ElectricalSystemId",
+            "contents": [
+              "ElectricalSystem/hasAttributes/ElectricalSystemId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/SystemId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "System",
+                "parent": "ElectricalSystem/attributeContext/ElectricalSystem/SystemId",
+                "definition": "resolvedFrom/System"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ElectricalSystem/attributeContext/ElectricalSystem/SystemId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ElectricalSystem/attributeContext/ElectricalSystem/SystemId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ElectricalSystem/attributeContext/ElectricalSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalSystem/hasAttributes/SystemId/resolutionGuidance/foreignKeyAttribute/SystemId",
+                        "contents": [
+                          "ElectricalSystem/hasAttributes/SystemId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalSource",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/ElectricalSource",
+            "contents": [
+              "ElectricalSystem/hasAttributes/ElectricalSource"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalPowerFactor",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/ElectricalPowerFactor",
+            "contents": [
+              "ElectricalSystem/hasAttributes/ElectricalPowerFactor"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CurrentDraw",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/CurrentDraw",
+            "contents": [
+              "ElectricalSystem/hasAttributes/CurrentDraw"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalCurrentDensity",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/ElectricalCurrentDensity",
+            "contents": [
+              "ElectricalSystem/hasAttributes/ElectricalCurrentDensity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TrueCurrent",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/TrueCurrent",
+            "contents": [
+              "ElectricalSystem/hasAttributes/TrueCurrent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TrueLoad",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/TrueLoad",
+            "contents": [
+              "ElectricalSystem/hasAttributes/TrueLoad"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TotalPanels",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/TotalPanels",
+            "contents": [
+              "ElectricalSystem/hasAttributes/TotalPanels"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfPoles",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/NumberOfPoles",
+            "contents": [
+              "ElectricalSystem/hasAttributes/NumberOfPoles"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaximumNumberOfPoleBreakers",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/MaximumNumberOfPoleBreakers",
+            "contents": [
+              "ElectricalSystem/hasAttributes/MaximumNumberOfPoleBreakers"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CircuitName",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/CircuitName",
+            "contents": [
+              "ElectricalSystem/hasAttributes/CircuitName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CircuitNumber",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/CircuitNumber",
+            "contents": [
+              "ElectricalSystem/hasAttributes/CircuitNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CircuitLoadName",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/CircuitLoadName",
+            "contents": [
+              "ElectricalSystem/hasAttributes/CircuitLoadName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DedicatedCircuit",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/DedicatedCircuit",
+            "contents": [
+              "ElectricalSystem/hasAttributes/DedicatedCircuit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WireType",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/WireType",
+            "contents": [
+              "ElectricalSystem/hasAttributes/WireType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WireSize",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/WireSize",
+            "contents": [
+              "ElectricalSystem/hasAttributes/WireSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfRuns",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/NumberOfRuns",
+            "contents": [
+              "ElectricalSystem/hasAttributes/NumberOfRuns"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfHotConductors",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/NumberOfHotConductors",
+            "contents": [
+              "ElectricalSystem/hasAttributes/NumberOfHotConductors"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfNeutralConductors",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/NumberOfNeutralConductors",
+            "contents": [
+              "ElectricalSystem/hasAttributes/NumberOfNeutralConductors"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EstimatedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/EstimatedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/EstimatedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConnectedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/ConnectedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/ConnectedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HVACEstimatedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/HVACEstimatedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/HVACEstimatedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HVACConnectedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/HVACConnectedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/HVACConnectedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LightingEstimatedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/LightingEstimatedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/LightingEstimatedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LightingConnectedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/LightingConnectedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/LightingConnectedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerEstimatedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/PowerEstimatedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/PowerEstimatedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerConnectedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/PowerConnectedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/PowerConnectedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OtherEstimatedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/OtherEstimatedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/OtherEstimatedDemand"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OtherConnectedDemand",
+            "parent": "ElectricalSystem/attributeContext/ElectricalSystem",
+            "definition": "resolvedFrom/ElectricalSystem/hasAttributes/OtherConnectedDemand",
+            "contents": [
+              "ElectricalSystem/hasAttributes/OtherConnectedDemand"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElectricalSystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/ElectricalSystemId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/System.cdm.json/System",
+                        "SystemId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ElectricalSource",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/ElectricalSource",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical source",
+          "maximumLength": 50
+        },
+        {
+          "name": "ElectricalPowerFactor",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/ElectricalPowerFactor",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power factor usually in percentage and expression of energy efficiency"
+        },
+        {
+          "name": "CurrentDraw",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/CurrentDraw",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Amount of current an amplifier demands while it is operating in amps"
+        },
+        {
+          "name": "ElectricalCurrentDensity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/ElectricalCurrentDensity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Amount of electric current flowing through a unit cross-sectional area"
+        },
+        {
+          "name": "TrueCurrent",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/TrueCurrent",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "True amount of current"
+        },
+        {
+          "name": "TrueLoad",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/TrueLoad",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "True amount of load"
+        },
+        {
+          "name": "TotalPanels",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/TotalPanels",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of panels"
+        },
+        {
+          "name": "NumberOfPoles",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/NumberOfPoles",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of poles"
+        },
+        {
+          "name": "MaximumNumberOfPoleBreakers",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/MaximumNumberOfPoleBreakers",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Maximum number of pole breakers"
+        },
+        {
+          "name": "CircuitName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/CircuitName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Circuit name",
+          "maximumLength": 200
+        },
+        {
+          "name": "CircuitNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/CircuitNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Circuit number",
+          "maximumLength": 50
+        },
+        {
+          "name": "CircuitLoadName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/CircuitLoadName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Circuit load name",
+          "maximumLength": 200
+        },
+        {
+          "name": "DedicatedCircuit",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/DedicatedCircuit",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Dedicated circuit (Y/N)"
+        },
+        {
+          "name": "WireType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/WireType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of wire",
+          "maximumLength": 50
+        },
+        {
+          "name": "WireSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/WireSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Size of wire in square millimeters"
+        },
+        {
+          "name": "NumberOfRuns",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/NumberOfRuns",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of runs"
+        },
+        {
+          "name": "NumberOfHotConductors",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/NumberOfHotConductors",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of hot conductors"
+        },
+        {
+          "name": "NumberOfNeutralConductors",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/NumberOfNeutralConductors",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of neutral conductors"
+        },
+        {
+          "name": "EstimatedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/EstimatedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Estimated demand"
+        },
+        {
+          "name": "ConnectedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/ConnectedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Connected demand. The sum of ratings of all electrical equipments that are connected at the supply point regardless of their status of operation"
+        },
+        {
+          "name": "HVACEstimatedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/HVACEstimatedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Estimated demand HVAC"
+        },
+        {
+          "name": "HVACConnectedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/HVACConnectedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Connected demand HVAC"
+        },
+        {
+          "name": "LightingEstimatedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/LightingEstimatedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Estimated demand lighting"
+        },
+        {
+          "name": "LightingConnectedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/LightingConnectedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Connected demand lighting"
+        },
+        {
+          "name": "PowerEstimatedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/PowerEstimatedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Estimated demand power"
+        },
+        {
+          "name": "PowerConnectedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/PowerConnectedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Connected demand power"
+        },
+        {
+          "name": "OtherEstimatedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/OtherEstimatedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Estimated demand other"
+        },
+        {
+          "name": "OtherConnectedDemand",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalSystem/attributeContext/ElectricalSystem/OtherConnectedDemand",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Connected demand other"
+        }
+      ],
+      "displayName": "ElectricalSystem",
+      "description": "Detailed information about the electrical system",
+      "version": "4.3"
+    }
+  ]
+}

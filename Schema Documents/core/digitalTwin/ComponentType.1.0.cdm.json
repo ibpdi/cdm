@@ -21,38 +21,74 @@
           "attributeGroupReference": "Name"
         },
         {
-          "attributeGroupReference": "Class"
-        },
-        {
-          "attributeGroupReference": "Counter"
-        },
-        {
-          "name": "Manufacturer",
-          "purpose": "hasA",
-          "dataType": "string",
-          "description": "Name of manufacturer",
-          "maximumLength": 100
-        },
-        {
-          "name": "ManufacturerCode",
+          "name": "Description",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Manufacturer code",
-          "maximumLength": 70
+          "description": "Description of component type",
+          "maximumLength": 200
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "name": "Model",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Component type name and/or number",
+          "maximumLength": 200
         },
         {
           "name": "ExpectedLifeYear",
           "purpose": "hasA",
           "isNullable": true,
           "dataFormat": "Int16",
-
           "appliedTraits": [
             {
               "traitReference": "means.measurement.duration.years"
             }
           ],
           "description": "Life span of product in years"
+        },
+        {
+          "name": "MaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ModelNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Model number of component type",
+          "maximumLength": 50
+        },
+        {
+          "name": "WarrantyDuration",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Warranty duration in months",
+          "appliedTraits": [
+            {
+              "traitReference": "means.measurement.duration.months"
+            }
+          ]
+        },
+        {
+          "name": "DocumentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Link to document",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "Class"
         },
         {
           "name": "MaintenanceGroup",

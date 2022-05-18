@@ -1,0 +1,228 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Faucet.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Faucet",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Faucet",
+        "definition": "resolvedFrom/Faucet",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Faucet/attributeContext/Faucet",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Faucet/attributeContext/Faucet/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FaucetId",
+            "parent": "Faucet/attributeContext/Faucet",
+            "definition": "resolvedFrom/Faucet/hasAttributes/FaucetId",
+            "contents": [
+              "Faucet/hasAttributes/FaucetId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "Faucet/attributeContext/Faucet",
+            "definition": "resolvedFrom/Faucet/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "Faucet/attributeContext/Faucet/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Faucet/attributeContext/Faucet/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Faucet/attributeContext/Faucet/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Faucet/attributeContext/Faucet/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Faucet/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "Faucet/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Faucet/attributeContext/Faucet",
+            "definition": "resolvedFrom/Faucet/hasAttributes/Type",
+            "contents": [
+              "Faucet/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxFlowRate",
+            "parent": "Faucet/attributeContext/Faucet",
+            "definition": "resolvedFrom/Faucet/hasAttributes/MaxFlowRate",
+            "contents": [
+              "Faucet/hasAttributes/MaxFlowRate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfHandles",
+            "parent": "Faucet/attributeContext/Faucet",
+            "definition": "resolvedFrom/Faucet/hasAttributes/NumberOfHandles",
+            "contents": [
+              "Faucet/hasAttributes/NumberOfHandles"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedOn",
+            "parent": "Faucet/attributeContext/Faucet",
+            "definition": "resolvedFrom/Faucet/hasAttributes/MountedOn",
+            "contents": [
+              "Faucet/hasAttributes/MountedOn"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FaucetId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Faucet/attributeContext/Faucet/FaucetId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Faucet/attributeContext/Faucet/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Faucet/attributeContext/Faucet/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Faucet type",
+          "maximumLength": 50
+        },
+        {
+          "name": "MaxFlowRate",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Faucet/attributeContext/Faucet/MaxFlowRate",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max flow capacity"
+        },
+        {
+          "name": "NumberOfHandles",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "Faucet/attributeContext/Faucet/NumberOfHandles",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of handles"
+        },
+        {
+          "name": "MountedOn",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Faucet/attributeContext/Faucet/MountedOn",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted on"
+        }
+      ],
+      "displayName": "Faucet",
+      "description": "Information about faucet",
+      "version": "4.3"
+    }
+  ]
+}

@@ -18,6 +18,9 @@
           "maximumLength": 50
         },
         {
+          "attributeGroupReference": "Name"
+        },
+        {
           "name": "Type",
           "purpose": "hasA",
           "dataType": "string",
@@ -60,6 +63,13 @@
         },
         {
           "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "DocumentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
         }
       ],
       "displayName": "Servitudes",

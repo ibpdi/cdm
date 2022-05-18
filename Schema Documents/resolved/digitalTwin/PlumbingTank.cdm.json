@@ -1,0 +1,199 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingTank.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingTank",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingTank",
+        "definition": "resolvedFrom/PlumbingTank",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingTank/attributeContext/PlumbingTank",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingTank/attributeContext/PlumbingTank/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PlumbingTankId",
+            "parent": "PlumbingTank/attributeContext/PlumbingTank",
+            "definition": "resolvedFrom/PlumbingTank/hasAttributes/PlumbingTankId",
+            "contents": [
+              "PlumbingTank/hasAttributes/PlumbingTankId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "PlumbingTank/attributeContext/PlumbingTank",
+            "definition": "resolvedFrom/PlumbingTank/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "PlumbingTank/attributeContext/PlumbingTank/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingTank/attributeContext/PlumbingTank/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingTank/attributeContext/PlumbingTank/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingTank/attributeContext/PlumbingTank/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingTank/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "PlumbingTank/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankCapacity",
+            "parent": "PlumbingTank/attributeContext/PlumbingTank",
+            "definition": "resolvedFrom/PlumbingTank/hasAttributes/TankCapacity",
+            "contents": [
+              "PlumbingTank/hasAttributes/TankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemPressure",
+            "parent": "PlumbingTank/attributeContext/PlumbingTank",
+            "definition": "resolvedFrom/PlumbingTank/hasAttributes/SystemPressure",
+            "contents": [
+              "PlumbingTank/hasAttributes/SystemPressure"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PlumbingTankId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingTank/attributeContext/PlumbingTank/PlumbingTankId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingTank/attributeContext/PlumbingTank/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "TankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingTank/attributeContext/PlumbingTank/TankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Tank capacity"
+        },
+        {
+          "name": "SystemPressure",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingTank/attributeContext/PlumbingTank/SystemPressure",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "System pressure"
+        }
+      ],
+      "displayName": "PlumbingTank",
+      "description": "Information about plumbing tank",
+      "version": "4.3"
+    }
+  ]
+}

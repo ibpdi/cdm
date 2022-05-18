@@ -1,0 +1,178 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/DataNetworkEquipment.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "DataNetworkEquipment",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "DataNetworkEquipment",
+        "definition": "resolvedFrom/DataNetworkEquipment",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DataNetworkEquipmentId",
+            "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment",
+            "definition": "resolvedFrom/DataNetworkEquipment/hasAttributes/DataNetworkEquipmentId",
+            "contents": [
+              "DataNetworkEquipment/hasAttributes/DataNetworkEquipmentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment",
+            "definition": "resolvedFrom/DataNetworkEquipment/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/DataNetworkEquipment/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "DataNetworkEquipment/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedInRack",
+            "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment",
+            "definition": "resolvedFrom/DataNetworkEquipment/hasAttributes/MountedInRack",
+            "contents": [
+              "DataNetworkEquipment/hasAttributes/MountedInRack"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RackPosition",
+            "parent": "DataNetworkEquipment/attributeContext/DataNetworkEquipment",
+            "definition": "resolvedFrom/DataNetworkEquipment/hasAttributes/RackPosition",
+            "contents": [
+              "DataNetworkEquipment/hasAttributes/RackPosition"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "DataNetworkEquipmentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/DataNetworkEquipmentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MountedInRack",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/MountedInRack",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted in it rack"
+        },
+        {
+          "name": "RackPosition",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "DataNetworkEquipment/attributeContext/DataNetworkEquipment/RackPosition",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack position",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "DataNetworkEquipment",
+      "description": "Information about data network equipment",
+      "version": "4.3"
+    }
+  ]
+}

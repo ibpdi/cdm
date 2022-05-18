@@ -49,6 +49,15 @@
           },
           {
             "type": "attributeDefinition",
+            "name": "SystemReferenceId",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/SystemReferenceId",
+            "contents": [
+              "System/hasAttributes/SystemReferenceId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
             "name": "Name",
             "parent": "System/attributeContext/System",
             "definition": "resolvedFrom/Name",
@@ -70,6 +79,58 @@
                   }
                 ]
               }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "System/attributeContext/System/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "System/attributeContext/System/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "System/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Model",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/Model",
+            "contents": [
+              "System/hasAttributes/Model"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SerialNumber",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/SerialNumber",
+            "contents": [
+              "System/hasAttributes/SerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Description",
+            "parent": "System/attributeContext/System",
+            "definition": "resolvedFrom/System/hasAttributes/Description",
+            "contents": [
+              "System/hasAttributes/Description"
             ]
           },
           {
@@ -124,15 +185,6 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "WarrantyGuarantor",
-            "parent": "System/attributeContext/System",
-            "definition": "resolvedFrom/System/hasAttributes/WarrantyGuarantor",
-            "contents": [
-              "System/hasAttributes/WarrantyGuarantor"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "WarrantyStartDate",
             "parent": "System/attributeContext/System",
             "definition": "resolvedFrom/System/hasAttributes/WarrantyStartDate",
@@ -157,6 +209,19 @@
           "maximumLength": 50
         },
         {
+          "name": "SystemReferenceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/SystemReferenceId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reference system id coming from another system",
+          "maximumLength": 50
+        },
+        {
           "name": "Name",
           "appliedTraits": [
             "is.dataFormat.character",
@@ -167,6 +232,57 @@
           "attributeContext": "System/attributeContext/System/Name/Name/Name",
           "dataFormat": "String",
           "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity",
+          "maximumLength": 75
+        },
+        {
+          "name": "Model",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/Model",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "System model name and/or number",
+          "maximumLength": 200
+        },
+        {
+          "name": "SerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/SerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of system",
+          "maximumLength": 50
+        },
+        {
+          "name": "Description",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "System/attributeContext/System/Description",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Description of system",
           "maximumLength": 200
         },
         {
@@ -190,18 +306,6 @@
           "attributeContext": "System/attributeContext/System/Counter/Counter/Counter",
           "dataFormat": "Int32",
           "description": "Counter of entity"
-        },
-        {
-          "name": "WarrantyGuarantor",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "System/attributeContext/System/WarrantyGuarantor",
-          "dataFormat": "String",
-          "description": "Warranty Guarantor ",
-          "maximumLength": 200
         },
         {
           "name": "WarrantyStartDate",

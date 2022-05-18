@@ -1,0 +1,199 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingValve.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingValve",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingValve",
+        "definition": "resolvedFrom/PlumbingValve",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingValve/attributeContext/PlumbingValve",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingValve/attributeContext/PlumbingValve/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PlumbingValveId",
+            "parent": "PlumbingValve/attributeContext/PlumbingValve",
+            "definition": "resolvedFrom/PlumbingValve/hasAttributes/PlumbingValveId",
+            "contents": [
+              "PlumbingValve/hasAttributes/PlumbingValveId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "PlumbingValve/attributeContext/PlumbingValve",
+            "definition": "resolvedFrom/PlumbingValve/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "PlumbingValve/attributeContext/PlumbingValve/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingValve/attributeContext/PlumbingValve/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingValve/attributeContext/PlumbingValve/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingValve/attributeContext/PlumbingValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingValve/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "PlumbingValve/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PipeDiameter",
+            "parent": "PlumbingValve/attributeContext/PlumbingValve",
+            "definition": "resolvedFrom/PlumbingValve/hasAttributes/PipeDiameter",
+            "contents": [
+              "PlumbingValve/hasAttributes/PipeDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "PlumbingValve/attributeContext/PlumbingValve",
+            "definition": "resolvedFrom/PlumbingValve/hasAttributes/FlowCapacity",
+            "contents": [
+              "PlumbingValve/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PlumbingValveId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingValve/attributeContext/PlumbingValve/PlumbingValveId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingValve/attributeContext/PlumbingValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PipeDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingValve/attributeContext/PlumbingValve/PipeDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pipe diameter"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingValve/attributeContext/PlumbingValve/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "PlumbingValve",
+      "description": "Information about plumbing valve",
+      "version": "4.3"
+    }
+  ]
+}

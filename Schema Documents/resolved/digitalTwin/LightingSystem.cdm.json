@@ -1,0 +1,293 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/LightingSystem.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "LightingSystem",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "LightingSystem",
+        "definition": "resolvedFrom/LightingSystem",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "LightingSystem/attributeContext/LightingSystem/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LightingSystemId",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/LightingSystemId",
+            "contents": [
+              "LightingSystem/hasAttributes/LightingSystemId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/SystemId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "System",
+                "parent": "LightingSystem/attributeContext/LightingSystem/SystemId",
+                "definition": "resolvedFrom/System"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "LightingSystem/attributeContext/LightingSystem/SystemId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "LightingSystem/attributeContext/LightingSystem/SystemId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "LightingSystem/attributeContext/LightingSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/LightingSystem/hasAttributes/SystemId/resolutionGuidance/foreignKeyAttribute/SystemId",
+                        "contents": [
+                          "LightingSystem/hasAttributes/SystemId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IEEEIlluminationLevels",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/IEEEIlluminationLevels",
+            "contents": [
+              "LightingSystem/hasAttributes/IEEEIlluminationLevels"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "IlluminationUnit",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/IlluminationUnit",
+            "contents": [
+              "LightingSystem/hasAttributes/IlluminationUnit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GlareIndex",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/GlareIndex",
+            "contents": [
+              "LightingSystem/hasAttributes/GlareIndex"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LightBrightness",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/LightBrightness",
+            "contents": [
+              "LightingSystem/hasAttributes/LightBrightness"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SolarReflectanceIndex",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/SolarReflectanceIndex",
+            "contents": [
+              "LightingSystem/hasAttributes/SolarReflectanceIndex"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoomCavityRatio",
+            "parent": "LightingSystem/attributeContext/LightingSystem",
+            "definition": "resolvedFrom/LightingSystem/hasAttributes/RoomCavityRatio",
+            "contents": [
+              "LightingSystem/hasAttributes/RoomCavityRatio"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "LightingSystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/LightingSystemId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/System.cdm.json/System",
+                        "SystemId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "IEEEIlluminationLevels",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/IEEEIlluminationLevels",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Volume domestic cold water"
+        },
+        {
+          "name": "IlluminationUnit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/IlluminationUnit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Measurement unit for illumination ",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "lx",
+              "attributeValue": "lx",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "fc",
+              "attributeValue": "fc",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "GlareIndex",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/GlareIndex",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Glare index"
+        },
+        {
+          "name": "LightBrightness",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/LightBrightness",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Light brightness"
+        },
+        {
+          "name": "SolarReflectanceIndex",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/SolarReflectanceIndex",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Solar reflectance index (SRI)"
+        },
+        {
+          "name": "RoomCavityRatio",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "LightingSystem/attributeContext/LightingSystem/RoomCavityRatio",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Room cavity ratio"
+        }
+      ],
+      "displayName": "LightingSystem",
+      "description": "Information about lighting system",
+      "version": "4.3"
+    }
+  ]
+}

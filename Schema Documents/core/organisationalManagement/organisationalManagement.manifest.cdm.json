@@ -67,56 +67,194 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleBuilding",
-      "entityPath": "RoleBuilding.cdm.json/RoleBuilding",
+      "entityName": "RoleBuildingContact",
+      "entityPath": "RoleBuildingContact.cdm.json/RoleBuildingContact",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleContact",
-      "entityPath": "RoleContact.cdm.json/RoleContact",
+      "entityName": "RoleBuildingOrganisation",
+      "entityPath": "RoleBuildingOrganisation.cdm.json/RoleBuildingOrganisation",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleLand",
-      "entityPath": "RoleLand.cdm.json/RoleLand",
+      "entityName": "RoleComponentContact",
+      "entityPath": "RoleComponentContact.cdm.json/RoleComponentContact",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleOrganisation",
-      "entityPath": "RoleOrganisation.cdm.json/RoleOrganisation",
+      "entityName": "RoleComponentOrganisation",
+      "entityPath": "RoleComponentOrganisation.cdm.json/RoleComponentOrganisation",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RolePortfolio",
-      "entityPath": "RolePortfolio.cdm.json/RolePortfolio",
+      "entityName": "RoleComponentTypeContact",
+      "entityPath": "RoleComponentTypeContact.cdm.json/RoleComponentTypeContact",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RolePortfolioStrategy",
-      "entityPath": "RolePortfolioStrategy.cdm.json/RolePortfolioStrategy",
+      "entityName": "RoleComponentTypeOrganisation",
+      "entityPath": "RoleComponentTypeOrganisation.cdm.json/RoleComponentTypeOrganisation",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleRentalUnit",
-      "entityPath": "RoleRentalUnit.cdm.json/RoleRentalUnit",
+      "entityName": "RoleEmissionFactorContact",
+      "entityPath": "RoleEmissionFactorContact.cdm.json/RoleEmissionFactorContact",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleSite",
-      "entityPath": "RoleSite.cdm.json/RoleSite",
+      "entityName": "RoleEmissionFactorOrganisation",
+      "entityPath": "RoleEmissionFactorOrganisation.cdm.json/RoleEmissionFactorOrganisation",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleValuation",
-      "entityPath": "RoleValuation.cdm.json/RoleValuation",
+      "entityName": "RoleLandContact",
+      "entityPath": "RoleLandContact.cdm.json/RoleLandContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleLandOrganisation",
+      "entityPath": "RoleLandOrganisation.cdm.json/RoleLandOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleOperationalMeasurementContact",
+      "entityPath": "RoleOperationalMeasurementContact.cdm.json/RoleOperationalMeasurementContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleOperationalMeasurementOrganisation",
+      "entityPath": "RoleOperationalMeasurementOrganisation.cdm.json/RoleOperationalMeasurementOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioContact",
+      "entityPath": "RolePortfolioContact.cdm.json/RolePortfolioContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioOrganisation",
+      "entityPath": "RolePortfolioOrganisation.cdm.json/RolePortfolioOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioStrategyContact",
+      "entityPath": "RolePortfolioStrategyContact.cdm.json/RolePortfolioStrategyContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioStrategyOrganisation",
+      "entityPath": "RolePortfolioStrategyOrganisation.cdm.json/RolePortfolioStrategyOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalContractContact",
+      "entityPath": "RoleRentalContractContact.cdm.json/RoleRentalContractContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalContractOrganisation",
+      "entityPath": "RoleRentalContractOrganisation.cdm.json/RoleRentalContractOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalUnitContact",
+      "entityPath": "RoleRentalUnitContact.cdm.json/RoleRentalUnitContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalUnitOrganisation",
+      "entityPath": "RoleRentalUnitOrganisation.cdm.json/RoleRentalUnitOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSiteContact",
+      "entityPath": "RoleSiteContact.cdm.json/RoleSiteContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSiteOrganisation",
+      "entityPath": "RoleSiteOrganisation.cdm.json/RoleSiteOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubComponentTypeContact",
+      "entityPath": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubComponentTypeOrganisation",
+      "entityPath": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubSubComponentTypeContact",
+      "entityPath": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubSubComponentTypeOrganisation",
+      "entityPath": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSystemContact",
+      "entityPath": "RoleSystemContact.cdm.json/RoleSystemContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSystemOrganisation",
+      "entityPath": "RoleSystemOrganisation.cdm.json/RoleSystemOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleTenantCommunicationContact",
+      "entityPath": "RoleTenantCommunicationContact.cdm.json/RoleTenantCommunicationContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleTenantCommunicationOrganisation",
+      "entityPath": "RoleTenantCommunicationOrganisation.cdm.json/RoleTenantCommunicationOrganisation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleValuationContact",
+      "entityPath": "RoleValuationContact.cdm.json/RoleValuationContact",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleValuationOrganisation",
+      "entityPath": "RoleValuationOrganisation.cdm.json/RoleValuationOrganisation",
       "dataPartitionPatterns": []
     }
   ]

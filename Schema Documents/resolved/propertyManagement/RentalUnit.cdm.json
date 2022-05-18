@@ -107,6 +107,40 @@
             "contents": [
               "RentalUnit/hasAttributes/Vacancy"
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "RentalUnit/attributeContext/RentalUnit",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "RentalUnit/attributeContext/RentalUnit/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "RentalUnit/attributeContext/RentalUnit/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "RentalUnit/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "RentalUnit/attributeContext/RentalUnit/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "RentalUnit/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
           }
         ]
       },
@@ -171,7 +205,7 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "Usage type of the rental unit",
-          "maximumLength": 50
+          "maximumLength": 200
         },
         {
           "name": "Vacancy",
@@ -182,6 +216,44 @@
           "isNullable": true,
           "dataFormat": "Boolean",
           "description": "Is the rental unit vacant (Y/N)"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "RentalUnit/attributeContext/RentalUnit/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         }
       ],
       "displayName": "RentalUnit",

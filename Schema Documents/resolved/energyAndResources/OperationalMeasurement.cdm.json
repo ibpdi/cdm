@@ -112,25 +112,9 @@
             "type": "attributeDefinition",
             "name": "Name",
             "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement",
-            "definition": "resolvedFrom/Name",
+            "definition": "resolvedFrom/OperationalMeasurement/hasAttributes/Name",
             "contents": [
-              {
-                "type": "attributeGroup",
-                "name": "Name",
-                "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name",
-                "definition": "resolvedFrom/Name",
-                "contents": [
-                  {
-                    "type": "attributeDefinition",
-                    "name": "Name",
-                    "parent": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name/Name",
-                    "definition": "resolvedFrom/Name/members/Name",
-                    "contents": [
-                      "OperationalMeasurement/hasAttributes/Name"
-                    ]
-                  }
-                ]
-              }
+              "OperationalMeasurement/hasAttributes/Name"
             ]
           },
           {
@@ -277,14 +261,13 @@
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
-            "is.dataFormat.array",
-            "is.dataFormat.guid"
+            "is.dataFormat.array"
           ],
           "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Parent/Parent/ParentId",
           "isNullable": true,
-          "dataFormat": "Guid",
-          "description": "Parent (Guid) of entity.",
-          "maximumLength": 36
+          "dataFormat": "String",
+          "description": "Parent (guid or id) of entity",
+          "maximumLength": 50
         },
         {
           "name": "Purpose",
@@ -628,32 +611,32 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Recyclable or reusable waste",
-              "attributeValue": "Recyclable or reusable waste",
+              "displayText": "Recycling: non-hazardous",
+              "attributeValue": "Recycling: non-hazardous",
               "displayOrder": "20"
             },
             {
               "languageTag": "en",
-              "displayText": "Non-recyclable waste (to be burned)",
-              "attributeValue": "Non-recyclable waste (to be burned)",
+              "displayText": "Incineration: non-hazardous",
+              "attributeValue": "Incineration: non-hazardous",
               "displayOrder": "21"
             },
             {
               "languageTag": "en",
-              "displayText": "Biodegradable",
-              "attributeValue": "Biodegradable",
+              "displayText": "Waste to energy: non-hazardous",
+              "attributeValue": "Waste to energy: non-hazardous",
               "displayOrder": "22"
             },
             {
               "languageTag": "en",
-              "displayText": "Hazardous waste",
-              "attributeValue": "Hazardous waste",
+              "displayText": "Other/Unknown: hazardous",
+              "attributeValue": "Other/Unknown: hazardous",
               "displayOrder": "23"
             },
             {
               "languageTag": "en",
-              "displayText": "Waste (unspecified)",
-              "attributeValue": "Waste (unspecified)",
+              "displayText": "Other/Unknown: non-hazardous",
+              "attributeValue": "Other/Unknown: non-hazardous",
               "displayOrder": "24"
             },
             {
@@ -676,14 +659,14 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Nitrous oxide (N20)",
-              "attributeValue": "Nitrous oxide (N20)",
+              "displayText": "Nitrous oxide (N2O)",
+              "attributeValue": "Nitrous oxide (N2O)",
               "displayOrder": "28"
             },
             {
               "languageTag": "en",
-              "displayText": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
-              "attributeValue": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "displayText": "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "attributeValue": "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)",
               "displayOrder": "29"
             },
             {
@@ -802,116 +785,116 @@
             },
             {
               "languageTag": "en",
-              "displayText": "R-23 | HFC-23 | ",
-              "attributeValue": "R-23 | HFC-23 | ",
+              "displayText": "R-23 | HFC-23 |",
+              "attributeValue": "R-23 | HFC-23 |",
               "displayOrder": "49"
             },
             {
               "languageTag": "en",
-              "displayText": "R-32 | HFC-32 | ",
-              "attributeValue": "R-32 | HFC-32 | ",
+              "displayText": "R-32 | HFC-32 |",
+              "attributeValue": "R-32 | HFC-32 |",
               "displayOrder": "50"
             },
             {
               "languageTag": "en",
-              "displayText": "R-41 | HFC-41 | ",
-              "attributeValue": "R-41 | HFC-41 | ",
+              "displayText": "R-41 | HFC-41 |",
+              "attributeValue": "R-41 | HFC-41 |",
               "displayOrder": "51"
             },
             {
               "languageTag": "en",
-              "displayText": "R-125 | HFC-125 | ",
-              "attributeValue": "R-125 | HFC-125 | ",
+              "displayText": "R-125 | HFC-125 |",
+              "attributeValue": "R-125 | HFC-125 |",
               "displayOrder": "52"
             },
             {
               "languageTag": "en",
-              "displayText": "R-134 | HFC-134 | ",
-              "attributeValue": "R-134 | HFC-134 | ",
+              "displayText": "R-134 | HFC-134 |",
+              "attributeValue": "R-134 | HFC-134 |",
               "displayOrder": "53"
             },
             {
               "languageTag": "en",
-              "displayText": "R-134a | HFC-134a | ",
-              "attributeValue": "R-134a | HFC-134a | ",
+              "displayText": "R-134a | HFC-134a |",
+              "attributeValue": "R-134a | HFC-134a |",
               "displayOrder": "54"
             },
             {
               "languageTag": "en",
-              "displayText": "R-143 | HFC-143 | ",
-              "attributeValue": "R-143 | HFC-143 | ",
+              "displayText": "R-143 | HFC-143 |",
+              "attributeValue": "R-143 | HFC-143 |",
               "displayOrder": "55"
             },
             {
               "languageTag": "en",
-              "displayText": "R-143a | HFC-143a | ",
-              "attributeValue": "R-143a | HFC-143a | ",
+              "displayText": "R-143a | HFC-143a |",
+              "attributeValue": "R-143a | HFC-143a |",
               "displayOrder": "56"
             },
             {
               "languageTag": "en",
-              "displayText": "R-152 | HFC-152 | ",
-              "attributeValue": "R-152 | HFC-152 | ",
+              "displayText": "R-152 | HFC-152 |",
+              "attributeValue": "R-152 | HFC-152 |",
               "displayOrder": "57"
             },
             {
               "languageTag": "en",
-              "displayText": "R-152a | HFC-152a | ",
-              "attributeValue": "R-152a | HFC-152a | ",
+              "displayText": "R-152a | HFC-152a |",
+              "attributeValue": "R-152a | HFC-152a |",
               "displayOrder": "58"
             },
             {
               "languageTag": "en",
-              "displayText": "R-161 | HFC-161 | ",
-              "attributeValue": "R-161 | HFC-161 | ",
+              "displayText": "R-161 | HFC-161 |",
+              "attributeValue": "R-161 | HFC-161 |",
               "displayOrder": "59"
             },
             {
               "languageTag": "en",
-              "displayText": "R-227ea | HFC-227ea | ",
-              "attributeValue": "R-227ea | HFC-227ea | ",
+              "displayText": "R-227ea | HFC-227ea |",
+              "attributeValue": "R-227ea | HFC-227ea |",
               "displayOrder": "60"
             },
             {
               "languageTag": "en",
-              "displayText": "R-236cb | HFC-236cb | ",
-              "attributeValue": "R-236cb | HFC-236cb | ",
+              "displayText": "R-236cb | HFC-236cb |",
+              "attributeValue": "R-236cb | HFC-236cb |",
               "displayOrder": "61"
             },
             {
               "languageTag": "en",
-              "displayText": "R-236ea | HFC-236ea | ",
-              "attributeValue": "R-236ea | HFC-236ea | ",
+              "displayText": "R-236ea | HFC-236ea |",
+              "attributeValue": "R-236ea | HFC-236ea |",
               "displayOrder": "62"
             },
             {
               "languageTag": "en",
-              "displayText": "R-236fa | HFC-236fa | ",
-              "attributeValue": "R-236fa | HFC-236fa | ",
+              "displayText": "R-236fa | HFC-236fa |",
+              "attributeValue": "R-236fa | HFC-236fa |",
               "displayOrder": "63"
             },
             {
               "languageTag": "en",
-              "displayText": "R-245ca | HFC-245ca | ",
-              "attributeValue": "R-245ca | HFC-245ca | ",
+              "displayText": "R-245ca | HFC-245ca |",
+              "attributeValue": "R-245ca | HFC-245ca |",
               "displayOrder": "64"
             },
             {
               "languageTag": "en",
-              "displayText": "R-245fa | HFC-245fa | ",
-              "attributeValue": "R-245fa | HFC-245fa | ",
+              "displayText": "R-245fa | HFC-245fa |",
+              "attributeValue": "R-245fa | HFC-245fa |",
               "displayOrder": "65"
             },
             {
               "languageTag": "en",
-              "displayText": "R-365mfc | HFC-365mfc | ",
-              "attributeValue": "R-365mfc | HFC-365mfc | ",
+              "displayText": "R-365mfc | HFC-365mfc |",
+              "attributeValue": "R-365mfc | HFC-365mfc |",
               "displayOrder": "66"
             },
             {
               "languageTag": "en",
-              "displayText": "R-43-10mee | HFC-43-10mee | ",
-              "attributeValue": "R-43-10mee | HFC-43-10mee | ",
+              "displayText": "R-43-10mee | HFC-43-10mee |",
+              "attributeValue": "R-43-10mee | HFC-43-10mee |",
               "displayOrder": "67"
             },
             {
@@ -934,9 +917,45 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Non-hazardous waste",
-              "attributeValue": "Non-hazardous waste",
+              "displayText": "Landfill: non-hazardous",
+              "attributeValue": "Landfill: non-hazardous",
               "displayOrder": "71"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Reuse: non-hazardous",
+              "attributeValue": "Reuse: non-hazardous",
+              "displayOrder": "72"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste to energy: hazardous",
+              "attributeValue": "Waste to energy: hazardous",
+              "displayOrder": "73"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Incineration: hazardous",
+              "attributeValue": "Incineration: hazardous",
+              "displayOrder": "74"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Landfill: hazardous",
+              "attributeValue": "Landfill: hazardous",
+              "displayOrder": "75"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Recycling: hazardous",
+              "attributeValue": "Recycling: hazardous",
+              "displayOrder": "76"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Reuse: hazardous",
+              "attributeValue": "Reuse: hazardous",
+              "displayOrder": "77"
             }
           ]
         },
@@ -948,7 +967,8 @@
             "is.dataFormat.array",
             "means.entityName"
           ],
-          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name/Name/Name",
+          "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Name",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Name of entity.",
           "maximumLength": 200
@@ -956,12 +976,24 @@
         {
           "name": "Value",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Value/Value/Value",
           "isNullable": true,
-          "dataFormat": "Float",
-          "description": "Value of entity."
+          "dataFormat": "Decimal",
+          "description": "Value of entity"
         },
         {
           "name": "Unit",
@@ -973,7 +1005,8 @@
           "attributeContext": "OperationalMeasurement/attributeContext/OperationalMeasurement/Unit",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Unit of operational measurement e.g. 'kWh' or 'm³'",
+          "description": "Unit of operational measurement e.g. 'kWh' or 'cubm'",
+          "maximumLength": 50,
           "valueConstrainedToList": true,
           "defaultValue": [
             {
@@ -984,8 +1017,8 @@
             },
             {
               "languageTag": "en",
-              "displayText": "m³",
-              "attributeValue": "m³",
+              "displayText": "cubm",
+              "attributeValue": "cubm",
               "displayOrder": "1"
             },
             {
@@ -1084,6 +1117,24 @@
               "displayText": "Common spaces",
               "attributeValue": "Common spaces",
               "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Outdoor",
+              "attributeValue": "Outdoor",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Exterior area",
+              "attributeValue": "Exterior area",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Parking",
+              "attributeValue": "Parking",
+              "displayOrder": "9"
             }
           ]
         },

@@ -1,0 +1,1180 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/CeilingFan.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CeilingFan",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CeilingFan",
+        "definition": "resolvedFrom/CeilingFan",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CeilingFan/attributeContext/CeilingFan/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CeilingFanId",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/CeilingFanId",
+            "contents": [
+              "CeilingFan/hasAttributes/CeilingFanId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CeilingFan/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "CeilingFan/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DriveType",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DriveType",
+            "contents": [
+              "CeilingFan/hasAttributes/DriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalAirflow",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/NominalAirflow",
+            "contents": [
+              "CeilingFan/hasAttributes/NominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MotorPower",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/MotorPower",
+            "contents": [
+              "CeilingFan/hasAttributes/MotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MinAirflowRating",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/MinAirflowRating",
+            "contents": [
+              "CeilingFan/hasAttributes/MinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxAirflowRating",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/MaxAirflowRating",
+            "contents": [
+              "CeilingFan/hasAttributes/MaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxRotationSpeed",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/MaxRotationSpeed",
+            "contents": [
+              "CeilingFan/hasAttributes/MaxRotationSpeed"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BladeDiameter",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/BladeDiameter",
+            "contents": [
+              "CeilingFan/hasAttributes/BladeDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/Type",
+            "contents": [
+              "CeilingFan/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "CeilingFan/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanMotorPower",
+            "contents": [
+              "CeilingFan/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "CeilingFan/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "CeilingFan/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanDriveType",
+            "contents": [
+              "CeilingFan/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanName",
+            "contents": [
+              "CeilingFan/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanCommissionDate",
+            "contents": [
+              "CeilingFan/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "CeilingFan/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "CeilingFan/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "CeilingFan/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanInitialCost",
+            "contents": [
+              "CeilingFan/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/Currency",
+            "contents": [
+              "CeilingFan/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanInstallationDate",
+            "contents": [
+              "CeilingFan/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "CeilingFan/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "CeilingFan/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanModelNumber",
+            "contents": [
+              "CeilingFan/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanTagNumber",
+            "contents": [
+              "CeilingFan/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/FanSerialNumber",
+            "contents": [
+              "CeilingFan/hasAttributes/FanSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSize",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletSize",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletShape",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletShape",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletShape"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletConfiguration",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletConfiguration",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletName",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletName",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCommissionDate",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletCommissionDate",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletExpectedEndOfLife",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletExpectedReplacementCost",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInitialCost",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletInitialCost",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCurrency",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletCurrency",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInstallationDate",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletInstallationDate",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletMaintenanceInterval",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTurnoverDate",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletTurnoverDate",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletModel",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletModel",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletModel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTagNumber",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletTagNumber",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSerialNumber",
+            "parent": "CeilingFan/attributeContext/CeilingFan",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/DuctInletSerialNumber",
+            "contents": [
+              "CeilingFan/hasAttributes/DuctInletSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CeilingFanId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/CeilingFanId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "DriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Ceiling fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/NominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal airflow"
+        },
+        {
+          "name": "MotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/MotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Motor power"
+        },
+        {
+          "name": "MinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/MinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Min flow capacity"
+        },
+        {
+          "name": "MaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/MaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max flow capacity"
+        },
+        {
+          "name": "MaxRotationSpeed",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/MaxRotationSpeed",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max rotation speed in rotations per minute"
+        },
+        {
+          "name": "BladeDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/BladeDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Blade diameter of ceiling fan"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Ceiling fan type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletShape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletShape",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet shape"
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet expected replacement costs"
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet initial cost"
+        },
+        {
+          "name": "DuctInletCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletCurrency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CeilingFan",
+      "description": "Information about ceiling fan",
+      "version": "4.3"
+    }
+  ]
+}

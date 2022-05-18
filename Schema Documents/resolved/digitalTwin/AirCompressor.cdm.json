@@ -1,0 +1,230 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AirCompressor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AirCompressor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AirCompressor",
+        "definition": "resolvedFrom/AirCompressor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AirCompressor/attributeContext/AirCompressor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AirCompressor/attributeContext/AirCompressor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AirCompressorId",
+            "parent": "AirCompressor/attributeContext/AirCompressor",
+            "definition": "resolvedFrom/AirCompressor/hasAttributes/AirCompressorId",
+            "contents": [
+              "AirCompressor/hasAttributes/AirCompressorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "AirCompressor/attributeContext/AirCompressor",
+            "definition": "resolvedFrom/AirCompressor/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "AirCompressor/attributeContext/AirCompressor/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AirCompressor/attributeContext/AirCompressor/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AirCompressor/attributeContext/AirCompressor/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AirCompressor/attributeContext/AirCompressor/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AirCompressor/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "AirCompressor/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkingPressure",
+            "parent": "AirCompressor/attributeContext/AirCompressor",
+            "definition": "resolvedFrom/AirCompressor/hasAttributes/WorkingPressure",
+            "contents": [
+              "AirCompressor/hasAttributes/WorkingPressure"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MotorPower",
+            "parent": "AirCompressor/attributeContext/AirCompressor",
+            "definition": "resolvedFrom/AirCompressor/hasAttributes/MotorPower",
+            "contents": [
+              "AirCompressor/hasAttributes/MotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FreeAirDelivery",
+            "parent": "AirCompressor/attributeContext/AirCompressor",
+            "definition": "resolvedFrom/AirCompressor/hasAttributes/FreeAirDelivery",
+            "contents": [
+              "AirCompressor/hasAttributes/FreeAirDelivery"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AirCompressorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirCompressor/attributeContext/AirCompressor/AirCompressorId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirCompressor/attributeContext/AirCompressor/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkingPressure",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirCompressor/attributeContext/AirCompressor/WorkingPressure",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "WorkingPressure"
+        },
+        {
+          "name": "MotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirCompressor/attributeContext/AirCompressor/MotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Motor power"
+        },
+        {
+          "name": "FreeAirDelivery",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirCompressor/attributeContext/AirCompressor/FreeAirDelivery",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Free air delivery"
+        }
+      ],
+      "displayName": "AirCompressor",
+      "description": "Information about air compressor",
+      "version": "4.3"
+    }
+  ]
+}

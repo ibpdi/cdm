@@ -1,0 +1,252 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SprinklerValve.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SprinklerValve",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SprinklerValve",
+        "definition": "resolvedFrom/SprinklerValve",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SprinklerValve/attributeContext/SprinklerValve/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SprinklerValveId",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/SprinklerValveId",
+            "contents": [
+              "SprinklerValve/hasAttributes/SprinklerValveId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SprinklerValve/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "SprinklerValve/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponent",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/SubSubComponent",
+            "contents": [
+              "SprinklerValve/hasAttributes/SubSubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/PressureCapacity",
+            "contents": [
+              "SprinklerValve/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PipeDiameter",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/PipeDiameter",
+            "contents": [
+              "SprinklerValve/hasAttributes/PipeDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "SprinklerValve/attributeContext/SprinklerValve",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/FlowCapacity",
+            "contents": [
+              "SprinklerValve/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SprinklerValveId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/SprinklerValveId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Sprinkler valve sub sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity of jockey pump"
+        },
+        {
+          "name": "PipeDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/PipeDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pipe diameter of hvac valve"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "SprinklerValve",
+      "description": "Information about sprinkler valve",
+      "version": "4.3"
+    }
+  ]
+}

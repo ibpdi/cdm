@@ -1,0 +1,263 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/BacNetController.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "BacNetController",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "BacNetController",
+        "definition": "resolvedFrom/BacNetController",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "BacNetController/attributeContext/BacNetController/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BacNetControllerId",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/BacNetControllerId",
+            "contents": [
+              "BacNetController/hasAttributes/BacNetControllerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/BacNetController/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "BacNetController/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Address",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/Address",
+            "contents": [
+              "BacNetController/hasAttributes/Address"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationId",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/RegistrationId",
+            "contents": [
+              "BacNetController/hasAttributes/RegistrationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationKey",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/RegistrationKey",
+            "contents": [
+              "BacNetController/hasAttributes/RegistrationKey"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConnectorId",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/ConnectorId",
+            "contents": [
+              "BacNetController/hasAttributes/ConnectorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Enabled",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/Enabled",
+            "contents": [
+              "BacNetController/hasAttributes/Enabled"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Detected",
+            "parent": "BacNetController/attributeContext/BacNetController",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/Detected",
+            "contents": [
+              "BacNetController/hasAttributes/Detected"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "BacNetControllerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/BacNetControllerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Address",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/Address",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Bac net controller address",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/RegistrationId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationKey",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/RegistrationKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration key",
+          "maximumLength": 50
+        },
+        {
+          "name": "ConnectorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/ConnectorId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "Enabled",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/Enabled",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Enabled (Y/N)"
+        },
+        {
+          "name": "Detected",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "BacNetController/attributeContext/BacNetController/Detected",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Detected (Y/N)"
+        }
+      ],
+      "displayName": "BacNetController",
+      "description": "Information about bac net controller",
+      "version": "4.3"
+    }
+  ]
+}

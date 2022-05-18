@@ -1,0 +1,547 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Damper.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Damper",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Damper",
+        "definition": "resolvedFrom/Damper",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Damper/attributeContext/Damper",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Damper/attributeContext/Damper/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DamperId",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DamperId",
+            "contents": [
+              "Damper/hasAttributes/DamperId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Damper/attributeContext/Damper/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Damper/attributeContext/Damper/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Damper/attributeContext/Damper/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Damper/attributeContext/Damper/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Damper/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Damper/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LeakageClass",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/LeakageClass",
+            "contents": [
+              "Damper/hasAttributes/LeakageClass"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BladeType",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/BladeType",
+            "contents": [
+              "Damper/hasAttributes/BladeType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSize",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletSize",
+            "contents": [
+              "Damper/hasAttributes/DuctInletSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletShape",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletShape",
+            "contents": [
+              "Damper/hasAttributes/DuctInletShape"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletConfiguration",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletConfiguration",
+            "contents": [
+              "Damper/hasAttributes/DuctInletConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletName",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletName",
+            "contents": [
+              "Damper/hasAttributes/DuctInletName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCommissionDate",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletCommissionDate",
+            "contents": [
+              "Damper/hasAttributes/DuctInletCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletExpectedEndOfLife",
+            "contents": [
+              "Damper/hasAttributes/DuctInletExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletExpectedReplacementCost",
+            "contents": [
+              "Damper/hasAttributes/DuctInletExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInitialCost",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletInitialCost",
+            "contents": [
+              "Damper/hasAttributes/DuctInletInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCurrency",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletCurrency",
+            "contents": [
+              "Damper/hasAttributes/DuctInletCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInstallationDate",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletInstallationDate",
+            "contents": [
+              "Damper/hasAttributes/DuctInletInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletMaintenanceInterval",
+            "contents": [
+              "Damper/hasAttributes/DuctInletMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTurnoverDate",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletTurnoverDate",
+            "contents": [
+              "Damper/hasAttributes/DuctInletTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletModel",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletModel",
+            "contents": [
+              "Damper/hasAttributes/DuctInletModel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTagNumber",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletTagNumber",
+            "contents": [
+              "Damper/hasAttributes/DuctInletTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSerialNumber",
+            "parent": "Damper/attributeContext/Damper",
+            "definition": "resolvedFrom/Damper/hasAttributes/DuctInletSerialNumber",
+            "contents": [
+              "Damper/hasAttributes/DuctInletSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "DamperId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DamperId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "LeakageClass",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/LeakageClass",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Class component belongs to",
+          "maximumLength": 200
+        },
+        {
+          "name": "BladeType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/BladeType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Blade type of damper (usually two different types of blade dampers used to modulate air flow: parallel and opposed blade dampers)",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletShape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletShape",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet shape"
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet expected replacement costs"
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet initial cost"
+        },
+        {
+          "name": "DuctInletCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletCurrency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Damper/attributeContext/Damper/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Damper",
+      "description": "Information about the damper, also known as duct damper or volume balancing damper is a movable plate, situated in the ductwork that regulates the flow of air and redirects it to specific places of a house",
+      "version": "4.3"
+    }
+  ]
+}

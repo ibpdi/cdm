@@ -1,0 +1,136 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "SubSubComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CoGenerator",
+      "hasAttributes": [
+        {
+          "name": "CoGeneratorId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubSubComponentType. to CoGenerator.",
+          "entity": {
+            "entityReference": "SubSubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubSubComponentType/(resolvedAttributes)/SubSubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubSubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubSubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "OutputVoltage",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Output voltage"
+        },
+        {
+          "name": "OutputPhases",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Output phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "ModeOfOperation",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Mode of operation",
+          "maximumLength": 50
+        },
+        {
+          "name": "FuelType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Fuel type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Frequency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Frequency",
+          "maximumLength": 50
+        },
+        {
+          "name": "DayTankCapacity",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Day tank capacity"
+        },
+        {
+          "name": "BulkStorageCapacity",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Bulk storage capacity"
+        },
+        {
+          "name": "StandbyPowerKva",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Standby power kva"
+        },
+        {
+          "name": "StandbyPower",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Standby power"
+        },
+        {
+          "name": "PrimePowerKva",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Prime power kva"
+        },
+        {
+          "name": "PrimePower",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Standby power"
+        }
+      ],
+      "displayName": "CoGenerator",
+      "description": "Information about co generator"
+    }
+  ]
+}

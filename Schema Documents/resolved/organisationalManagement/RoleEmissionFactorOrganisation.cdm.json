@@ -1,0 +1,248 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/RoleEmissionFactorOrganisation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleEmissionFactorOrganisation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RoleEmissionFactorOrganisation",
+        "definition": "resolvedFrom/RoleEmissionFactorOrganisation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation",
+            "definition": "resolvedFrom/RoleEmissionFactorOrganisation/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleEmissionFactorOrganisation/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "RoleEmissionFactorOrganisation/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmissionFactorId",
+            "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation",
+            "definition": "resolvedFrom/RoleEmissionFactorOrganisation/hasAttributes/EmissionFactorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "EmissionFactor",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/EmissionFactorId",
+                "definition": "resolvedFrom/EmissionFactor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/EmissionFactorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/EmissionFactorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleEmissionFactorOrganisation/hasAttributes/EmissionFactorId/resolutionGuidance/foreignKeyAttribute/EmissionFactorId",
+                        "contents": [
+                          "RoleEmissionFactorOrganisation/hasAttributes/EmissionFactorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation",
+            "definition": "resolvedFrom/RoleEmissionFactorOrganisation/hasAttributes/OrganisationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Organisation",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/OrganisationId",
+                "definition": "resolvedFrom/Organisation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/OrganisationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/OrganisationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleEmissionFactorOrganisation/hasAttributes/OrganisationId/resolutionGuidance/foreignKeyAttribute/OrganisationId",
+                        "contents": [
+                          "RoleEmissionFactorOrganisation/hasAttributes/OrganisationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Link to role",
+          "maximumLength": 50
+        },
+        {
+          "name": "EmissionFactorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/EmissionFactor.cdm.json/EmissionFactor",
+                        "EmissionFactorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/EmissionFactorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define"
+        },
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Organisation.cdm.json/Organisation",
+                        "OrganisationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleEmissionFactorOrganisation/attributeContext/RoleEmissionFactorOrganisation/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RoleEmissionFactorOrganisation",
+      "description": "Linking entity between Role, EmissionFactor and Organisation",
+      "version": "4.3"
+    }
+  ]
+}

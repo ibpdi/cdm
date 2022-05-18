@@ -1,0 +1,86 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "SubComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Toilet",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ToiletId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubComponentType. to Toilet.",
+          "entity": {
+            "entityReference": "SubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "WaterPerFlush",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Water per flush",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "InstallationType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Installation type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Toilet",
+      "description": "Information about toilet"
+    }
+  ]
+}

@@ -1,0 +1,1034 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/FanPoweredBox.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FanPoweredBox",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "FanPoweredBox",
+        "definition": "resolvedFrom/FanPoweredBox",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanPoweredBoxId",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanPoweredBoxId",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanPoweredBoxId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanPoweredBox/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "FanPoweredBox/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MinAirflowRating",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/MinAirflowRating",
+            "contents": [
+              "FanPoweredBox/hasAttributes/MinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxAirflowRating",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/MaxAirflowRating",
+            "contents": [
+              "FanPoweredBox/hasAttributes/MaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Configuration",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/Configuration",
+            "contents": [
+              "FanPoweredBox/hasAttributes/Configuration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletShape",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletShape",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletShape"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSize",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletSize",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletConfiguration",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletConfiguration",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletName",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletName",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCommissionDate",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletCommissionDate",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletExpectedEndOfLife",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletExpectedReplacementCost",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInitialCost",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletInitialCost",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCurrency",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletCurrency",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInstallationDate",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletInstallationDate",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletMaintenanceInterval",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTurnoverDate",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletTurnoverDate",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletModel",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletModel",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletModel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTagNumber",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletTagNumber",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSerialNumber",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/DuctInletSerialNumber",
+            "contents": [
+              "FanPoweredBox/hasAttributes/DuctInletSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanMotorPower",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanDriveType",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanName",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanCommissionDate",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanInitialCost",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/Currency",
+            "contents": [
+              "FanPoweredBox/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanInstallationDate",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanModelNumber",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanTagNumber",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/FanSerialNumber",
+            "contents": [
+              "FanPoweredBox/hasAttributes/FanSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FanPoweredBoxId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanPoweredBoxId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/MinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Min flow capacity"
+        },
+        {
+          "name": "MaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/MaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max flow capacity"
+        },
+        {
+          "name": "Configuration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/Configuration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan powered box configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletShape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletShape",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet shape"
+        },
+        {
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet expected replacement costs"
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet initial cost"
+        },
+        {
+          "name": "DuctInletCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletCurrency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "FanPoweredBox",
+      "description": "Information about fan powered box",
+      "version": "4.3"
+    }
+  ]
+}

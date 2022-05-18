@@ -41,7 +41,7 @@
           "dataType": "string",
           "isNullable": true,
           "description": "Usage type of the rental unit",
-          "maximumLength": 50
+          "maximumLength": 200
         },
         {
           "name": "Vacancy",
@@ -49,6 +49,9 @@
           "dataType": "boolean",
           "isNullable": true,
           "description": "Is the rental unit vacant (Y/N)"
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
         }
       ],
       "displayName": "RentalUnit",

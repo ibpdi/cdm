@@ -1,0 +1,584 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AirFilter.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AirFilter",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AirFilter",
+        "definition": "resolvedFrom/AirFilter",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AirFilter/attributeContext/AirFilter/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AirFilterId",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/AirFilterId",
+            "contents": [
+              "AirFilter/hasAttributes/AirFilterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "AirFilter/attributeContext/AirFilter/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AirFilter/attributeContext/AirFilter/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AirFilter/attributeContext/AirFilter/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AirFilter/attributeContext/AirFilter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AirFilter/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "AirFilter/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "AirFilter/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanMotorPower",
+            "contents": [
+              "AirFilter/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "AirFilter/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "AirFilter/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanDriveType",
+            "contents": [
+              "AirFilter/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanName",
+            "contents": [
+              "AirFilter/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanCommissionDate",
+            "contents": [
+              "AirFilter/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "AirFilter/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "AirFilter/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "AirFilter/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanInitialCost",
+            "contents": [
+              "AirFilter/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/Currency",
+            "contents": [
+              "AirFilter/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanInstallationDate",
+            "contents": [
+              "AirFilter/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "AirFilter/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "AirFilter/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanModelNumber",
+            "contents": [
+              "AirFilter/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanTagNumber",
+            "contents": [
+              "AirFilter/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "AirFilter/attributeContext/AirFilter",
+            "definition": "resolvedFrom/AirFilter/hasAttributes/FanSerialNumber",
+            "contents": [
+              "AirFilter/hasAttributes/FanSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AirFilterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/AirFilterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirFilter/attributeContext/AirFilter/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AirFilter",
+      "description": "Information about air filter",
+      "version": "4.3"
+    }
+  ]
+}

@@ -138,11 +138,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "InitialDueData",
+            "name": "InitialDueDate",
             "parent": "Dunning/attributeContext/Dunning",
-            "definition": "resolvedFrom/Dunning/hasAttributes/InitialDueData",
+            "definition": "resolvedFrom/Dunning/hasAttributes/InitialDueDate",
             "contents": [
-              "Dunning/hasAttributes/InitialDueData"
+              "Dunning/hasAttributes/InitialDueDate"
             ]
           },
           {
@@ -219,11 +219,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             },
@@ -253,11 +253,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             },
@@ -268,7 +268,7 @@
           "description": "Value of payment"
         },
         {
-          "name": "InitialDueData",
+          "name": "InitialDueDate",
           "appliedTraits": [
             "is.dataFormat.date",
             "means.measurement.date",
@@ -281,7 +281,7 @@
               ]
             }
           ],
-          "attributeContext": "Dunning/attributeContext/Dunning/InitialDueData",
+          "attributeContext": "Dunning/attributeContext/Dunning/InitialDueDate",
           "dataFormat": "DateTime",
           "description": "Initial due date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },

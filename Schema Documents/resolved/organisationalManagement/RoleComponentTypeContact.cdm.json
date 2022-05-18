@@ -1,0 +1,248 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/RoleComponentTypeContact.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleComponentTypeContact",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RoleComponentTypeContact",
+        "definition": "resolvedFrom/RoleComponentTypeContact",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact",
+            "definition": "resolvedFrom/RoleComponentTypeContact/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleComponentTypeContact/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "RoleComponentTypeContact/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact",
+            "definition": "resolvedFrom/RoleComponentTypeContact/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleComponentTypeContact/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "RoleComponentTypeContact/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContactId",
+            "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact",
+            "definition": "resolvedFrom/RoleComponentTypeContact/hasAttributes/ContactId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Contact",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ContactId",
+                "definition": "resolvedFrom/Contact"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ContactId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ContactId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ContactId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleComponentTypeContact/hasAttributes/ContactId/resolutionGuidance/foreignKeyAttribute/ContactId",
+                        "contents": [
+                          "RoleComponentTypeContact/hasAttributes/ContactId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ContactId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Contact.cdm.json/Contact",
+                        "ContactId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleComponentTypeContact/attributeContext/RoleComponentTypeContact/ContactId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RoleComponentTypeContact",
+      "description": "Linking entity between Role, ComponentType and Contact",
+      "version": "4.3"
+    }
+  ]
+}

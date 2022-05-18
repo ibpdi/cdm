@@ -119,6 +119,14 @@
         },
         {
           "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "Status",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Status of site",
+          "maximumLength": 50
         }
       ],
       "displayName": "Site",

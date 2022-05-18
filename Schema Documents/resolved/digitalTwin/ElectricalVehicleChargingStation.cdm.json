@@ -1,0 +1,156 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ElectricalVehicleChargingStation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalVehicleChargingStation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ElectricalVehicleChargingStation",
+        "definition": "resolvedFrom/ElectricalVehicleChargingStation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalVehicleChargingStationId",
+            "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation",
+            "definition": "resolvedFrom/ElectricalVehicleChargingStation/hasAttributes/ElectricalVehicleChargingStationId",
+            "contents": [
+              "ElectricalVehicleChargingStation/hasAttributes/ElectricalVehicleChargingStationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation",
+            "definition": "resolvedFrom/ElectricalVehicleChargingStation/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalVehicleChargingStation/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "ElectricalVehicleChargingStation/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ChargingLevel",
+            "parent": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation",
+            "definition": "resolvedFrom/ElectricalVehicleChargingStation/hasAttributes/ChargingLevel",
+            "contents": [
+              "ElectricalVehicleChargingStation/hasAttributes/ChargingLevel"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElectricalVehicleChargingStationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/ElectricalVehicleChargingStationId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ChargingLevel",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalVehicleChargingStation/attributeContext/ElectricalVehicleChargingStation/ChargingLevel",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Charging level"
+        }
+      ],
+      "displayName": "ElectricalVehicleChargingStation",
+      "description": "Information about electric vehicle charging station",
+      "version": "4.3"
+    }
+  ]
+}

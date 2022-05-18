@@ -1,0 +1,274 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/WaterMeter.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WaterMeter",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WaterMeter",
+        "definition": "resolvedFrom/WaterMeter",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WaterMeter/attributeContext/WaterMeter/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterMeterId",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/WaterMeterId",
+            "contents": [
+              "WaterMeter/hasAttributes/WaterMeterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WaterMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "WaterMeter/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/Type",
+            "contents": [
+              "WaterMeter/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Volume",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/Volume",
+            "contents": [
+              "WaterMeter/hasAttributes/Volume"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VolumeFlow",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/VolumeFlow",
+            "contents": [
+              "WaterMeter/hasAttributes/VolumeFlow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyTemperature",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/SupplyTemperature",
+            "contents": [
+              "WaterMeter/hasAttributes/SupplyTemperature"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Measures",
+            "parent": "WaterMeter/attributeContext/WaterMeter",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/Measures",
+            "contents": [
+              "WaterMeter/hasAttributes/Measures"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WaterMeterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/WaterMeterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Water meter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Volume",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/Volume",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Volume in liter"
+        },
+        {
+          "name": "VolumeFlow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/VolumeFlow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Volume flow"
+        },
+        {
+          "name": "SupplyTemperature",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/SupplyTemperature",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply temperature"
+        },
+        {
+          "name": "Measures",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/Measures",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Substance that is measured",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "WaterMeter",
+      "description": "Information about water meter",
+      "version": "4.3"
+    }
+  ]
+}

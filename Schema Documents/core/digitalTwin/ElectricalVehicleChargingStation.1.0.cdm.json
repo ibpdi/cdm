@@ -1,0 +1,63 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "SubComponentType.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalVehicleChargingStation",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ElectricalVehicleChargingStationId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubComponentType. to ElectricalVehicleChargingStation.",
+          "entity": {
+            "entityReference": "SubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "ChargingLevel",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Charging level"
+        }
+      ],
+      "displayName": "ElectricalVehicleChargingStation",
+      "description": "Information about electric vehicle charging station"
+    }
+  ]
+}

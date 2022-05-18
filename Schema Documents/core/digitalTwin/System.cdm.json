@@ -18,20 +18,48 @@
           "maximumLength": 50
         },
         {
+          "name": "SystemReferenceId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Reference system id coming from another system",
+          "maximumLength": 50
+        },
+        {
           "attributeGroupReference": "Name"
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "name": "Model",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "System model name and/or number",
+          "maximumLength": 200
+        },
+        {
+          "name": "SerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of system",
+          "maximumLength": 50
+        },
+        {
+          "name": "Description",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Description of system",
+          "maximumLength": 200
         },
         {
           "attributeGroupReference": "Class"
         },
         {
           "attributeGroupReference": "Counter"
-        },
-        {
-          "name": "WarrantyGuarantor",
-          "purpose": "hasA",
-          "dataType": "string",
-          "description": "Warranty Guarantor ",
-          "maximumLength": 200
         },
         {
           "name": "WarrantyStartDate",

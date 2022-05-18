@@ -1,0 +1,305 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Ups.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Ups",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Ups",
+        "definition": "resolvedFrom/Ups",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Ups/attributeContext/Ups",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Ups/attributeContext/Ups/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UpsId",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/UpsId",
+            "contents": [
+              "Ups/hasAttributes/UpsId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "Ups/attributeContext/Ups/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Ups/attributeContext/Ups/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Ups/attributeContext/Ups/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Ups/attributeContext/Ups/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Ups/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "Ups/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerOutputKva",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/PowerOutputKva",
+            "contents": [
+              "Ups/hasAttributes/PowerOutputKva"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerOutput",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/PowerOutput",
+            "contents": [
+              "Ups/hasAttributes/PowerOutput"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputVoltage",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/OutputVoltage",
+            "contents": [
+              "Ups/hasAttributes/OutputVoltage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputPhases",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/OutputPhases",
+            "contents": [
+              "Ups/hasAttributes/OutputPhases"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InputVoltage",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/InputVoltage",
+            "contents": [
+              "Ups/hasAttributes/InputVoltage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InputPhases",
+            "parent": "Ups/attributeContext/Ups",
+            "definition": "resolvedFrom/Ups/hasAttributes/InputPhases",
+            "contents": [
+              "Ups/hasAttributes/InputPhases"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "UpsId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/UpsId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PowerOutputKva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/PowerOutputKva",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power output"
+        },
+        {
+          "name": "PowerOutput",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/PowerOutput",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power output"
+        },
+        {
+          "name": "OutputVoltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/OutputVoltage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Output voltage"
+        },
+        {
+          "name": "OutputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/OutputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Output phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "InputVoltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/InputVoltage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Input voltage"
+        },
+        {
+          "name": "InputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Ups/attributeContext/Ups/InputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Input phases",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Ups",
+      "description": "Information about ups",
+      "version": "4.3"
+    }
+  ]
+}

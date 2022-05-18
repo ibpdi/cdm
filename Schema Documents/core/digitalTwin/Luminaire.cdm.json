@@ -1,0 +1,64 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Luminaire",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "LuminaireId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk ComponentType. to Luminaire.",
+          "entity": {
+            "entityReference": "ComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "ComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Luminaire type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Luminaire",
+      "description": "Information about luminaire"
+    }
+  ]
+}

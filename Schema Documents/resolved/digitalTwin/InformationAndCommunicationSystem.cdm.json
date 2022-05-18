@@ -1,0 +1,247 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/InformationAndCommunicationSystem.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "InformationAndCommunicationSystem",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "InformationAndCommunicationSystem",
+        "definition": "resolvedFrom/InformationAndCommunicationSystem",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InformationAndCommunicationSystemId",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/InformationAndCommunicationSystemId",
+            "contents": [
+              "InformationAndCommunicationSystem/hasAttributes/InformationAndCommunicationSystemId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/SystemId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "System",
+                "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/SystemId",
+                "definition": "resolvedFrom/System"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/SystemId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/SystemId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/SystemId/resolutionGuidance/foreignKeyAttribute/SystemId",
+                        "contents": [
+                          "InformationAndCommunicationSystem/hasAttributes/SystemId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CableCategory",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/CableCategory",
+            "contents": [
+              "InformationAndCommunicationSystem/hasAttributes/CableCategory"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CableRating",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/CableRating",
+            "contents": [
+              "InformationAndCommunicationSystem/hasAttributes/CableRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CableType",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/CableType",
+            "contents": [
+              "InformationAndCommunicationSystem/hasAttributes/CableType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FibreType",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/FibreType",
+            "contents": [
+              "InformationAndCommunicationSystem/hasAttributes/FibreType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SignalType",
+            "parent": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem",
+            "definition": "resolvedFrom/InformationAndCommunicationSystem/hasAttributes/SignalType",
+            "contents": [
+              "InformationAndCommunicationSystem/hasAttributes/SignalType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "InformationAndCommunicationSystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/InformationAndCommunicationSystemId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/System.cdm.json/System",
+                        "SystemId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "CableCategory",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/CableCategory",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Category of cable",
+          "maximumLength": 50
+        },
+        {
+          "name": "CableRating",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/CableRating",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Determine the parameters within which a cable can be safely used",
+          "maximumLength": 50
+        },
+        {
+          "name": "CableType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/CableType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of cable",
+          "maximumLength": 50
+        },
+        {
+          "name": "FibreType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/FibreType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Cable type of fibre",
+          "maximumLength": 50
+        },
+        {
+          "name": "SignalType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "InformationAndCommunicationSystem/attributeContext/InformationAndCommunicationSystem/SignalType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Cable signal type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "InformationAndCommunicationSystem",
+      "description": "Information about information and communication system",
+      "version": "4.3"
+    }
+  ]
+}

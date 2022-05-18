@@ -1,0 +1,114 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Role.cdm.json"
+    },
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/Valuation.cdm.json"
+    },
+    {
+      "corpusPath": "Contact.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleValuationContact",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Role. to RoleValuationOrganisation.",
+          "entity": {
+            "entityReference": "Role",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Role/(resolvedAttributes)/RoleId"
+                ]
+              }
+            ]
+          },
+          "name": "RoleId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RoleId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Valuation. to RoleValuationOrganisation.",
+          "entity": {
+            "entityReference": "Valuation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Valuation/(resolvedAttributes)/ValuationId"
+                ]
+              }
+            ]
+          },
+          "name": "ValuationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ValuationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Contact. to RoleValuationContact.",
+          "entity": {
+            "entityReference": "Contact",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Contact/(resolvedAttributes)/ContactId"
+                ]
+              }
+            ]
+          },
+          "name": "ContactId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ContactId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "RoleValuationContact",
+      "description": "Linking entity between Role, Valuation and Contact"
+    }
+  ]
+}

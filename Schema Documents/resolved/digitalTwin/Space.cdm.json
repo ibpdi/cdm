@@ -387,11 +387,23 @@
         {
           "name": "SpaceNumber",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "Space/attributeContext/Space/SpaceNumber",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Number of space"
         },
         {
@@ -404,64 +416,7 @@
           "attributeContext": "Space/attributeContext/Space/Type",
           "dataFormat": "String",
           "description": "Type of space",
-          "maximumLength": 50,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Residential",
-              "attributeValue": "Residential",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Office",
-              "attributeValue": "Office",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Industrial",
-              "attributeValue": "Industrial",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Retail",
-              "attributeValue": "Retail",
-              "displayOrder": "3"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Storage",
-              "attributeValue": "Storage",
-              "displayOrder": "4"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Parking space",
-              "attributeValue": "Parking space",
-              "displayOrder": "5"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Shaft",
-              "attributeValue": "Shaft",
-              "displayOrder": "6"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Staircase",
-              "attributeValue": "Staircase",
-              "displayOrder": "7"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Other",
-              "attributeValue": "Other",
-              "displayOrder": "8"
-            }
-          ]
+          "maximumLength": 50
         },
         {
           "name": "ValidFrom",
@@ -504,7 +459,19 @@
         {
           "name": "SpaceHeightUsable",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             "means.measurement.size.height",
             {
               "traitReference": "means.measurement.units.si.meter",
@@ -526,13 +493,25 @@
           ],
           "attributeContext": "Space/attributeContext/Space/SpaceHeightUsable",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Usable Height of space"
         },
         {
           "name": "SpaceHeight",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             "means.measurement.size.height",
             {
               "traitReference": "means.measurement.units.si.meter",
@@ -554,13 +533,25 @@
           ],
           "attributeContext": "Space/attributeContext/Space/SpaceHeight",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Actual space height e.g: 3.6 m"
         },
         {
           "name": "SpaceVolumeGross",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             "means.measurement.size.volume",
             {
               "traitReference": "means.measurement.units.si"
@@ -568,13 +559,25 @@
           ],
           "attributeContext": "Space/attributeContext/Space/SpaceVolumeGross",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Gross volume of space including surrounding walls"
         },
         {
           "name": "SpaceVolumeNet",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             "means.measurement.size.volume",
             {
               "traitReference": "means.measurement.units.si"
@@ -582,7 +585,7 @@
           ],
           "attributeContext": "Space/attributeContext/Space/SpaceVolumeNet",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Gross volume of space excluding surrounding  walls"
         },
         {
@@ -596,70 +599,7 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "Material of floor",
-          "maximumLength": 75,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Timber",
-              "attributeValue": "Timber",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Laminate",
-              "attributeValue": "Laminate",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Vinyl",
-              "attributeValue": "Vinyl",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Bamboo",
-              "attributeValue": "Bamboo",
-              "displayOrder": "3"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Cork",
-              "attributeValue": "Cork",
-              "displayOrder": "4"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Tile (porcelain or ceramic)",
-              "attributeValue": "Tile (porcelain or ceramic)",
-              "displayOrder": "5"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Tile (natural stone)",
-              "attributeValue": "Tile (natural stone)",
-              "displayOrder": "6"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Carpet",
-              "attributeValue": "Carpet",
-              "displayOrder": "7"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Rubber",
-              "attributeValue": "Rubber",
-              "displayOrder": "8"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Poured floors (mastic asphalt and polymeric)",
-              "attributeValue": "Poured floors (mastic asphalt and polymeric)",
-              "displayOrder": "9"
-            }
-          ]
+          "maximumLength": 75
         },
         {
           "name": "PrimaryWallMaterial",
@@ -672,76 +612,7 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "Material of wall",
-          "maximumLength": 75,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Timber",
-              "attributeValue": "Timber",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Paint",
-              "attributeValue": "Paint",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Tiles",
-              "attributeValue": "Tiles",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Glass",
-              "attributeValue": "Glass",
-              "displayOrder": "3"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Brick",
-              "attributeValue": "Brick",
-              "displayOrder": "4"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Metal",
-              "attributeValue": "Metal",
-              "displayOrder": "5"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Vinyl",
-              "attributeValue": "Vinyl",
-              "displayOrder": "6"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Stone",
-              "attributeValue": "Stone",
-              "displayOrder": "7"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Concrete",
-              "attributeValue": "Concrete",
-              "displayOrder": "8"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Ceramic Tiles",
-              "attributeValue": "Ceramic Tiles",
-              "displayOrder": "9"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Plastic",
-              "attributeValue": "Plastic",
-              "displayOrder": "10"
-            }
-          ]
+          "maximumLength": 75
         },
         {
           "name": "PrimaryCeilingMaterial",
@@ -754,34 +625,7 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "Material of ceiling e.g: cement",
-          "maximumLength": 75,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Timber",
-              "attributeValue": "Timber",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Glypsum",
-              "attributeValue": "Glypsum",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Vinyl",
-              "attributeValue": "Vinyl",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Fibre-cement",
-              "attributeValue": "Fibre-cement",
-              "displayOrder": "3"
-            }
-          ]
+          "maximumLength": 75
         },
         {
           "name": "Rentability",
@@ -796,40 +640,76 @@
         {
           "name": "EffectZonesHeating",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             {
               "traitReference": "means.measurement.units.si"
             }
           ],
           "attributeContext": "Space/attributeContext/Space/EffectZonesHeating",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Area that is heated"
         },
         {
           "name": "EffectZonesCooling",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             {
               "traitReference": "means.measurement.units.si"
             }
           ],
           "attributeContext": "Space/attributeContext/Space/EffectZonesCooling",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Area that is cooled"
         },
         {
           "name": "EffectZonesVentilation",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             {
               "traitReference": "means.measurement.units.si"
             }
           ],
           "attributeContext": "Space/attributeContext/Space/EffectZonesVentilation",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Area that is ventilated"
         },
         {

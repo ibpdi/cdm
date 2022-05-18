@@ -283,6 +283,7 @@
             }
           ],
           "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/AccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Reference to account",
           "maximumLength": 50
@@ -311,6 +312,7 @@
             }
           ],
           "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Reference to organisation",
           "maximumLength": 50

@@ -253,7 +253,6 @@
             }
           ],
           "attributeContext": "RentalPayment/attributeContext/RentalPayment/RentalContractId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
-          "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
@@ -328,11 +327,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             },
@@ -350,11 +349,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             },
@@ -368,12 +367,24 @@
         {
           "name": "DiscountInPercentage",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             "means.measurement.percent"
           ],
           "attributeContext": "RentalPayment/attributeContext/RentalPayment/DiscountInPercentage",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Discount percentage of payment"
         },
         {

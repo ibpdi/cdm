@@ -1,0 +1,241 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ModbusController.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ModbusController",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ModbusController",
+        "definition": "resolvedFrom/ModbusController",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ModbusController/attributeContext/ModbusController/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BacNetControllerId",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/BacNetControllerId",
+            "contents": [
+              "ModbusController/hasAttributes/BacNetControllerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ModbusController/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "ModbusController/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationId",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/RegistrationId",
+            "contents": [
+              "ModbusController/hasAttributes/RegistrationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationKey",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/RegistrationKey",
+            "contents": [
+              "ModbusController/hasAttributes/RegistrationKey"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConnectorId",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/ConnectorId",
+            "contents": [
+              "ModbusController/hasAttributes/ConnectorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Enabled",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/Enabled",
+            "contents": [
+              "ModbusController/hasAttributes/Enabled"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Detected",
+            "parent": "ModbusController/attributeContext/ModbusController",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/Detected",
+            "contents": [
+              "ModbusController/hasAttributes/Detected"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "BacNetControllerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/BacNetControllerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/RegistrationId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationKey",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/RegistrationKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration key",
+          "maximumLength": 50
+        },
+        {
+          "name": "ConnectorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/ConnectorId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "Enabled",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/Enabled",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Enabled (Y/N)"
+        },
+        {
+          "name": "Detected",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "ModbusController/attributeContext/ModbusController/Detected",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Detected (Y/N)"
+        }
+      ],
+      "displayName": "ModbusController",
+      "description": "Information about modbus controller",
+      "version": "4.3"
+    }
+  ]
+}

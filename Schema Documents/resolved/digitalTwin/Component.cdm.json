@@ -86,11 +86,86 @@
           },
           {
             "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Component/attributeContext/Component/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Component/attributeContext/Component/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Component/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "Component/attributeContext/Component/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "Component/attributeContext/Component/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "Component/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
             "name": "Counter",
             "parent": "Component/attributeContext/Component",
-            "definition": "resolvedFrom/Component/hasAttributes/Counter",
+            "definition": "resolvedFrom/Counter",
             "contents": [
-              "Component/hasAttributes/Counter"
+              {
+                "type": "attributeGroup",
+                "name": "Counter",
+                "parent": "Component/attributeContext/Component/Counter",
+                "definition": "resolvedFrom/Counter",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Counter",
+                    "parent": "Component/attributeContext/Component/Counter/Counter",
+                    "definition": "resolvedFrom/Counter/members/Counter",
+                    "contents": [
+                      "Component/hasAttributes/Counter"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Description",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/Description",
+            "contents": [
+              "Component/hasAttributes/Description"
             ]
           },
           {
@@ -113,20 +188,38 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "WarrantyGuarantor",
-            "parent": "Component/attributeContext/Component",
-            "definition": "resolvedFrom/Component/hasAttributes/WarrantyGuarantor",
-            "contents": [
-              "Component/hasAttributes/WarrantyGuarantor"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "WarrantyStartDate",
             "parent": "Component/attributeContext/Component",
             "definition": "resolvedFrom/Component/hasAttributes/WarrantyStartDate",
             "contents": [
               "Component/hasAttributes/WarrantyStartDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TurnoverDate",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/TurnoverDate",
+            "contents": [
+              "Component/hasAttributes/TurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CommissionDate",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/CommissionDate",
+            "contents": [
+              "Component/hasAttributes/CommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExpectedEndOfLife",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/ExpectedEndOfLife",
+            "contents": [
+              "Component/hasAttributes/ExpectedEndOfLife"
             ]
           },
           {
@@ -145,6 +238,60 @@
             "definition": "resolvedFrom/Component/hasAttributes/TagNumber",
             "contents": [
               "Component/hasAttributes/TagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GeometrySpatialReference",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/GeometrySpatialReference",
+            "contents": [
+              "Component/hasAttributes/GeometrySpatialReference"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExpectedReplacementCost",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/ExpectedReplacementCost",
+            "contents": [
+              "Component/hasAttributes/ExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InitialCost",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/InitialCost",
+            "contents": [
+              "Component/hasAttributes/InitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/Currency",
+            "contents": [
+              "Component/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InstallationDate",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/InstallationDate",
+            "contents": [
+              "Component/hasAttributes/InstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Barcode",
+            "parent": "Component/attributeContext/Component",
+            "definition": "resolvedFrom/Component/hasAttributes/Barcode",
+            "contents": [
+              "Component/hasAttributes/Barcode"
             ]
           }
         ]
@@ -192,15 +339,52 @@
           "maximumLength": 50
         },
         {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Component/attributeContext/Component/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/Type/Type/Type",
+          "dataFormat": "String",
+          "description": "Type of entity",
+          "maximumLength": 75
+        },
+        {
           "name": "Counter",
           "appliedTraits": [
             "is.dataFormat.integer",
             "means.measurement.count"
           ],
-          "attributeContext": "Component/attributeContext/Component/Counter",
-          "isNullable": true,
+          "attributeContext": "Component/attributeContext/Component/Counter/Counter/Counter",
           "dataFormat": "Int32",
-          "description": "Counter of component"
+          "description": "Counter of entity"
+        },
+        {
+          "name": "Description",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/Description",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Description of component",
+          "maximumLength": 200
         },
         {
           "name": "ConditionStatus",
@@ -237,25 +421,8 @@
         },
         {
           "name": "DurationLifeYear",
-          "appliedTraits": [
-            "is.dataFormat.integer",
-            "is.dataFormat.small"
-          ],
           "attributeContext": "Component/attributeContext/Component/DurationLifeYear",
-          "dataFormat": "Int16",
           "description": "Life span of component in years"
-        },
-        {
-          "name": "WarrantyGuarantor",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "Component/attributeContext/Component/WarrantyGuarantor",
-          "dataFormat": "String",
-          "description": "Warranty Guarantor ",
-          "maximumLength": 200
         },
         {
           "name": "WarrantyStartDate",
@@ -268,6 +435,45 @@
           "attributeContext": "Component/attributeContext/Component/WarrantyStartDate",
           "dataFormat": "DateTime",
           "description": "Warranty start date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "TurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Component/attributeContext/Component/TurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "CommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Component/attributeContext/Component/CommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Component/attributeContext/Component/ExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
           "name": "SerialNumber",
@@ -292,6 +498,101 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "GeometrySpatialReference",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/GeometrySpatialReference",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Description of component",
+          "maximumLength": 200
+        },
+        {
+          "name": "ExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Component/attributeContext/Component/ExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Expected replacement costs"
+        },
+        {
+          "name": "InitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Component/attributeContext/Component/InitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/Currency",
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "InstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Component/attributeContext/Component/InstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Barcode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Component/attributeContext/Component/Barcode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Barcode of component",
           "maximumLength": 50
         }
       ],

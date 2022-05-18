@@ -49,43 +49,6 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "IndividualAccountId",
-            "parent": "Portfolio/attributeContext/Portfolio",
-            "definition": "resolvedFrom/Portfolio/hasAttributes/IndividualAccountId",
-            "contents": [
-              {
-                "type": "entity",
-                "name": "IndividualAccount",
-                "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId",
-                "definition": "resolvedFrom/IndividualAccount"
-              },
-              {
-                "type": "generatedSet",
-                "name": "_generatedAttributeSet",
-                "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId",
-                "contents": [
-                  {
-                    "type": "generatedRound",
-                    "name": "_generatedAttributeRound0",
-                    "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId/_generatedAttributeSet",
-                    "contents": [
-                      {
-                        "type": "addedAttributeIdentity",
-                        "name": "_foreignKey",
-                        "parent": "Portfolio/attributeContext/Portfolio/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Portfolio/hasAttributes/IndividualAccountId/resolutionGuidance/foreignKeyAttribute/IndividualAccountId",
-                        "contents": [
-                          "Portfolio/hasAttributes/IndividualAccountId"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "Name",
             "parent": "Portfolio/attributeContext/Portfolio",
             "definition": "resolvedFrom/Name",
@@ -248,34 +211,6 @@
           "maximumLength": 50
         },
         {
-          "name": "IndividualAccountId",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array",
-            {
-              "traitReference": "is.linkedEntity.identifier",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "entityShape": "entityGroupSet",
-                    "constantValues": [
-                      [
-                        "/core/financials/IndividualAccount.cdm.json/IndividualAccount",
-                        "IndividualAccountId"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "attributeContext": "Portfolio/attributeContext/Portfolio/IndividualAccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
-          "dataFormat": "String",
-          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-          "maximumLength": 50
-        },
-        {
           "name": "Name",
           "appliedTraits": [
             "is.dataFormat.character",
@@ -412,11 +347,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             },

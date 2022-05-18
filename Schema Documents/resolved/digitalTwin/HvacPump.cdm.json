@@ -1,0 +1,274 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/HvacPump.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "HvacPump",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "HvacPump",
+        "definition": "resolvedFrom/HvacPump",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "HvacPump/attributeContext/HvacPump/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HvacPumpId",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/HvacPumpId",
+            "contents": [
+              "HvacPump/hasAttributes/HvacPumpId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "HvacPump/attributeContext/HvacPump/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "HvacPump/attributeContext/HvacPump/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "HvacPump/attributeContext/HvacPump/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "HvacPump/attributeContext/HvacPump/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacPump/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "HvacPump/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/Type",
+            "contents": [
+              "HvacPump/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PumpingMedia",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/PumpingMedia",
+            "contents": [
+              "HvacPump/hasAttributes/PumpingMedia"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/PressureCapacity",
+            "contents": [
+              "HvacPump/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeadCapacity",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/HeadCapacity",
+            "contents": [
+              "HvacPump/hasAttributes/HeadCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "HvacPump/attributeContext/HvacPump",
+            "definition": "resolvedFrom/HvacPump/hasAttributes/FlowCapacity",
+            "contents": [
+              "HvacPump/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "HvacPumpId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/HvacPumpId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Hvac pump type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PumpingMedia",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/PumpingMedia",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pumping media",
+          "maximumLength": 100
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity of hvac pump"
+        },
+        {
+          "name": "HeadCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/HeadCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Head capacity"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacPump/attributeContext/HvacPump/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "HvacPump",
+      "description": "Information about hvac pump",
+      "version": "4.3"
+    }
+  ]
+}

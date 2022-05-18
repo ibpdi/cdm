@@ -1,0 +1,105 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "System.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingSystem",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "PlumbingSystemId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk System. to PlumbingSystem.",
+          "entity": {
+            "entityReference": "System",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "System/(resolvedAttributes)/SystemId"
+                ]
+              }
+            ]
+          },
+          "name": "SystemId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SystemId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "VolumeDomesticColdWater",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume domestic cold water"
+        },
+        {
+          "name": "VolumeDomesticHotWater",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume domestic hot water"
+        },
+        {
+          "name": "VolumeSanitaryWater",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume domestic hot water"
+        },
+        {
+          "name": "VolumeWasteWater",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume waste water"
+        },
+        {
+          "name": "VolumeStormWater",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume storm water"
+        },
+        {
+          "name": "VolumeFireDepartmentWater",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume fire department water"
+        },
+        {
+          "name": "PlumbingVolume",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Plumbing volume"
+        }
+      ],
+      "displayName": "PlumbingSystem",
+      "description": "Information about system of pipes and fixtures installed in a building for the distribution and use of potable (drinkable) water and the removal of waterborne wastes"
+    }
+  ]
+}

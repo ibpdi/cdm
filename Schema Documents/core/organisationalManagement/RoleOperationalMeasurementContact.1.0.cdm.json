@@ -1,0 +1,113 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "Role.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "OperationalMeasurement.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Contact.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleOperationalMeasurementContact",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Role. to RoleOperationalMeasurementContact.",
+          "entity": {
+            "entityReference": "Role",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Role/(resolvedAttributes)/RoleId"
+                ]
+              }
+            ]
+          },
+          "name": "RoleId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RoleId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk OperationalMeasurement. to RoleOperationalMeasurementContact.",
+          "entity": {
+            "entityReference": "OperationalMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "OperationalMeasurement/(resolvedAttributes)/OperationalMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "OperationalMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OperationalMeasurementId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define"
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Contact. to RoleOperationalMeasurementContact.",
+          "entity": {
+            "entityReference": "Contact",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Contact/(resolvedAttributes)/ContactId"
+                ]
+              }
+            ]
+          },
+          "name": "ContactId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ContactId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "RoleOperationalMeasurementContact",
+      "description": "Linking entity between Role, OperationalMeasurement and Contact"
+    }
+  ]
+}

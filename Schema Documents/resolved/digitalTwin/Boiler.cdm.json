@@ -1,0 +1,305 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Boiler.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Boiler",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Boiler",
+        "definition": "resolvedFrom/Boiler",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Boiler/attributeContext/Boiler",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Boiler/attributeContext/Boiler/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BoilerId",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/BoilerId",
+            "contents": [
+              "Boiler/hasAttributes/BoilerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Boiler/attributeContext/Boiler/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Boiler/attributeContext/Boiler/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Boiler/attributeContext/Boiler/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Boiler/attributeContext/Boiler/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Boiler/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Boiler/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/Type",
+            "contents": [
+              "Boiler/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankCapacity",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/TankCapacity",
+            "contents": [
+              "Boiler/hasAttributes/TankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerInput",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/PowerInput",
+            "contents": [
+              "Boiler/hasAttributes/PowerInput"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerOutput",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/PowerOutput",
+            "contents": [
+              "Boiler/hasAttributes/PowerOutput"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Medium",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/Medium",
+            "contents": [
+              "Boiler/hasAttributes/Medium"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Recovery100FRise",
+            "parent": "Boiler/attributeContext/Boiler",
+            "definition": "resolvedFrom/Boiler/hasAttributes/Recovery100FRise",
+            "contents": [
+              "Boiler/hasAttributes/Recovery100FRise"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "BoilerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/BoilerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Boiler type",
+          "maximumLength": 50
+        },
+        {
+          "name": "TankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/TankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Tank capacity"
+        },
+        {
+          "name": "PowerInput",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/PowerInput",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power input"
+        },
+        {
+          "name": "PowerOutput",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/PowerOutput",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power output"
+        },
+        {
+          "name": "Medium",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/Medium",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Medium of boiler",
+          "maximumLength": 50
+        },
+        {
+          "name": "Recovery100FRise",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Boiler/attributeContext/Boiler/Recovery100FRise",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Recovery rate to 100 frise in l per hour"
+        }
+      ],
+      "displayName": "Boiler",
+      "description": "Information about boiler",
+      "version": "4.3"
+    }
+  ]
+}

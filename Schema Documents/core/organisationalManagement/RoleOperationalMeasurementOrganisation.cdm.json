@@ -1,0 +1,113 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Role.cdm.json"
+    },
+    {
+      "corpusPath": "/core/energyAndResources/OperationalMeasurement.cdm.json"
+    },
+    {
+      "corpusPath": "Organisation.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleOperationalMeasurementOrganisation",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Role. to RoleOperationalMeasurementOrganisation.",
+          "entity": {
+            "entityReference": "Role",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Role/(resolvedAttributes)/RoleId"
+                ]
+              }
+            ]
+          },
+          "name": "RoleId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RoleId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk OperationalMeasurement. to RoleOperationalMeasurementOrganisation.",
+          "entity": {
+            "entityReference": "OperationalMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "OperationalMeasurement/(resolvedAttributes)/OperationalMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "OperationalMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OperationalMeasurementId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define"
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Organisation. to RoleOperationalMeasurementOrganisation.",
+          "entity": {
+            "entityReference": "Organisation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Organisation/(resolvedAttributes)/OrganisationId"
+                ]
+              }
+            ]
+          },
+          "name": "OrganisationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OrganisationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "RoleOperationalMeasurementOrganisation",
+      "description": "Linking entity between Role, OperationalMeasurement and Organisation"
+    }
+  ]
+}

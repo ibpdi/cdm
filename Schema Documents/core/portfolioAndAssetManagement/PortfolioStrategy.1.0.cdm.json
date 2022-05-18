@@ -72,8 +72,23 @@
         {
           "name": "StrategyObjectiveValuesSteering",
           "purpose": "hasA",
-          "dataType": "float",
-          "description": "Value of the portfolio strategy steering targets"
+          "dataType": "decimal",
+          "description": "Value of the portfolio strategy steering targets",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "StrategyObjectiveUnitSteering",
@@ -93,9 +108,24 @@
         {
           "name": "StrategyObjectiveValues",
           "purpose": "hasA",
-          "dataType": "float",
+          "dataType": "decimal",
           "isNullable": true,
-          "description": "Value of the portfolio strategy targets"
+          "description": "Value of the portfolio strategy targets",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "StrategyObjectiveUnit",

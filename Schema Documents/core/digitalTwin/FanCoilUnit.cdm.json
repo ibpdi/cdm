@@ -1,0 +1,877 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "SubComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FanCoilUnit",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "FanCoilUnitId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubComponentType. to FanCoilUnit.",
+          "entity": {
+            "entityReference": "SubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "MinAirflowRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Min flow capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MaxAirflowRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Max flow capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletShape",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet shape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletSize",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet size",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletCurrency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Fan coil unit type",
+          "maximumLength": 50
+        },
+        {
+          "name": "RefrigerantType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalCoolingCapacity",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Nominal cooling capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "NetSensibleCoolingCapacity",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Net sensible cooling capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FilterType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Filter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingMethodType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Primary cooling method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingMethodRefrigerantType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Primary cooling refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingOutsideDiameter",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Primary cooling outside diameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PrimaryCoolingName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Primary cooling name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "PrimaryCoolingCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Primary cooling commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Primary cooling expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingDurationLifeYear",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Primary cooling life span of component in years"
+        },
+        {
+          "name": "PrimaryCoolingExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Primary cooling expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PrimaryCoolingInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Primary cooling initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "PrimaryCoolingInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Primary cooling maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Primary cooling turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingModelNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Model number of primary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Primary cooling tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of primary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingMethodType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Secondary cooling method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingMethodRefrigerantType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Secondary cooling refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingOutsideDiameter",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Secondary cooling outside diameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SecondaryCoolingName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Secondary cooling name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "SecondaryCoolingCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Secondary cooling commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Secondary cooling expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingDurationLifeYear",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Secondary cooling life span of component in years"
+        },
+        {
+          "name": "SecondaryCoolingExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Secondary cooling expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SecondaryCoolingInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Secondary cooling initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "SecondaryCoolingInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Secondary cooling maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Secondary cooling turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingModelNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Model number of secondary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Secondary cooling tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of secondary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Fan nominal airflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FanMotorPower",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Fan motor power",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Fan min flow capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Fan max flow capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FanDriveType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Fan expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "FanInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Fan initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Currency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "FanCoilUnit",
+      "description": "Detailed information about fan coil"
+    }
+  ]
+}

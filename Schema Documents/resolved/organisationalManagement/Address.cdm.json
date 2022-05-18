@@ -101,11 +101,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "AppartmentOrUnit",
+            "name": "ApartmentOrUnit",
             "parent": "Address/attributeContext/Address",
-            "definition": "resolvedFrom/Address/hasAttributes/AppartmentOrUnit",
+            "definition": "resolvedFrom/Address/hasAttributes/ApartmentOrUnit",
             "contents": [
-              "Address/hasAttributes/AppartmentOrUnit"
+              "Address/hasAttributes/ApartmentOrUnit"
             ]
           },
           {
@@ -152,6 +152,24 @@
             "contents": [
               "Address/hasAttributes/Country"
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Latitude",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/Latitude",
+            "contents": [
+              "Address/hasAttributes/Latitude"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Longitude",
+            "parent": "Address/attributeContext/Address",
+            "definition": "resolvedFrom/Address/hasAttributes/Longitude",
+            "contents": [
+              "Address/hasAttributes/Longitude"
+            ]
           }
         ]
       },
@@ -190,6 +208,7 @@
             "means.location.address.street"
           ],
           "attributeContext": "Address/attributeContext/Address/StreetName",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Name of the street",
           "maximumLength": 150
@@ -223,14 +242,14 @@
           "maximumLength": 100
         },
         {
-          "name": "AppartmentOrUnit",
+          "name": "ApartmentOrUnit",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array",
             "means.location.address.building"
           ],
-          "attributeContext": "Address/attributeContext/Address/AppartmentOrUnit",
+          "attributeContext": "Address/attributeContext/Address/ApartmentOrUnit",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Unit number",
@@ -296,13 +315,1555 @@
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
-            "is.dataFormat.array",
-            "means.location.country"
+            "is.dataFormat.array"
           ],
           "attributeContext": "Address/attributeContext/Address/Country",
           "dataFormat": "String",
-          "description": "Sovereign nations and their dependent territories, anything with an ISO-3166 code",
-          "maximumLength": 75
+          "description": "Sovereign nations and their dependent territories, anything with an ISO-3166 ALPHA-2 code",
+          "maximumLength": 75,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "AF",
+              "attributeValue": "AF",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AL",
+              "attributeValue": "AL",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "DZ",
+              "attributeValue": "DZ",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AS",
+              "attributeValue": "AS",
+              "displayOrder": "3"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AD",
+              "attributeValue": "AD",
+              "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AO",
+              "attributeValue": "AO",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AI",
+              "attributeValue": "AI",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AQ",
+              "attributeValue": "AQ",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AG",
+              "attributeValue": "AG",
+              "displayOrder": "8"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AR",
+              "attributeValue": "AR",
+              "displayOrder": "9"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AM",
+              "attributeValue": "AM",
+              "displayOrder": "10"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AW",
+              "attributeValue": "AW",
+              "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AU",
+              "attributeValue": "AU",
+              "displayOrder": "12"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AT",
+              "attributeValue": "AT",
+              "displayOrder": "13"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AZ",
+              "attributeValue": "AZ",
+              "displayOrder": "14"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BS",
+              "attributeValue": "BS",
+              "displayOrder": "15"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BH",
+              "attributeValue": "BH",
+              "displayOrder": "16"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BD",
+              "attributeValue": "BD",
+              "displayOrder": "17"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BB",
+              "attributeValue": "BB",
+              "displayOrder": "18"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BY",
+              "attributeValue": "BY",
+              "displayOrder": "19"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BE",
+              "attributeValue": "BE",
+              "displayOrder": "20"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BZ",
+              "attributeValue": "BZ",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BJ",
+              "attributeValue": "BJ",
+              "displayOrder": "22"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BM",
+              "attributeValue": "BM",
+              "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BT",
+              "attributeValue": "BT",
+              "displayOrder": "24"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BO",
+              "attributeValue": "BO",
+              "displayOrder": "25"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BQ",
+              "attributeValue": "BQ",
+              "displayOrder": "26"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BA",
+              "attributeValue": "BA",
+              "displayOrder": "27"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BW",
+              "attributeValue": "BW",
+              "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BV",
+              "attributeValue": "BV",
+              "displayOrder": "29"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BR",
+              "attributeValue": "BR",
+              "displayOrder": "30"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IO",
+              "attributeValue": "IO",
+              "displayOrder": "31"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BN",
+              "attributeValue": "BN",
+              "displayOrder": "32"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BG",
+              "attributeValue": "BG",
+              "displayOrder": "33"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BF",
+              "attributeValue": "BF",
+              "displayOrder": "34"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BI",
+              "attributeValue": "BI",
+              "displayOrder": "35"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CV",
+              "attributeValue": "CV",
+              "displayOrder": "36"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KH",
+              "attributeValue": "KH",
+              "displayOrder": "37"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CM",
+              "attributeValue": "CM",
+              "displayOrder": "38"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CA",
+              "attributeValue": "CA",
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KY",
+              "attributeValue": "KY",
+              "displayOrder": "40"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CF",
+              "attributeValue": "CF",
+              "displayOrder": "41"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TD",
+              "attributeValue": "TD",
+              "displayOrder": "42"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CL",
+              "attributeValue": "CL",
+              "displayOrder": "43"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CN",
+              "attributeValue": "CN",
+              "displayOrder": "44"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CX",
+              "attributeValue": "CX",
+              "displayOrder": "45"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CC",
+              "attributeValue": "CC",
+              "displayOrder": "46"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CO",
+              "attributeValue": "CO",
+              "displayOrder": "47"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KM",
+              "attributeValue": "KM",
+              "displayOrder": "48"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CD",
+              "attributeValue": "CD",
+              "displayOrder": "49"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CG",
+              "attributeValue": "CG",
+              "displayOrder": "50"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CK",
+              "attributeValue": "CK",
+              "displayOrder": "51"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CR",
+              "attributeValue": "CR",
+              "displayOrder": "52"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "HR",
+              "attributeValue": "HR",
+              "displayOrder": "53"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CU",
+              "attributeValue": "CU",
+              "displayOrder": "54"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CW",
+              "attributeValue": "CW",
+              "displayOrder": "55"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CY",
+              "attributeValue": "CY",
+              "displayOrder": "56"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CZ",
+              "attributeValue": "CZ",
+              "displayOrder": "57"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CI",
+              "attributeValue": "CI",
+              "displayOrder": "58"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "DK",
+              "attributeValue": "DK",
+              "displayOrder": "59"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "DJ",
+              "attributeValue": "DJ",
+              "displayOrder": "60"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "DM",
+              "attributeValue": "DM",
+              "displayOrder": "61"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "DO",
+              "attributeValue": "DO",
+              "displayOrder": "62"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "EC",
+              "attributeValue": "EC",
+              "displayOrder": "63"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "EG",
+              "attributeValue": "EG",
+              "displayOrder": "64"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SV",
+              "attributeValue": "SV",
+              "displayOrder": "65"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GQ",
+              "attributeValue": "GQ",
+              "displayOrder": "66"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ER",
+              "attributeValue": "ER",
+              "displayOrder": "67"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "EE",
+              "attributeValue": "EE",
+              "displayOrder": "68"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SZ",
+              "attributeValue": "SZ",
+              "displayOrder": "69"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ET",
+              "attributeValue": "ET",
+              "displayOrder": "70"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "FK",
+              "attributeValue": "FK",
+              "displayOrder": "71"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "FO",
+              "attributeValue": "FO",
+              "displayOrder": "72"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "FJ",
+              "attributeValue": "FJ",
+              "displayOrder": "73"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "FI",
+              "attributeValue": "FI",
+              "displayOrder": "74"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "FR",
+              "attributeValue": "FR",
+              "displayOrder": "75"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GF",
+              "attributeValue": "GF",
+              "displayOrder": "76"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PF",
+              "attributeValue": "PF",
+              "displayOrder": "77"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TF",
+              "attributeValue": "TF",
+              "displayOrder": "78"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GA",
+              "attributeValue": "GA",
+              "displayOrder": "79"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GM",
+              "attributeValue": "GM",
+              "displayOrder": "80"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GE",
+              "attributeValue": "GE",
+              "displayOrder": "81"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "DE",
+              "attributeValue": "DE",
+              "displayOrder": "82"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GH",
+              "attributeValue": "GH",
+              "displayOrder": "83"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GI",
+              "attributeValue": "GI",
+              "displayOrder": "84"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GR",
+              "attributeValue": "GR",
+              "displayOrder": "85"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GL",
+              "attributeValue": "GL",
+              "displayOrder": "86"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GD",
+              "attributeValue": "GD",
+              "displayOrder": "87"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GP",
+              "attributeValue": "GP",
+              "displayOrder": "88"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GU",
+              "attributeValue": "GU",
+              "displayOrder": "89"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GT",
+              "attributeValue": "GT",
+              "displayOrder": "90"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GG",
+              "attributeValue": "GG",
+              "displayOrder": "91"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GN",
+              "attributeValue": "GN",
+              "displayOrder": "92"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GW",
+              "attributeValue": "GW",
+              "displayOrder": "93"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GY",
+              "attributeValue": "GY",
+              "displayOrder": "94"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "HT",
+              "attributeValue": "HT",
+              "displayOrder": "95"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "HM",
+              "attributeValue": "HM",
+              "displayOrder": "96"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VA",
+              "attributeValue": "VA",
+              "displayOrder": "97"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "HN",
+              "attributeValue": "HN",
+              "displayOrder": "98"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "HK",
+              "attributeValue": "HK",
+              "displayOrder": "99"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "HU",
+              "attributeValue": "HU",
+              "displayOrder": "100"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IS",
+              "attributeValue": "IS",
+              "displayOrder": "101"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IN",
+              "attributeValue": "IN",
+              "displayOrder": "102"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ID",
+              "attributeValue": "ID",
+              "displayOrder": "103"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IR",
+              "attributeValue": "IR",
+              "displayOrder": "104"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IQ",
+              "attributeValue": "IQ",
+              "displayOrder": "105"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IE",
+              "attributeValue": "IE",
+              "displayOrder": "106"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IM",
+              "attributeValue": "IM",
+              "displayOrder": "107"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IL",
+              "attributeValue": "IL",
+              "displayOrder": "108"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "IT",
+              "attributeValue": "IT",
+              "displayOrder": "109"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "JM",
+              "attributeValue": "JM",
+              "displayOrder": "110"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "JP",
+              "attributeValue": "JP",
+              "displayOrder": "111"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "JE",
+              "attributeValue": "JE",
+              "displayOrder": "112"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "JO",
+              "attributeValue": "JO",
+              "displayOrder": "113"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KZ",
+              "attributeValue": "KZ",
+              "displayOrder": "114"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KE",
+              "attributeValue": "KE",
+              "displayOrder": "115"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KI",
+              "attributeValue": "KI",
+              "displayOrder": "116"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KP",
+              "attributeValue": "KP",
+              "displayOrder": "117"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KR",
+              "attributeValue": "KR",
+              "displayOrder": "118"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KW",
+              "attributeValue": "KW",
+              "displayOrder": "119"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KG",
+              "attributeValue": "KG",
+              "displayOrder": "120"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LA",
+              "attributeValue": "LA",
+              "displayOrder": "121"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LV",
+              "attributeValue": "LV",
+              "displayOrder": "122"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LB",
+              "attributeValue": "LB",
+              "displayOrder": "123"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LS",
+              "attributeValue": "LS",
+              "displayOrder": "124"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LR",
+              "attributeValue": "LR",
+              "displayOrder": "125"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LY",
+              "attributeValue": "LY",
+              "displayOrder": "126"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LI",
+              "attributeValue": "LI",
+              "displayOrder": "127"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LT",
+              "attributeValue": "LT",
+              "displayOrder": "128"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LU",
+              "attributeValue": "LU",
+              "displayOrder": "129"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MO",
+              "attributeValue": "MO",
+              "displayOrder": "130"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MG",
+              "attributeValue": "MG",
+              "displayOrder": "131"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MW",
+              "attributeValue": "MW",
+              "displayOrder": "132"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MY",
+              "attributeValue": "MY",
+              "displayOrder": "133"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MV",
+              "attributeValue": "MV",
+              "displayOrder": "134"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ML",
+              "attributeValue": "ML",
+              "displayOrder": "135"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MT",
+              "attributeValue": "MT",
+              "displayOrder": "136"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MH",
+              "attributeValue": "MH",
+              "displayOrder": "137"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MQ",
+              "attributeValue": "MQ",
+              "displayOrder": "138"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MR",
+              "attributeValue": "MR",
+              "displayOrder": "139"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MU",
+              "attributeValue": "MU",
+              "displayOrder": "140"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "YT",
+              "attributeValue": "YT",
+              "displayOrder": "141"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MX",
+              "attributeValue": "MX",
+              "displayOrder": "142"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "FM",
+              "attributeValue": "FM",
+              "displayOrder": "143"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MD",
+              "attributeValue": "MD",
+              "displayOrder": "144"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MC",
+              "attributeValue": "MC",
+              "displayOrder": "145"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MN",
+              "attributeValue": "MN",
+              "displayOrder": "146"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ME",
+              "attributeValue": "ME",
+              "displayOrder": "147"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MS",
+              "attributeValue": "MS",
+              "displayOrder": "148"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MA",
+              "attributeValue": "MA",
+              "displayOrder": "149"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MZ",
+              "attributeValue": "MZ",
+              "displayOrder": "150"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MM",
+              "attributeValue": "MM",
+              "displayOrder": "151"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NA",
+              "attributeValue": "NA",
+              "displayOrder": "152"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NR",
+              "attributeValue": "NR",
+              "displayOrder": "153"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NP",
+              "attributeValue": "NP",
+              "displayOrder": "154"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NL",
+              "attributeValue": "NL",
+              "displayOrder": "155"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NC",
+              "attributeValue": "NC",
+              "displayOrder": "156"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NZ",
+              "attributeValue": "NZ",
+              "displayOrder": "157"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NI",
+              "attributeValue": "NI",
+              "displayOrder": "158"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NE",
+              "attributeValue": "NE",
+              "displayOrder": "159"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NG",
+              "attributeValue": "NG",
+              "displayOrder": "160"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NU",
+              "attributeValue": "NU",
+              "displayOrder": "161"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NF",
+              "attributeValue": "NF",
+              "displayOrder": "162"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MP",
+              "attributeValue": "MP",
+              "displayOrder": "163"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "NO",
+              "attributeValue": "NO",
+              "displayOrder": "164"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "OM",
+              "attributeValue": "OM",
+              "displayOrder": "165"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PK",
+              "attributeValue": "PK",
+              "displayOrder": "166"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PW",
+              "attributeValue": "PW",
+              "displayOrder": "167"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PS",
+              "attributeValue": "PS",
+              "displayOrder": "168"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PA",
+              "attributeValue": "PA",
+              "displayOrder": "169"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PG",
+              "attributeValue": "PG",
+              "displayOrder": "170"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PY",
+              "attributeValue": "PY",
+              "displayOrder": "171"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PE",
+              "attributeValue": "PE",
+              "displayOrder": "172"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PH",
+              "attributeValue": "PH",
+              "displayOrder": "173"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PN",
+              "attributeValue": "PN",
+              "displayOrder": "174"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PL",
+              "attributeValue": "PL",
+              "displayOrder": "175"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PT",
+              "attributeValue": "PT",
+              "displayOrder": "176"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PR",
+              "attributeValue": "PR",
+              "displayOrder": "177"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "QA",
+              "attributeValue": "QA",
+              "displayOrder": "178"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MK",
+              "attributeValue": "MK",
+              "displayOrder": "179"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "RO",
+              "attributeValue": "RO",
+              "displayOrder": "180"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "RU",
+              "attributeValue": "RU",
+              "displayOrder": "181"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "RW",
+              "attributeValue": "RW",
+              "displayOrder": "182"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "RE",
+              "attributeValue": "RE",
+              "displayOrder": "183"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "BL",
+              "attributeValue": "BL",
+              "displayOrder": "184"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SH",
+              "attributeValue": "SH",
+              "displayOrder": "185"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "KN",
+              "attributeValue": "KN",
+              "displayOrder": "186"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LC",
+              "attributeValue": "LC",
+              "displayOrder": "187"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "MF",
+              "attributeValue": "MF",
+              "displayOrder": "188"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "PM",
+              "attributeValue": "PM",
+              "displayOrder": "189"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VC",
+              "attributeValue": "VC",
+              "displayOrder": "190"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "WS",
+              "attributeValue": "WS",
+              "displayOrder": "191"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SM",
+              "attributeValue": "SM",
+              "displayOrder": "192"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ST",
+              "attributeValue": "ST",
+              "displayOrder": "193"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SA",
+              "attributeValue": "SA",
+              "displayOrder": "194"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SN",
+              "attributeValue": "SN",
+              "displayOrder": "195"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "RS",
+              "attributeValue": "RS",
+              "displayOrder": "196"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SC",
+              "attributeValue": "SC",
+              "displayOrder": "197"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SL",
+              "attributeValue": "SL",
+              "displayOrder": "198"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SG",
+              "attributeValue": "SG",
+              "displayOrder": "199"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SX",
+              "attributeValue": "SX",
+              "displayOrder": "200"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SK",
+              "attributeValue": "SK",
+              "displayOrder": "201"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SI",
+              "attributeValue": "SI",
+              "displayOrder": "202"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SB",
+              "attributeValue": "SB",
+              "displayOrder": "203"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SO",
+              "attributeValue": "SO",
+              "displayOrder": "204"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ZA",
+              "attributeValue": "ZA",
+              "displayOrder": "205"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GS",
+              "attributeValue": "GS",
+              "displayOrder": "206"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SS",
+              "attributeValue": "SS",
+              "displayOrder": "207"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ES",
+              "attributeValue": "ES",
+              "displayOrder": "208"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "LK",
+              "attributeValue": "LK",
+              "displayOrder": "209"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SD",
+              "attributeValue": "SD",
+              "displayOrder": "210"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SR",
+              "attributeValue": "SR",
+              "displayOrder": "211"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SJ",
+              "attributeValue": "SJ",
+              "displayOrder": "212"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SE",
+              "attributeValue": "SE",
+              "displayOrder": "213"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CH",
+              "attributeValue": "CH",
+              "displayOrder": "214"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "SY",
+              "attributeValue": "SY",
+              "displayOrder": "215"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TW",
+              "attributeValue": "TW",
+              "displayOrder": "216"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TJ",
+              "attributeValue": "TJ",
+              "displayOrder": "217"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TZ",
+              "attributeValue": "TZ",
+              "displayOrder": "218"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TH",
+              "attributeValue": "TH",
+              "displayOrder": "219"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TL",
+              "attributeValue": "TL",
+              "displayOrder": "220"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TG",
+              "attributeValue": "TG",
+              "displayOrder": "221"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TK",
+              "attributeValue": "TK",
+              "displayOrder": "222"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TO",
+              "attributeValue": "TO",
+              "displayOrder": "223"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TT",
+              "attributeValue": "TT",
+              "displayOrder": "224"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TN",
+              "attributeValue": "TN",
+              "displayOrder": "225"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TR",
+              "attributeValue": "TR",
+              "displayOrder": "226"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TM",
+              "attributeValue": "TM",
+              "displayOrder": "227"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TC",
+              "attributeValue": "TC",
+              "displayOrder": "228"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "TV",
+              "attributeValue": "TV",
+              "displayOrder": "229"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "UG",
+              "attributeValue": "UG",
+              "displayOrder": "230"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "UA",
+              "attributeValue": "UA",
+              "displayOrder": "231"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AE",
+              "attributeValue": "AE",
+              "displayOrder": "232"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "GB",
+              "attributeValue": "GB",
+              "displayOrder": "233"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "UM",
+              "attributeValue": "UM",
+              "displayOrder": "234"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "US",
+              "attributeValue": "US",
+              "displayOrder": "235"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "UY",
+              "attributeValue": "UY",
+              "displayOrder": "236"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "UZ",
+              "attributeValue": "UZ",
+              "displayOrder": "237"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VU",
+              "attributeValue": "VU",
+              "displayOrder": "238"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VE",
+              "attributeValue": "VE",
+              "displayOrder": "239"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VN",
+              "attributeValue": "VN",
+              "displayOrder": "240"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VG",
+              "attributeValue": "VG",
+              "displayOrder": "241"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "VI",
+              "attributeValue": "VI",
+              "displayOrder": "242"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "WF",
+              "attributeValue": "WF",
+              "displayOrder": "243"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "EH",
+              "attributeValue": "EH",
+              "displayOrder": "244"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "YE",
+              "attributeValue": "YE",
+              "displayOrder": "245"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ZM",
+              "attributeValue": "ZM",
+              "displayOrder": "246"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "ZW",
+              "attributeValue": "ZW",
+              "displayOrder": "247"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "AX",
+              "attributeValue": "AX",
+              "displayOrder": "248"
+            }
+          ]
+        },
+        {
+          "name": "Latitude",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "10"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            },
+            "means.location.latitude"
+          ],
+          "attributeContext": "Address/attributeContext/Address/Latitude",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Latitude coordinate in case of geographic coordinates"
+        },
+        {
+          "name": "Longitude",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "11"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            },
+            "means.location.longitude"
+          ],
+          "attributeContext": "Address/attributeContext/Address/Longitude",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Longitude coordinate in case of geographic coordinates"
         }
       ],
       "displayName": "Address",

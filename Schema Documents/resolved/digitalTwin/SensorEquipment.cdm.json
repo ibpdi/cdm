@@ -1,0 +1,212 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SensorEquipment.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorEquipment",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SensorEquipment",
+        "definition": "resolvedFrom/SensorEquipment",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SensorEquipment/attributeContext/SensorEquipment",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SensorEquipment/attributeContext/SensorEquipment/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorEquipmentId",
+            "parent": "SensorEquipment/attributeContext/SensorEquipment",
+            "definition": "resolvedFrom/SensorEquipment/hasAttributes/SensorEquipmentId",
+            "contents": [
+              "SensorEquipment/hasAttributes/SensorEquipmentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "SensorEquipment/attributeContext/SensorEquipment",
+            "definition": "resolvedFrom/SensorEquipment/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "SensorEquipment/attributeContext/SensorEquipment/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorEquipment/attributeContext/SensorEquipment/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorEquipment/attributeContext/SensorEquipment/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorEquipment/attributeContext/SensorEquipment/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorEquipment/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "SensorEquipment/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "SensorEquipment/attributeContext/SensorEquipment",
+            "definition": "resolvedFrom/SensorEquipment/hasAttributes/Type",
+            "contents": [
+              "SensorEquipment/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WifiSignalStrength",
+            "parent": "SensorEquipment/attributeContext/SensorEquipment",
+            "definition": "resolvedFrom/SensorEquipment/hasAttributes/WifiSignalStrength",
+            "contents": [
+              "SensorEquipment/hasAttributes/WifiSignalStrength"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BatteryPercentage",
+            "parent": "SensorEquipment/attributeContext/SensorEquipment",
+            "definition": "resolvedFrom/SensorEquipment/hasAttributes/BatteryPercentage",
+            "contents": [
+              "SensorEquipment/hasAttributes/BatteryPercentage"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorEquipmentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SensorEquipment/attributeContext/SensorEquipment/SensorEquipmentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorEquipment/attributeContext/SensorEquipment/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SensorEquipment/attributeContext/SensorEquipment/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Sensor type",
+          "maximumLength": 50
+        },
+        {
+          "name": "WifiSignalStrength",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SensorEquipment/attributeContext/SensorEquipment/WifiSignalStrength",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Wifi signal strength",
+          "maximumLength": 50
+        },
+        {
+          "name": "BatteryPercentage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorEquipment/attributeContext/SensorEquipment/BatteryPercentage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Battery percentage"
+        }
+      ],
+      "displayName": "SensorEquipment",
+      "description": "Information about sensor equipment",
+      "version": "4.3"
+    }
+  ]
+}

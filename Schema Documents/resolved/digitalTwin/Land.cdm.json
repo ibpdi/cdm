@@ -224,6 +224,15 @@
             "contents": [
               "Land/hasAttributes/GeorefId"
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Status",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/Status",
+            "contents": [
+              "Land/hasAttributes/Status"
+            ]
           }
         ]
       },
@@ -334,40 +343,7 @@
           "attributeContext": "Land/attributeContext/Land/Type",
           "dataFormat": "String",
           "description": "Type of land",
-          "maximumLength": 75,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Agricultural",
-              "attributeValue": "Agricultural",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Recreational",
-              "attributeValue": "Recreational",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Industrial",
-              "attributeValue": "Industrial",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Non-industrial",
-              "attributeValue": "Non-industrial",
-              "displayOrder": "3"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Traffic",
-              "attributeValue": "Traffic",
-              "displayOrder": "4"
-            }
-          ]
+          "maximumLength": 75
         },
         {
           "name": "LandCoverage",
@@ -379,28 +355,7 @@
           "attributeContext": "Land/attributeContext/Land/LandCoverage",
           "dataFormat": "String",
           "description": "Development level of land",
-          "maximumLength": 50,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Fully",
-              "attributeValue": "Fully",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Partially",
-              "attributeValue": "Partially",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Not covered",
-              "attributeValue": "Not covered",
-              "displayOrder": "2"
-            }
-          ]
+          "maximumLength": 50
         },
         {
           "name": "LandParcelNr",
@@ -464,6 +419,19 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "A reference to Guid from the geo-coordinate entity",
+          "maximumLength": 50
+        },
+        {
+          "name": "Status",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Land/attributeContext/Land/Status",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Status of site",
           "maximumLength": 50
         }
       ],

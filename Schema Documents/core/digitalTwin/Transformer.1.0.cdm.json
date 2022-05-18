@@ -1,0 +1,138 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "SubComponentType.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Transformer",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "TransformerId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubComponentType. to Transformer.",
+          "entity": {
+            "entityReference": "SubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "VoltagePrimary",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Voltage primary",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "VoltageSecondary",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Voltage secondary",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Transformer type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SizeKva",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Size kva (kilovolt-ampere)",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Phases",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Phases",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Transformer",
+      "description": "Information about transformer"
+    }
+  ]
+}

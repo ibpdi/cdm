@@ -1,0 +1,131 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "SubSubComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AutomaticTransferSwitch",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "TransferSwitchId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubSubComponentType. to AutomaticTransferSwitch.",
+          "entity": {
+            "entityReference": "SubSubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubSubComponentType/(resolvedAttributes)/SubSubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubSubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubSubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "MainBusMaterial",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Material",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusCurrentRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Current rating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Poles",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Poles"
+        },
+        {
+          "name": "MainsRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Mains rating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TransitionType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Transition type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SwitchingMechanism",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Switching Mechanism",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AutomaticTransferSwitch",
+      "description": "Information about automatic transfer switch"
+    }
+  ]
+}

@@ -36,8 +36,23 @@
         {
           "name": "Value",
           "purpose": "hasA",
-          "dataType": "float",
-          "description": "Value of entity."
+          "dataType": "decimal",
+          "description": "Value of entity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

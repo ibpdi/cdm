@@ -1,0 +1,248 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/RoleOperationalMeasurementContact.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleOperationalMeasurementContact",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RoleOperationalMeasurementContact",
+        "definition": "resolvedFrom/RoleOperationalMeasurementContact",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact",
+            "definition": "resolvedFrom/RoleOperationalMeasurementContact/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleOperationalMeasurementContact/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "RoleOperationalMeasurementContact/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact",
+            "definition": "resolvedFrom/RoleOperationalMeasurementContact/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "OperationalMeasurement",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/OperationalMeasurementId",
+                "definition": "resolvedFrom/OperationalMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/OperationalMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/OperationalMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleOperationalMeasurementContact/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "contents": [
+                          "RoleOperationalMeasurementContact/hasAttributes/OperationalMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContactId",
+            "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact",
+            "definition": "resolvedFrom/RoleOperationalMeasurementContact/hasAttributes/ContactId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Contact",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/ContactId",
+                "definition": "resolvedFrom/Contact"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/ContactId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/ContactId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/ContactId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleOperationalMeasurementContact/hasAttributes/ContactId/resolutionGuidance/foreignKeyAttribute/ContactId",
+                        "contents": [
+                          "RoleOperationalMeasurementContact/hasAttributes/ContactId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
+                        "OperationalMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define"
+        },
+        {
+          "name": "ContactId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Contact.cdm.json/Contact",
+                        "ContactId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleOperationalMeasurementContact/attributeContext/RoleOperationalMeasurementContact/ContactId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RoleOperationalMeasurementContact",
+      "description": "Linking entity between Role, OperationalMeasurement and Contact",
+      "version": "4.3"
+    }
+  ]
+}

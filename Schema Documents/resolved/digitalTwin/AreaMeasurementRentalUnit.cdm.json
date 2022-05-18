@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AreaMeasurementRentalUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AreaMeasurementRentalUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AreaMeasurementRentalUnit",
+        "definition": "resolvedFrom/AreaMeasurementRentalUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AreaMeasurementId",
+            "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit",
+            "definition": "resolvedFrom/AreaMeasurementRentalUnit/hasAttributes/AreaMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "AreaMeasurement",
+                "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/AreaMeasurementId",
+                "definition": "resolvedFrom/AreaMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/AreaMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/AreaMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AreaMeasurementRentalUnit/hasAttributes/AreaMeasurementId/resolutionGuidance/foreignKeyAttribute/AreaMeasurementId",
+                        "contents": [
+                          "AreaMeasurementRentalUnit/hasAttributes/AreaMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitId",
+            "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit",
+            "definition": "resolvedFrom/AreaMeasurementRentalUnit/hasAttributes/RentalUnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalUnit",
+                "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/RentalUnitId",
+                "definition": "resolvedFrom/RentalUnit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/RentalUnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/RentalUnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AreaMeasurementRentalUnit/hasAttributes/RentalUnitId/resolutionGuidance/foreignKeyAttribute/RentalUnitId",
+                        "contents": [
+                          "AreaMeasurementRentalUnit/hasAttributes/RentalUnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AreaMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/AreaMeasurement.cdm.json/AreaMeasurement",
+                        "AreaMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalUnit.cdm.json/RentalUnit",
+                        "RentalUnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AreaMeasurementRentalUnit/attributeContext/AreaMeasurementRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AreaMeasurementRentalUnit",
+      "description": "Linking entity between AreaMeasurement and RentalUnit",
+      "version": "4.3"
+    }
+  ]
+}

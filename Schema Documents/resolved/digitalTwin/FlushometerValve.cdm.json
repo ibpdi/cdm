@@ -1,0 +1,231 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/FlushometerValve.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FlushometerValve",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "FlushometerValve",
+        "definition": "resolvedFrom/FlushometerValve",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "FlushometerValve/attributeContext/FlushometerValve/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlushometerValveId",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/FlushometerValveId",
+            "contents": [
+              "FlushometerValve/hasAttributes/FlushometerValveId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FlushometerValve/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "FlushometerValve/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterPerFlush",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/WaterPerFlush",
+            "contents": [
+              "FlushometerValve/hasAttributes/WaterPerFlush"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/Type",
+            "contents": [
+              "FlushometerValve/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Technology",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/Technology",
+            "contents": [
+              "FlushometerValve/hasAttributes/Technology"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedOn",
+            "parent": "FlushometerValve/attributeContext/FlushometerValve",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/MountedOn",
+            "contents": [
+              "FlushometerValve/hasAttributes/MountedOn"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FlushometerValveId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/FlushometerValveId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WaterPerFlush",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/WaterPerFlush",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Water per flush"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Faucet type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Technology",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/Technology",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Technology",
+          "maximumLength": 50
+        },
+        {
+          "name": "MountedOn",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/MountedOn",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted on"
+        }
+      ],
+      "displayName": "FlushometerValve",
+      "description": "Information about flushometer valve",
+      "version": "4.3"
+    }
+  ]
+}

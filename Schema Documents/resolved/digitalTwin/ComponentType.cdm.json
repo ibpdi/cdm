@@ -74,6 +74,94 @@
           },
           {
             "type": "attributeDefinition",
+            "name": "Description",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/Description",
+            "contents": [
+              "ComponentType/hasAttributes/Description"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/Type",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Type",
+                "parent": "ComponentType/attributeContext/ComponentType/Type",
+                "definition": "resolvedFrom/Type",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Type",
+                    "parent": "ComponentType/attributeContext/ComponentType/Type/Type",
+                    "definition": "resolvedFrom/Type/members/Type",
+                    "contents": [
+                      "ComponentType/hasAttributes/Type"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Model",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/Model",
+            "contents": [
+              "ComponentType/hasAttributes/Model"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExpectedLifeYear",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/ExpectedLifeYear",
+            "contents": [
+              "ComponentType/hasAttributes/ExpectedLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceInterval",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/MaintenanceInterval",
+            "contents": [
+              "ComponentType/hasAttributes/MaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ModelNumber",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/ModelNumber",
+            "contents": [
+              "ComponentType/hasAttributes/ModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WarrantyDuration",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/WarrantyDuration",
+            "contents": [
+              "ComponentType/hasAttributes/WarrantyDuration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DocumentId",
+            "parent": "ComponentType/attributeContext/ComponentType",
+            "definition": "resolvedFrom/ComponentType/hasAttributes/DocumentId",
+            "contents": [
+              "ComponentType/hasAttributes/DocumentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
             "name": "Class",
             "parent": "ComponentType/attributeContext/ComponentType",
             "definition": "resolvedFrom/Class",
@@ -95,58 +183,6 @@
                   }
                 ]
               }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "Counter",
-            "parent": "ComponentType/attributeContext/ComponentType",
-            "definition": "resolvedFrom/Counter",
-            "contents": [
-              {
-                "type": "attributeGroup",
-                "name": "Counter",
-                "parent": "ComponentType/attributeContext/ComponentType/Counter",
-                "definition": "resolvedFrom/Counter",
-                "contents": [
-                  {
-                    "type": "attributeDefinition",
-                    "name": "Counter",
-                    "parent": "ComponentType/attributeContext/ComponentType/Counter/Counter",
-                    "definition": "resolvedFrom/Counter/members/Counter",
-                    "contents": [
-                      "ComponentType/hasAttributes/Counter"
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "Manufacturer",
-            "parent": "ComponentType/attributeContext/ComponentType",
-            "definition": "resolvedFrom/ComponentType/hasAttributes/Manufacturer",
-            "contents": [
-              "ComponentType/hasAttributes/Manufacturer"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "ManufacturerCode",
-            "parent": "ComponentType/attributeContext/ComponentType",
-            "definition": "resolvedFrom/ComponentType/hasAttributes/ManufacturerCode",
-            "contents": [
-              "ComponentType/hasAttributes/ManufacturerCode"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "ExpectedLifeYear",
-            "parent": "ComponentType/attributeContext/ComponentType",
-            "definition": "resolvedFrom/ComponentType/hasAttributes/ExpectedLifeYear",
-            "contents": [
-              "ComponentType/hasAttributes/ExpectedLifeYear"
             ]
           },
           {
@@ -215,51 +251,42 @@
           "maximumLength": 200
         },
         {
-          "name": "Class",
+          "name": "Description",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "ComponentType/attributeContext/ComponentType/Class/Class/Class",
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Description",
+          "isNullable": true,
           "dataFormat": "String",
-          "description": "Class entity belongs to",
+          "description": "Description of component type",
           "maximumLength": 200
         },
         {
-          "name": "Counter",
-          "appliedTraits": [
-            "is.dataFormat.integer",
-            "means.measurement.count"
-          ],
-          "attributeContext": "ComponentType/attributeContext/ComponentType/Counter/Counter/Counter",
-          "dataFormat": "Int32",
-          "description": "Counter of entity"
-        },
-        {
-          "name": "Manufacturer",
+          "name": "Type",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "ComponentType/attributeContext/ComponentType/Manufacturer",
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Type/Type/Type",
           "dataFormat": "String",
-          "description": "Name of manufacturer",
-          "maximumLength": 100
+          "description": "Type of entity",
+          "maximumLength": 75
         },
         {
-          "name": "ManufacturerCode",
+          "name": "Model",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "ComponentType/attributeContext/ComponentType/ManufacturerCode",
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Model",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Manufacturer code",
-          "maximumLength": 70
+          "description": "Component type name and/or number",
+          "maximumLength": 200
         },
         {
           "name": "ExpectedLifeYear",
@@ -272,6 +299,68 @@
           "isNullable": true,
           "dataFormat": "Int16",
           "description": "Life span of product in years"
+        },
+        {
+          "name": "MaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/MaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/ModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of component type",
+          "maximumLength": 50
+        },
+        {
+          "name": "WarrantyDuration",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.duration.months"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/WarrantyDuration",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Warranty duration in months"
+        },
+        {
+          "name": "DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/DocumentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Link to document",
+          "maximumLength": 50
+        },
+        {
+          "name": "Class",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ComponentType/attributeContext/ComponentType/Class/Class/Class",
+          "dataFormat": "String",
+          "description": "Class entity belongs to",
+          "maximumLength": 200
         },
         {
           "name": "MaintenanceGroup",

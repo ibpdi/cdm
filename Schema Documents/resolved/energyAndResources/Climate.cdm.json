@@ -523,23 +523,47 @@
         {
           "name": "Latitude",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "10"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            },
             "means.location.latitude"
           ],
           "attributeContext": "Climate/attributeContext/Climate/Latitude",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Latitude coordinate in case of geographic coordinates"
         },
         {
           "name": "Longitude",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "11"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            },
             "means.location.longitude"
           ],
           "attributeContext": "Climate/attributeContext/Climate/Longitude",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Longitude coordinate in case of geographic coordinates"
         },
         {

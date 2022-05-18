@@ -1,0 +1,1397 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/FanPoweredBoxReheat.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FanPoweredBoxReheat",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "FanPoweredBoxReheat",
+        "definition": "resolvedFrom/FanPoweredBoxReheat",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanPoweredBoxReheatId",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanPoweredBoxReheatId",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanPoweredBoxReheatId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "FanPoweredBoxReheat/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalHeatingCapacity",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/NominalHeatingCapacity",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/NominalHeatingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MinAirflowRating",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/MinAirflowRating",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/MinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxAirflowRating",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/MaxAirflowRating",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/MaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Configuration",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/Configuration",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/Configuration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletShape",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletShape",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletShape"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSize",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletSize",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletConfiguration",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletConfiguration",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletName",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletName",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCommissionDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletCommissionDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletExpectedEndOfLife",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletExpectedReplacementCost",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInitialCost",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletInitialCost",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCurrency",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletCurrency",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInstallationDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletInstallationDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletMaintenanceInterval",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTurnoverDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletTurnoverDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletModel",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletModel",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletModel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTagNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletTagNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSerialNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/DuctInletSerialNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/DuctInletSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanMotorPower",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanDriveType",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanName",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanCommissionDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanInitialCost",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/Currency",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanInstallationDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanModelNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanTagNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/FanSerialNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/FanSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingType",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingType",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingOutsideDiameter",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingOutsideDiameter",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingName",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingName",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingCommissionDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingCommissionDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingExpectedEndOfLife",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingExpectedEndOfLife",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingDurationLifeYear",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingDurationLifeYear",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingExpectedReplacementCost",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingExpectedReplacementCost",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingInitialCost",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingInitialCost",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingInstallationDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingInstallationDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingMaintenanceInterval",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingMaintenanceInterval",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingTurnoverDate",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingTurnoverDate",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingModelNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingModelNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingTagNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingTagNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingSerialNumber",
+            "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/ReHeatingSerialNumber",
+            "contents": [
+              "FanPoweredBoxReheat/hasAttributes/ReHeatingSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FanPoweredBoxReheatId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanPoweredBoxReheatId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalHeatingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/NominalHeatingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal heating capacity"
+        },
+        {
+          "name": "MinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/MinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Min flow capacity"
+        },
+        {
+          "name": "MaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/MaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max flow capacity"
+        },
+        {
+          "name": "Configuration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/Configuration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan powered box configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletShape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletShape",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet shape"
+        },
+        {
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet expected replacement costs"
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet initial cost"
+        },
+        {
+          "name": "DuctInletCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletCurrency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating type",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating outside diameter"
+        },
+        {
+          "name": "ReHeatingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "ReHeatingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Re heating life span of component in years"
+        },
+        {
+          "name": "ReHeatingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating expected replacement costs"
+        },
+        {
+          "name": "ReHeatingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating initial cost"
+        },
+        {
+          "name": "ReHeatingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of re heating",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/ReHeatingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of re heating",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "FanPoweredBoxReheat",
+      "description": "Information about fan powered box reheat",
+      "version": "4.3"
+    }
+  ]
+}

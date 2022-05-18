@@ -139,6 +139,24 @@
                         "Target",
                         "Target",
                         "4"
+                      ],
+                      [
+                        "en",
+                        "Budget",
+                        "Budget",
+                        "5"
+                      ],
+                      [
+                        "en",
+                        "Direct emissions",
+                        "Direct emissions",
+                        "6"
+                      ],
+                      [
+                        "en",
+                        "Indirect emissions",
+                        "Indirect emissions",
+                        "7"
                       ]
                     ]
                   }
@@ -155,90 +173,8 @@
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "appliedTraits": [
-            {
-              "traitReference": "does.haveDefault",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
-                    "entityShape": "listLookupValues",
-                    "constantValues": [
-                      [
-                        "en",
-                        "Total",
-                        "Total",
-                        "0"
-                      ],
-                      [
-                        "en",
-                        "Scope 1",
-                        "Scope 1",
-                        "1"
-                      ],
-                      [
-                        "en",
-                        "Scope 2",
-                        "Scope 2",
-                        "2"
-                      ],
-                      [
-                        "en",
-                        "Scope 3",
-                        "Scope 3",
-                        "3"
-                      ],
-                      [
-                        "en",
-                        "Unspecified scope",
-                        "Unspecified scope",
-                        "4"
-                      ],
-                      [
-                        "en",
-                        "Net energy",
-                        "Net energy",
-                        "5"
-                      ],
-                      [
-                        "en",
-                        "Consumption",
-                        "Consumption",
-                        "6"
-                      ],
-                      [
-                        "en",
-                        "Renewable on-site",
-                        "Renewable on-site",
-                        "7"
-                      ],
-                      [
-                        "en",
-                        "Renewable including off-site",
-                        "Renewable including off-site",
-                        "8"
-                      ],
-                      [
-                        "en",
-                        "CRREM 1.5°C",
-                        "CRREM 1.5°C",
-                        "9"
-                      ],
-                      [
-                        "en",
-                        "CRREM 2°C",
-                        "CRREM 2°C",
-                        "10"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "description": "Subtype of sustainability indicator e.g. net-energy or  emission scope",
-          "maximumLength": 50,
-          "valueConstrainedToList": true
+          "maximumLength": 50
         },
         {
           "name": "Source",
@@ -325,6 +261,12 @@
                         "District heating & fuel",
                         "District heating & fuel",
                         "11"
+                      ],
+                      [
+                        "en",
+                        "F-gases",
+                        "F-gases",
+                        "12"
                       ]
                     ]
                   }
@@ -443,8 +385,8 @@
                       ],
                       [
                         "en",
-                        "kgCO2e/m²",
-                        "kgCO2e/m²",
+                        "kgCO2e/sqm",
+                        "kgCO2e/sqm",
                         "1"
                       ],
                       [
@@ -455,20 +397,20 @@
                       ],
                       [
                         "en",
-                        "kWh/m²",
-                        "kWh/m²",
+                        "kWh/sqm",
+                        "kWh/sqm",
                         "3"
                       ],
                       [
                         "en",
-                        "€",
-                        "€",
+                        "EUR",
+                        "EUR",
                         "4"
                       ],
                       [
                         "en",
-                        "m²",
-                        "m²",
+                        "sqm",
+                        "sqm",
                         "5"
                       ]
                     ]

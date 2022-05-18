@@ -1,0 +1,230 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/TankWaterHeater.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TankWaterHeater",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "TankWaterHeater",
+        "definition": "resolvedFrom/TankWaterHeater",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "TankWaterHeater/attributeContext/TankWaterHeater",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "TankWaterHeater/attributeContext/TankWaterHeater/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankWaterHeaterId",
+            "parent": "TankWaterHeater/attributeContext/TankWaterHeater",
+            "definition": "resolvedFrom/TankWaterHeater/hasAttributes/TankWaterHeaterId",
+            "contents": [
+              "TankWaterHeater/hasAttributes/TankWaterHeaterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "TankWaterHeater/attributeContext/TankWaterHeater",
+            "definition": "resolvedFrom/TankWaterHeater/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "TankWaterHeater/attributeContext/TankWaterHeater/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TankWaterHeater/attributeContext/TankWaterHeater/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TankWaterHeater/attributeContext/TankWaterHeater/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TankWaterHeater/attributeContext/TankWaterHeater/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TankWaterHeater/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "TankWaterHeater/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FirstHourDelivery",
+            "parent": "TankWaterHeater/attributeContext/TankWaterHeater",
+            "definition": "resolvedFrom/TankWaterHeater/hasAttributes/FirstHourDelivery",
+            "contents": [
+              "TankWaterHeater/hasAttributes/FirstHourDelivery"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Recovery100FRise",
+            "parent": "TankWaterHeater/attributeContext/TankWaterHeater",
+            "definition": "resolvedFrom/TankWaterHeater/hasAttributes/Recovery100FRise",
+            "contents": [
+              "TankWaterHeater/hasAttributes/Recovery100FRise"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankCapacity",
+            "parent": "TankWaterHeater/attributeContext/TankWaterHeater",
+            "definition": "resolvedFrom/TankWaterHeater/hasAttributes/TankCapacity",
+            "contents": [
+              "TankWaterHeater/hasAttributes/TankCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TankWaterHeaterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "TankWaterHeater/attributeContext/TankWaterHeater/TankWaterHeaterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeater/attributeContext/TankWaterHeater/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FirstHourDelivery",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeater/attributeContext/TankWaterHeater/FirstHourDelivery",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "First hour delivery"
+        },
+        {
+          "name": "Recovery100FRise",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeater/attributeContext/TankWaterHeater/Recovery100FRise",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Recovery rate to 100 frise in l per hour"
+        },
+        {
+          "name": "TankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeater/attributeContext/TankWaterHeater/TankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Tank capacity"
+        }
+      ],
+      "displayName": "TankWaterHeater",
+      "description": "Information about tank water heater",
+      "version": "4.3"
+    }
+  ]
+}

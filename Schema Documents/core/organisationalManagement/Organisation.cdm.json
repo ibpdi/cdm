@@ -22,7 +22,7 @@
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "description": "Parent (guid or id) of entity",
           "maximumLength": 50
         },
         {
@@ -43,6 +43,7 @@
           "name": "VatNumber",
           "purpose": "hasA",
           "dataType": "string",
+          "isNullable": true,
           "description": "Vat number of organisation",
           "maximumLength": 50
         },
@@ -57,6 +58,7 @@
           "name": "FiscalYearStartDate",
           "purpose": "startedOn",
           "dataType": "dateTime",
+          "isNullable": true,
           "description": "Start date of fiscal year for organisation in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
           "appliedTraits": [
             "is.formatted.dateTime"

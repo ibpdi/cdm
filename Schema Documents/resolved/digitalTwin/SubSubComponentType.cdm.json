@@ -1,0 +1,458 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SubSubComponentType.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SubSubComponentType",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SubSubComponentType",
+        "definition": "resolvedFrom/SubSubComponentType",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SubSubComponentType/attributeContext/SubSubComponentType/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              "SubSubComponentType/hasAttributes/SubSubComponentTypeId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "SubSubComponentType/attributeContext/SubSubComponentType/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SubSubComponentType/attributeContext/SubSubComponentType/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SubSubComponentType/attributeContext/SubSubComponentType/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SubSubComponentType/attributeContext/SubSubComponentType/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SubSubComponentType/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "SubSubComponentType/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/Name",
+            "contents": [
+              "SubSubComponentType/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Description",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/Description",
+            "contents": [
+              "SubSubComponentType/hasAttributes/Description"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/Type",
+            "contents": [
+              "SubSubComponentType/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Model",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/Model",
+            "contents": [
+              "SubSubComponentType/hasAttributes/Model"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExpectedLifeYear",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/ExpectedLifeYear",
+            "contents": [
+              "SubSubComponentType/hasAttributes/ExpectedLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceInterval",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/MaintenanceInterval",
+            "contents": [
+              "SubSubComponentType/hasAttributes/MaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ModelNumber",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/ModelNumber",
+            "contents": [
+              "SubSubComponentType/hasAttributes/ModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WarrantyDuration",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/WarrantyDuration",
+            "contents": [
+              "SubSubComponentType/hasAttributes/WarrantyDuration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DocumentId",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/DocumentId",
+            "contents": [
+              "SubSubComponentType/hasAttributes/DocumentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Class",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/Class",
+            "contents": [
+              "SubSubComponentType/hasAttributes/Class"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceGroup",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/MaintenanceGroup",
+            "contents": [
+              "SubSubComponentType/hasAttributes/MaintenanceGroup"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaintenanceRelevance",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/MaintenanceRelevance",
+            "contents": [
+              "SubSubComponentType/hasAttributes/MaintenanceRelevance"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UrlLibrary",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/UrlLibrary",
+            "contents": [
+              "SubSubComponentType/hasAttributes/UrlLibrary"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CeIdentification",
+            "parent": "SubSubComponentType/attributeContext/SubSubComponentType",
+            "definition": "resolvedFrom/SubSubComponentType/hasAttributes/CeIdentification",
+            "contents": [
+              "SubSubComponentType/hasAttributes/CeIdentification"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/SubSubComponentTypeId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/Name",
+          "dataFormat": "String",
+          "description": "Name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "Description",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/Description",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Description of component type",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/Type",
+          "dataFormat": "String",
+          "description": "Type of component type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Model",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/Model",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Component type name and/or number",
+          "maximumLength": 200
+        },
+        {
+          "name": "ExpectedLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/ExpectedLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Life span of product in years"
+        },
+        {
+          "name": "MaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/MaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/ModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of component type",
+          "maximumLength": 50
+        },
+        {
+          "name": "WarrantyDuration",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/WarrantyDuration",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Warranty duration in months"
+        },
+        {
+          "name": "DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/DocumentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Link to document",
+          "maximumLength": 50
+        },
+        {
+          "name": "Class",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/Class",
+          "dataFormat": "String",
+          "description": "Class component belongs to",
+          "maximumLength": 200
+        },
+        {
+          "name": "MaintenanceGroup",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/MaintenanceGroup",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Maintenance group",
+          "maximumLength": 50
+        },
+        {
+          "name": "MaintenanceRelevance",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/MaintenanceRelevance",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Relevance of maintenance",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "High",
+              "attributeValue": "High",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Medium",
+              "attributeValue": "Medium",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Low",
+              "attributeValue": "Low",
+              "displayOrder": "2"
+            }
+          ]
+        },
+        {
+          "name": "UrlLibrary",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/UrlLibrary",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Product website",
+          "maximumLength": 200
+        },
+        {
+          "name": "CeIdentification",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SubSubComponentType/attributeContext/SubSubComponentType/CeIdentification",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "European identification number",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "SubSubComponentType",
+      "description": "Sub sub type is a specification for components including information on equipment, product types and materials",
+      "version": "4.3"
+    }
+  ]
+}

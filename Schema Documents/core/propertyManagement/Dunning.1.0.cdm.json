@@ -69,11 +69,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             }
@@ -93,18 +93,18 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             }
           ]
         },
         {
-          "name": "InitialDueData",
+          "name": "InitialDueDate",
           "purpose": "hasA",
           "dataType": "dateTime",
           "description": "Initial due date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",

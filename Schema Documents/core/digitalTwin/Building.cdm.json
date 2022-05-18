@@ -90,7 +90,6 @@
                         "Retail, Retail Centers",
                         "2"
                       ],
-
                       [
                         "en",
                         "Retail, Shopping Center",
@@ -474,7 +473,6 @@
                         "Retail, Retail Centers",
                         "2"
                       ],
-
                       [
                         "en",
                         "Retail, Shopping Center",
@@ -1094,6 +1092,18 @@
                         "Electricity (radiator)",
                         "Electricity (radiator)",
                         "6"
+                      ],
+                      [
+                        "en",
+                        "Biomass",
+                        "Biomass",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Micro combined heat and power",
+                        "Micro combined heat and power",
+                        "8"
                       ]
                     ]
                   }
@@ -1160,6 +1170,18 @@
                         "Electricity (radiator)",
                         "Electricity (radiator)",
                         "6"
+                      ],
+                      [
+                        "en",
+                        "Biomass",
+                        "Biomass",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Micro combined heat and power",
+                        "Micro combined heat and power",
+                        "8"
                       ]
                     ]
                   }
@@ -1178,6 +1200,14 @@
           "dataType": "boolean",
           "isNullable": true,
           "description": "Does the building have air conditioning (Y/N) (Needed for precise  future emissions projection of building)"
+        },
+        {
+          "name": "Status",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Status of site",
+          "maximumLength": 50
         }
       ],
       "displayName": "Building",

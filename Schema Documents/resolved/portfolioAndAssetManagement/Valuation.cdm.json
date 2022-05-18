@@ -340,11 +340,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": " DocumentId",
+            "name": "DocumentId",
             "parent": "Valuation/attributeContext/Valuation",
-            "definition": "resolvedFrom/Valuation/hasAttributes/ DocumentId",
+            "definition": "resolvedFrom/Valuation/hasAttributes/DocumentId",
             "contents": [
-              "Valuation/hasAttributes/ DocumentId"
+              "Valuation/hasAttributes/DocumentId"
             ]
           }
         ]
@@ -552,11 +552,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             },
@@ -653,22 +653,46 @@
         {
           "name": "DiscountRate",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            },
             "means.measurement.rate"
           ],
           "attributeContext": "Valuation/attributeContext/Valuation/DiscountRate",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Discount rate included"
         },
         {
           "name": "DiscountPremiums",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "Valuation/attributeContext/Valuation/DiscountPremiums",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Discount premiums included"
         },
         {
@@ -692,11 +716,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             }
@@ -733,13 +757,13 @@
           "maximumLength": 50
         },
         {
-          "name": " DocumentId",
+          "name": "DocumentId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Valuation/attributeContext/Valuation/ DocumentId",
+          "attributeContext": "Valuation/attributeContext/Valuation/DocumentId",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",

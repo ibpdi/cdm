@@ -1,0 +1,230 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/HvacValve.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "HvacValve",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "HvacValve",
+        "definition": "resolvedFrom/HvacValve",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "HvacValve/attributeContext/HvacValve",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "HvacValve/attributeContext/HvacValve/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HvacValveId",
+            "parent": "HvacValve/attributeContext/HvacValve",
+            "definition": "resolvedFrom/HvacValve/hasAttributes/HvacValveId",
+            "contents": [
+              "HvacValve/hasAttributes/HvacValveId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "HvacValve/attributeContext/HvacValve",
+            "definition": "resolvedFrom/HvacValve/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "HvacValve/attributeContext/HvacValve/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "HvacValve/attributeContext/HvacValve/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "HvacValve/attributeContext/HvacValve/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "HvacValve/attributeContext/HvacValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacValve/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "HvacValve/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "HvacValve/attributeContext/HvacValve",
+            "definition": "resolvedFrom/HvacValve/hasAttributes/PressureCapacity",
+            "contents": [
+              "HvacValve/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PipeDiameter",
+            "parent": "HvacValve/attributeContext/HvacValve",
+            "definition": "resolvedFrom/HvacValve/hasAttributes/PipeDiameter",
+            "contents": [
+              "HvacValve/hasAttributes/PipeDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "HvacValve/attributeContext/HvacValve",
+            "definition": "resolvedFrom/HvacValve/hasAttributes/FlowCapacity",
+            "contents": [
+              "HvacValve/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "HvacValveId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacValve/attributeContext/HvacValve/HvacValveId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacValve/attributeContext/HvacValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacValve/attributeContext/HvacValve/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity of hvac valve"
+        },
+        {
+          "name": "PipeDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacValve/attributeContext/HvacValve/PipeDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pipe diameter of hvac valve"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacValve/attributeContext/HvacValve/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "HvacValve",
+      "description": "Information about hvac valve used to control flow in pipes",
+      "version": "4.3"
+    }
+  ]
+}

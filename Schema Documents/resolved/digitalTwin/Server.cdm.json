@@ -1,0 +1,228 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Server.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Server",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Server",
+        "definition": "resolvedFrom/Server",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Server/attributeContext/Server",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Server/attributeContext/Server/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ServerId",
+            "parent": "Server/attributeContext/Server",
+            "definition": "resolvedFrom/Server/hasAttributes/ServerId",
+            "contents": [
+              "Server/hasAttributes/ServerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "Server/attributeContext/Server",
+            "definition": "resolvedFrom/Server/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "Server/attributeContext/Server/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Server/attributeContext/Server/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Server/attributeContext/Server/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Server/attributeContext/Server/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Server/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "Server/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedInRack",
+            "parent": "Server/attributeContext/Server",
+            "definition": "resolvedFrom/Server/hasAttributes/MountedInRack",
+            "contents": [
+              "Server/hasAttributes/MountedInRack"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RackPosition",
+            "parent": "Server/attributeContext/Server",
+            "definition": "resolvedFrom/Server/hasAttributes/RackPosition",
+            "contents": [
+              "Server/hasAttributes/RackPosition"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfPorts",
+            "parent": "Server/attributeContext/Server",
+            "definition": "resolvedFrom/Server/hasAttributes/NumberOfPorts",
+            "contents": [
+              "Server/hasAttributes/NumberOfPorts"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeightRUs",
+            "parent": "Server/attributeContext/Server",
+            "definition": "resolvedFrom/Server/hasAttributes/HeightRUs",
+            "contents": [
+              "Server/hasAttributes/HeightRUs"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ServerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Server/attributeContext/Server/ServerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Server/attributeContext/Server/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MountedInRack",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Server/attributeContext/Server/MountedInRack",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted in it rack"
+        },
+        {
+          "name": "RackPosition",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Server/attributeContext/Server/RackPosition",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack position",
+          "maximumLength": 50
+        },
+        {
+          "name": "NumberOfPorts",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "Server/attributeContext/Server/NumberOfPorts",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of ports"
+        },
+        {
+          "name": "HeightRUs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Server/attributeContext/Server/HeightRUs",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Height of RUs (rack units)"
+        }
+      ],
+      "displayName": "Server",
+      "description": "Information about server",
+      "version": "4.3"
+    }
+  ]
+}

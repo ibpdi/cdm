@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SystemUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SystemUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SystemUnit",
+        "definition": "resolvedFrom/SystemUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SystemUnit/attributeContext/SystemUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SystemUnit/attributeContext/SystemUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "SystemUnit/attributeContext/SystemUnit",
+            "definition": "resolvedFrom/SystemUnit/hasAttributes/SystemId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "System",
+                "parent": "SystemUnit/attributeContext/SystemUnit/SystemId",
+                "definition": "resolvedFrom/System"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SystemUnit/attributeContext/SystemUnit/SystemId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SystemUnit/attributeContext/SystemUnit/SystemId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SystemUnit/attributeContext/SystemUnit/SystemId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SystemUnit/hasAttributes/SystemId/resolutionGuidance/foreignKeyAttribute/SystemId",
+                        "contents": [
+                          "SystemUnit/hasAttributes/SystemId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UnitId",
+            "parent": "SystemUnit/attributeContext/SystemUnit",
+            "definition": "resolvedFrom/SystemUnit/hasAttributes/UnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Unit",
+                "parent": "SystemUnit/attributeContext/SystemUnit/UnitId",
+                "definition": "resolvedFrom/Unit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SystemUnit/attributeContext/SystemUnit/UnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SystemUnit/attributeContext/SystemUnit/UnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SystemUnit/attributeContext/SystemUnit/UnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SystemUnit/hasAttributes/UnitId/resolutionGuidance/foreignKeyAttribute/UnitId",
+                        "contents": [
+                          "SystemUnit/hasAttributes/UnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/System.cdm.json/System",
+                        "SystemId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SystemUnit/attributeContext/SystemUnit/SystemId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "UnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Unit.cdm.json/Unit",
+                        "UnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SystemUnit/attributeContext/SystemUnit/UnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "SystemUnit",
+      "description": "Linking entity between system and unit",
+      "version": "4.3"
+    }
+  ]
+}

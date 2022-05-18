@@ -1,0 +1,102 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "System.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectronicSafetyAndSecuritySystem",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ElectronicSafetyAndSecuritySystemId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk System. to ElectronicSafetyAndSecuritySystem.",
+          "entity": {
+            "entityReference": "System",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "System/(resolvedAttributes)/SystemId"
+                ]
+              }
+            ]
+          },
+          "name": "SystemId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SystemId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "AlarmType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of alarm",
+          "maximumLength": 50
+        },
+        {
+          "name": "StatusCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Status code of alarm",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemStatus",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "System status of electronic safety and security system",
+          "maximumLength": 50
+        },
+        {
+          "name": "BackupBatteryCapacity",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Backup battery capacity (Y/N)"
+        },
+        {
+          "name": "DisplayType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of display",
+          "maximumLength": 50
+        },
+        {
+          "name": "FailSafeCapability",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Fail safe capability (Y/N)"
+        }
+      ],
+      "displayName": "ElectronicSafetyAndSecuritySystem",
+      "description": "Detailed information about electronic safety and security system"
+    }
+  ]
+}

@@ -132,6 +132,15 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Accuracy",
+            "parent": "AreaMeasurement/attributeContext/AreaMeasurement",
+            "definition": "resolvedFrom/AreaMeasurement/hasAttributes/Accuracy",
+            "contents": [
+              "AreaMeasurement/hasAttributes/Accuracy"
+            ]
           }
         ]
       },
@@ -389,91 +398,97 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Rentable area common occupancy",
-              "attributeValue": "Rentable area common occupancy",
-              "displayOrder": "29"
-            },
-            {
-              "languageTag": "en",
               "displayText": "Building amenity area",
               "attributeValue": "Building amenity area",
-              "displayOrder": "30"
+              "displayOrder": "29"
             },
             {
               "languageTag": "en",
               "displayText": "Building service area",
               "attributeValue": "Building service area",
-              "displayOrder": "31"
+              "displayOrder": "30"
             },
             {
               "languageTag": "en",
               "displayText": "Floor service area",
               "attributeValue": "Floor service area",
-              "displayOrder": "32"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Rentable area exclusive occupancy",
-              "attributeValue": "Rentable area exclusive occupancy",
-              "displayOrder": "33"
+              "displayOrder": "31"
             },
             {
               "languageTag": "en",
               "displayText": "Tenant ancillary area",
               "attributeValue": "Tenant ancillary area",
-              "displayOrder": "34"
+              "displayOrder": "32"
             },
             {
               "languageTag": "en",
               "displayText": "Tenant area",
               "attributeValue": "Tenant area",
-              "displayOrder": "35"
+              "displayOrder": "33"
             },
             {
               "languageTag": "en",
               "displayText": "Major vertical penetrations",
               "attributeValue": "Major vertical penetrations",
-              "displayOrder": "36"
+              "displayOrder": "34"
             },
             {
               "languageTag": "en",
               "displayText": "Occupant Storage area",
               "attributeValue": "Occupant Storage area",
-              "displayOrder": "37"
+              "displayOrder": "35"
             },
             {
               "languageTag": "en",
               "displayText": "Parking area",
               "attributeValue": "Parking area",
-              "displayOrder": "38"
+              "displayOrder": "36"
             },
             {
               "languageTag": "en",
               "displayText": "Unenclosed Building Feature: Covered Gallery",
               "attributeValue": "Unenclosed Building Feature: Covered Gallery",
-              "displayOrder": "39"
+              "displayOrder": "37"
             },
             {
               "languageTag": "en",
               "displayText": "Vacant area",
               "attributeValue": "Vacant area",
-              "displayOrder": "40"
+              "displayOrder": "38"
             },
             {
               "languageTag": "en",
               "displayText": "NA",
               "attributeValue": "NA",
-              "displayOrder": "41"
+              "displayOrder": "39"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Energy reference area",
+              "attributeValue": "Energy reference area",
+              "displayOrder": "40"
             }
           ]
         },
         {
           "name": "Value",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/Value/Value/Value",
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Value of entity"
         },
         {
@@ -494,14 +509,14 @@
           "defaultValue": [
             {
               "languageTag": "en",
-              "displayText": "m�",
-              "attributeValue": "square meter",
+              "displayText": "sqm",
+              "attributeValue": "sqm",
               "displayOrder": "0"
             },
             {
               "languageTag": "en",
-              "displayText": "ft�",
-              "attributeValue": "square feet",
+              "displayText": "sqft",
+              "attributeValue": "sqft",
               "displayOrder": "1"
             }
           ]
@@ -543,6 +558,46 @@
           "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/ValidityInfo/ValidityInfo/ValidUntil",
           "dataFormat": "DateTime",
           "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Accuracy",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AreaMeasurement/attributeContext/AreaMeasurement/Accuracy",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Accuracy of area measurement",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Estimated",
+              "attributeValue": "Estimated",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Measured",
+              "attributeValue": "Measured",
+              "displayOrder": "1"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Aggregated",
+              "attributeValue": "Aggregated",
+              "displayOrder": "2"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Unknown",
+              "attributeValue": "Unknown",
+              "displayOrder": "3"
+            }
+          ]
         }
       ],
       "displayName": "AreaMeasurement",

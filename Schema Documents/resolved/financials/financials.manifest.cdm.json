@@ -19,6 +19,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "CostCenterLand",
+      "entityPath": "CostCenterLand.cdm.json/CostCenterLand"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "CostCenterPortfolio",
       "entityPath": "CostCenterPortfolio.cdm.json/CostCenterPortfolio"
     },
@@ -67,6 +72,20 @@
     },
     {
       "fromEntity": "CostCenterBuilding.cdm.json/CostCenterBuilding",
+      "fromEntityAttribute": "CostCenterId",
+      "toEntity": "CostCenter.cdm.json/CostCenter",
+      "toEntityAttribute": "CostCenterId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CostCenterLand.cdm.json/CostCenterLand",
       "fromEntityAttribute": "CostCenterId",
       "toEntity": "CostCenter.cdm.json/CostCenter",
       "toEntityAttribute": "CostCenterId",

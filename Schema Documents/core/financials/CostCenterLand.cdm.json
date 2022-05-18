@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "CostCenter.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Land.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CostCenterLand",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk CostCenter. to CostCenterLand.",
+          "entity": {
+            "entityReference": "CostCenter",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "CostCenter/(resolvedAttributes)/CostCenterId"
+                ]
+              }
+            ]
+          },
+          "name": "CostCenterId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CostCenterId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Land. to CostCenterLand.",
+          "entity": {
+            "entityReference": "Land",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Land/(resolvedAttributes)/LandId"
+                ]
+              }
+            ]
+          },
+          "name": "LandId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "LandId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CostCenterLand",
+      "description": "Linking entity between CostCenter and Land"
+    }
+  ]
+}

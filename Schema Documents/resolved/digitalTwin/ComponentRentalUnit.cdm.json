@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ComponentRentalUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ComponentRentalUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ComponentRentalUnit",
+        "definition": "resolvedFrom/ComponentRentalUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentId",
+            "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit",
+            "definition": "resolvedFrom/ComponentRentalUnit/hasAttributes/ComponentId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Component",
+                "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/ComponentId",
+                "definition": "resolvedFrom/Component"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/ComponentId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/ComponentId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/ComponentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ComponentRentalUnit/hasAttributes/ComponentId/resolutionGuidance/foreignKeyAttribute/ComponentId",
+                        "contents": [
+                          "ComponentRentalUnit/hasAttributes/ComponentId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitId",
+            "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit",
+            "definition": "resolvedFrom/ComponentRentalUnit/hasAttributes/RentalUnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalUnit",
+                "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/RentalUnitId",
+                "definition": "resolvedFrom/RentalUnit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/RentalUnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/RentalUnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ComponentRentalUnit/hasAttributes/RentalUnitId/resolutionGuidance/foreignKeyAttribute/RentalUnitId",
+                        "contents": [
+                          "ComponentRentalUnit/hasAttributes/RentalUnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Component.cdm.json/Component",
+                        "ComponentId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/ComponentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalUnit.cdm.json/RentalUnit",
+                        "RentalUnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ComponentRentalUnit/attributeContext/ComponentRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ComponentRentalUnit",
+      "description": "Linking entity between Component and RentalUnit",
+      "version": "4.3"
+    }
+  ]
+}

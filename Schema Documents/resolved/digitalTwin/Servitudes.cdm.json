@@ -49,6 +49,31 @@
           },
           {
             "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Servitudes/attributeContext/Servitudes",
+            "definition": "resolvedFrom/Name",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "Servitudes/attributeContext/Servitudes/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "Servitudes/attributeContext/Servitudes/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "Servitudes/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
             "name": "Type",
             "parent": "Servitudes/attributeContext/Servitudes",
             "definition": "resolvedFrom/Servitudes/hasAttributes/Type",
@@ -89,6 +114,15 @@
                 ]
               }
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DocumentId",
+            "parent": "Servitudes/attributeContext/Servitudes",
+            "definition": "resolvedFrom/Servitudes/hasAttributes/DocumentId",
+            "contents": [
+              "Servitudes/hasAttributes/DocumentId"
+            ]
           }
         ]
       },
@@ -105,6 +139,19 @@
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "means.entityName"
+          ],
+          "attributeContext": "Servitudes/attributeContext/Servitudes/Name/Name/Name",
+          "dataFormat": "String",
+          "description": "Name of entity",
+          "maximumLength": 200
         },
         {
           "name": "Type",
@@ -176,6 +223,18 @@
           "attributeContext": "Servitudes/attributeContext/Servitudes/ValidityInfo/ValidityInfo/ValidUntil",
           "dataFormat": "DateTime",
           "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DocumentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Servitudes/attributeContext/Servitudes/DocumentId",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 50
         }
       ],
       "displayName": "Servitudes",

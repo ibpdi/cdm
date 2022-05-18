@@ -63,7 +63,7 @@
           "attributeGroupReference": "ValidityInfo"
         },
         {
-          "name": " DocumentId",
+          "name": "DocumentId",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,

@@ -1,0 +1,707 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/HvacSystem.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "HvacSystem",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "HvacSystem",
+        "definition": "resolvedFrom/HvacSystem",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "HvacSystem/attributeContext/HvacSystem/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HvacSystemId",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/HvacSystemId",
+            "contents": [
+              "HvacSystem/hasAttributes/HvacSystemId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/SystemId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "System",
+                "parent": "HvacSystem/attributeContext/HvacSystem/SystemId",
+                "definition": "resolvedFrom/System"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "HvacSystem/attributeContext/HvacSystem/SystemId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "HvacSystem/attributeContext/HvacSystem/SystemId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "HvacSystem/attributeContext/HvacSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacSystem/hasAttributes/SystemId/resolutionGuidance/foreignKeyAttribute/SystemId",
+                        "contents": [
+                          "HvacSystem/hasAttributes/SystemId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DesignLoadPerArea",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/DesignLoadPerArea",
+            "contents": [
+              "HvacSystem/hasAttributes/DesignLoadPerArea"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ActualLoad",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/ActualLoad",
+            "contents": [
+              "HvacSystem/hasAttributes/ActualLoad"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DesignHeatingLoad",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/DesignHeatingLoad",
+            "contents": [
+              "HvacSystem/hasAttributes/DesignHeatingLoad"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CalculatedHeatingLoad",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/CalculatedHeatingLoad",
+            "contents": [
+              "HvacSystem/hasAttributes/CalculatedHeatingLoad"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DesignCoolingLoad",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/DesignCoolingLoad",
+            "contents": [
+              "HvacSystem/hasAttributes/DesignCoolingLoad"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CalculatedCoolingLoad",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/CalculatedCoolingLoad",
+            "contents": [
+              "HvacSystem/hasAttributes/CalculatedCoolingLoad"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LoadUnit",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/LoadUnit",
+            "contents": [
+              "HvacSystem/hasAttributes/LoadUnit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpecifiedSupplyAirflow",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/SpecifiedSupplyAirflow",
+            "contents": [
+              "HvacSystem/hasAttributes/SpecifiedSupplyAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CalculatedSupplyAirflow",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/CalculatedSupplyAirflow",
+            "contents": [
+              "HvacSystem/hasAttributes/CalculatedSupplyAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ActualSupplyAirflow",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/ActualSupplyAirflow",
+            "contents": [
+              "HvacSystem/hasAttributes/ActualSupplyAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpecifiedExhaustAirflow",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/SpecifiedExhaustAirflow",
+            "contents": [
+              "HvacSystem/hasAttributes/SpecifiedExhaustAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ActualExhaustAirflow",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/ActualExhaustAirflow",
+            "contents": [
+              "HvacSystem/hasAttributes/ActualExhaustAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AirflowUnit",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/AirflowUnit",
+            "contents": [
+              "HvacSystem/hasAttributes/AirflowUnit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingCapacity",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/HeatingCapacity",
+            "contents": [
+              "HvacSystem/hasAttributes/HeatingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoolingCapacity",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/CoolingCapacity",
+            "contents": [
+              "HvacSystem/hasAttributes/CoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoolingSensibleHeatRatio",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/CoolingSensibleHeatRatio",
+            "contents": [
+              "HvacSystem/hasAttributes/CoolingSensibleHeatRatio"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaximumCoolingCapacity",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/MaximumCoolingCapacity",
+            "contents": [
+              "HvacSystem/hasAttributes/MaximumCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ManufacturerCoilBypassFactor",
+            "parent": "HvacSystem/attributeContext/HvacSystem",
+            "definition": "resolvedFrom/HvacSystem/hasAttributes/ManufacturerCoilBypassFactor",
+            "contents": [
+              "HvacSystem/hasAttributes/ManufacturerCoilBypassFactor"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "HvacSystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/HvacSystemId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/System.cdm.json/System",
+                        "SystemId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "DesignLoadPerArea",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/DesignLoadPerArea",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Design load per area"
+        },
+        {
+          "name": "ActualLoad",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/ActualLoad",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Actual hvac load"
+        },
+        {
+          "name": "DesignHeatingLoad",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/DesignHeatingLoad",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Design heating load per area"
+        },
+        {
+          "name": "CalculatedHeatingLoad",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/CalculatedHeatingLoad",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Calculated heating load per area"
+        },
+        {
+          "name": "DesignCoolingLoad",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/DesignCoolingLoad",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Design cooling load per area"
+        },
+        {
+          "name": "CalculatedCoolingLoad",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/CalculatedCoolingLoad",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Calculated cooling load per area"
+        },
+        {
+          "name": "LoadUnit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/LoadUnit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of load",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "W/sqm",
+              "attributeValue": "W/sqm",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "W/sqft",
+              "attributeValue": "W/sqft",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "SpecifiedSupplyAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/SpecifiedSupplyAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Specified supply airflow"
+        },
+        {
+          "name": "CalculatedSupplyAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/CalculatedSupplyAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Specified supply airflow"
+        },
+        {
+          "name": "ActualSupplyAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/ActualSupplyAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Actual supply airflow"
+        },
+        {
+          "name": "SpecifiedExhaustAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/SpecifiedExhaustAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Specified exhaust airflow"
+        },
+        {
+          "name": "ActualExhaustAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/ActualExhaustAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Actual exhaust airflow"
+        },
+        {
+          "name": "AirflowUnit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/AirflowUnit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of airflow",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "CMM",
+              "attributeValue": "CMM",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "CFM",
+              "attributeValue": "CFM",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "HeatingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/HeatingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Heating capacity"
+        },
+        {
+          "name": "CoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/CoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Cooling capacity in tonnes"
+        },
+        {
+          "name": "CoolingSensibleHeatRatio",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/CoolingSensibleHeatRatio",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Cooling sensible heat ratio"
+        },
+        {
+          "name": "MaximumCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/MaximumCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Maximum cooling capacity"
+        },
+        {
+          "name": "ManufacturerCoilBypassFactor",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacSystem/attributeContext/HvacSystem/ManufacturerCoilBypassFactor",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Manufacturer coil bypass factor"
+        }
+      ],
+      "displayName": "HvacSystem",
+      "description": "Detailed information about heating, ventilation, and air conditioning system (HVAC) .HVAC refers to the different systems used for moving air between indoor and outdoor areas, along with heating and cooling buildings",
+      "version": "4.3"
+    }
+  ]
+}

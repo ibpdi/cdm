@@ -1,0 +1,248 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/RolePortfolioStrategyOrganisation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RolePortfolioStrategyOrganisation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RolePortfolioStrategyOrganisation",
+        "definition": "resolvedFrom/RolePortfolioStrategyOrganisation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation",
+            "definition": "resolvedFrom/RolePortfolioStrategyOrganisation/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RolePortfolioStrategyOrganisation/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "RolePortfolioStrategyOrganisation/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortfolioStrategyId",
+            "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation",
+            "definition": "resolvedFrom/RolePortfolioStrategyOrganisation/hasAttributes/PortfolioStrategyId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "PortfolioStrategy",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/PortfolioStrategyId",
+                "definition": "resolvedFrom/PortfolioStrategy"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/PortfolioStrategyId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/PortfolioStrategyId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/PortfolioStrategyId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RolePortfolioStrategyOrganisation/hasAttributes/PortfolioStrategyId/resolutionGuidance/foreignKeyAttribute/PortfolioStrategyId",
+                        "contents": [
+                          "RolePortfolioStrategyOrganisation/hasAttributes/PortfolioStrategyId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation",
+            "definition": "resolvedFrom/RolePortfolioStrategyOrganisation/hasAttributes/OrganisationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Organisation",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/OrganisationId",
+                "definition": "resolvedFrom/Organisation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/OrganisationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/OrganisationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RolePortfolioStrategyOrganisation/hasAttributes/OrganisationId/resolutionGuidance/foreignKeyAttribute/OrganisationId",
+                        "contents": [
+                          "RolePortfolioStrategyOrganisation/hasAttributes/OrganisationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "PortfolioStrategyId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/portfolioAndAssetManagement/PortfolioStrategy.cdm.json/PortfolioStrategy",
+                        "PortfolioStrategyId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/PortfolioStrategyId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Organisation.cdm.json/Organisation",
+                        "OrganisationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RolePortfolioStrategyOrganisation/attributeContext/RolePortfolioStrategyOrganisation/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RolePortfolioStrategyOrganisation",
+      "description": "Linking entity between Role, PortfolioStrategy and Organisation",
+      "version": "4.3"
+    }
+  ]
+}

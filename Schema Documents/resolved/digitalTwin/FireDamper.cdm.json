@@ -1,0 +1,569 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/FireDamper.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FireDamper",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "FireDamper",
+        "definition": "resolvedFrom/FireDamper",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "FireDamper/attributeContext/FireDamper/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FireDamperId",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/FireDamperId",
+            "contents": [
+              "FireDamper/hasAttributes/FireDamperId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FireDamper/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "FireDamper/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LeakageClass",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/LeakageClass",
+            "contents": [
+              "FireDamper/hasAttributes/LeakageClass"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BladeType",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/BladeType",
+            "contents": [
+              "FireDamper/hasAttributes/BladeType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FireRating",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/FireRating",
+            "contents": [
+              "FireDamper/hasAttributes/FireRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSize",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletSize",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletShape",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletShape",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletShape"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletConfiguration",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletConfiguration",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletName",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletName",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCommissionDate",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletCommissionDate",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletExpectedEndOfLife",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletExpectedReplacementCost",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInitialCost",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletInitialCost",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCurrency",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletCurrency",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInstallationDate",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletInstallationDate",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletMaintenanceInterval",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTurnoverDate",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletTurnoverDate",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletModel",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletModel",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletModel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTagNumber",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletTagNumber",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSerialNumber",
+            "parent": "FireDamper/attributeContext/FireDamper",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DuctInletSerialNumber",
+            "contents": [
+              "FireDamper/hasAttributes/DuctInletSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FireDamperId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/FireDamperId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "LeakageClass",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/LeakageClass",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Class component belongs to",
+          "maximumLength": 200
+        },
+        {
+          "name": "BladeType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/BladeType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Blade type of damper (usually two different types of blade dampers used to modulate air flow: parallel and opposed blade dampers)",
+          "maximumLength": 50
+        },
+        {
+          "name": "FireRating",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/FireRating",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fire rating of fire damper",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletShape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletShape",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet shape"
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet expected replacement costs"
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet initial cost"
+        },
+        {
+          "name": "DuctInletCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletCurrency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "FireDamper",
+      "description": "Information about fire damper",
+      "version": "4.3"
+    }
+  ]
+}

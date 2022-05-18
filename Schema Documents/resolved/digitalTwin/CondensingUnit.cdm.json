@@ -1,0 +1,327 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/CondensingUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CondensingUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CondensingUnit",
+        "definition": "resolvedFrom/CondensingUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CondensingUnit/attributeContext/CondensingUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CondensingUnitId",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/CondensingUnitId",
+            "contents": [
+              "CondensingUnit/hasAttributes/CondensingUnitId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "CondensingUnit/attributeContext/CondensingUnit/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CondensingUnit/attributeContext/CondensingUnit/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CondensingUnit/attributeContext/CondensingUnit/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CondensingUnit/attributeContext/CondensingUnit/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CondensingUnit/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "CondensingUnit/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/Type",
+            "contents": [
+              "CondensingUnit/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RefrigerantType",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/RefrigerantType",
+            "contents": [
+              "CondensingUnit/hasAttributes/RefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalHeatingCapacity",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/NominalHeatingCapacity",
+            "contents": [
+              "CondensingUnit/hasAttributes/NominalHeatingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalCoolingCapacity",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/NominalCoolingCapacity",
+            "contents": [
+              "CondensingUnit/hasAttributes/NominalCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetSensibleHeatingCapacity",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/NetSensibleHeatingCapacity",
+            "contents": [
+              "CondensingUnit/hasAttributes/NetSensibleHeatingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetSensibleCoolingCapacity",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/NetSensibleCoolingCapacity",
+            "contents": [
+              "CondensingUnit/hasAttributes/NetSensibleCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EnergyEfficiencyRating",
+            "parent": "CondensingUnit/attributeContext/CondensingUnit",
+            "definition": "resolvedFrom/CondensingUnit/hasAttributes/EnergyEfficiencyRating",
+            "contents": [
+              "CondensingUnit/hasAttributes/EnergyEfficiencyRating"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CondensingUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/CondensingUnitId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Condensing unit type",
+          "maximumLength": 50
+        },
+        {
+          "name": "RefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/RefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalHeatingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/NominalHeatingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal heating capacity"
+        },
+        {
+          "name": "NominalCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/NominalCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal cooling capacity"
+        },
+        {
+          "name": "NetSensibleHeatingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/NetSensibleHeatingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net sensible heating capacity"
+        },
+        {
+          "name": "NetSensibleCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/NetSensibleCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net sensible cooling capacity"
+        },
+        {
+          "name": "EnergyEfficiencyRating",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CondensingUnit/attributeContext/CondensingUnit/EnergyEfficiencyRating",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Energy efficiency rating",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CondensingUnit",
+      "description": "Information about hvac heat tracing",
+      "version": "4.3"
+    }
+  ]
+}

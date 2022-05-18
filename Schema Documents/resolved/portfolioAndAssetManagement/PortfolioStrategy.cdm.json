@@ -338,10 +338,22 @@
         {
           "name": "StrategyObjectiveValuesSteering",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveValuesSteering",
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Value of the portfolio strategy steering targets"
         },
         {
@@ -372,11 +384,23 @@
         {
           "name": "StrategyObjectiveValues",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "PortfolioStrategy/attributeContext/PortfolioStrategy/StrategyObjectiveValues",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Value of the portfolio strategy targets"
         },
         {

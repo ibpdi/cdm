@@ -1,0 +1,1075 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/UnitHeaterSubComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "UnitHeaterSubComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "UnitHeaterSubComponent",
+        "definition": "resolvedFrom/UnitHeaterSubComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UnitHeaterSubComponentId",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/UnitHeaterSubComponentId",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/UnitHeaterSubComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "UnitHeaterSubComponent/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponent",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SubComponent",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/SubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/Type",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalHeatingCapacity",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/NominalHeatingCapacity",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/NominalHeatingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SteamUnitHeaterCondensate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SteamUnitHeaterCondensate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/SteamUnitHeaterCondensate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HotWaterUnitHeaterFlowCapacity",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HotWaterUnitHeaterFlowCapacity",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HotWaterUnitHeaterFlowCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricUnitHeaterPowerInput",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/ElectricUnitHeaterPowerInput",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/ElectricUnitHeaterPowerInput"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodType",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodType",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodOutsideDiameter",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodOutsideDiameter",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodName",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodName",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodCommissionDate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodCommissionDate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodExpectedEndOfLife",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedEndOfLife",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodDurationLifeYear",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodDurationLifeYear",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodExpectedReplacementCost",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedReplacementCost",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodInitialCost",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodInitialCost",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodInstallationDate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodInstallationDate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodMaintenanceInterval",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodMaintenanceInterval",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodTurnoverDate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodTurnoverDate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodModelNumber",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodModelNumber",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodTagNumber",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodTagNumber",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeatingMethodSerialNumber",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodSerialNumber",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/HeatingMethodSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMotorPower",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanDriveType",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanName",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanCommissionDate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanInitialCost",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/Currency",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanInstallationDate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanModelNumber",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanTagNumber",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanSerialNumber",
+            "contents": [
+              "UnitHeaterSubComponent/hasAttributes/FanSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "UnitHeaterSubComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/UnitHeaterSubComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit heater sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit heater sub component type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalHeatingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/NominalHeatingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal heating capacity"
+        },
+        {
+          "name": "SteamUnitHeaterCondensate",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SteamUnitHeaterCondensate",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Condensate information if steam unit heater",
+          "maximumLength": 50
+        },
+        {
+          "name": "HotWaterUnitHeaterFlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HotWaterUnitHeaterFlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        },
+        {
+          "name": "ElectricUnitHeaterPowerInput",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/ElectricUnitHeaterPowerInput",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power input"
+        },
+        {
+          "name": "HeatingMethodType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Heating method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "HeatingMethodOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Heating method outside diameter"
+        },
+        {
+          "name": "HeatingMethodName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Heating method name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "HeatingMethodCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Heating method commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "HeatingMethodExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Heating method expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "HeatingMethodDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Heating method life span of component in years"
+        },
+        {
+          "name": "HeatingMethodExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Heating method expected replacement costs"
+        },
+        {
+          "name": "HeatingMethodInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Heating method initial cost"
+        },
+        {
+          "name": "HeatingMethodInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "HeatingMethodMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Heating method maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "HeatingMethodTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Heating method turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "HeatingMethodModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of heating method",
+          "maximumLength": 50
+        },
+        {
+          "name": "HeatingMethodTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Heating method tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "HeatingMethodSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of heating method",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "UnitHeaterSubComponent",
+      "description": "Information about steam unit heater",
+      "version": "4.3"
+    }
+  ]
+}

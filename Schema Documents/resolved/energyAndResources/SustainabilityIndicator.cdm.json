@@ -343,6 +343,24 @@
               "displayText": "Target",
               "attributeValue": "Target",
               "displayOrder": "4"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Budget",
+              "attributeValue": "Budget",
+              "displayOrder": "5"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Direct emissions",
+              "attributeValue": "Direct emissions",
+              "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Indirect emissions",
+              "attributeValue": "Indirect emissions",
+              "displayOrder": "7"
             }
           ]
         },
@@ -357,76 +375,7 @@
           "isNullable": true,
           "dataFormat": "String",
           "description": "Subtype of sustainability indicator e.g. net-energy or  emission scope",
-          "maximumLength": 50,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "Total",
-              "attributeValue": "Total",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Scope 1",
-              "attributeValue": "Scope 1",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Scope 2",
-              "attributeValue": "Scope 2",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Scope 3",
-              "attributeValue": "Scope 3",
-              "displayOrder": "3"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Unspecified scope",
-              "attributeValue": "Unspecified scope",
-              "displayOrder": "4"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Net energy",
-              "attributeValue": "Net energy",
-              "displayOrder": "5"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Consumption",
-              "attributeValue": "Consumption",
-              "displayOrder": "6"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Renewable on-site",
-              "attributeValue": "Renewable on-site",
-              "displayOrder": "7"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Renewable including off-site",
-              "attributeValue": "Renewable including off-site",
-              "displayOrder": "8"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "CRREM 1.5°C",
-              "attributeValue": "CRREM 1.5°C",
-              "displayOrder": "9"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "CRREM 2°C",
-              "attributeValue": "CRREM 2°C",
-              "displayOrder": "10"
-            }
-          ]
+          "maximumLength": 50
         },
         {
           "name": "Source",
@@ -513,6 +462,12 @@
               "displayText": "District heating & fuel",
               "attributeValue": "District heating & fuel",
               "displayOrder": "11"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "F-gases",
+              "attributeValue": "F-gases",
+              "displayOrder": "12"
             }
           ]
         },
@@ -594,12 +549,24 @@
         {
           "name": "Value",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
           "attributeContext": "SustainabilityIndicator/attributeContext/SustainabilityIndicator/Value/Value/Value",
           "isNullable": true,
-          "dataFormat": "Float",
-          "description": "Value of entity."
+          "dataFormat": "Decimal",
+          "description": "Value of entity"
         },
         {
           "name": "Unit",
@@ -623,8 +590,8 @@
             },
             {
               "languageTag": "en",
-              "displayText": "kgCO2e/m²",
-              "attributeValue": "kgCO2e/m²",
+              "displayText": "kgCO2e/sqm",
+              "attributeValue": "kgCO2e/sqm",
               "displayOrder": "1"
             },
             {
@@ -635,20 +602,20 @@
             },
             {
               "languageTag": "en",
-              "displayText": "kWh/m²",
-              "attributeValue": "kWh/m²",
+              "displayText": "kWh/sqm",
+              "attributeValue": "kWh/sqm",
               "displayOrder": "3"
             },
             {
               "languageTag": "en",
-              "displayText": "€",
-              "attributeValue": "€",
+              "displayText": "EUR",
+              "attributeValue": "EUR",
               "displayOrder": "4"
             },
             {
               "languageTag": "en",
-              "displayText": "m²",
-              "attributeValue": "m²",
+              "displayText": "sqm",
+              "attributeValue": "sqm",
               "displayOrder": "5"
             }
           ]
