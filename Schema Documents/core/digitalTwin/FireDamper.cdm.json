@@ -1,0 +1,252 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "SubComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FireDamper",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "FireDamperId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubComponentType. to FireDamper.",
+          "entity": {
+            "entityReference": "SubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "LeakageClass",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Class component belongs to",
+          "maximumLength": 200
+        },
+        {
+          "name": "BladeType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Blade type of damper (usually two different types of blade dampers used to modulate air flow: parallel and opposed blade dampers)",
+          "maximumLength": 50
+        },
+        {
+          "name": "FireRating",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Fire rating of fire damper",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSize",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet size",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletShape",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet shape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletCurrency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of component",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "FireDamper",
+      "description": "Information about fire damper"
+    }
+  ]
+}

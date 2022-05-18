@@ -1,0 +1,82 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "System.cdm.json"
+    },
+    {
+      "corpusPath": "Space.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SystemSpace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk System. to SystemSpace.",
+          "entity": {
+            "entityReference": "System",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "System/(resolvedAttributes)/SystemId"
+                ]
+              }
+            ]
+          },
+          "name": "SystemId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SystemId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Space. to SystemSpace.",
+          "entity": {
+            "entityReference": "Space",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Space/(resolvedAttributes)/SpaceId"
+                ]
+              }
+            ]
+          },
+          "name": "SpaceId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SpaceId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "SystemSpace",
+      "description": "Linking entity between system and space"
+    }
+  ]
+}

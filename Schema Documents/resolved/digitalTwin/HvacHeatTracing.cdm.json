@@ -1,0 +1,190 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/HvacHeatTracing.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "HvacHeatTracing",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "HvacHeatTracing",
+        "definition": "resolvedFrom/HvacHeatTracing",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HvacTankId",
+            "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing",
+            "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/HvacTankId",
+            "contents": [
+              "HvacHeatTracing/hasAttributes/HvacTankId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing",
+            "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "HvacHeatTracing/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing",
+            "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/Type",
+            "contents": [
+              "HvacHeatTracing/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerDensity",
+            "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing",
+            "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/PowerDensity",
+            "contents": [
+              "HvacHeatTracing/hasAttributes/PowerDensity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "HvacTankId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacHeatTracing/attributeContext/HvacHeatTracing/HvacTankId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacHeatTracing/attributeContext/HvacHeatTracing/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacHeatTracing/attributeContext/HvacHeatTracing/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Hvac pump type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PowerDensity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacHeatTracing/attributeContext/HvacHeatTracing/PowerDensity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Amount of power density"
+        }
+      ],
+      "displayName": "HvacHeatTracing",
+      "description": "Information about hvac heat tracing",
+      "version": "4.3"
+    }
+  ]
+}

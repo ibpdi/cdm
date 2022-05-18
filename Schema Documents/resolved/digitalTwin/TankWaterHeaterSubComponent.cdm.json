@@ -1,0 +1,283 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/TankWaterHeaterSubComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TankWaterHeaterSubComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "TankWaterHeaterSubComponent",
+        "definition": "resolvedFrom/TankWaterHeaterSubComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankWaterHeaterSubComponentId",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/TankWaterHeaterSubComponentId",
+            "contents": [
+              "TankWaterHeaterSubComponent/hasAttributes/TankWaterHeaterSubComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "TankWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponent",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/SubComponent",
+            "contents": [
+              "TankWaterHeaterSubComponent/hasAttributes/SubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FirstHourDelivery",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/FirstHourDelivery",
+            "contents": [
+              "TankWaterHeaterSubComponent/hasAttributes/FirstHourDelivery"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Recovery100FRise",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/Recovery100FRise",
+            "contents": [
+              "TankWaterHeaterSubComponent/hasAttributes/Recovery100FRise"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankCapacity",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/TankCapacity",
+            "contents": [
+              "TankWaterHeaterSubComponent/hasAttributes/TankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PowerInput",
+            "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/PowerInput",
+            "contents": [
+              "TankWaterHeaterSubComponent/hasAttributes/PowerInput"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TankWaterHeaterSubComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankWaterHeaterSubComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tank water heater sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "FirstHourDelivery",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/FirstHourDelivery",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "First hour delivery"
+        },
+        {
+          "name": "Recovery100FRise",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/Recovery100FRise",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Recovery rate to 100 frise in l per hour"
+        },
+        {
+          "name": "TankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Tank capacity"
+        },
+        {
+          "name": "PowerInput",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/PowerInput",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Power input"
+        }
+      ],
+      "displayName": "TankWaterHeaterSubComponent",
+      "description": "Information about tank water heater sub component",
+      "version": "4.3"
+    }
+  ]
+}

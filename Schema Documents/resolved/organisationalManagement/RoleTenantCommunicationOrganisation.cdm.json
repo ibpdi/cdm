@@ -1,0 +1,247 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/RoleTenantCommunicationOrganisation.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleTenantCommunicationOrganisation",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RoleTenantCommunicationOrganisation",
+        "definition": "resolvedFrom/RoleTenantCommunicationOrganisation",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation",
+            "definition": "resolvedFrom/RoleTenantCommunicationOrganisation/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleTenantCommunicationOrganisation/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "RoleTenantCommunicationOrganisation/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TenantCommunicationId",
+            "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation",
+            "definition": "resolvedFrom/RoleTenantCommunicationOrganisation/hasAttributes/TenantCommunicationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "TenantCommunication",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/TenantCommunicationId",
+                "definition": "resolvedFrom/TenantCommunication"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/TenantCommunicationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/TenantCommunicationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/TenantCommunicationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleTenantCommunicationOrganisation/hasAttributes/TenantCommunicationId/resolutionGuidance/foreignKeyAttribute/TenantCommunicationId",
+                        "contents": [
+                          "RoleTenantCommunicationOrganisation/hasAttributes/TenantCommunicationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation",
+            "definition": "resolvedFrom/RoleTenantCommunicationOrganisation/hasAttributes/OrganisationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Organisation",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/OrganisationId",
+                "definition": "resolvedFrom/Organisation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/OrganisationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/OrganisationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleTenantCommunicationOrganisation/hasAttributes/OrganisationId/resolutionGuidance/foreignKeyAttribute/OrganisationId",
+                        "contents": [
+                          "RoleTenantCommunicationOrganisation/hasAttributes/OrganisationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "TenantCommunicationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/TenantCommunication.cdm.json/TenantCommunication",
+                        "TenantCommunicationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/TenantCommunicationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "maximumLength": 50
+        },
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Organisation.cdm.json/Organisation",
+                        "OrganisationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleTenantCommunicationOrganisation/attributeContext/RoleTenantCommunicationOrganisation/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RoleTenantCommunicationOrganisation",
+      "description": "Linking entity between Role, TenantCommunication and Organisation",
+      "version": "4.3"
+    }
+  ]
+}

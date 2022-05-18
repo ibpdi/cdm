@@ -1,0 +1,274 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/JockeyPump.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "JockeyPump",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "JockeyPump",
+        "definition": "resolvedFrom/JockeyPump",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "JockeyPump/attributeContext/JockeyPump/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "JockeyPumpId",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/JockeyPumpId",
+            "contents": [
+              "JockeyPump/hasAttributes/JockeyPumpId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/JockeyPump/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "JockeyPump/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/Type",
+            "contents": [
+              "JockeyPump/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PumpingMedia",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/PumpingMedia",
+            "contents": [
+              "JockeyPump/hasAttributes/PumpingMedia"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/PressureCapacity",
+            "contents": [
+              "JockeyPump/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeadCapacity",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/HeadCapacity",
+            "contents": [
+              "JockeyPump/hasAttributes/HeadCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "JockeyPump/attributeContext/JockeyPump",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/FlowCapacity",
+            "contents": [
+              "JockeyPump/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "JockeyPumpId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/JockeyPumpId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Jockey pump type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PumpingMedia",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/PumpingMedia",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pumping media",
+          "maximumLength": 100
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity of jockey pump"
+        },
+        {
+          "name": "HeadCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/HeadCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Head capacity"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "JockeyPump",
+      "description": "Information about jockey pump",
+      "version": "4.3"
+    }
+  ]
+}

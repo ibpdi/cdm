@@ -1,0 +1,94 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorEquipment",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "SensorEquipmentId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk ComponentType. to SensorEquipment.",
+          "entity": {
+            "entityReference": "ComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "ComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Sensor type",
+          "maximumLength": 50
+        },
+        {
+          "name": "WifiSignalStrength",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Wifi signal strength",
+          "maximumLength": 50
+        },
+        {
+          "name": "BatteryPercentage",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Battery percentage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "displayName": "SensorEquipment",
+      "description": "Information about sensor equipment"
+    }
+  ]
+}

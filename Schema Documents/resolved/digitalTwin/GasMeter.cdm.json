@@ -1,0 +1,243 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/GasMeter.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "GasMeter",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "GasMeter",
+        "definition": "resolvedFrom/GasMeter",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "GasMeter/attributeContext/GasMeter/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GasMeterId",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "definition": "resolvedFrom/GasMeter/hasAttributes/GasMeterId",
+            "contents": [
+              "GasMeter/hasAttributes/GasMeterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "definition": "resolvedFrom/GasMeter/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "GasMeter/attributeContext/GasMeter/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "GasMeter/attributeContext/GasMeter/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "GasMeter/attributeContext/GasMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "GasMeter/attributeContext/GasMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GasMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "GasMeter/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "definition": "resolvedFrom/GasMeter/hasAttributes/Type",
+            "contents": [
+              "GasMeter/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MassFlow",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "definition": "resolvedFrom/GasMeter/hasAttributes/MassFlow",
+            "contents": [
+              "GasMeter/hasAttributes/MassFlow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Mass",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "definition": "resolvedFrom/GasMeter/hasAttributes/Mass",
+            "contents": [
+              "GasMeter/hasAttributes/Mass"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Measures",
+            "parent": "GasMeter/attributeContext/GasMeter",
+            "definition": "resolvedFrom/GasMeter/hasAttributes/Measures",
+            "contents": [
+              "GasMeter/hasAttributes/Measures"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "GasMeterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "GasMeter/attributeContext/GasMeter/GasMeterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "GasMeter/attributeContext/GasMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "GasMeter/attributeContext/GasMeter/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Water meter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "MassFlow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "GasMeter/attributeContext/GasMeter/MassFlow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Mass flow"
+        },
+        {
+          "name": "Mass",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "GasMeter/attributeContext/GasMeter/Mass",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Volume flow"
+        },
+        {
+          "name": "Measures",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "GasMeter/attributeContext/GasMeter/Measures",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Substance that is measured",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "GasMeter",
+      "description": "Information about gas meter",
+      "version": "4.3"
+    }
+  ]
+}

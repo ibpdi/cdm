@@ -1,0 +1,248 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/RoleRentalUnitContact.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleRentalUnitContact",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "RoleRentalUnitContact",
+        "definition": "resolvedFrom/RoleRentalUnitContact",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RoleId",
+            "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact",
+            "definition": "resolvedFrom/RoleRentalUnitContact/hasAttributes/RoleId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Role",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RoleId",
+                "definition": "resolvedFrom/Role"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RoleId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RoleId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleRentalUnitContact/hasAttributes/RoleId/resolutionGuidance/foreignKeyAttribute/RoleId",
+                        "contents": [
+                          "RoleRentalUnitContact/hasAttributes/RoleId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitId",
+            "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact",
+            "definition": "resolvedFrom/RoleRentalUnitContact/hasAttributes/RentalUnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalUnit",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RentalUnitId",
+                "definition": "resolvedFrom/RentalUnit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RentalUnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RentalUnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleRentalUnitContact/hasAttributes/RentalUnitId/resolutionGuidance/foreignKeyAttribute/RentalUnitId",
+                        "contents": [
+                          "RoleRentalUnitContact/hasAttributes/RentalUnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ContactId",
+            "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact",
+            "definition": "resolvedFrom/RoleRentalUnitContact/hasAttributes/ContactId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Contact",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/ContactId",
+                "definition": "resolvedFrom/Contact"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/ContactId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/ContactId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/ContactId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/RoleRentalUnitContact/hasAttributes/ContactId/resolutionGuidance/foreignKeyAttribute/ContactId",
+                        "contents": [
+                          "RoleRentalUnitContact/hasAttributes/ContactId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "RoleId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Role.cdm.json/Role",
+                        "RoleId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalUnit.cdm.json/RentalUnit",
+                        "RentalUnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ContactId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Contact.cdm.json/Contact",
+                        "ContactId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "RoleRentalUnitContact/attributeContext/RoleRentalUnitContact/ContactId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "RoleRentalUnitContact",
+      "description": "Linking entity between Role, RentalUnit and Contact",
+      "version": "4.3"
+    }
+  ]
+}

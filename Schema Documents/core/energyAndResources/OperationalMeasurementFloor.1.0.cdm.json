@@ -5,10 +5,10 @@
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
-      "corpusPath": "OperationalMeasurement.cdm.json"
+      "corpusPath": "OperationalMeasurement.1.0.cdm.json"
     },
     {
-      "corpusPath": "/core/digitalTwin/Floor.cdm.json"
+      "corpusPath": "/core/digitalTwin/Floor.1.0.cdm.json"
     }
   ],
   "definitions": [

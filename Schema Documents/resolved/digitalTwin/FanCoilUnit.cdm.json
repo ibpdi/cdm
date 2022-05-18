@@ -1,0 +1,1848 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/FanCoilUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "FanCoilUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "FanCoilUnit",
+        "definition": "resolvedFrom/FanCoilUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCoilUnitId",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanCoilUnitId",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanCoilUnitId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "FanCoilUnit/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MinAirflowRating",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/MinAirflowRating",
+            "contents": [
+              "FanCoilUnit/hasAttributes/MinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxAirflowRating",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/MaxAirflowRating",
+            "contents": [
+              "FanCoilUnit/hasAttributes/MaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletShape",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletShape",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletShape"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSize",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletSize",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletSize"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletConfiguration",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletConfiguration",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletName",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletName",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCommissionDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletCommissionDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletExpectedEndOfLife",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletExpectedReplacementCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInitialCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletInitialCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletCurrency",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletCurrency",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletCurrency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletInstallationDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletInstallationDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletMaintenanceInterval",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTurnoverDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletTurnoverDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletModel",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletModel",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletModel"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletTagNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletTagNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DuctInletSerialNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/DuctInletSerialNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/DuctInletSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/Type",
+            "contents": [
+              "FanCoilUnit/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RefrigerantType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/RefrigerantType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/RefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalCoolingCapacity",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/NominalCoolingCapacity",
+            "contents": [
+              "FanCoilUnit/hasAttributes/NominalCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetSensibleCoolingCapacity",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/NetSensibleCoolingCapacity",
+            "contents": [
+              "FanCoilUnit/hasAttributes/NetSensibleCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FilterType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FilterType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FilterType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingMethodType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingMethodType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingMethodType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingMethodRefrigerantType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingMethodRefrigerantType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingMethodRefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingOutsideDiameter",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingOutsideDiameter",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingName",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingName",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingCommissionDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingCommissionDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingExpectedEndOfLife",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingExpectedEndOfLife",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingDurationLifeYear",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingDurationLifeYear",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingExpectedReplacementCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingExpectedReplacementCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingInitialCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingInitialCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingInstallationDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingInstallationDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingMaintenanceInterval",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingMaintenanceInterval",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingTurnoverDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingTurnoverDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingModelNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingModelNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingTagNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingTagNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingSerialNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/PrimaryCoolingSerialNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/PrimaryCoolingSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingMethodType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingMethodType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingMethodType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingMethodRefrigerantType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingMethodRefrigerantType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingMethodRefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingOutsideDiameter",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingOutsideDiameter",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingName",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingName",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingCommissionDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingCommissionDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingExpectedEndOfLife",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingExpectedEndOfLife",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingDurationLifeYear",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingDurationLifeYear",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingExpectedReplacementCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingExpectedReplacementCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingInitialCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingInitialCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingInstallationDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingInstallationDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingMaintenanceInterval",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingMaintenanceInterval",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingTurnoverDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingTurnoverDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingModelNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingModelNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingTagNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingTagNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingSerialNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SecondaryCoolingSerialNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/SecondaryCoolingSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanNominalAirflow",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanNominalAirflow",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMotorPower",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanMotorPower",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMinAirflowRating",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanMinAirflowRating",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaxAirflowRating",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanMaxAirflowRating",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDriveType",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanDriveType",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanName",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanName",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanCommissionDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanCommissionDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedEndOfLife",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanExpectedEndOfLife",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanDurationLifeYear",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanDurationLifeYear",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanExpectedReplacementCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanExpectedReplacementCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInitialCost",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanInitialCost",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/Currency",
+            "contents": [
+              "FanCoilUnit/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanInstallationDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanInstallationDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanMaintenanceInterval",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanMaintenanceInterval",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTurnoverDate",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanTurnoverDate",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanModelNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanModelNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanTagNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanTagNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FanSerialNumber",
+            "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/FanSerialNumber",
+            "contents": [
+              "FanCoilUnit/hasAttributes/FanSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "FanCoilUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanCoilUnitId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/MinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Min flow capacity"
+        },
+        {
+          "name": "MaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/MaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max flow capacity"
+        },
+        {
+          "name": "DuctInletShape",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletShape",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet shape"
+        },
+        {
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet expected replacement costs"
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet initial cost"
+        },
+        {
+          "name": "DuctInletCurrency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletCurrency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan coil unit type",
+          "maximumLength": 50
+        },
+        {
+          "name": "RefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/RefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/NominalCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal cooling capacity"
+        },
+        {
+          "name": "NetSensibleCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/NetSensibleCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net sensible cooling capacity"
+        },
+        {
+          "name": "FilterType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FilterType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Filter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingMethodType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingMethodType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingMethodRefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingMethodRefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Primary cooling outside diameter"
+        },
+        {
+          "name": "PrimaryCoolingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "PrimaryCoolingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Primary cooling commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Primary cooling expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Primary cooling life span of component in years"
+        },
+        {
+          "name": "PrimaryCoolingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Primary cooling expected replacement costs"
+        },
+        {
+          "name": "PrimaryCoolingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Primary cooling initial cost"
+        },
+        {
+          "name": "PrimaryCoolingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Primary cooling turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of primary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/PrimaryCoolingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of primary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingMethodType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingMethodType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingMethodRefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingMethodRefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Secondary cooling outside diameter"
+        },
+        {
+          "name": "SecondaryCoolingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "SecondaryCoolingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Secondary cooling commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Secondary cooling expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Secondary cooling life span of component in years"
+        },
+        {
+          "name": "SecondaryCoolingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Secondary cooling expected replacement costs"
+        },
+        {
+          "name": "SecondaryCoolingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Secondary cooling initial cost"
+        },
+        {
+          "name": "SecondaryCoolingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Secondary cooling turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of secondary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SecondaryCoolingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of secondary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan nominal airflow"
+        },
+        {
+          "name": "FanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan motor power"
+        },
+        {
+          "name": "FanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan min flow capacity"
+        },
+        {
+          "name": "FanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan max flow capacity"
+        },
+        {
+          "name": "FanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "FanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Fan life span of component in years"
+        },
+        {
+          "name": "FanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan expected replacement costs"
+        },
+        {
+          "name": "FanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Fan initial cost"
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "FanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "FanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/FanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of fan",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "FanCoilUnit",
+      "description": "Detailed information about fan coil",
+      "version": "4.3"
+    }
+  ]
+}

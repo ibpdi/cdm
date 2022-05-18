@@ -1,0 +1,221 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingExpansionTank.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingExpansionTank",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingExpansionTank",
+        "definition": "resolvedFrom/PlumbingExpansionTank",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PlumbingExpansionTankId",
+            "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
+            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/PlumbingExpansionTankId",
+            "contents": [
+              "PlumbingExpansionTank/hasAttributes/PlumbingExpansionTankId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
+            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "PlumbingExpansionTank/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankCapacity",
+            "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
+            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/TankCapacity",
+            "contents": [
+              "PlumbingExpansionTank/hasAttributes/TankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemPressure",
+            "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
+            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/SystemPressure",
+            "contents": [
+              "PlumbingExpansionTank/hasAttributes/SystemPressure"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
+            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/Type",
+            "contents": [
+              "PlumbingExpansionTank/hasAttributes/Type"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PlumbingExpansionTankId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/PlumbingExpansionTankId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "TankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/TankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Tank capacity"
+        },
+        {
+          "name": "SystemPressure",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SystemPressure",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "System pressure"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Plumbing tank sub component type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "PlumbingExpansionTank",
+      "description": "Information about plumbing expansion tank",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,199 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/WaterHeater.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WaterHeater",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WaterHeater",
+        "definition": "resolvedFrom/WaterHeater",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WaterHeater/attributeContext/WaterHeater",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WaterHeater/attributeContext/WaterHeater/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterHeaterId",
+            "parent": "WaterHeater/attributeContext/WaterHeater",
+            "definition": "resolvedFrom/WaterHeater/hasAttributes/WaterHeaterId",
+            "contents": [
+              "WaterHeater/hasAttributes/WaterHeaterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "WaterHeater/attributeContext/WaterHeater",
+            "definition": "resolvedFrom/WaterHeater/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "WaterHeater/attributeContext/WaterHeater/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WaterHeater/attributeContext/WaterHeater/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WaterHeater/attributeContext/WaterHeater/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WaterHeater/attributeContext/WaterHeater/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WaterHeater/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "WaterHeater/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FirstHourDelivery",
+            "parent": "WaterHeater/attributeContext/WaterHeater",
+            "definition": "resolvedFrom/WaterHeater/hasAttributes/FirstHourDelivery",
+            "contents": [
+              "WaterHeater/hasAttributes/FirstHourDelivery"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Recovery100FRise",
+            "parent": "WaterHeater/attributeContext/WaterHeater",
+            "definition": "resolvedFrom/WaterHeater/hasAttributes/Recovery100FRise",
+            "contents": [
+              "WaterHeater/hasAttributes/Recovery100FRise"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WaterHeaterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WaterHeater/attributeContext/WaterHeater/WaterHeaterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterHeater/attributeContext/WaterHeater/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FirstHourDelivery",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterHeater/attributeContext/WaterHeater/FirstHourDelivery",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "First hour delivery"
+        },
+        {
+          "name": "Recovery100FRise",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WaterHeater/attributeContext/WaterHeater/Recovery100FRise",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Recovery rate to 100 frise in l per hour"
+        }
+      ],
+      "displayName": "WaterHeater",
+      "description": "Information about water heater",
+      "version": "4.3"
+    }
+  ]
+}

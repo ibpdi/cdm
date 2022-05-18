@@ -1,0 +1,263 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ElectronicSafetyAndSecuritySystem.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectronicSafetyAndSecuritySystem",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ElectronicSafetyAndSecuritySystem",
+        "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectronicSafetyAndSecuritySystemId",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/ElectronicSafetyAndSecuritySystemId",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/ElectronicSafetyAndSecuritySystemId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemId",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/SystemId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "System",
+                "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/SystemId",
+                "definition": "resolvedFrom/System"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/SystemId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/SystemId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/SystemId/resolutionGuidance/foreignKeyAttribute/SystemId",
+                        "contents": [
+                          "ElectronicSafetyAndSecuritySystem/hasAttributes/SystemId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AlarmType",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/AlarmType",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/AlarmType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StatusCode",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/StatusCode",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/StatusCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemStatus",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/SystemStatus",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/SystemStatus"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BackupBatteryCapacity",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/BackupBatteryCapacity",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/BackupBatteryCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DisplayType",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/DisplayType",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/DisplayType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FailSafeCapability",
+            "parent": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem",
+            "definition": "resolvedFrom/ElectronicSafetyAndSecuritySystem/hasAttributes/FailSafeCapability",
+            "contents": [
+              "ElectronicSafetyAndSecuritySystem/hasAttributes/FailSafeCapability"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElectronicSafetyAndSecuritySystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/ElectronicSafetyAndSecuritySystemId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/System.cdm.json/System",
+                        "SystemId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/SystemId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "AlarmType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/AlarmType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of alarm",
+          "maximumLength": 50
+        },
+        {
+          "name": "StatusCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/StatusCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Status code of alarm",
+          "maximumLength": 50
+        },
+        {
+          "name": "SystemStatus",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/SystemStatus",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "System status of electronic safety and security system",
+          "maximumLength": 50
+        },
+        {
+          "name": "BackupBatteryCapacity",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/BackupBatteryCapacity",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Backup battery capacity (Y/N)"
+        },
+        {
+          "name": "DisplayType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/DisplayType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of display",
+          "maximumLength": 50
+        },
+        {
+          "name": "FailSafeCapability",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "ElectronicSafetyAndSecuritySystem/attributeContext/ElectronicSafetyAndSecuritySystem/FailSafeCapability",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Fail safe capability (Y/N)"
+        }
+      ],
+      "displayName": "ElectronicSafetyAndSecuritySystem",
+      "description": "Detailed information about electronic safety and security system",
+      "version": "4.3"
+    }
+  ]
+}

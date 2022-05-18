@@ -113,25 +113,9 @@
             "type": "attributeDefinition",
             "name": "Name",
             "parent": "GhgEmission/attributeContext/GhgEmission",
-            "definition": "resolvedFrom/Name",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/Name",
             "contents": [
-              {
-                "type": "attributeGroup",
-                "name": "Name",
-                "parent": "GhgEmission/attributeContext/GhgEmission/Name",
-                "definition": "resolvedFrom/Name",
-                "contents": [
-                  {
-                    "type": "attributeDefinition",
-                    "name": "Name",
-                    "parent": "GhgEmission/attributeContext/GhgEmission/Name/Name",
-                    "definition": "resolvedFrom/Name/members/Name",
-                    "contents": [
-                      "GhgEmission/hasAttributes/Name"
-                    ]
-                  }
-                ]
-              }
+              "GhgEmission/hasAttributes/Name"
             ]
           },
           {
@@ -217,25 +201,9 @@
             "type": "attributeDefinition",
             "name": "Value",
             "parent": "GhgEmission/attributeContext/GhgEmission",
-            "definition": "resolvedFrom/Value",
+            "definition": "resolvedFrom/GhgEmission/hasAttributes/Value",
             "contents": [
-              {
-                "type": "attributeGroup",
-                "name": "Value",
-                "parent": "GhgEmission/attributeContext/GhgEmission/Value",
-                "definition": "resolvedFrom/Value",
-                "contents": [
-                  {
-                    "type": "attributeDefinition",
-                    "name": "Value",
-                    "parent": "GhgEmission/attributeContext/GhgEmission/Value/Value",
-                    "definition": "resolvedFrom/Value/members/Value",
-                    "contents": [
-                      "GhgEmission/hasAttributes/Value"
-                    ]
-                  }
-                ]
-              }
+              "GhgEmission/hasAttributes/Value"
             ]
           },
           {
@@ -308,14 +276,13 @@
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
-            "is.dataFormat.array",
-            "is.dataFormat.guid"
+            "is.dataFormat.array"
           ],
           "attributeContext": "GhgEmission/attributeContext/GhgEmission/Parent/Parent/ParentId",
           "isNullable": true,
-          "dataFormat": "Guid",
-          "description": "Parent (Guid) of entity.",
-          "maximumLength": 36
+          "dataFormat": "String",
+          "description": "Parent (guid or id) of entity",
+          "maximumLength": 50
         },
         {
           "name": "Name",
@@ -325,7 +292,8 @@
             "is.dataFormat.array",
             "means.entityName"
           ],
-          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Name/Name/Name",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Name",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Name of entity.",
           "maximumLength": 200
@@ -451,7 +419,7 @@
           ],
           "attributeContext": "GhgEmission/attributeContext/GhgEmission/SubType",
           "dataFormat": "String",
-          "description": "Specific type of operational measurement e.g. district heating or water discharge",
+          "description": "Specific type of ghg emission generation e.g. district heating or water discharge",
           "maximumLength": 100,
           "valueConstrainedToList": true,
           "defaultValue": [
@@ -565,315 +533,363 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Water consumption (unspecified)",
-              "attributeValue": "Water consumption (unspecified)",
+              "displayText": "Water discharge",
+              "attributeValue": "Water discharge",
               "displayOrder": "18"
             },
             {
               "languageTag": "en",
-              "displayText": "Recyclable or reusable waste",
-              "attributeValue": "Recyclable or reusable waste",
+              "displayText": "Water consumption (unspecified)",
+              "attributeValue": "Water consumption (unspecified)",
               "displayOrder": "19"
             },
             {
               "languageTag": "en",
-              "displayText": "Non-recyclable waste (to be burned)",
-              "attributeValue": "Non-recyclable waste (to be burned)",
+              "displayText": "Recycling: non-hazardous",
+              "attributeValue": "Recycling: non-hazardous",
               "displayOrder": "20"
             },
             {
               "languageTag": "en",
-              "displayText": "Biodegradable",
-              "attributeValue": "Biodegradable",
+              "displayText": "Incineration: non-hazardous",
+              "attributeValue": "Incineration: non-hazardous",
+              "displayOrder": "21"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste to energy: non-hazardous",
+              "attributeValue": "Waste to energy: non-hazardous",
               "displayOrder": "22"
             },
             {
               "languageTag": "en",
-              "displayText": "Hazardous waste",
-              "attributeValue": "Hazardous waste",
-              "displayOrder": "22"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Waste (unspecified)",
-              "attributeValue": "Waste (unspecified)",
+              "displayText": "Other/Unknown: hazardous",
+              "attributeValue": "Other/Unknown: hazardous",
               "displayOrder": "23"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Other/Unknown: non-hazardous",
+              "attributeValue": "Other/Unknown: non-hazardous",
+              "displayOrder": "24"
             },
             {
               "languageTag": "en",
               "displayText": "Electricity from grid (normal contract)",
               "attributeValue": "Electricity from grid (normal contract)",
-              "displayOrder": "24"
+              "displayOrder": "25"
             },
             {
               "languageTag": "en",
               "displayText": "Carbon dioxide (CO2)",
               "attributeValue": "Carbon dioxide (CO2)",
-              "displayOrder": "25"
+              "displayOrder": "26"
             },
             {
               "languageTag": "en",
               "displayText": "Methane (CH4)",
               "attributeValue": "Methane (CH4)",
-              "displayOrder": "26"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Nitrous oxide (N20)",
-              "attributeValue": "Nitrous oxide (N20)",
               "displayOrder": "27"
             },
             {
               "languageTag": "en",
-              "displayText": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
-              "attributeValue": "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "displayText": "Nitrous oxide (N2O)",
+              "attributeValue": "Nitrous oxide (N2O)",
               "displayOrder": "28"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "attributeValue": "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)",
+              "displayOrder": "29"
             },
             {
               "languageTag": "en",
               "displayText": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
               "attributeValue": "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)",
-              "displayOrder": "29"
+              "displayOrder": "30"
             },
             {
               "languageTag": "en",
               "displayText": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
               "attributeValue": "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)",
-              "displayOrder": "30"
+              "displayOrder": "31"
             },
             {
               "languageTag": "en",
               "displayText": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
               "attributeValue": "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)",
-              "displayOrder": "31"
+              "displayOrder": "32"
             },
             {
               "languageTag": "en",
               "displayText": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
               "attributeValue": "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)",
-              "displayOrder": "32"
+              "displayOrder": "33"
             },
             {
               "languageTag": "en",
               "displayText": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
               "attributeValue": "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)",
-              "displayOrder": "33"
+              "displayOrder": "34"
             },
             {
               "languageTag": "en",
               "displayText": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
               "attributeValue": "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)",
-              "displayOrder": "34"
+              "displayOrder": "35"
             },
             {
               "languageTag": "en",
               "displayText": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
               "attributeValue": "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)",
-              "displayOrder": "35"
+              "displayOrder": "36"
             },
             {
               "languageTag": "en",
               "displayText": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
               "attributeValue": "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)",
-              "displayOrder": "36"
+              "displayOrder": "37"
             },
             {
               "languageTag": "en",
               "displayText": "R-10 | Carbon tetrachloride (CCl4)",
               "attributeValue": "R-10 | Carbon tetrachloride (CCl4)",
-              "displayOrder": "37"
+              "displayOrder": "38"
             },
             {
               "languageTag": "en",
               "displayText": "Bromomethane | Methyl bromide (CH3Br)",
               "attributeValue": "Bromomethane | Methyl bromide (CH3Br)",
-              "displayOrder": "38"
+              "displayOrder": "39"
             },
             {
               "languageTag": "en",
               "displayText": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
               "attributeValue": "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)",
-              "displayOrder": "39"
+              "displayOrder": "40"
             },
             {
               "languageTag": "en",
               "displayText": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
               "attributeValue": "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)",
-              "displayOrder": "40"
+              "displayOrder": "41"
             },
             {
               "languageTag": "en",
               "displayText": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
               "attributeValue": "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)",
-              "displayOrder": "41"
+              "displayOrder": "42"
             },
             {
               "languageTag": "en",
               "displayText": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
               "attributeValue": "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)",
-              "displayOrder": "42"
+              "displayOrder": "43"
             },
             {
               "languageTag": "en",
               "displayText": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
               "attributeValue": "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)",
-              "displayOrder": "43"
+              "displayOrder": "44"
             },
             {
               "languageTag": "en",
               "displayText": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
               "attributeValue": "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)",
-              "displayOrder": "44"
+              "displayOrder": "45"
             },
             {
               "languageTag": "en",
               "displayText": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
               "attributeValue": "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)",
-              "displayOrder": "45"
+              "displayOrder": "46"
             },
             {
               "languageTag": "en",
               "displayText": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
               "attributeValue": "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)",
-              "displayOrder": "46"
+              "displayOrder": "47"
             },
             {
               "languageTag": "en",
               "displayText": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
               "attributeValue": "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)",
-              "displayOrder": "47"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "R-23 | HFC-23 | ",
-              "attributeValue": "R-23 | HFC-23 | ",
               "displayOrder": "48"
             },
             {
               "languageTag": "en",
-              "displayText": "R-32 | HFC-32 | ",
-              "attributeValue": "R-32 | HFC-32 | ",
+              "displayText": "R-23 | HFC-23 |",
+              "attributeValue": "R-23 | HFC-23 |",
               "displayOrder": "49"
             },
             {
               "languageTag": "en",
-              "displayText": "R-41 | HFC-41 | ",
-              "attributeValue": "R-41 | HFC-41 | ",
+              "displayText": "R-32 | HFC-32 |",
+              "attributeValue": "R-32 | HFC-32 |",
               "displayOrder": "50"
             },
             {
               "languageTag": "en",
-              "displayText": "R-125 | HFC-125 | ",
-              "attributeValue": "R-125 | HFC-125 | ",
+              "displayText": "R-41 | HFC-41 |",
+              "attributeValue": "R-41 | HFC-41 |",
               "displayOrder": "51"
             },
             {
               "languageTag": "en",
-              "displayText": "R-134 | HFC-134 | ",
-              "attributeValue": "R-134 | HFC-134 | ",
+              "displayText": "R-125 | HFC-125 |",
+              "attributeValue": "R-125 | HFC-125 |",
               "displayOrder": "52"
             },
             {
               "languageTag": "en",
-              "displayText": "R-134a | HFC-134a | ",
-              "attributeValue": "R-134a | HFC-134a | ",
+              "displayText": "R-134 | HFC-134 |",
+              "attributeValue": "R-134 | HFC-134 |",
               "displayOrder": "53"
             },
             {
               "languageTag": "en",
-              "displayText": "R-143 | HFC-143 | ",
-              "attributeValue": "R-143 | HFC-143 | ",
+              "displayText": "R-134a | HFC-134a |",
+              "attributeValue": "R-134a | HFC-134a |",
               "displayOrder": "54"
             },
             {
               "languageTag": "en",
-              "displayText": "R-143a | HFC-143a | ",
-              "attributeValue": "R-143a | HFC-143a | ",
+              "displayText": "R-143 | HFC-143 |",
+              "attributeValue": "R-143 | HFC-143 |",
               "displayOrder": "55"
             },
             {
               "languageTag": "en",
-              "displayText": "R-152 | HFC-152 | ",
-              "attributeValue": "R-152 | HFC-152 | ",
+              "displayText": "R-143a | HFC-143a |",
+              "attributeValue": "R-143a | HFC-143a |",
               "displayOrder": "56"
             },
             {
               "languageTag": "en",
-              "displayText": "R-152a | HFC-152a | ",
-              "attributeValue": "R-152a | HFC-152a | ",
+              "displayText": "R-152 | HFC-152 |",
+              "attributeValue": "R-152 | HFC-152 |",
               "displayOrder": "57"
             },
             {
               "languageTag": "en",
-              "displayText": "R-161 | HFC-161 | ",
-              "attributeValue": "R-161 | HFC-161 | ",
+              "displayText": "R-152a | HFC-152a |",
+              "attributeValue": "R-152a | HFC-152a |",
               "displayOrder": "58"
             },
             {
               "languageTag": "en",
-              "displayText": "R-227ea | HFC-227ea | ",
-              "attributeValue": "R-227ea | HFC-227ea | ",
+              "displayText": "R-161 | HFC-161 |",
+              "attributeValue": "R-161 | HFC-161 |",
               "displayOrder": "59"
             },
             {
               "languageTag": "en",
-              "displayText": "R-236cb | HFC-236cb | ",
-              "attributeValue": "R-236cb | HFC-236cb | ",
+              "displayText": "R-227ea | HFC-227ea |",
+              "attributeValue": "R-227ea | HFC-227ea |",
               "displayOrder": "60"
             },
             {
               "languageTag": "en",
-              "displayText": "R-236ea | HFC-236ea | ",
-              "attributeValue": "R-236ea | HFC-236ea | ",
+              "displayText": "R-236cb | HFC-236cb |",
+              "attributeValue": "R-236cb | HFC-236cb |",
               "displayOrder": "61"
             },
             {
               "languageTag": "en",
-              "displayText": "R-236fa | HFC-236fa | ",
-              "attributeValue": "R-236fa | HFC-236fa | ",
+              "displayText": "R-236ea | HFC-236ea |",
+              "attributeValue": "R-236ea | HFC-236ea |",
               "displayOrder": "62"
             },
             {
               "languageTag": "en",
-              "displayText": "R-245ca | HFC-245ca | ",
-              "attributeValue": "R-245ca | HFC-245ca | ",
+              "displayText": "R-236fa | HFC-236fa |",
+              "attributeValue": "R-236fa | HFC-236fa |",
               "displayOrder": "63"
             },
             {
               "languageTag": "en",
-              "displayText": "R-245fa | HFC-245fa | ",
-              "attributeValue": "R-245fa | HFC-245fa | ",
+              "displayText": "R-245ca | HFC-245ca |",
+              "attributeValue": "R-245ca | HFC-245ca |",
               "displayOrder": "64"
             },
             {
               "languageTag": "en",
-              "displayText": "R-365mfc | HFC-365mfc | ",
-              "attributeValue": "R-365mfc | HFC-365mfc | ",
+              "displayText": "R-245fa | HFC-245fa |",
+              "attributeValue": "R-245fa | HFC-245fa |",
               "displayOrder": "65"
             },
             {
               "languageTag": "en",
-              "displayText": "R-43-10mee | HFC-43-10mee | ",
-              "attributeValue": "R-43-10mee | HFC-43-10mee | ",
+              "displayText": "R-365mfc | HFC-365mfc |",
+              "attributeValue": "R-365mfc | HFC-365mfc |",
               "displayOrder": "66"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "R-43-10mee | HFC-43-10mee |",
+              "attributeValue": "R-43-10mee | HFC-43-10mee |",
+              "displayOrder": "67"
             },
             {
               "languageTag": "en",
               "displayText": "Sulfur hexafluoride (SF6)",
               "attributeValue": "Sulfur hexafluoride (SF6)",
-              "displayOrder": "67"
+              "displayOrder": "68"
             },
             {
               "languageTag": "en",
               "displayText": "Nitrogen trifluoride (NF3)",
               "attributeValue": "Nitrogen trifluoride (NF3)",
-              "displayOrder": "68"
+              "displayOrder": "69"
             },
             {
               "languageTag": "en",
-              "displayText": "Non-hazardous waste",
-              "attributeValue": "Non-hazardous waste",
-              "displayOrder": "69"
+              "displayText": "Water supply",
+              "attributeValue": "Water supply",
+              "displayOrder": "70"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Landfill: non-hazardous",
+              "attributeValue": "Landfill: non-hazardous",
+              "displayOrder": "71"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Reuse: non-hazardous",
+              "attributeValue": "Reuse: non-hazardous",
+              "displayOrder": "72"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Waste to energy: hazardous",
+              "attributeValue": "Waste to energy: hazardous",
+              "displayOrder": "73"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Incineration: hazardous",
+              "attributeValue": "Incineration: hazardous",
+              "displayOrder": "74"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Landfill: hazardous",
+              "attributeValue": "Landfill: hazardous",
+              "displayOrder": "75"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Recycling: hazardous",
+              "attributeValue": "Recycling: hazardous",
+              "displayOrder": "76"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Reuse: hazardous",
+              "attributeValue": "Reuse: hazardous",
+              "displayOrder": "77"
             }
           ]
         },
@@ -1036,11 +1052,23 @@
         {
           "name": "Value",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint"
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ],
-          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Value/Value/Value",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Value",
           "isNullable": true,
-          "dataFormat": "Float",
+          "dataFormat": "Decimal",
           "description": "Value of entity."
         },
         {
@@ -1230,21 +1258,9 @@
             },
             {
               "languageTag": "en",
-              "displayText": "Calculated based on data with unspecified accuracy",
-              "attributeValue": "Calculated based on data with unspecified accuracy",
-              "displayOrder": "25"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Calculated based on projected data with unspecified accuracy",
-              "attributeValue": "Calculated based on projected data with unspecified accuracy",
-              "displayOrder": "26"
-            },
-            {
-              "languageTag": "en",
               "displayText": "Retrofit scenario",
               "attributeValue": "Retrofit scenario",
-              "displayOrder": "27"
+              "displayOrder": "25"
             }
           ]
         }

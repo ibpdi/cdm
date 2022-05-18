@@ -1,0 +1,345 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ElectricalMeter.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalMeter",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ElectricalMeter",
+        "definition": "resolvedFrom/ElectricalMeter",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalMeterId",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ElectricalMeterId",
+            "contents": [
+              "ElectricalMeter/hasAttributes/ElectricalMeterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "ElectricalMeter/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/Type",
+            "contents": [
+              "ElectricalMeter/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetEnergy",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/NetEnergy",
+            "contents": [
+              "ElectricalMeter/hasAttributes/NetEnergy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetPower",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/NetPower",
+            "contents": [
+              "ElectricalMeter/hasAttributes/NetPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ImportPower",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ImportPower",
+            "contents": [
+              "ElectricalMeter/hasAttributes/ImportPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ImportEnergy",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ImportEnergy",
+            "contents": [
+              "ElectricalMeter/hasAttributes/ImportEnergy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExportPower",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ExportPower",
+            "contents": [
+              "ElectricalMeter/hasAttributes/ExportPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExportEnergy",
+            "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ExportEnergy",
+            "contents": [
+              "ElectricalMeter/hasAttributes/ExportEnergy"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElectricalMeterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/ElectricalMeterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical meter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NetEnergy",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/NetEnergy",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net energy"
+        },
+        {
+          "name": "NetPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/NetPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net power"
+        },
+        {
+          "name": "ImportPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/ImportPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Import power"
+        },
+        {
+          "name": "ImportEnergy",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/ImportEnergy",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Import energy"
+        },
+        {
+          "name": "ExportPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/ExportPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Export power"
+        },
+        {
+          "name": "ExportEnergy",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/ExportEnergy",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Export energy"
+        }
+      ],
+      "displayName": "ElectricalMeter",
+      "description": "Information about electrical meter",
+      "version": "4.3"
+    }
+  ]
+}

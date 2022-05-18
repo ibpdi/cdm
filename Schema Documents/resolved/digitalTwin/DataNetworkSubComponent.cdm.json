@@ -1,0 +1,231 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/DataNetworkSubComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "DataNetworkSubComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "DataNetworkSubComponent",
+        "definition": "resolvedFrom/DataNetworkSubComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DataNetworkSubComponentId",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/DataNetworkSubComponentId",
+            "contents": [
+              "DataNetworkSubComponent/hasAttributes/DataNetworkSubComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "DataNetworkSubComponent/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponent",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/SubComponent",
+            "contents": [
+              "DataNetworkSubComponent/hasAttributes/SubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RackPosition",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/RackPosition",
+            "contents": [
+              "DataNetworkSubComponent/hasAttributes/RackPosition"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfPorts",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/NumberOfPorts",
+            "contents": [
+              "DataNetworkSubComponent/hasAttributes/NumberOfPorts"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeightRUs",
+            "parent": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent",
+            "definition": "resolvedFrom/DataNetworkSubComponent/hasAttributes/HeightRUs",
+            "contents": [
+              "DataNetworkSubComponent/hasAttributes/HeightRUs"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "DataNetworkSubComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/DataNetworkSubComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/SubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Data network sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "RackPosition",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/RackPosition",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack position",
+          "maximumLength": 50
+        },
+        {
+          "name": "NumberOfPorts",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/NumberOfPorts",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of ports"
+        },
+        {
+          "name": "HeightRUs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "DataNetworkSubComponent/attributeContext/DataNetworkSubComponent/HeightRUs",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Height of RUs (rack units)"
+        }
+      ],
+      "displayName": "DataNetworkSubComponent",
+      "description": "Information about data network sub component",
+      "version": "4.3"
+    }
+  ]
+}

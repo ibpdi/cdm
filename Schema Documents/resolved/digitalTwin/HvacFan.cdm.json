@@ -1,0 +1,283 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/HvacFan.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "HvacFan",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "HvacFan",
+        "definition": "resolvedFrom/HvacFan",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "HvacFan/attributeContext/HvacFan/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HvacFanId",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/HvacFanId",
+            "contents": [
+              "HvacFan/hasAttributes/HvacFanId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "HvacFan/attributeContext/HvacFan/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "HvacFan/attributeContext/HvacFan/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "HvacFan/attributeContext/HvacFan/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "HvacFan/attributeContext/HvacFan/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacFan/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "HvacFan/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DriveType",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/DriveType",
+            "contents": [
+              "HvacFan/hasAttributes/DriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalAirflow",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/NominalAirflow",
+            "contents": [
+              "HvacFan/hasAttributes/NominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MotorPower",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/MotorPower",
+            "contents": [
+              "HvacFan/hasAttributes/MotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MinAirflowRating",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/MinAirflowRating",
+            "contents": [
+              "HvacFan/hasAttributes/MinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxAirflowRating",
+            "parent": "HvacFan/attributeContext/HvacFan",
+            "definition": "resolvedFrom/HvacFan/hasAttributes/MaxAirflowRating",
+            "contents": [
+              "HvacFan/hasAttributes/MaxAirflowRating"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "HvacFanId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/HvacFanId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "DriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/DriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Hvac fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/NominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal airflow"
+        },
+        {
+          "name": "MotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/MotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Motor power"
+        },
+        {
+          "name": "MinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/MinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Min flow capacity"
+        },
+        {
+          "name": "MaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "HvacFan/attributeContext/HvacFan/MaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max flow capacity"
+        }
+      ],
+      "displayName": "HvacFan",
+      "description": "Information about hvac fan",
+      "version": "4.3"
+    }
+  ]
+}

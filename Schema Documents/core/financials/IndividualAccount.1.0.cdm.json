@@ -74,7 +74,8 @@
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Reference to organisation",
-                "maximumLength": 50
+                "maximumLength": 50,
+                "isNullable": true
               }
             }
           }

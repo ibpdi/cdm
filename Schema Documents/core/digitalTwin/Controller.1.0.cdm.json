@@ -1,0 +1,94 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Controller",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ControllerId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk ComponentType. to Gateway.",
+          "entity": {
+            "entityReference": "ComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "ComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "RegistrationId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationKey",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Registration key",
+          "maximumLength": 50
+        },
+        {
+          "name": "ConnectorId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "Enabled",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Enabled (Y/N)"
+        },
+        {
+          "name": "Detected",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Detected (Y/N)"
+        }
+      ],
+      "displayName": "Controller",
+      "description": "Information about controller"
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Controller.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Controller",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Controller",
+        "definition": "resolvedFrom/Controller",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Controller/attributeContext/Controller",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Controller/attributeContext/Controller/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ControllerId",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/ControllerId",
+            "contents": [
+              "Controller/hasAttributes/ControllerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Controller/attributeContext/Controller/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Controller/attributeContext/Controller/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Controller/attributeContext/Controller/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Controller/attributeContext/Controller/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Controller/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Controller/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationId",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/RegistrationId",
+            "contents": [
+              "Controller/hasAttributes/RegistrationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationKey",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/RegistrationKey",
+            "contents": [
+              "Controller/hasAttributes/RegistrationKey"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConnectorId",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/ConnectorId",
+            "contents": [
+              "Controller/hasAttributes/ConnectorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Enabled",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/Enabled",
+            "contents": [
+              "Controller/hasAttributes/Enabled"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Detected",
+            "parent": "Controller/attributeContext/Controller",
+            "definition": "resolvedFrom/Controller/hasAttributes/Detected",
+            "contents": [
+              "Controller/hasAttributes/Detected"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ControllerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/ControllerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/RegistrationId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationKey",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/RegistrationKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration key",
+          "maximumLength": 50
+        },
+        {
+          "name": "ConnectorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/ConnectorId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "Enabled",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/Enabled",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Enabled (Y/N)"
+        },
+        {
+          "name": "Detected",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Controller/attributeContext/Controller/Detected",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Detected (Y/N)"
+        }
+      ],
+      "displayName": "Controller",
+      "description": "Information about controller",
+      "version": "4.3"
+    }
+  ]
+}

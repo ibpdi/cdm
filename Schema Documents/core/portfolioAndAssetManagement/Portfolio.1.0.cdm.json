@@ -18,34 +18,6 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk IndividualAccount. to Portfolio.",
-          "entity": {
-            "entityReference": "IndividualAccount",
-            "appliedTraits": [
-              {
-                "traitReference": "is.identifiedBy",
-                "arguments": [
-                  "IndividualAccount/(resolvedAttributes)/IndividualAccountId"
-                ]
-              }
-            ]
-          },
-          "name": "IndividualAccountId",
-          "resolutionGuidance": {
-            "renameFormat": "{m}",
-            "entityByReference": {
-              "allowReference": true,
-              "foreignKeyAttribute": {
-                "name": "IndividualAccountId",
-                "purpose": "hasA",
-                "dataType": "string",
-                "description": "Unique identifier either coming from previous system otherwise it needs to be define",
-                "maximumLength": 50
-              }
-            }
-          }
-        },
-        {
           "attributeGroupReference": "Name"
         },
         {
@@ -109,11 +81,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             }

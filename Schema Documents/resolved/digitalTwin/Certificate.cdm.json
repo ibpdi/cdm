@@ -201,7 +201,8 @@
           ],
           "attributeContext": "Certificate/attributeContext/Certificate/Value",
           "dataFormat": "String",
-          "description": "Value of entity."
+          "description": "Score, grade if applicable for the certificate",
+          "maximumLength": 50
         },
         {
           "name": "IssuingDate",
@@ -270,6 +271,7 @@
             "means.reference.URL"
           ],
           "attributeContext": "Certificate/attributeContext/Certificate/CertificateUrl",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Certificate Url",
           "maximumLength": 200
@@ -282,6 +284,7 @@
             "is.dataFormat.array"
           ],
           "attributeContext": "Certificate/attributeContext/Certificate/DocumentId",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be define",
           "maximumLength": 50

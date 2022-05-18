@@ -1,0 +1,398 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ThermalMeter.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ThermalMeter",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ThermalMeter",
+        "definition": "resolvedFrom/ThermalMeter",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ThermalMeter/attributeContext/ThermalMeter/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ThermalMeterId",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/ThermalMeterId",
+            "contents": [
+              "ThermalMeter/hasAttributes/ThermalMeterId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ThermalMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "ThermalMeter/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/Type",
+            "contents": [
+              "ThermalMeter/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VolumeTotal",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/VolumeTotal",
+            "contents": [
+              "ThermalMeter/hasAttributes/VolumeTotal"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VolumeFlow",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/VolumeFlow",
+            "contents": [
+              "ThermalMeter/hasAttributes/VolumeFlow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyTemperature",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/SupplyTemperature",
+            "contents": [
+              "ThermalMeter/hasAttributes/SupplyTemperature"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnTemperature",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/ReturnTemperature",
+            "contents": [
+              "ThermalMeter/hasAttributes/ReturnTemperature"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EnergyTotal",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/EnergyTotal",
+            "contents": [
+              "ThermalMeter/hasAttributes/EnergyTotal"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EnergyRate",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/EnergyRate",
+            "contents": [
+              "ThermalMeter/hasAttributes/EnergyRate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DeltaTemperature",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/DeltaTemperature",
+            "contents": [
+              "ThermalMeter/hasAttributes/DeltaTemperature"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Measures",
+            "parent": "ThermalMeter/attributeContext/ThermalMeter",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/Measures",
+            "contents": [
+              "ThermalMeter/hasAttributes/Measures"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ThermalMeterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/ThermalMeterId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Water meter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "VolumeTotal",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/VolumeTotal",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Volume"
+        },
+        {
+          "name": "VolumeFlow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/VolumeFlow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Volume flow"
+        },
+        {
+          "name": "SupplyTemperature",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/SupplyTemperature",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply temperature"
+        },
+        {
+          "name": "ReturnTemperature",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/ReturnTemperature",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return temperature"
+        },
+        {
+          "name": "EnergyTotal",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/EnergyTotal",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Energy total"
+        },
+        {
+          "name": "EnergyRate",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/EnergyRate",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Export energy"
+        },
+        {
+          "name": "DeltaTemperature",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/DeltaTemperature",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Export energy"
+        },
+        {
+          "name": "Measures",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/Measures",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Substance that is measured",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ThermalMeter",
+      "description": "Information about thermal meter",
+      "version": "4.3"
+    }
+  ]
+}

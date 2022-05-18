@@ -1,0 +1,282 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Gateway.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Gateway",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Gateway",
+        "definition": "resolvedFrom/Gateway",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Gateway/attributeContext/Gateway",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Gateway/attributeContext/Gateway/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GatewayId",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/GatewayId",
+            "contents": [
+              "Gateway/hasAttributes/GatewayId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Gateway/attributeContext/Gateway/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Gateway/attributeContext/Gateway/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Gateway/attributeContext/Gateway/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Gateway/attributeContext/Gateway/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Gateway/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Gateway/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationId",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/RegistrationId",
+            "contents": [
+              "Gateway/hasAttributes/RegistrationId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RegistrationKey",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/RegistrationKey",
+            "contents": [
+              "Gateway/hasAttributes/RegistrationKey"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ConnectorId",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/ConnectorId",
+            "contents": [
+              "Gateway/hasAttributes/ConnectorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Enabled",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/Enabled",
+            "contents": [
+              "Gateway/hasAttributes/Enabled"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Detected",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/Detected",
+            "contents": [
+              "Gateway/hasAttributes/Detected"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedInRack",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/MountedInRack",
+            "contents": [
+              "Gateway/hasAttributes/MountedInRack"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RackPosition",
+            "parent": "Gateway/attributeContext/Gateway",
+            "definition": "resolvedFrom/Gateway/hasAttributes/RackPosition",
+            "contents": [
+              "Gateway/hasAttributes/RackPosition"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "GatewayId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/GatewayId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/RegistrationId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "RegistrationKey",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/RegistrationKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration key",
+          "maximumLength": 50
+        },
+        {
+          "name": "ConnectorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/ConnectorId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Registration id",
+          "maximumLength": 50
+        },
+        {
+          "name": "Enabled",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/Enabled",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Enabled (Y/N)"
+        },
+        {
+          "name": "Detected",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/Detected",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Detected (Y/N)"
+        },
+        {
+          "name": "MountedInRack",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/MountedInRack",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted in it rack"
+        },
+        {
+          "name": "RackPosition",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Gateway/attributeContext/Gateway/RackPosition",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack position",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Gateway",
+      "description": "Information about gateway",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Role.cdm.json"
+    },
+    {
+      "corpusPath": "/core/portfolioAndAssetManagement/Portfolio.cdm.json"
+    },
+    {
+      "corpusPath": "Organisation.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RolePortfolioOrganisation",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Role. to RolePortfolioOrganisation.",
+          "entity": {
+            "entityReference": "Role",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Role/(resolvedAttributes)/RoleId"
+                ]
+              }
+            ]
+          },
+          "name": "RoleId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RoleId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Portfolio. to RolePortfolioOrganisation.",
+          "entity": {
+            "entityReference": "Portfolio",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Portfolio/(resolvedAttributes)/PortfolioId"
+                ]
+              }
+            ]
+          },
+          "name": "PortfolioId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "PortfolioId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Organisation. to RolePortfolioOrganisation.",
+          "entity": {
+            "entityReference": "Organisation",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Organisation/(resolvedAttributes)/OrganisationId"
+                ]
+              }
+            ]
+          },
+          "name": "OrganisationId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "OrganisationId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "RolePortfolioOrganisation",
+      "description": "Linking entity between Role, Portfolio and Organisation"
+    }
+  ]
+}

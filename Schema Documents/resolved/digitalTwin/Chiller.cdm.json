@@ -1,0 +1,265 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Chiller.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Chiller",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Chiller",
+        "definition": "resolvedFrom/Chiller",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Chiller/attributeContext/Chiller",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Chiller/attributeContext/Chiller/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ChillerId",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/ChillerId",
+            "contents": [
+              "Chiller/hasAttributes/ChillerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Chiller/attributeContext/Chiller/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Chiller/attributeContext/Chiller/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Chiller/attributeContext/Chiller/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Chiller/attributeContext/Chiller/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Chiller/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Chiller/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/Type",
+            "contents": [
+              "Chiller/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RefrigerantType",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/RefrigerantType",
+            "contents": [
+              "Chiller/hasAttributes/RefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalCoolingCapacity",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/NominalCoolingCapacity",
+            "contents": [
+              "Chiller/hasAttributes/NominalCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetSensibleCoolingCapacity",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/NetSensibleCoolingCapacity",
+            "contents": [
+              "Chiller/hasAttributes/NetSensibleCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CompressorType",
+            "parent": "Chiller/attributeContext/Chiller",
+            "definition": "resolvedFrom/Chiller/hasAttributes/CompressorType",
+            "contents": [
+              "Chiller/hasAttributes/CompressorType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ChillerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/ChillerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Chiller type",
+          "maximumLength": 50
+        },
+        {
+          "name": "RefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/RefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/NominalCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal cooling capacity"
+        },
+        {
+          "name": "NetSensibleCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/NetSensibleCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net sensible cooling capacity"
+        },
+        {
+          "name": "CompressorType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Chiller/attributeContext/Chiller/CompressorType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Compressor type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Chiller",
+      "description": "Information about chiller",
+      "version": "4.3"
+    }
+  ]
+}

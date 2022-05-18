@@ -286,6 +286,15 @@
             "contents": [
               "Building/hasAttributes/AirConditioning"
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Status",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/Status",
+            "contents": [
+              "Building/hasAttributes/Status"
+            ]
           }
         ]
       },
@@ -1422,6 +1431,18 @@
               "displayText": "Electricity (radiator)",
               "attributeValue": "Electricity (radiator)",
               "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biomass",
+              "attributeValue": "Biomass",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Micro combined heat and power",
+              "attributeValue": "Micro combined heat and power",
+              "displayOrder": "8"
             }
           ]
         },
@@ -1480,6 +1501,18 @@
               "displayText": "Electricity (radiator)",
               "attributeValue": "Electricity (radiator)",
               "displayOrder": "6"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Biomass",
+              "attributeValue": "Biomass",
+              "displayOrder": "7"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Micro combined heat and power",
+              "attributeValue": "Micro combined heat and power",
+              "displayOrder": "8"
             }
           ]
         },
@@ -1492,6 +1525,19 @@
           "isNullable": true,
           "dataFormat": "Boolean",
           "description": "Does the building have air conditioning (Y/N) (Needed for precise  future emissions projection of building)"
+        },
+        {
+          "name": "Status",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Building/attributeContext/Building/Status",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Status of site",
+          "maximumLength": 50
         }
       ],
       "displayName": "Building",

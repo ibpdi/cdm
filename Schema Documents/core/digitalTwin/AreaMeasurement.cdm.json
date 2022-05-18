@@ -265,81 +265,75 @@
                       ],
                       [
                         "en",
-                        "Rentable area common occupancy",
-                        "Rentable area common occupancy",
+                        "Building amenity area",
+                        "Building amenity area",
                         "29"
                       ],
                       [
                         "en",
-                        "Building amenity area",
-                        "Building amenity area",
+                        "Building service area",
+                        "Building service area",
                         "30"
                       ],
                       [
                         "en",
-                        "Building service area",
-                        "Building service area",
+                        "Floor service area",
+                        "Floor service area",
                         "31"
                       ],
                       [
                         "en",
-                        "Floor service area",
-                        "Floor service area",
+                        "Tenant ancillary area",
+                        "Tenant ancillary area",
                         "32"
                       ],
                       [
                         "en",
-                        "Rentable area exclusive occupancy",
-                        "Rentable area exclusive occupancy",
+                        "Tenant area",
+                        "Tenant area",
                         "33"
                       ],
                       [
                         "en",
-                        "Tenant ancillary area",
-                        "Tenant ancillary area",
+                        "Major vertical penetrations",
+                        "Major vertical penetrations",
                         "34"
                       ],
                       [
                         "en",
-                        "Tenant area",
-                        "Tenant area",
+                        "Occupant Storage area",
+                        "Occupant Storage area",
                         "35"
                       ],
                       [
                         "en",
-                        "Major vertical penetrations",
-                        "Major vertical penetrations",
+                        "Parking area",
+                        "Parking area",
                         "36"
                       ],
                       [
                         "en",
-                        "Occupant Storage area",
-                        "Occupant Storage area",
+                        "Unenclosed Building Feature: Covered Gallery",
+                        "Unenclosed Building Feature: Covered Gallery",
                         "37"
                       ],
                       [
                         "en",
-                        "Parking area",
-                        "Parking area",
+                        "Vacant area",
+                        "Vacant area",
                         "38"
                       ],
                       [
                         "en",
-                        "Unenclosed Building Feature: Covered Gallery",
-                        "Unenclosed Building Feature: Covered Gallery",
+                        "NA",
+                        "NA",
                         "39"
                       ],
                       [
                         "en",
-                        "Vacant area",
-                        "Vacant area",
+                        "Energy reference area",
+                        "Energy reference area",
                         "40"
-                      ],
-                      [
-                        "en",
-                        "NA",
-                        "NA",
-                        "41"
                       ]
                     ]
                   }
@@ -370,14 +364,14 @@
                     "constantValues": [
                       [
                         "en",
-                        "m²",
-                        "square meter",
+                        "sqm",
+                        "sqm",
                         "0"
                       ],
                       [
                         "en",
-                        "ft²",
-                        "square feet",
+                        "sqft",
+                        "sqft",
                         "1"
                       ]
                     ]
@@ -392,6 +386,54 @@
         },
         {
           "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "Accuracy",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Estimated",
+                        "Estimated",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Measured",
+                        "Measured",
+                        "1"
+                      ],
+                      [
+                        "en",
+                        "Aggregated",
+                        "Aggregated",
+                        "2"
+                      ],
+                      [
+                        "en",
+                        "Unknown",
+                        "Unknown",
+                        "3"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Accuracy of area measurement",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
         }
       ],
       "displayName": "AreaMeasurement",

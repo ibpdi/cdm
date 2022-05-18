@@ -1,0 +1,594 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ElectricalPanelBoardMlo.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalPanelBoardMlo",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ElectricalPanelBoardMlo",
+        "definition": "resolvedFrom/ElectricalPanelBoardMlo",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElectricalPanelBoardSubComponentId",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardSubComponentId",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardSubComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "ElectricalPanelBoardMlo/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InputPhases",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/InputPhases",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/InputPhases"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ShortCircuitRating",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/ShortCircuitRating",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/ShortCircuitRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputPhases",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/OutputPhases",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/OutputPhases"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InputVoltage",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/InputVoltage",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/InputVoltage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxNumberOfPoles",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MaxNumberOfPoles",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MaxNumberOfPoles"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusMaterial",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusMaterial",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusCurrentRating",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusCurrentRating",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusCurrentRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusName",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusName",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusCommissionDate",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusCommissionDate",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusExpectedEndOfLife",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusExpectedEndOfLife",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusDurationLifeYear",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusDurationLifeYear",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusExpectedReplacementCost",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusExpectedReplacementCost",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusInitialCost",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusInitialCost",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusInstallationDate",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusInstallationDate",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusMaintenanceInterval",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusMaintenanceInterval",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusTurnoverDate",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusTurnoverDate",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusModelNumber",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusModelNumber",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusTagNumber",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusTagNumber",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusSerialNumber",
+            "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/MainBusSerialNumber",
+            "contents": [
+              "ElectricalPanelBoardMlo/hasAttributes/MainBusSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElectricalPanelBoardSubComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardSubComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "InputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/InputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Input phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "ShortCircuitRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ShortCircuitRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Short circuit rating"
+        },
+        {
+          "name": "OutputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/OutputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Output phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "InputVoltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/InputVoltage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Input voltage"
+        },
+        {
+          "name": "MaxNumberOfPoles",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MaxNumberOfPoles",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Max number of poles"
+        },
+        {
+          "name": "MainBusMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusCurrentRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusCurrentRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Current rating"
+        },
+        {
+          "name": "MainBusName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Main bus name",
+          "maximumLength": 200
+        },
+        {
+          "name": "MainBusCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Electrical panel board mlo commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Electrical panel board mlo expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Electrical panel board mlo life span of component in years"
+        },
+        {
+          "name": "MainBusExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Electrical panel board mlo expected replacement costs"
+        },
+        {
+          "name": "MainBusInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Electrical panel board mlo initial cost"
+        },
+        {
+          "name": "MainBusInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical panel board mlo maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Electrical panel board mlo turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of electrical panel board mlo",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Electrical panel board mlo tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/MainBusSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of electrical panel board mlo",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ElectricalPanelBoardMlo",
+      "description": "Information about electrical panel board mlo",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "SubSubComponentType.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ElectricalPanelBoardMcb",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "ElectricalPanelBoardSubComponentId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk SubSubComponentType. to ElectricalPanelBoardMcb.",
+          "entity": {
+            "entityReference": "SubSubComponentType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "SubSubComponentType/(resolvedAttributes)/SubSubComponentTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "SubSubComponentTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SubSubComponentTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "InputPhases",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Input phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "ShortCircuitRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Short circuit rating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "OutputPhases",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Output phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "InputVoltage",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Input voltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MaxNumberOfPoles",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Max number of poles"
+        },
+        {
+          "name": "MainBusMaterial",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Material",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusCurrentRating",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Current rating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MainBusName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Main bus name",
+          "maximumLength": 200
+        },
+        {
+          "name": "MainBusCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Electrical panel board mcb commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Electrical panel board mcb expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusDurationLifeYear",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Electrical panel board mcb life span of component in years"
+        },
+        {
+          "name": "MainBusExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Electrical panel board mcb expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MainBusInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Electrical panel board mcb initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MainBusInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Electrical panel board mcb maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Electrical panel board mcb turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MainBusModelNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Model number of electrical panel board mcb",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Electrical panel board mcb tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of electrical panel board mcb",
+          "maximumLength": 50
+        },
+        {
+          "name": "McbRating",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Mcb rating",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ElectricalPanelBoardMcb",
+      "description": "Information about electrical panel board mcb"
+    }
+  ]
+}

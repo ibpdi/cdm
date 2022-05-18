@@ -1,0 +1,3375 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AirHandlingUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AirHandlingUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AirHandlingUnit",
+        "definition": "resolvedFrom/AirHandlingUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AirHandlingUnitId",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/AirHandlingUnitId",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/AirHandlingUnitId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "AirHandlingUnit/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalHeatingCapacity",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/NominalHeatingCapacity",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/NominalHeatingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NominalCoolingCapacity",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/NominalCoolingCapacity",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/NominalCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VentilationConfiguration",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/VentilationConfiguration",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/VentilationConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RefrigerantType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/RefrigerantType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/RefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NetSensibleCoolingCapacity",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/NetSensibleCoolingCapacity",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/NetSensibleCoolingCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HumidificationMethod",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/HumidificationMethod",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/HumidificationMethod"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FilterType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/FilterType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/FilterType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DischargeDuctworkConfiguration",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/DischargeDuctworkConfiguration",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/DischargeDuctworkConfiguration"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DehumidificationMethod",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/DehumidificationMethod",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/DehumidificationMethod"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AirflowModulation",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/AirflowModulation",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/AirflowModulation"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Currency",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/Currency",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/Currency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VentilationStrategy",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/VentilationStrategy",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/VentilationStrategy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanNominalAirflow",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanNominalAirflow",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanMotorPower",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanMotorPower",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanMinAirflowRating",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanMinAirflowRating",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanMaxAirflowRating",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanMaxAirflowRating",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanDriveType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanDriveType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SupplyFanSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SupplyFanSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SupplyFanSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanNominalAirflow",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanNominalAirflow",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanMotorPower",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanMotorPower",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanMinAirflowRating",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanMinAirflowRating",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanMaxAirflowRating",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanMaxAirflowRating",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanDriveType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanDriveType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReturnFanSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReturnFanSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReturnFanSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanNominalAirflow",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanNominalAirflow",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanNominalAirflow"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanMotorPower",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanMotorPower",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanMotorPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanMinAirflowRating",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanMinAirflowRating",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanMinAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanMaxAirflowRating",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanMaxAirflowRating",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanMaxAirflowRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanDriveType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanDriveType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanDriveType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ExhaustFanSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ExhaustFanSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ExhaustFanSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingMethodType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingMethodType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingMethodType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingMethodefrigerantType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingMethodefrigerantType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingMethodefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingOutsideDiameter",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingOutsideDiameter",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimaryCoolingSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PrimaryCoolingSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PrimaryCoolingSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingMethodType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingMethodType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingMethodType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingMethodRefrigerantType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingMethodRefrigerantType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingMethodRefrigerantType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingOutsideDiameter",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingOutsideDiameter",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SecondaryCoolingSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/SecondaryCoolingSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/SecondaryCoolingSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingOutsideDiameter",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingOutsideDiameter",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PreHeatingSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/PreHeatingSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/PreHeatingSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingType",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingType",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingOutsideDiameter",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingOutsideDiameter",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/ReHeatingSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/ReHeatingSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxEconomiser",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxEconomiser",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxEconomiser"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxName",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxName",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxCommissionDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxCommissionDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxExpectedEndOfLife",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxExpectedEndOfLife",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxDurationLifeYear",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxDurationLifeYear",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxExpectedReplacementCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxExpectedReplacementCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxInitialCost",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxInitialCost",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxInstallationDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxInstallationDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxMaintenanceInterval",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxMaintenanceInterval",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxTurnoverDate",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxTurnoverDate",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxModelNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxModelNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxTagNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxTagNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MixingBoxSerialNumber",
+            "parent": "AirHandlingUnit/attributeContext/AirHandlingUnit",
+            "definition": "resolvedFrom/AirHandlingUnit/hasAttributes/MixingBoxSerialNumber",
+            "contents": [
+              "AirHandlingUnit/hasAttributes/MixingBoxSerialNumber"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AirHandlingUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/AirHandlingUnitId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "NominalHeatingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/NominalHeatingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal heating capacity"
+        },
+        {
+          "name": "NominalCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/NominalCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Nominal cooling capacity"
+        },
+        {
+          "name": "VentilationConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/VentilationConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Ventilation configuration",
+          "maximumLength": 200
+        },
+        {
+          "name": "RefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/RefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "NetSensibleCoolingCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/NetSensibleCoolingCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Net sensible cooling capacity"
+        },
+        {
+          "name": "HumidificationMethod",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/HumidificationMethod",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Humidification method",
+          "maximumLength": 50
+        },
+        {
+          "name": "FilterType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/FilterType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Filter type",
+          "maximumLength": 50
+        },
+        {
+          "name": "DischargeDuctworkConfiguration",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/DischargeDuctworkConfiguration",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Discharge ductwork configuration",
+          "maximumLength": 50
+        },
+        {
+          "name": "DehumidificationMethod",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/DehumidificationMethod",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Dehumidification method",
+          "maximumLength": 50
+        },
+        {
+          "name": "AirflowModulation",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/AirflowModulation",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Airflow modulation",
+          "maximumLength": 50
+        },
+        {
+          "name": "Currency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/Currency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "VentilationStrategy",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/VentilationStrategy",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Ventilation strategy",
+          "maximumLength": 100
+        },
+        {
+          "name": "SupplyFanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply fan nominal airflow"
+        },
+        {
+          "name": "SupplyFanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply fan motor power"
+        },
+        {
+          "name": "SupplyFanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply fan min flow capacity"
+        },
+        {
+          "name": "SupplyFanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply fan max flow capacity"
+        },
+        {
+          "name": "SupplyFanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Supply fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SupplyFanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of supply fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "SupplyFanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Supply fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SupplyFanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Supply fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SupplyFanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Supply fan life span of component in years"
+        },
+        {
+          "name": "SupplyFanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply fan expected replacement costs"
+        },
+        {
+          "name": "SupplyFanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Supply fan initial cost"
+        },
+        {
+          "name": "SupplyFanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SupplyFanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Supply fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "SupplyFanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Supply fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SupplyFanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of supply fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "SupplyFanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Supply fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "SupplyFanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SupplyFanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of supply fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReturnFanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return fan nominal airflow"
+        },
+        {
+          "name": "ReturnFanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return fan motor power"
+        },
+        {
+          "name": "ReturnFanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return fan min flow capacity"
+        },
+        {
+          "name": "ReturnFanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return fan max flow capacity"
+        },
+        {
+          "name": "ReturnFanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Return fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReturnFanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of return fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "ReturnFanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Return fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReturnFanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Return fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReturnFanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Return fan life span of component in years"
+        },
+        {
+          "name": "ReturnFanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return fan expected replacement costs"
+        },
+        {
+          "name": "ReturnFanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Return fan initial cost"
+        },
+        {
+          "name": "ReturnFanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReturnFanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Return fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReturnFanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Return fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReturnFanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of return fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReturnFanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Return fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReturnFanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReturnFanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of return fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "ExhaustFanNominalAirflow",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanNominalAirflow",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Exhaust fan nominal airflow"
+        },
+        {
+          "name": "ExhaustFanMotorPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanMotorPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Exhaust fan motor power"
+        },
+        {
+          "name": "ExhaustFanMinAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanMinAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Exhaust fan min flow capacity"
+        },
+        {
+          "name": "ExhaustFanMaxAirflowRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanMaxAirflowRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Exhaust fan max flow capacity"
+        },
+        {
+          "name": "ExhaustFanDriveType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanDriveType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Exhaust fan fan drive type",
+          "maximumLength": 50
+        },
+        {
+          "name": "ExhaustFanName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of exhaust fan",
+          "maximumLength": 200
+        },
+        {
+          "name": "ExhaustFanCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Exhaust fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ExhaustFanExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Exhaust fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ExhaustFanDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Exhaust fan life span of component in years"
+        },
+        {
+          "name": "ExhaustFanExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Exhaust fan expected replacement costs"
+        },
+        {
+          "name": "ExhaustFanInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Exhaust fan initial cost"
+        },
+        {
+          "name": "ExhaustFanInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ExhaustFanMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Exhaust fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ExhaustFanTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Exhaust fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ExhaustFanModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of exhaust fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "ExhaustFanTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Exhaust fan tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "ExhaustFanSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ExhaustFanSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of exhaust fan",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingMethodType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingMethodType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingMethodefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingMethodefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Primary cooling outside diameter"
+        },
+        {
+          "name": "PrimaryCoolingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "PrimaryCoolingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Primary cooling commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Primary cooling expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Primary cooling life span of component in years"
+        },
+        {
+          "name": "PrimaryCoolingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Primary cooling expected replacement costs"
+        },
+        {
+          "name": "PrimaryCoolingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Primary cooling initial cost"
+        },
+        {
+          "name": "PrimaryCoolingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Primary cooling turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PrimaryCoolingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of primary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Primary cooling tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "PrimaryCoolingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PrimaryCoolingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of primary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingMethodType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingMethodType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling method type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingMethodRefrigerantType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingMethodRefrigerantType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling refrigerant type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Secondary cooling outside diameter"
+        },
+        {
+          "name": "SecondaryCoolingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "SecondaryCoolingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Secondary cooling commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Secondary cooling expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Secondary cooling life span of component in years"
+        },
+        {
+          "name": "SecondaryCoolingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Secondary cooling expected replacement costs"
+        },
+        {
+          "name": "SecondaryCoolingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Secondary cooling initial cost"
+        },
+        {
+          "name": "SecondaryCoolingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Secondary cooling turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "SecondaryCoolingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of secondary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Secondary cooling tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "SecondaryCoolingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/SecondaryCoolingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of secondary cooling",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreHeatingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pre heating type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreHeatingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pre heating outside diameter"
+        },
+        {
+          "name": "PreHeatingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pre heating name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "PreHeatingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Pre heating commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PreHeatingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Pre heating expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PreHeatingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Pre heating life span of component in years"
+        },
+        {
+          "name": "PreHeatingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pre heating expected replacement costs"
+        },
+        {
+          "name": "PreHeatingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pre heating initial cost"
+        },
+        {
+          "name": "PreHeatingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PreHeatingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pre heating maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreHeatingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Pre heating turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "PreHeatingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of pre heating",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreHeatingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Pre heating tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "PreHeatingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/PreHeatingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of pre heating",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating type",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating outside diameter"
+        },
+        {
+          "name": "ReHeatingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "ReHeatingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Re heating life span of component in years"
+        },
+        {
+          "name": "ReHeatingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating expected replacement costs"
+        },
+        {
+          "name": "ReHeatingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating initial cost"
+        },
+        {
+          "name": "ReHeatingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of re heating",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/ReHeatingSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of re heating",
+          "maximumLength": 50
+        },
+        {
+          "name": "MixingBoxEconomiser",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxEconomiser",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mixing box economizer",
+          "maximumLength": 100
+        },
+        {
+          "name": "MixingBoxName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mixing box name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "MixingBoxCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Mixing box commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MixingBoxExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Mixing box expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MixingBoxDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Mixing box life span of component in years"
+        },
+        {
+          "name": "MixingBoxExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Mixing box expected replacement costs"
+        },
+        {
+          "name": "MixingBoxInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Mixing box initial cost"
+        },
+        {
+          "name": "MixingBoxInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MixingBoxMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mixing box maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "MixingBoxTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Mixing box turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "MixingBoxModelNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxModelNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model number of mixing box",
+          "maximumLength": 50
+        },
+        {
+          "name": "MixingBoxTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mixing box tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "MixingBoxSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AirHandlingUnit/attributeContext/AirHandlingUnit/MixingBoxSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of re heating",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AirHandlingUnit",
+      "version": "4.3"
+    }
+  ]
+}

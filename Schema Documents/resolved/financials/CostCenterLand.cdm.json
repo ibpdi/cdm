@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/financials/CostCenterLand.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CostCenterLand",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CostCenterLand",
+        "definition": "resolvedFrom/CostCenterLand",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CostCenterLand/attributeContext/CostCenterLand",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CostCenterLand/attributeContext/CostCenterLand/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CostCenterId",
+            "parent": "CostCenterLand/attributeContext/CostCenterLand",
+            "definition": "resolvedFrom/CostCenterLand/hasAttributes/CostCenterId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CostCenter",
+                "parent": "CostCenterLand/attributeContext/CostCenterLand/CostCenterId",
+                "definition": "resolvedFrom/CostCenter"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CostCenterLand/attributeContext/CostCenterLand/CostCenterId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CostCenterLand/attributeContext/CostCenterLand/CostCenterId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CostCenterLand/attributeContext/CostCenterLand/CostCenterId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CostCenterLand/hasAttributes/CostCenterId/resolutionGuidance/foreignKeyAttribute/CostCenterId",
+                        "contents": [
+                          "CostCenterLand/hasAttributes/CostCenterId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "LandId",
+            "parent": "CostCenterLand/attributeContext/CostCenterLand",
+            "definition": "resolvedFrom/CostCenterLand/hasAttributes/LandId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Land",
+                "parent": "CostCenterLand/attributeContext/CostCenterLand/LandId",
+                "definition": "resolvedFrom/Land"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CostCenterLand/attributeContext/CostCenterLand/LandId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CostCenterLand/attributeContext/CostCenterLand/LandId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CostCenterLand/attributeContext/CostCenterLand/LandId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CostCenterLand/hasAttributes/LandId/resolutionGuidance/foreignKeyAttribute/LandId",
+                        "contents": [
+                          "CostCenterLand/hasAttributes/LandId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CostCenterId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/financials/CostCenter.cdm.json/CostCenter",
+                        "CostCenterId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CostCenterLand/attributeContext/CostCenterLand/CostCenterId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "LandId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Land.cdm.json/Land",
+                        "LandId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CostCenterLand/attributeContext/CostCenterLand/LandId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CostCenterLand",
+      "description": "Linking entity between CostCenter and Land",
+      "version": "4.3"
+    }
+  ]
+}

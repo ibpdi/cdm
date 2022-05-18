@@ -1,0 +1,212 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ToiletTank.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ToiletTank",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ToiletTank",
+        "definition": "resolvedFrom/ToiletTank",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ToiletTank/attributeContext/ToiletTank",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ToiletTank/attributeContext/ToiletTank/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ToiletTankId",
+            "parent": "ToiletTank/attributeContext/ToiletTank",
+            "definition": "resolvedFrom/ToiletTank/hasAttributes/ToiletTankId",
+            "contents": [
+              "ToiletTank/hasAttributes/ToiletTankId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "ToiletTank/attributeContext/ToiletTank",
+            "definition": "resolvedFrom/ToiletTank/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "ToiletTank/attributeContext/ToiletTank/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ToiletTank/attributeContext/ToiletTank/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ToiletTank/attributeContext/ToiletTank/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ToiletTank/attributeContext/ToiletTank/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ToiletTank/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "ToiletTank/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterPerFlush",
+            "parent": "ToiletTank/attributeContext/ToiletTank",
+            "definition": "resolvedFrom/ToiletTank/hasAttributes/WaterPerFlush",
+            "contents": [
+              "ToiletTank/hasAttributes/WaterPerFlush"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InstallationType",
+            "parent": "ToiletTank/attributeContext/ToiletTank",
+            "definition": "resolvedFrom/ToiletTank/hasAttributes/InstallationType",
+            "contents": [
+              "ToiletTank/hasAttributes/InstallationType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlushingType",
+            "parent": "ToiletTank/attributeContext/ToiletTank",
+            "definition": "resolvedFrom/ToiletTank/hasAttributes/FlushingType",
+            "contents": [
+              "ToiletTank/hasAttributes/FlushingType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ToiletTankId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ToiletTank/attributeContext/ToiletTank/ToiletTankId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ToiletTank/attributeContext/ToiletTank/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WaterPerFlush",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ToiletTank/attributeContext/ToiletTank/WaterPerFlush",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Water per flush"
+        },
+        {
+          "name": "InstallationType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ToiletTank/attributeContext/ToiletTank/InstallationType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Installation type",
+          "maximumLength": 50
+        },
+        {
+          "name": "FlushingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ToiletTank/attributeContext/ToiletTank/FlushingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Flushing type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ToiletTank",
+      "description": "Information about toilet tank",
+      "version": "4.3"
+    }
+  ]
+}

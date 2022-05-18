@@ -1,0 +1,159 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/VariableFrequencyDrive.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "VariableFrequencyDrive",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "VariableFrequencyDrive",
+        "definition": "resolvedFrom/VariableFrequencyDrive",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VariableFrequencyDriveId",
+            "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive",
+            "definition": "resolvedFrom/VariableFrequencyDrive/hasAttributes/VariableFrequencyDriveId",
+            "contents": [
+              "VariableFrequencyDrive/hasAttributes/VariableFrequencyDriveId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive",
+            "definition": "resolvedFrom/VariableFrequencyDrive/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/VariableFrequencyDrive/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "VariableFrequencyDrive/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive",
+            "definition": "resolvedFrom/VariableFrequencyDrive/hasAttributes/Type",
+            "contents": [
+              "VariableFrequencyDrive/hasAttributes/Type"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "VariableFrequencyDriveId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/VariableFrequencyDriveId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VariableFrequencyDrive/attributeContext/VariableFrequencyDrive/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Variable frequency type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "VariableFrequencyDrive",
+      "description": "Information about variable frequency drive",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,222 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/WirelessAccessPoint.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WirelessAccessPoint",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WirelessAccessPoint",
+        "definition": "resolvedFrom/WirelessAccessPoint",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WirelessAccessPointId",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/WirelessAccessPointId",
+            "contents": [
+              "WirelessAccessPoint/hasAttributes/WirelessAccessPointId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "WirelessAccessPoint/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/Type",
+            "contents": [
+              "WirelessAccessPoint/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedInRack",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/MountedInRack",
+            "contents": [
+              "WirelessAccessPoint/hasAttributes/MountedInRack"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RackPosition",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/RackPosition",
+            "contents": [
+              "WirelessAccessPoint/hasAttributes/RackPosition"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Mounting",
+            "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/Mounting",
+            "contents": [
+              "WirelessAccessPoint/hasAttributes/Mounting"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WirelessAccessPointId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/WirelessAccessPointId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Wireless access point type",
+          "maximumLength": 50
+        },
+        {
+          "name": "MountedInRack",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/MountedInRack",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted in it rack"
+        },
+        {
+          "name": "RackPosition",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/RackPosition",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack position",
+          "maximumLength": 50
+        },
+        {
+          "name": "Mounting",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/Mounting",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mounting details",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "WirelessAccessPoint",
+      "description": "Information about wireless access point",
+      "version": "4.3"
+    }
+  ]
+}

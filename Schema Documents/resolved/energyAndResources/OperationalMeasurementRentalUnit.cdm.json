@@ -1,0 +1,183 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/energyAndResources/OperationalMeasurementRentalUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "OperationalMeasurementRentalUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "OperationalMeasurementRentalUnit",
+        "definition": "resolvedFrom/OperationalMeasurementRentalUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OperationalMeasurementId",
+            "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit",
+            "definition": "resolvedFrom/OperationalMeasurementRentalUnit/hasAttributes/OperationalMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "OperationalMeasurement",
+                "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/OperationalMeasurementId",
+                "definition": "resolvedFrom/OperationalMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/OperationalMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/OperationalMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/OperationalMeasurementRentalUnit/hasAttributes/OperationalMeasurementId/resolutionGuidance/foreignKeyAttribute/OperationalMeasurementId",
+                        "contents": [
+                          "OperationalMeasurementRentalUnit/hasAttributes/OperationalMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitId",
+            "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit",
+            "definition": "resolvedFrom/OperationalMeasurementRentalUnit/hasAttributes/RentalUnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalUnit",
+                "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/RentalUnitId",
+                "definition": "resolvedFrom/RentalUnit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/RentalUnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/RentalUnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/OperationalMeasurementRentalUnit/hasAttributes/RentalUnitId/resolutionGuidance/foreignKeyAttribute/RentalUnitId",
+                        "contents": [
+                          "OperationalMeasurementRentalUnit/hasAttributes/RentalUnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "OperationalMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            "is.dataFormat.guid",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/energyAndResources/OperationalMeasurement.cdm.json/OperationalMeasurement",
+                        "OperationalMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/OperationalMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "Guid",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "maximumLength": 36
+        },
+        {
+          "name": "RentalUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalUnit.cdm.json/RentalUnit",
+                        "RentalUnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "OperationalMeasurementRentalUnit/attributeContext/OperationalMeasurementRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "OperationalMeasurementRentalUnit",
+      "description": "Linking entity between OperationalMeasurement and RentalUnit",
+      "version": "4.3"
+    }
+  ]
+}

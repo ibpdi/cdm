@@ -1,0 +1,231 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/EthernetSwitchPort.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "EthernetSwitchPort",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "EthernetSwitchPort",
+        "definition": "resolvedFrom/EthernetSwitchPort",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EthernetSwitchPortId",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/EthernetSwitchPortId",
+            "contents": [
+              "EthernetSwitchPort/hasAttributes/EthernetSwitchPortId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "EthernetSwitchPort/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MountedInRack",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/MountedInRack",
+            "contents": [
+              "EthernetSwitchPort/hasAttributes/MountedInRack"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RackPosition",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/RackPosition",
+            "contents": [
+              "EthernetSwitchPort/hasAttributes/RackPosition"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortType",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/PortType",
+            "contents": [
+              "EthernetSwitchPort/hasAttributes/PortType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PortSpeed",
+            "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/PortSpeed",
+            "contents": [
+              "EthernetSwitchPort/hasAttributes/PortSpeed"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "EthernetSwitchPortId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/EthernetSwitchPortId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MountedInRack",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/MountedInRack",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Mounted in it rack"
+        },
+        {
+          "name": "RackPosition",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/RackPosition",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "It rack position",
+          "maximumLength": 50
+        },
+        {
+          "name": "PortType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/PortType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Port type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PortSpeed",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/PortSpeed",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Port speed"
+        }
+      ],
+      "displayName": "EthernetSwitchPort",
+      "description": "Information about ethernet switch point",
+      "version": "4.3"
+    }
+  ]
+}

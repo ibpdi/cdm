@@ -95,95 +95,15 @@
           "name": "Type",
           "purpose": "hasA",
           "dataType": "string",
-          "appliedTraits": [
-            {
-              "traitReference": "does.haveDefault",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
-                    "entityShape": "listLookupValues",
-                    "constantValues": [
-                      [
-                        "en",
-                        "Agricultural",
-                        "Agricultural",
-                        "0"
-                      ],
-                      [
-                        "en",
-                        "Recreational",
-                        "Recreational",
-                        "1"
-                      ],
-                      [
-                        "en",
-                        "Industrial",
-                        "Industrial",
-                        "2"
-                      ],
-                      [
-                        "en",
-                        "Non-industrial",
-                        "Non-industrial",
-                        "3"
-                      ],
-                      [
-                        "en",
-                        "Traffic",
-                        "Traffic",
-                        "4"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "description": "Type of land",
-          "maximumLength": 75,
-          "valueConstrainedToList": true
+          "maximumLength": 75
         },
         {
           "name": "LandCoverage",
           "purpose": "hasA",
           "dataType": "string",
-          "appliedTraits": [
-            {
-              "traitReference": "does.haveDefault",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
-                    "entityShape": "listLookupValues",
-                    "constantValues": [
-                      [
-                        "en",
-                        "Fully",
-                        "Fully",
-                        "0"
-                      ],
-                      [
-                        "en",
-                        "Partially",
-                        "Partially",
-                        "1"
-                      ],
-                      [
-                        "en",
-                        "Not covered",
-                        "Not covered",
-                        "2"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "description": "Development level of land",
-          "maximumLength": 50,
-          "valueConstrainedToList": true
+          "maximumLength": 50
         },
         {
           "name": "LandParcelNr",
@@ -202,6 +122,14 @@
           "dataType": "string",
           "isNullable": true,
           "description": "A reference to Guid from the geo-coordinate entity",
+          "maximumLength": 50
+        },
+        {
+          "name": "Status",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Status of site",
           "maximumLength": 50
         }
       ],

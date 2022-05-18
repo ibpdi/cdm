@@ -1,0 +1,243 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingStorageTank.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingStorageTank",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingStorageTank",
+        "definition": "resolvedFrom/PlumbingStorageTank",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PlumbingStorageTankId",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/PlumbingStorageTankId",
+            "contents": [
+              "PlumbingStorageTank/hasAttributes/PlumbingStorageTankId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "PlumbingStorageTank/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TankCapacity",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/TankCapacity",
+            "contents": [
+              "PlumbingStorageTank/hasAttributes/TankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SystemPressure",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/SystemPressure",
+            "contents": [
+              "PlumbingStorageTank/hasAttributes/SystemPressure"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/Type",
+            "contents": [
+              "PlumbingStorageTank/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Arrangement",
+            "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/Arrangement",
+            "contents": [
+              "PlumbingStorageTank/hasAttributes/Arrangement"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PlumbingStorageTankId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/PlumbingStorageTankId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "TankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/TankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Tank capacity"
+        },
+        {
+          "name": "SystemPressure",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SystemPressure",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "System pressure"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Plumbing tank sub component type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Arrangement",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/Arrangement",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Arrangement of plumbing storage tank (only applies for sub component plumbing storage tank)",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "PlumbingStorageTank",
+      "description": "Information about plumbing storage tank",
+      "version": "4.3"
+    }
+  ]
+}

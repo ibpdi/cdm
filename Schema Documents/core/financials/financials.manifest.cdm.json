@@ -25,6 +25,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "CostCenterLand",
+      "entityPath": "CostCenterLand.cdm.json/CostCenterLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "CostCenterPortfolio",
       "entityPath": "CostCenterPortfolio.cdm.json/CostCenterPortfolio",
       "dataPartitionPatterns": []

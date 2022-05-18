@@ -1,0 +1,190 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Toilet.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Toilet",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Toilet",
+        "definition": "resolvedFrom/Toilet",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Toilet/attributeContext/Toilet",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Toilet/attributeContext/Toilet/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ToiletId",
+            "parent": "Toilet/attributeContext/Toilet",
+            "definition": "resolvedFrom/Toilet/hasAttributes/ToiletId",
+            "contents": [
+              "Toilet/hasAttributes/ToiletId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "Toilet/attributeContext/Toilet",
+            "definition": "resolvedFrom/Toilet/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Toilet/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "Toilet/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterPerFlush",
+            "parent": "Toilet/attributeContext/Toilet",
+            "definition": "resolvedFrom/Toilet/hasAttributes/WaterPerFlush",
+            "contents": [
+              "Toilet/hasAttributes/WaterPerFlush"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InstallationType",
+            "parent": "Toilet/attributeContext/Toilet",
+            "definition": "resolvedFrom/Toilet/hasAttributes/InstallationType",
+            "contents": [
+              "Toilet/hasAttributes/InstallationType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ToiletId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Toilet/attributeContext/Toilet/ToiletId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Toilet/attributeContext/Toilet/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WaterPerFlush",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Toilet/attributeContext/Toilet/WaterPerFlush",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Water per flush"
+        },
+        {
+          "name": "InstallationType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Toilet/attributeContext/Toilet/InstallationType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Installation type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Toilet",
+      "description": "Information about toilet",
+      "version": "4.3"
+    }
+  ]
+}

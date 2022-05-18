@@ -1,0 +1,274 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Transformer.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Transformer",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Transformer",
+        "definition": "resolvedFrom/Transformer",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Transformer/attributeContext/Transformer",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Transformer/attributeContext/Transformer/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TransformerId",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/TransformerId",
+            "contents": [
+              "Transformer/hasAttributes/TransformerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Transformer/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "Transformer/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VoltagePrimary",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/VoltagePrimary",
+            "contents": [
+              "Transformer/hasAttributes/VoltagePrimary"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "VoltageSecondary",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/VoltageSecondary",
+            "contents": [
+              "Transformer/hasAttributes/VoltageSecondary"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/Type",
+            "contents": [
+              "Transformer/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SizeKva",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/SizeKva",
+            "contents": [
+              "Transformer/hasAttributes/SizeKva"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Phases",
+            "parent": "Transformer/attributeContext/Transformer",
+            "definition": "resolvedFrom/Transformer/hasAttributes/Phases",
+            "contents": [
+              "Transformer/hasAttributes/Phases"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TransformerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/TransformerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "VoltagePrimary",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/VoltagePrimary",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Voltage primary"
+        },
+        {
+          "name": "VoltageSecondary",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/VoltageSecondary",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Voltage secondary"
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Transformer type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SizeKva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/SizeKva",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Size kva (kilovolt-ampere)"
+        },
+        {
+          "name": "Phases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Transformer/attributeContext/Transformer/Phases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Phases",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Transformer",
+      "description": "Information about transformer",
+      "version": "4.3"
+    }
+  ]
+}

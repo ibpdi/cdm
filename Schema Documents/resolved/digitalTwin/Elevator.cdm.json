@@ -1,0 +1,378 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Elevator.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Elevator",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Elevator",
+        "definition": "resolvedFrom/Elevator",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Elevator/attributeContext/Elevator",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Elevator/attributeContext/Elevator/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ElevatorId",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/ElevatorId",
+            "contents": [
+              "Elevator/hasAttributes/ElevatorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "Elevator/attributeContext/Elevator/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Elevator/attributeContext/Elevator/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Elevator/attributeContext/Elevator/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Elevator/attributeContext/Elevator/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Elevator/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "Elevator/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/Type",
+            "contents": [
+              "Elevator/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PersonCapacity",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/PersonCapacity",
+            "contents": [
+              "Elevator/hasAttributes/PersonCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WeightCapacity",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/WeightCapacity",
+            "contents": [
+              "Elevator/hasAttributes/WeightCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxTravelSpeed",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/MaxTravelSpeed",
+            "contents": [
+              "Elevator/hasAttributes/MaxTravelSpeed"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxTravelDistance",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/MaxTravelDistance",
+            "contents": [
+              "Elevator/hasAttributes/MaxTravelDistance"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxLandings",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/MaxLandings",
+            "contents": [
+              "Elevator/hasAttributes/MaxLandings"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FireServiceAccessElevator",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/FireServiceAccessElevator",
+            "contents": [
+              "Elevator/hasAttributes/FireServiceAccessElevator"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmergencyCommunicationTwoWayVoice",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/EmergencyCommunicationTwoWayVoice",
+            "contents": [
+              "Elevator/hasAttributes/EmergencyCommunicationTwoWayVoice"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmergencyCommunicationTwoWayMessageDisplay",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/EmergencyCommunicationTwoWayMessageDisplay",
+            "contents": [
+              "Elevator/hasAttributes/EmergencyCommunicationTwoWayMessageDisplay"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "EmergencyCommunicationOneWayVideo",
+            "parent": "Elevator/attributeContext/Elevator",
+            "definition": "resolvedFrom/Elevator/hasAttributes/EmergencyCommunicationOneWayVideo",
+            "contents": [
+              "Elevator/hasAttributes/EmergencyCommunicationOneWayVideo"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ElevatorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/ElevatorId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Elevator type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PersonCapacity",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/PersonCapacity",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Person capacity"
+        },
+        {
+          "name": "WeightCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/WeightCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Heating capacity in british thermal unit (btu)"
+        },
+        {
+          "name": "MaxTravelSpeed",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/MaxTravelSpeed",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max travel speed"
+        },
+        {
+          "name": "MaxTravelDistance",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/MaxTravelDistance",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max travel distance"
+        },
+        {
+          "name": "MaxLandings",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/MaxLandings",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max landings"
+        },
+        {
+          "name": "FireServiceAccessElevator",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/FireServiceAccessElevator",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Fire service access elevator"
+        },
+        {
+          "name": "EmergencyCommunicationTwoWayVoice",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/EmergencyCommunicationTwoWayVoice",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Emergency communication two way voice"
+        },
+        {
+          "name": "EmergencyCommunicationTwoWayMessageDisplay",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/EmergencyCommunicationTwoWayMessageDisplay",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Emergency communication two way message display"
+        },
+        {
+          "name": "EmergencyCommunicationOneWayVideo",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Elevator/attributeContext/Elevator/EmergencyCommunicationOneWayVideo",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Emergency communication two way message display"
+        }
+      ],
+      "displayName": "Elevator",
+      "description": "Information about elevator",
+      "version": "4.3"
+    }
+  ]
+}

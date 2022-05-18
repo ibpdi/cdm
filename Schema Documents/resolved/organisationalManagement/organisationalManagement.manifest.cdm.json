@@ -54,48 +54,163 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleBuilding",
-      "entityPath": "RoleBuilding.cdm.json/RoleBuilding"
+      "entityName": "RoleBuildingContact",
+      "entityPath": "RoleBuildingContact.cdm.json/RoleBuildingContact"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleContact",
-      "entityPath": "RoleContact.cdm.json/RoleContact"
+      "entityName": "RoleBuildingOrganisation",
+      "entityPath": "RoleBuildingOrganisation.cdm.json/RoleBuildingOrganisation"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleLand",
-      "entityPath": "RoleLand.cdm.json/RoleLand"
+      "entityName": "RoleComponentContact",
+      "entityPath": "RoleComponentContact.cdm.json/RoleComponentContact"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleOrganisation",
-      "entityPath": "RoleOrganisation.cdm.json/RoleOrganisation"
+      "entityName": "RoleComponentOrganisation",
+      "entityPath": "RoleComponentOrganisation.cdm.json/RoleComponentOrganisation"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RolePortfolio",
-      "entityPath": "RolePortfolio.cdm.json/RolePortfolio"
+      "entityName": "RoleComponentTypeContact",
+      "entityPath": "RoleComponentTypeContact.cdm.json/RoleComponentTypeContact"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RolePortfolioStrategy",
-      "entityPath": "RolePortfolioStrategy.cdm.json/RolePortfolioStrategy"
+      "entityName": "RoleComponentTypeOrganisation",
+      "entityPath": "RoleComponentTypeOrganisation.cdm.json/RoleComponentTypeOrganisation"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleRentalUnit",
-      "entityPath": "RoleRentalUnit.cdm.json/RoleRentalUnit"
+      "entityName": "RoleEmissionFactorContact",
+      "entityPath": "RoleEmissionFactorContact.cdm.json/RoleEmissionFactorContact"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleSite",
-      "entityPath": "RoleSite.cdm.json/RoleSite"
+      "entityName": "RoleEmissionFactorOrganisation",
+      "entityPath": "RoleEmissionFactorOrganisation.cdm.json/RoleEmissionFactorOrganisation"
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleValuation",
-      "entityPath": "RoleValuation.cdm.json/RoleValuation"
+      "entityName": "RoleLandContact",
+      "entityPath": "RoleLandContact.cdm.json/RoleLandContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleLandOrganisation",
+      "entityPath": "RoleLandOrganisation.cdm.json/RoleLandOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleOperationalMeasurementContact",
+      "entityPath": "RoleOperationalMeasurementContact.cdm.json/RoleOperationalMeasurementContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleOperationalMeasurementOrganisation",
+      "entityPath": "RoleOperationalMeasurementOrganisation.cdm.json/RoleOperationalMeasurementOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioContact",
+      "entityPath": "RolePortfolioContact.cdm.json/RolePortfolioContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioOrganisation",
+      "entityPath": "RolePortfolioOrganisation.cdm.json/RolePortfolioOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioStrategyContact",
+      "entityPath": "RolePortfolioStrategyContact.cdm.json/RolePortfolioStrategyContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RolePortfolioStrategyOrganisation",
+      "entityPath": "RolePortfolioStrategyOrganisation.cdm.json/RolePortfolioStrategyOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalContractContact",
+      "entityPath": "RoleRentalContractContact.cdm.json/RoleRentalContractContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalContractOrganisation",
+      "entityPath": "RoleRentalContractOrganisation.cdm.json/RoleRentalContractOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalUnitContact",
+      "entityPath": "RoleRentalUnitContact.cdm.json/RoleRentalUnitContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleRentalUnitOrganisation",
+      "entityPath": "RoleRentalUnitOrganisation.cdm.json/RoleRentalUnitOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSiteContact",
+      "entityPath": "RoleSiteContact.cdm.json/RoleSiteContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSiteOrganisation",
+      "entityPath": "RoleSiteOrganisation.cdm.json/RoleSiteOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubComponentTypeContact",
+      "entityPath": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubComponentTypeOrganisation",
+      "entityPath": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubSubComponentTypeContact",
+      "entityPath": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSubSubComponentTypeOrganisation",
+      "entityPath": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSystemContact",
+      "entityPath": "RoleSystemContact.cdm.json/RoleSystemContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleSystemOrganisation",
+      "entityPath": "RoleSystemOrganisation.cdm.json/RoleSystemOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleTenantCommunicationContact",
+      "entityPath": "RoleTenantCommunicationContact.cdm.json/RoleTenantCommunicationContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleTenantCommunicationOrganisation",
+      "entityPath": "RoleTenantCommunicationOrganisation.cdm.json/RoleTenantCommunicationOrganisation"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleValuationContact",
+      "entityPath": "RoleValuationContact.cdm.json/RoleValuationContact"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "RoleValuationOrganisation",
+      "entityPath": "RoleValuationOrganisation.cdm.json/RoleValuationOrganisation"
     }
   ],
   "relationships": [
@@ -218,7 +333,7 @@
       "toEntityAttribute": "OrganisationId"
     },
     {
-      "fromEntity": "RoleContact.cdm.json/RoleContact",
+      "fromEntity": "RoleBuildingContact.cdm.json/RoleBuildingContact",
       "fromEntityAttribute": "ContactId",
       "toEntity": "Contact.cdm.json/Contact",
       "toEntityAttribute": "ContactId",
@@ -232,7 +347,217 @@
       ]
     },
     {
-      "fromEntity": "RoleOrganisation.cdm.json/RoleOrganisation",
+      "fromEntity": "RoleComponentContact.cdm.json/RoleComponentContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleComponentTypeContact.cdm.json/RoleComponentTypeContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleEmissionFactorContact.cdm.json/RoleEmissionFactorContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleLandContact.cdm.json/RoleLandContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleOperationalMeasurementContact.cdm.json/RoleOperationalMeasurementContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioContact.cdm.json/RolePortfolioContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioStrategyContact.cdm.json/RolePortfolioStrategyContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalContractContact.cdm.json/RoleRentalContractContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalUnitContact.cdm.json/RoleRentalUnitContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSiteContact.cdm.json/RoleSiteContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSystemContact.cdm.json/RoleSystemContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleTenantCommunicationContact.cdm.json/RoleTenantCommunicationContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleValuationContact.cdm.json/RoleValuationContact",
+      "fromEntityAttribute": "ContactId",
+      "toEntity": "Contact.cdm.json/Contact",
+      "toEntityAttribute": "ContactId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleBuildingOrganisation.cdm.json/RoleBuildingOrganisation",
       "fromEntityAttribute": "OrganisationId",
       "toEntity": "Organisation.cdm.json/Organisation",
       "toEntityAttribute": "OrganisationId",
@@ -246,7 +571,217 @@
       ]
     },
     {
-      "fromEntity": "RoleBuilding.cdm.json/RoleBuilding",
+      "fromEntity": "RoleComponentOrganisation.cdm.json/RoleComponentOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleComponentTypeOrganisation.cdm.json/RoleComponentTypeOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleEmissionFactorOrganisation.cdm.json/RoleEmissionFactorOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleLandOrganisation.cdm.json/RoleLandOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleOperationalMeasurementOrganisation.cdm.json/RoleOperationalMeasurementOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioOrganisation.cdm.json/RolePortfolioOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioStrategyOrganisation.cdm.json/RolePortfolioStrategyOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalContractOrganisation.cdm.json/RoleRentalContractOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalUnitOrganisation.cdm.json/RoleRentalUnitOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSiteOrganisation.cdm.json/RoleSiteOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSystemOrganisation.cdm.json/RoleSystemOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleTenantCommunicationOrganisation.cdm.json/RoleTenantCommunicationOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleValuationOrganisation.cdm.json/RoleValuationOrganisation",
+      "fromEntityAttribute": "OrganisationId",
+      "toEntity": "Organisation.cdm.json/Organisation",
+      "toEntityAttribute": "OrganisationId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleBuildingContact.cdm.json/RoleBuildingContact",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -260,7 +795,7 @@
       ]
     },
     {
-      "fromEntity": "RoleContact.cdm.json/RoleContact",
+      "fromEntity": "RoleBuildingOrganisation.cdm.json/RoleBuildingOrganisation",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -274,7 +809,7 @@
       ]
     },
     {
-      "fromEntity": "RoleLand.cdm.json/RoleLand",
+      "fromEntity": "RoleComponentContact.cdm.json/RoleComponentContact",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -288,7 +823,7 @@
       ]
     },
     {
-      "fromEntity": "RoleOrganisation.cdm.json/RoleOrganisation",
+      "fromEntity": "RoleComponentOrganisation.cdm.json/RoleComponentOrganisation",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -302,7 +837,7 @@
       ]
     },
     {
-      "fromEntity": "RolePortfolio.cdm.json/RolePortfolio",
+      "fromEntity": "RoleComponentTypeContact.cdm.json/RoleComponentTypeContact",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -316,7 +851,7 @@
       ]
     },
     {
-      "fromEntity": "RolePortfolioStrategy.cdm.json/RolePortfolioStrategy",
+      "fromEntity": "RoleComponentTypeOrganisation.cdm.json/RoleComponentTypeOrganisation",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -330,7 +865,13 @@
       ]
     },
     {
-      "fromEntity": "RoleRentalUnit.cdm.json/RoleRentalUnit",
+      "fromEntity": "RoleEmissionFactorContact.cdm.json/RoleEmissionFactorContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId"
+    },
+    {
+      "fromEntity": "RoleEmissionFactorOrganisation.cdm.json/RoleEmissionFactorOrganisation",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -344,7 +885,7 @@
       ]
     },
     {
-      "fromEntity": "RoleSite.cdm.json/RoleSite",
+      "fromEntity": "RoleLandContact.cdm.json/RoleLandContact",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",
@@ -358,7 +899,315 @@
       ]
     },
     {
-      "fromEntity": "RoleValuation.cdm.json/RoleValuation",
+      "fromEntity": "RoleLandOrganisation.cdm.json/RoleLandOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleOperationalMeasurementContact.cdm.json/RoleOperationalMeasurementContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleOperationalMeasurementOrganisation.cdm.json/RoleOperationalMeasurementOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioContact.cdm.json/RolePortfolioContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioOrganisation.cdm.json/RolePortfolioOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioStrategyContact.cdm.json/RolePortfolioStrategyContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RolePortfolioStrategyOrganisation.cdm.json/RolePortfolioStrategyOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalContractContact.cdm.json/RoleRentalContractContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalContractOrganisation.cdm.json/RoleRentalContractOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalUnitContact.cdm.json/RoleRentalUnitContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleRentalUnitOrganisation.cdm.json/RoleRentalUnitOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSiteContact.cdm.json/RoleSiteContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSiteOrganisation.cdm.json/RoleSiteOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSystemContact.cdm.json/RoleSystemContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleSystemOrganisation.cdm.json/RoleSystemOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleTenantCommunicationContact.cdm.json/RoleTenantCommunicationContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleTenantCommunicationOrganisation.cdm.json/RoleTenantCommunicationOrganisation",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleValuationContact.cdm.json/RoleValuationContact",
+      "fromEntityAttribute": "RoleId",
+      "toEntity": "Role.cdm.json/Role",
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "RoleValuationOrganisation.cdm.json/RoleValuationOrganisation",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",

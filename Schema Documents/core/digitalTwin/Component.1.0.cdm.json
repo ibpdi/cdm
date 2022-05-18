@@ -49,14 +49,21 @@
           }
         },
         {
-          "name": "Counter",
+          "attributeGroupReference": "Name"
+        },
+        {
+          "attributeGroupReference": "Type"
+        },
+        {
+          "attributeGroupReference": "Counter"
+        },
+        {
+          "name": "Description",
           "purpose": "hasA",
-          "dataType": "integer",
+          "dataType": "string",
           "isNullable": true,
-          "description": "Counter of component",
-          "appliedTraits": [
-            "means.measurement.count"
-          ]
+          "description": "Description of component",
+          "maximumLength": 200
         },
         {
           "name": "ConditionStatus",
@@ -102,21 +109,35 @@
         {
           "name": "DurationLifeYear",
           "purpose": "hasA",
-          "dataFormat": "Int16",
+          "dataFormat": "integer",
           "description": "Life span of component in years"
-        },
-        {
-          "name": "WarrantyGuarantor",
-          "purpose": "hasA",
-          "dataType": "string",
-          "description": "Warranty Guarantor ",
-          "maximumLength": 200
         },
         {
           "name": "WarrantyStartDate",
           "purpose": "hasA",
           "dataType": "dateTime",
           "description": "Warranty start date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "TurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "CommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
           "name": "SerialNumber",
@@ -131,6 +152,80 @@
           "dataType": "string",
           "isNullable": true,
           "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "GeometrySpatialReference",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Description of component",
+          "maximumLength": 200
+        },
+        {
+          "name": "ExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "InitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Currency",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Currency ",
+          "maximumLength": 50
+        },
+        {
+          "name": "InstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Barcode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Barcode of component",
           "maximumLength": 50
         }
       ],

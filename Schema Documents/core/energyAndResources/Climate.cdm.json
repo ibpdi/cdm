@@ -158,21 +158,47 @@
         {
           "name": "Latitude",
           "purpose": "hasA",
-          "dataType": "float",
+          "dataType": "decimal",
           "isNullable": true,
           "description": "Latitude coordinate in case of geographic coordinates",
           "appliedTraits": [
-            "means.location.latitude"
+            "means.location.latitude",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "10"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            }
           ]
         },
         {
           "name": "Longitude",
           "purpose": "hasA",
-          "dataType": "float",
+          "dataType": "decimal",
           "isNullable": true,
           "description": "Longitude coordinate in case of geographic coordinates",
           "appliedTraits": [
-            "means.location.longitude"
+            "means.location.longitude",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "11"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            }
           ]
         },
         {

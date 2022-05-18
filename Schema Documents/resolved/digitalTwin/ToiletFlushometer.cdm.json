@@ -1,0 +1,190 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/ToiletFlushometer.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "ToiletFlushometer",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "ToiletFlushometer",
+        "definition": "resolvedFrom/ToiletFlushometer",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ToiletFlushometerId",
+            "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer",
+            "definition": "resolvedFrom/ToiletFlushometer/hasAttributes/ToiletFlushometerId",
+            "contents": [
+              "ToiletFlushometer/hasAttributes/ToiletFlushometerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer",
+            "definition": "resolvedFrom/ToiletFlushometer/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ToiletFlushometer/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "ToiletFlushometer/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterPerFlush",
+            "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer",
+            "definition": "resolvedFrom/ToiletFlushometer/hasAttributes/WaterPerFlush",
+            "contents": [
+              "ToiletFlushometer/hasAttributes/WaterPerFlush"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InstallationType",
+            "parent": "ToiletFlushometer/attributeContext/ToiletFlushometer",
+            "definition": "resolvedFrom/ToiletFlushometer/hasAttributes/InstallationType",
+            "contents": [
+              "ToiletFlushometer/hasAttributes/InstallationType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "ToiletFlushometerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ToiletFlushometer/attributeContext/ToiletFlushometer/ToiletFlushometerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ToiletFlushometer/attributeContext/ToiletFlushometer/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WaterPerFlush",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "ToiletFlushometer/attributeContext/ToiletFlushometer/WaterPerFlush",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Water per flush"
+        },
+        {
+          "name": "InstallationType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "ToiletFlushometer/attributeContext/ToiletFlushometer/InstallationType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Installation type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "ToiletFlushometer",
+      "description": "Information about toilet flushometer",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/TransferSwitch.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TransferSwitch",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "TransferSwitch",
+        "definition": "resolvedFrom/TransferSwitch",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "TransferSwitch/attributeContext/TransferSwitch/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TransferSwitchId",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "definition": "resolvedFrom/TransferSwitch/hasAttributes/TransferSwitchId",
+            "contents": [
+              "TransferSwitch/hasAttributes/TransferSwitchId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "definition": "resolvedFrom/TransferSwitch/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "TransferSwitch/attributeContext/TransferSwitch/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TransferSwitch/attributeContext/TransferSwitch/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TransferSwitch/attributeContext/TransferSwitch/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TransferSwitch/attributeContext/TransferSwitch/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TransferSwitch/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "TransferSwitch/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusMaterial",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "definition": "resolvedFrom/TransferSwitch/hasAttributes/MainBusMaterial",
+            "contents": [
+              "TransferSwitch/hasAttributes/MainBusMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusCurrentRating",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "definition": "resolvedFrom/TransferSwitch/hasAttributes/MainBusCurrentRating",
+            "contents": [
+              "TransferSwitch/hasAttributes/MainBusCurrentRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Poles",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "definition": "resolvedFrom/TransferSwitch/hasAttributes/Poles",
+            "contents": [
+              "TransferSwitch/hasAttributes/Poles"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainsRating",
+            "parent": "TransferSwitch/attributeContext/TransferSwitch",
+            "definition": "resolvedFrom/TransferSwitch/hasAttributes/MainsRating",
+            "contents": [
+              "TransferSwitch/hasAttributes/MainsRating"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TransferSwitchId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "TransferSwitch/attributeContext/TransferSwitch/TransferSwitchId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TransferSwitch/attributeContext/TransferSwitch/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "TransferSwitch/attributeContext/TransferSwitch/MainBusMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusCurrentRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TransferSwitch/attributeContext/TransferSwitch/MainBusCurrentRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Current rating"
+        },
+        {
+          "name": "Poles",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "TransferSwitch/attributeContext/TransferSwitch/Poles",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Poles"
+        },
+        {
+          "name": "MainsRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TransferSwitch/attributeContext/TransferSwitch/MainsRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Mains rating"
+        }
+      ],
+      "displayName": "TransferSwitch",
+      "description": "Information about transfer switch",
+      "version": "4.3"
+    }
+  ]
+}

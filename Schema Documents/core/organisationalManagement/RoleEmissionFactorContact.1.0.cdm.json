@@ -1,0 +1,113 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "Role.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "/core/energyAndResources/EmissionFactor.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Contact.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "RoleEmissionFactorContact",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Role. to RoleEmissionFactorContact.",
+          "entity": {
+            "entityReference": "Role",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Role/(resolvedAttributes)/RoleId"
+                ]
+              }
+            ]
+          },
+          "name": "RoleId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "RoleId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Link to role",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk EmissionFactor. to RoleEmissionFactorContact.",
+          "entity": {
+            "entityReference": "EmissionFactor",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "EmissionFactor/(resolvedAttributes)/EmissionFactorId"
+                ]
+              }
+            ]
+          },
+          "name": "EmissionFactorId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "EmissionFactorId",
+                "purpose": "hasA",
+                "dataType": "guid",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be define"
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Contact. to RoleEmissionFactorContact.",
+          "entity": {
+            "entityReference": "Contact",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Contact/(resolvedAttributes)/ContactId"
+                ]
+              }
+            ]
+          },
+          "name": "ContactId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ContactId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "RoleEmissionFactorContact",
+      "description": "Linking entity between Role ,EmissionFactor and Contact"
+    }
+  ]
+}

@@ -43,12 +43,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "EmissionFactorRole",
-      "entityPath": "EmissionFactorRole.1.0.cdm.json/EmissionFactorRole",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "EmissionFactorSite",
       "entityPath": "EmissionFactorSite.1.0.cdm.json/EmissionFactorSite",
       "dataPartitionPatterns": []
@@ -103,8 +97,8 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "OperationalMeasurementRole",
-      "entityPath": "OperationalMeasurementRole.1.0.cdm.json/OperationalMeasurementRole",
+      "entityName": "OperationalMeasurementRentalUnit",
+      "entityPath": "OperationalMeasurementRentalUnit.1.0.cdm.json/OperationalMeasurementRentalUnit",
       "dataPartitionPatterns": []
     },
     {

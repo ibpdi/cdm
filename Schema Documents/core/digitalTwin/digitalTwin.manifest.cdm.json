@@ -7,6 +7,30 @@
   "entities": [
     {
       "type": "LocalEntity",
+      "entityName": "AccessPanel",
+      "entityPath": "AccessPanel.cdm.json/AccessPanel",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AirCompressor",
+      "entityPath": "AirCompressor.cdm.json/AirCompressor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AirFilter",
+      "entityPath": "AirFilter.cdm.json/AirFilter",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AirHandlingUnit",
+      "entityPath": "AirHandlingUnit.cdm.json/AirHandlingUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "AreaMeasurement",
       "entityPath": "AreaMeasurement.cdm.json/AreaMeasurement",
       "dataPartitionPatterns": []
@@ -31,6 +55,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "AreaMeasurementRentalUnit",
+      "entityPath": "AreaMeasurementRentalUnit.cdm.json/AreaMeasurementRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "AreaMeasurementSite",
       "entityPath": "AreaMeasurementSite.cdm.json/AreaMeasurementSite",
       "dataPartitionPatterns": []
@@ -49,8 +79,32 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "AutomaticTransferSwitch",
+      "entityPath": "AutomaticTransferSwitch.cdm.json/AutomaticTransferSwitch",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "BacNetController",
+      "entityPath": "BacNetController.cdm.json/BacNetController",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Boiler",
+      "entityPath": "Boiler.cdm.json/Boiler",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Building",
       "entityPath": "Building.cdm.json/Building",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CeilingFan",
+      "entityPath": "CeilingFan.cdm.json/CeilingFan",
       "dataPartitionPatterns": []
     },
     {
@@ -85,6 +139,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "Chiller",
+      "entityPath": "Chiller.cdm.json/Chiller",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Component",
       "entityPath": "Component.cdm.json/Component",
       "dataPartitionPatterns": []
@@ -99,6 +159,12 @@
       "type": "LocalEntity",
       "entityName": "ComponentFloor",
       "entityPath": "ComponentFloor.cdm.json/ComponentFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ComponentRentalUnit",
+      "entityPath": "ComponentRentalUnit.cdm.json/ComponentRentalUnit",
       "dataPartitionPatterns": []
     },
     {
@@ -133,14 +199,338 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "CondensingUnit",
+      "entityPath": "CondensingUnit.cdm.json/CondensingUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Controller",
+      "entityPath": "Controller.cdm.json/Controller",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CoolingTower",
+      "entityPath": "CoolingTower.cdm.json/CoolingTower",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Damper",
+      "entityPath": "Damper.cdm.json/Damper",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "DataNetworkEquipment",
+      "entityPath": "DataNetworkEquipment.cdm.json/DataNetworkEquipment",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "DataNetworkSubComponent",
+      "entityPath": "DataNetworkSubComponent.cdm.json/DataNetworkSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalDistributionEquipmentSubComponent",
+      "entityPath": "ElectricalDistributionEquipmentSubComponent.cdm.json/ElectricalDistributionEquipmentSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalMeter",
+      "entityPath": "ElectricalMeter.cdm.json/ElectricalMeter",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalPanelBoard",
+      "entityPath": "ElectricalPanelBoard.cdm.json/ElectricalPanelBoard",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalPanelBoardMcb",
+      "entityPath": "ElectricalPanelBoardMcb.cdm.json/ElectricalPanelBoardMcb",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalPanelBoardMlo",
+      "entityPath": "ElectricalPanelBoardMlo.cdm.json/ElectricalPanelBoardMlo",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalSystem",
+      "entityPath": "ElectricalSystem.cdm.json/ElectricalSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectricalVehicleChargingStation",
+      "entityPath": "ElectricalVehicleChargingStation.cdm.json/ElectricalVehicleChargingStation",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElectronicSafetyAndSecuritySystem",
+      "entityPath": "ElectronicSafetyAndSecuritySystem.cdm.json/ElectronicSafetyAndSecuritySystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Elevator",
+      "entityPath": "Elevator.cdm.json/Elevator",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ElevatorMachine",
+      "entityPath": "ElevatorMachine.cdm.json/ElevatorMachine",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Escalator",
+      "entityPath": "Escalator.cdm.json/Escalator",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "EthernetSwitchPort",
+      "entityPath": "EthernetSwitchPort.cdm.json/EthernetSwitchPort",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FanCoilUnit",
+      "entityPath": "FanCoilUnit.cdm.json/FanCoilUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FanCoilUnitReheat",
+      "entityPath": "FanCoilUnitReheat.cdm.json/FanCoilUnitReheat",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FanPoweredBox",
+      "entityPath": "FanPoweredBox.cdm.json/FanPoweredBox",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FanPoweredBoxReheat",
+      "entityPath": "FanPoweredBoxReheat.cdm.json/FanPoweredBoxReheat",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Faucet",
+      "entityPath": "Faucet.cdm.json/Faucet",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FireDamper",
+      "entityPath": "FireDamper.cdm.json/FireDamper",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FirePump",
+      "entityPath": "FirePump.cdm.json/FirePump",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "FireSprinklerHead",
+      "entityPath": "FireSprinklerHead.cdm.json/FireSprinklerHead",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Floor",
       "entityPath": "Floor.cdm.json/Floor",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
+      "entityName": "FlushometerValve",
+      "entityPath": "FlushometerValve.cdm.json/FlushometerValve",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "GasMeter",
+      "entityPath": "GasMeter.cdm.json/GasMeter",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Gateway",
+      "entityPath": "Gateway.cdm.json/Gateway",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Generator",
+      "entityPath": "Generator.cdm.json/Generator",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacFan",
+      "entityPath": "HvacFan.cdm.json/HvacFan",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacHeatTracing",
+      "entityPath": "HvacHeatTracing.cdm.json/HvacHeatTracing",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacPump",
+      "entityPath": "HvacPump.cdm.json/HvacPump",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacSystem",
+      "entityPath": "HvacSystem.cdm.json/HvacSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacTank",
+      "entityPath": "HvacTank.cdm.json/HvacTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacValve",
+      "entityPath": "HvacValve.cdm.json/HvacValve",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "IctHardware",
+      "entityPath": "IctHardware.cdm.json/IctHardware",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "InformationAndCommunicationSystem",
+      "entityPath": "InformationAndCommunicationSystem.cdm.json/InformationAndCommunicationSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ItRack",
+      "entityPath": "ItRack.cdm.json/ItRack",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "JockeyPump",
+      "entityPath": "JockeyPump.cdm.json/JockeyPump",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Land",
       "entityPath": "Land.cdm.json/Land",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "LightingSystem",
+      "entityPath": "LightingSystem.cdm.json/LightingSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Luminaire",
+      "entityPath": "Luminaire.cdm.json/Luminaire",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ModbusController",
+      "entityPath": "ModbusController.cdm.json/ModbusController",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "MovingWalkway",
+      "entityPath": "MovingWalkway.cdm.json/MovingWalkway",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "OtherHvacFan",
+      "entityPath": "OtherHvacFan.cdm.json/OtherHvacFan",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingExpansionTank",
+      "entityPath": "PlumbingExpansionTank.cdm.json/PlumbingExpansionTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingPump",
+      "entityPath": "PlumbingPump.cdm.json/PlumbingPump",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingStorageTank",
+      "entityPath": "PlumbingStorageTank.cdm.json/PlumbingStorageTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingSystem",
+      "entityPath": "PlumbingSystem.cdm.json/PlumbingSystem",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingTank",
+      "entityPath": "PlumbingTank.cdm.json/PlumbingTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingValve",
+      "entityPath": "PlumbingValve.cdm.json/PlumbingValve",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingValveSubComponent",
+      "entityPath": "PlumbingValveSubComponent.cdm.json/PlumbingValveSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorEquipment",
+      "entityPath": "SensorEquipment.cdm.json/SensorEquipment",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Server",
+      "entityPath": "Server.cdm.json/Server",
       "dataPartitionPatterns": []
     },
     {
@@ -163,8 +553,140 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "SprinklerHeatTracing",
+      "entityPath": "SprinklerHeatTracing.cdm.json/SprinklerHeatTracing",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SprinklerTank",
+      "entityPath": "SprinklerTank.cdm.json/SprinklerTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SprinklerValve",
+      "entityPath": "SprinklerValve.cdm.json/SprinklerValve",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SubComponentType",
+      "entityPath": "SubComponentType.cdm.json/SubComponentType",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SubSubComponentType",
+      "entityPath": "SubSubComponentType.cdm.json/SubSubComponentType",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "System",
       "entityPath": "System.cdm.json/System",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SystemBuilding",
+      "entityPath": "SystemBuilding.cdm.json/SystemBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SystemFloor",
+      "entityPath": "SystemFloor.cdm.json/SystemFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SystemRentalUnit",
+      "entityPath": "SystemRentalUnit.cdm.json/SystemRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SystemSite",
+      "entityPath": "SystemSite.cdm.json/SystemSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SystemSpace",
+      "entityPath": "SystemSpace.cdm.json/SystemSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SystemUnit",
+      "entityPath": "SystemUnit.cdm.json/SystemUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TanklessWaterHeater",
+      "entityPath": "TanklessWaterHeater.cdm.json/TanklessWaterHeater",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TanklessWaterHeaterSubComponent",
+      "entityPath": "TanklessWaterHeaterSubComponent.cdm.json/TanklessWaterHeaterSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TankWaterHeater",
+      "entityPath": "TankWaterHeater.cdm.json/TankWaterHeater",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TankWaterHeaterSubComponent",
+      "entityPath": "TankWaterHeaterSubComponent.cdm.json/TankWaterHeaterSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TerminalUnit",
+      "entityPath": "TerminalUnit.cdm.json/TerminalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ThermalMeter",
+      "entityPath": "ThermalMeter.cdm.json/ThermalMeter",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Toilet",
+      "entityPath": "Toilet.cdm.json/Toilet",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ToiletFlushometer",
+      "entityPath": "ToiletFlushometer.cdm.json/ToiletFlushometer",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "ToiletTank",
+      "entityPath": "ToiletTank.cdm.json/ToiletTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TransferSwitch",
+      "entityPath": "TransferSwitch.cdm.json/TransferSwitch",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Transformer",
+      "entityPath": "Transformer.cdm.json/Transformer",
       "dataPartitionPatterns": []
     },
     {
@@ -187,6 +709,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "UnitHeaterSubComponent",
+      "entityPath": "UnitHeaterSubComponent.cdm.json/UnitHeaterSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "UnitLand",
       "entityPath": "UnitLand.cdm.json/UnitLand",
       "dataPartitionPatterns": []
@@ -201,6 +729,48 @@
       "type": "LocalEntity",
       "entityName": "UnitSpace",
       "entityPath": "UnitSpace.cdm.json/UnitSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Ups",
+      "entityPath": "Ups.cdm.json/Ups",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "UrinalFlushometer",
+      "entityPath": "UrinalFlushometer.cdm.json/UrinalFlushometer",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "VariableFrequencyDrive",
+      "entityPath": "VariableFrequencyDrive.cdm.json/VariableFrequencyDrive",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WaterFiltration",
+      "entityPath": "WaterFiltration.cdm.json/WaterFiltration",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WaterHeater",
+      "entityPath": "WaterHeater.cdm.json/WaterHeater",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WaterMeter",
+      "entityPath": "WaterMeter.cdm.json/WaterMeter",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WirelessAccessPoint",
+      "entityPath": "WirelessAccessPoint.cdm.json/WirelessAccessPoint",
       "dataPartitionPatterns": []
     }
   ]

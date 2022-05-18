@@ -1,0 +1,221 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingValveSubComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingValveSubComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingValveSubComponent",
+        "definition": "resolvedFrom/PlumbingValveSubComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PlumbingValveSubComponentId",
+            "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent",
+            "definition": "resolvedFrom/PlumbingValveSubComponent/hasAttributes/PlumbingValveSubComponentId",
+            "contents": [
+              "PlumbingValveSubComponent/hasAttributes/PlumbingValveSubComponentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent",
+            "definition": "resolvedFrom/PlumbingValveSubComponent/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingValveSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "PlumbingValveSubComponent/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponent",
+            "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent",
+            "definition": "resolvedFrom/PlumbingValveSubComponent/hasAttributes/SubComponent",
+            "contents": [
+              "PlumbingValveSubComponent/hasAttributes/SubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PipeDiameter",
+            "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent",
+            "definition": "resolvedFrom/PlumbingValveSubComponent/hasAttributes/PipeDiameter",
+            "contents": [
+              "PlumbingValveSubComponent/hasAttributes/PipeDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent",
+            "definition": "resolvedFrom/PlumbingValveSubComponent/hasAttributes/FlowCapacity",
+            "contents": [
+              "PlumbingValveSubComponent/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PlumbingValveSubComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/PlumbingValveSubComponentId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/SubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Plumbing pump sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "PipeDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/PipeDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pipe diameter of plumbing valve sub component"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingValveSubComponent/attributeContext/PlumbingValveSubComponent/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "PlumbingValveSubComponent",
+      "description": "Information about plumbing valve sub components",
+      "version": "4.3"
+    }
+  ]
+}

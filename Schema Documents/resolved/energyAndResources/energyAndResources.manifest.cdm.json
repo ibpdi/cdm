@@ -34,11 +34,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "EmissionFactorRole",
-      "entityPath": "EmissionFactorRole.cdm.json/EmissionFactorRole"
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "EmissionFactorSite",
       "entityPath": "EmissionFactorSite.cdm.json/EmissionFactorSite"
     },
@@ -84,8 +79,8 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "OperationalMeasurementRole",
-      "entityPath": "OperationalMeasurementRole.cdm.json/OperationalMeasurementRole"
+      "entityName": "OperationalMeasurementRentalUnit",
+      "entityPath": "OperationalMeasurementRentalUnit.cdm.json/OperationalMeasurementRentalUnit"
     },
     {
       "type": "LocalEntity",
@@ -158,20 +153,6 @@
     },
     {
       "fromEntity": "EmissionFactorOperationalMeasurement.cdm.json/EmissionFactorOperationalMeasurement",
-      "fromEntityAttribute": "EmissionFactorId",
-      "toEntity": "EmissionFactor.cdm.json/EmissionFactor",
-      "toEntityAttribute": "EmissionFactorId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "EmissionFactorRole.cdm.json/EmissionFactorRole",
       "fromEntityAttribute": "EmissionFactorId",
       "toEntity": "EmissionFactor.cdm.json/EmissionFactor",
       "toEntityAttribute": "EmissionFactorId",
@@ -331,7 +312,7 @@
       ]
     },
     {
-      "fromEntity": "OperationalMeasurementRole.cdm.json/OperationalMeasurementRole",
+      "fromEntity": "OperationalMeasurementRentalUnit.cdm.json/OperationalMeasurementRentalUnit",
       "fromEntityAttribute": "OperationalMeasurementId",
       "toEntity": "OperationalMeasurement.cdm.json/OperationalMeasurement",
       "toEntityAttribute": "OperationalMeasurementId",

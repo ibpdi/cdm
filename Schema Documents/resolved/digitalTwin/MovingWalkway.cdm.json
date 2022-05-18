@@ -1,0 +1,274 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/MovingWalkway.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "MovingWalkway",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "MovingWalkway",
+        "definition": "resolvedFrom/MovingWalkway",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "MovingWalkway/attributeContext/MovingWalkway/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MovingWalkwayId",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/MovingWalkwayId",
+            "contents": [
+              "MovingWalkway/hasAttributes/MovingWalkwayId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentTypeId",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/ComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "ComponentType",
+                "parent": "MovingWalkway/attributeContext/MovingWalkway/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "MovingWalkway/attributeContext/MovingWalkway/ComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "MovingWalkway/attributeContext/MovingWalkway/ComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "MovingWalkway/attributeContext/MovingWalkway/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/MovingWalkway/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "contents": [
+                          "MovingWalkway/hasAttributes/ComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/Type",
+            "contents": [
+              "MovingWalkway/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StepWidth",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/StepWidth",
+            "contents": [
+              "MovingWalkway/hasAttributes/StepWidth"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxLength",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/MaxLength",
+            "contents": [
+              "MovingWalkway/hasAttributes/MaxLength"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MaxTravelSpeed",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/MaxTravelSpeed",
+            "contents": [
+              "MovingWalkway/hasAttributes/MaxTravelSpeed"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Inclination",
+            "parent": "MovingWalkway/attributeContext/MovingWalkway",
+            "definition": "resolvedFrom/MovingWalkway/hasAttributes/Inclination",
+            "contents": [
+              "MovingWalkway/hasAttributes/Inclination"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "MovingWalkwayId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/MovingWalkwayId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Escalator type",
+          "maximumLength": 50
+        },
+        {
+          "name": "StepWidth",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/StepWidth",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Step width"
+        },
+        {
+          "name": "MaxLength",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/MaxLength",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Max travel distance"
+        },
+        {
+          "name": "MaxTravelSpeed",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/MaxTravelSpeed",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Speed of escalator"
+        },
+        {
+          "name": "Inclination",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "MovingWalkway/attributeContext/MovingWalkway/Inclination",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Inclination",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "MovingWalkway",
+      "description": "Information about moving walkway",
+      "version": "4.3"
+    }
+  ]
+}

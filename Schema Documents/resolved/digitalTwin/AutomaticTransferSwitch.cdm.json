@@ -1,0 +1,284 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/AutomaticTransferSwitch.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AutomaticTransferSwitch",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AutomaticTransferSwitch",
+        "definition": "resolvedFrom/AutomaticTransferSwitch",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TransferSwitchId",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/TransferSwitchId",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/TransferSwitchId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "AutomaticTransferSwitch/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusMaterial",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/MainBusMaterial",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/MainBusMaterial"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainBusCurrentRating",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/MainBusCurrentRating",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/MainBusCurrentRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Poles",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/Poles",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/Poles"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MainsRating",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/MainsRating",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/MainsRating"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TransitionType",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/TransitionType",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/TransitionType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SwitchingMechanism",
+            "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/SwitchingMechanism",
+            "contents": [
+              "AutomaticTransferSwitch/hasAttributes/SwitchingMechanism"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TransferSwitchId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusMaterial",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/MainBusMaterial",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Material",
+          "maximumLength": 50
+        },
+        {
+          "name": "MainBusCurrentRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/MainBusCurrentRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Current rating"
+        },
+        {
+          "name": "Poles",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/Poles",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Poles"
+        },
+        {
+          "name": "MainsRating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/MainsRating",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Mains rating"
+        },
+        {
+          "name": "TransitionType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransitionType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Transition type",
+          "maximumLength": 50
+        },
+        {
+          "name": "SwitchingMechanism",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SwitchingMechanism",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Switching Mechanism",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AutomaticTransferSwitch",
+      "description": "Information about automatic transfer switch",
+      "version": "4.3"
+    }
+  ]
+}

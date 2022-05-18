@@ -34,7 +34,8 @@
           "name": "Value",
           "purpose": "hasA",
           "dataType": "string",
-          "description": "Value of entity."
+          "description": "Score, grade if applicable for the certificate",
+          "maximumLength": 50
         },
         {
           "name": "IssuingDate",

@@ -186,7 +186,7 @@
           "attributeContext": "Organisation/attributeContext/Organisation/ParentId",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Unique identifier either coming from previous system otherwise it needs to be define",
+          "description": "Parent (guid or id) of entity",
           "maximumLength": 50
         },
         {
@@ -265,6 +265,7 @@
             "is.dataFormat.array"
           ],
           "attributeContext": "Organisation/attributeContext/Organisation/VatNumber",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Vat number of organisation",
           "maximumLength": 50
@@ -295,6 +296,7 @@
             }
           ],
           "attributeContext": "Organisation/attributeContext/Organisation/FiscalYearStartDate",
+          "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Start date of fiscal year for organisation in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         }

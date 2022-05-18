@@ -389,32 +389,32 @@
                       ],
                       [
                         "en",
-                        "Recyclable or reusable waste",
-                        "Recyclable or reusable waste",
+                        "Recycling: non-hazardous",
+                        "Recycling: non-hazardous",
                         "20"
                       ],
                       [
                         "en",
-                        "Non-recyclable waste (to be burned)",
-                        "Non-recyclable waste (to be burned)",
+                        "Incineration: non-hazardous",
+                        "Incineration: non-hazardous",
                         "21"
                       ],
                       [
                         "en",
-                        "Biodegradable",
-                        "Biodegradable",
+                        "Waste to energy: non-hazardous",
+                        "Waste to energy: non-hazardous",
                         "22"
                       ],
                       [
                         "en",
-                        "Hazardous waste",
-                        "Hazardous waste",
+                        "Other/Unknown: hazardous",
+                        "Other/Unknown: hazardous",
                         "23"
                       ],
                       [
                         "en",
-                        "Waste (unspecified)",
-                        "Waste (unspecified)",
+                        "Other/Unknown: non-hazardous",
+                        "Other/Unknown: non-hazardous",
                         "24"
                       ],
                       [
@@ -437,14 +437,14 @@
                       ],
                       [
                         "en",
-                        "Nitrous oxide (N20)",
-                        "Nitrous oxide (N20)",
+                        "Nitrous oxide (N2O)",
+                        "Nitrous oxide (N2O)",
                         "28"
                       ],
                       [
                         "en",
-                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
-                        "R-11|CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)",
+                        "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)",
                         "29"
                       ],
                       [
@@ -563,116 +563,116 @@
                       ],
                       [
                         "en",
-                        "R-23 | HFC-23 | ",
-                        "R-23 | HFC-23 | ",
+                        "R-23 | HFC-23 |",
+                        "R-23 | HFC-23 |",
                         "49"
                       ],
                       [
                         "en",
-                        "R-32 | HFC-32 | ",
-                        "R-32 | HFC-32 | ",
+                        "R-32 | HFC-32 |",
+                        "R-32 | HFC-32 |",
                         "50"
                       ],
                       [
                         "en",
-                        "R-41 | HFC-41 | ",
-                        "R-41 | HFC-41 | ",
+                        "R-41 | HFC-41 |",
+                        "R-41 | HFC-41 |",
                         "51"
                       ],
                       [
                         "en",
-                        "R-125 | HFC-125 | ",
-                        "R-125 | HFC-125 | ",
+                        "R-125 | HFC-125 |",
+                        "R-125 | HFC-125 |",
                         "52"
                       ],
                       [
                         "en",
-                        "R-134 | HFC-134 | ",
-                        "R-134 | HFC-134 | ",
+                        "R-134 | HFC-134 |",
+                        "R-134 | HFC-134 |",
                         "53"
                       ],
                       [
                         "en",
-                        "R-134a | HFC-134a | ",
-                        "R-134a | HFC-134a | ",
+                        "R-134a | HFC-134a |",
+                        "R-134a | HFC-134a |",
                         "54"
                       ],
                       [
                         "en",
-                        "R-143 | HFC-143 | ",
-                        "R-143 | HFC-143 | ",
+                        "R-143 | HFC-143 |",
+                        "R-143 | HFC-143 |",
                         "55"
                       ],
                       [
                         "en",
-                        "R-143a | HFC-143a | ",
-                        "R-143a | HFC-143a | ",
+                        "R-143a | HFC-143a |",
+                        "R-143a | HFC-143a |",
                         "56"
                       ],
                       [
                         "en",
-                        "R-152 | HFC-152 | ",
-                        "R-152 | HFC-152 | ",
+                        "R-152 | HFC-152 |",
+                        "R-152 | HFC-152 |",
                         "57"
                       ],
                       [
                         "en",
-                        "R-152a | HFC-152a | ",
-                        "R-152a | HFC-152a | ",
+                        "R-152a | HFC-152a |",
+                        "R-152a | HFC-152a |",
                         "58"
                       ],
                       [
                         "en",
-                        "R-161 | HFC-161 | ",
-                        "R-161 | HFC-161 | ",
+                        "R-161 | HFC-161 |",
+                        "R-161 | HFC-161 |",
                         "59"
                       ],
                       [
                         "en",
-                        "R-227ea | HFC-227ea | ",
-                        "R-227ea | HFC-227ea | ",
+                        "R-227ea | HFC-227ea |",
+                        "R-227ea | HFC-227ea |",
                         "60"
                       ],
                       [
                         "en",
-                        "R-236cb | HFC-236cb | ",
-                        "R-236cb | HFC-236cb | ",
+                        "R-236cb | HFC-236cb |",
+                        "R-236cb | HFC-236cb |",
                         "61"
                       ],
                       [
                         "en",
-                        "R-236ea | HFC-236ea | ",
-                        "R-236ea | HFC-236ea | ",
+                        "R-236ea | HFC-236ea |",
+                        "R-236ea | HFC-236ea |",
                         "62"
                       ],
                       [
                         "en",
-                        "R-236fa | HFC-236fa | ",
-                        "R-236fa | HFC-236fa | ",
+                        "R-236fa | HFC-236fa |",
+                        "R-236fa | HFC-236fa |",
                         "63"
                       ],
                       [
                         "en",
-                        "R-245ca | HFC-245ca | ",
-                        "R-245ca | HFC-245ca | ",
+                        "R-245ca | HFC-245ca |",
+                        "R-245ca | HFC-245ca |",
                         "64"
                       ],
                       [
                         "en",
-                        "R-245fa | HFC-245fa | ",
-                        "R-245fa | HFC-245fa | ",
+                        "R-245fa | HFC-245fa |",
+                        "R-245fa | HFC-245fa |",
                         "65"
                       ],
                       [
                         "en",
-                        "R-365mfc | HFC-365mfc | ",
-                        "R-365mfc | HFC-365mfc | ",
+                        "R-365mfc | HFC-365mfc |",
+                        "R-365mfc | HFC-365mfc |",
                         "66"
                       ],
                       [
                         "en",
-                        "R-43-10mee | HFC-43-10mee | ",
-                        "R-43-10mee | HFC-43-10mee | ",
+                        "R-43-10mee | HFC-43-10mee |",
+                        "R-43-10mee | HFC-43-10mee |",
                         "67"
                       ],
                       [
@@ -695,9 +695,45 @@
                       ],
                       [
                         "en",
-                        "Non-hazardous waste",
-                        "Non-hazardous waste",
+                        "Landfill: non-hazardous",
+                        "Landfill: non-hazardous",
                         "71"
+                      ],
+                      [
+                        "en",
+                        "Reuse: non-hazardous",
+                        "Reuse: non-hazardous",
+                        "72"
+                      ],
+                      [
+                        "en",
+                        "Waste to energy: hazardous",
+                        "Waste to energy: hazardous",
+                        "73"
+                      ],
+                      [
+                        "en",
+                        "Incineration: hazardous",
+                        "Incineration: hazardous",
+                        "74"
+                      ],
+                      [
+                        "en",
+                        "Landfill: hazardous",
+                        "Landfill: hazardous",
+                        "75"
+                      ],
+                      [
+                        "en",
+                        "Recycling: hazardous",
+                        "Recycling: hazardous",
+                        "76"
+                      ],
+                      [
+                        "en",
+                        "Reuse: hazardous",
+                        "Reuse: hazardous",
+                        "77"
                       ]
                     ]
                   }
@@ -710,7 +746,12 @@
           "valueConstrainedToList": true
         },
         {
-          "attributeGroupReference": "Name"
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "entityName",
+          "description": "Name of entity.",
+          "maximumLength": 200,
+          "isNullable": true
         },
         {
           "attributeGroupReference": "Value"
@@ -736,8 +777,8 @@
                       ],
                       [
                         "en",
-                        "m³",
-                        "m³",
+                        "cubm",
+                        "cubm",
                         "1"
                       ],
                       [
@@ -753,7 +794,8 @@
             }
           ],
           "isNullable": true,
-          "description": "Unit of operational measurement e.g. 'kWh' or 'm³'",
+          "description": "Unit of operational measurement e.g. 'kWh' or 'cubm'",
+          "maximumLength": 50,
           "valueConstrainedToList": true
         },
         {
@@ -852,6 +894,24 @@
                         "Common spaces",
                         "Common spaces",
                         "6"
+                      ],
+                      [
+                        "en",
+                        "Outdoor",
+                        "Outdoor",
+                        "7"
+                      ],
+                      [
+                        "en",
+                        "Exterior area",
+                        "Exterior area",
+                        "8"
+                      ],
+                      [
+                        "en",
+                        "Parking",
+                        "Parking",
+                        "9"
                       ]
                     ]
                   }

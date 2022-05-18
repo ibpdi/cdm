@@ -1,0 +1,157 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "System.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "LightingSystem",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "LightingSystemId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk System. to LightingSystem.",
+          "entity": {
+            "entityReference": "System",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "System/(resolvedAttributes)/SystemId"
+                ]
+              }
+            ]
+          },
+          "name": "SystemId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SystemId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "IEEEIlluminationLevels",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Volume domestic cold water"
+        },
+        {
+          "name": "IlluminationUnit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "lx",
+                        "lx",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "fc",
+                        "fc",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "isNullable": true,
+          "description": "Measurement unit for illumination ",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "GlareIndex",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Glare index"
+        },
+        {
+          "name": "LightBrightness",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Light brightness"
+        },
+        {
+          "name": "SolarReflectanceIndex",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Solar reflectance index (SRI)",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "RoomCavityRatio",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Room cavity ratio",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "displayName": "LightingSystem",
+      "description": "Information about lighting system"
+    }
+  ]
+}

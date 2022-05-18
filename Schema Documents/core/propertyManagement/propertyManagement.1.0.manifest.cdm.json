@@ -25,12 +25,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "RentalContractRole",
-      "entityPath": "RentalContractRole.1.0.cdm.json/RentalContractRole",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "RentalOption",
       "entityPath": "RentalOption.1.0.cdm.json/RentalOption",
       "dataPartitionPatterns": []
@@ -45,12 +39,6 @@
       "type": "LocalEntity",
       "entityName": "RentalUnit",
       "entityPath": "RentalUnit.1.0.cdm.json/RentalUnit",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RentalUnitAreaMeasurement",
-      "entityPath": "RentalUnitAreaMeasurement.1.0.cdm.json/RentalUnitAreaMeasurement",
       "dataPartitionPatterns": []
     },
     {
@@ -73,6 +61,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "RentalUnitSite",
+      "entityPath": "RentalUnitSite.1.0.cdm.json/RentalUnitSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "RentalUnitSpace",
       "entityPath": "RentalUnitSpace.1.0.cdm.json/RentalUnitSpace",
       "dataPartitionPatterns": []
@@ -87,13 +81,6 @@
       "type": "LocalEntity",
       "entityName": "TenantCommunication",
       "entityPath": "TenantCommunication.1.0.cdm.json/TenantCommunication",
-      "dataPartitionPatterns": []
-    },
-
-    {
-      "type": "LocalEntity",
-      "entityName": "TenantCommunicationRole",
-      "entityPath": "TenantCommunicationRole.1.0.cdm.json/TenantCommunicationRole",
       "dataPartitionPatterns": []
     }
   ]

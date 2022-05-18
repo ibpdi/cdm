@@ -46,8 +46,7 @@
                 "maximumLength": 50
               }
             }
-          },
-          "purpose": "identifiedBy"
+          }
         },
         {
           "attributeGroupReference": "ValidityInfo"
@@ -69,11 +68,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             }
@@ -91,11 +90,11 @@
               "arguments": [
                 {
                   "name": "precision",
-                  "value": "19"
+                  "value": "28"
                 },
                 {
                   "name": "scale",
-                  "value": "6"
+                  "value": "4"
                 }
               ]
             }
@@ -104,11 +103,24 @@
         {
           "name": "DiscountInPercentage",
           "purpose": "hasA",
-          "dataType": "float",
+          "dataType": "decimal",
           "isNullable": true,
           "description": "Discount percentage of payment",
           "appliedTraits": [
-            "means.measurement.percent"
+            "means.measurement.percent",
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
           ]
         },
         {

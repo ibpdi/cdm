@@ -1,0 +1,190 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/UrinalFlushometer.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "UrinalFlushometer",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "UrinalFlushometer",
+        "definition": "resolvedFrom/UrinalFlushometer",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UrinalFlushometerId",
+            "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer",
+            "definition": "resolvedFrom/UrinalFlushometer/hasAttributes/UrinalFlushometerId",
+            "contents": [
+              "UrinalFlushometer/hasAttributes/UrinalFlushometerId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubSubComponentTypeId",
+            "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer",
+            "definition": "resolvedFrom/UrinalFlushometer/hasAttributes/SubSubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubSubComponentType",
+                "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer/SubSubComponentTypeId",
+                "definition": "resolvedFrom/SubSubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer/SubSubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer/SubSubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/UrinalFlushometer/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "contents": [
+                          "UrinalFlushometer/hasAttributes/SubSubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WaterPerFlush",
+            "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer",
+            "definition": "resolvedFrom/UrinalFlushometer/hasAttributes/WaterPerFlush",
+            "contents": [
+              "UrinalFlushometer/hasAttributes/WaterPerFlush"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "InstallationType",
+            "parent": "UrinalFlushometer/attributeContext/UrinalFlushometer",
+            "definition": "resolvedFrom/UrinalFlushometer/hasAttributes/InstallationType",
+            "contents": [
+              "UrinalFlushometer/hasAttributes/InstallationType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "UrinalFlushometerId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UrinalFlushometer/attributeContext/UrinalFlushometer/UrinalFlushometerId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubSubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
+                        "SubSubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UrinalFlushometer/attributeContext/UrinalFlushometer/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WaterPerFlush",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "UrinalFlushometer/attributeContext/UrinalFlushometer/WaterPerFlush",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Water per flush"
+        },
+        {
+          "name": "InstallationType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "UrinalFlushometer/attributeContext/UrinalFlushometer/InstallationType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Installation type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "UrinalFlushometer",
+      "description": "Information about urinal flushometer",
+      "version": "4.3"
+    }
+  ]
+}

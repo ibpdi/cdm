@@ -1,0 +1,96 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "System.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "InformationAndCommunicationSystem",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "InformationAndCommunicationSystemId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk System. to InformationAndCommunicationSystem.",
+          "entity": {
+            "entityReference": "System",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "System/(resolvedAttributes)/SystemId"
+                ]
+              }
+            ]
+          },
+          "name": "SystemId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SystemId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "CableCategory",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Category of cable",
+          "maximumLength": 50
+        },
+        {
+          "name": "CableRating",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Determine the parameters within which a cable can be safely used",
+          "maximumLength": 50
+        },
+        {
+          "name": "CableType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of cable",
+          "maximumLength": 50
+        },
+        {
+          "name": "FibreType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Cable type of fibre",
+          "maximumLength": 50
+        },
+        {
+          "name": "SignalType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Cable signal type",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "InformationAndCommunicationSystem",
+      "description": "Information about information and communication system"
+    }
+  ]
+}

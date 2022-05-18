@@ -1,0 +1,442 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Generator.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Generator",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Generator",
+        "definition": "resolvedFrom/Generator",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Generator/attributeContext/Generator",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Generator/attributeContext/Generator/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GeneratorId",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/GeneratorId",
+            "contents": [
+              "Generator/hasAttributes/GeneratorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "Generator/attributeContext/Generator/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Generator/attributeContext/Generator/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Generator/attributeContext/Generator/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Generator/attributeContext/Generator/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Generator/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "Generator/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputVoltage",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/OutputVoltage",
+            "contents": [
+              "Generator/hasAttributes/OutputVoltage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputPhases",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/OutputPhases",
+            "contents": [
+              "Generator/hasAttributes/OutputPhases"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ModeOfOperation",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/ModeOfOperation",
+            "contents": [
+              "Generator/hasAttributes/ModeOfOperation"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FuelType",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/FuelType",
+            "contents": [
+              "Generator/hasAttributes/FuelType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Frequency",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/Frequency",
+            "contents": [
+              "Generator/hasAttributes/Frequency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DayTankCapacity",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/DayTankCapacity",
+            "contents": [
+              "Generator/hasAttributes/DayTankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BulkStorageCapacity",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/BulkStorageCapacity",
+            "contents": [
+              "Generator/hasAttributes/BulkStorageCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StandbyPowerKva",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/StandbyPowerKva",
+            "contents": [
+              "Generator/hasAttributes/StandbyPowerKva"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StandbyPower",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/StandbyPower",
+            "contents": [
+              "Generator/hasAttributes/StandbyPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimePowerKva",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/PrimePowerKva",
+            "contents": [
+              "Generator/hasAttributes/PrimePowerKva"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimePower",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/PrimePower",
+            "contents": [
+              "Generator/hasAttributes/PrimePower"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "GeneratorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/GeneratorId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OutputVoltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/OutputVoltage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Output voltage"
+        },
+        {
+          "name": "OutputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/OutputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Output phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "ModeOfOperation",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/ModeOfOperation",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mode of operation",
+          "maximumLength": 50
+        },
+        {
+          "name": "FuelType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/FuelType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fuel type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Frequency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/Frequency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Frequency",
+          "maximumLength": 50
+        },
+        {
+          "name": "DayTankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/DayTankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Day tank capacity"
+        },
+        {
+          "name": "BulkStorageCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/BulkStorageCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Bulk storage capacity"
+        },
+        {
+          "name": "StandbyPowerKva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/StandbyPowerKva",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Standby power kva"
+        },
+        {
+          "name": "StandbyPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/StandbyPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Standby power"
+        },
+        {
+          "name": "PrimePowerKva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/PrimePowerKva",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Prime power kva"
+        },
+        {
+          "name": "PrimePower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/PrimePower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Standby power"
+        }
+      ],
+      "displayName": "Generator",
+      "description": "Information about the generator",
+      "version": "4.3"
+    }
+  ]
+}
