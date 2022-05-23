@@ -8,7 +8,7 @@
       "corpusPath": "Role.1.0.cdm.json"
     },
     {
-      "corpusPath": "/core/digitalTwinComponentType.1.0.cdm.json"
+      "corpusPath": "/core/digitalTwin/ComponentType.1.0.cdm.json"
     },
     {
       "corpusPath": "Contact.1.0.cdm.json"

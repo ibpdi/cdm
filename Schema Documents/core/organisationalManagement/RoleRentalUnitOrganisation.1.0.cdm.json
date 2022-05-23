@@ -8,7 +8,7 @@
       "corpusPath": "Role.1.0.cdm.json"
     },
     {
-      "corpusPath": "/core/propertyManagementRentalUnit.1.0.cdm.json"
+      "corpusPath": "/core/propertyManagement/RentalUnit.1.0.cdm.json"
     },
     {
       "corpusPath": "Organisation.1.0.cdm.json"

@@ -8,7 +8,7 @@
       "corpusPath": "Role.1.0.cdm.json"
     },
     {
-      "corpusPath": "OperationalMeasurement.1.0.cdm.json"
+      "corpusPath": "/core/energyAndResources/OperationalMeasurement.1.0.cdm.json"
     },
     {
       "corpusPath": "Contact.1.0.cdm.json"

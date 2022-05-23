@@ -8,7 +8,7 @@
       "corpusPath": "Component.1.0.cdm.json"
     },
     {
-      "corpusPath": "/core/propertymanagement/RentalUnit.1.0.cdm.json"
+      "corpusPath": "/core/propertyManagement/RentalUnit.1.0.cdm.json"
     }
   ],
   "definitions": [
