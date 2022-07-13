@@ -1,0 +1,174 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Site.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Servitude.2.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Land",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "LandId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Customer ID from previous system  (ID before onboarding data to BM)",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Site. to Land.",
+          "entity": {
+            "entityReference": "Site",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Site/(resolvedAttributes)/SiteId"
+                ]
+              }
+            ]
+          },
+          "name": "SiteId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SiteId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Reference to the site which the land belongs to",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "explanation": "fk Servitude. to Land.",
+          "entity": {
+            "entityReference": "Servitude",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Servitude/(resolvedAttributes)/ServitudeId"
+                ]
+              }
+            ]
+          },
+          "name": "ServitudeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "ServitudeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "isNullable": true,
+                "description": "Reference to the Servitude which belongs to the land",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "attributeGroupReference": "Name"
+        },
+        {
+          "name": "LandCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific Land Code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Type of land",
+          "maximumLength": 75
+        },
+        {
+          "name": "LandCoverage",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Development level of land",
+          "maximumLength": 50
+        },
+        {
+          "name": "LandParcelNr",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "District/Zoning number registered for the Plot of land",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "TypeOfOwnership",
+          "purpose": "hasA",
+          "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Owner",
+                        "Owner",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Tenant",
+                        "Tenant",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Is the land owned or leased.",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SelfUse",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is land self used or not (Y/N)"
+        },
+        {
+          "name": "Status",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Status of site",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Land",
+      "description": "A defined area of land, possibly covered with water, on which the project construction is to be completed or already completed"
+    }
+  ]
+}

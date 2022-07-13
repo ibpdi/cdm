@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "CustomerFile.cdm.json"
+    },
+    {
+      "corpusPath": "Workspace.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerFileWorkspace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk CustomerFile. to CustomerFileWorkspace.",
+          "entity": {
+            "entityReference": "CustomerFile",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "CustomerFile/(resolvedAttributes)/CustomerFileId"
+                ]
+              }
+            ]
+          },
+          "name": "CustomerFileId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CustomerFileId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Workspace. to CustomerFileWorkspace.",
+          "entity": {
+            "entityReference": "Workspace",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Workspace/(resolvedAttributes)/WorkspaceId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkspaceId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkspaceId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CustomerFileWorkspace",
+      "description": "Linking entity between CustomerFile and Workspace"
+    }
+  ]
+}

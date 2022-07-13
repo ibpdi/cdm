@@ -308,34 +308,7 @@
           "attributeContext": "GhgEmission/attributeContext/GhgEmission/EmissionScope",
           "dataFormat": "String",
           "description": "Emission scope 1, 2 or 3 according to the Greenhouse Gas Protocol",
-          "maximumLength": 50,
-          "valueConstrainedToList": true,
-          "defaultValue": [
-            {
-              "languageTag": "en",
-              "displayText": "1",
-              "attributeValue": "1",
-              "displayOrder": "0"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "2",
-              "attributeValue": "2",
-              "displayOrder": "1"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "3",
-              "attributeValue": "3",
-              "displayOrder": "2"
-            },
-            {
-              "languageTag": "en",
-              "displayText": "Unspecified",
-              "attributeValue": "Unspecified",
-              "displayOrder": "3"
-            }
-          ]
+          "maximumLength": 50
         },
         {
           "name": "ReportingType",

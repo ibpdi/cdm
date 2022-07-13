@@ -92,9 +92,9 @@
             "contents": [
               {
                 "type": "entity",
-                "name": "Servitudes",
+                "name": "Servitude",
                 "parent": "Land/attributeContext/Land/ServitudeId",
-                "definition": "resolvedFrom/Servitudes"
+                "definition": "resolvedFrom/Servitude"
               },
               {
                 "type": "generatedSet",
@@ -218,11 +218,20 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "GeorefId",
+            "name": "TypeOfOwnership",
             "parent": "Land/attributeContext/Land",
-            "definition": "resolvedFrom/Land/hasAttributes/GeorefId",
+            "definition": "resolvedFrom/Land/hasAttributes/TypeOfOwnership",
             "contents": [
-              "Land/hasAttributes/GeorefId"
+              "Land/hasAttributes/TypeOfOwnership"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SelfUse",
+            "parent": "Land/attributeContext/Land",
+            "definition": "resolvedFrom/Land/hasAttributes/SelfUse",
+            "contents": [
+              "Land/hasAttributes/SelfUse"
             ]
           },
           {
@@ -292,7 +301,7 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/Servitudes.cdm.json/Servitudes",
+                        "/core/digitalTwin/Servitude.cdm.json/Servitude",
                         "ServitudeId"
                       ]
                     ]
@@ -409,17 +418,41 @@
           "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "GeorefId",
+          "name": "TypeOfOwnership",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Land/attributeContext/Land/GeorefId",
-          "isNullable": true,
+          "attributeContext": "Land/attributeContext/Land/TypeOfOwnership",
           "dataFormat": "String",
-          "description": "A reference to Guid from the geo-coordinate entity",
-          "maximumLength": 50
+          "description": "Is the land owned or leased.",
+          "maximumLength": 50,
+          "valueConstrainedToList": true,
+          "defaultValue": [
+            {
+              "languageTag": "en",
+              "displayText": "Owner",
+              "attributeValue": "Owner",
+              "displayOrder": "0"
+            },
+            {
+              "languageTag": "en",
+              "displayText": "Tenant",
+              "attributeValue": "Tenant",
+              "displayOrder": "1"
+            }
+          ]
+        },
+        {
+          "name": "SelfUse",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Land/attributeContext/Land/SelfUse",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is land self used or not (Y/N)"
         },
         {
           "name": "Status",

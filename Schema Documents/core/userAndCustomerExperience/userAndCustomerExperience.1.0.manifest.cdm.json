@@ -1,0 +1,117 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0",
+  "manifestName": "userAndCustomerExperience",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "AvailableResource",
+      "entityPath": "AvailableResource.1.0.cdm.json/AvailableResource",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AvailableResourceWorkspace",
+      "entityPath": "AvailableResourceWorkspace.1.0.cdm.json/AvailableResourceWorkspace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Booking",
+      "entityPath": "Booking.1.0.cdm.json/Booking",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "BookingWorkspace",
+      "entityPath": "BookingWorkspace.1.0.cdm.json/BookingWorkspace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Characteristic",
+      "entityPath": "Characteristic.1.0.cdm.json/Characteristic",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CharacteristicNeighbourhood",
+      "entityPath": "CharacteristicNeighbourhood.1.0.cdm.json/CharacteristicNeighbourhood",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CharacteristicWorkspace",
+      "entityPath": "CharacteristicWorkspace.1.0.cdm.json/CharacteristicWorkspace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CustomerFile",
+      "entityPath": "CustomerFile.1.0.cdm.json/CustomerFile",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CustomerFileWorkArea",
+      "entityPath": "CustomerFileWorkArea.1.0.cdm.json/CustomerFileWorkArea",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CustomerFileWorkspace",
+      "entityPath": "CustomerFileWorkspace.1.0.cdm.json/CustomerFileWorkspace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Neighbourhood",
+      "entityPath": "Neighbourhood.1.0.cdm.json/Neighbourhood",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "NeighbourhoodWorkspace",
+      "entityPath": "NeighbourhoodWorkspace.1.0.cdm.json/NeighbourhoodWorkspace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkArea",
+      "entityPath": "WorkArea.1.0.cdm.json/WorkArea",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkAreaFloor",
+      "entityPath": "WorkAreaFloor.1.0.cdm.json/WorkAreaFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkAreaSpace",
+      "entityPath": "WorkAreaSpace.1.0.cdm.json/WorkAreaSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkAreaType",
+      "entityPath": "WorkAreaType.1.0.cdm.json/WorkAreaType",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Workspace",
+      "entityPath": "Workspace.1.0.cdm.json/Workspace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkspaceSensor",
+      "entityPath": "WorkspaceSensor.1.0.cdm.json/WorkspaceSensor",
+      "dataPartitionPatterns": []
+    }
+  ]
+}

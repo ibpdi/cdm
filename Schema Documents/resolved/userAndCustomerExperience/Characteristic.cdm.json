@@ -1,0 +1,93 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/Characteristic.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Characteristic",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Characteristic",
+        "definition": "resolvedFrom/Characteristic",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Characteristic/attributeContext/Characteristic",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Characteristic/attributeContext/Characteristic/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CharacteristicId",
+            "parent": "Characteristic/attributeContext/Characteristic",
+            "definition": "resolvedFrom/Characteristic/hasAttributes/CharacteristicId",
+            "contents": [
+              "Characteristic/hasAttributes/CharacteristicId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Characteristic/attributeContext/Characteristic",
+            "definition": "resolvedFrom/Characteristic/hasAttributes/Name",
+            "contents": [
+              "Characteristic/hasAttributes/Name"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CharacteristicId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Characteristic/attributeContext/Characteristic/CharacteristicId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Characteristic/attributeContext/Characteristic/Name",
+          "dataFormat": "String",
+          "description": "User specific name of workplace",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "Characteristic",
+      "description": "Characteristics of workspace",
+      "version": "4.3"
+    }
+  ]
+}

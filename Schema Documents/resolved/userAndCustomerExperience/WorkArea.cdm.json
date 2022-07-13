@@ -1,0 +1,318 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/WorkArea.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkArea",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WorkArea",
+        "definition": "resolvedFrom/WorkArea",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WorkArea/attributeContext/WorkArea/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaId",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "definition": "resolvedFrom/WorkArea/hasAttributes/WorkAreaId",
+            "contents": [
+              "WorkArea/hasAttributes/WorkAreaId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaTypeId",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "definition": "resolvedFrom/WorkArea/hasAttributes/WorkAreaTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "WorkAreaType",
+                "parent": "WorkArea/attributeContext/WorkArea/WorkAreaTypeId",
+                "definition": "resolvedFrom/WorkAreaType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkArea/attributeContext/WorkArea/WorkAreaTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkArea/attributeContext/WorkArea/WorkAreaTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkArea/attributeContext/WorkArea/WorkAreaTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkArea/hasAttributes/WorkAreaTypeId/resolutionGuidance/foreignKeyAttribute/WorkAreaTypeId",
+                        "contents": [
+                          "WorkArea/hasAttributes/WorkAreaTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AreaMeasurementId",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "definition": "resolvedFrom/WorkArea/hasAttributes/AreaMeasurementId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "AreaMeasurement",
+                "parent": "WorkArea/attributeContext/WorkArea/AreaMeasurementId",
+                "definition": "resolvedFrom/AreaMeasurement"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkArea/attributeContext/WorkArea/AreaMeasurementId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkArea/attributeContext/WorkArea/AreaMeasurementId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkArea/attributeContext/WorkArea/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkArea/hasAttributes/AreaMeasurementId/resolutionGuidance/foreignKeyAttribute/AreaMeasurementId",
+                        "contents": [
+                          "WorkArea/hasAttributes/AreaMeasurementId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "definition": "resolvedFrom/WorkArea/hasAttributes/Name",
+            "contents": [
+              "WorkArea/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaCode",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "definition": "resolvedFrom/WorkArea/hasAttributes/WorkAreaCode",
+            "contents": [
+              "WorkArea/hasAttributes/WorkAreaCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "WorkArea/attributeContext/WorkArea",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "WorkArea/attributeContext/WorkArea/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "WorkArea/attributeContext/WorkArea/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "WorkArea/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "WorkArea/attributeContext/WorkArea/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "WorkArea/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WorkAreaId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/WorkAreaId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkAreaTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/WorkAreaType.cdm.json/WorkAreaType",
+                        "WorkAreaTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/WorkAreaTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "AreaMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/AreaMeasurement.cdm.json/AreaMeasurement",
+                        "AreaMeasurementId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/AreaMeasurementId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/Name",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific name of work space",
+          "maximumLength": 200
+        },
+        {
+          "name": "WorkAreaCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/WorkAreaCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific work area code",
+          "maximumLength": 70
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "WorkArea/attributeContext/WorkArea/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "WorkArea",
+      "description": "Work area that represents area used for certain functions within the organisation",
+      "version": "4.3"
+    }
+  ]
+}

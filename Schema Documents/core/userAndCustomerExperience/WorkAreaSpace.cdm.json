@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "WorkArea.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/Space.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkAreaSpace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk WorkArea. to WorkAreaSpace.",
+          "entity": {
+            "entityReference": "WorkArea",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "WorkArea/(resolvedAttributes)/WorkAreaId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkAreaId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkAreaId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Space. to WorkAreaSpace.",
+          "entity": {
+            "entityReference": "Space",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Space/(resolvedAttributes)/SpaceId"
+                ]
+              }
+            ]
+          },
+          "name": "SpaceId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SpaceId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "WorkAreaSpace",
+      "description": "Linking entity between WorkArea and Space"
+    }
+  ]
+}

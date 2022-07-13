@@ -1,0 +1,253 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/Neighbourhood.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Neighbourhood",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Neighbourhood",
+        "definition": "resolvedFrom/Neighbourhood",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Neighbourhood/attributeContext/Neighbourhood",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Neighbourhood/attributeContext/Neighbourhood/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NeighbourhoodId",
+            "parent": "Neighbourhood/attributeContext/Neighbourhood",
+            "definition": "resolvedFrom/Neighbourhood/hasAttributes/NeighbourhoodId",
+            "contents": [
+              "Neighbourhood/hasAttributes/NeighbourhoodId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OrganisationId",
+            "parent": "Neighbourhood/attributeContext/Neighbourhood",
+            "definition": "resolvedFrom/Neighbourhood/hasAttributes/OrganisationId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Organisation",
+                "parent": "Neighbourhood/attributeContext/Neighbourhood/OrganisationId",
+                "definition": "resolvedFrom/Organisation"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Neighbourhood/attributeContext/Neighbourhood/OrganisationId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Neighbourhood/attributeContext/Neighbourhood/OrganisationId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Neighbourhood/attributeContext/Neighbourhood/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Neighbourhood/hasAttributes/OrganisationId/resolutionGuidance/foreignKeyAttribute/OrganisationId",
+                        "contents": [
+                          "Neighbourhood/hasAttributes/OrganisationId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Neighbourhood/attributeContext/Neighbourhood",
+            "definition": "resolvedFrom/Neighbourhood/hasAttributes/Name",
+            "contents": [
+              "Neighbourhood/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Neighbourhood/attributeContext/Neighbourhood",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Neighbourhood/attributeContext/Neighbourhood/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Neighbourhood/attributeContext/Neighbourhood/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Neighbourhood/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Neighbourhood/attributeContext/Neighbourhood/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Neighbourhood/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Color",
+            "parent": "Neighbourhood/attributeContext/Neighbourhood",
+            "definition": "resolvedFrom/Neighbourhood/hasAttributes/Color",
+            "contents": [
+              "Neighbourhood/hasAttributes/Color"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "NeighbourhoodId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Neighbourhood/attributeContext/Neighbourhood/NeighbourhoodId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OrganisationId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Organisation.cdm.json/Organisation",
+                        "OrganisationId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Neighbourhood/attributeContext/Neighbourhood/OrganisationId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Neighbourhood/attributeContext/Neighbourhood/Name",
+          "dataFormat": "String",
+          "description": "User specific name of neighbourhood",
+          "maximumLength": 200
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Neighbourhood/attributeContext/Neighbourhood/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Neighbourhood/attributeContext/Neighbourhood/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Color",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Neighbourhood/attributeContext/Neighbourhood/Color",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific color code",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "Neighbourhood",
+      "description": "A group of workspaces that can be assigned to one or many organisational departments",
+      "version": "4.3"
+    }
+  ]
+}

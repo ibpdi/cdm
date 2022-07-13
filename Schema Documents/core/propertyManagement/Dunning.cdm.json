@@ -61,7 +61,7 @@
         {
           "name": "DunningAmount",
           "purpose": "hasA",
-          "dataType": "currency",
+          "dataType": "decimal",
           "description": "Dunning Amount",
           "appliedTraits": [
             {
@@ -85,7 +85,7 @@
         {
           "name": "PaymentAmount",
           "purpose": "hasA",
-          "dataType": "currency",
+          "dataType": "decimal",
           "description": "Value of payment",
           "appliedTraits": [
             {

@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/WorkAreaSpace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkAreaSpace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WorkAreaSpace",
+        "definition": "resolvedFrom/WorkAreaSpace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaId",
+            "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace",
+            "definition": "resolvedFrom/WorkAreaSpace/hasAttributes/WorkAreaId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "WorkArea",
+                "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/WorkAreaId",
+                "definition": "resolvedFrom/WorkArea"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/WorkAreaId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/WorkAreaId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/WorkAreaId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkAreaSpace/hasAttributes/WorkAreaId/resolutionGuidance/foreignKeyAttribute/WorkAreaId",
+                        "contents": [
+                          "WorkAreaSpace/hasAttributes/WorkAreaId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SpaceId",
+            "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace",
+            "definition": "resolvedFrom/WorkAreaSpace/hasAttributes/SpaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Space",
+                "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/SpaceId",
+                "definition": "resolvedFrom/Space"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/SpaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/SpaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkAreaSpace/attributeContext/WorkAreaSpace/SpaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkAreaSpace/hasAttributes/SpaceId/resolutionGuidance/foreignKeyAttribute/SpaceId",
+                        "contents": [
+                          "WorkAreaSpace/hasAttributes/SpaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WorkAreaId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/WorkArea.cdm.json/WorkArea",
+                        "WorkAreaId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkAreaSpace/attributeContext/WorkAreaSpace/WorkAreaId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SpaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Space.cdm.json/Space",
+                        "SpaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkAreaSpace/attributeContext/WorkAreaSpace/SpaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "WorkAreaSpace",
+      "description": "Linking entity between WorkArea and Space",
+      "version": "4.3"
+    }
+  ]
+}

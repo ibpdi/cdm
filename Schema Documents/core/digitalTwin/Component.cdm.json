@@ -207,11 +207,7 @@
           ]
         },
         {
-          "name": "Currency",
-          "purpose": "hasA",
-          "dataType": "string",
-          "description": "Currency ",
-          "maximumLength": 50
+          "attributeGroupReference": "Currency"
         },
         {
           "name": "InstallationDate",

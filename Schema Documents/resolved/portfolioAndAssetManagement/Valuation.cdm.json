@@ -559,8 +559,7 @@
                   "value": "4"
                 }
               ]
-            },
-            "means.measurement.currency"
+            }
           ],
           "attributeContext": "Valuation/attributeContext/Valuation/Value",
           "dataFormat": "Decimal",

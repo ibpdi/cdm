@@ -183,12 +183,7 @@
           ]
         },
         {
-          "name": "DuctInletCurrency",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Currency ",
-          "maximumLength": 50
+          "attributeGroupReference": "DuctInletCurrency"
         },
         {
           "name": "DuctInletInstallationDate",

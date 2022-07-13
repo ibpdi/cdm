@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Sensor.cdm.json"
+    },
+    {
+      "corpusPath": "Land.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorLand",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Sensor. to SensorLand.",
+          "entity": {
+            "entityReference": "Sensor",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Sensor/(resolvedAttributes)/SensorId"
+                ]
+              }
+            ]
+          },
+          "name": "SensorId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SensorId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Land. to SensorLand.",
+          "entity": {
+            "entityReference": "Land",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Land/(resolvedAttributes)/LandId"
+                ]
+              }
+            ]
+          },
+          "name": "LandId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "LandId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "SensorLand",
+      "description": "Linking entity between Sensor and Land. The sensor represents the sensor measurement area which can be different from the physical location "
+    }
+  ]
+}

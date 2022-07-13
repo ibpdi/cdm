@@ -1,0 +1,93 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/AvailableResource.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AvailableResource",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AvailableResource",
+        "definition": "resolvedFrom/AvailableResource",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AvailableResource/attributeContext/AvailableResource",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AvailableResource/attributeContext/AvailableResource/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AvailableResourceId",
+            "parent": "AvailableResource/attributeContext/AvailableResource",
+            "definition": "resolvedFrom/AvailableResource/hasAttributes/AvailableResourceId",
+            "contents": [
+              "AvailableResource/hasAttributes/AvailableResourceId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "AvailableResource/attributeContext/AvailableResource",
+            "definition": "resolvedFrom/AvailableResource/hasAttributes/Name",
+            "contents": [
+              "AvailableResource/hasAttributes/Name"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AvailableResourceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AvailableResource/attributeContext/AvailableResource/AvailableResourceId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Available resources workplace",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "AvailableResource/attributeContext/AvailableResource/Name",
+          "dataFormat": "String",
+          "description": "User specific name of workplace",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "AvailableResource",
+      "description": "Available resources on workspace ",
+      "version": "4.3"
+    }
+  ]
+}

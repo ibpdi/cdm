@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "Characteristic.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Neighbourhood.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CharacteristicNeighbourhood",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Characteristic. to CharacteristicNeighbourhood.",
+          "entity": {
+            "entityReference": "Characteristic",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Characteristic/(resolvedAttributes)/CharacteristicId"
+                ]
+              }
+            ]
+          },
+          "name": "CharacteristicId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CharacteristicId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Neighbourhood. to CharacteristicNeighbourhood.",
+          "entity": {
+            "entityReference": "Neighbourhood",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Neighbourhood/(resolvedAttributes)/NeighbourhoodId"
+                ]
+              }
+            ]
+          },
+          "name": "NeighbourhoodId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "NeighbourhoodId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CharacteristicNeighbourhood",
+      "description": "Linking entity between Characteristics and Neighbourhood"
+    }
+  ]
+}

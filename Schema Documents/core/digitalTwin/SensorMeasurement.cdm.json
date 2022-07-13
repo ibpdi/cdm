@@ -1,0 +1,104 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Sensor.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorMeasurement",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "SensorMeasurementId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Sensor. to SensorMeasurement.",
+          "entity": {
+            "entityReference": "Sensor",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Sensor/(resolvedAttributes)/SensorId"
+                ]
+              }
+            ]
+          },
+          "name": "SensorId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "SensorId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "isNullable": true,
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "MeasurementDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Date of measurement in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Value",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Value of sensor measurement",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Unit",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unit of sensor measurement",
+          "maximumLength": 50
+        },
+        {
+          "name": "Reliability",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Is this sensor measurement reliable"
+        }
+      ],
+      "displayName": "SensorMeasurement",
+      "description": "Stores all measurements received from sensors."
+    }
+  ]
+}

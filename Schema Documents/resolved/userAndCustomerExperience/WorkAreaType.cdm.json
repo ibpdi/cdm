@@ -1,0 +1,187 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/WorkAreaType.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkAreaType",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WorkAreaType",
+        "definition": "resolvedFrom/WorkAreaType",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WorkAreaType/attributeContext/WorkAreaType",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WorkAreaType/attributeContext/WorkAreaType/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaTypeId",
+            "parent": "WorkAreaType/attributeContext/WorkAreaType",
+            "definition": "resolvedFrom/WorkAreaType/hasAttributes/WorkAreaTypeId",
+            "contents": [
+              "WorkAreaType/hasAttributes/WorkAreaTypeId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "WorkAreaType/attributeContext/WorkAreaType",
+            "definition": "resolvedFrom/WorkAreaType/hasAttributes/Name",
+            "contents": [
+              "WorkAreaType/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "WorkAreaType/attributeContext/WorkAreaType",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "WorkAreaType/attributeContext/WorkAreaType/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "WorkAreaType/attributeContext/WorkAreaType/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "WorkAreaType/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "WorkAreaType/attributeContext/WorkAreaType/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "WorkAreaType/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Color",
+            "parent": "WorkAreaType/attributeContext/WorkAreaType",
+            "definition": "resolvedFrom/WorkAreaType/hasAttributes/Color",
+            "contents": [
+              "WorkAreaType/hasAttributes/Color"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WorkAreaTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WorkAreaType/attributeContext/WorkAreaType/WorkAreaTypeId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WorkAreaType/attributeContext/WorkAreaType/Name",
+          "dataFormat": "String",
+          "description": "User specific name of work space template (\"type of workspace\")",
+          "maximumLength": 200
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "WorkAreaType/attributeContext/WorkAreaType/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "WorkAreaType/attributeContext/WorkAreaType/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Color",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "WorkAreaType/attributeContext/WorkAreaType/Color",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Color code of specific workspace template",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "WorkAreaType",
+      "description": "Type of work area",
+      "version": "4.3"
+    }
+  ]
+}

@@ -523,8 +523,68 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "Sensor",
+      "entityPath": "Sensor.1.0.cdm.json/Sensor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorBuilding",
+      "entityPath": "SensorBuilding.1.0.cdm.json/SensorBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorComponent",
+      "entityPath": "SensorComponent.1.0.cdm.json/SensorComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "SensorEquipment",
       "entityPath": "SensorEquipment.1.0.cdm.json/SensorEquipment",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorFloor",
+      "entityPath": "SensorFloor.1.0.cdm.json/SensorFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorLand",
+      "entityPath": "SensorLand.1.0.cdm.json/SensorLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorMeasurement",
+      "entityPath": "SensorMeasurement.1.0.cdm.json/SensorMeasurement",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorRentalUnit",
+      "entityPath": "SensorRentalUnit.1.0.cdm.json/SensorRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorSite",
+      "entityPath": "SensorSite.1.0.cdm.json/SensorSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorSpace",
+      "entityPath": "SensorSpace.1.0.cdm.json/SensorSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorUnit",
+      "entityPath": "SensorUnit.1.0.cdm.json/SensorUnit",
       "dataPartitionPatterns": []
     },
     {

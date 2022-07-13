@@ -1,0 +1,109 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "WorkAreaType.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "/core/digitalTwin/AreaMeasurement.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkArea",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "WorkAreaId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk WorkAreaType. to WorkArea.",
+          "entity": {
+            "entityReference": "WorkAreaType",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "WorkAreaType/(resolvedAttributes)/WorkAreaTypeId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkAreaTypeId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkAreaTypeId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "explanation": "fk AreaMeasurement. to WorkArea.",
+          "entity": {
+            "entityReference": "AreaMeasurement",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "AreaMeasurement/(resolvedAttributes)/AreaMeasurementId"
+                ]
+              }
+            ]
+          },
+          "name": "AreaMeasurementId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "AreaMeasurementId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific name of work space",
+          "maximumLength": 200
+        },
+        {
+          "name": "WorkAreaCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific work area code",
+          "maximumLength": 70
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "WorkArea",
+      "description": "Work area that represents area used for certain functions within the organisation"
+    }
+  ]
+}

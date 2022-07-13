@@ -1,0 +1,158 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/CustomerFile.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerFile",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CustomerFile",
+        "definition": "resolvedFrom/CustomerFile",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CustomerFile/attributeContext/CustomerFile",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CustomerFile/attributeContext/CustomerFile/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CustomerFileId",
+            "parent": "CustomerFile/attributeContext/CustomerFile",
+            "definition": "resolvedFrom/CustomerFile/hasAttributes/CustomerFileId",
+            "contents": [
+              "CustomerFile/hasAttributes/CustomerFileId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "CustomerFile/attributeContext/CustomerFile",
+            "definition": "resolvedFrom/CustomerFile/hasAttributes/Name",
+            "contents": [
+              "CustomerFile/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Link",
+            "parent": "CustomerFile/attributeContext/CustomerFile",
+            "definition": "resolvedFrom/CustomerFile/hasAttributes/Link",
+            "contents": [
+              "CustomerFile/hasAttributes/Link"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FileType",
+            "parent": "CustomerFile/attributeContext/CustomerFile",
+            "definition": "resolvedFrom/CustomerFile/hasAttributes/FileType",
+            "contents": [
+              "CustomerFile/hasAttributes/FileType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Metadata",
+            "parent": "CustomerFile/attributeContext/CustomerFile",
+            "definition": "resolvedFrom/CustomerFile/hasAttributes/Metadata",
+            "contents": [
+              "CustomerFile/hasAttributes/Metadata"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CustomerFileId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CustomerFile/attributeContext/CustomerFile/CustomerFileId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CustomerFile/attributeContext/CustomerFile/Name",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific name for file",
+          "maximumLength": 200
+        },
+        {
+          "name": "Link",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CustomerFile/attributeContext/CustomerFile/Link",
+          "dataFormat": "String",
+          "description": "Link to file location",
+          "maximumLength": 2050
+        },
+        {
+          "name": "FileType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CustomerFile/attributeContext/CustomerFile/FileType",
+          "dataFormat": "String",
+          "description": "Type of file",
+          "maximumLength": 75
+        },
+        {
+          "name": "Metadata",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CustomerFile/attributeContext/CustomerFile/Metadata",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Metadata information about the file stored in JSON format. This could be for example resolution and ordinal for an image. For different file types different metadata can be stored here",
+          "maximumLength": 1000
+        }
+      ],
+      "displayName": "CustomerFile",
+      "description": "Information about customer files",
+      "version": "4.3"
+    }
+  ]
+}

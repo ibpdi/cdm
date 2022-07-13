@@ -1,0 +1,201 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/organisationalManagement/GeoCoordinate.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "GeoCoordinate",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "GeoCoordinate",
+        "definition": "resolvedFrom/GeoCoordinate",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "GeoCoordinate/attributeContext/GeoCoordinate",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "GeoCoordinate/attributeContext/GeoCoordinate/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GeoCoordinateId",
+            "parent": "GeoCoordinate/attributeContext/GeoCoordinate",
+            "definition": "resolvedFrom/GeoCoordinate/hasAttributes/GeoCoordinateId",
+            "contents": [
+              "GeoCoordinate/hasAttributes/GeoCoordinateId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AddressId",
+            "parent": "GeoCoordinate/attributeContext/GeoCoordinate",
+            "definition": "resolvedFrom/GeoCoordinate/hasAttributes/AddressId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Address",
+                "parent": "GeoCoordinate/attributeContext/GeoCoordinate/AddressId",
+                "definition": "resolvedFrom/Address"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "GeoCoordinate/attributeContext/GeoCoordinate/AddressId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "GeoCoordinate/attributeContext/GeoCoordinate/AddressId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "GeoCoordinate/attributeContext/GeoCoordinate/AddressId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/GeoCoordinate/hasAttributes/AddressId/resolutionGuidance/foreignKeyAttribute/AddressId",
+                        "contents": [
+                          "GeoCoordinate/hasAttributes/AddressId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoordinateReferenceSystem",
+            "parent": "GeoCoordinate/attributeContext/GeoCoordinate",
+            "definition": "resolvedFrom/GeoCoordinate/hasAttributes/CoordinateReferenceSystem",
+            "contents": [
+              "GeoCoordinate/hasAttributes/CoordinateReferenceSystem"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Latitude",
+            "parent": "GeoCoordinate/attributeContext/GeoCoordinate",
+            "definition": "resolvedFrom/GeoCoordinate/hasAttributes/Latitude",
+            "contents": [
+              "GeoCoordinate/hasAttributes/Latitude"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Longitude",
+            "parent": "GeoCoordinate/attributeContext/GeoCoordinate",
+            "definition": "resolvedFrom/GeoCoordinate/hasAttributes/Longitude",
+            "contents": [
+              "GeoCoordinate/hasAttributes/Longitude"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "GeoCoordinateId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/GeoCoordinateId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "AddressId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/organisationalManagement/Address.cdm.json/Address",
+                        "AddressId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/AddressId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "CoordinateReferenceSystem",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/CoordinateReferenceSystem",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Specific coordinate reference system used",
+          "maximumLength": 50
+        },
+        {
+          "name": "Latitude",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped"
+            }
+          ],
+          "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/Latitude",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Latitude coordinate in case of geographic coordinates"
+        },
+        {
+          "name": "Longitude",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped"
+            }
+          ],
+          "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/Longitude",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Longitude coordinate in case of geographic coordinates"
+        }
+      ],
+      "displayName": "GeoCoordinate",
+      "description": "Information about geographic data to enable the use of common locations of geographic features, imagery, and observation within a common geographic framework",
+      "version": "4.3"
+    }
+  ]
+}

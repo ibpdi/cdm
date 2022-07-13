@@ -55,6 +55,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "GeoCoordinate",
+      "entityPath": "GeoCoordinate.cdm.json/GeoCoordinate",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Organisation",
       "entityPath": "Organisation.cdm.json/Organisation",
       "dataPartitionPatterns": []

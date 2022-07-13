@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/AvailableResourceWorkspace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "AvailableResourceWorkspace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "AvailableResourceWorkspace",
+        "definition": "resolvedFrom/AvailableResourceWorkspace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "AvailableResourceId",
+            "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace",
+            "definition": "resolvedFrom/AvailableResourceWorkspace/hasAttributes/AvailableResourceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "AvailableResource",
+                "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/AvailableResourceId",
+                "definition": "resolvedFrom/AvailableResource"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/AvailableResourceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/AvailableResourceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/AvailableResourceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AvailableResourceWorkspace/hasAttributes/AvailableResourceId/resolutionGuidance/foreignKeyAttribute/AvailableResourceId",
+                        "contents": [
+                          "AvailableResourceWorkspace/hasAttributes/AvailableResourceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceId",
+            "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace",
+            "definition": "resolvedFrom/AvailableResourceWorkspace/hasAttributes/WorkspaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Workspace",
+                "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/WorkspaceId",
+                "definition": "resolvedFrom/Workspace"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/WorkspaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/WorkspaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AvailableResourceWorkspace/hasAttributes/WorkspaceId/resolutionGuidance/foreignKeyAttribute/WorkspaceId",
+                        "contents": [
+                          "AvailableResourceWorkspace/hasAttributes/WorkspaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "AvailableResourceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/AvailableResource.cdm.json/AvailableResource",
+                        "AvailableResourceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/AvailableResourceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Available resources workplace",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkspaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Workspace.cdm.json/Workspace",
+                        "WorkspaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "AvailableResourceWorkspace/attributeContext/AvailableResourceWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "AvailableResourceWorkspace",
+      "description": "Linking entity between AvailableResources and Workspace",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/CharacteristicWorkspace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CharacteristicWorkspace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CharacteristicWorkspace",
+        "definition": "resolvedFrom/CharacteristicWorkspace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CharacteristicId",
+            "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace",
+            "definition": "resolvedFrom/CharacteristicWorkspace/hasAttributes/CharacteristicId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Characteristic",
+                "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/CharacteristicId",
+                "definition": "resolvedFrom/Characteristic"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/CharacteristicId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/CharacteristicId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/CharacteristicId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CharacteristicWorkspace/hasAttributes/CharacteristicId/resolutionGuidance/foreignKeyAttribute/CharacteristicId",
+                        "contents": [
+                          "CharacteristicWorkspace/hasAttributes/CharacteristicId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceId",
+            "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace",
+            "definition": "resolvedFrom/CharacteristicWorkspace/hasAttributes/WorkspaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Workspace",
+                "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/WorkspaceId",
+                "definition": "resolvedFrom/Workspace"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/WorkspaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/WorkspaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CharacteristicWorkspace/hasAttributes/WorkspaceId/resolutionGuidance/foreignKeyAttribute/WorkspaceId",
+                        "contents": [
+                          "CharacteristicWorkspace/hasAttributes/WorkspaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CharacteristicId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Characteristic.cdm.json/Characteristic",
+                        "CharacteristicId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/CharacteristicId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkspaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Workspace.cdm.json/Workspace",
+                        "WorkspaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CharacteristicWorkspace/attributeContext/CharacteristicWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CharacteristicWorkspace",
+      "description": "Linking entity between Characteristics and Workspace",
+      "version": "4.3"
+    }
+  ]
+}

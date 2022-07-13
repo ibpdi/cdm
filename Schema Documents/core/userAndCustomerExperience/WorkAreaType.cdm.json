@@ -1,0 +1,46 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkAreaType",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "WorkAreaTypeId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "User specific name of work space template (\"type of workspace\")",
+          "maximumLength": 200
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },
+        {
+          "name": "Color",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Color code of specific workspace template",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "WorkAreaType",
+      "description": "Type of work area"
+    }
+  ]
+}

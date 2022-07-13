@@ -3,6 +3,9 @@
   "imports": [
     {
       "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "/core/organisationalManagement/Role.cdm.json"
     }
   ],
   "definitions": [

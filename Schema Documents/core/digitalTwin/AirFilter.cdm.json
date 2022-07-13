@@ -218,12 +218,7 @@
           ]
         },
         {
-          "name": "Currency",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Currency ",
-          "maximumLength": 50
+          "attributeGroupReference": "Currency"
         },
         {
           "name": "FanInstallationDate",

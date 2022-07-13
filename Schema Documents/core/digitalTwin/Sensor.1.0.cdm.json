@@ -1,0 +1,98 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Sensor",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "SensorId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ParentId",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific sensor name",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Type of sensor",
+          "maximumLength": 50
+        },
+        {
+          "name": "Model",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Model of sensor",
+          "maximumLength": 50
+        },
+        {
+          "name": "DataProvider",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of data provider",
+          "maximumLength": 100
+        },
+        {
+          "name": "Accuracy",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Accuracy of the sensor. It is the maximum difference that will exist between the actual value (which must be measured by a primary or good secondary standard) and the indicated value at the output of the sensor",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "MeasurementType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Defines the measurement type of sensor",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Sensor",
+      "description": "Stores all sensor information, a device which detects or measures a physical property and records, indicates, or otherwise responds to it"
+    }
+  ]
+}

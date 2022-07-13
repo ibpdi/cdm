@@ -64,48 +64,8 @@
           "name": "EmissionScope",
           "purpose": "hasA",
           "dataType": "string",
-          "appliedTraits": [
-            {
-              "traitReference": "does.haveDefault",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
-                    "entityShape": "listLookupValues",
-                    "constantValues": [
-                      [
-                        "en",
-                        "1",
-                        "1",
-                        "0"
-                      ],
-                      [
-                        "en",
-                        "2",
-                        "2",
-                        "1"
-                      ],
-                      [
-                        "en",
-                        "3",
-                        "3",
-                        "2"
-                      ],
-                      [
-                        "en",
-                        "Unspecified",
-                        "Unspecified",
-                        "3"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
           "description": "Emission scope 1, 2 or 3 according to the Greenhouse Gas Protocol",
-          "maximumLength": 50,
-          "valueConstrainedToList": true
+          "maximumLength": 50
         },
         {
           "name": "ReportingType",

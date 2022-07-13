@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Neighbourhood.cdm.json"
+    },
+    {
+      "corpusPath": "Workspace.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "NeighbourhoodWorkspace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Neighbourhood. to NeighbourhoodWorkspace.",
+          "entity": {
+            "entityReference": "Neighbourhood",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Neighbourhood/(resolvedAttributes)/NeighbourhoodId"
+                ]
+              }
+            ]
+          },
+          "name": "NeighbourhoodId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "NeighbourhoodId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Workspace. to NeighbourhoodWorkspace.",
+          "entity": {
+            "entityReference": "Workspace",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Workspace/(resolvedAttributes)/WorkspaceId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkspaceId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkspaceId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "NeighbourhoodWorkspace",
+      "description": "Linking entity between Neighbourhood and Workspace"
+    }
+  ]
+}

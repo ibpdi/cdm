@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/CharacteristicNeighbourhood.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CharacteristicNeighbourhood",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CharacteristicNeighbourhood",
+        "definition": "resolvedFrom/CharacteristicNeighbourhood",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CharacteristicId",
+            "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood",
+            "definition": "resolvedFrom/CharacteristicNeighbourhood/hasAttributes/CharacteristicId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Characteristic",
+                "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/CharacteristicId",
+                "definition": "resolvedFrom/Characteristic"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/CharacteristicId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/CharacteristicId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/CharacteristicId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CharacteristicNeighbourhood/hasAttributes/CharacteristicId/resolutionGuidance/foreignKeyAttribute/CharacteristicId",
+                        "contents": [
+                          "CharacteristicNeighbourhood/hasAttributes/CharacteristicId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NeighbourhoodId",
+            "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood",
+            "definition": "resolvedFrom/CharacteristicNeighbourhood/hasAttributes/NeighbourhoodId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Neighbourhood",
+                "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/NeighbourhoodId",
+                "definition": "resolvedFrom/Neighbourhood"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/NeighbourhoodId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/NeighbourhoodId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/NeighbourhoodId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CharacteristicNeighbourhood/hasAttributes/NeighbourhoodId/resolutionGuidance/foreignKeyAttribute/NeighbourhoodId",
+                        "contents": [
+                          "CharacteristicNeighbourhood/hasAttributes/NeighbourhoodId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CharacteristicId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Characteristic.cdm.json/Characteristic",
+                        "CharacteristicId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/CharacteristicId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "NeighbourhoodId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Neighbourhood.cdm.json/Neighbourhood",
+                        "NeighbourhoodId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CharacteristicNeighbourhood/attributeContext/CharacteristicNeighbourhood/NeighbourhoodId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CharacteristicNeighbourhood",
+      "description": "Linking entity between Characteristics and Neighbourhood",
+      "version": "4.3"
+    }
+  ]
+}
