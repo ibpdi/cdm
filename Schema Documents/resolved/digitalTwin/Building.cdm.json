@@ -244,6 +244,15 @@
           },
           {
             "type": "attributeDefinition",
+            "name": "ElectricVehicleChargingStations",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/ElectricVehicleChargingStations",
+            "contents": [
+              "Building/hasAttributes/ElectricVehicleChargingStations"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
             "name": "PrimaryEnergyType",
             "parent": "Building/attributeContext/Building",
             "definition": "resolvedFrom/Building/hasAttributes/PrimaryEnergyType",
@@ -294,6 +303,15 @@
             "definition": "resolvedFrom/Building/hasAttributes/Status",
             "contents": [
               "Building/hasAttributes/Status"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NumberOfEmployees",
+            "parent": "Building/attributeContext/Building",
+            "definition": "resolvedFrom/Building/hasAttributes/NumberOfEmployees",
+            "contents": [
+              "Building/hasAttributes/NumberOfEmployees"
             ]
           }
         ]
@@ -1187,7 +1205,7 @@
           "attributeContext": "Building/attributeContext/Building/ConstructionYear",
           "isNullable": true,
           "dataFormat": "DateTime",
-          "description": "Year of construction in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z"
+          "description": "Year of construction in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z."
         },
         {
           "name": "YearOfLastRefurbishment",
@@ -1263,6 +1281,7 @@
             "is.dataFormat.array"
           ],
           "attributeContext": "Building/attributeContext/Building/TenantStructure",
+          "isNullable": true,
           "dataFormat": "String",
           "description": "Is there multiple tenants in the building or only one",
           "maximumLength": 50,
@@ -1292,6 +1311,17 @@
           "isNullable": true,
           "dataFormat": "Int32",
           "description": "Number of parking spaces"
+        },
+        {
+          "name": "ElectricVehicleChargingStations",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "Building/attributeContext/Building/ElectricVehicleChargingStations",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of electric vehicle charging stations"
         },
         {
           "name": "PrimaryEnergyType",
@@ -1538,6 +1568,17 @@
           "dataFormat": "String",
           "description": "Status of site",
           "maximumLength": 50
+        },
+        {
+          "name": "NumberOfEmployees",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "Building/attributeContext/Building/NumberOfEmployees",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Number of employees"
         }
       ],
       "displayName": "Building",

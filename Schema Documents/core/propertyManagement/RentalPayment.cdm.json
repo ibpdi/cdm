@@ -60,7 +60,7 @@
         {
           "name": "ValueMonth",
           "purpose": "hasA",
-          "dataType": "currency",
+          "dataType": "decimal",
           "description": "Value of payment per month",
           "appliedTraits": [
             {
@@ -81,7 +81,7 @@
         {
           "name": "ValueYear",
           "purpose": "hasA",
-          "dataType": "currency",
+          "dataType": "decimal",
           "isNullable": true,
           "description": "Value of payment per year",
           "appliedTraits": [

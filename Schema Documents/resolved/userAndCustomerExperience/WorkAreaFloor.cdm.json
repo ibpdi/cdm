@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/WorkAreaFloor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkAreaFloor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WorkAreaFloor",
+        "definition": "resolvedFrom/WorkAreaFloor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaId",
+            "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor",
+            "definition": "resolvedFrom/WorkAreaFloor/hasAttributes/WorkAreaId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "WorkArea",
+                "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/WorkAreaId",
+                "definition": "resolvedFrom/WorkArea"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/WorkAreaId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/WorkAreaId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/WorkAreaId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkAreaFloor/hasAttributes/WorkAreaId/resolutionGuidance/foreignKeyAttribute/WorkAreaId",
+                        "contents": [
+                          "WorkAreaFloor/hasAttributes/WorkAreaId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FloorId",
+            "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor",
+            "definition": "resolvedFrom/WorkAreaFloor/hasAttributes/FloorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Floor",
+                "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/FloorId",
+                "definition": "resolvedFrom/Floor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/FloorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/FloorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkAreaFloor/attributeContext/WorkAreaFloor/FloorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkAreaFloor/hasAttributes/FloorId/resolutionGuidance/foreignKeyAttribute/FloorId",
+                        "contents": [
+                          "WorkAreaFloor/hasAttributes/FloorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WorkAreaId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/WorkArea.cdm.json/WorkArea",
+                        "WorkAreaId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkAreaFloor/attributeContext/WorkAreaFloor/WorkAreaId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "FloorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Floor.cdm.json/Floor",
+                        "FloorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkAreaFloor/attributeContext/WorkAreaFloor/FloorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "WorkAreaFloor",
+      "description": "Linking entity between WorkArea and Floor",
+      "version": "4.3"
+    }
+  ]
+}

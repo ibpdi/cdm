@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/WorkspaceSensor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "WorkspaceSensor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "WorkspaceSensor",
+        "definition": "resolvedFrom/WorkspaceSensor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceId",
+            "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor",
+            "definition": "resolvedFrom/WorkspaceSensor/hasAttributes/WorkspaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Workspace",
+                "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/WorkspaceId",
+                "definition": "resolvedFrom/Workspace"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/WorkspaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/WorkspaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkspaceSensor/hasAttributes/WorkspaceId/resolutionGuidance/foreignKeyAttribute/WorkspaceId",
+                        "contents": [
+                          "WorkspaceSensor/hasAttributes/WorkspaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor",
+            "definition": "resolvedFrom/WorkspaceSensor/hasAttributes/SensorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Sensor",
+                "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/SensorId",
+                "definition": "resolvedFrom/Sensor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/SensorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/SensorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "WorkspaceSensor/attributeContext/WorkspaceSensor/SensorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WorkspaceSensor/hasAttributes/SensorId/resolutionGuidance/foreignKeyAttribute/SensorId",
+                        "contents": [
+                          "WorkspaceSensor/hasAttributes/SensorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WorkspaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Workspace.cdm.json/Workspace",
+                        "WorkspaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkspaceSensor/attributeContext/WorkspaceSensor/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Sensor.cdm.json/Sensor",
+                        "SensorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "WorkspaceSensor/attributeContext/WorkspaceSensor/SensorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "WorkspaceSensor",
+      "description": "Linking entity between Workspace and Sensor. The sensor represents the sensor measurement area which can be different from the physical location ",
+      "version": "4.3"
+    }
+  ]
+}

@@ -117,12 +117,46 @@
           "attributeGroupReference": "ValidityInfo"
         },
         {
-          "name": "GeorefId",
+          "name": "TypeOfOwnership",
           "purpose": "hasA",
           "dataType": "string",
+          "appliedTraits": [
+            {
+              "traitReference": "does.haveDefault",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "explanation": "The constantValues below correspond to the attributes of the 'listLookupValues' entityShape which are: {languageTag, displayText, attributeValue, displayOrder}",
+                    "entityShape": "listLookupValues",
+                    "constantValues": [
+                      [
+                        "en",
+                        "Owner",
+                        "Owner",
+                        "0"
+                      ],
+                      [
+                        "en",
+                        "Tenant",
+                        "Tenant",
+                        "1"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "description": "Is the land owned or leased.",
+          "maximumLength": 50,
+          "valueConstrainedToList": true
+        },
+        {
+          "name": "SelfUse",
+          "purpose": "hasA",
+          "dataType": "boolean",
           "isNullable": true,
-          "description": "A reference to Guid from the geo-coordinate entity",
-          "maximumLength": 50
+          "description": "Is land self used or not (Y/N)"
         },
         {
           "name": "Status",

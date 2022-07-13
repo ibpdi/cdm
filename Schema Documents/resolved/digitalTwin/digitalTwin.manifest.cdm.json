@@ -434,8 +434,58 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "Sensor",
+      "entityPath": "Sensor.cdm.json/Sensor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorBuilding",
+      "entityPath": "SensorBuilding.cdm.json/SensorBuilding"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorComponent",
+      "entityPath": "SensorComponent.cdm.json/SensorComponent"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "SensorEquipment",
       "entityPath": "SensorEquipment.cdm.json/SensorEquipment"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorFloor",
+      "entityPath": "SensorFloor.cdm.json/SensorFloor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorLand",
+      "entityPath": "SensorLand.cdm.json/SensorLand"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorMeasurement",
+      "entityPath": "SensorMeasurement.cdm.json/SensorMeasurement"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorRentalUnit",
+      "entityPath": "SensorRentalUnit.cdm.json/SensorRentalUnit"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorSite",
+      "entityPath": "SensorSite.cdm.json/SensorSite"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorSpace",
+      "entityPath": "SensorSpace.cdm.json/SensorSpace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorUnit",
+      "entityPath": "SensorUnit.cdm.json/SensorUnit"
     },
     {
       "type": "LocalEntity",
@@ -444,8 +494,8 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "Servitudes",
-      "entityPath": "Servitudes.cdm.json/Servitudes"
+      "entityName": "Servitude",
+      "entityPath": "Servitude.cdm.json/Servitude"
     },
     {
       "type": "LocalEntity",
@@ -909,6 +959,20 @@
       "toEntityAttribute": "BuildingId"
     },
     {
+      "fromEntity": "SensorBuilding.cdm.json/SensorBuilding",
+      "fromEntityAttribute": "BuildingId",
+      "toEntity": "Building.cdm.json/Building",
+      "toEntityAttribute": "BuildingId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
       "fromEntity": "SystemBuilding.cdm.json/SystemBuilding",
       "fromEntityAttribute": "BuildingId",
       "toEntity": "Building.cdm.json/Building",
@@ -1124,6 +1188,20 @@
     },
     {
       "fromEntity": "ComponentUnit.cdm.json/ComponentUnit",
+      "fromEntityAttribute": "ComponentId",
+      "toEntity": "Component.cdm.json/Component",
+      "toEntityAttribute": "ComponentId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorComponent.cdm.json/SensorComponent",
       "fromEntityAttribute": "ComponentId",
       "toEntity": "Component.cdm.json/Component",
       "toEntityAttribute": "ComponentId",
@@ -1471,6 +1549,20 @@
       "toEntityAttribute": "SubSubComponentTypeId"
     },
     {
+      "fromEntity": "SensorFloor.cdm.json/SensorFloor",
+      "fromEntityAttribute": "FloorId",
+      "toEntity": "Floor.cdm.json/Floor",
+      "toEntityAttribute": "FloorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
       "fromEntity": "Space.cdm.json/Space",
       "fromEntityAttribute": "FloorId",
       "toEntity": "Floor.cdm.json/Floor",
@@ -1549,8 +1641,22 @@
     {
       "fromEntity": "Land.cdm.json/Land",
       "fromEntityAttribute": "ServitudeId",
-      "toEntity": "Servitudes.cdm.json/Servitudes",
+      "toEntity": "Servitude.cdm.json/Servitude",
       "toEntityAttribute": "ServitudeId"
+    },
+    {
+      "fromEntity": "SensorLand.cdm.json/SensorLand",
+      "fromEntityAttribute": "LandId",
+      "toEntity": "Land.cdm.json/Land",
+      "toEntityAttribute": "LandId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
     },
     {
       "fromEntity": "UnitLand.cdm.json/UnitLand",
@@ -1601,6 +1707,166 @@
       "fromEntityAttribute": "SubComponentTypeId",
       "toEntity": "SubComponentType.cdm.json/SubComponentType",
       "toEntityAttribute": "SubComponentTypeId"
+    },
+    {
+      "fromEntity": "SensorBuilding.cdm.json/SensorBuilding",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorComponent.cdm.json/SensorComponent",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorFloor.cdm.json/SensorFloor",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorLand.cdm.json/SensorLand",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorMeasurement.cdm.json/SensorMeasurement",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId"
+    },
+    {
+      "fromEntity": "SensorRentalUnit.cdm.json/SensorRentalUnit",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorSite.cdm.json/SensorSite",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorSpace.cdm.json/SensorSpace",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorUnit.cdm.json/SensorUnit",
+      "fromEntityAttribute": "SensorId",
+      "toEntity": "Sensor.cdm.json/Sensor",
+      "toEntityAttribute": "SensorId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorSite.cdm.json/SensorSite",
+      "fromEntityAttribute": "SiteId",
+      "toEntity": "Site.cdm.json/Site",
+      "toEntityAttribute": "SiteId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorSpace.cdm.json/SensorSpace",
+      "fromEntityAttribute": "SpaceId",
+      "toEntity": "Space.cdm.json/Space",
+      "toEntityAttribute": "SpaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "SensorUnit.cdm.json/SensorUnit",
+      "fromEntityAttribute": "UnitId",
+      "toEntity": "Unit.cdm.json/Unit",
+      "toEntityAttribute": "UnitId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
     },
     {
       "fromEntity": "Server.cdm.json/Server",

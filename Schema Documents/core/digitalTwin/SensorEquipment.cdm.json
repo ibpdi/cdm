@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {

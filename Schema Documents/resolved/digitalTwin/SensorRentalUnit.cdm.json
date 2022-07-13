@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SensorRentalUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorRentalUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SensorRentalUnit",
+        "definition": "resolvedFrom/SensorRentalUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit",
+            "definition": "resolvedFrom/SensorRentalUnit/hasAttributes/SensorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Sensor",
+                "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/SensorId",
+                "definition": "resolvedFrom/Sensor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/SensorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/SensorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/SensorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorRentalUnit/hasAttributes/SensorId/resolutionGuidance/foreignKeyAttribute/SensorId",
+                        "contents": [
+                          "SensorRentalUnit/hasAttributes/SensorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "RentalUnitId",
+            "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit",
+            "definition": "resolvedFrom/SensorRentalUnit/hasAttributes/RentalUnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "RentalUnit",
+                "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/RentalUnitId",
+                "definition": "resolvedFrom/RentalUnit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/RentalUnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/RentalUnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorRentalUnit/attributeContext/SensorRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorRentalUnit/hasAttributes/RentalUnitId/resolutionGuidance/foreignKeyAttribute/RentalUnitId",
+                        "contents": [
+                          "SensorRentalUnit/hasAttributes/RentalUnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Sensor.cdm.json/Sensor",
+                        "SensorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorRentalUnit/attributeContext/SensorRentalUnit/SensorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "RentalUnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/propertyManagement/RentalUnit.cdm.json/RentalUnit",
+                        "RentalUnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorRentalUnit/attributeContext/SensorRentalUnit/RentalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "SensorRentalUnit",
+      "description": "Linking entity between Sensor and RentalUnit. The sensor represents the sensor measurement area which can be different from the physical location ",
+      "version": "4.3"
+    }
+  ]
+}

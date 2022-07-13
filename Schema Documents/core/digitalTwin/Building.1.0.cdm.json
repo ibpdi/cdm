@@ -956,6 +956,16 @@
           ]
         },
         {
+          "name": "ElectricVehicleChargingStations",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Number of electric vehicle charging stations",
+          "appliedTraits": [
+            "means.measurement.count"
+          ]
+        },
+        {
           "name": "PrimaryEnergyType",
           "purpose": "hasA",
           "dataType": "string",
@@ -1211,6 +1221,16 @@
           "isNullable": true,
           "description": "Status of site",
           "maximumLength": 50
+        },
+        {
+          "name": "NumberOfEmployees",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Number of employees",
+          "appliedTraits": [
+            "means.measurement.count"
+          ]
         }
       ],
       "displayName": "Building",

@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/NeighbourhoodWorkspace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "NeighbourhoodWorkspace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "NeighbourhoodWorkspace",
+        "definition": "resolvedFrom/NeighbourhoodWorkspace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NeighbourhoodId",
+            "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace",
+            "definition": "resolvedFrom/NeighbourhoodWorkspace/hasAttributes/NeighbourhoodId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Neighbourhood",
+                "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/NeighbourhoodId",
+                "definition": "resolvedFrom/Neighbourhood"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/NeighbourhoodId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/NeighbourhoodId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/NeighbourhoodId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/NeighbourhoodWorkspace/hasAttributes/NeighbourhoodId/resolutionGuidance/foreignKeyAttribute/NeighbourhoodId",
+                        "contents": [
+                          "NeighbourhoodWorkspace/hasAttributes/NeighbourhoodId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceId",
+            "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace",
+            "definition": "resolvedFrom/NeighbourhoodWorkspace/hasAttributes/WorkspaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Workspace",
+                "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/WorkspaceId",
+                "definition": "resolvedFrom/Workspace"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/WorkspaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/WorkspaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/NeighbourhoodWorkspace/hasAttributes/WorkspaceId/resolutionGuidance/foreignKeyAttribute/WorkspaceId",
+                        "contents": [
+                          "NeighbourhoodWorkspace/hasAttributes/WorkspaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "NeighbourhoodId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Neighbourhood.cdm.json/Neighbourhood",
+                        "NeighbourhoodId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/NeighbourhoodId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkspaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Workspace.cdm.json/Workspace",
+                        "WorkspaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "NeighbourhoodWorkspace/attributeContext/NeighbourhoodWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "NeighbourhoodWorkspace",
+      "description": "Linking entity between Neighbourhood and Workspace",
+      "version": "4.3"
+    }
+  ]
+}

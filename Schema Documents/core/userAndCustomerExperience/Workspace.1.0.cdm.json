@@ -1,0 +1,100 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "WorkArea.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Workspace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "WorkspaceId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk WorkArea. to Workspace.",
+          "entity": {
+            "entityReference": "WorkArea",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "WorkArea/(resolvedAttributes)/WorkAreaId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkAreaId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkAreaId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "User specific name of workplace",
+          "maximumLength": 200
+        },
+        {
+          "name": "WorkspaceCode",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific work space code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Type of workplace",
+          "maximumLength": 75
+        },
+        {
+          "name": "Capacity",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "description": "Capacity of workplace",
+          "appliedTraits": [
+            "means.measurement.count"
+          ]
+        },
+        {
+          "name": "Bookable",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Is the workplace bookable (Y/N)"
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        }
+      ],
+      "displayName": "Workspace",
+      "description": "All workplace related information ranging from the number of workplaces to security regulations that need to be in place within a work environment. "
+    }
+  ]
+}

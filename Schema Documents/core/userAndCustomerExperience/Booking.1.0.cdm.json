@@ -1,0 +1,58 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Booking",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "BookingId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "attributeGroupReference": "ValidityInfo"
+        },       
+        {
+          "name": "BookingDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "description": "Date booking was created in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Cancelled",
+          "purpose": "hasA",
+          "dataType": "boolean",
+          "isNullable": true,
+          "description": "Has the reservation been cancelled"
+        },
+        {
+          "name": "CheckInTime",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Check in time yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "CheckOutTime",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Check out time yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Booking",
+      "description": "Information about bookings"
+    }
+  ]
+}

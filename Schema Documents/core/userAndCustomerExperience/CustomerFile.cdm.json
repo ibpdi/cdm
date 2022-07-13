@@ -1,0 +1,58 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerFile",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "CustomerFileId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "User specific name for file",
+          "maximumLength": 200
+        },
+        {
+          "name": "Link",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Link to file location",
+          "maximumLength": 2050
+        },
+        {
+          "name": "FileType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Type of file",
+          "maximumLength": 75
+        },
+        {
+          "name": "Metadata",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Metadata information about the file stored in JSON format. This could be for example resolution and ordinal for an image. For different file types different metadata can be stored here",
+          "maximumLength": 1000
+        }
+      ],
+      "displayName": "CustomerFile",
+      "description": "Information about customer files"
+    }
+  ]
+}

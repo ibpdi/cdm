@@ -155,20 +155,20 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "Latitude",
+            "name": "DepricatedLatitude",
             "parent": "Address/attributeContext/Address",
-            "definition": "resolvedFrom/Address/hasAttributes/Latitude",
+            "definition": "resolvedFrom/Address/hasAttributes/DepricatedLatitude",
             "contents": [
-              "Address/hasAttributes/Latitude"
+              "Address/hasAttributes/DepricatedLatitude"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "Longitude",
+            "name": "DepricatedLongitude",
             "parent": "Address/attributeContext/Address",
-            "definition": "resolvedFrom/Address/hasAttributes/Longitude",
+            "definition": "resolvedFrom/Address/hasAttributes/DepricatedLongitude",
             "contents": [
-              "Address/hasAttributes/Longitude"
+              "Address/hasAttributes/DepricatedLongitude"
             ]
           }
         ]
@@ -1820,7 +1820,7 @@
           ]
         },
         {
-          "name": "Latitude",
+          "name": "DepricatedLatitude",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -1837,13 +1837,13 @@
             },
             "means.location.latitude"
           ],
-          "attributeContext": "Address/attributeContext/Address/Latitude",
+          "attributeContext": "Address/attributeContext/Address/DepricatedLatitude",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Latitude coordinate in case of geographic coordinates"
+          "description": "(Deprecated) Latitude coordinate in case of geographic coordinates"
         },
         {
-          "name": "Longitude",
+          "name": "DepricatedLongitude",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -1860,10 +1860,10 @@
             },
             "means.location.longitude"
           ],
-          "attributeContext": "Address/attributeContext/Address/Longitude",
+          "attributeContext": "Address/attributeContext/Address/DepricatedLongitude",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Longitude coordinate in case of geographic coordinates"
+          "description": "(Deprecated) Longitude coordinate in case of geographic coordinates"
         }
       ],
       "displayName": "Address",

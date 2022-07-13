@@ -1,0 +1,228 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/Booking.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Booking",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Booking",
+        "definition": "resolvedFrom/Booking",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Booking/attributeContext/Booking",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Booking/attributeContext/Booking/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BookingId",
+            "parent": "Booking/attributeContext/Booking",
+            "definition": "resolvedFrom/Booking/hasAttributes/BookingId",
+            "contents": [
+              "Booking/hasAttributes/BookingId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Booking/attributeContext/Booking",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Booking/attributeContext/Booking/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Booking/attributeContext/Booking/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Booking/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Booking/attributeContext/Booking/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Booking/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BookingDate",
+            "parent": "Booking/attributeContext/Booking",
+            "definition": "resolvedFrom/Booking/hasAttributes/BookingDate",
+            "contents": [
+              "Booking/hasAttributes/BookingDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Cancelled",
+            "parent": "Booking/attributeContext/Booking",
+            "definition": "resolvedFrom/Booking/hasAttributes/Cancelled",
+            "contents": [
+              "Booking/hasAttributes/Cancelled"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CheckInTime",
+            "parent": "Booking/attributeContext/Booking",
+            "definition": "resolvedFrom/Booking/hasAttributes/CheckInTime",
+            "contents": [
+              "Booking/hasAttributes/CheckInTime"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CheckOutTime",
+            "parent": "Booking/attributeContext/Booking",
+            "definition": "resolvedFrom/Booking/hasAttributes/CheckOutTime",
+            "contents": [
+              "Booking/hasAttributes/CheckOutTime"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "BookingId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/BookingId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "BookingDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/BookingDate",
+          "dataFormat": "DateTime",
+          "description": "Date booking was created in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Cancelled",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/Cancelled",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Has the reservation been cancelled"
+        },
+        {
+          "name": "CheckInTime",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/CheckInTime",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Check in time yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "CheckOutTime",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Booking/attributeContext/Booking/CheckOutTime",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Check out time yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Booking",
+      "description": "Information about bookings",
+      "version": "4.3"
+    }
+  ]
+}

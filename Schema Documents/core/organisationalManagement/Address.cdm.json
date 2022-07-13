@@ -1616,11 +1616,11 @@
           "valueConstrainedToList": true
         },
         {
-          "name": "Latitude",
+          "name": "DepricatedLatitude",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Latitude coordinate in case of geographic coordinates",
+          "description": "(Deprecated) Latitude coordinate in case of geographic coordinates",
           "appliedTraits": [
             "means.location.latitude",
             {
@@ -1639,11 +1639,11 @@
           ]
         },
         {
-          "name": "Longitude",
+          "name": "DepricatedLongitude",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Longitude coordinate in case of geographic coordinates",
+          "description": "(Deprecated) Longitude coordinate in case of geographic coordinates",
           "appliedTraits": [
             "means.location.longitude",
             {

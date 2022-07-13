@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SensorUnit.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorUnit",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SensorUnit",
+        "definition": "resolvedFrom/SensorUnit",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SensorUnit/attributeContext/SensorUnit",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SensorUnit/attributeContext/SensorUnit/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "SensorUnit/attributeContext/SensorUnit",
+            "definition": "resolvedFrom/SensorUnit/hasAttributes/SensorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Sensor",
+                "parent": "SensorUnit/attributeContext/SensorUnit/SensorId",
+                "definition": "resolvedFrom/Sensor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorUnit/attributeContext/SensorUnit/SensorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorUnit/attributeContext/SensorUnit/SensorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorUnit/attributeContext/SensorUnit/SensorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorUnit/hasAttributes/SensorId/resolutionGuidance/foreignKeyAttribute/SensorId",
+                        "contents": [
+                          "SensorUnit/hasAttributes/SensorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "UnitId",
+            "parent": "SensorUnit/attributeContext/SensorUnit",
+            "definition": "resolvedFrom/SensorUnit/hasAttributes/UnitId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Unit",
+                "parent": "SensorUnit/attributeContext/SensorUnit/UnitId",
+                "definition": "resolvedFrom/Unit"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorUnit/attributeContext/SensorUnit/UnitId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorUnit/attributeContext/SensorUnit/UnitId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorUnit/attributeContext/SensorUnit/UnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorUnit/hasAttributes/UnitId/resolutionGuidance/foreignKeyAttribute/UnitId",
+                        "contents": [
+                          "SensorUnit/hasAttributes/UnitId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Sensor.cdm.json/Sensor",
+                        "SensorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorUnit/attributeContext/SensorUnit/SensorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "UnitId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Unit.cdm.json/Unit",
+                        "UnitId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorUnit/attributeContext/SensorUnit/UnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "SensorUnit",
+      "description": "Linking entity between Sensor and Unit. The sensor represents the sensor measurement area which can be different from the physical location ",
+      "version": "4.3"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "CustomerFile.cdm.json"
+    },
+    {
+      "corpusPath": "WorkArea.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerFileWorkArea",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk CustomerFile. to CustomerFileWorkArea.",
+          "entity": {
+            "entityReference": "CustomerFile",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "CustomerFile/(resolvedAttributes)/CustomerFileId"
+                ]
+              }
+            ]
+          },
+          "name": "CustomerFileId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CustomerFileId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk WorkArea. to CustomerFileWorkArea.",
+          "entity": {
+            "entityReference": "WorkArea",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "WorkArea/(resolvedAttributes)/WorkAreaId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkAreaId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkAreaId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CustomerFileWorkArea",
+      "description": "Linking entity between CustomerFile and WorkArea"
+    }
+  ]
+}

@@ -104,7 +104,7 @@
         {
           "name": "Value",
           "purpose": "hasA",
-          "dataType": "currency",
+          "dataType": "decimal",
           "description": "Value of Valuation",
           "appliedTraits": [
             {

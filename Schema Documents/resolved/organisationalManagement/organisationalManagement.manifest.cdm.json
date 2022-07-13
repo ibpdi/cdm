@@ -44,6 +44,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "GeoCoordinate",
+      "entityPath": "GeoCoordinate.cdm.json/GeoCoordinate"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Organisation",
       "entityPath": "Organisation.cdm.json/Organisation"
     },
@@ -297,6 +302,12 @@
           ]
         }
       ]
+    },
+    {
+      "fromEntity": "GeoCoordinate.cdm.json/GeoCoordinate",
+      "fromEntityAttribute": "AddressId",
+      "toEntity": "Address.cdm.json/Address",
+      "toEntityAttribute": "AddressId"
     },
     {
       "fromEntity": "AddressContact.cdm.json/AddressContact",

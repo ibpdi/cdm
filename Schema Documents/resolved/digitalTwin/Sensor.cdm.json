@@ -1,0 +1,235 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/Sensor.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Sensor",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Sensor",
+        "definition": "resolvedFrom/Sensor",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Sensor/attributeContext/Sensor",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Sensor/attributeContext/Sensor/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/SensorId",
+            "contents": [
+              "Sensor/hasAttributes/SensorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ParentId",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/ParentId",
+            "contents": [
+              "Sensor/hasAttributes/ParentId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/Name",
+            "contents": [
+              "Sensor/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/Type",
+            "contents": [
+              "Sensor/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Model",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/Model",
+            "contents": [
+              "Sensor/hasAttributes/Model"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DataProvider",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/DataProvider",
+            "contents": [
+              "Sensor/hasAttributes/DataProvider"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Accuracy",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/Accuracy",
+            "contents": [
+              "Sensor/hasAttributes/Accuracy"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MeasurementType",
+            "parent": "Sensor/attributeContext/Sensor",
+            "definition": "resolvedFrom/Sensor/hasAttributes/MeasurementType",
+            "contents": [
+              "Sensor/hasAttributes/MeasurementType"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/SensorId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ParentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/ParentId",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/Name",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific sensor name",
+          "maximumLength": 200
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Type of sensor",
+          "maximumLength": 50
+        },
+        {
+          "name": "Model",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/Model",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Model of sensor",
+          "maximumLength": 50
+        },
+        {
+          "name": "DataProvider",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/DataProvider",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Name of data provider",
+          "maximumLength": 100
+        },
+        {
+          "name": "Accuracy",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/Accuracy",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Accuracy of the sensor. It is the maximum difference that will exist between the actual value (which must be measured by a primary or good secondary standard) and the indicated value at the output of the sensor"
+        },
+        {
+          "name": "MeasurementType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Sensor/attributeContext/Sensor/MeasurementType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Defines the measurement type of sensor",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "Sensor",
+      "description": "Stores all sensor information, a device which detects or measures a physical property and records, indicates, or otherwise responds to it",
+      "version": "4.3"
+    }
+  ]
+}

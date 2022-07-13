@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SensorBuilding.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorBuilding",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SensorBuilding",
+        "definition": "resolvedFrom/SensorBuilding",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SensorBuilding/attributeContext/SensorBuilding",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SensorBuilding/attributeContext/SensorBuilding/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "SensorBuilding/attributeContext/SensorBuilding",
+            "definition": "resolvedFrom/SensorBuilding/hasAttributes/SensorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Sensor",
+                "parent": "SensorBuilding/attributeContext/SensorBuilding/SensorId",
+                "definition": "resolvedFrom/Sensor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorBuilding/attributeContext/SensorBuilding/SensorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorBuilding/attributeContext/SensorBuilding/SensorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorBuilding/attributeContext/SensorBuilding/SensorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorBuilding/hasAttributes/SensorId/resolutionGuidance/foreignKeyAttribute/SensorId",
+                        "contents": [
+                          "SensorBuilding/hasAttributes/SensorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BuildingId",
+            "parent": "SensorBuilding/attributeContext/SensorBuilding",
+            "definition": "resolvedFrom/SensorBuilding/hasAttributes/BuildingId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Building",
+                "parent": "SensorBuilding/attributeContext/SensorBuilding/BuildingId",
+                "definition": "resolvedFrom/Building"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorBuilding/attributeContext/SensorBuilding/BuildingId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorBuilding/attributeContext/SensorBuilding/BuildingId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorBuilding/attributeContext/SensorBuilding/BuildingId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorBuilding/hasAttributes/BuildingId/resolutionGuidance/foreignKeyAttribute/BuildingId",
+                        "contents": [
+                          "SensorBuilding/hasAttributes/BuildingId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Sensor.cdm.json/Sensor",
+                        "SensorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorBuilding/attributeContext/SensorBuilding/SensorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "BuildingId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Building.cdm.json/Building",
+                        "BuildingId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorBuilding/attributeContext/SensorBuilding/BuildingId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "SensorBuilding",
+      "description": "Linking entity between Sensor and Building. The sensor represents the sensor measurement area which can be different from the physical location ",
+      "version": "4.3"
+    }
+  ]
+}

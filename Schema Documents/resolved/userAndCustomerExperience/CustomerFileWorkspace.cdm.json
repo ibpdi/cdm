@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/CustomerFileWorkspace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CustomerFileWorkspace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CustomerFileWorkspace",
+        "definition": "resolvedFrom/CustomerFileWorkspace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CustomerFileId",
+            "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace",
+            "definition": "resolvedFrom/CustomerFileWorkspace/hasAttributes/CustomerFileId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CustomerFile",
+                "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/CustomerFileId",
+                "definition": "resolvedFrom/CustomerFile"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/CustomerFileId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/CustomerFileId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/CustomerFileId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CustomerFileWorkspace/hasAttributes/CustomerFileId/resolutionGuidance/foreignKeyAttribute/CustomerFileId",
+                        "contents": [
+                          "CustomerFileWorkspace/hasAttributes/CustomerFileId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceId",
+            "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace",
+            "definition": "resolvedFrom/CustomerFileWorkspace/hasAttributes/WorkspaceId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Workspace",
+                "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/WorkspaceId",
+                "definition": "resolvedFrom/Workspace"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/WorkspaceId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/WorkspaceId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CustomerFileWorkspace/hasAttributes/WorkspaceId/resolutionGuidance/foreignKeyAttribute/WorkspaceId",
+                        "contents": [
+                          "CustomerFileWorkspace/hasAttributes/WorkspaceId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CustomerFileId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/CustomerFile.cdm.json/CustomerFile",
+                        "CustomerFileId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/CustomerFileId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkspaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Workspace.cdm.json/Workspace",
+                        "WorkspaceId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CustomerFileWorkspace/attributeContext/CustomerFileWorkspace/WorkspaceId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "CustomerFileWorkspace",
+      "description": "Linking entity between CustomerFile and Workspace",
+      "version": "4.3"
+    }
+  ]
+}

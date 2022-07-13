@@ -1,0 +1,311 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/Workspace.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Workspace",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Workspace",
+        "definition": "resolvedFrom/Workspace",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Workspace/attributeContext/Workspace",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Workspace/attributeContext/Workspace/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceId",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/WorkspaceId",
+            "contents": [
+              "Workspace/hasAttributes/WorkspaceId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkAreaId",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/WorkAreaId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "WorkArea",
+                "parent": "Workspace/attributeContext/Workspace/WorkAreaId",
+                "definition": "resolvedFrom/WorkArea"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "Workspace/attributeContext/Workspace/WorkAreaId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "Workspace/attributeContext/Workspace/WorkAreaId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "Workspace/attributeContext/Workspace/WorkAreaId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Workspace/hasAttributes/WorkAreaId/resolutionGuidance/foreignKeyAttribute/WorkAreaId",
+                        "contents": [
+                          "Workspace/hasAttributes/WorkAreaId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/Name",
+            "contents": [
+              "Workspace/hasAttributes/Name"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "WorkspaceCode",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/WorkspaceCode",
+            "contents": [
+              "Workspace/hasAttributes/WorkspaceCode"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/Type",
+            "contents": [
+              "Workspace/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Capacity",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/Capacity",
+            "contents": [
+              "Workspace/hasAttributes/Capacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Bookable",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/Workspace/hasAttributes/Bookable",
+            "contents": [
+              "Workspace/hasAttributes/Bookable"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidityInfo",
+            "parent": "Workspace/attributeContext/Workspace",
+            "definition": "resolvedFrom/ValidityInfo",
+            "contents": [
+              {
+                "type": "attributeGroup",
+                "name": "ValidityInfo",
+                "parent": "Workspace/attributeContext/Workspace/ValidityInfo",
+                "definition": "resolvedFrom/ValidityInfo",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidFrom",
+                    "parent": "Workspace/attributeContext/Workspace/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidFrom",
+                    "contents": [
+                      "Workspace/hasAttributes/ValidFrom"
+                    ]
+                  },
+                  {
+                    "type": "attributeDefinition",
+                    "name": "ValidUntil",
+                    "parent": "Workspace/attributeContext/Workspace/ValidityInfo/ValidityInfo",
+                    "definition": "resolvedFrom/ValidityInfo/members/ValidUntil",
+                    "contents": [
+                      "Workspace/hasAttributes/ValidUntil"
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "WorkspaceId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/WorkspaceId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "WorkAreaId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/WorkArea.cdm.json/WorkArea",
+                        "WorkAreaId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/WorkAreaId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/Name",
+          "dataFormat": "String",
+          "description": "User specific name of workplace",
+          "maximumLength": 200
+        },
+        {
+          "name": "WorkspaceCode",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/WorkspaceCode",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "User specific work space code",
+          "maximumLength": 70
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/Type",
+          "dataFormat": "String",
+          "description": "Type of workplace",
+          "maximumLength": 75
+        },
+        {
+          "name": "Capacity",
+          "appliedTraits": [
+            "is.dataFormat.integer",
+            "means.measurement.count"
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/Capacity",
+          "dataFormat": "Int32",
+          "description": "Capacity of workplace"
+        },
+        {
+          "name": "Bookable",
+          "appliedTraits": [
+            "is.dataFormat.boolean"
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/Bookable",
+          "isNullable": true,
+          "dataFormat": "Boolean",
+          "description": "Is the workplace bookable (Y/N)"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/ValidityInfo/ValidityInfo/ValidFrom",
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Workspace/attributeContext/Workspace/ValidityInfo/ValidityInfo/ValidUntil",
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        }
+      ],
+      "displayName": "Workspace",
+      "description": "All workplace related information ranging from the number of workplaces to security regulations that need to be in place within a work environment. ",
+      "version": "4.3"
+    }
+  ]
+}

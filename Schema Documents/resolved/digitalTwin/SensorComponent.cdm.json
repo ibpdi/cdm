@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SensorComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SensorComponent",
+        "definition": "resolvedFrom/SensorComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SensorComponent/attributeContext/SensorComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SensorComponent/attributeContext/SensorComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "SensorComponent/attributeContext/SensorComponent",
+            "definition": "resolvedFrom/SensorComponent/hasAttributes/SensorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Sensor",
+                "parent": "SensorComponent/attributeContext/SensorComponent/SensorId",
+                "definition": "resolvedFrom/Sensor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorComponent/attributeContext/SensorComponent/SensorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorComponent/attributeContext/SensorComponent/SensorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorComponent/attributeContext/SensorComponent/SensorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorComponent/hasAttributes/SensorId/resolutionGuidance/foreignKeyAttribute/SensorId",
+                        "contents": [
+                          "SensorComponent/hasAttributes/SensorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ComponentId",
+            "parent": "SensorComponent/attributeContext/SensorComponent",
+            "definition": "resolvedFrom/SensorComponent/hasAttributes/ComponentId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Component",
+                "parent": "SensorComponent/attributeContext/SensorComponent/ComponentId",
+                "definition": "resolvedFrom/Component"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorComponent/attributeContext/SensorComponent/ComponentId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorComponent/attributeContext/SensorComponent/ComponentId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorComponent/attributeContext/SensorComponent/ComponentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorComponent/hasAttributes/ComponentId/resolutionGuidance/foreignKeyAttribute/ComponentId",
+                        "contents": [
+                          "SensorComponent/hasAttributes/ComponentId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Sensor.cdm.json/Sensor",
+                        "SensorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorComponent/attributeContext/SensorComponent/SensorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "ComponentId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Component.cdm.json/Component",
+                        "ComponentId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorComponent/attributeContext/SensorComponent/ComponentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "SensorComponent",
+      "description": "Linking entity between Sensor and Component",
+      "version": "4.3"
+    }
+  ]
+}

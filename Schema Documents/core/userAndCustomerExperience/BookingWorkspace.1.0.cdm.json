@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "Booking.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Workspace.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "BookingWorkspace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Booking. to BookingWorkspace.",
+          "entity": {
+            "entityReference": "Booking",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Booking/(resolvedAttributes)/BookingId"
+                ]
+              }
+            ]
+          },
+          "name": "BookingId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "BookingId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Workspace. to BookingWorkspace.",
+          "entity": {
+            "entityReference": "Workspace",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Workspace/(resolvedAttributes)/WorkspaceId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkspaceId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkspaceId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "BookingWorkspace",
+      "description": "Linking entity between Booking and Workspace"
+    }
+  ]
+}

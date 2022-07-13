@@ -90,6 +90,7 @@
                         "Retail, Retail Centers",
                         "2"
                       ],
+
                       [
                         "en",
                         "Retail, Shopping Center",
@@ -473,6 +474,7 @@
                         "Retail, Retail Centers",
                         "2"
                       ],
+
                       [
                         "en",
                         "Retail, Shopping Center",
@@ -843,7 +845,7 @@
           "purpose": "startedOn",
           "dataType": "dateTime",
           "isNullable": true,
-          "description": "Year of construction in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z",
+          "description": "Year of construction in yyyy-mm-ddThh:mm:ssZ form (conform ISO 8061). In case only year exists use yyyy-01-01T00:00:00Z.",
           "appliedTraits": [
             "is.formatted.dateTime"
           ]
@@ -911,6 +913,7 @@
           "name": "TenantStructure",
           "purpose": "hasA",
           "dataType": "string",
+          "isNullable": true,
           "appliedTraits": [
             {
               "traitReference": "does.haveDefault",
@@ -948,6 +951,16 @@
           "dataType": "integer",
           "isNullable": true,
           "description": "Number of parking spaces",
+          "appliedTraits": [
+            "means.measurement.count"
+          ]
+        },
+        {
+          "name": "ElectricVehicleChargingStations",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Number of electric vehicle charging stations",
           "appliedTraits": [
             "means.measurement.count"
           ]
@@ -1208,6 +1221,16 @@
           "isNullable": true,
           "description": "Status of site",
           "maximumLength": 50
+        },
+        {
+          "name": "NumberOfEmployees",
+          "purpose": "hasA",
+          "dataType": "integer",
+          "isNullable": true,
+          "description": "Number of employees",
+          "appliedTraits": [
+            "means.measurement.count"
+          ]
         }
       ],
       "displayName": "Building",

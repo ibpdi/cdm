@@ -523,8 +523,68 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "Sensor",
+      "entityPath": "Sensor.cdm.json/Sensor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorBuilding",
+      "entityPath": "SensorBuilding.cdm.json/SensorBuilding",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorComponent",
+      "entityPath": "SensorComponent.cdm.json/SensorComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "SensorEquipment",
       "entityPath": "SensorEquipment.cdm.json/SensorEquipment",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorFloor",
+      "entityPath": "SensorFloor.cdm.json/SensorFloor",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorLand",
+      "entityPath": "SensorLand.cdm.json/SensorLand",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorMeasurement",
+      "entityPath": "SensorMeasurement.cdm.json/SensorMeasurement",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorRentalUnit",
+      "entityPath": "SensorRentalUnit.cdm.json/SensorRentalUnit",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorSite",
+      "entityPath": "SensorSite.cdm.json/SensorSite",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorSpace",
+      "entityPath": "SensorSpace.cdm.json/SensorSpace",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "SensorUnit",
+      "entityPath": "SensorUnit.cdm.json/SensorUnit",
       "dataPartitionPatterns": []
     },
     {
@@ -535,8 +595,8 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "Servitudes",
-      "entityPath": "Servitudes.cdm.json/Servitudes",
+      "entityName": "Servitude",
+      "entityPath": "Servitude.cdm.json/Servitude",
       "dataPartitionPatterns": []
     },
     {

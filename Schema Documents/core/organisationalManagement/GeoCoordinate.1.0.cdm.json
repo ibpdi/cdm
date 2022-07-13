@@ -1,0 +1,81 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
+      "corpusPath": "Address.1.0.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "GeoCoordinate",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "GeoCoordinateId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "explanation": "fk Address. to GeoCoordinate.",
+          "entity": {
+            "entityReference": "Address",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Address/(resolvedAttributes)/AddressId"
+                ]
+              }
+            ]
+          },
+          "name": "AddressId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "AddressId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          }
+        },
+        {
+          "name": "CoordinateReferenceSystem",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Specific coordinate reference system used",
+          "maximumLength": 50
+        },
+        {
+          "name": "Latitude",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Latitude coordinate in case of geographic coordinates"
+        },
+        {
+          "name": "Longitude",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Longitude coordinate in case of geographic coordinates"
+        }
+      ],
+      "displayName": "GeoCoordinate",
+      "description": "Information about geographic data to enable the use of common locations of geographic features, imagery, and observation within a common geographic framework"
+    }
+  ]
+}

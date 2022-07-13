@@ -1,0 +1,234 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/SensorMeasurement.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "SensorMeasurement",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "SensorMeasurement",
+        "definition": "resolvedFrom/SensorMeasurement",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "SensorMeasurement/attributeContext/SensorMeasurement/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorMeasurementId",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "definition": "resolvedFrom/SensorMeasurement/hasAttributes/SensorMeasurementId",
+            "contents": [
+              "SensorMeasurement/hasAttributes/SensorMeasurementId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SensorId",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "definition": "resolvedFrom/SensorMeasurement/hasAttributes/SensorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Sensor",
+                "parent": "SensorMeasurement/attributeContext/SensorMeasurement/SensorId",
+                "definition": "resolvedFrom/Sensor"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "SensorMeasurement/attributeContext/SensorMeasurement/SensorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "SensorMeasurement/attributeContext/SensorMeasurement/SensorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "SensorMeasurement/attributeContext/SensorMeasurement/SensorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SensorMeasurement/hasAttributes/SensorId/resolutionGuidance/foreignKeyAttribute/SensorId",
+                        "contents": [
+                          "SensorMeasurement/hasAttributes/SensorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "MeasurementDate",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "definition": "resolvedFrom/SensorMeasurement/hasAttributes/MeasurementDate",
+            "contents": [
+              "SensorMeasurement/hasAttributes/MeasurementDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Value",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "definition": "resolvedFrom/SensorMeasurement/hasAttributes/Value",
+            "contents": [
+              "SensorMeasurement/hasAttributes/Value"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Unit",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "definition": "resolvedFrom/SensorMeasurement/hasAttributes/Unit",
+            "contents": [
+              "SensorMeasurement/hasAttributes/Unit"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Reliability",
+            "parent": "SensorMeasurement/attributeContext/SensorMeasurement",
+            "definition": "resolvedFrom/SensorMeasurement/hasAttributes/Reliability",
+            "contents": [
+              "SensorMeasurement/hasAttributes/Reliability"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "SensorMeasurementId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/SensorMeasurementId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SensorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Sensor.cdm.json/Sensor",
+                        "SensorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/SensorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "MeasurementDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/MeasurementDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Date of measurement in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "Value",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/Value",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Value of sensor measurement"
+        },
+        {
+          "name": "Unit",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/Unit",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Unit of sensor measurement",
+          "maximumLength": 50
+        },
+        {
+          "name": "Reliability",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/Reliability",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Is this sensor measurement reliable"
+        }
+      ],
+      "displayName": "SensorMeasurement",
+      "description": "Stores all measurements received from sensors.",
+      "version": "4.3"
+    }
+  ]
+}

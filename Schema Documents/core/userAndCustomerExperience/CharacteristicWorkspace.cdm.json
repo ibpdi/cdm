@@ -1,0 +1,85 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "Characteristic.cdm.json"
+    },
+    {
+      "corpusPath": "Workspace.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CharacteristicWorkspace",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "explanation": "fk Characteristic. to CharacteristicWorkspace.",
+          "entity": {
+            "entityReference": "Characteristic",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Characteristic/(resolvedAttributes)/CharacteristicId"
+                ]
+              }
+            ]
+          },
+          "name": "CharacteristicId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "CharacteristicId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        },
+        {
+          "explanation": "fk Workspace. to CharacteristicWorkspace.",
+          "entity": {
+            "entityReference": "Workspace",
+            "appliedTraits": [
+              {
+                "traitReference": "is.identifiedBy",
+                "arguments": [
+                  "Workspace/(resolvedAttributes)/WorkspaceId"
+                ]
+              }
+            ]
+          },
+          "name": "WorkspaceId",
+          "resolutionGuidance": {
+            "renameFormat": "{m}",
+            "entityByReference": {
+              "allowReference": true,
+              "foreignKeyAttribute": {
+                "name": "WorkspaceId",
+                "purpose": "hasA",
+                "dataType": "string",
+                "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                "maximumLength": 50
+              }
+            }
+          },
+          "purpose": "identifiedBy"
+        }
+      ],
+      "displayName": "CharacteristicWorkspace",
+      "description": "Linking entity between Characteristics and Workspace"
+    }
+  ]
+}

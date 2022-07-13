@@ -1,0 +1,351 @@
+{
+  "manifestName": "userAndCustomerExperience",
+  "explanation": "IBPDI real estate CDM standard entities",
+  "entities": [
+    {
+      "type": "LocalEntity",
+      "entityName": "AvailableResource",
+      "entityPath": "AvailableResource.cdm.json/AvailableResource"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "AvailableResourceWorkspace",
+      "entityPath": "AvailableResourceWorkspace.cdm.json/AvailableResourceWorkspace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Booking",
+      "entityPath": "Booking.cdm.json/Booking"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "BookingWorkspace",
+      "entityPath": "BookingWorkspace.cdm.json/BookingWorkspace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Characteristic",
+      "entityPath": "Characteristic.cdm.json/Characteristic"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CharacteristicNeighbourhood",
+      "entityPath": "CharacteristicNeighbourhood.cdm.json/CharacteristicNeighbourhood"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CharacteristicWorkspace",
+      "entityPath": "CharacteristicWorkspace.cdm.json/CharacteristicWorkspace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CustomerFile",
+      "entityPath": "CustomerFile.cdm.json/CustomerFile"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CustomerFileWorkArea",
+      "entityPath": "CustomerFileWorkArea.cdm.json/CustomerFileWorkArea"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "CustomerFileWorkspace",
+      "entityPath": "CustomerFileWorkspace.cdm.json/CustomerFileWorkspace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Neighbourhood",
+      "entityPath": "Neighbourhood.cdm.json/Neighbourhood"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "NeighbourhoodWorkspace",
+      "entityPath": "NeighbourhoodWorkspace.cdm.json/NeighbourhoodWorkspace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkArea",
+      "entityPath": "WorkArea.cdm.json/WorkArea"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkAreaFloor",
+      "entityPath": "WorkAreaFloor.cdm.json/WorkAreaFloor"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkAreaSpace",
+      "entityPath": "WorkAreaSpace.cdm.json/WorkAreaSpace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkAreaType",
+      "entityPath": "WorkAreaType.cdm.json/WorkAreaType"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "Workspace",
+      "entityPath": "Workspace.cdm.json/Workspace"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "WorkspaceSensor",
+      "entityPath": "WorkspaceSensor.cdm.json/WorkspaceSensor"
+    }
+  ],
+  "relationships": [
+    {
+      "fromEntity": "AvailableResourceWorkspace.cdm.json/AvailableResourceWorkspace",
+      "fromEntityAttribute": "AvailableResourceId",
+      "toEntity": "AvailableResource.cdm.json/AvailableResource",
+      "toEntityAttribute": "AvailableResourceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "AvailableResourceWorkspace.cdm.json/AvailableResourceWorkspace",
+      "fromEntityAttribute": "WorkspaceId",
+      "toEntity": "Workspace.cdm.json/Workspace",
+      "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "BookingWorkspace.cdm.json/BookingWorkspace",
+      "fromEntityAttribute": "BookingId",
+      "toEntity": "Booking.cdm.json/Booking",
+      "toEntityAttribute": "BookingId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "BookingWorkspace.cdm.json/BookingWorkspace",
+      "fromEntityAttribute": "WorkspaceId",
+      "toEntity": "Workspace.cdm.json/Workspace",
+      "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CharacteristicNeighbourhood.cdm.json/CharacteristicNeighbourhood",
+      "fromEntityAttribute": "CharacteristicId",
+      "toEntity": "Characteristic.cdm.json/Characteristic",
+      "toEntityAttribute": "CharacteristicId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CharacteristicWorkspace.cdm.json/CharacteristicWorkspace",
+      "fromEntityAttribute": "CharacteristicId",
+      "toEntity": "Characteristic.cdm.json/Characteristic",
+      "toEntityAttribute": "CharacteristicId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CharacteristicNeighbourhood.cdm.json/CharacteristicNeighbourhood",
+      "fromEntityAttribute": "NeighbourhoodId",
+      "toEntity": "Neighbourhood.cdm.json/Neighbourhood",
+      "toEntityAttribute": "NeighbourhoodId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CharacteristicWorkspace.cdm.json/CharacteristicWorkspace",
+      "fromEntityAttribute": "WorkspaceId",
+      "toEntity": "Workspace.cdm.json/Workspace",
+      "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CustomerFileWorkArea.cdm.json/CustomerFileWorkArea",
+      "fromEntityAttribute": "CustomerFileId",
+      "toEntity": "CustomerFile.cdm.json/CustomerFile",
+      "toEntityAttribute": "CustomerFileId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CustomerFileWorkspace.cdm.json/CustomerFileWorkspace",
+      "fromEntityAttribute": "CustomerFileId",
+      "toEntity": "CustomerFile.cdm.json/CustomerFile",
+      "toEntityAttribute": "CustomerFileId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CustomerFileWorkArea.cdm.json/CustomerFileWorkArea",
+      "fromEntityAttribute": "WorkAreaId",
+      "toEntity": "WorkArea.cdm.json/WorkArea",
+      "toEntityAttribute": "WorkAreaId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "CustomerFileWorkspace.cdm.json/CustomerFileWorkspace",
+      "fromEntityAttribute": "WorkspaceId",
+      "toEntity": "Workspace.cdm.json/Workspace",
+      "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "NeighbourhoodWorkspace.cdm.json/NeighbourhoodWorkspace",
+      "fromEntityAttribute": "NeighbourhoodId",
+      "toEntity": "Neighbourhood.cdm.json/Neighbourhood",
+      "toEntityAttribute": "NeighbourhoodId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "NeighbourhoodWorkspace.cdm.json/NeighbourhoodWorkspace",
+      "fromEntityAttribute": "WorkspaceId",
+      "toEntity": "Workspace.cdm.json/Workspace",
+      "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "WorkArea.cdm.json/WorkArea",
+      "fromEntityAttribute": "WorkAreaTypeId",
+      "toEntity": "WorkAreaType.cdm.json/WorkAreaType",
+      "toEntityAttribute": "WorkAreaTypeId"
+    },
+    {
+      "fromEntity": "WorkAreaFloor.cdm.json/WorkAreaFloor",
+      "fromEntityAttribute": "WorkAreaId",
+      "toEntity": "WorkArea.cdm.json/WorkArea",
+      "toEntityAttribute": "WorkAreaId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "WorkAreaSpace.cdm.json/WorkAreaSpace",
+      "fromEntityAttribute": "WorkAreaId",
+      "toEntity": "WorkArea.cdm.json/WorkArea",
+      "toEntityAttribute": "WorkAreaId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "Workspace.cdm.json/Workspace",
+      "fromEntityAttribute": "WorkAreaId",
+      "toEntity": "WorkArea.cdm.json/WorkArea",
+      "toEntityAttribute": "WorkAreaId"
+    },
+    {
+      "fromEntity": "WorkspaceSensor.cdm.json/WorkspaceSensor",
+      "fromEntityAttribute": "WorkspaceId",
+      "toEntity": "Workspace.cdm.json/Workspace",
+      "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    }
+  ],
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "$schema": "CdmManifest.cdm.json",
+  "documentVersion": "1.0"
+}

@@ -28,6 +28,10 @@
     {
       "manifestName": "propertyManagement",
       "definition": "propertyManagement/propertyManagement.1.0.manifest.cdm.json"
+    },
+    {
+      "manifestName": "userAndCustomerExperience",
+      "definition": "userAndCustomerExperience/userAndCustomerExperience.1.0.manifest.cdm.json"
     }
   ]
 }
