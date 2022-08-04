@@ -52,7 +52,22 @@
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Output voltage"
+          "description": "Output voltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "OutputPhases",
@@ -91,42 +106,132 @@
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Day tank capacity"
+          "description": "Day tank capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "BulkStorageCapacity",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Bulk storage capacity"
+          "description": "Bulk storage capacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "StandbyPowerKva",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Standby power kva"
+          "description": "Standby power kva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "StandbyPower",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Standby power"
+          "description": "Standby power",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "PrimePowerKva",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Prime power kva"
+          "description": "Prime power kva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "PrimePower",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Standby power"
+          "description": "Standby power",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         }
       ],
       "displayName": "CoGenerator",

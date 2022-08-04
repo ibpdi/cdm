@@ -201,9 +201,25 @@
             "type": "attributeDefinition",
             "name": "Value",
             "parent": "GhgEmission/attributeContext/GhgEmission",
-            "definition": "resolvedFrom/GhgEmission/hasAttributes/Value",
+            "definition": "resolvedFrom/Value",
             "contents": [
-              "GhgEmission/hasAttributes/Value"
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "GhgEmission/attributeContext/GhgEmission/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "GhgEmission/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
@@ -1039,10 +1055,10 @@
               ]
             }
           ],
-          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Value",
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Value/Value/Value",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Value of entity."
+          "description": "Value of entity"
         },
         {
           "name": "Unit",

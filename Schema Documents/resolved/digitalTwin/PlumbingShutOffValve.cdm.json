@@ -1,0 +1,221 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingShutOffValve.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingShutOffValve",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingShutOffValve",
+        "definition": "resolvedFrom/PlumbingShutOffValve",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PlumbingShutOffValveId",
+            "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
+            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/PlumbingShutOffValveId",
+            "contents": [
+              "PlumbingShutOffValve/hasAttributes/PlumbingShutOffValveId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
+            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "PlumbingShutOffValve/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
+            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/Type",
+            "contents": [
+              "PlumbingShutOffValve/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PipeDiameter",
+            "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
+            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/PipeDiameter",
+            "contents": [
+              "PlumbingShutOffValve/hasAttributes/PipeDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
+            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/FlowCapacity",
+            "contents": [
+              "PlumbingShutOffValve/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "PlumbingShutOffValveId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PlumbingShutOffValveId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Plumbing shut off valve type (only applies for sub component plumbing shut off valve)",
+          "maximumLength": 50
+        },
+        {
+          "name": "PipeDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PipeDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pipe diameter of plumbing valve sub component"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "PlumbingShutOffValve",
+      "description": "Information about plumbing shut off valve",
+      "version": "4.3"
+    }
+  ]
+}

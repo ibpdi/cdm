@@ -11,6 +11,7 @@
   "definitions": [
     {
       "entityName": "TransferSwitch",
+      "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
           "name": "TransferSwitchId",
@@ -60,7 +61,22 @@
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Current rating"
+          "description": "Current rating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         },
         {
           "name": "Poles",
@@ -74,7 +90,22 @@
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Mains rating"
+          "description": "Mains rating",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
         }
       ],
       "displayName": "TransferSwitch",

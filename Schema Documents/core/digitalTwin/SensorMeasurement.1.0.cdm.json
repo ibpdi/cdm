@@ -62,24 +62,9 @@
         {
           "name": "Value",
           "purpose": "hasA",
-          "dataType": "decimal",
+          "dataType": "float",
           "isNullable": true,
-          "description": "Value of sensor measurement",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
+          "description": "Value of sensor measurement"
         },
         {
           "name": "Unit",

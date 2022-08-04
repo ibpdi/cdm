@@ -777,26 +777,7 @@
           "attributeGroupReference": "ValidityInfo"
         },
         {
-          "name": "Value",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "description": "Value of entity.",
-          "isNullable": true,
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
+          "attributeGroupReference": "Value"
         },
         {
           "name": "Unit",

@@ -181,23 +181,11 @@
         {
           "name": "Value",
           "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
+            "is.dataFormat.floatingPoint"
           ],
           "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/Value",
           "isNullable": true,
-          "dataFormat": "Decimal",
+          "dataFormat": "Float",
           "description": "Value of sensor measurement"
         },
         {

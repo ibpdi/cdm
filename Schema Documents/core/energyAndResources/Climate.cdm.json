@@ -74,10 +74,7 @@
           "maximumLength": 75
         },
         {
-          "name": "Value",
-          "purpose": "hasA",
-          "dataType": "celsius",
-          "description": "Value of entity."
+          "attributeGroupReference": "Value"
         },
         {
           "name": "Unit",

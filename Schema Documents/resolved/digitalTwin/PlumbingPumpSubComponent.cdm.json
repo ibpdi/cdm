@@ -1,0 +1,305 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/PlumbingPumpSubComponent.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "PlumbingPumpSubComponent",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "PlumbingPumpSubComponent",
+        "definition": "resolvedFrom/PlumbingPumpSubComponent",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DomesticWaterPumpId",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/DomesticWaterPumpId",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/DomesticWaterPumpId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponentTypeId",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/SubComponentTypeId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "SubComponentType",
+                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId",
+                "definition": "resolvedFrom/SubComponentType"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "contents": [
+                          "PlumbingPumpSubComponent/hasAttributes/SubComponentTypeId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "SubComponent",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/SubComponent",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/SubComponent"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/Type",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PumpingMedia",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/PumpingMedia",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/PumpingMedia"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PressureCapacity",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/PressureCapacity",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/PressureCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "HeadCapacity",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/HeadCapacity",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/HeadCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FlowCapacity",
+            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/FlowCapacity",
+            "contents": [
+              "PlumbingPumpSubComponent/hasAttributes/FlowCapacity"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "DomesticWaterPumpId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/DomesticWaterPumpId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponentTypeId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
+                        "SubComponentTypeId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "SubComponent",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponent",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Plumbing pump sub component",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Plumbing media type",
+          "maximumLength": 50
+        },
+        {
+          "name": "PumpingMedia",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PumpingMedia",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pumping media"
+        },
+        {
+          "name": "PressureCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PressureCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Pressure capacity of hvac valve"
+        },
+        {
+          "name": "HeadCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/HeadCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Head capacity"
+        },
+        {
+          "name": "FlowCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/FlowCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Flow capacity"
+        }
+      ],
+      "displayName": "PlumbingPumpSubComponent",
+      "description": "Information about plumbing pump sub components",
+      "version": "4.3"
+    }
+  ]
+}

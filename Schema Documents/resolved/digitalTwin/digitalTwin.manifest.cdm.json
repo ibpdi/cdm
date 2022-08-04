@@ -409,8 +409,18 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "PlumbingPumpSubComponent",
+      "entityPath": "PlumbingPumpSubComponent.cdm.json/PlumbingPumpSubComponent"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "PlumbingStorageTank",
       "entityPath": "PlumbingStorageTank.cdm.json/PlumbingStorageTank"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingShutOffValve",
+      "entityPath": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve"
     },
     {
       "type": "LocalEntity",
@@ -1691,7 +1701,19 @@
       "toEntityAttribute": "SubComponentTypeId"
     },
     {
+      "fromEntity": "PlumbingPumpSubComponent.cdm.json/PlumbingPumpSubComponent",
+      "fromEntityAttribute": "SubComponentTypeId",
+      "toEntity": "SubComponentType.cdm.json/SubComponentType",
+      "toEntityAttribute": "SubComponentTypeId"
+    },
+    {
       "fromEntity": "PlumbingStorageTank.cdm.json/PlumbingStorageTank",
+      "fromEntityAttribute": "SubComponentTypeId",
+      "toEntity": "SubComponentType.cdm.json/SubComponentType",
+      "toEntityAttribute": "SubComponentTypeId"
+    },
+    {
+      "fromEntity": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve",
       "fromEntityAttribute": "SubComponentTypeId",
       "toEntity": "SubComponentType.cdm.json/SubComponentType",
       "toEntityAttribute": "SubComponentTypeId"

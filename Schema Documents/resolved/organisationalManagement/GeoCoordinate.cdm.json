@@ -172,8 +172,19 @@
           "name": "Latitude",
           "appliedTraits": [
             {
-              "traitReference": "is.dataFormat.numeric.shaped"
-            }
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "10"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            },
+            "means.location.latitude"
           ],
           "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/Latitude",
           "isNullable": true,
@@ -184,8 +195,19 @@
           "name": "Longitude",
           "appliedTraits": [
             {
-              "traitReference": "is.dataFormat.numeric.shaped"
-            }
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "11"
+                },
+                {
+                  "name": "scale",
+                  "value": "8"
+                }
+              ]
+            },
+            "means.location.longitude"
           ],
           "attributeContext": "GeoCoordinate/attributeContext/GeoCoordinate/Longitude",
           "isNullable": true,

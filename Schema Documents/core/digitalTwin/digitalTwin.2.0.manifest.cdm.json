@@ -493,8 +493,20 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "PlumbingPumpSubComponent",
+      "entityPath": "PlumbingPumpSubComponent.1.0.cdm.json/PlumbingPumpSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "PlumbingStorageTank",
       "entityPath": "PlumbingStorageTank.1.0.cdm.json/PlumbingStorageTank",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "PlumbingShutOffValve",
+      "entityPath": "PlumbingShutOffValve.1.0.cdm.json/PlumbingShutOffValve",
       "dataPartitionPatterns": []
     },
     {

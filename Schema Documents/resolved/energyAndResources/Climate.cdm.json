@@ -114,9 +114,25 @@
             "type": "attributeDefinition",
             "name": "Value",
             "parent": "Climate/attributeContext/Climate",
-            "definition": "resolvedFrom/Climate/hasAttributes/Value",
+            "definition": "resolvedFrom/Value",
             "contents": [
-              "Climate/hasAttributes/Value"
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "Climate/attributeContext/Climate/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "Climate/attributeContext/Climate/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "Climate/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
@@ -345,64 +361,24 @@
         {
           "name": "Value",
           "appliedTraits": [
-            "is.dataFormat.floatingPoint",
-            "is.dataFormat.big",
             {
-              "traitReference": "means.measurement.dimension.temperature",
-              "arguments": [
-                "temperature"
-              ]
-            },
-            {
-              "traitReference": "means.measurement.units.si.celsius",
+              "traitReference": "is.dataFormat.numeric.shaped",
               "arguments": [
                 {
-                  "name": "unit",
-                  "value": "celsius"
+                  "name": "precision",
+                  "value": "19"
                 },
                 {
-                  "name": "dimension",
-                  "value": "temperature"
-                },
-                {
-                  "name": "symbol",
-                  "value": "C"
-                }
-              ]
-            },
-            {
-              "traitReference": "has.measurement.fundamentalComponent.kelvin",
-              "arguments": [
-                {
-                  "name": "fundamentalUnit",
-                  "value": "kelvin"
-                },
-                {
-                  "name": "symbol",
-                  "value": "K"
-                },
-                {
-                  "name": "dimension",
-                  "value": "temperature"
-                },
-                {
-                  "name": "fundamentalExponent",
-                  "value": "1"
-                },
-                {
-                  "name": "fundamentalScale",
-                  "value": "1"
-                },
-                {
-                  "name": "fundamentalOffset",
-                  "value": "273.15"
+                  "name": "scale",
+                  "value": "6"
                 }
               ]
             }
           ],
-          "attributeContext": "Climate/attributeContext/Climate/Value",
-          "dataFormat": "Double",
-          "description": "Value of entity."
+          "attributeContext": "Climate/attributeContext/Climate/Value/Value/Value",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Value of entity"
         },
         {
           "name": "Unit",
