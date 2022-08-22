@@ -8,7 +8,7 @@
       "corpusPath": "Account.1.0.cdm.json"
     },
     {
-      "corpusPath": "/core/organisationalManagement/Organisation.cdm.json"
+      "corpusPath": "/core/organisationalManagement/Organisation.1.0.cdm.json"
     }
   ],
   "definitions": [
