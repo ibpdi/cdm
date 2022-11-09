@@ -74,29 +74,29 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "Project",
+            "name": "IbpdiProject",
             "parent": "Account/attributeContext/Account",
-            "definition": "resolvedFrom/Account/hasAttributes/Project",
+            "definition": "resolvedFrom/Account/hasAttributes/IbpdiProject",
             "contents": [
-              "Account/hasAttributes/Project"
+              "Account/hasAttributes/IbpdiProject"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "Category",
+            "name": "IbpdiCategory",
             "parent": "Account/attributeContext/Account",
-            "definition": "resolvedFrom/Account/hasAttributes/Category",
+            "definition": "resolvedFrom/Account/hasAttributes/IbpdiCategory",
             "contents": [
-              "Account/hasAttributes/Category"
+              "Account/hasAttributes/IbpdiCategory"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "Group",
+            "name": "IbpdiGroup",
             "parent": "Account/attributeContext/Account",
-            "definition": "resolvedFrom/Account/hasAttributes/Group",
+            "definition": "resolvedFrom/Account/hasAttributes/IbpdiGroup",
             "contents": [
-              "Account/hasAttributes/Group"
+              "Account/hasAttributes/IbpdiGroup"
             ]
           },
           {
@@ -190,13 +190,13 @@
           "maximumLength": 200
         },
         {
-          "name": "Project",
+          "name": "IbpdiProject",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Account/attributeContext/Account/Project",
+          "attributeContext": "Account/attributeContext/Account/IbpdiProject",
           "dataFormat": "String",
           "description": "Account type (project aligned with RICS naming convention)",
           "maximumLength": 50,
@@ -241,27 +241,27 @@
           ]
         },
         {
-          "name": "Category",
+          "name": "IbpdiCategory",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array",
             "means.category"
           ],
-          "attributeContext": "Account/attributeContext/Account/Category",
+          "attributeContext": "Account/attributeContext/Account/IbpdiCategory",
           "dataFormat": "String",
           "description": "Account category according to IBPDI charts of accounts (category aligned with RICS naming convention)",
           "maximumLength": 75
         },
         {
-          "name": "Group",
+          "name": "IbpdiGroup",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array",
             "means.category"
           ],
-          "attributeContext": "Account/attributeContext/Account/Group",
+          "attributeContext": "Account/attributeContext/Account/IbpdiGroup",
           "dataFormat": "String",
           "description": "Account group according IBPDI charts of accounts (group aligned with RICS naming convention)",
           "maximumLength": 75

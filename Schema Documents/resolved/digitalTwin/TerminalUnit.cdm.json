@@ -40,11 +40,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "DamperId",
+            "name": "TerminalUnitId",
             "parent": "TerminalUnit/attributeContext/TerminalUnit",
-            "definition": "resolvedFrom/TerminalUnit/hasAttributes/DamperId",
+            "definition": "resolvedFrom/TerminalUnit/hasAttributes/TerminalUnitId",
             "contents": [
-              "TerminalUnit/hasAttributes/DamperId"
+              "TerminalUnit/hasAttributes/TerminalUnitId"
             ]
           },
           {
@@ -257,13 +257,13 @@
       },
       "hasAttributes": [
         {
-          "name": "DamperId",
+          "name": "TerminalUnitId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "TerminalUnit/attributeContext/TerminalUnit/DamperId",
+          "attributeContext": "TerminalUnit/attributeContext/TerminalUnit/TerminalUnitId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

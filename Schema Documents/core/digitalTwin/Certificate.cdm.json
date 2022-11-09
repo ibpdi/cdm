@@ -31,7 +31,7 @@
           "maximumLength": 50
         },
         {
-          "name": "Value",
+          "name": "CertificateValue",
           "purpose": "hasA",
           "dataType": "string",
           "description": "Score, grade if applicable for the certificate",

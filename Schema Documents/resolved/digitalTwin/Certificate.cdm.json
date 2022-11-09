@@ -83,11 +83,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "Value",
+            "name": "CertificateValue",
             "parent": "Certificate/attributeContext/Certificate",
-            "definition": "resolvedFrom/Certificate/hasAttributes/Value",
+            "definition": "resolvedFrom/Certificate/hasAttributes/CertificateValue",
             "contents": [
-              "Certificate/hasAttributes/Value"
+              "Certificate/hasAttributes/CertificateValue"
             ]
           },
           {
@@ -193,13 +193,13 @@
           "maximumLength": 50
         },
         {
-          "name": "Value",
+          "name": "CertificateValue",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "Certificate/attributeContext/Certificate/Value",
+          "attributeContext": "Certificate/attributeContext/Certificate/CertificateValue",
           "dataFormat": "String",
           "description": "Score, grade if applicable for the certificate",
           "maximumLength": 50

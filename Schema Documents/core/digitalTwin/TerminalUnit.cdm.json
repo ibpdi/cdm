@@ -14,7 +14,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "DamperId",
+          "name": "TerminalUnitId",
           "purpose": "identifiedBy",
           "dataType": "string",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

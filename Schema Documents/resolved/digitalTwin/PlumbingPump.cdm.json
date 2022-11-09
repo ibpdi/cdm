@@ -189,24 +189,15 @@
         {
           "name": "PumpingMedia",
           "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
           ],
           "attributeContext": "PlumbingPump/attributeContext/PlumbingPump/PumpingMedia",
           "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "PumpingMedia"
+          "dataFormat": "String",
+          "description": "Pumping media",
+          "maximumLength": 100
         },
         {
           "name": "PressureCapacity",

@@ -7059,7 +7059,7 @@
                     "primaryKey": false,
                     "relationshipType": "",
                     "GUID": "e03150a3-bd25-11eb-81e7-9735ef069f63",
-                    "name": "Value",
+                    "name": "CertificateValue",
                     "code": "",
                     "description": "Score, grade if applicable for the certificate",
                     "hackoladeMeta": {},
@@ -7070,10 +7070,10 @@
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=§\\^~:;,\\$%!\\?\\0-\\cZ]+$",
                     "foreignField": [],
                     "properties": [],
-                    "error": {},
                     "examples": [
                         "Platin"
-                    ]
+                    ],
+                    "error": {}
                 },
                 {
                     "type": "string",
@@ -24290,12 +24290,9 @@
                     "GUID": "b0713e00-c497-11ec-ac20-5d24a21d559a",
                     "minLength": 1,
                     "maxLength": 100,
-                    "error": {
-                        "name": false,
-                        "code": false
-                    },
                     "foreignCollection": "",
-                    "foreignField": []
+                    "foreignField": [],
+                    "error": {}
                 },
                 {
                     "name": "PressureCapacity",
@@ -24442,9 +24439,6 @@
                     "relationshipType": "Foreign Key",
                     "parentRelationship": "158c5fa0-d00f-11eb-828a-45fbb7fcbc3e",
                     "properties": [],
-                    "childRelationships": [
-                        "f6babc40-c7af-11ec-82da-892db147be78"
-                    ],
                     "examples": [
                         "SE-DE-05"
                     ]
@@ -24499,18 +24493,12 @@
                     "minLength": 1,
                     "maxLength": 75,
                     "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
-                    "foreignField": [
-                        "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-                        "dff7a309-bd25-11eb-81e7-9735ef069f63"
-                    ],
                     "properties": [],
-                    "error": {},
-                    "relationshipType": "Foreign Key",
                     "foreignCollection": "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-                    "parentRelationship": "f6babc40-c7af-11ec-82da-892db147be78",
                     "examples": [
                         "Agricultural"
-                    ]
+                    ],
+                    "error": {}
                 },
                 {
                     "type": "string",
@@ -26665,17 +26653,12 @@
                     "name": "PumpingMedia",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "type": "numeric",
+                    "type": "string",
                     "properties": [],
-                    "description": "PumpingMedia",
+                    "description": "Pumping media",
                     "GUID": "371c9440-c3cb-11ec-ac20-5d24a21d559a",
-                    "comments": "[{\"dataType\":\"decimal\"}]\nPrecision: 19\nScale: 6",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "unit": "l",
-                    "examples": [
-                        270
-                    ],
+                    "minLength": 1,
+                    "maxLength": 100,
                     "error": {}
                 },
                 {
@@ -26834,17 +26817,12 @@
                     "name": "PumpingMedia",
                     "hackoladeMeta": {},
                     "isActivated": true,
-                    "type": "numeric",
+                    "type": "string",
                     "properties": [],
                     "description": "Pumping media",
                     "GUID": "459b2ec0-c3ce-11ec-ac20-5d24a21d559a",
-                    "comments": "[{\"dataType\":\"decimal\"}]\nPrecision: 19\nScale: 6",
-                    "foreignCollection": "",
-                    "foreignField": [],
-                    "unit": "l",
-                    "examples": [
-                        270
-                    ],
+                    "minLength": 1,
+                    "maxLength": 100,
                     "error": {}
                 },
                 {
@@ -31879,7 +31857,7 @@
             "properties": [
                 {
                     "type": "string",
-                    "name": "DamperId",
+                    "name": "TerminalUnitId",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "93fe0110-c242-11ec-ad54-3b7da9e6438e",
@@ -31893,10 +31871,10 @@
                     "properties": [],
                     "foreignCollection": "",
                     "foreignField": [],
-                    "error": {},
                     "examples": [
                         "HV-1"
-                    ]
+                    ],
+                    "error": {}
                 },
                 {
                     "type": "string",
@@ -38351,7 +38329,7 @@
                 },
                 {
                     "type": "string",
-                    "name": "Project",
+                    "name": "IbpdiProject",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "88cc20f0-bd4e-11eb-81e7-9735ef069f63",
@@ -38372,11 +38350,12 @@
                     "properties": [],
                     "examples": [
                         "Assets"
-                    ]
+                    ],
+                    "error": {}
                 },
                 {
                     "type": "string",
-                    "name": "Category",
+                    "name": "IbpdiCategory",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "a17f10d0-bd4e-11eb-81e7-9735ef069f63",
@@ -38389,11 +38368,12 @@
                     "properties": [],
                     "examples": [
                         "Costs"
-                    ]
+                    ],
+                    "error": {}
                 },
                 {
                     "type": "string",
-                    "name": "Group",
+                    "name": "IbpdiGroup",
                     "hackoladeMeta": {},
                     "isActivated": true,
                     "GUID": "a1a05470-bd4e-11eb-81e7-9735ef069f63",
@@ -38406,7 +38386,8 @@
                     "properties": [],
                     "examples": [
                         "Equipment"
-                    ]
+                    ],
+                    "error": {}
                 },
                 {
                     "type": "string",
@@ -44889,6 +44870,36 @@
                     "required": false,
                     "comments": "[{\"dataType\":\"dateTime\"}]",
                     "properties": [],
+                    "error": {}
+                },
+                {
+                    "type": "string",
+                    "name": "ValidFrom",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "6cefcb4e-a457-4121-a709-f85310515c97",
+                    "foreignField": [],
+                    "description": "Valid from information in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+                    "format": "date-time",
+                    "required": false,
+                    "comments": "[{\"dataType\":\"dateTime\"}]",
+                    "properties": [],
+                    "foreignCollection": "",
+                    "error": {}
+                },
+                {
+                    "type": "string",
+                    "name": "ValidUntil",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "GUID": "1dbd7718-293c-4c18-b7ed-fd54812efa73",
+                    "foreignField": [],
+                    "description": "Valid until information in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+                    "format": "date-time",
+                    "required": false,
+                    "comments": "[{\"dataType\":\"dateTime\"}]",
+                    "properties": [],
+                    "foreignCollection": "",
                     "error": {}
                 }
             ],
@@ -58376,27 +58387,6 @@
             "childCollection": "435df6a0-c497-11ec-ac20-5d24a21d559a"
         },
         {
-            "name": "fk Land.ServitudeId to Land.Type",
-            "relationshipType": "Foreign Key",
-            "parentField": [
-                [
-                    "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-                    "dff7a309-bd25-11eb-81e7-9735ef069f63"
-                ]
-            ],
-            "parentCardinality": "1",
-            "childField": [
-                [
-                    "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-                    "dff7a302-bd25-11eb-81e7-9735ef069f63"
-                ]
-            ],
-            "childCardinality": "1",
-            "parentCollection": "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-            "childCollection": "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
-            "GUID": "f6babc40-c7af-11ec-82da-892db147be78"
-        },
-        {
             "name": "fk OperationalMeasurement. to OperationalMeasurementRentalUnit.",
             "relationshipType": "Foreign Key",
             "parentField": [
@@ -59642,7 +59632,7 @@
         "e03150a0-bd25-11eb-81e7-9735ef069f63": "CertificateId",
         "e03150a1-bd25-11eb-81e7-9735ef069f63": "Name",
         "e03150a2-bd25-11eb-81e7-9735ef069f63": "Type",
-        "e03150a3-bd25-11eb-81e7-9735ef069f63": "Value",
+        "e03150a3-bd25-11eb-81e7-9735ef069f63": "CertificateValue",
         "e03150a4-bd25-11eb-81e7-9735ef069f63": "IssuingDate",
         "e03150a5-bd25-11eb-81e7-9735ef069f63": "ValidFrom",
         "e03150a6-bd25-11eb-81e7-9735ef069f63": "ValidUntil",
@@ -59862,9 +59852,9 @@
         "d955ea72-bd4d-11eb-81e7-9735ef069f63": "BuildingId",
         "d87a7e93-bd4d-11eb-81e7-9735ef069f63": "IndividualAccountBuilding",
         "d879bb40-bd4d-11eb-81e7-9735ef069f63": "Financials",
-        "88cc20f0-bd4e-11eb-81e7-9735ef069f63": "Project",
-        "a17f10d0-bd4e-11eb-81e7-9735ef069f63": "Category",
-        "a1a05470-bd4e-11eb-81e7-9735ef069f63": "Group",
+        "88cc20f0-bd4e-11eb-81e7-9735ef069f63": "IbpdiProject",
+        "a17f10d0-bd4e-11eb-81e7-9735ef069f63": "IbpdiCategory",
+        "a1a05470-bd4e-11eb-81e7-9735ef069f63": "IbpdiGroup",
         "39c46e20-bd50-11eb-81e7-9735ef069f63": "Project",
         "39e0cfc0-bd50-11eb-81e7-9735ef069f63": "Category",
         "3a01c540-bd50-11eb-81e7-9735ef069f63": "Group",
@@ -60836,7 +60826,7 @@
         "cd496430-c23f-11ec-ad54-3b7da9e6438e": "MixingBoxTagNumber",
         "ce11e450-c23f-11ec-ad54-3b7da9e6438e": "MixingBoxSerialNumber",
         "93fcefa0-c242-11ec-ad54-3b7da9e6438e": "TerminalUnit",
-        "93fe0110-c242-11ec-ad54-3b7da9e6438e": "DamperId",
+        "93fe0110-c242-11ec-ad54-3b7da9e6438e": "TerminalUnitId",
         "93fe0111-c242-11ec-ad54-3b7da9e6438e": "ComponentTypeId",
         "93fe0115-c242-11ec-ad54-3b7da9e6438e": "DuctInletShape",
         "93fe0116-c242-11ec-ad54-3b7da9e6438e": "DuctInletConfiguration",
@@ -62000,7 +61990,6 @@
         "9dadd110-c498-11ec-ac20-5d24a21d559a": "FlowCapacity",
         "abca07a0-c498-11ec-ac20-5d24a21d559a": "fk SubSubComponentType. to JockeyPump.",
         "c852b7a0-c498-11ec-ac20-5d24a21d559a": "SubSubComponent",
-        "f6babc40-c7af-11ec-82da-892db147be78": "fk Land.ServitudeId to Land.Type",
         "9aa34de0-caf3-11ec-b9da-5d5e14ff10e7": "fk OperationalMeasurement. to OperationalMeasurementRentalUnit.",
         "e2c305f0-cc4e-11ec-b9da-5d5e14ff10e7": "CostCenterId",
         "e2c0e310-cc4e-11ec-b9da-5d5e14ff10e7": "CostCenterLand",
@@ -62192,7 +62181,9 @@
         "6e2bbb20-f84e-11ec-a604-4dec7637c95f": "AddressId",
         "368fa090-f84f-11ec-a604-4dec7637c95f": "fk Address. to GeoCoordinate.",
         "d2cce8c0-f910-11ec-a435-55c8f41ee14f": "DeprecatedLatitude",
-        "d34b6790-f910-11ec-a435-55c8f41ee14f": "DeprecatedLongitude"
+        "d34b6790-f910-11ec-a435-55c8f41ee14f": "DeprecatedLongitude",
+        "6cefcb4e-a457-4121-a709-f85310515c97": "ValidFrom",
+        "1dbd7718-293c-4c18-b7ed-fd54812efa73": "ValidUntil"
     },
     "definitions": {
         "type": "definitions",
@@ -62217,14 +62208,14 @@
     "creationTS": "2021-05-25T06:50:34.202Z",
     "GUID": "cbea3b10-00ec-11ec-8339-dd68234230e9",
     "isLineageEnabled": false,
-    "lastModifTS": "2022-08-04T14:47:30.837Z",
+    "lastModifTS": "2022-11-09T12:42:33.006Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.3.0"
+        "version": "6.6.2"
     },
     "hackoladeMeta": {
         "customPropertiesUpdated": true,
@@ -62257,7 +62248,7 @@
                         "GUID": "dfdb1a52-bd25-11eb-81e7-9735ef069f63",
                         "x": 2517.0266219069777,
                         "y": 1333.9011923517614,
-                        "width": 284,
+                        "width": 285,
                         "height": 267,
                         "color": {}
                     },
@@ -62297,7 +62288,7 @@
                         "GUID": "dfdb1a57-bd25-11eb-81e7-9735ef069f63",
                         "x": 2293.4046507458347,
                         "y": 2098.9523521690126,
-                        "width": 257,
+                        "width": 271,
                         "height": 195,
                         "color": {}
                     },
@@ -62887,10 +62878,10 @@
                     },
                     {
                         "GUID": "e22c28d0-be2e-11eb-81e7-9735ef069f63",
-                        "x": 389.2710562664116,
-                        "y": 1550.130725078081,
+                        "x": 390.2710562664116,
+                        "y": 1500.130725078081,
                         "width": 292,
-                        "height": 222,
+                        "height": 249,
                         "color": {}
                     },
                     {

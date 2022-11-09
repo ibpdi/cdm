@@ -159,6 +159,24 @@
             "contents": [
               "Organisation/hasAttributes/FiscalYearStartDate"
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidFrom",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/ValidFrom",
+            "contents": [
+              "Organisation/hasAttributes/ValidFrom"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ValidUntil",
+            "parent": "Organisation/attributeContext/Organisation",
+            "definition": "resolvedFrom/Organisation/hasAttributes/ValidUntil",
+            "contents": [
+              "Organisation/hasAttributes/ValidUntil"
+            ]
           }
         ]
       },
@@ -299,6 +317,46 @@
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Start date of fiscal year for organisation in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidFrom",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.start",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/ValidFrom",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ValidUntil",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time",
+            "means.measurement.date.end",
+            {
+              "traitReference": "is.formatted.dateTime",
+              "arguments": [
+                "YYYY-MM-DDThh:mmZ"
+              ]
+            }
+          ],
+          "attributeContext": "Organisation/attributeContext/Organisation/ValidUntil",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         }
       ],
       "displayName": "Organisation",

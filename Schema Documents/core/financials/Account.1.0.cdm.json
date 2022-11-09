@@ -21,7 +21,7 @@
           "attributeGroupReference": "Name"
         },
         {
-          "name": "Project",
+          "name": "IbpdiProject",
           "purpose": "hasA",
           "dataType": "string",
           "appliedTraits": [
@@ -80,7 +80,7 @@
           "valueConstrainedToList": true
         },
         {
-          "name": "Category",
+          "name": "IbpdiCategory",
           "purpose": "hasA",
           "dataType": "string",
           "description": "Account category according to IBPDI charts of accounts (category aligned with RICS naming convention)",
@@ -90,7 +90,7 @@
           ]
         },
         {
-          "name": "Group",
+          "name": "IbpdiGroup",
           "purpose": "hasA",
           "dataType": "string",
           "description": "Account group according IBPDI charts of accounts (group aligned with RICS naming convention)",

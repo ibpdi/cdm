@@ -67,24 +67,10 @@
         {
           "name": "PumpingMedia",
           "purpose": "hasA",
-          "dataType": "decimal",
+          "dataType": "string",
           "isNullable": true,
           "description": "Pumping media",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
+          "maximumLength": 100
         },
         {
           "name": "PressureCapacity",
