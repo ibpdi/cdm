@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk CostCenter. to CostCenterPortfolio.",
+          "explanation": "fk CostCenterPortfolio.CostCenterId to CostCenter.CostCenterId",
           "entity": {
             "entityReference": "CostCenter",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Portfolio. to CostCenterPortfolio.",
+          "explanation": "fk CostCenterPortfolio.PortfolioId to Portfolio.PortfolioId",
           "entity": {
             "entityReference": "Portfolio",
             "appliedTraits": [

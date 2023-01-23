@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.1.0.cdm.json"
     },
     {
       "corpusPath": "Site.1.0.cdm.json"
-    },
-    {
-      "corpusPath": "Servitudes.1.0.cdm.json"
     }
   ],
   "definitions": [
@@ -24,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk Site. to Land.",
+          "explanation": "fk Land.SiteId to Site.SiteId",
           "entity": {
             "entityReference": "Site",
             "appliedTraits": [
@@ -46,35 +46,6 @@
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Reference to the site which the land belongs to",
-                "maximumLength": 50
-              }
-            }
-          }
-        },
-        {
-          "explanation": "fk Servitudes. to Land.",
-          "entity": {
-            "entityReference": "Servitudes",
-            "appliedTraits": [
-              {
-                "traitReference": "is.identifiedBy",
-                "arguments": [
-                  "Servitudes/(resolvedAttributes)/ServitudeId"
-                ]
-              }
-            ]
-          },
-          "name": "ServitudeId",
-          "resolutionGuidance": {
-            "renameFormat": "{m}",
-            "entityByReference": {
-              "allowReference": true,
-              "foreignKeyAttribute": {
-                "name": "ServitudeId",
-                "purpose": "hasA",
-                "dataType": "string",
-                "isNullable": true,
-                "description": "Reference to the Servitude which belongs to the land",
                 "maximumLength": 50
               }
             }

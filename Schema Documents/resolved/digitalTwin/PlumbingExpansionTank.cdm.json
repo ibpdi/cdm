@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "PlumbingTankId",
             "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank",
-            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/PlumbingTankId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "PlumbingTank",
+                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/PlumbingTankId",
+                "definition": "resolvedFrom/PlumbingTank"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId",
+                "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/PlumbingTankId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/PlumbingTankId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/PlumbingTankId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingExpansionTank/hasAttributes/PlumbingTankId/resolutionGuidance/foreignKeyAttribute/PlumbingTankId",
                         "contents": [
-                          "PlumbingExpansionTank/hasAttributes/SubComponentTypeId"
+                          "PlumbingExpansionTank/hasAttributes/PlumbingTankId"
                         ]
                       }
                     ]
@@ -128,7 +128,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "PlumbingTankId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -141,8 +141,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/PlumbingTank.cdm.json/PlumbingTank",
+                        "PlumbingTankId"
                       ]
                     ]
                   }
@@ -150,7 +150,7 @@
               ]
             }
           ],
-          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "PlumbingExpansionTank/attributeContext/PlumbingExpansionTank/PlumbingTankId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

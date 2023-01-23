@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "SprinklerValve/attributeContext/SprinklerValve",
-            "definition": "resolvedFrom/SprinklerValve/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "ComponentType",
+                "parent": "SprinklerValve/attributeContext/SprinklerValve/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId",
+                "parent": "SprinklerValve/attributeContext/SprinklerValve/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "SprinklerValve/attributeContext/SprinklerValve/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/SprinklerValve/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "SprinklerValve/attributeContext/SprinklerValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SprinklerValve/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "SprinklerValve/hasAttributes/SubSubComponentTypeId"
+                          "SprinklerValve/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -86,11 +86,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponent",
+            "name": "Type",
             "parent": "SprinklerValve/attributeContext/SprinklerValve",
-            "definition": "resolvedFrom/SprinklerValve/hasAttributes/SubSubComponent",
+            "definition": "resolvedFrom/SprinklerValve/hasAttributes/Type",
             "contents": [
-              "SprinklerValve/hasAttributes/SubSubComponent"
+              "SprinklerValve/hasAttributes/Type"
             ]
           },
           {
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -159,22 +159,22 @@
               ]
             }
           ],
-          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponent",
+          "name": "Type",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/SubSubComponent",
+          "attributeContext": "SprinklerValve/attributeContext/SprinklerValve/Type",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Sprinkler valve sub sub component",
+          "description": "Sprinkler valve type",
           "maximumLength": 50
         },
         {

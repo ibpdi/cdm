@@ -2,10 +2,10 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "cdm:/foundations.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
     },
     {
       "corpusPath": "WorkAreaType.cdm.json"
@@ -27,7 +27,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk WorkAreaType. to WorkArea.",
+          "explanation": "fk WorkArea.WorkAreaTypeId to WorkAreaType.WorkAreaTypeId",
           "entity": {
             "entityReference": "WorkAreaType",
             "appliedTraits": [
@@ -55,7 +55,7 @@
           }
         },
         {
-          "explanation": "fk AreaMeasurement. to WorkArea.",
+          "explanation": "fk WorkArea.AreaMeasurementId to AreaMeasurement.AreaMeasurementId",
           "entity": {
             "entityReference": "AreaMeasurement",
             "appliedTraits": [

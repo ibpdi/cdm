@@ -40,11 +40,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "HvacTankId",
+            "name": "HvacHeatTracingId",
             "parent": "HvacHeatTracing/attributeContext/HvacHeatTracing",
-            "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/HvacTankId",
+            "definition": "resolvedFrom/HvacHeatTracing/hasAttributes/HvacHeatTracingId",
             "contents": [
-              "HvacHeatTracing/hasAttributes/HvacTankId"
+              "HvacHeatTracing/hasAttributes/HvacHeatTracingId"
             ]
           },
           {
@@ -106,13 +106,13 @@
       },
       "hasAttributes": [
         {
-          "name": "HvacTankId",
+          "name": "HvacHeatTracingId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "HvacHeatTracing/attributeContext/HvacHeatTracing/HvacTankId",
+          "attributeContext": "HvacHeatTracing/attributeContext/HvacHeatTracing/HvacHeatTracingId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

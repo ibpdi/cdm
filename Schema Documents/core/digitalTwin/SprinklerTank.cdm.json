@@ -5,7 +5,10 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubSubComponentType.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.cdm.json"
     }
   ],
   "definitions": [
@@ -21,25 +24,25 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubSubComponentType. to SprinklerTank.",
+          "explanation": "fk SprinklerTank.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
-            "entityReference": "SubSubComponentType",
+            "entityReference": "ComponentType",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubSubComponentType/(resolvedAttributes)/SubSubComponentTypeId"
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
                 ]
               }
             ]
           },
-          "name": "SubSubComponentTypeId",
+          "name": "ComponentTypeId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubSubComponentTypeId",
+                "name": "ComponentTypeId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

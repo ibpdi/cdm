@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Certificate. to CertificateBuilding.",
+          "explanation": "fk CertificateBuilding.CertificateId to Certificate.CertificateId",
           "entity": {
             "entityReference": "Certificate",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Building. to CertificateBuilding.",
+          "explanation": "fk CertificateBuilding.BuildingId to Building.BuildingId",
           "entity": {
             "entityReference": "Building",
             "appliedTraits": [

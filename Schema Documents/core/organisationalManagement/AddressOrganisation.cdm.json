@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Address. to AddressOrganisation.",
+          "explanation": "fk AddressOrganisation.AddressId to Address.AddressId",
           "entity": {
             "entityReference": "Address",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Organisation. to AddressOrganisation.",
+          "explanation": "fk AddressOrganisation.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

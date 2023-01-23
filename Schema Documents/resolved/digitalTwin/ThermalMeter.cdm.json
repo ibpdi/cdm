@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "ThermalMeter/attributeContext/ThermalMeter",
-            "definition": "resolvedFrom/ThermalMeter/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/ThermalMeter/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "ThermalMeter/attributeContext/ThermalMeter/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId",
+                "parent": "ThermalMeter/attributeContext/ThermalMeter/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "ThermalMeter/attributeContext/ThermalMeter/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/ThermalMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "ThermalMeter/attributeContext/ThermalMeter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ThermalMeter/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "ThermalMeter/hasAttributes/SubComponentTypeId"
+                          "ThermalMeter/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -182,7 +182,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -195,8 +195,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -204,7 +204,7 @@
               ]
             }
           ],
-          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "ThermalMeter/attributeContext/ThermalMeter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

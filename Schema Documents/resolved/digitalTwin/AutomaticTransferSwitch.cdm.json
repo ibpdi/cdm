@@ -40,42 +40,42 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "TransferSwitchId",
+            "name": "AutomaticTransferSwitchId",
             "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
-            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/TransferSwitchId",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/AutomaticTransferSwitchId",
             "contents": [
-              "AutomaticTransferSwitch/hasAttributes/TransferSwitchId"
+              "AutomaticTransferSwitch/hasAttributes/AutomaticTransferSwitchId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "TransferSwitchId",
             "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch",
-            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/TransferSwitchId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "TransferSwitch",
+                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId",
+                "definition": "resolvedFrom/TransferSwitch"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId",
+                "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AutomaticTransferSwitch/hasAttributes/TransferSwitchId/resolutionGuidance/foreignKeyAttribute/TransferSwitchId",
                         "contents": [
-                          "AutomaticTransferSwitch/hasAttributes/SubSubComponentTypeId"
+                          "AutomaticTransferSwitch/hasAttributes/TransferSwitchId"
                         ]
                       }
                     ]
@@ -142,20 +142,20 @@
       },
       "hasAttributes": [
         {
-          "name": "TransferSwitchId",
+          "name": "AutomaticTransferSwitchId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId",
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/AutomaticTransferSwitchId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "TransferSwitchId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -168,8 +168,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/TransferSwitch.cdm.json/TransferSwitch",
+                        "TransferSwitchId"
                       ]
                     ]
                   }
@@ -177,7 +177,7 @@
               ]
             }
           ],
-          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "AutomaticTransferSwitch/attributeContext/AutomaticTransferSwitch/TransferSwitchId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

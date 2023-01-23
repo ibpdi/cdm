@@ -64,6 +64,16 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "Tag",
+      "entityPath": "Tag.cdm.json/Tag"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TagNeighbourhood",
+      "entityPath": "TagNeighbourhood.cdm.json/TagNeighbourhood"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "WorkArea",
       "entityPath": "WorkArea.cdm.json/WorkArea"
     },
@@ -277,10 +287,38 @@
       ]
     },
     {
+      "fromEntity": "TagNeighbourhood.cdm.json/TagNeighbourhood",
+      "fromEntityAttribute": "NeighbourhoodId",
+      "toEntity": "Neighbourhood.cdm.json/Neighbourhood",
+      "toEntityAttribute": "NeighbourhoodId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
       "fromEntity": "NeighbourhoodWorkspace.cdm.json/NeighbourhoodWorkspace",
       "fromEntityAttribute": "WorkspaceId",
       "toEntity": "Workspace.cdm.json/Workspace",
       "toEntityAttribute": "WorkspaceId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
+    },
+    {
+      "fromEntity": "TagNeighbourhood.cdm.json/TagNeighbourhood",
+      "fromEntityAttribute": "TagId",
+      "toEntity": "Tag.cdm.json/Tag",
+      "toEntityAttribute": "TagId",
       "exhibitsTraits": [
         {
           "traitReference": "is.identifiedBy",

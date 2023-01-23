@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "TankWaterHeaterId",
             "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
-            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/TankWaterHeaterId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "TankWaterHeater",
+                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankWaterHeaterId",
+                "definition": "resolvedFrom/TankWaterHeater"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId",
+                "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankWaterHeaterId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankWaterHeaterId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankWaterHeaterId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/TankWaterHeaterId/resolutionGuidance/foreignKeyAttribute/TankWaterHeaterId",
                         "contents": [
-                          "TankWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId"
+                          "TankWaterHeaterSubComponent/hasAttributes/TankWaterHeaterId"
                         ]
                       }
                     ]
@@ -86,11 +86,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponent",
+            "name": "Type",
             "parent": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent",
-            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/SubComponent",
+            "definition": "resolvedFrom/TankWaterHeaterSubComponent/hasAttributes/Type",
             "contents": [
-              "TankWaterHeaterSubComponent/hasAttributes/SubComponent"
+              "TankWaterHeaterSubComponent/hasAttributes/Type"
             ]
           },
           {
@@ -146,7 +146,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "TankWaterHeaterId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -159,8 +159,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/TankWaterHeater.cdm.json/TankWaterHeater",
+                        "TankWaterHeaterId"
                       ]
                     ]
                   }
@@ -168,22 +168,22 @@
               ]
             }
           ],
-          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/TankWaterHeaterId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubComponent",
+          "name": "Type",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/SubComponent",
+          "attributeContext": "TankWaterHeaterSubComponent/attributeContext/TankWaterHeaterSubComponent/Type",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Tank water heater sub component",
+          "description": "Tank water heater sub component type",
           "maximumLength": 50
         },
         {

@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "TerminalUnitId",
             "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat",
-            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/TerminalUnitId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "TerminalUnit",
+                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/TerminalUnitId",
+                "definition": "resolvedFrom/TerminalUnit"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId",
+                "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/TerminalUnitId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/TerminalUnitId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanPoweredBoxReheat/hasAttributes/TerminalUnitId/resolutionGuidance/foreignKeyAttribute/TerminalUnitId",
                         "contents": [
-                          "FanPoweredBoxReheat/hasAttributes/SubSubComponentTypeId"
+                          "FanPoweredBoxReheat/hasAttributes/TerminalUnitId"
                         ]
                       }
                     ]
@@ -592,7 +592,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "TerminalUnitId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -605,8 +605,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/TerminalUnit.cdm.json/TerminalUnit",
+                        "TerminalUnitId"
                       ]
                     ]
                   }
@@ -614,7 +614,7 @@
               ]
             }
           ],
-          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FanPoweredBoxReheat/attributeContext/FanPoweredBoxReheat/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

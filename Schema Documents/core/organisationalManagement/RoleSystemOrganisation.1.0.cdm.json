@@ -19,7 +19,7 @@
       "entityName": "RoleSystemOrganisation",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RoleOperationalMeasurementOrganisation.",
+          "explanation": "fk RoleSystemOrganisation.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -48,7 +48,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk System. to RoleSystemOrganisation.",
+          "explanation": "fk RoleSystemOrganisation.SystemId to System.SystemId",
           "entity": {
             "entityReference": "System",
             "appliedTraits": [
@@ -77,7 +77,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Organisation. to RoleOperationalMeasurementOrganisation.",
+          "explanation": "fk RoleSystemOrganisation.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

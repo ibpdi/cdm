@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.1.0.cdm.json"
     },
     {
@@ -21,7 +24,7 @@
           "maximumLength": 36
         },
         {
-          "explanation": "fk Building. to SustainabilityIndicator.",
+          "explanation": "fk SustainabilityIndicator.BuildingId to Building.BuildingId",
           "entity": {
             "entityReference": "Building",
             "appliedTraits": [

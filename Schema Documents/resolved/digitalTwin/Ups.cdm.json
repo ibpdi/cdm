@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "Ups/attributeContext/Ups",
-            "definition": "resolvedFrom/Ups/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/Ups/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "Ups/attributeContext/Ups/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "Ups/attributeContext/Ups/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "Ups/attributeContext/Ups/SubComponentTypeId",
+                "parent": "Ups/attributeContext/Ups/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "Ups/attributeContext/Ups/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "Ups/attributeContext/Ups/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "Ups/attributeContext/Ups/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Ups/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "Ups/attributeContext/Ups/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Ups/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "Ups/hasAttributes/SubComponentTypeId"
+                          "Ups/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -155,7 +155,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -168,8 +168,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -177,7 +177,7 @@
               ]
             }
           ],
-          "attributeContext": "Ups/attributeContext/Ups/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "Ups/attributeContext/Ups/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

@@ -5,6 +5,9 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
       "corpusPath": "System.cdm.json"
     }
   ],
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk System. to PlumbingSystem.",
+          "explanation": "fk PlumbingSystem.SystemId to System.SystemId",
           "entity": {
             "entityReference": "System",
             "appliedTraits": [

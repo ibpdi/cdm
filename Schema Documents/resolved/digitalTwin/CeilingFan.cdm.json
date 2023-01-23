@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "HvacFanId",
             "parent": "CeilingFan/attributeContext/CeilingFan",
-            "definition": "resolvedFrom/CeilingFan/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/CeilingFan/hasAttributes/HvacFanId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "HvacFan",
+                "parent": "CeilingFan/attributeContext/CeilingFan/HvacFanId",
+                "definition": "resolvedFrom/HvacFan"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId",
+                "parent": "CeilingFan/attributeContext/CeilingFan/HvacFanId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "CeilingFan/attributeContext/CeilingFan/HvacFanId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/CeilingFan/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "CeilingFan/attributeContext/CeilingFan/HvacFanId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CeilingFan/hasAttributes/HvacFanId/resolutionGuidance/foreignKeyAttribute/HvacFanId",
                         "contents": [
-                          "CeilingFan/hasAttributes/SubComponentTypeId"
+                          "CeilingFan/hasAttributes/HvacFanId"
                         ]
                       }
                     ]
@@ -502,7 +502,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "HvacFanId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -515,8 +515,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/HvacFan.cdm.json/HvacFan",
+                        "HvacFanId"
                       ]
                     ]
                   }
@@ -524,7 +524,7 @@
               ]
             }
           ],
-          "attributeContext": "CeilingFan/attributeContext/CeilingFan/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "CeilingFan/attributeContext/CeilingFan/HvacFanId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

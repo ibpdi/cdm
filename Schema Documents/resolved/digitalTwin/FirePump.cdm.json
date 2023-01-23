@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "FirePump/attributeContext/FirePump",
-            "definition": "resolvedFrom/FirePump/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/FirePump/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "ComponentType",
+                "parent": "FirePump/attributeContext/FirePump/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId",
+                "parent": "FirePump/attributeContext/FirePump/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FirePump/attributeContext/FirePump/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FirePump/attributeContext/FirePump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FirePump/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "FirePump/attributeContext/FirePump/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FirePump/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "FirePump/hasAttributes/SubSubComponentTypeId"
+                          "FirePump/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "FirePump/attributeContext/FirePump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FirePump/attributeContext/FirePump/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

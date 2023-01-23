@@ -5,6 +5,9 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
       "corpusPath": "ComponentType.cdm.json"
     }
   ],
@@ -14,14 +17,14 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "HvacTankId",
+          "name": "HvacHeatTracingId",
           "purpose": "identifiedBy",
           "dataType": "string",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "explanation": "fk ComponentType. to HvacHeatTracing.",
+          "explanation": "fk HvacHeatTracing.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
             "entityReference": "ComponentType",
             "appliedTraits": [

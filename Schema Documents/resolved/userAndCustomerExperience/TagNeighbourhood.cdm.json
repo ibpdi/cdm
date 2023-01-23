@@ -1,0 +1,182 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/TagNeighbourhood.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "TagNeighbourhood",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "TagNeighbourhood",
+        "definition": "resolvedFrom/TagNeighbourhood",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TagId",
+            "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood",
+            "definition": "resolvedFrom/TagNeighbourhood/hasAttributes/TagId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Tag",
+                "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/TagId",
+                "definition": "resolvedFrom/Tag"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/TagId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/TagId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/TagId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TagNeighbourhood/hasAttributes/TagId/resolutionGuidance/foreignKeyAttribute/TagId",
+                        "contents": [
+                          "TagNeighbourhood/hasAttributes/TagId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "NeighbourhoodId",
+            "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood",
+            "definition": "resolvedFrom/TagNeighbourhood/hasAttributes/NeighbourhoodId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Neighbourhood",
+                "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/NeighbourhoodId",
+                "definition": "resolvedFrom/Neighbourhood"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/NeighbourhoodId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/NeighbourhoodId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "TagNeighbourhood/attributeContext/TagNeighbourhood/NeighbourhoodId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TagNeighbourhood/hasAttributes/NeighbourhoodId/resolutionGuidance/foreignKeyAttribute/NeighbourhoodId",
+                        "contents": [
+                          "TagNeighbourhood/hasAttributes/NeighbourhoodId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TagId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Tag.cdm.json/Tag",
+                        "TagId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TagNeighbourhood/attributeContext/TagNeighbourhood/TagId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "NeighbourhoodId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/userAndCustomerExperience/Neighbourhood.cdm.json/Neighbourhood",
+                        "NeighbourhoodId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "TagNeighbourhood/attributeContext/TagNeighbourhood/NeighbourhoodId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        }
+      ],
+      "displayName": "TagNeighbourhood",
+      "description": "Linking entity between Tag and Neighbourhood",
+      "version": "4.3"
+    }
+  ]
+}

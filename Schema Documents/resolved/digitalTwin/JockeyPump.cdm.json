@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "JockeyPump/attributeContext/JockeyPump",
-            "definition": "resolvedFrom/JockeyPump/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/JockeyPump/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "ComponentType",
+                "parent": "JockeyPump/attributeContext/JockeyPump/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId",
+                "parent": "JockeyPump/attributeContext/JockeyPump/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "JockeyPump/attributeContext/JockeyPump/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/JockeyPump/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "JockeyPump/attributeContext/JockeyPump/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/JockeyPump/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "JockeyPump/hasAttributes/SubSubComponentTypeId"
+                          "JockeyPump/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -146,7 +146,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -159,8 +159,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -168,7 +168,7 @@
               ]
             }
           ],
-          "attributeContext": "JockeyPump/attributeContext/JockeyPump/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "JockeyPump/attributeContext/JockeyPump/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

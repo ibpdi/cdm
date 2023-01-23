@@ -49,39 +49,48 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "Generator/attributeContext/Generator",
-            "definition": "resolvedFrom/Generator/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/Generator/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "Generator/attributeContext/Generator/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "Generator/attributeContext/Generator/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "Generator/attributeContext/Generator/SubComponentTypeId",
+                "parent": "Generator/attributeContext/Generator/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "Generator/attributeContext/Generator/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "Generator/attributeContext/Generator/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "Generator/attributeContext/Generator/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Generator/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "Generator/attributeContext/Generator/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Generator/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "Generator/hasAttributes/SubComponentTypeId"
+                          "Generator/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
                   }
                 ]
               }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "Generator/attributeContext/Generator",
+            "definition": "resolvedFrom/Generator/hasAttributes/Type",
+            "contents": [
+              "Generator/hasAttributes/Type"
             ]
           },
           {
@@ -200,7 +209,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -213,8 +222,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -222,9 +231,22 @@
               ]
             }
           ],
-          "attributeContext": "Generator/attributeContext/Generator/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "Generator/attributeContext/Generator/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Generator/attributeContext/Generator/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Generator type",
           "maximumLength": 50
         },
         {

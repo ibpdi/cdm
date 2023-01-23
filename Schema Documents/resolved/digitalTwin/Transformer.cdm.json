@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "Transformer/attributeContext/Transformer",
-            "definition": "resolvedFrom/Transformer/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/Transformer/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "Transformer/attributeContext/Transformer/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId",
+                "parent": "Transformer/attributeContext/Transformer/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "Transformer/attributeContext/Transformer/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "Transformer/attributeContext/Transformer/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Transformer/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "Transformer/attributeContext/Transformer/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Transformer/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "Transformer/hasAttributes/SubComponentTypeId"
+                          "Transformer/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -146,7 +146,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -159,8 +159,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -168,7 +168,7 @@
               ]
             }
           ],
-          "attributeContext": "Transformer/attributeContext/Transformer/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "Transformer/attributeContext/Transformer/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.cdm.json"
     }
   ],
@@ -181,7 +184,7 @@
         }
       ],
       "displayName": "Account",
-      "description": "BPDI defined account number based on standardized chart of account"
+      "description": "IBPDI defined account number based on standardized chart of account"
     }
   ]
 }

@@ -20,7 +20,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RoleRentalContractOrganisation.",
+          "explanation": "fk RoleRentalContractOrganisation.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -49,7 +49,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk RentalContract. to RoleRentalContractOrganisation.",
+          "explanation": "fk RoleRentalContractOrganisation.RentalContractId to RentalContract.RentalContractId",
           "entity": {
             "entityReference": "RentalContract",
             "appliedTraits": [
@@ -78,7 +78,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Organisation. to RoleRentalContractOrganisation.",
+          "explanation": "fk RoleRentalContractOrganisation.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

@@ -20,7 +20,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RolePortfolioStrategyOrganisation.",
+          "explanation": "fk RolePortfolioStrategyOrganisation.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -49,7 +49,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk PortfolioStrategy. to RolePortfolioStrategyOrganisation.",
+          "explanation": "fk RolePortfolioStrategyOrganisation.PortfolioStrategyId to PortfolioStrategy.PortfolioStrategyId",
           "entity": {
             "entityReference": "PortfolioStrategy",
             "appliedTraits": [
@@ -78,7 +78,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Organisation. to RolePortfolioStrategyOrganisation.",
+          "explanation": "fk RolePortfolioStrategyOrganisation.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

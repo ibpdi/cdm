@@ -3,9 +3,6 @@
   "imports": [
     {
       "corpusPath": "cdm:/foundations.cdm.json"
-    },
-    {
-      "corpusPath": "/core/financials/IndividualAccount.cdm.json"
     }
   ],
   "definitions": [

@@ -105,7 +105,15 @@
       "fromEntity": "PortfolioStrategy.cdm.json/PortfolioStrategy",
       "fromEntityAttribute": "PortfolioId",
       "toEntity": "Portfolio.cdm.json/Portfolio",
-      "toEntityAttribute": "PortfolioId"
+      "toEntityAttribute": "PortfolioId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
     },
     {
       "fromEntity": "PortfolioUnit.cdm.json/PortfolioUnit",

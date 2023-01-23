@@ -2,15 +2,19 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "cdm:/foundations.cdm.json"
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
-      "corpusPath": "SubSubComponentType.cdm.json"
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "Generator.1.0.cdm.json"
     }
   ],
   "definitions": [
     {
       "entityName": "CoGenerator",
+      "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
           "name": "CoGeneratorId",
@@ -20,25 +24,25 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubSubComponentType. to CoGenerator.",
+          "explanation": "fk CoGenerator.GeneratorId to Generator.GeneratorId",
           "entity": {
-            "entityReference": "SubSubComponentType",
+            "entityReference": "Generator",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubSubComponentType/(resolvedAttributes)/SubSubComponentTypeId"
+                  "Generator/(resolvedAttributes)/GeneratorId"
                 ]
               }
             ]
           },
-          "name": "SubSubComponentTypeId",
+          "name": "GeneratorId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubSubComponentTypeId",
+                "name": "GeneratorId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

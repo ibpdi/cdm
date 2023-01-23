@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.1.0.cdm.json"
     },
     {
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk Site. to Building.",
+          "explanation": "fk Building.SiteId to Site.SiteId",
           "entity": {
             "entityReference": "Site",
             "appliedTraits": [
@@ -365,73 +368,73 @@
                         "en",
                         "Health Care",
                         "Health Care",
+                        "48"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Health Care Center",
+                        "Health Care, Health Care Center",
+                        "49"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Senior Homes",
+                        "Health Care, Senior Homes",
                         "50"
                       ],
                       [
                         "en",
-                        "Health Care, Health Care Center",
-                        "Health Care, Health Care Center",
+                        "Health Care, Other",
+                        "Health Care, Other",
                         "51"
                       ],
                       [
                         "en",
-                        "Health Care, Senior Homes",
-                        "Health Care, Senior Homes",
+                        "Mixed Use",
+                        "Mixed Use",
                         "52"
                       ],
                       [
                         "en",
-                        "Health Care, Other",
-                        "Health Care, Other",
+                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Retail",
                         "53"
                       ],
                       [
                         "en",
-                        "Mixed Use",
-                        "Mixed Use",
+                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Office/Residential",
                         "54"
                       ],
                       [
                         "en",
-                        "Mixed Use, Office/Retail",
-                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Industrial",
+                        "Mixed Use, Office/Industrial",
                         "55"
                       ],
                       [
                         "en",
-                        "Mixed Use, Office/Residential",
-                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Other",
+                        "Mixed Use, Other",
                         "56"
                       ],
                       [
                         "en",
-                        "Mixed Use, Office/Industrial",
-                        "Mixed Use, Office/Industrial",
+                        "Other",
+                        "Other",
                         "57"
                       ],
                       [
                         "en",
-                        "Mixed Use, Other",
-                        "Mixed Use, Other",
+                        "Other, Parking (Indoors)",
+                        "Other, Parking (Indoors)",
                         "58"
                       ],
                       [
                         "en",
-                        "Other",
-                        "Other",
+                        "Other, Self-Storage",
+                        "Other, Self-Storage",
                         "59"
-                      ],
-                      [
-                        "en",
-                        "Other, Parking (Indoors)",
-                        "Other, Parking (Indoors)",
-                        "60"
-                      ],
-                      [
-                        "en",
-                        "Other, Self-Storage",
-                        "Other, Self-Storage",
-                        "61"
                       ]
                     ]
                   }
@@ -749,73 +752,73 @@
                         "en",
                         "Health Care",
                         "Health Care",
+                        "48"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Health Care Center",
+                        "Health Care, Health Care Center",
+                        "49"
+                      ],
+                      [
+                        "en",
+                        "Health Care, Senior Homes",
+                        "Health Care, Senior Homes",
                         "50"
                       ],
                       [
                         "en",
-                        "Health Care, Health Care Center",
-                        "Health Care, Health Care Center",
+                        "Health Care, Other",
+                        "Health Care, Other",
                         "51"
                       ],
                       [
                         "en",
-                        "Health Care, Senior Homes",
-                        "Health Care, Senior Homes",
+                        "Mixed Use",
+                        "Mixed Use",
                         "52"
                       ],
                       [
                         "en",
-                        "Health Care, Other",
-                        "Health Care, Other",
+                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Retail",
                         "53"
                       ],
                       [
                         "en",
-                        "Mixed Use",
-                        "Mixed Use",
+                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Office/Residential",
                         "54"
                       ],
                       [
                         "en",
-                        "Mixed Use, Office/Retail",
-                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Industrial",
+                        "Mixed Use, Office/Industrial",
                         "55"
                       ],
                       [
                         "en",
-                        "Mixed Use, Office/Residential",
-                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Other",
+                        "Mixed Use, Other",
                         "56"
                       ],
                       [
                         "en",
-                        "Mixed Use, Office/Industrial",
-                        "Mixed Use, Office/Industrial",
+                        "Other",
+                        "Other",
                         "57"
                       ],
                       [
                         "en",
-                        "Mixed Use, Other",
-                        "Mixed Use, Other",
+                        "Other, Parking (Indoors)",
+                        "Other, Parking (Indoors)",
                         "58"
                       ],
                       [
                         "en",
-                        "Other",
-                        "Other",
+                        "Other, Self-Storage",
+                        "Other, Self-Storage",
                         "59"
-                      ],
-                      [
-                        "en",
-                        "Other, Parking (Indoors)",
-                        "Other, Parking (Indoors)",
-                        "60"
-                      ],
-                      [
-                        "en",
-                        "Other, Self-Storage",
-                        "Other, Self-Storage",
-                        "61"
                       ]
                     ]
                   }
@@ -1221,16 +1224,6 @@
           "isNullable": true,
           "description": "Status of site",
           "maximumLength": 50
-        },
-        {
-          "name": "NumberOfEmployees",
-          "purpose": "hasA",
-          "dataType": "integer",
-          "isNullable": true,
-          "description": "Number of employees",
-          "appliedTraits": [
-            "means.measurement.count"
-          ]
         }
       ],
       "displayName": "Building",

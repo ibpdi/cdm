@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "ComponentTypeId",
+            "name": "ControllerId",
             "parent": "BacNetController/attributeContext/BacNetController",
-            "definition": "resolvedFrom/BacNetController/hasAttributes/ComponentTypeId",
+            "definition": "resolvedFrom/BacNetController/hasAttributes/ControllerId",
             "contents": [
               {
                 "type": "entity",
-                "name": "ComponentType",
-                "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId",
-                "definition": "resolvedFrom/ComponentType"
+                "name": "Controller",
+                "parent": "BacNetController/attributeContext/BacNetController/ControllerId",
+                "definition": "resolvedFrom/Controller"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId",
+                "parent": "BacNetController/attributeContext/BacNetController/ControllerId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId/_generatedAttributeSet",
+                    "parent": "BacNetController/attributeContext/BacNetController/ControllerId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "BacNetController/attributeContext/BacNetController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/BacNetController/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "parent": "BacNetController/attributeContext/BacNetController/ControllerId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/BacNetController/hasAttributes/ControllerId/resolutionGuidance/foreignKeyAttribute/ControllerId",
                         "contents": [
-                          "BacNetController/hasAttributes/ComponentTypeId"
+                          "BacNetController/hasAttributes/ControllerId"
                         ]
                       }
                     ]
@@ -155,7 +155,7 @@
           "maximumLength": 50
         },
         {
-          "name": "ComponentTypeId",
+          "name": "ControllerId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -168,8 +168,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
-                        "ComponentTypeId"
+                        "/core/digitalTwin/Controller.cdm.json/Controller",
+                        "ControllerId"
                       ]
                     ]
                   }
@@ -177,7 +177,7 @@
               ]
             }
           ],
-          "attributeContext": "BacNetController/attributeContext/BacNetController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "BacNetController/attributeContext/BacNetController/ControllerId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

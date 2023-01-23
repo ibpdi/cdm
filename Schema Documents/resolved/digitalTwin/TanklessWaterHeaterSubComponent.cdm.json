@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "TanklessWaterHeaterId",
             "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent",
-            "definition": "resolvedFrom/TanklessWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/TanklessWaterHeaterSubComponent/hasAttributes/TanklessWaterHeaterId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "TanklessWaterHeater",
+                "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/TanklessWaterHeaterId",
+                "definition": "resolvedFrom/TanklessWaterHeater"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/SubSubComponentTypeId",
+                "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/TanklessWaterHeaterId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/TanklessWaterHeaterId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/TanklessWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/TanklessWaterHeaterId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/TanklessWaterHeaterSubComponent/hasAttributes/TanklessWaterHeaterId/resolutionGuidance/foreignKeyAttribute/TanklessWaterHeaterId",
                         "contents": [
-                          "TanklessWaterHeaterSubComponent/hasAttributes/SubSubComponentTypeId"
+                          "TanklessWaterHeaterSubComponent/hasAttributes/TanklessWaterHeaterId"
                         ]
                       }
                     ]
@@ -86,11 +86,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponent",
+            "name": "Type",
             "parent": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent",
-            "definition": "resolvedFrom/TanklessWaterHeaterSubComponent/hasAttributes/SubComponent",
+            "definition": "resolvedFrom/TanklessWaterHeaterSubComponent/hasAttributes/Type",
             "contents": [
-              "TanklessWaterHeaterSubComponent/hasAttributes/SubComponent"
+              "TanklessWaterHeaterSubComponent/hasAttributes/Type"
             ]
           },
           {
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "TanklessWaterHeaterId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/TanklessWaterHeater.cdm.json/TanklessWaterHeater",
+                        "TanklessWaterHeaterId"
                       ]
                     ]
                   }
@@ -159,22 +159,22 @@
               ]
             }
           ],
-          "attributeContext": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/TanklessWaterHeaterId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubComponent",
+          "name": "Type",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/SubComponent",
+          "attributeContext": "TanklessWaterHeaterSubComponent/attributeContext/TanklessWaterHeaterSubComponent/Type",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Tankless water heater sub component",
+          "description": "Tankless water heater sub component type",
           "maximumLength": 50
         },
         {

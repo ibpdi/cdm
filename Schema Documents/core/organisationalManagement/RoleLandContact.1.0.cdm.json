@@ -20,7 +20,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RoleLandContact.",
+          "explanation": "fk RoleLandContact.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -49,7 +49,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Land. to RoleLandContact.",
+          "explanation": "fk RoleLandContact.LandId to Land.LandId",
           "entity": {
             "entityReference": "Land",
             "appliedTraits": [
@@ -78,7 +78,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Contact. to RoleLandContact.",
+          "explanation": "fk RoleLandContact.ContactId to Contact.ContactId",
           "entity": {
             "entityReference": "Contact",
             "appliedTraits": [

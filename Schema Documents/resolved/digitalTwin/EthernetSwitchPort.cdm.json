@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "DataNetworkEquipmentId",
             "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort",
-            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/DataNetworkEquipmentId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "DataNetworkEquipment",
+                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/DataNetworkEquipmentId",
+                "definition": "resolvedFrom/DataNetworkEquipment"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId",
+                "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/DataNetworkEquipmentId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/DataNetworkEquipmentId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/DataNetworkEquipmentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/EthernetSwitchPort/hasAttributes/DataNetworkEquipmentId/resolutionGuidance/foreignKeyAttribute/DataNetworkEquipmentId",
                         "contents": [
-                          "EthernetSwitchPort/hasAttributes/SubComponentTypeId"
+                          "EthernetSwitchPort/hasAttributes/DataNetworkEquipmentId"
                         ]
                       }
                     ]
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "DataNetworkEquipmentId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/DataNetworkEquipment.cdm.json/DataNetworkEquipment",
+                        "DataNetworkEquipmentId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "EthernetSwitchPort/attributeContext/EthernetSwitchPort/DataNetworkEquipmentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk System. to SystemSite.",
+          "explanation": "fk SystemSite.SystemId to System.SystemId",
           "entity": {
             "entityReference": "System",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Site. to SystemSite.",
+          "explanation": "fk SystemSite.SiteId to Site.SiteId",
           "entity": {
             "entityReference": "Site",
             "appliedTraits": [

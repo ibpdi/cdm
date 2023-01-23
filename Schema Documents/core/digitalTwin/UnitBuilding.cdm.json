@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Unit. to UnitBuilding.",
+          "explanation": "fk UnitBuilding.UnitId to Unit.UnitId",
           "entity": {
             "entityReference": "Unit",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Building. to UnitBuilding.",
+          "explanation": "fk UnitBuilding.BuildingId to Building.BuildingId",
           "entity": {
             "entityReference": "Building",
             "appliedTraits": [

@@ -2,10 +2,10 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "OperationalMeasurement.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
     }
   ],
   "definitions": [
@@ -2040,25 +2040,7 @@
           "attributeGroupReference": "ValidityInfo"
         },
         {
-          "name": "Value",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "description": "Value of entity",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
+          "attributeGroupReference": "Value"
         },
         {
           "name": "Unit",

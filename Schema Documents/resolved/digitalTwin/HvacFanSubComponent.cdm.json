@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "/core/digitalTwin/OtherHvacFan.cdm.json",
+      "corpusPath": "/core/digitalTwin/HvacFanSubComponent.cdm.json",
       "moniker": "resolvedFrom"
     }
   ],
   "definitions": [
     {
-      "entityName": "OtherHvacFan",
+      "entityName": "HvacFanSubComponent",
       "exhibitsTraits": [
         {
           "traitReference": "has.entitySchemaAbstractionLevel",
@@ -22,60 +22,60 @@
       ],
       "attributeContext": {
         "type": "entity",
-        "name": "OtherHvacFan",
-        "definition": "resolvedFrom/OtherHvacFan",
+        "name": "HvacFanSubComponent",
+        "definition": "resolvedFrom/HvacFanSubComponent",
         "contents": [
           {
             "type": "entityReferenceExtends",
             "name": "extends",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
             "contents": [
               {
                 "type": "entity",
                 "name": "CdmEntity",
-                "parent": "OtherHvacFan/attributeContext/OtherHvacFan/extends",
+                "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/extends",
                 "definition": "resolvedFrom/CdmEntity"
               }
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "OtherHvacFanId",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/OtherHvacFanId",
+            "name": "HvacFanSubComponentId",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/HvacFanSubComponentId",
             "contents": [
-              "OtherHvacFan/hasAttributes/OtherHvacFanId"
+              "HvacFanSubComponent/hasAttributes/HvacFanSubComponentId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/SubComponentTypeId",
+            "name": "HvacFanId",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/HvacFanId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "OtherHvacFan/attributeContext/OtherHvacFan/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "HvacFan",
+                "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/HvacFanId",
+                "definition": "resolvedFrom/HvacFan"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "OtherHvacFan/attributeContext/OtherHvacFan/SubComponentTypeId",
+                "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/HvacFanId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "OtherHvacFan/attributeContext/OtherHvacFan/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/HvacFanId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "OtherHvacFan/attributeContext/OtherHvacFan/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/OtherHvacFan/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/HvacFanId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/HvacFanId/resolutionGuidance/foreignKeyAttribute/HvacFanId",
                         "contents": [
-                          "OtherHvacFan/hasAttributes/SubComponentTypeId"
+                          "HvacFanSubComponent/hasAttributes/HvacFanId"
                         ]
                       }
                     ]
@@ -86,194 +86,185 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponent",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/SubComponent",
-            "contents": [
-              "OtherHvacFan/hasAttributes/SubComponent"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "DriveType",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DriveType",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DriveType",
             "contents": [
-              "OtherHvacFan/hasAttributes/DriveType"
+              "HvacFanSubComponent/hasAttributes/DriveType"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "NominalAirflow",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/NominalAirflow",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/NominalAirflow",
             "contents": [
-              "OtherHvacFan/hasAttributes/NominalAirflow"
+              "HvacFanSubComponent/hasAttributes/NominalAirflow"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "MotorPower",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/MotorPower",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/MotorPower",
             "contents": [
-              "OtherHvacFan/hasAttributes/MotorPower"
+              "HvacFanSubComponent/hasAttributes/MotorPower"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "MinAirflowRating",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/MinAirflowRating",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/MinAirflowRating",
             "contents": [
-              "OtherHvacFan/hasAttributes/MinAirflowRating"
+              "HvacFanSubComponent/hasAttributes/MinAirflowRating"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "MaxAirflowRating",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/MaxAirflowRating",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/MaxAirflowRating",
             "contents": [
-              "OtherHvacFan/hasAttributes/MaxAirflowRating"
+              "HvacFanSubComponent/hasAttributes/MaxAirflowRating"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "MaxRotationSpeed",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/MaxRotationSpeed",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/MaxRotationSpeed",
             "contents": [
-              "OtherHvacFan/hasAttributes/MaxRotationSpeed"
+              "HvacFanSubComponent/hasAttributes/MaxRotationSpeed"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanNominalAirflow",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanNominalAirflow",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanNominalAirflow",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanNominalAirflow"
+              "HvacFanSubComponent/hasAttributes/FanNominalAirflow"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Type",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/Type",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/Type",
             "contents": [
-              "OtherHvacFan/hasAttributes/Type"
+              "HvacFanSubComponent/hasAttributes/Type"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanMotorPower",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanMotorPower",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanMotorPower",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanMotorPower"
+              "HvacFanSubComponent/hasAttributes/FanMotorPower"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanMinAirflowRating",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanMinAirflowRating",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanMinAirflowRating",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanMinAirflowRating"
+              "HvacFanSubComponent/hasAttributes/FanMinAirflowRating"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanMaxAirflowRating",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanMaxAirflowRating",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanMaxAirflowRating",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanMaxAirflowRating"
+              "HvacFanSubComponent/hasAttributes/FanMaxAirflowRating"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanDriveType",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanDriveType",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanDriveType",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanDriveType"
+              "HvacFanSubComponent/hasAttributes/FanDriveType"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanName",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanName",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanName",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanName"
+              "HvacFanSubComponent/hasAttributes/FanName"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanCommissionDate",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanCommissionDate",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanCommissionDate",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanCommissionDate"
+              "HvacFanSubComponent/hasAttributes/FanCommissionDate"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanExpectedEndOfLife",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanExpectedEndOfLife",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanExpectedEndOfLife",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanExpectedEndOfLife"
+              "HvacFanSubComponent/hasAttributes/FanExpectedEndOfLife"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanDurationLifeYear",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanDurationLifeYear",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanDurationLifeYear",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanDurationLifeYear"
+              "HvacFanSubComponent/hasAttributes/FanDurationLifeYear"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanExpectedReplacementCost",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanExpectedReplacementCost",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanExpectedReplacementCost",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanExpectedReplacementCost"
+              "HvacFanSubComponent/hasAttributes/FanExpectedReplacementCost"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanInitialCost",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanInitialCost",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanInitialCost",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanInitialCost"
+              "HvacFanSubComponent/hasAttributes/FanInitialCost"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "Currency",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
             "definition": "resolvedFrom/Currency",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "Currency",
-                "parent": "OtherHvacFan/attributeContext/OtherHvacFan/Currency",
+                "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/Currency",
                 "definition": "resolvedFrom/Currency",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "Currency",
-                    "parent": "OtherHvacFan/attributeContext/OtherHvacFan/Currency/Currency",
+                    "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/Currency/Currency",
                     "definition": "resolvedFrom/Currency/members/Currency",
                     "contents": [
-                      "OtherHvacFan/hasAttributes/Currency"
+                      "HvacFanSubComponent/hasAttributes/Currency"
                     ]
                   }
                 ]
@@ -283,148 +274,148 @@
           {
             "type": "attributeDefinition",
             "name": "FanInstallationDate",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanInstallationDate",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanInstallationDate",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanInstallationDate"
+              "HvacFanSubComponent/hasAttributes/FanInstallationDate"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanMaintenanceInterval",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanMaintenanceInterval",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanMaintenanceInterval",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanMaintenanceInterval"
+              "HvacFanSubComponent/hasAttributes/FanMaintenanceInterval"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanTurnoverDate",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanTurnoverDate",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanTurnoverDate",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanTurnoverDate"
+              "HvacFanSubComponent/hasAttributes/FanTurnoverDate"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanModelNumber",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanModelNumber",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanModelNumber",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanModelNumber"
+              "HvacFanSubComponent/hasAttributes/FanModelNumber"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanTagNumber",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanTagNumber",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanTagNumber",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanTagNumber"
+              "HvacFanSubComponent/hasAttributes/FanTagNumber"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "FanSerialNumber",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/FanSerialNumber",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/FanSerialNumber",
             "contents": [
-              "OtherHvacFan/hasAttributes/FanSerialNumber"
+              "HvacFanSubComponent/hasAttributes/FanSerialNumber"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletSize",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletSize",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletSize",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletSize"
+              "HvacFanSubComponent/hasAttributes/DuctInletSize"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletShape",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletShape",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletShape",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletShape"
+              "HvacFanSubComponent/hasAttributes/DuctInletShape"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletConfiguration",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletConfiguration",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletConfiguration",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletConfiguration"
+              "HvacFanSubComponent/hasAttributes/DuctInletConfiguration"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletName",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletName",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletName",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletName"
+              "HvacFanSubComponent/hasAttributes/DuctInletName"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletCommissionDate",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletCommissionDate",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletCommissionDate",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletCommissionDate"
+              "HvacFanSubComponent/hasAttributes/DuctInletCommissionDate"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletExpectedEndOfLife",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletExpectedEndOfLife",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletExpectedEndOfLife",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletExpectedEndOfLife"
+              "HvacFanSubComponent/hasAttributes/DuctInletExpectedEndOfLife"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletExpectedReplacementCost",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletExpectedReplacementCost",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletExpectedReplacementCost",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletExpectedReplacementCost"
+              "HvacFanSubComponent/hasAttributes/DuctInletExpectedReplacementCost"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletInitialCost",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletInitialCost",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletInitialCost",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletInitialCost"
+              "HvacFanSubComponent/hasAttributes/DuctInletInitialCost"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletCurrency",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
             "definition": "resolvedFrom/DuctInletCurrency",
             "contents": [
               {
                 "type": "attributeGroup",
                 "name": "DuctInletCurrency",
-                "parent": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletCurrency",
+                "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletCurrency",
                 "definition": "resolvedFrom/DuctInletCurrency",
                 "contents": [
                   {
                     "type": "attributeDefinition",
                     "name": "DuctInletCurrency",
-                    "parent": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletCurrency/DuctInletCurrency",
+                    "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletCurrency/DuctInletCurrency",
                     "definition": "resolvedFrom/DuctInletCurrency/members/DuctInletCurrency",
                     "contents": [
-                      "OtherHvacFan/hasAttributes/DuctInletCurrency"
+                      "HvacFanSubComponent/hasAttributes/DuctInletCurrency"
                     ]
                   }
                 ]
@@ -434,75 +425,75 @@
           {
             "type": "attributeDefinition",
             "name": "DuctInletInstallationDate",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletInstallationDate",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletInstallationDate",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletInstallationDate"
+              "HvacFanSubComponent/hasAttributes/DuctInletInstallationDate"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletMaintenanceInterval",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletMaintenanceInterval",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletMaintenanceInterval",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletMaintenanceInterval"
+              "HvacFanSubComponent/hasAttributes/DuctInletMaintenanceInterval"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletTurnoverDate",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletTurnoverDate",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletTurnoverDate",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletTurnoverDate"
+              "HvacFanSubComponent/hasAttributes/DuctInletTurnoverDate"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletModel",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletModel",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletModel",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletModel"
+              "HvacFanSubComponent/hasAttributes/DuctInletModel"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletTagNumber",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletTagNumber",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletTagNumber",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletTagNumber"
+              "HvacFanSubComponent/hasAttributes/DuctInletTagNumber"
             ]
           },
           {
             "type": "attributeDefinition",
             "name": "DuctInletSerialNumber",
-            "parent": "OtherHvacFan/attributeContext/OtherHvacFan",
-            "definition": "resolvedFrom/OtherHvacFan/hasAttributes/DuctInletSerialNumber",
+            "parent": "HvacFanSubComponent/attributeContext/HvacFanSubComponent",
+            "definition": "resolvedFrom/HvacFanSubComponent/hasAttributes/DuctInletSerialNumber",
             "contents": [
-              "OtherHvacFan/hasAttributes/DuctInletSerialNumber"
+              "HvacFanSubComponent/hasAttributes/DuctInletSerialNumber"
             ]
           }
         ]
       },
       "hasAttributes": [
         {
-          "name": "OtherHvacFanId",
+          "name": "HvacFanSubComponentId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/OtherHvacFanId",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/HvacFanSubComponentId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "HvacFanId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -515,8 +506,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/HvacFan.cdm.json/HvacFan",
+                        "HvacFanId"
                       ]
                     ]
                   }
@@ -524,22 +515,9 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/HvacFanId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-          "maximumLength": 50
-        },
-        {
-          "name": "SubComponent",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/SubComponent",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Other hvac fan sub component",
           "maximumLength": 50
         },
         {
@@ -549,7 +527,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DriveType",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DriveType",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Other hvac fan drive type",
@@ -572,7 +550,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/NominalAirflow",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/NominalAirflow",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Nominal airflow"
@@ -594,7 +572,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/MotorPower",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/MotorPower",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Motor power"
@@ -616,7 +594,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/MinAirflowRating",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/MinAirflowRating",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Min flow capacity"
@@ -638,7 +616,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/MaxAirflowRating",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/MaxAirflowRating",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Max flow capacity"
@@ -660,7 +638,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/MaxRotationSpeed",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/MaxRotationSpeed",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Max rotation speed in rotations per minute"
@@ -682,7 +660,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanNominalAirflow",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanNominalAirflow",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Fan nominal airflow"
@@ -694,7 +672,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/Type",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/Type",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Ceiling fan type",
@@ -717,7 +695,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanMotorPower",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanMotorPower",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Fan motor power"
@@ -739,7 +717,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanMinAirflowRating",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanMinAirflowRating",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Fan min flow capacity"
@@ -761,7 +739,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanMaxAirflowRating",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanMaxAirflowRating",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Fan max flow capacity"
@@ -773,7 +751,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanDriveType",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanDriveType",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Fan fan drive type",
@@ -786,7 +764,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanName",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanName",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Name of fan",
@@ -800,7 +778,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanCommissionDate",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanCommissionDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -813,7 +791,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanExpectedEndOfLife",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanExpectedEndOfLife",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -823,7 +801,7 @@
           "appliedTraits": [
             "is.dataFormat.integer"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanDurationLifeYear",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanDurationLifeYear",
           "isNullable": true,
           "dataFormat": "Int32",
           "description": "Fan life span of component in years"
@@ -845,7 +823,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanExpectedReplacementCost",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanExpectedReplacementCost",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Fan expected replacement costs"
@@ -867,7 +845,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanInitialCost",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanInitialCost",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Fan initial cost"
@@ -879,7 +857,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/Currency/Currency/Currency",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/Currency/Currency/Currency",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Currency code according to Iso 4217",
@@ -1910,7 +1888,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanInstallationDate",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanInstallationDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -1922,7 +1900,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanMaintenanceInterval",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanMaintenanceInterval",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
@@ -1936,7 +1914,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanTurnoverDate",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanTurnoverDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -1948,7 +1926,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanModelNumber",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanModelNumber",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Model number of fan",
@@ -1961,7 +1939,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanTagNumber",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanTagNumber",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Fan tag number",
@@ -1974,7 +1952,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/FanSerialNumber",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/FanSerialNumber",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Serial number of fan",
@@ -1997,7 +1975,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletSize",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletSize",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Duct inlet size"
@@ -2019,7 +1997,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletShape",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletShape",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Duct inlet shape"
@@ -2031,7 +2009,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletConfiguration",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletConfiguration",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Duct inlet configuration",
@@ -2044,7 +2022,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletName",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletName",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Name of Duct inlet",
@@ -2058,7 +2036,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletCommissionDate",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletCommissionDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -2071,7 +2049,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletExpectedEndOfLife",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletExpectedEndOfLife",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -2093,7 +2071,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletExpectedReplacementCost",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletExpectedReplacementCost",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Duct inlet expected replacement costs"
@@ -2115,7 +2093,7 @@
               ]
             }
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletInitialCost",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletInitialCost",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Duct inlet initial cost"
@@ -2127,7 +2105,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletCurrency/DuctInletCurrency/DuctInletCurrency",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletCurrency/DuctInletCurrency/DuctInletCurrency",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Duct inlet currency code according to Iso 4217",
@@ -3158,7 +3136,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletInstallationDate",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletInstallationDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -3170,7 +3148,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletMaintenanceInterval",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletMaintenanceInterval",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
@@ -3184,7 +3162,7 @@
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletTurnoverDate",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletTurnoverDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
@@ -3196,7 +3174,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletModel",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletModel",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Duct inlet model number",
@@ -3209,7 +3187,7 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletTagNumber",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletTagNumber",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Tag number",
@@ -3222,14 +3200,14 @@
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "OtherHvacFan/attributeContext/OtherHvacFan/DuctInletSerialNumber",
+          "attributeContext": "HvacFanSubComponent/attributeContext/HvacFanSubComponent/DuctInletSerialNumber",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Serial number of component",
           "maximumLength": 50
         }
       ],
-      "displayName": "OtherHvacFan",
+      "displayName": "HvacFanSubComponent",
       "description": "Information about other hvac fans",
       "version": "4.3"
     }

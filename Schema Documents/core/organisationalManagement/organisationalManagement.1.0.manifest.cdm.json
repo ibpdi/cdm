@@ -56,7 +56,7 @@
     {
       "type": "LocalEntity",
       "entityName": "GeoCoordinate",
-      "entityPath": "GeoCoordinate.cdm.json/GeoCoordinate",
+      "entityPath": "GeoCoordinate.1.0.cdm.json/GeoCoordinate",
       "dataPartitionPatterns": []
     },
     {
@@ -201,30 +201,6 @@
       "type": "LocalEntity",
       "entityName": "RoleSiteOrganisation",
       "entityPath": "RoleSiteOrganisation.1.0.cdm.json/RoleSiteOrganisation",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeContact",
-      "entityPath": "RoleSubComponentTypeContact.1.0.cdm.json/RoleSubComponentTypeContact",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeOrganisation",
-      "entityPath": "RoleSubComponentTypeOrganisation.1.0.cdm.json/RoleSubComponentTypeOrganisation",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeContact",
-      "entityPath": "RoleSubSubComponentTypeContact.1.0.cdm.json/RoleSubSubComponentTypeContact",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeOrganisation",
-      "entityPath": "RoleSubSubComponentTypeOrganisation.1.0.cdm.json/RoleSubSubComponentTypeOrganisation",
       "dataPartitionPatterns": []
     },
     {

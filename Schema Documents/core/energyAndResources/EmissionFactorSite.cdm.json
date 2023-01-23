@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk EmissionFactor. to EmissionFactorSite.",
+          "explanation": "fk EmissionFactorSite.EmissionFactorId to EmissionFactor.EmissionFactorId",
           "entity": {
             "entityReference": "EmissionFactor",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Site. to EmissionFactorSite.",
+          "explanation": "fk EmissionFactorSite.SiteId to Site.SiteId",
           "entity": {
             "entityReference": "Site",
             "appliedTraits": [

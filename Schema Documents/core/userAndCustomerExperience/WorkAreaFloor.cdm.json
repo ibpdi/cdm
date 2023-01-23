@@ -2,9 +2,6 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
-    },
-    {
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
@@ -20,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk WorkArea. to WorkAreaFloor.",
+          "explanation": "fk WorkAreaFloor.WorkAreaId to WorkArea.WorkAreaId",
           "entity": {
             "entityReference": "WorkArea",
             "appliedTraits": [
@@ -49,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Floor. to WorkAreaFloor.",
+          "explanation": "fk WorkAreaFloor.FloorId to Floor.FloorId",
           "entity": {
             "entityReference": "Floor",
             "appliedTraits": [

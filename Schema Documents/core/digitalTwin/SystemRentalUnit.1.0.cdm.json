@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk System. to SystemRentalUnit.",
+          "explanation": "fk SystemRentalUnit.SystemId to System.SystemId",
           "entity": {
             "entityReference": "System",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk RentalUnit. to SystemRentalUnit.",
+          "explanation": "fk SystemRentalUnit.RentalUnitId to RentalUnit.RentalUnitId",
           "entity": {
             "entityReference": "RentalUnit",
             "appliedTraits": [

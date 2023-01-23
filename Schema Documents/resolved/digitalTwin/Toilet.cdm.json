@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "Toilet/attributeContext/Toilet",
-            "definition": "resolvedFrom/Toilet/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/Toilet/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "Toilet/attributeContext/Toilet/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId",
+                "parent": "Toilet/attributeContext/Toilet/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "Toilet/attributeContext/Toilet/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "Toilet/attributeContext/Toilet/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Toilet/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "Toilet/attributeContext/Toilet/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Toilet/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "Toilet/hasAttributes/SubComponentTypeId"
+                          "Toilet/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -119,7 +119,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -132,8 +132,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -141,7 +141,7 @@
               ]
             }
           ],
-          "attributeContext": "Toilet/attributeContext/Toilet/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "Toilet/attributeContext/Toilet/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

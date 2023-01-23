@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "PlumbingTankId",
             "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank",
-            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/PlumbingTankId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "PlumbingTank",
+                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/PlumbingTankId",
+                "definition": "resolvedFrom/PlumbingTank"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId",
+                "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/PlumbingTankId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/PlumbingTankId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/PlumbingTankId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingStorageTank/hasAttributes/PlumbingTankId/resolutionGuidance/foreignKeyAttribute/PlumbingTankId",
                         "contents": [
-                          "PlumbingStorageTank/hasAttributes/SubComponentTypeId"
+                          "PlumbingStorageTank/hasAttributes/PlumbingTankId"
                         ]
                       }
                     ]
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "PlumbingTankId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/PlumbingTank.cdm.json/PlumbingTank",
+                        "PlumbingTankId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "PlumbingStorageTank/attributeContext/PlumbingStorageTank/PlumbingTankId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

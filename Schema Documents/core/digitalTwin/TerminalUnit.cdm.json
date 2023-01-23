@@ -5,6 +5,9 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
       "corpusPath": "ComponentType.cdm.json"
     }
   ],
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk ComponentType. to TerminalUnit.",
+          "explanation": "fk TerminalUnit.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
             "entityReference": "ComponentType",
             "appliedTraits": [
@@ -47,6 +50,14 @@
               }
             }
           }
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Define the specific terminal unit type",
+          "maximumLength": 50
         },
         {
           "name": "MinAirflowRating",

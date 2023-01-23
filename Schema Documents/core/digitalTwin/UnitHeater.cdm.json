@@ -5,41 +5,44 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.cdm.json"
     }
   ],
   "definitions": [
     {
-      "entityName": "UnitHeaterSubComponent",
+      "entityName": "UnitHeater",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "UnitHeaterSubComponentId",
+          "name": "UnitHeaterId",
           "purpose": "identifiedBy",
           "dataType": "string",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to UnitHeaterSubComponent.",
+          "explanation": "fk UnitHeater.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "ComponentType",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "ComponentTypeId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
@@ -47,14 +50,6 @@
               }
             }
           }
-        },
-        {
-          "name": "SubComponent",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Unit heater sub component",
-          "maximumLength": 50
         },
         {
           "name": "Type",
@@ -506,7 +501,7 @@
           "maximumLength": 50
         }
       ],
-      "displayName": "UnitHeaterSubComponent",
+      "displayName": "UnitHeater",
       "description": "Information about steam unit heater"
     }
   ]

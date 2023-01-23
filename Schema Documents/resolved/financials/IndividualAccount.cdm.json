@@ -283,7 +283,6 @@
             }
           ],
           "attributeContext": "IndividualAccount/attributeContext/IndividualAccount/AccountId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
-          "isNullable": true,
           "dataFormat": "String",
           "description": "Reference to account",
           "maximumLength": 50

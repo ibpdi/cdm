@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "SprinklerTank/attributeContext/SprinklerTank",
-            "definition": "resolvedFrom/SprinklerTank/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/SprinklerTank/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "SprinklerTank/attributeContext/SprinklerTank/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "ComponentType",
+                "parent": "SprinklerTank/attributeContext/SprinklerTank/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "SprinklerTank/attributeContext/SprinklerTank/SubSubComponentTypeId",
+                "parent": "SprinklerTank/attributeContext/SprinklerTank/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "SprinklerTank/attributeContext/SprinklerTank/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "SprinklerTank/attributeContext/SprinklerTank/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "SprinklerTank/attributeContext/SprinklerTank/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/SprinklerTank/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "SprinklerTank/attributeContext/SprinklerTank/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/SprinklerTank/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "SprinklerTank/hasAttributes/SubSubComponentTypeId"
+                          "SprinklerTank/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -119,7 +119,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -132,8 +132,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -141,7 +141,7 @@
               ]
             }
           ],
-          "attributeContext": "SprinklerTank/attributeContext/SprinklerTank/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "SprinklerTank/attributeContext/SprinklerTank/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk AreaMeasurement. to AreaMeasurementLand.",
+          "explanation": "fk AreaMeasurementLand.AreaMeasurementId to AreaMeasurement.AreaMeasurementId",
           "entity": {
             "entityReference": "AreaMeasurement",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Land. to AreaMeasurementLand.",
+          "explanation": "fk AreaMeasurementLand.LandId to Land.LandId",
           "entity": {
             "entityReference": "Land",
             "appliedTraits": [

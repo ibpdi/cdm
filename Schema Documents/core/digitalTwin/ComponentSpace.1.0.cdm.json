@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Component. to ComponentSpace.",
+          "explanation": "fk ComponentSpace.ComponentId to Component.ComponentId",
           "entity": {
             "entityReference": "Component",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Space. to ComponentSpace.",
+          "explanation": "fk ComponentSpace.SpaceId to Space.SpaceId",
           "entity": {
             "entityReference": "Space",
             "appliedTraits": [

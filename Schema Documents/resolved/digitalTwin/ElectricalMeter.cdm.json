@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "ElectricalMeter/attributeContext/ElectricalMeter",
-            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId",
+                "parent": "ElectricalMeter/attributeContext/ElectricalMeter/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "ElectricalMeter/attributeContext/ElectricalMeter/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/ElectricalMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "ElectricalMeter/attributeContext/ElectricalMeter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalMeter/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "ElectricalMeter/hasAttributes/SubComponentTypeId"
+                          "ElectricalMeter/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -164,7 +164,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -177,8 +177,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -186,7 +186,7 @@
               ]
             }
           ],
-          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "ElectricalMeter/attributeContext/ElectricalMeter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

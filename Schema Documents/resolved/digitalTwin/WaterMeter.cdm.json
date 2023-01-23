@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "WaterMeter/attributeContext/WaterMeter",
-            "definition": "resolvedFrom/WaterMeter/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/WaterMeter/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "WaterMeter/attributeContext/WaterMeter/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId",
+                "parent": "WaterMeter/attributeContext/WaterMeter/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "WaterMeter/attributeContext/WaterMeter/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/WaterMeter/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "WaterMeter/attributeContext/WaterMeter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WaterMeter/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "WaterMeter/hasAttributes/SubComponentTypeId"
+                          "WaterMeter/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -146,7 +146,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -159,8 +159,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -168,7 +168,7 @@
               ]
             }
           ],
-          "attributeContext": "WaterMeter/attributeContext/WaterMeter/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "WaterMeter/attributeContext/WaterMeter/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

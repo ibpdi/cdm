@@ -20,7 +20,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RoleComponentTypeOrganisation(1).",
+          "explanation": "fk RoleComponentTypeContact.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -49,7 +49,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk ComponentType. to RoleComponentTypeContact.",
+          "explanation": "fk RoleComponentTypeContact.ComponentTypeId to ComponentType.ComponentTypeI",
           "entity": {
             "entityReference": "ComponentType",
             "appliedTraits": [
@@ -78,7 +78,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Contact. to RoleComponentTypeOrganisation(1).",
+          "explanation": "fk RoleComponentTypeContact.ContactId to Contact.ContactId",
           "entity": {
             "entityReference": "Contact",
             "appliedTraits": [

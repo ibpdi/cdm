@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "TerminalUnitId",
             "parent": "FanCoilUnit/attributeContext/FanCoilUnit",
-            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/FanCoilUnit/hasAttributes/TerminalUnitId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "TerminalUnit",
+                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/TerminalUnitId",
+                "definition": "resolvedFrom/TerminalUnit"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId",
+                "parent": "FanCoilUnit/attributeContext/FanCoilUnit/TerminalUnitId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FanCoilUnit/attributeContext/FanCoilUnit/TerminalUnitId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FanCoilUnit/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "FanCoilUnit/attributeContext/FanCoilUnit/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanCoilUnit/hasAttributes/TerminalUnitId/resolutionGuidance/foreignKeyAttribute/TerminalUnitId",
                         "contents": [
-                          "FanCoilUnit/hasAttributes/SubComponentTypeId"
+                          "FanCoilUnit/hasAttributes/TerminalUnitId"
                         ]
                       }
                     ]
@@ -763,7 +763,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "TerminalUnitId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -776,8 +776,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/TerminalUnit.cdm.json/TerminalUnit",
+                        "TerminalUnitId"
                       ]
                     ]
                   }
@@ -785,7 +785,7 @@
               ]
             }
           ],
-          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FanCoilUnit/attributeContext/FanCoilUnit/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

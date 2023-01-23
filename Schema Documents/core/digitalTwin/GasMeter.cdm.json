@@ -5,7 +5,10 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "ComponentType.cdm.json"
     }
   ],
   "definitions": [
@@ -21,25 +24,25 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to GasMeter.",
+          "explanation": "fk GasMeter.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "ComponentType",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "ComponentType/(resolvedAttributes)/ComponentTypeId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "ComponentTypeId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

@@ -40,42 +40,42 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "WaterFilterationId",
+            "name": "WaterFiltrationId",
             "parent": "WaterFiltration/attributeContext/WaterFiltration",
-            "definition": "resolvedFrom/WaterFiltration/hasAttributes/WaterFilterationId",
+            "definition": "resolvedFrom/WaterFiltration/hasAttributes/WaterFiltrationId",
             "contents": [
-              "WaterFiltration/hasAttributes/WaterFilterationId"
+              "WaterFiltration/hasAttributes/WaterFiltrationId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "WaterFiltration/attributeContext/WaterFiltration",
-            "definition": "resolvedFrom/WaterFiltration/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/WaterFiltration/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "WaterFiltration/attributeContext/WaterFiltration/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "WaterFiltration/attributeContext/WaterFiltration/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "WaterFiltration/attributeContext/WaterFiltration/SubComponentTypeId",
+                "parent": "WaterFiltration/attributeContext/WaterFiltration/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "WaterFiltration/attributeContext/WaterFiltration/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "WaterFiltration/attributeContext/WaterFiltration/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "WaterFiltration/attributeContext/WaterFiltration/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/WaterFiltration/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "WaterFiltration/attributeContext/WaterFiltration/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WaterFiltration/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "WaterFiltration/hasAttributes/SubComponentTypeId"
+                          "WaterFiltration/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -113,31 +113,31 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "FilterationRating",
+            "name": "FiltrationRating",
             "parent": "WaterFiltration/attributeContext/WaterFiltration",
-            "definition": "resolvedFrom/WaterFiltration/hasAttributes/FilterationRating",
+            "definition": "resolvedFrom/WaterFiltration/hasAttributes/FiltrationRating",
             "contents": [
-              "WaterFiltration/hasAttributes/FilterationRating"
+              "WaterFiltration/hasAttributes/FiltrationRating"
             ]
           }
         ]
       },
       "hasAttributes": [
         {
-          "name": "WaterFilterationId",
+          "name": "WaterFiltrationId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "WaterFiltration/attributeContext/WaterFiltration/WaterFilterationId",
+          "attributeContext": "WaterFiltration/attributeContext/WaterFiltration/WaterFiltrationId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "WaterFiltration/attributeContext/WaterFiltration/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "WaterFiltration/attributeContext/WaterFiltration/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
@@ -222,13 +222,13 @@
           "description": "Flow capacity"
         },
         {
-          "name": "FilterationRating",
+          "name": "FiltrationRating",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "WaterFiltration/attributeContext/WaterFiltration/FilterationRating",
+          "attributeContext": "WaterFiltration/attributeContext/WaterFiltration/FiltrationRating",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Water filtration rating",

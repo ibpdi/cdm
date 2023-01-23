@@ -79,6 +79,18 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "Tag",
+      "entityPath": "Tag.1.0.cdm.json/Tag",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "TagNeighbourhood",
+      "entityPath": "TagNeighbourhood.1.0.cdm.json/TagNeighbourhood",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "WorkArea",
       "entityPath": "WorkArea.1.0.cdm.json/WorkArea",
       "dataPartitionPatterns": []

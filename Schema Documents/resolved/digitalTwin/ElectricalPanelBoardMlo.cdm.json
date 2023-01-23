@@ -40,42 +40,42 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "ElectricalPanelBoardSubComponentId",
+            "name": "ElectricalPanelBoardMloId",
             "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
-            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardSubComponentId",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardMloId",
             "contents": [
-              "ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardSubComponentId"
+              "ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardMloId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "ElectricalPanelBoardId",
             "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo",
-            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "ElectricalPanelBoard",
+                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardId",
+                "definition": "resolvedFrom/ElectricalPanelBoard"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId",
+                "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardId/resolutionGuidance/foreignKeyAttribute/ElectricalPanelBoardId",
                         "contents": [
-                          "ElectricalPanelBoardMlo/hasAttributes/SubSubComponentTypeId"
+                          "ElectricalPanelBoardMlo/hasAttributes/ElectricalPanelBoardId"
                         ]
                       }
                     ]
@@ -259,20 +259,20 @@
       },
       "hasAttributes": [
         {
-          "name": "ElectricalPanelBoardSubComponentId",
+          "name": "ElectricalPanelBoardMloId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardSubComponentId",
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardMloId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "ElectricalPanelBoardId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -285,8 +285,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/ElectricalPanelBoard.cdm.json/ElectricalPanelBoard",
+                        "ElectricalPanelBoardId"
                       ]
                     ]
                   }
@@ -294,7 +294,7 @@
               ]
             }
           ],
-          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "ElectricalPanelBoardMlo/attributeContext/ElectricalPanelBoardMlo/ElectricalPanelBoardId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

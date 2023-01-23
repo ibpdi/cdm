@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "FlushometerValve/attributeContext/FlushometerValve",
-            "definition": "resolvedFrom/FlushometerValve/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/FlushometerValve/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "FlushometerValve/attributeContext/FlushometerValve/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId",
+                "parent": "FlushometerValve/attributeContext/FlushometerValve/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FlushometerValve/attributeContext/FlushometerValve/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FlushometerValve/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "FlushometerValve/attributeContext/FlushometerValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FlushometerValve/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "FlushometerValve/hasAttributes/SubComponentTypeId"
+                          "FlushometerValve/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FlushometerValve/attributeContext/FlushometerValve/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

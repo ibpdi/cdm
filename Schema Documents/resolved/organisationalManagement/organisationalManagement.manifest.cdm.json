@@ -169,26 +169,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeContact",
-      "entityPath": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact"
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeOrganisation",
-      "entityPath": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation"
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeContact",
-      "entityPath": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact"
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeOrganisation",
-      "entityPath": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation"
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "RoleSystemContact",
       "entityPath": "RoleSystemContact.cdm.json/RoleSystemContact"
     },
@@ -498,34 +478,6 @@
       ]
     },
     {
-      "fromEntity": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact",
-      "fromEntityAttribute": "ContactId",
-      "toEntity": "Contact.cdm.json/Contact",
-      "toEntityAttribute": "ContactId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact",
-      "fromEntityAttribute": "ContactId",
-      "toEntity": "Contact.cdm.json/Contact",
-      "toEntityAttribute": "ContactId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
       "fromEntity": "RoleSystemContact.cdm.json/RoleSystemContact",
       "fromEntityAttribute": "ContactId",
       "toEntity": "Contact.cdm.json/Contact",
@@ -722,34 +674,6 @@
       ]
     },
     {
-      "fromEntity": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation",
-      "fromEntityAttribute": "OrganisationId",
-      "toEntity": "Organisation.cdm.json/Organisation",
-      "toEntityAttribute": "OrganisationId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation",
-      "fromEntityAttribute": "OrganisationId",
-      "toEntity": "Organisation.cdm.json/Organisation",
-      "toEntityAttribute": "OrganisationId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
       "fromEntity": "RoleSystemOrganisation.cdm.json/RoleSystemOrganisation",
       "fromEntityAttribute": "OrganisationId",
       "toEntity": "Organisation.cdm.json/Organisation",
@@ -879,7 +803,15 @@
       "fromEntity": "RoleEmissionFactorContact.cdm.json/RoleEmissionFactorContact",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
-      "toEntityAttribute": "RoleId"
+      "toEntityAttribute": "RoleId",
+      "exhibitsTraits": [
+        {
+          "traitReference": "is.identifiedBy",
+          "arguments": [
+            "this.attribute"
+          ]
+        }
+      ]
     },
     {
       "fromEntity": "RoleEmissionFactorOrganisation.cdm.json/RoleEmissionFactorOrganisation",
@@ -1079,62 +1011,6 @@
     },
     {
       "fromEntity": "RoleSiteOrganisation.cdm.json/RoleSiteOrganisation",
-      "fromEntityAttribute": "RoleId",
-      "toEntity": "Role.cdm.json/Role",
-      "toEntityAttribute": "RoleId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact",
-      "fromEntityAttribute": "RoleId",
-      "toEntity": "Role.cdm.json/Role",
-      "toEntityAttribute": "RoleId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation",
-      "fromEntityAttribute": "RoleId",
-      "toEntity": "Role.cdm.json/Role",
-      "toEntityAttribute": "RoleId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact",
-      "fromEntityAttribute": "RoleId",
-      "toEntity": "Role.cdm.json/Role",
-      "toEntityAttribute": "RoleId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
-    },
-    {
-      "fromEntity": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation",
       "fromEntityAttribute": "RoleId",
       "toEntity": "Role.cdm.json/Role",
       "toEntityAttribute": "RoleId",

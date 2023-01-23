@@ -5,7 +5,10 @@
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.1.0.cdm.json"
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
+      "corpusPath": "TerminalUnit.1.0.cdm.json"
     }
   ],
   "definitions": [
@@ -21,25 +24,25 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to FanCoilUnit.",
+          "explanation": "fk FanCoilUnit.TerminalUnitId to TerminalUnit.TerminalUnitId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "TerminalUnit",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "TerminalUnit/(resolvedAttributes)/TerminalUnitId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "TerminalUnitId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "TerminalUnitId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

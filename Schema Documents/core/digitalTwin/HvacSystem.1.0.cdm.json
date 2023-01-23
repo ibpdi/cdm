@@ -5,6 +5,9 @@
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
       "corpusPath": "System.1.0.cdm.json"
     }
   ],
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk System. to HvacSystem.",
+          "explanation": "fk HvacSystem.SystemId to System.SystemId",
           "entity": {
             "entityReference": "System",
             "appliedTraits": [

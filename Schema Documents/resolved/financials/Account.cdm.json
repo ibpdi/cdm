@@ -372,7 +372,7 @@
         }
       ],
       "displayName": "Account",
-      "description": "BPDI defined account number based on standardized chart of account",
+      "description": "IBPDI defined account number based on standardized chart of account",
       "version": "4.3"
     }
   ]

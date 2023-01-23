@@ -304,15 +304,6 @@
             "contents": [
               "Building/hasAttributes/Status"
             ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "NumberOfEmployees",
-            "parent": "Building/attributeContext/Building",
-            "definition": "resolvedFrom/Building/hasAttributes/NumberOfEmployees",
-            "contents": [
-              "Building/hasAttributes/NumberOfEmployees"
-            ]
           }
         ]
       },
@@ -689,73 +680,73 @@
               "languageTag": "en",
               "displayText": "Health Care",
               "attributeValue": "Health Care",
-              "displayOrder": "50"
+              "displayOrder": "48"
             },
             {
               "languageTag": "en",
               "displayText": "Health Care, Health Care Center",
               "attributeValue": "Health Care, Health Care Center",
-              "displayOrder": "51"
+              "displayOrder": "49"
             },
             {
               "languageTag": "en",
               "displayText": "Health Care, Senior Homes",
               "attributeValue": "Health Care, Senior Homes",
-              "displayOrder": "52"
+              "displayOrder": "50"
             },
             {
               "languageTag": "en",
               "displayText": "Health Care, Other",
               "attributeValue": "Health Care, Other",
-              "displayOrder": "53"
+              "displayOrder": "51"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use",
               "attributeValue": "Mixed Use",
-              "displayOrder": "54"
+              "displayOrder": "52"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Office/Retail",
               "attributeValue": "Mixed Use, Office/Retail",
-              "displayOrder": "55"
+              "displayOrder": "53"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Office/Residential",
               "attributeValue": "Mixed Use, Office/Residential",
-              "displayOrder": "56"
+              "displayOrder": "54"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Office/Industrial",
               "attributeValue": "Mixed Use, Office/Industrial",
-              "displayOrder": "57"
+              "displayOrder": "55"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Other",
               "attributeValue": "Mixed Use, Other",
-              "displayOrder": "58"
+              "displayOrder": "56"
             },
             {
               "languageTag": "en",
               "displayText": "Other",
               "attributeValue": "Other",
-              "displayOrder": "59"
+              "displayOrder": "57"
             },
             {
               "languageTag": "en",
               "displayText": "Other, Parking (Indoors)",
               "attributeValue": "Other, Parking (Indoors)",
-              "displayOrder": "60"
+              "displayOrder": "58"
             },
             {
               "languageTag": "en",
               "displayText": "Other, Self-Storage",
               "attributeValue": "Other, Self-Storage",
-              "displayOrder": "61"
+              "displayOrder": "59"
             }
           ]
         },
@@ -1065,73 +1056,73 @@
               "languageTag": "en",
               "displayText": "Health Care",
               "attributeValue": "Health Care",
-              "displayOrder": "50"
+              "displayOrder": "48"
             },
             {
               "languageTag": "en",
               "displayText": "Health Care, Health Care Center",
               "attributeValue": "Health Care, Health Care Center",
-              "displayOrder": "51"
+              "displayOrder": "49"
             },
             {
               "languageTag": "en",
               "displayText": "Health Care, Senior Homes",
               "attributeValue": "Health Care, Senior Homes",
-              "displayOrder": "52"
+              "displayOrder": "50"
             },
             {
               "languageTag": "en",
               "displayText": "Health Care, Other",
               "attributeValue": "Health Care, Other",
-              "displayOrder": "53"
+              "displayOrder": "51"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use",
               "attributeValue": "Mixed Use",
-              "displayOrder": "54"
+              "displayOrder": "52"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Office/Retail",
               "attributeValue": "Mixed Use, Office/Retail",
-              "displayOrder": "55"
+              "displayOrder": "53"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Office/Residential",
               "attributeValue": "Mixed Use, Office/Residential",
-              "displayOrder": "56"
+              "displayOrder": "54"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Office/Industrial",
               "attributeValue": "Mixed Use, Office/Industrial",
-              "displayOrder": "57"
+              "displayOrder": "55"
             },
             {
               "languageTag": "en",
               "displayText": "Mixed Use, Other",
               "attributeValue": "Mixed Use, Other",
-              "displayOrder": "58"
+              "displayOrder": "56"
             },
             {
               "languageTag": "en",
               "displayText": "Other",
               "attributeValue": "Other",
-              "displayOrder": "59"
+              "displayOrder": "57"
             },
             {
               "languageTag": "en",
               "displayText": "Other, Parking (Indoors)",
               "attributeValue": "Other, Parking (Indoors)",
-              "displayOrder": "60"
+              "displayOrder": "58"
             },
             {
               "languageTag": "en",
               "displayText": "Other, Self-Storage",
               "attributeValue": "Other, Self-Storage",
-              "displayOrder": "61"
+              "displayOrder": "59"
             }
           ]
         },
@@ -1568,17 +1559,6 @@
           "dataFormat": "String",
           "description": "Status of site",
           "maximumLength": 50
-        },
-        {
-          "name": "NumberOfEmployees",
-          "appliedTraits": [
-            "is.dataFormat.integer",
-            "means.measurement.count"
-          ],
-          "attributeContext": "Building/attributeContext/Building/NumberOfEmployees",
-          "isNullable": true,
-          "dataFormat": "Int32",
-          "description": "Number of employees"
         }
       ],
       "displayName": "Building",

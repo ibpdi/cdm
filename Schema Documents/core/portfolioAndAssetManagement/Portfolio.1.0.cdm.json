@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.1.0.cdm.json"
     }
   ],
@@ -1128,6 +1131,21 @@
           "description": "Main/default currency of portfolio (depending on user it should be able to change this)",
           "maximumLength": 50,
           "valueConstrainedToList": true
+        },
+        {
+          "name": "ReportingDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Reporting date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReportingCycle",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Reporting cycle which is used to determine the next reporting date ",
+          "maximumLength": 50
         }
       ],
       "displayName": "Portfolio",

@@ -94,11 +94,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "Accuracy",
+            "name": "SensorAccuracy",
             "parent": "Sensor/attributeContext/Sensor",
-            "definition": "resolvedFrom/Sensor/hasAttributes/Accuracy",
+            "definition": "resolvedFrom/Sensor/hasAttributes/SensorAccuracy",
             "contents": [
-              "Sensor/hasAttributes/Accuracy"
+              "Sensor/hasAttributes/SensorAccuracy"
             ]
           },
           {
@@ -192,7 +192,7 @@
           "maximumLength": 100
         },
         {
-          "name": "Accuracy",
+          "name": "SensorAccuracy",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -208,7 +208,7 @@
               ]
             }
           ],
-          "attributeContext": "Sensor/attributeContext/Sensor/Accuracy",
+          "attributeContext": "Sensor/attributeContext/Sensor/SensorAccuracy",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Accuracy of the sensor. It is the maximum difference that will exist between the actual value (which must be measured by a primary or good secondary standard) and the indicated value at the output of the sensor"

@@ -2,7 +2,7 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "cdm:/foundations.cdm.json"
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
       "corpusPath": "EmissionFactor.1.0.cdm.json"
@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk EmissionFactor. to EmissionFactorOperationalMeasurement.",
+          "explanation": "fk EmissionFactorOperationalMeasurement.EmissionFactorId to EmissionFactor.EmissionFactorId",
           "entity": {
             "entityReference": "EmissionFactor",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk OperationalMeasurement. to EmissionFactorOperationalMeasurement.",
+          "explanation": "fk EmissionFactorOperationalMeasurement.OperationalMeasurementId to OperationalMeasurement.OperationalMeasurementId",
           "entity": {
             "entityReference": "OperationalMeasurement",
             "appliedTraits": [

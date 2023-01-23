@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Address. to AddressSite.",
+          "explanation": "fk AddressSite.AddressId to Address.AddressId",
           "entity": {
             "entityReference": "Address",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Site. to AddressSite.",
+          "explanation": "fk AddressSite.SiteId to Site.SiteId",
           "entity": {
             "entityReference": "Site",
             "appliedTraits": [

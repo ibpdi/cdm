@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk IndividualAccount. to IndividualAccountBuilding.",
+          "explanation": "fk IndividualAccountBuilding.IndividualAccountId to IndividualAccount.IndividualAccountId",
           "entity": {
             "entityReference": "IndividualAccount",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Building. to IndividualAccountBuilding.",
+          "explanation": "fk IndividualAccountBuilding.BuildingId to Building.BuildingId",
           "entity": {
             "entityReference": "Building",
             "appliedTraits": [

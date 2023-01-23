@@ -5,7 +5,10 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "HvacValve.cdm.json"
     }
   ],
   "definitions": [
@@ -21,25 +24,25 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to HvacShutOffValve.",
+          "explanation": "fk HvacShutOffValve.HvacValveId to HvacValve.HvacValveId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "HvacValve",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "HvacValve/(resolvedAttributes)/HvacValveId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "HvacValveId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "HvacValveId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

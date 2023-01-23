@@ -40,42 +40,42 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "BacNetControllerId",
+            "name": "ModbusControllerId",
             "parent": "ModbusController/attributeContext/ModbusController",
-            "definition": "resolvedFrom/ModbusController/hasAttributes/BacNetControllerId",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/ModbusControllerId",
             "contents": [
-              "ModbusController/hasAttributes/BacNetControllerId"
+              "ModbusController/hasAttributes/ModbusControllerId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "ComponentTypeId",
+            "name": "ControllerId",
             "parent": "ModbusController/attributeContext/ModbusController",
-            "definition": "resolvedFrom/ModbusController/hasAttributes/ComponentTypeId",
+            "definition": "resolvedFrom/ModbusController/hasAttributes/ControllerId",
             "contents": [
               {
                 "type": "entity",
-                "name": "ComponentType",
-                "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId",
-                "definition": "resolvedFrom/ComponentType"
+                "name": "Controller",
+                "parent": "ModbusController/attributeContext/ModbusController/ControllerId",
+                "definition": "resolvedFrom/Controller"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId",
+                "parent": "ModbusController/attributeContext/ModbusController/ControllerId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId/_generatedAttributeSet",
+                    "parent": "ModbusController/attributeContext/ModbusController/ControllerId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "ModbusController/attributeContext/ModbusController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/ModbusController/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
+                        "parent": "ModbusController/attributeContext/ModbusController/ControllerId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ModbusController/hasAttributes/ControllerId/resolutionGuidance/foreignKeyAttribute/ControllerId",
                         "contents": [
-                          "ModbusController/hasAttributes/ComponentTypeId"
+                          "ModbusController/hasAttributes/ControllerId"
                         ]
                       }
                     ]
@@ -133,20 +133,20 @@
       },
       "hasAttributes": [
         {
-          "name": "BacNetControllerId",
+          "name": "ModbusControllerId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "ModbusController/attributeContext/ModbusController/BacNetControllerId",
+          "attributeContext": "ModbusController/attributeContext/ModbusController/ModbusControllerId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "ComponentTypeId",
+          "name": "ControllerId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -159,8 +159,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
-                        "ComponentTypeId"
+                        "/core/digitalTwin/Controller.cdm.json/Controller",
+                        "ControllerId"
                       ]
                     ]
                   }
@@ -168,7 +168,7 @@
               ]
             }
           ],
-          "attributeContext": "ModbusController/attributeContext/ModbusController/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "ModbusController/attributeContext/ModbusController/ControllerId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

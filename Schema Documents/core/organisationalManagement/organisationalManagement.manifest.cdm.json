@@ -205,30 +205,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeContact",
-      "entityPath": "RoleSubComponentTypeContact.cdm.json/RoleSubComponentTypeContact",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeOrganisation",
-      "entityPath": "RoleSubComponentTypeOrganisation.cdm.json/RoleSubComponentTypeOrganisation",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeContact",
-      "entityPath": "RoleSubSubComponentTypeContact.cdm.json/RoleSubSubComponentTypeContact",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeOrganisation",
-      "entityPath": "RoleSubSubComponentTypeOrganisation.cdm.json/RoleSubSubComponentTypeOrganisation",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "RoleSystemContact",
       "entityPath": "RoleSystemContact.cdm.json/RoleSystemContact",
       "dataPartitionPatterns": []

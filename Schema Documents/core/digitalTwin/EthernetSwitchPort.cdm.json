@@ -5,7 +5,10 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "DataNetworkEquipment.cdm.json"
     }
   ],
   "definitions": [
@@ -21,25 +24,25 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to EthernetSwitchPort.",
+          "explanation": "fk EthernetSwitchPort.DataNetworkEquipmentId to DataNetworkEquipment.DataNetworkEquipmentId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "DataNetworkEquipment",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "DataNetworkEquipment/(resolvedAttributes)/DataNetworkEquipmentId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "DataNetworkEquipmentId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "DataNetworkEquipmentId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

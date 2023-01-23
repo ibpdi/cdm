@@ -20,7 +20,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RoleEmissionFactorOrganisation.",
+          "explanation": "fk RoleEmissionFactorOrganisation.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -49,7 +49,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk EmissionFactor. to RoleEmissionFactorOrganisation.",
+          "explanation": "fk RoleEmissionFactorOrganisation.EmissionFactorId to EmissionFactor.EmissionFactorId",
           "entity": {
             "entityReference": "EmissionFactor",
             "appliedTraits": [
@@ -77,7 +77,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Organisation. to RoleEmissionFactorOrganisation.",
+          "explanation": "fk RoleEmissionFactorOrganisation.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

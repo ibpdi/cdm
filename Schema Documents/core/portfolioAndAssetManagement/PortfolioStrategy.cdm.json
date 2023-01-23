@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.cdm.json"
     },
     {
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk Portfolio. to PortfolioStrategy.",
+          "explanation": "fk PortfolioStrategy.PortfolioId to Portfolio.PortfolioId",
           "entity": {
             "entityReference": "Portfolio",
             "appliedTraits": [
@@ -46,7 +49,8 @@
                 "maximumLength": 50
               }
             }
-          }
+          },
+          "purpose": "identifiedBy"
         },
         {
           "attributeGroupReference": "Name"

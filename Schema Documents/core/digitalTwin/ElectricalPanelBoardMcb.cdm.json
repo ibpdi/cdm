@@ -5,7 +5,10 @@
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubSubComponentType.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "ElectricalPanelBoard.cdm.json"
     }
   ],
   "definitions": [
@@ -14,32 +17,32 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "ElectricalPanelBoardSubComponentId",
+          "name": "ElectricalPanelBoardMcbId",
           "purpose": "identifiedBy",
           "dataType": "string",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubSubComponentType. to ElectricalPanelBoardMcb.",
+          "explanation": "fk ElectricalPanelBoardMcb.ElectricalPanelBoardId to ElectricalPanelBoard.ElectricalPanelBoardId",
           "entity": {
-            "entityReference": "SubSubComponentType",
+            "entityReference": "ElectricalPanelBoard",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubSubComponentType/(resolvedAttributes)/SubSubComponentTypeId"
+                  "ElectricalPanelBoard/(resolvedAttributes)/ElectricalPanelBoardId"
                 ]
               }
             ]
           },
-          "name": "SubSubComponentTypeId",
+          "name": "ElectricalPanelBoardId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubSubComponentTypeId",
+                "name": "ElectricalPanelBoardId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",

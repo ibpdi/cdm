@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "PlumbingValveId",
             "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve",
-            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/PlumbingValveId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "PlumbingValve",
+                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PlumbingValveId",
+                "definition": "resolvedFrom/PlumbingValve"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId",
+                "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PlumbingValveId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PlumbingValveId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PlumbingValveId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingShutOffValve/hasAttributes/PlumbingValveId/resolutionGuidance/foreignKeyAttribute/PlumbingValveId",
                         "contents": [
-                          "PlumbingShutOffValve/hasAttributes/SubComponentTypeId"
+                          "PlumbingShutOffValve/hasAttributes/PlumbingValveId"
                         ]
                       }
                     ]
@@ -128,7 +128,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "PlumbingValveId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -141,8 +141,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/PlumbingValve.cdm.json/PlumbingValve",
+                        "PlumbingValveId"
                       ]
                     ]
                   }
@@ -150,7 +150,7 @@
               ]
             }
           ],
-          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "PlumbingShutOffValve/attributeContext/PlumbingShutOffValve/PlumbingValveId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

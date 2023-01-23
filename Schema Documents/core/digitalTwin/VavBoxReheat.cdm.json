@@ -2,44 +2,47 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.1.0.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "TerminalUnit.cdm.json"
     }
   ],
   "definitions": [
     {
-      "entityName": "UnitHeaterSubComponent",
+      "entityName": "VavBoxReheat",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "UnitHeaterSubComponentId",
+          "name": "VavBoxReheatId",
           "purpose": "identifiedBy",
           "dataType": "string",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to UnitHeaterSubComponent.",
+          "explanation": "fk VavBoxReheat.TerminalUnitId to TerminalUnit.TerminalUnitId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "TerminalUnit",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "TerminalUnit/(resolvedAttributes)/TerminalUnitId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "TerminalUnitId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "TerminalUnitId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
@@ -47,22 +50,6 @@
               }
             }
           }
-        },
-        {
-          "name": "SubComponent",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Unit heater sub component",
-          "maximumLength": 50
-        },
-        {
-          "name": "Type",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Unit heater sub component type",
-          "maximumLength": 50
         },
         {
           "name": "NominalHeatingCapacity",
@@ -87,19 +74,11 @@
           ]
         },
         {
-          "name": "SteamUnitHeaterCondensate",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Condensate information if steam unit heater",
-          "maximumLength": 50
-        },
-        {
-          "name": "HotWaterUnitHeaterFlowCapacity",
+          "name": "MinAirflowRating",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Flow capacity",
+          "description": "Min flow capacity",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -117,11 +96,11 @@
           ]
         },
         {
-          "name": "ElectricUnitHeaterPowerInput",
+          "name": "MaxAirflowRating",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Power input",
+          "description": "Max flow capacity",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -139,19 +118,11 @@
           ]
         },
         {
-          "name": "HeatingMethodType",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Heating method type",
-          "maximumLength": 50
-        },
-        {
-          "name": "HeatingMethodOutsideDiameter",
+          "name": "DuctInletShape",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Heating method outside diameter",
+          "description": "Duct inlet shape",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -169,40 +140,215 @@
           ]
         },
         {
-          "name": "HeatingMethodName",
+          "name": "DuctInletSize",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet size",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletConfiguration",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Heating method name of product",
+          "description": "Duct inlet configuration",
           "maximumLength": 200
         },
         {
-          "name": "HeatingMethodCommissionDate",
+          "name": "DuctInletName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Name of Duct inlet",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletCommissionDate",
           "purpose": "hasA",
           "dataType": "dateTime",
           "isNullable": true,
-          "description": "Heating method commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "HeatingMethodExpectedEndOfLife",
+          "name": "DuctInletExpectedEndOfLife",
           "purpose": "hasA",
           "dataType": "dateTime",
           "isNullable": true,
-          "description": "Heating method expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "HeatingMethodDurationLifeYear",
+          "name": "DuctInletExpectedReplacementCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet expected replacement costs",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "DuctInletInitialCost",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Duct inlet initial cost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "attributeGroupReference": "DuctInletCurrency"
+        },
+        {
+          "name": "DuctInletInstallationDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingType",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Re heating type",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingOutsideDiameter",
+          "purpose": "hasA",
+          "dataType": "decimal",
+          "isNullable": true,
+          "description": "Re heating outside diameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "ReHeatingName",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Re heating name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "ReHeatingCommissionDate",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Re heating commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingExpectedEndOfLife",
+          "purpose": "hasA",
+          "dataType": "dateTime",
+          "isNullable": true,
+          "description": "Re heating expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingDurationLifeYear",
           "purpose": "hasA",
           "dataType": "integer",
           "isNullable": true,
-          "description": "Heating method life span of component in years"
+          "description": "Re heating life span of component in years"
         },
         {
-          "name": "HeatingMethodExpectedReplacementCost",
+          "name": "ReHeatingExpectedReplacementCost",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Heating method expected replacement costs",
+          "description": "Re heating expected replacement costs",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -220,11 +366,11 @@
           ]
         },
         {
-          "name": "HeatingMethodInitialCost",
+          "name": "ReHeatingInitialCost",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,
-          "description": "Heating method initial cost",
+          "description": "Re heating initial cost",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -242,272 +388,54 @@
           ]
         },
         {
-          "name": "HeatingMethodInstallationDate",
+          "name": "ReHeatingInstallationDate",
           "purpose": "hasA",
           "dataType": "dateTime",
           "isNullable": true,
           "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "HeatingMethodMaintenanceInterval",
+          "name": "ReHeatingMaintenanceInterval",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Heating method maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "description": "Re heating maintenance interval either as string: monthly, quarterly, etc. or as month",
           "maximumLength": 50
         },
         {
-          "name": "HeatingMethodTurnoverDate",
+          "name": "ReHeatingTurnoverDate",
           "purpose": "hasA",
           "dataType": "dateTime",
           "isNullable": true,
-          "description": "Heating method turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+          "description": "Re heating turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "HeatingMethodModelNumber",
+          "name": "ReHeatingModelNumber",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Model number of heating method",
+          "description": "Model number of re heating",
           "maximumLength": 50
         },
         {
-          "name": "HeatingMethodTagNumber",
+          "name": "ReHeatingTagNumber",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Heating method tag number",
+          "description": "Re heating tag number",
           "maximumLength": 50
         },
         {
-          "name": "HeatingMethodSerialNumber",
+          "name": "ReHeatingSerialNumber",
           "purpose": "hasA",
           "dataType": "string",
           "isNullable": true,
-          "description": "Serial number of heating method",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanNominalAirflow",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "isNullable": true,
-          "description": "Fan nominal airflow",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "FanMotorPower",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "isNullable": true,
-          "description": "Fan motor power",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "FanMinAirflowRating",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "isNullable": true,
-          "description": "Fan min flow capacity",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "FanMaxAirflowRating",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "isNullable": true,
-          "description": "Fan max flow capacity",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "FanDriveType",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Fan fan drive type",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanName",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Name of fan",
-          "maximumLength": 200
-        },
-        {
-          "name": "FanCommissionDate",
-          "purpose": "hasA",
-          "dataType": "dateTime",
-          "isNullable": true,
-          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "FanExpectedEndOfLife",
-          "purpose": "hasA",
-          "dataType": "dateTime",
-          "isNullable": true,
-          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "FanDurationLifeYear",
-          "purpose": "hasA",
-          "dataType": "integer",
-          "isNullable": true,
-          "description": "Fan life span of component in years"
-        },
-        {
-          "name": "FanExpectedReplacementCost",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "isNullable": true,
-          "description": "Fan expected replacement costs",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "28"
-                },
-                {
-                  "name": "scale",
-                  "value": "4"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "FanInitialCost",
-          "purpose": "hasA",
-          "dataType": "decimal",
-          "isNullable": true,
-          "description": "Fan initial cost",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "28"
-                },
-                {
-                  "name": "scale",
-                  "value": "4"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "attributeGroupReference": "Currency"
-        },
-        {
-          "name": "FanInstallationDate",
-          "purpose": "hasA",
-          "dataType": "dateTime",
-          "isNullable": true,
-          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "FanMaintenanceInterval",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanTurnoverDate",
-          "purpose": "hasA",
-          "dataType": "dateTime",
-          "isNullable": true,
-          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "FanModelNumber",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Model number of fan",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanTagNumber",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Fan tag number",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanSerialNumber",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Serial number of fan",
+          "description": "Serial number of re heating",
           "maximumLength": 50
         }
       ],
-      "displayName": "UnitHeaterSubComponent",
-      "description": "Information about steam unit heater"
+      "displayName": "VavBoxReheat",
+      "description": "Information about the vav box reheat"
     }
   ]
 }

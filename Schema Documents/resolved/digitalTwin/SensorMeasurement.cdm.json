@@ -211,7 +211,8 @@
           "attributeContext": "SensorMeasurement/attributeContext/SensorMeasurement/Reliability",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Is this sensor measurement reliable"
+          "description": "Is this sensor measurement reliable",
+          "maximumLength": 50
         }
       ],
       "displayName": "SensorMeasurement",

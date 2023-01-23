@@ -2,44 +2,47 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "SubComponentType.1.0.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
+    },
+    {
+      "corpusPath": "HvacFan.cdm.json"
     }
   ],
   "definitions": [
     {
-      "entityName": "OtherHvacFan",
+      "entityName": "HvacFanSubComponent",
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "name": "OtherHvacFanId",
+          "name": "HvacFanSubComponentId",
           "purpose": "identifiedBy",
           "dataType": "string",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "explanation": "fk SubComponentType. to OtherHvacFan.",
+          "explanation": "fk HvacFanSubComponent.HvacFanId to HvacFan.HvacFanId",
           "entity": {
-            "entityReference": "SubComponentType",
+            "entityReference": "HvacFan",
             "appliedTraits": [
               {
                 "traitReference": "is.identifiedBy",
                 "arguments": [
-                  "SubComponentType/(resolvedAttributes)/SubComponentTypeId"
+                  "HvacFan/(resolvedAttributes)/HvacFanId"
                 ]
               }
             ]
           },
-          "name": "SubComponentTypeId",
+          "name": "HvacFanId",
           "resolutionGuidance": {
             "renameFormat": "{m}",
             "entityByReference": {
               "allowReference": true,
               "foreignKeyAttribute": {
-                "name": "SubComponentTypeId",
+                "name": "HvacFanId",
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
@@ -47,14 +50,6 @@
               }
             }
           }
-        },
-        {
-          "name": "SubComponent",
-          "purpose": "hasA",
-          "dataType": "string",
-          "isNullable": true,
-          "description": "Other hvac fan sub component",
-          "maximumLength": 50
         },
         {
           "name": "DriveType",
@@ -568,7 +563,7 @@
           "maximumLength": 50
         }
       ],
-      "displayName": "OtherHvacFan",
+      "displayName": "HvacFanSubComponent",
       "description": "Information about other hvac fans"
     }
   ]

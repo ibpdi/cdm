@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk CostCenter. to CostCenterRentalUnit.",
+          "explanation": "fk CostCenterRentalUnit.CostCenterId to CostCenter.CostCenterId",
           "entity": {
             "entityReference": "CostCenter",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk RentalUnit. to CostCenterRentalUnit.",
+          "explanation": "fk CostCenterRentalUnit.RentalUnitId to RentalUnit.RentalUnitId",
           "entity": {
             "entityReference": "RentalUnit",
             "appliedTraits": [

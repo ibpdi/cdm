@@ -20,7 +20,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Role. to RoleValuationOrganisation.",
+          "explanation": "fk RoleValuationOrganisation.RoleId to Role.RoleId",
           "entity": {
             "entityReference": "Role",
             "appliedTraits": [
@@ -49,7 +49,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Valuation. to RoleValuationOrganisation.",
+          "explanation": "fk RoleValuationOrganisation.ValuationId to Valuation.ValuationId",
           "entity": {
             "entityReference": "Valuation",
             "appliedTraits": [
@@ -78,7 +78,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Organisation. to RoleValuationOrganisation.",
+          "explanation": "fk RoleValuationOrganisation.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

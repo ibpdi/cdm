@@ -1,0 +1,35 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
+      "corpusPath": "_allImports.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Tag",
+      "extendsEntity": "CdmEntity",
+      "hasAttributes": [
+        {
+          "name": "TagId",
+          "purpose": "identifiedBy",
+          "dataType": "string",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "User specific name of tag",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "Tag",
+      "description": "User defined tag information on neighbourhood"
+    }
+  ]
+}

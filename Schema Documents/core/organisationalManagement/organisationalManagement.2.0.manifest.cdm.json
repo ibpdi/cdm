@@ -1,7 +1,7 @@
 {
   "jsonSchemaSemanticVersion": "1.1.0",
   "$schema": "CdmManifest.cdm.json",
-  "documentVersion": "1.0",
+  "documentVersion": "2.0",
   "manifestName": "organisationalManagement",
   "explanation": "IBPDI real estate CDM standard entities",
   "entities": [
@@ -201,30 +201,6 @@
       "type": "LocalEntity",
       "entityName": "RoleSiteOrganisation",
       "entityPath": "RoleSiteOrganisation.1.0.cdm.json/RoleSiteOrganisation",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeContact",
-      "entityPath": "RoleSubComponentTypeContact.1.0.cdm.json/RoleSubComponentTypeContact",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubComponentTypeOrganisation",
-      "entityPath": "RoleSubComponentTypeOrganisation.1.0.cdm.json/RoleSubComponentTypeOrganisation",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeContact",
-      "entityPath": "RoleSubSubComponentTypeContact.1.0.cdm.json/RoleSubSubComponentTypeContact",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "RoleSubSubComponentTypeOrganisation",
-      "entityPath": "RoleSubSubComponentTypeOrganisation.1.0.cdm.json/RoleSubSubComponentTypeOrganisation",
       "dataPartitionPatterns": []
     },
     {

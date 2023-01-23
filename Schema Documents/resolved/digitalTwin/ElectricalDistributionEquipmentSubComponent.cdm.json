@@ -49,48 +49,39 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
-            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId",
+                "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponentTypeId"
+                          "ElectricalDistributionEquipmentSubComponent/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
                   }
                 ]
               }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "SubComponent",
-            "parent": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent",
-            "definition": "resolvedFrom/ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponent",
-            "contents": [
-              "ElectricalDistributionEquipmentSubComponent/hasAttributes/SubComponent"
             ]
           },
           {
@@ -263,7 +254,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -276,8 +267,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -285,22 +276,9 @@
               ]
             }
           ],
-          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-          "maximumLength": 50
-        },
-        {
-          "name": "SubComponent",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "ElectricalDistributionEquipmentSubComponent/attributeContext/ElectricalDistributionEquipmentSubComponent/SubComponent",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Electrical distribution equipment sub component",
           "maximumLength": 50
         },
         {

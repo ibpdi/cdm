@@ -112,9 +112,25 @@
             "type": "attributeDefinition",
             "name": "Value",
             "parent": "EmissionFactor/attributeContext/EmissionFactor",
-            "definition": "resolvedFrom/EmissionFactor/hasAttributes/Value",
+            "definition": "resolvedFrom/Value",
             "contents": [
-              "EmissionFactor/hasAttributes/Value"
+              {
+                "type": "attributeGroup",
+                "name": "Value",
+                "parent": "EmissionFactor/attributeContext/EmissionFactor/Value",
+                "definition": "resolvedFrom/Value",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Value",
+                    "parent": "EmissionFactor/attributeContext/EmissionFactor/Value/Value",
+                    "definition": "resolvedFrom/Value/members/Value",
+                    "contents": [
+                      "EmissionFactor/hasAttributes/Value"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
@@ -2239,7 +2255,8 @@
               ]
             }
           ],
-          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Value",
+          "attributeContext": "EmissionFactor/attributeContext/EmissionFactor/Value/Value/Value",
+          "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Value of entity"
         },

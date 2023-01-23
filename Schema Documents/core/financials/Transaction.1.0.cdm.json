@@ -5,6 +5,9 @@
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
       "corpusPath": "IndividualAccount.1.0.cdm.json"
     },
     {
@@ -24,7 +27,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk IndividualAccount. to Transaction.",
+          "explanation": "fk Transaction.IndividualAccountId to IndividualAccount.IndividualAccountId",
           "entity": {
             "entityReference": "IndividualAccount",
             "appliedTraits": [
@@ -52,7 +55,7 @@
           }
         },
         {
-          "explanation": "fk CostCenter. to Transaction.",
+          "explanation": "fk Transaction.CostCenterId to CostCenter.CostCenterId",
           "entity": {
             "entityReference": "CostCenter",
             "appliedTraits": [

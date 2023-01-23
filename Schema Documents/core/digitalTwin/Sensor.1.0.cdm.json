@@ -2,10 +2,10 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.1.0.cdm.json"
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
-      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+      "corpusPath": "_allImports.1.0.cdm.json"
     }
   ],
   "definitions": [
@@ -61,7 +61,7 @@
           "maximumLength": 100
         },
         {
-          "name": "Accuracy",
+          "name": "SensorAccuracy",
           "purpose": "hasA",
           "dataType": "decimal",
           "isNullable": true,

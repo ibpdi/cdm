@@ -1,0 +1,93 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/userAndCustomerExperience/Tag.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "Tag",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "Tag",
+        "definition": "resolvedFrom/Tag",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "Tag/attributeContext/Tag",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "Tag/attributeContext/Tag/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "TagId",
+            "parent": "Tag/attributeContext/Tag",
+            "definition": "resolvedFrom/Tag/hasAttributes/TagId",
+            "contents": [
+              "Tag/hasAttributes/TagId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Name",
+            "parent": "Tag/attributeContext/Tag",
+            "definition": "resolvedFrom/Tag/hasAttributes/Name",
+            "contents": [
+              "Tag/hasAttributes/Name"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "TagId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Tag/attributeContext/Tag/TagId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Name",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Tag/attributeContext/Tag/Name",
+          "dataFormat": "String",
+          "description": "User specific name of tag",
+          "maximumLength": 200
+        }
+      ],
+      "displayName": "Tag",
+      "description": "User defined tag information on neighbourhood",
+      "version": "4.3"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
   "subManifests": [
     {
       "manifestName": "digitalTwin",
-      "definition": "digitalTwin/digitalTwin.2.0.manifest.cdm.json"
+      "definition": "digitalTwin/digitalTwin.1.0.manifest.cdm.json"
     },
     {
       "manifestName": "energyAndResources",

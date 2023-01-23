@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.cdm.json"
     },
     {
@@ -24,7 +27,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk Account. to IndividualAccount.",
+          "explanation": "fk IndividualAccount.AccountId to Account.AccountId",
           "entity": {
             "entityReference": "Account",
             "appliedTraits": [
@@ -46,14 +49,13 @@
                 "purpose": "hasA",
                 "dataType": "string",
                 "description": "Reference to account",
-                "maximumLength": 50,
-                "isNullable": true
+                "maximumLength": 50
               }
             }
           }
         },
         {
-          "explanation": "fk Organisation. to IndividualAccount.",
+          "explanation": "fk IndividualAccount.OrganisationId to Organisation.OrganisationId",
           "entity": {
             "entityReference": "Organisation",
             "appliedTraits": [

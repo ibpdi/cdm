@@ -176,6 +176,7 @@
             }
           ],
           "attributeContext": "RoleEmissionFactorContact/attributeContext/RoleEmissionFactorContact/RoleId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Link to role",
           "maximumLength": 50

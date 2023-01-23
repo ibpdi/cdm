@@ -1,0 +1,442 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "/core/digitalTwin/CoGenerator.cdm.json",
+      "moniker": "resolvedFrom"
+    }
+  ],
+  "definitions": [
+    {
+      "entityName": "CoGenerator",
+      "exhibitsTraits": [
+        {
+          "traitReference": "has.entitySchemaAbstractionLevel",
+          "arguments": [
+            {
+              "name": "level",
+              "value": "resolved"
+            }
+          ]
+        }
+      ],
+      "attributeContext": {
+        "type": "entity",
+        "name": "CoGenerator",
+        "definition": "resolvedFrom/CoGenerator",
+        "contents": [
+          {
+            "type": "entityReferenceExtends",
+            "name": "extends",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "CdmEntity",
+                "parent": "CoGenerator/attributeContext/CoGenerator/extends",
+                "definition": "resolvedFrom/CdmEntity"
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "CoGeneratorId",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/CoGeneratorId",
+            "contents": [
+              "CoGenerator/hasAttributes/CoGeneratorId"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "GeneratorId",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/GeneratorId",
+            "contents": [
+              {
+                "type": "entity",
+                "name": "Generator",
+                "parent": "CoGenerator/attributeContext/CoGenerator/GeneratorId",
+                "definition": "resolvedFrom/Generator"
+              },
+              {
+                "type": "generatedSet",
+                "name": "_generatedAttributeSet",
+                "parent": "CoGenerator/attributeContext/CoGenerator/GeneratorId",
+                "contents": [
+                  {
+                    "type": "generatedRound",
+                    "name": "_generatedAttributeRound0",
+                    "parent": "CoGenerator/attributeContext/CoGenerator/GeneratorId/_generatedAttributeSet",
+                    "contents": [
+                      {
+                        "type": "addedAttributeIdentity",
+                        "name": "_foreignKey",
+                        "parent": "CoGenerator/attributeContext/CoGenerator/GeneratorId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/CoGenerator/hasAttributes/GeneratorId/resolutionGuidance/foreignKeyAttribute/GeneratorId",
+                        "contents": [
+                          "CoGenerator/hasAttributes/GeneratorId"
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputVoltage",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/OutputVoltage",
+            "contents": [
+              "CoGenerator/hasAttributes/OutputVoltage"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "OutputPhases",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/OutputPhases",
+            "contents": [
+              "CoGenerator/hasAttributes/OutputPhases"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ModeOfOperation",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/ModeOfOperation",
+            "contents": [
+              "CoGenerator/hasAttributes/ModeOfOperation"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "FuelType",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/FuelType",
+            "contents": [
+              "CoGenerator/hasAttributes/FuelType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "Frequency",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/Frequency",
+            "contents": [
+              "CoGenerator/hasAttributes/Frequency"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "DayTankCapacity",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/DayTankCapacity",
+            "contents": [
+              "CoGenerator/hasAttributes/DayTankCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "BulkStorageCapacity",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/BulkStorageCapacity",
+            "contents": [
+              "CoGenerator/hasAttributes/BulkStorageCapacity"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StandbyPowerKva",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/StandbyPowerKva",
+            "contents": [
+              "CoGenerator/hasAttributes/StandbyPowerKva"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "StandbyPower",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/StandbyPower",
+            "contents": [
+              "CoGenerator/hasAttributes/StandbyPower"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimePowerKva",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/PrimePowerKva",
+            "contents": [
+              "CoGenerator/hasAttributes/PrimePowerKva"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "PrimePower",
+            "parent": "CoGenerator/attributeContext/CoGenerator",
+            "definition": "resolvedFrom/CoGenerator/hasAttributes/PrimePower",
+            "contents": [
+              "CoGenerator/hasAttributes/PrimePower"
+            ]
+          }
+        ]
+      },
+      "hasAttributes": [
+        {
+          "name": "CoGeneratorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/CoGeneratorId",
+          "isPrimaryKey": true,
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "GeneratorId",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array",
+            {
+              "traitReference": "is.linkedEntity.identifier",
+              "arguments": [
+                {
+                  "entityReference": {
+                    "entityShape": "entityGroupSet",
+                    "constantValues": [
+                      [
+                        "/core/digitalTwin/Generator.cdm.json/Generator",
+                        "GeneratorId"
+                      ]
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/GeneratorId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "dataFormat": "String",
+          "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "OutputVoltage",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/OutputVoltage",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Output voltage"
+        },
+        {
+          "name": "OutputPhases",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/OutputPhases",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Output phases",
+          "maximumLength": 50
+        },
+        {
+          "name": "ModeOfOperation",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/ModeOfOperation",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Mode of operation",
+          "maximumLength": 50
+        },
+        {
+          "name": "FuelType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/FuelType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Fuel type",
+          "maximumLength": 50
+        },
+        {
+          "name": "Frequency",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/Frequency",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Frequency",
+          "maximumLength": 50
+        },
+        {
+          "name": "DayTankCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/DayTankCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Day tank capacity"
+        },
+        {
+          "name": "BulkStorageCapacity",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/BulkStorageCapacity",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Bulk storage capacity"
+        },
+        {
+          "name": "StandbyPowerKva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/StandbyPowerKva",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Standby power kva"
+        },
+        {
+          "name": "StandbyPower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/StandbyPower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Standby power"
+        },
+        {
+          "name": "PrimePowerKva",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/PrimePowerKva",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Prime power kva"
+        },
+        {
+          "name": "PrimePower",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "CoGenerator/attributeContext/CoGenerator/PrimePower",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Standby power"
+        }
+      ],
+      "displayName": "CoGenerator",
+      "description": "Information about co generator",
+      "version": "4.3"
+    }
+  ]
+}

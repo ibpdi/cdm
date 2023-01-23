@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Portfolio. to PortfolioBuilding.",
+          "explanation": "fk PortfolioBuilding.PortfolioId to Portfolio.PortfolioId",
           "entity": {
             "entityReference": "Portfolio",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Building. to PortfolioBuilding.",
+          "explanation": "fk PortfolioBuilding.BuildingId to Building.BuildingId",
           "entity": {
             "entityReference": "Building",
             "appliedTraits": [

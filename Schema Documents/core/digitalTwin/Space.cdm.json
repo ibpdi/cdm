@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.cdm.json"
     },
     {
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk Floor. to Space.",
+          "explanation": "fk Space.FloorId to Floor.FloorId",
           "entity": {
             "entityReference": "Floor",
             "appliedTraits": [
@@ -362,8 +365,8 @@
             }
           ],
           "isNullable": true,
-          "maximumLength": 75,
           "description": "Define the ventilation type e.g: exhaust, supply, balanced, and heat-recovery",
+          "maximumLength": 75,
           "valueConstrainedToList": true
         }
       ],

@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.cdm.json"
     },
     {
@@ -21,7 +24,7 @@
           "maximumLength": 36
         },
         {
-          "explanation": "fk OperationalMeasurement. to GhgEmission.",
+          "explanation": "fk GhgEmission.OperationalMeasurementId to OperationalMeasurement.OperationalMeasurementId",
           "entity": {
             "entityReference": "OperationalMeasurement",
             "appliedTraits": [
@@ -53,12 +56,7 @@
           "attributeGroupReference": "Parent"
         },
         {
-          "name": "Name",
-          "purpose": "hasA",
-          "dataType": "entityName",
-          "description": "Name of entity.",
-          "maximumLength": 200,
-          "isNullable": true
+          "attributeGroupReference": "Name"
         },
         {
           "name": "EmissionScope",

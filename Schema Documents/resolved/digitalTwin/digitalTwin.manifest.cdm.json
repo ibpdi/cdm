@@ -119,6 +119,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "CoGenerator",
+      "entityPath": "CoGenerator.cdm.json/CoGenerator"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Component",
       "entityPath": "Component.cdm.json/Component"
     },
@@ -324,6 +329,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "HvacFanSubComponent",
+      "entityPath": "HvacFanSubComponent.cdm.json/HvacFanSubComponent"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "HvacHeatTracing",
       "entityPath": "HvacHeatTracing.cdm.json/HvacHeatTracing"
     },
@@ -331,6 +341,11 @@
       "type": "LocalEntity",
       "entityName": "HvacPump",
       "entityPath": "HvacPump.cdm.json/HvacPump"
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacShutOffValve",
+      "entityPath": "HvacShutOffValve.cdm.json/HvacShutOffValve"
     },
     {
       "type": "LocalEntity",
@@ -394,11 +409,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "OtherHvacFan",
-      "entityPath": "OtherHvacFan.cdm.json/OtherHvacFan"
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "PlumbingExpansionTank",
       "entityPath": "PlumbingExpansionTank.cdm.json/PlumbingExpansionTank"
     },
@@ -414,13 +424,13 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "PlumbingStorageTank",
-      "entityPath": "PlumbingStorageTank.cdm.json/PlumbingStorageTank"
+      "entityName": "PlumbingShutOffValve",
+      "entityPath": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve"
     },
     {
       "type": "LocalEntity",
-      "entityName": "PlumbingShutOffValve",
-      "entityPath": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve"
+      "entityName": "PlumbingStorageTank",
+      "entityPath": "PlumbingStorageTank.cdm.json/PlumbingStorageTank"
     },
     {
       "type": "LocalEntity",
@@ -504,11 +514,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "Servitude",
-      "entityPath": "Servitude.cdm.json/Servitude"
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "Site",
       "entityPath": "Site.cdm.json/Site"
     },
@@ -531,16 +536,6 @@
       "type": "LocalEntity",
       "entityName": "SprinklerValve",
       "entityPath": "SprinklerValve.cdm.json/SprinklerValve"
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "SubComponentType",
-      "entityPath": "SubComponentType.cdm.json/SubComponentType"
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "SubSubComponentType",
-      "entityPath": "SubSubComponentType.cdm.json/SubSubComponentType"
     },
     {
       "type": "LocalEntity",
@@ -649,8 +644,8 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "UnitHeaterSubComponent",
-      "entityPath": "UnitHeaterSubComponent.cdm.json/UnitHeaterSubComponent"
+      "entityName": "UnitHeater",
+      "entityPath": "UnitHeater.cdm.json/UnitHeater"
     },
     {
       "type": "LocalEntity",
@@ -684,6 +679,11 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "VavBoxReheat",
+      "entityPath": "VavBoxReheat.cdm.json/VavBoxReheat"
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "WaterFiltration",
       "entityPath": "WaterFiltration.cdm.json/WaterFiltration"
     },
@@ -706,9 +706,9 @@
   "relationships": [
     {
       "fromEntity": "AccessPanel.cdm.json/AccessPanel",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
     },
     {
       "fromEntity": "AirCompressor.cdm.json/AirCompressor",
@@ -912,15 +912,15 @@
     },
     {
       "fromEntity": "AutomaticTransferSwitch.cdm.json/AutomaticTransferSwitch",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
+      "fromEntityAttribute": "TransferSwitchId",
+      "toEntity": "TransferSwitch.cdm.json/TransferSwitch",
+      "toEntityAttribute": "TransferSwitchId"
     },
     {
       "fromEntity": "BacNetController.cdm.json/BacNetController",
-      "fromEntityAttribute": "ComponentTypeId",
-      "toEntity": "ComponentType.cdm.json/ComponentType",
-      "toEntityAttribute": "ComponentTypeId"
+      "fromEntityAttribute": "ControllerId",
+      "toEntity": "Controller.cdm.json/Controller",
+      "toEntityAttribute": "ControllerId"
     },
     {
       "fromEntity": "Boiler.cdm.json/Boiler",
@@ -1012,9 +1012,9 @@
     },
     {
       "fromEntity": "CeilingFan.cdm.json/CeilingFan",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "HvacFanId",
+      "toEntity": "HvacFan.cdm.json/HvacFan",
+      "toEntityAttribute": "HvacFanId"
     },
     {
       "fromEntity": "CertificateBuilding.cdm.json/CertificateBuilding",
@@ -1105,6 +1105,12 @@
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
       "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "CoGenerator.cdm.json/CoGenerator",
+      "fromEntityAttribute": "GeneratorId",
+      "toEntity": "Generator.cdm.json/Generator",
+      "toEntityAttribute": "GeneratorId"
     },
     {
       "fromEntity": "Component.cdm.json/Component",
@@ -1311,6 +1317,30 @@
       "toEntityAttribute": "ComponentTypeId"
     },
     {
+      "fromEntity": "ElectricalDistributionEquipmentSubComponent.cdm.json/ElectricalDistributionEquipmentSubComponent",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "ElectricalMeter.cdm.json/ElectricalMeter",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "ElectricalPanelBoard.cdm.json/ElectricalPanelBoard",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "ElectricalVehicleChargingStation.cdm.json/ElectricalVehicleChargingStation",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
       "fromEntity": "Elevator.cdm.json/Elevator",
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
@@ -1329,7 +1359,43 @@
       "toEntityAttribute": "ComponentTypeId"
     },
     {
+      "fromEntity": "Faucet.cdm.json/Faucet",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "FirePump.cdm.json/FirePump",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "FireSprinklerHead.cdm.json/FireSprinklerHead",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "FlushometerValve.cdm.json/FlushometerValve",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "GasMeter.cdm.json/GasMeter",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
       "fromEntity": "Gateway.cdm.json/Gateway",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "Generator.cdm.json/Generator",
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
       "toEntityAttribute": "ComponentTypeId"
@@ -1377,13 +1443,13 @@
       "toEntityAttribute": "ComponentTypeId"
     },
     {
-      "fromEntity": "Luminaire.cdm.json/Luminaire",
+      "fromEntity": "JockeyPump.cdm.json/JockeyPump",
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
       "toEntityAttribute": "ComponentTypeId"
     },
     {
-      "fromEntity": "ModbusController.cdm.json/ModbusController",
+      "fromEntity": "Luminaire.cdm.json/Luminaire",
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
       "toEntityAttribute": "ComponentTypeId"
@@ -1419,7 +1485,19 @@
       "toEntityAttribute": "ComponentTypeId"
     },
     {
-      "fromEntity": "SubComponentType.cdm.json/SubComponentType",
+      "fromEntity": "SprinklerHeatTracing.cdm.json/SprinklerHeatTracing",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "SprinklerTank.cdm.json/SprinklerTank",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "SprinklerValve.cdm.json/SprinklerValve",
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
       "toEntityAttribute": "ComponentTypeId"
@@ -1431,7 +1509,67 @@
       "toEntityAttribute": "ComponentTypeId"
     },
     {
+      "fromEntity": "ThermalMeter.cdm.json/ThermalMeter",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "Toilet.cdm.json/Toilet",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "TransferSwitch.cdm.json/TransferSwitch",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "Transformer.cdm.json/Transformer",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "UnitHeater.cdm.json/UnitHeater",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "Ups.cdm.json/Ups",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "UrinalFlushometer.cdm.json/UrinalFlushometer",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "VariableFrequencyDrive.cdm.json/VariableFrequencyDrive",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "WaterFiltration.cdm.json/WaterFiltration",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
       "fromEntity": "WaterHeater.cdm.json/WaterHeater",
+      "fromEntityAttribute": "ComponentTypeId",
+      "toEntity": "ComponentType.cdm.json/ComponentType",
+      "toEntityAttribute": "ComponentTypeId"
+    },
+    {
+      "fromEntity": "WaterMeter.cdm.json/WaterMeter",
       "fromEntityAttribute": "ComponentTypeId",
       "toEntity": "ComponentType.cdm.json/ComponentType",
       "toEntityAttribute": "ComponentTypeId"
@@ -1451,40 +1589,46 @@
       ]
     },
     {
+      "fromEntity": "ModbusController.cdm.json/ModbusController",
+      "fromEntityAttribute": "ControllerId",
+      "toEntity": "Controller.cdm.json/Controller",
+      "toEntityAttribute": "ControllerId"
+    },
+    {
+      "fromEntity": "FireDamper.cdm.json/FireDamper",
+      "fromEntityAttribute": "DamperId",
+      "toEntity": "Damper.cdm.json/Damper",
+      "toEntityAttribute": "DamperId"
+    },
+    {
       "fromEntity": "DataNetworkSubComponent.cdm.json/DataNetworkSubComponent",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "DataNetworkEquipmentId",
+      "toEntity": "DataNetworkEquipment.cdm.json/DataNetworkEquipment",
+      "toEntityAttribute": "DataNetworkEquipmentId"
     },
     {
-      "fromEntity": "ElectricalDistributionEquipmentSubComponent.cdm.json/ElectricalDistributionEquipmentSubComponent",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntity": "EthernetSwitchPort.cdm.json/EthernetSwitchPort",
+      "fromEntityAttribute": "DataNetworkEquipmentId",
+      "toEntity": "DataNetworkEquipment.cdm.json/DataNetworkEquipment",
+      "toEntityAttribute": "DataNetworkEquipmentId"
     },
     {
-      "fromEntity": "ElectricalMeter.cdm.json/ElectricalMeter",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "ElectricalPanelBoard.cdm.json/ElectricalPanelBoard",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntity": "WirelessAccessPoint.cdm.json/WirelessAccessPoint",
+      "fromEntityAttribute": "DataNetworkEquipmentId",
+      "toEntity": "DataNetworkEquipment.cdm.json/DataNetworkEquipment",
+      "toEntityAttribute": "DataNetworkEquipmentId"
     },
     {
       "fromEntity": "ElectricalPanelBoardMcb.cdm.json/ElectricalPanelBoardMcb",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
+      "fromEntityAttribute": "ElectricalPanelBoardId",
+      "toEntity": "ElectricalPanelBoard.cdm.json/ElectricalPanelBoard",
+      "toEntityAttribute": "ElectricalPanelBoardId"
     },
     {
       "fromEntity": "ElectricalPanelBoardMlo.cdm.json/ElectricalPanelBoardMlo",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
+      "fromEntityAttribute": "ElectricalPanelBoardId",
+      "toEntity": "ElectricalPanelBoard.cdm.json/ElectricalPanelBoard",
+      "toEntityAttribute": "ElectricalPanelBoardId"
     },
     {
       "fromEntity": "ElectricalSystem.cdm.json/ElectricalSystem",
@@ -1493,70 +1637,34 @@
       "toEntityAttribute": "SystemId"
     },
     {
-      "fromEntity": "ElectricalVehicleChargingStation.cdm.json/ElectricalVehicleChargingStation",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
       "fromEntity": "ElectronicSafetyAndSecuritySystem.cdm.json/ElectronicSafetyAndSecuritySystem",
       "fromEntityAttribute": "SystemId",
       "toEntity": "System.cdm.json/System",
       "toEntityAttribute": "SystemId"
     },
     {
-      "fromEntity": "EthernetSwitchPort.cdm.json/EthernetSwitchPort",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
       "fromEntity": "FanCoilUnit.cdm.json/FanCoilUnit",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "TerminalUnitId",
+      "toEntity": "TerminalUnit.cdm.json/TerminalUnit",
+      "toEntityAttribute": "TerminalUnitId"
     },
     {
       "fromEntity": "FanCoilUnitReheat.cdm.json/FanCoilUnitReheat",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
+      "fromEntityAttribute": "FanCoilUnitId",
+      "toEntity": "FanCoilUnit.cdm.json/FanCoilUnit",
+      "toEntityAttribute": "FanCoilUnitId"
     },
     {
       "fromEntity": "FanPoweredBox.cdm.json/FanPoweredBox",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
+      "fromEntityAttribute": "TerminalUnitId",
+      "toEntity": "TerminalUnit.cdm.json/TerminalUnit",
+      "toEntityAttribute": "TerminalUnitId"
     },
     {
       "fromEntity": "FanPoweredBoxReheat.cdm.json/FanPoweredBoxReheat",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "Faucet.cdm.json/Faucet",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "FireDamper.cdm.json/FireDamper",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "FirePump.cdm.json/FirePump",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "FireSprinklerHead.cdm.json/FireSprinklerHead",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
+      "fromEntityAttribute": "TerminalUnitId",
+      "toEntity": "TerminalUnit.cdm.json/TerminalUnit",
+      "toEntityAttribute": "TerminalUnitId"
     },
     {
       "fromEntity": "SensorFloor.cdm.json/SensorFloor",
@@ -1607,22 +1715,16 @@
       ]
     },
     {
-      "fromEntity": "FlushometerValve.cdm.json/FlushometerValve",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntity": "HvacFanSubComponent.cdm.json/HvacFanSubComponent",
+      "fromEntityAttribute": "HvacFanId",
+      "toEntity": "HvacFan.cdm.json/HvacFan",
+      "toEntityAttribute": "HvacFanId"
     },
     {
-      "fromEntity": "GasMeter.cdm.json/GasMeter",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "Generator.cdm.json/Generator",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntity": "HvacShutOffValve.cdm.json/HvacShutOffValve",
+      "fromEntityAttribute": "HvacValveId",
+      "toEntity": "HvacValve.cdm.json/HvacValve",
+      "toEntityAttribute": "HvacValveId"
     },
     {
       "fromEntity": "HvacSystem.cdm.json/HvacSystem",
@@ -1631,28 +1733,22 @@
       "toEntityAttribute": "SystemId"
     },
     {
+      "fromEntity": "Server.cdm.json/Server",
+      "fromEntityAttribute": "IctHardwareId",
+      "toEntity": "IctHardware.cdm.json/IctHardware",
+      "toEntityAttribute": "IctHardwareId"
+    },
+    {
       "fromEntity": "InformationAndCommunicationSystem.cdm.json/InformationAndCommunicationSystem",
       "fromEntityAttribute": "SystemId",
       "toEntity": "System.cdm.json/System",
       "toEntityAttribute": "SystemId"
     },
     {
-      "fromEntity": "JockeyPump.cdm.json/JockeyPump",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
       "fromEntity": "Land.cdm.json/Land",
       "fromEntityAttribute": "SiteId",
       "toEntity": "Site.cdm.json/Site",
       "toEntityAttribute": "SiteId"
-    },
-    {
-      "fromEntity": "Land.cdm.json/Land",
-      "fromEntityAttribute": "ServitudeId",
-      "toEntity": "Servitude.cdm.json/Servitude",
-      "toEntityAttribute": "ServitudeId"
     },
     {
       "fromEntity": "SensorLand.cdm.json/SensorLand",
@@ -1689,34 +1785,28 @@
       "toEntityAttribute": "SystemId"
     },
     {
-      "fromEntity": "OtherHvacFan.cdm.json/OtherHvacFan",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
       "fromEntity": "PlumbingExpansionTank.cdm.json/PlumbingExpansionTank",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "PlumbingTankId",
+      "toEntity": "PlumbingTank.cdm.json/PlumbingTank",
+      "toEntityAttribute": "PlumbingTankId"
     },
     {
       "fromEntity": "PlumbingPumpSubComponent.cdm.json/PlumbingPumpSubComponent",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "PlumbingStorageTank.cdm.json/PlumbingStorageTank",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "PlumbingPumpId",
+      "toEntity": "PlumbingPump.cdm.json/PlumbingPump",
+      "toEntityAttribute": "PlumbingPumpId"
     },
     {
       "fromEntity": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "PlumbingValveId",
+      "toEntity": "PlumbingValve.cdm.json/PlumbingValve",
+      "toEntityAttribute": "PlumbingValveId"
+    },
+    {
+      "fromEntity": "PlumbingStorageTank.cdm.json/PlumbingStorageTank",
+      "fromEntityAttribute": "PlumbingTankId",
+      "toEntity": "PlumbingTank.cdm.json/PlumbingTank",
+      "toEntityAttribute": "PlumbingTankId"
     },
     {
       "fromEntity": "PlumbingSystem.cdm.json/PlumbingSystem",
@@ -1726,9 +1816,9 @@
     },
     {
       "fromEntity": "PlumbingValveSubComponent.cdm.json/PlumbingValveSubComponent",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
+      "fromEntityAttribute": "PlumbingValveId",
+      "toEntity": "PlumbingValve.cdm.json/PlumbingValve",
+      "toEntityAttribute": "PlumbingValveId"
     },
     {
       "fromEntity": "SensorBuilding.cdm.json/SensorBuilding",
@@ -1891,12 +1981,6 @@
       ]
     },
     {
-      "fromEntity": "Server.cdm.json/Server",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
       "fromEntity": "SystemSite.cdm.json/SystemSite",
       "fromEntityAttribute": "SiteId",
       "toEntity": "Site.cdm.json/Site",
@@ -1951,132 +2035,6 @@
           ]
         }
       ]
-    },
-    {
-      "fromEntity": "SprinklerHeatTracing.cdm.json/SprinklerHeatTracing",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "SprinklerTank.cdm.json/SprinklerTank",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "SprinklerValve.cdm.json/SprinklerValve",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "TanklessWaterHeater.cdm.json/TanklessWaterHeater",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "TankWaterHeater.cdm.json/TankWaterHeater",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "ThermalMeter.cdm.json/ThermalMeter",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "Toilet.cdm.json/Toilet",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "TransferSwitch.cdm.json/TransferSwitch",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "Transformer.cdm.json/Transformer",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "UnitHeaterSubComponent.cdm.json/UnitHeaterSubComponent",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "Ups.cdm.json/Ups",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "VariableFrequencyDrive.cdm.json/VariableFrequencyDrive",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "WaterFiltration.cdm.json/WaterFiltration",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "WaterMeter.cdm.json/WaterMeter",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "WirelessAccessPoint.cdm.json/WirelessAccessPoint",
-      "fromEntityAttribute": "SubComponentTypeId",
-      "toEntity": "SubComponentType.cdm.json/SubComponentType",
-      "toEntityAttribute": "SubComponentTypeId"
-    },
-    {
-      "fromEntity": "TanklessWaterHeaterSubComponent.cdm.json/TanklessWaterHeaterSubComponent",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "TankWaterHeaterSubComponent.cdm.json/TankWaterHeaterSubComponent",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "ToiletFlushometer.cdm.json/ToiletFlushometer",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "ToiletTank.cdm.json/ToiletTank",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
-    },
-    {
-      "fromEntity": "UrinalFlushometer.cdm.json/UrinalFlushometer",
-      "fromEntityAttribute": "SubSubComponentTypeId",
-      "toEntity": "SubSubComponentType.cdm.json/SubSubComponentType",
-      "toEntityAttribute": "SubSubComponentTypeId"
     },
     {
       "fromEntity": "SystemBuilding.cdm.json/SystemBuilding",
@@ -2175,6 +2133,48 @@
           ]
         }
       ]
+    },
+    {
+      "fromEntity": "TanklessWaterHeater.cdm.json/TanklessWaterHeater",
+      "fromEntityAttribute": "WaterHeaterId",
+      "toEntity": "WaterHeater.cdm.json/WaterHeater",
+      "toEntityAttribute": "WaterHeaterId"
+    },
+    {
+      "fromEntity": "TanklessWaterHeaterSubComponent.cdm.json/TanklessWaterHeaterSubComponent",
+      "fromEntityAttribute": "TanklessWaterHeaterId",
+      "toEntity": "TanklessWaterHeater.cdm.json/TanklessWaterHeater",
+      "toEntityAttribute": "TanklessWaterHeaterId"
+    },
+    {
+      "fromEntity": "TankWaterHeater.cdm.json/TankWaterHeater",
+      "fromEntityAttribute": "WaterHeaterId",
+      "toEntity": "WaterHeater.cdm.json/WaterHeater",
+      "toEntityAttribute": "WaterHeaterId"
+    },
+    {
+      "fromEntity": "TankWaterHeaterSubComponent.cdm.json/TankWaterHeaterSubComponent",
+      "fromEntityAttribute": "TankWaterHeaterId",
+      "toEntity": "TankWaterHeater.cdm.json/TankWaterHeater",
+      "toEntityAttribute": "TankWaterHeaterId"
+    },
+    {
+      "fromEntity": "VavBoxReheat.cdm.json/VavBoxReheat",
+      "fromEntityAttribute": "TerminalUnitId",
+      "toEntity": "TerminalUnit.cdm.json/TerminalUnit",
+      "toEntityAttribute": "TerminalUnitId"
+    },
+    {
+      "fromEntity": "ToiletFlushometer.cdm.json/ToiletFlushometer",
+      "fromEntityAttribute": "ToiletId",
+      "toEntity": "Toilet.cdm.json/Toilet",
+      "toEntityAttribute": "ToiletId"
+    },
+    {
+      "fromEntity": "ToiletTank.cdm.json/ToiletTank",
+      "fromEntityAttribute": "ToiletId",
+      "toEntity": "Toilet.cdm.json/Toilet",
+      "toEntityAttribute": "ToiletId"
     },
     {
       "fromEntity": "UnitBuilding.cdm.json/UnitBuilding",

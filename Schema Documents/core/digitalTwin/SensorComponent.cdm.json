@@ -2,9 +2,6 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
-    },
-    {
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
@@ -20,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Sensor. to SensorFloor.",
+          "explanation": "fk SensorComponent.SensorId to Sensor.SensorId",
           "entity": {
             "entityReference": "Sensor",
             "appliedTraits": [
@@ -49,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Component. to SensorComponent.",
+          "explanation": "fk SensorComponent.ComponentId to Component.ComponentId",
           "entity": {
             "entityReference": "Component",
             "appliedTraits": [

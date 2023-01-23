@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk SustainabilityIndicator. to SustainabilityIndicatorEmissionFactor.",
+          "explanation": "fk SustainabilityIndicatorEmissionFactor.SustainabilityIndicatorId to SustainabilityIndicator.SustainabilityIndicatorId",
           "entity": {
             "entityReference": "SustainabilityIndicator",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk EmissionFactor. to SustainabilityIndicatorEmissionFactor.",
+          "explanation": "fk SustainabilityIndicatorEmissionFactor.EmissionFactorId to EmissionFactor.EmissionFactorId",
           "entity": {
             "entityReference": "EmissionFactor",
             "appliedTraits": [

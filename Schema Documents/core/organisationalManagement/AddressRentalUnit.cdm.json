@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Address. to AddressRentalUnit.",
+          "explanation": "fk AddressRentalUnit.AddressId to Address.AddressId",
           "entity": {
             "entityReference": "Address",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk RentalUnit. to AddressRentalUnit.",
+          "explanation": "fk AddressRentalUnit.RentalUnitId to RentalUnit.RentalUnitId",
           "entity": {
             "entityReference": "RentalUnit",
             "appliedTraits": [

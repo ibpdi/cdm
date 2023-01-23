@@ -2,9 +2,6 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
-    },
-    {
       "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
@@ -20,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk AvailableResource. to AvailableResourceWorkspace.",
+          "explanation": "fk AvailableResourceWorkspace.AvailableResourceId to AvailableResource.AvailableResourceId",
           "entity": {
             "entityReference": "AvailableResource",
             "appliedTraits": [
@@ -49,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Workspace. to AvailableResourceWorkspace.",
+          "explanation": "fk AvailableResourceWorkspace.WorkspaceId to Workspace.WorkspaceId",
           "entity": {
             "entityReference": "Workspace",
             "appliedTraits": [

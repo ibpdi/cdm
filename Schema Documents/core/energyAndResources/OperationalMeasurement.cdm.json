@@ -2,10 +2,10 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "/core/organisationalManagement/Role.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
     }
   ],
   "definitions": [

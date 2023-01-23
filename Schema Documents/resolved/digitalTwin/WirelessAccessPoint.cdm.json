@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "DataNetworkEquipmentId",
             "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint",
-            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/DataNetworkEquipmentId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "DataNetworkEquipment",
+                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/DataNetworkEquipmentId",
+                "definition": "resolvedFrom/DataNetworkEquipment"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId",
+                "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/DataNetworkEquipmentId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/DataNetworkEquipmentId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/DataNetworkEquipmentId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/WirelessAccessPoint/hasAttributes/DataNetworkEquipmentId/resolutionGuidance/foreignKeyAttribute/DataNetworkEquipmentId",
                         "contents": [
-                          "WirelessAccessPoint/hasAttributes/SubComponentTypeId"
+                          "WirelessAccessPoint/hasAttributes/DataNetworkEquipmentId"
                         ]
                       }
                     ]
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "DataNetworkEquipmentId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/DataNetworkEquipment.cdm.json/DataNetworkEquipment",
+                        "DataNetworkEquipmentId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "WirelessAccessPoint/attributeContext/WirelessAccessPoint/DataNetworkEquipmentId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

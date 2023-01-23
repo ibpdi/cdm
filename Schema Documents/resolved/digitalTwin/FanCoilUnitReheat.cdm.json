@@ -40,42 +40,42 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "FanPoweredBoxReheatId",
+            "name": "FanCoilUnitReheatId",
             "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat",
-            "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/FanPoweredBoxReheatId",
+            "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/FanCoilUnitReheatId",
             "contents": [
-              "FanCoilUnitReheat/hasAttributes/FanPoweredBoxReheatId"
+              "FanCoilUnitReheat/hasAttributes/FanCoilUnitReheatId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "FanCoilUnitId",
             "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat",
-            "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/FanCoilUnitId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "FanCoilUnit",
+                "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanCoilUnitId",
+                "definition": "resolvedFrom/FanCoilUnit"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/SubSubComponentTypeId",
+                "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanCoilUnitId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanCoilUnitId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanCoilUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/FanCoilUnitId/resolutionGuidance/foreignKeyAttribute/FanCoilUnitId",
                         "contents": [
-                          "FanCoilUnitReheat/hasAttributes/SubSubComponentTypeId"
+                          "FanCoilUnitReheat/hasAttributes/FanCoilUnitId"
                         ]
                       }
                     ]
@@ -631,11 +631,11 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "PrimaryCoolingMethodefrigerantType",
+            "name": "PrimaryCoolingMethodeRefrigerantType",
             "parent": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat",
-            "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/PrimaryCoolingMethodefrigerantType",
+            "definition": "resolvedFrom/FanCoilUnitReheat/hasAttributes/PrimaryCoolingMethodeRefrigerantType",
             "contents": [
-              "FanCoilUnitReheat/hasAttributes/PrimaryCoolingMethodefrigerantType"
+              "FanCoilUnitReheat/hasAttributes/PrimaryCoolingMethodeRefrigerantType"
             ]
           },
           {
@@ -894,20 +894,20 @@
       },
       "hasAttributes": [
         {
-          "name": "FanPoweredBoxReheatId",
+          "name": "FanCoilUnitReheatId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanPoweredBoxReheatId",
+          "attributeContext": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanCoilUnitReheatId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "FanCoilUnitId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -920,8 +920,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/FanCoilUnit.cdm.json/FanCoilUnit",
+                        "FanCoilUnitId"
                       ]
                     ]
                   }
@@ -929,7 +929,7 @@
               ]
             }
           ],
-          "attributeContext": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/FanCoilUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
@@ -3866,13 +3866,13 @@
           "maximumLength": 50
         },
         {
-          "name": "PrimaryCoolingMethodefrigerantType",
+          "name": "PrimaryCoolingMethodeRefrigerantType",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/PrimaryCoolingMethodefrigerantType",
+          "attributeContext": "FanCoilUnitReheat/attributeContext/FanCoilUnitReheat/PrimaryCoolingMethodeRefrigerantType",
           "isNullable": true,
           "dataFormat": "String",
           "description": "Primary cooling refrigerant type",

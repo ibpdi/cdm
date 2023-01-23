@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Unit. to UnitSpace.",
+          "explanation": "fk UnitSpace.UnitId to Unit.UnitId",
           "entity": {
             "entityReference": "Unit",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Space. to UnitSpace.",
+          "explanation": "fk UnitSpace.SpaceId to Space.SpaceId",
           "entity": {
             "entityReference": "Space",
             "appliedTraits": [

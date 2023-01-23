@@ -2,13 +2,13 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "/core/digitalTwin/UnitHeaterSubComponent.cdm.json",
+      "corpusPath": "/core/digitalTwin/VavBoxReheat.cdm.json",
       "moniker": "resolvedFrom"
     }
   ],
   "definitions": [
     {
-      "entityName": "UnitHeaterSubComponent",
+      "entityName": "VavBoxReheat",
       "exhibitsTraits": [
         {
           "traitReference": "has.entitySchemaAbstractionLevel",
@@ -22,60 +22,60 @@
       ],
       "attributeContext": {
         "type": "entity",
-        "name": "UnitHeaterSubComponent",
-        "definition": "resolvedFrom/UnitHeaterSubComponent",
+        "name": "VavBoxReheat",
+        "definition": "resolvedFrom/VavBoxReheat",
         "contents": [
           {
             "type": "entityReferenceExtends",
             "name": "extends",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
             "contents": [
               {
                 "type": "entity",
                 "name": "CdmEntity",
-                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/extends",
+                "parent": "VavBoxReheat/attributeContext/VavBoxReheat/extends",
                 "definition": "resolvedFrom/CdmEntity"
               }
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "UnitHeaterSubComponentId",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/UnitHeaterSubComponentId",
+            "name": "VavBoxReheatId",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/VavBoxReheatId",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/UnitHeaterSubComponentId"
+              "VavBoxReheat/hasAttributes/VavBoxReheatId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SubComponentTypeId",
+            "name": "TerminalUnitId",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/TerminalUnitId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "TerminalUnit",
+                "parent": "VavBoxReheat/attributeContext/VavBoxReheat/TerminalUnitId",
+                "definition": "resolvedFrom/TerminalUnit"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId",
+                "parent": "VavBoxReheat/attributeContext/VavBoxReheat/TerminalUnitId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "VavBoxReheat/attributeContext/VavBoxReheat/TerminalUnitId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "VavBoxReheat/attributeContext/VavBoxReheat/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/VavBoxReheat/hasAttributes/TerminalUnitId/resolutionGuidance/foreignKeyAttribute/TerminalUnitId",
                         "contents": [
-                          "UnitHeaterSubComponent/hasAttributes/SubComponentTypeId"
+                          "VavBoxReheat/hasAttributes/TerminalUnitId"
                         ]
                       }
                     ]
@@ -86,302 +86,122 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponent",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SubComponent",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/SubComponent"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "Type",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/Type",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/Type"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "NominalHeatingCapacity",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/NominalHeatingCapacity",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/NominalHeatingCapacity",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/NominalHeatingCapacity"
+              "VavBoxReheat/hasAttributes/NominalHeatingCapacity"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SteamUnitHeaterCondensate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/SteamUnitHeaterCondensate",
+            "name": "MinAirflowRating",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/MinAirflowRating",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/SteamUnitHeaterCondensate"
+              "VavBoxReheat/hasAttributes/MinAirflowRating"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HotWaterUnitHeaterFlowCapacity",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HotWaterUnitHeaterFlowCapacity",
+            "name": "MaxAirflowRating",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/MaxAirflowRating",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HotWaterUnitHeaterFlowCapacity"
+              "VavBoxReheat/hasAttributes/MaxAirflowRating"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "ElectricUnitHeaterPowerInput",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/ElectricUnitHeaterPowerInput",
+            "name": "DuctInletShape",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletShape",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/ElectricUnitHeaterPowerInput"
+              "VavBoxReheat/hasAttributes/DuctInletShape"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodType",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodType",
+            "name": "DuctInletSize",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletSize",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodType"
+              "VavBoxReheat/hasAttributes/DuctInletSize"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodOutsideDiameter",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodOutsideDiameter",
+            "name": "DuctInletConfiguration",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletConfiguration",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodOutsideDiameter"
+              "VavBoxReheat/hasAttributes/DuctInletConfiguration"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodName",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodName",
+            "name": "DuctInletName",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletName",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodName"
+              "VavBoxReheat/hasAttributes/DuctInletName"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodCommissionDate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodCommissionDate",
+            "name": "DuctInletCommissionDate",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletCommissionDate",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodCommissionDate"
+              "VavBoxReheat/hasAttributes/DuctInletCommissionDate"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodExpectedEndOfLife",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedEndOfLife",
+            "name": "DuctInletExpectedEndOfLife",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletExpectedEndOfLife",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedEndOfLife"
+              "VavBoxReheat/hasAttributes/DuctInletExpectedEndOfLife"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodDurationLifeYear",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodDurationLifeYear",
+            "name": "DuctInletExpectedReplacementCost",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletExpectedReplacementCost",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodDurationLifeYear"
+              "VavBoxReheat/hasAttributes/DuctInletExpectedReplacementCost"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodExpectedReplacementCost",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedReplacementCost",
+            "name": "DuctInletInitialCost",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletInitialCost",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodExpectedReplacementCost"
+              "VavBoxReheat/hasAttributes/DuctInletInitialCost"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "HeatingMethodInitialCost",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodInitialCost",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodInitialCost"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "HeatingMethodInstallationDate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodInstallationDate",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodInstallationDate"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "HeatingMethodMaintenanceInterval",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodMaintenanceInterval",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodMaintenanceInterval"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "HeatingMethodTurnoverDate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodTurnoverDate",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodTurnoverDate"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "HeatingMethodModelNumber",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodModelNumber",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodModelNumber"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "HeatingMethodTagNumber",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodTagNumber",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodTagNumber"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "HeatingMethodSerialNumber",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/HeatingMethodSerialNumber",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/HeatingMethodSerialNumber"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanNominalAirflow",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanNominalAirflow",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanNominalAirflow"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanMotorPower",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMotorPower",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanMotorPower"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanMinAirflowRating",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMinAirflowRating",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanMinAirflowRating"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanMaxAirflowRating",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMaxAirflowRating",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanMaxAirflowRating"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanDriveType",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanDriveType",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanDriveType"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanName",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanName",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanName"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanCommissionDate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanCommissionDate",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanCommissionDate"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanExpectedEndOfLife",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanExpectedEndOfLife",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanExpectedEndOfLife"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanDurationLifeYear",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanDurationLifeYear",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanDurationLifeYear"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanExpectedReplacementCost",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanExpectedReplacementCost",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanExpectedReplacementCost"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "FanInitialCost",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanInitialCost",
-            "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanInitialCost"
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "Currency",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/Currency",
+            "name": "DuctInletCurrency",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/DuctInletCurrency",
             "contents": [
               {
                 "type": "attributeGroup",
-                "name": "Currency",
-                "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/Currency",
-                "definition": "resolvedFrom/Currency",
+                "name": "DuctInletCurrency",
+                "parent": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletCurrency",
+                "definition": "resolvedFrom/DuctInletCurrency",
                 "contents": [
                   {
                     "type": "attributeDefinition",
-                    "name": "Currency",
-                    "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/Currency/Currency",
-                    "definition": "resolvedFrom/Currency/members/Currency",
+                    "name": "DuctInletCurrency",
+                    "parent": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletCurrency/DuctInletCurrency",
+                    "definition": "resolvedFrom/DuctInletCurrency/members/DuctInletCurrency",
                     "contents": [
-                      "UnitHeaterSubComponent/hasAttributes/Currency"
+                      "VavBoxReheat/hasAttributes/DuctInletCurrency"
                     ]
                   }
                 ]
@@ -390,76 +210,202 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "FanInstallationDate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanInstallationDate",
+            "name": "DuctInletInstallationDate",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletInstallationDate",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanInstallationDate"
+              "VavBoxReheat/hasAttributes/DuctInletInstallationDate"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "FanMaintenanceInterval",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanMaintenanceInterval",
+            "name": "DuctInletMaintenanceInterval",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletMaintenanceInterval",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanMaintenanceInterval"
+              "VavBoxReheat/hasAttributes/DuctInletMaintenanceInterval"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "FanTurnoverDate",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanTurnoverDate",
+            "name": "DuctInletTurnoverDate",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletTurnoverDate",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanTurnoverDate"
+              "VavBoxReheat/hasAttributes/DuctInletTurnoverDate"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "FanModelNumber",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanModelNumber",
+            "name": "DuctInletModel",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletModel",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanModelNumber"
+              "VavBoxReheat/hasAttributes/DuctInletModel"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "FanTagNumber",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanTagNumber",
+            "name": "DuctInletTagNumber",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletTagNumber",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanTagNumber"
+              "VavBoxReheat/hasAttributes/DuctInletTagNumber"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "FanSerialNumber",
-            "parent": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent",
-            "definition": "resolvedFrom/UnitHeaterSubComponent/hasAttributes/FanSerialNumber",
+            "name": "DuctInletSerialNumber",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/DuctInletSerialNumber",
             "contents": [
-              "UnitHeaterSubComponent/hasAttributes/FanSerialNumber"
+              "VavBoxReheat/hasAttributes/DuctInletSerialNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingType",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingType",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingType"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingOutsideDiameter",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingOutsideDiameter",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingOutsideDiameter"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingName",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingName",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingName"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingCommissionDate",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingCommissionDate",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingCommissionDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingExpectedEndOfLife",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingExpectedEndOfLife",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingExpectedEndOfLife"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingDurationLifeYear",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingDurationLifeYear",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingDurationLifeYear"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingExpectedReplacementCost",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingExpectedReplacementCost",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingExpectedReplacementCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingInitialCost",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingInitialCost",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingInitialCost"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingInstallationDate",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingInstallationDate",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingInstallationDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingMaintenanceInterval",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingMaintenanceInterval",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingMaintenanceInterval"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingTurnoverDate",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingTurnoverDate",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingTurnoverDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingModelNumber",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingModelNumber",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingModelNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingTagNumber",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingTagNumber",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingTagNumber"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReHeatingSerialNumber",
+            "parent": "VavBoxReheat/attributeContext/VavBoxReheat",
+            "definition": "resolvedFrom/VavBoxReheat/hasAttributes/ReHeatingSerialNumber",
+            "contents": [
+              "VavBoxReheat/hasAttributes/ReHeatingSerialNumber"
             ]
           }
         ]
       },
       "hasAttributes": [
         {
-          "name": "UnitHeaterSubComponentId",
+          "name": "VavBoxReheatId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/UnitHeaterSubComponentId",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/VavBoxReheatId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "TerminalUnitId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -472,8 +418,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/TerminalUnit.cdm.json/TerminalUnit",
+                        "TerminalUnitId"
                       ]
                     ]
                   }
@@ -481,35 +427,9 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-          "maximumLength": 50
-        },
-        {
-          "name": "SubComponent",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SubComponent",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Unit heater sub component",
-          "maximumLength": 50
-        },
-        {
-          "name": "Type",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/Type",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Unit heater sub component type",
           "maximumLength": 50
         },
         {
@@ -529,26 +449,13 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/NominalHeatingCapacity",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/NominalHeatingCapacity",
           "isNullable": true,
           "dataFormat": "Decimal",
           "description": "Nominal heating capacity"
         },
         {
-          "name": "SteamUnitHeaterCondensate",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/SteamUnitHeaterCondensate",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Condensate information if steam unit heater",
-          "maximumLength": 50
-        },
-        {
-          "name": "HotWaterUnitHeaterFlowCapacity",
+          "name": "MinAirflowRating",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -564,13 +471,13 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HotWaterUnitHeaterFlowCapacity",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/MinAirflowRating",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Flow capacity"
+          "description": "Min flow capacity"
         },
         {
-          "name": "ElectricUnitHeaterPowerInput",
+          "name": "MaxAirflowRating",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -586,26 +493,13 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/ElectricUnitHeaterPowerInput",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/MaxAirflowRating",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Power input"
+          "description": "Max flow capacity"
         },
         {
-          "name": "HeatingMethodType",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodType",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Heating method type",
-          "maximumLength": 50
-        },
-        {
-          "name": "HeatingMethodOutsideDiameter",
+          "name": "DuctInletShape",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -621,334 +515,87 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodOutsideDiameter",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletShape",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Heating method outside diameter"
+          "description": "Duct inlet shape"
         },
         {
-          "name": "HeatingMethodName",
+          "name": "DuctInletSize",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletSize",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Duct inlet size"
+        },
+        {
+          "name": "DuctInletConfiguration",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodName",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletConfiguration",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Heating method name of product",
+          "description": "Duct inlet configuration",
           "maximumLength": 200
         },
         {
-          "name": "HeatingMethodCommissionDate",
-          "appliedTraits": [
-            "is.dataFormat.date",
-            "means.measurement.date",
-            "is.dataFormat.time",
-            "means.measurement.time"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodCommissionDate",
-          "isNullable": true,
-          "dataFormat": "DateTime",
-          "description": "Heating method commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "HeatingMethodExpectedEndOfLife",
-          "appliedTraits": [
-            "is.dataFormat.date",
-            "means.measurement.date",
-            "is.dataFormat.time",
-            "means.measurement.time"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodExpectedEndOfLife",
-          "isNullable": true,
-          "dataFormat": "DateTime",
-          "description": "Heating method expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "HeatingMethodDurationLifeYear",
-          "appliedTraits": [
-            "is.dataFormat.integer"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodDurationLifeYear",
-          "isNullable": true,
-          "dataFormat": "Int32",
-          "description": "Heating method life span of component in years"
-        },
-        {
-          "name": "HeatingMethodExpectedReplacementCost",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "28"
-                },
-                {
-                  "name": "scale",
-                  "value": "4"
-                }
-              ]
-            }
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodExpectedReplacementCost",
-          "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "Heating method expected replacement costs"
-        },
-        {
-          "name": "HeatingMethodInitialCost",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "28"
-                },
-                {
-                  "name": "scale",
-                  "value": "4"
-                }
-              ]
-            }
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodInitialCost",
-          "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "Heating method initial cost"
-        },
-        {
-          "name": "HeatingMethodInstallationDate",
-          "appliedTraits": [
-            "is.dataFormat.date",
-            "means.measurement.date",
-            "is.dataFormat.time",
-            "means.measurement.time"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodInstallationDate",
-          "isNullable": true,
-          "dataFormat": "DateTime",
-          "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "HeatingMethodMaintenanceInterval",
+          "name": "DuctInletName",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodMaintenanceInterval",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletName",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Heating method maintenance interval either as string: monthly, quarterly, etc. or as month",
-          "maximumLength": 50
-        },
-        {
-          "name": "HeatingMethodTurnoverDate",
-          "appliedTraits": [
-            "is.dataFormat.date",
-            "means.measurement.date",
-            "is.dataFormat.time",
-            "means.measurement.time"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodTurnoverDate",
-          "isNullable": true,
-          "dataFormat": "DateTime",
-          "description": "Heating method turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
-        },
-        {
-          "name": "HeatingMethodModelNumber",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodModelNumber",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Model number of heating method",
-          "maximumLength": 50
-        },
-        {
-          "name": "HeatingMethodTagNumber",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodTagNumber",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Heating method tag number",
-          "maximumLength": 50
-        },
-        {
-          "name": "HeatingMethodSerialNumber",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/HeatingMethodSerialNumber",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Serial number of heating method",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanNominalAirflow",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanNominalAirflow",
-          "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "Fan nominal airflow"
-        },
-        {
-          "name": "FanMotorPower",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMotorPower",
-          "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "Fan motor power"
-        },
-        {
-          "name": "FanMinAirflowRating",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMinAirflowRating",
-          "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "Fan min flow capacity"
-        },
-        {
-          "name": "FanMaxAirflowRating",
-          "appliedTraits": [
-            {
-              "traitReference": "is.dataFormat.numeric.shaped",
-              "arguments": [
-                {
-                  "name": "precision",
-                  "value": "19"
-                },
-                {
-                  "name": "scale",
-                  "value": "6"
-                }
-              ]
-            }
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMaxAirflowRating",
-          "isNullable": true,
-          "dataFormat": "Decimal",
-          "description": "Fan max flow capacity"
-        },
-        {
-          "name": "FanDriveType",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanDriveType",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Fan fan drive type",
-          "maximumLength": 50
-        },
-        {
-          "name": "FanName",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanName",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Name of fan",
+          "description": "Name of Duct inlet",
           "maximumLength": 200
         },
         {
-          "name": "FanCommissionDate",
+          "name": "DuctInletCommissionDate",
           "appliedTraits": [
             "is.dataFormat.date",
             "means.measurement.date",
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanCommissionDate",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletCommissionDate",
           "isNullable": true,
           "dataFormat": "DateTime",
-          "description": "Fan commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+          "description": "Commission date if duct inlet in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "FanExpectedEndOfLife",
+          "name": "DuctInletExpectedEndOfLife",
           "appliedTraits": [
             "is.dataFormat.date",
             "means.measurement.date",
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanExpectedEndOfLife",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletExpectedEndOfLife",
           "isNullable": true,
           "dataFormat": "DateTime",
-          "description": "Fan expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+          "description": "Expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "FanDurationLifeYear",
-          "appliedTraits": [
-            "is.dataFormat.integer"
-          ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanDurationLifeYear",
-          "isNullable": true,
-          "dataFormat": "Int32",
-          "description": "Fan life span of component in years"
-        },
-        {
-          "name": "FanExpectedReplacementCost",
+          "name": "DuctInletExpectedReplacementCost",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -964,13 +611,13 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanExpectedReplacementCost",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletExpectedReplacementCost",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Fan expected replacement costs"
+          "description": "Duct inlet expected replacement costs"
         },
         {
-          "name": "FanInitialCost",
+          "name": "DuctInletInitialCost",
           "appliedTraits": [
             {
               "traitReference": "is.dataFormat.numeric.shaped",
@@ -986,22 +633,22 @@
               ]
             }
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanInitialCost",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletInitialCost",
           "isNullable": true,
           "dataFormat": "Decimal",
-          "description": "Fan initial cost"
+          "description": "Duct inlet initial cost"
         },
         {
-          "name": "Currency",
+          "name": "DuctInletCurrency",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/Currency/Currency/Currency",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletCurrency/DuctInletCurrency/DuctInletCurrency",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Currency code according to Iso 4217",
+          "description": "Duct inlet currency code according to Iso 4217",
           "maximumLength": 50,
           "valueConstrainedToList": true,
           "defaultValue": [
@@ -2022,86 +1669,292 @@
           ]
         },
         {
-          "name": "FanInstallationDate",
+          "name": "DuctInletInstallationDate",
           "appliedTraits": [
             "is.dataFormat.date",
             "means.measurement.date",
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanInstallationDate",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletInstallationDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletMaintenanceInterval",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletMaintenanceInterval",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletTurnoverDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletTurnoverDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Duct inlet turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "DuctInletModel",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletModel",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Duct inlet model number",
+          "maximumLength": 200
+        },
+        {
+          "name": "DuctInletTagNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletTagNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Tag number",
+          "maximumLength": 50
+        },
+        {
+          "name": "DuctInletSerialNumber",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/DuctInletSerialNumber",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Serial number of component",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingType",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingType",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating type",
+          "maximumLength": 50
+        },
+        {
+          "name": "ReHeatingOutsideDiameter",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "19"
+                },
+                {
+                  "name": "scale",
+                  "value": "6"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingOutsideDiameter",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating outside diameter"
+        },
+        {
+          "name": "ReHeatingName",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingName",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Re heating name of product",
+          "maximumLength": 200
+        },
+        {
+          "name": "ReHeatingCommissionDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingCommissionDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating commission date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingExpectedEndOfLife",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingExpectedEndOfLife",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Re heating expected end of life date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReHeatingDurationLifeYear",
+          "appliedTraits": [
+            "is.dataFormat.integer"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingDurationLifeYear",
+          "isNullable": true,
+          "dataFormat": "Int32",
+          "description": "Re heating life span of component in years"
+        },
+        {
+          "name": "ReHeatingExpectedReplacementCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingExpectedReplacementCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating expected replacement costs"
+        },
+        {
+          "name": "ReHeatingInitialCost",
+          "appliedTraits": [
+            {
+              "traitReference": "is.dataFormat.numeric.shaped",
+              "arguments": [
+                {
+                  "name": "precision",
+                  "value": "28"
+                },
+                {
+                  "name": "scale",
+                  "value": "4"
+                }
+              ]
+            }
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingInitialCost",
+          "isNullable": true,
+          "dataFormat": "Decimal",
+          "description": "Re heating initial cost"
+        },
+        {
+          "name": "ReHeatingInstallationDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingInstallationDate",
           "isNullable": true,
           "dataFormat": "DateTime",
           "description": "Installation date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "FanMaintenanceInterval",
+          "name": "ReHeatingMaintenanceInterval",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanMaintenanceInterval",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingMaintenanceInterval",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Fan maintenance interval either as string: monthly, quarterly, etc. or as month",
+          "description": "Re heating maintenance interval either as string: monthly, quarterly, etc. or as month",
           "maximumLength": 50
         },
         {
-          "name": "FanTurnoverDate",
+          "name": "ReHeatingTurnoverDate",
           "appliedTraits": [
             "is.dataFormat.date",
             "means.measurement.date",
             "is.dataFormat.time",
             "means.measurement.time"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanTurnoverDate",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingTurnoverDate",
           "isNullable": true,
           "dataFormat": "DateTime",
-          "description": "Fan turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+          "description": "Re heating turnover date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
         },
         {
-          "name": "FanModelNumber",
+          "name": "ReHeatingModelNumber",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanModelNumber",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingModelNumber",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Model number of fan",
+          "description": "Model number of re heating",
           "maximumLength": 50
         },
         {
-          "name": "FanTagNumber",
+          "name": "ReHeatingTagNumber",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanTagNumber",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingTagNumber",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Fan tag number",
+          "description": "Re heating tag number",
           "maximumLength": 50
         },
         {
-          "name": "FanSerialNumber",
+          "name": "ReHeatingSerialNumber",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "UnitHeaterSubComponent/attributeContext/UnitHeaterSubComponent/FanSerialNumber",
+          "attributeContext": "VavBoxReheat/attributeContext/VavBoxReheat/ReHeatingSerialNumber",
           "isNullable": true,
           "dataFormat": "String",
-          "description": "Serial number of fan",
+          "description": "Serial number of re heating",
           "maximumLength": 50
         }
       ],
-      "displayName": "UnitHeaterSubComponent",
-      "description": "Information about steam unit heater",
+      "displayName": "VavBoxReheat",
+      "description": "Information about the vav box reheat",
       "version": "4.3"
     }
   ]

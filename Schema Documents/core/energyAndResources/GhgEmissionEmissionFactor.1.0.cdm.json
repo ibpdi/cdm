@@ -2,7 +2,7 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "cdm:/foundations.cdm.json"
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
       "corpusPath": "GhgEmission.1.0.cdm.json"
@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk GhgEmission. to GhgEmissionEmissionFactor.",
+          "explanation": "fk GhgEmissionEmissionFactor.GhgEmissionId to GhgEmission.GhgEmissionId",
           "entity": {
             "entityReference": "GhgEmission",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk EmissionFactor. to GhgEmissionEmissionFactor.",
+          "explanation": "fk GhgEmissionEmissionFactor.EmissionFactorId to EmissionFactor.EmissionFactorId",
           "entity": {
             "entityReference": "EmissionFactor",
             "appliedTraits": [

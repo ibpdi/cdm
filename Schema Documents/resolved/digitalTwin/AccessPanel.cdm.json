@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "ComponentTypeId",
             "parent": "AccessPanel/attributeContext/AccessPanel",
-            "definition": "resolvedFrom/AccessPanel/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/AccessPanel/hasAttributes/ComponentTypeId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "AccessPanel/attributeContext/AccessPanel/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "ComponentType",
+                "parent": "AccessPanel/attributeContext/AccessPanel/ComponentTypeId",
+                "definition": "resolvedFrom/ComponentType"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "AccessPanel/attributeContext/AccessPanel/SubComponentTypeId",
+                "parent": "AccessPanel/attributeContext/AccessPanel/ComponentTypeId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "AccessPanel/attributeContext/AccessPanel/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "AccessPanel/attributeContext/AccessPanel/ComponentTypeId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "AccessPanel/attributeContext/AccessPanel/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/AccessPanel/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "AccessPanel/attributeContext/AccessPanel/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/AccessPanel/hasAttributes/ComponentTypeId/resolutionGuidance/foreignKeyAttribute/ComponentTypeId",
                         "contents": [
-                          "AccessPanel/hasAttributes/SubComponentTypeId"
+                          "AccessPanel/hasAttributes/ComponentTypeId"
                         ]
                       }
                     ]
@@ -164,7 +164,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "ComponentTypeId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -177,8 +177,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/ComponentType.cdm.json/ComponentType",
+                        "ComponentTypeId"
                       ]
                     ]
                   }
@@ -186,7 +186,7 @@
               ]
             }
           ],
-          "attributeContext": "AccessPanel/attributeContext/AccessPanel/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "AccessPanel/attributeContext/AccessPanel/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

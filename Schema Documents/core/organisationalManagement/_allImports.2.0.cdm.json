@@ -1,0 +1,87 @@
+{
+  "jsonSchemaSemanticVersion": "1.1.0",
+  "imports": [
+    {
+      "corpusPath": "cdm:/foundations.4.3.cdm.json"
+    }
+  ],
+  "definitions": [
+    {
+      "attributeGroupName": "Name",
+      "members": [
+        {
+          "name": "Name",
+          "purpose": "hasA",
+          "dataType": "entityName",
+          "description": "Name of entity.",
+          "maximumLength": 200
+        }
+      ]
+    },
+    {
+      "attributeGroupName": "Type",
+      "members": [
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "description": "Type of entity.",
+          "maximumLength": 75
+        }
+      ]
+    },
+    {
+      "attributeGroupName": "ValidityInfo",
+      "members": [
+        {
+          "name": "ValidFrom",
+          "purpose": "startedOn",
+          "dataType": "dateTime",
+          "description": "The records can be used from this date onwards in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        },
+        {
+          "name": "ValidUntil",
+          "purpose": "endedOn",
+          "dataType": "dateTime",
+          "description": "The records can be used until this date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)",
+          "isNullable": true,
+          "appliedTraits": [
+            "is.formatted.dateTime"
+          ]
+        }
+      ]
+    },
+    {
+      "attributeGroupName": "ContactInfo",
+      "members": [
+        {
+          "name": "Email",
+          "purpose": "hasA",
+          "dataType": "email",
+          "isNullable": true,
+          "description": "Email address of contact person",
+          "maximumLength": 100
+        },
+        {
+          "name": "Telephone",
+          "purpose": "hasA",
+          "dataType": "phone",
+          "isNullable": true,
+          "description": "Phone number of contact person",
+          "maximumLength": 50
+        },
+        {
+          "name": "Fax",
+          "purpose": "hasA",
+          "dataType": "phoneFax",
+          "isNullable": true,
+          "description": "Fax number of contact person",
+          "maximumLength": 50
+        }
+      ]
+    }
+  ]
+}

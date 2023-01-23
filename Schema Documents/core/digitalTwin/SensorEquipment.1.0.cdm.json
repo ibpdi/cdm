@@ -2,9 +2,6 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.1.0.cdm.json"
-    },
-    {
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
@@ -24,7 +21,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk ComponentType. to SensorEquipment.",
+          "explanation": "fk SensorEquipment.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
             "entityReference": "ComponentType",
             "appliedTraits": [

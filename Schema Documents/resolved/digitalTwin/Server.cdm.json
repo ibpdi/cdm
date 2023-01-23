@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "IctHardwareId",
             "parent": "Server/attributeContext/Server",
-            "definition": "resolvedFrom/Server/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/Server/hasAttributes/IctHardwareId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "Server/attributeContext/Server/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "IctHardware",
+                "parent": "Server/attributeContext/Server/IctHardwareId",
+                "definition": "resolvedFrom/IctHardware"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "Server/attributeContext/Server/SubComponentTypeId",
+                "parent": "Server/attributeContext/Server/IctHardwareId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "Server/attributeContext/Server/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "Server/attributeContext/Server/IctHardwareId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "Server/attributeContext/Server/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Server/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "Server/attributeContext/Server/IctHardwareId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/Server/hasAttributes/IctHardwareId/resolutionGuidance/foreignKeyAttribute/IctHardwareId",
                         "contents": [
-                          "Server/hasAttributes/SubComponentTypeId"
+                          "Server/hasAttributes/IctHardwareId"
                         ]
                       }
                     ]
@@ -137,7 +137,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "IctHardwareId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -150,8 +150,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/IctHardware.cdm.json/IctHardware",
+                        "IctHardwareId"
                       ]
                     ]
                   }
@@ -159,7 +159,7 @@
               ]
             }
           ],
-          "attributeContext": "Server/attributeContext/Server/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "Server/attributeContext/Server/IctHardwareId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk System. to SystemSpace.",
+          "explanation": "fk SystemSpace.SystemId to System.SystemId",
           "entity": {
             "entityReference": "System",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Space. to SystemSpace.",
+          "explanation": "fk SystemSpace.SpaceId to Space.SpaceId",
           "entity": {
             "entityReference": "Space",
             "appliedTraits": [

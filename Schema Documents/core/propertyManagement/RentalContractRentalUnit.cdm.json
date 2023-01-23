@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk RentalContract. to RentalContractRentalUnit.",
+          "explanation": "fk RentalContractRentalUnit.RentalContractId to RentalContract.RentalContractId",
           "entity": {
             "entityReference": "RentalContract",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk RentalUnit. to RentalContractRentalUnit.",
+          "explanation": "fk RentalContractRentalUnit.RentalUnitId to RentalUnit.RentalUnitId",
           "entity": {
             "entityReference": "RentalUnit",
             "appliedTraits": [

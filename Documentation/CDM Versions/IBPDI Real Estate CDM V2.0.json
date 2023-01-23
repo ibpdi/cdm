@@ -5746,27 +5746,6 @@
                     "examples": [
                         "Renovation"
                     ]
-                },
-                {
-                    "name": "NumberOfEmployees",
-                    "type": "integer",
-                    "isActivated": true,
-                    "GUID": "12d0da80-f5f6-11ec-b874-3ff3e64a5fa2",
-                    "code": "",
-                    "hackoladeMeta": {},
-                    "description": "Number of employees",
-                    "primaryKey": false,
-                    "relationshipType": "",
-                    "default": "",
-                    "maximum": 100000,
-                    "minimum": 0,
-                    "foreignField": [],
-                    "properties": [],
-                    "foreignCollection": "",
-                    "error": {},
-                    "examples": [
-                        15
-                    ]
                 }
             ],
             "definitions": {
@@ -49667,7 +49646,8 @@
                     "properties": [],
                     "childRelationships": [
                         "42733b81-47b7-4582-a886-cf70fb825734",
-                        "4b36b6f3-2de7-41e0-b735-61e19f9892a7"
+                        "4b36b6f3-2de7-41e0-b735-61e19f9892a7",
+                        "4f1cc68b-4e02-4416-b729-f0a0966c3327"
                     ],
                     "examples": [
                         "NE-281"
@@ -49862,6 +49842,140 @@
             "bucketId": "f8f9e550-f6ab-11ec-b874-3ff3e64a5fa2",
             "hackoladeMeta": {},
             "description": "Linking entity between Neighbourhood and Workspace"
+        },
+        {
+            "collectionName": "TagNeighbourhood",
+            "type": "object",
+            "properties": [
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "GUID": "4685f0a3-fdc6-4c1f-9e33-fb3363c28a7f",
+                    "name": "TagId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "required": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                    "minLength": 1,
+                    "maxLength": 50,
+                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
+                    "foreignCollection": "3f48c697-6e81-4487-b54a-0623c8cd73df",
+                    "properties": [],
+                    "childRelationships": [],
+                    "examples": [
+                        "T-281"
+                    ],
+                    "foreignField": [
+                        "3f48c697-6e81-4487-b54a-0623c8cd73df",
+                        "0121b0ac-6056-40d8-858e-325c595bfede"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "c757d393-c431-4ab5-88dd-53aa9fffabc1",
+                    "error": {}
+                },
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "GUID": "7986d42b-508f-4b87-bb6a-6b86b64ff806",
+                    "name": "NeighbourhoodId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "required": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                    "minLength": 1,
+                    "maxLength": 50,
+                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
+                    "foreignCollection": "f8faf6ca-f6ab-11ec-b874-3ff3e64a5fa2",
+                    "properties": [],
+                    "childRelationships": [],
+                    "examples": [
+                        "NE-281"
+                    ],
+                    "foreignField": [
+                        "f8faf6ca-f6ab-11ec-b874-3ff3e64a5fa2",
+                        "f8fb44e2-f6ab-11ec-b874-3ff3e64a5fa2"
+                    ],
+                    "relationshipType": "Foreign Key",
+                    "parentRelationship": "4f1cc68b-4e02-4416-b729-f0a0966c3327",
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "80f68a30-fb8d-44ce-af10-ae9202535dea"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "a18798fa-180b-45db-9a80-8a22c9307dbf",
+            "bucketId": "f8f9e550-f6ab-11ec-b874-3ff3e64a5fa2",
+            "hackoladeMeta": {},
+            "description": "Linking entity between Tag and Neighbourhood"
+        },
+        {
+            "collectionName": "Tag",
+            "type": "object",
+            "properties": [
+                {
+                    "type": "string",
+                    "primaryKey": true,
+                    "relationshipType": "",
+                    "GUID": "0121b0ac-6056-40d8-858e-325c595bfede",
+                    "name": "TagId",
+                    "code": "",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "required": true,
+                    "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+                    "minLength": 1,
+                    "maxLength": 50,
+                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
+                    "foreignField": [],
+                    "foreignCollection": "",
+                    "properties": [],
+                    "childRelationships": [
+                        "c757d393-c431-4ab5-88dd-53aa9fffabc1"
+                    ],
+                    "error": {},
+                    "examples": [
+                        "T-281"
+                    ]
+                },
+                {
+                    "type": "string",
+                    "primaryKey": false,
+                    "relationshipType": "",
+                    "GUID": "aa230122-cc49-45e4-87f0-ffe563d360e0",
+                    "name": "Name",
+                    "code": "",
+                    "description": "User specific name of tag",
+                    "hackoladeMeta": {},
+                    "isActivated": true,
+                    "minLength": 1,
+                    "required": true,
+                    "maxLength": 200,
+                    "pattern": "[^<>\\[\\]\\{\\}\\|\\\\\\/\\(\\)°\"&=\\+§\\^~:;\\$%!\\?\\0-\\cZ]+$",
+                    "foreignField": [],
+                    "foreignCollection": "",
+                    "properties": [],
+                    "examples": [
+                        "Barrier free"
+                    ],
+                    "error": {}
+                }
+            ],
+            "definitions": {
+                "type": "definitions",
+                "properties": [],
+                "GUID": "4f5e07a6-0ab3-4337-ba92-1867485b2cff"
+            },
+            "isActivated": true,
+            "additionalProperties": false,
+            "GUID": "3f48c697-6e81-4487-b54a-0623c8cd73df",
+            "bucketId": "f8f9e550-f6ab-11ec-b874-3ff3e64a5fa2",
+            "description": "User defined \"tag\" information on neighbourhood"
         },
         {
             "collectionName": "WorkArea",
@@ -50948,7 +51062,9 @@
                 "f8faf6ce-f6ab-11ec-b874-3ff3e64a5fa2",
                 "f8faf6cf-f6ab-11ec-b874-3ff3e64a5fa2",
                 "f8faf6d0-f6ab-11ec-b874-3ff3e64a5fa2",
-                "f8faf6d1-f6ab-11ec-b874-3ff3e64a5fa2"
+                "f8faf6d1-f6ab-11ec-b874-3ff3e64a5fa2",
+                "a18798fa-180b-45db-9a80-8a22c9307dbf",
+                "3f48c697-6e81-4487-b54a-0623c8cd73df"
             ],
             "backgroundColor": {
                 "r": 164,
@@ -58986,6 +59102,48 @@
             "GUID": "d45f8303-2e7c-4d91-919a-547ec61ac8df",
             "parentCollection": "dfdb1a53-bd25-11eb-81e7-9735ef069f63",
             "childCollection": "dfdb1a62-bd25-11eb-81e7-9735ef069f63"
+        },
+        {
+            "name": "fk TagNeighbourhood.TagId to Tag.TagId",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "3f48c697-6e81-4487-b54a-0623c8cd73df",
+                    "0121b0ac-6056-40d8-858e-325c595bfede"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "a18798fa-180b-45db-9a80-8a22c9307dbf",
+                    "4685f0a3-fdc6-4c1f-9e33-fb3363c28a7f"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "c757d393-c431-4ab5-88dd-53aa9fffabc1",
+            "parentCollection": "3f48c697-6e81-4487-b54a-0623c8cd73df",
+            "childCollection": "a18798fa-180b-45db-9a80-8a22c9307dbf"
+        },
+        {
+            "name": "fk TagNeighbourhood.NeighbourhoodId to Neighbourhood.NeighbourhoodId",
+            "relationshipType": "Foreign Key",
+            "parentField": [
+                [
+                    "f8faf6ca-f6ab-11ec-b874-3ff3e64a5fa2",
+                    "f8fb44e2-f6ab-11ec-b874-3ff3e64a5fa2"
+                ]
+            ],
+            "parentCardinality": "1",
+            "childField": [
+                [
+                    "a18798fa-180b-45db-9a80-8a22c9307dbf",
+                    "7986d42b-508f-4b87-bb6a-6b86b64ff806"
+                ]
+            ],
+            "childCardinality": "0..n",
+            "GUID": "4f1cc68b-4e02-4416-b729-f0a0966c3327",
+            "parentCollection": "f8faf6ca-f6ab-11ec-b874-3ff3e64a5fa2",
+            "childCollection": "a18798fa-180b-45db-9a80-8a22c9307dbf"
         }
     ],
     "users": [],
@@ -60980,7 +61138,6 @@
         "f4ec6050-cc4e-11ec-b9da-5d5e14ff10e7": "LandId",
         "f7a2ae40-f5f1-11ec-b874-3ff3e64a5fa2": "TypeOfOwnership",
         "f8176910-f5f1-11ec-b874-3ff3e64a5fa2": "SelfUse",
-        "12d0da80-f5f6-11ec-b874-3ff3e64a5fa2": "NumberOfEmployees",
         "a2f4f5e0-f5f8-11ec-b874-3ff3e64a5fa2": "SensorMeasurementId",
         "a2f4f5e1-f5f8-11ec-b874-3ff3e64a5fa2": "SensorId",
         "a2f4f5e4-f5f8-11ec-b874-3ff3e64a5fa2": "MeasurementDate",
@@ -61605,7 +61762,15 @@
         "2a8f2bc2-9d52-4548-9554-eed41f401e4c": "fk Gateway.ComponentTypeId to ComponentType.ComponentTypeId",
         "91922df3-a5b6-4e40-9274-b1127303580e": "fk IctHardware.ComponentTypeId to ComponentType.ComponentTypeId",
         "7cb3cf16-70ff-4885-9bc2-fdf994174c64": "fk UnitBuilding.UnitId to Unit.UnitId",
-        "d45f8303-2e7c-4d91-919a-547ec61ac8df": "fk UnitFloor.FloorId to Floor.FloorId"
+        "d45f8303-2e7c-4d91-919a-547ec61ac8df": "fk UnitFloor.FloorId to Floor.FloorId",
+        "4685f0a3-fdc6-4c1f-9e33-fb3363c28a7f": "TagId",
+        "7986d42b-508f-4b87-bb6a-6b86b64ff806": "NeighbourhoodId",
+        "a18798fa-180b-45db-9a80-8a22c9307dbf": "TagNeighbourhood",
+        "0121b0ac-6056-40d8-858e-325c595bfede": "TagId",
+        "aa230122-cc49-45e4-87f0-ffe563d360e0": "Name",
+        "3f48c697-6e81-4487-b54a-0623c8cd73df": "Tag",
+        "c757d393-c431-4ab5-88dd-53aa9fffabc1": "fk TagNeighbourhood.TagId to Tag.TagId",
+        "4f1cc68b-4e02-4416-b729-f0a0966c3327": "fk TagNeighbourhood.NeighbourhoodId to Neighbourhood.NeighbourhoodId"
     },
     "definitions": {
         "type": "definitions",
@@ -61630,14 +61795,14 @@
     "creationTS": "2021-05-25T06:50:34.202Z",
     "GUID": "cbea3b10-00ec-11ec-8339-dd68234230e9",
     "isLineageEnabled": false,
-    "lastModifTS": "2023-01-13T16:33:54.423Z",
+    "lastModifTS": "2023-01-20T15:41:20.877Z",
     "persistenceSchemaVersion": "6",
     "isCreatedByPlugin": true,
     "pluginInformation": {
         "pluginEngineVersion": "1.0.0"
     },
     "applicationInformation": {
-        "version": "6.8.2"
+        "version": "6.8.3"
     },
     "hackoladeMeta": {
         "customPropertiesUpdated": true,
@@ -61663,7 +61828,7 @@
                         "x": 3115.1371965079666,
                         "y": 1441.1918795403099,
                         "width": 358,
-                        "height": 465,
+                        "height": 447,
                         "color": {}
                     },
                     {
@@ -63708,6 +63873,22 @@
                         "y": 1633.939393939394,
                         "width": 389,
                         "height": 645,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "a18798fa-180b-45db-9a80-8a22c9307dbf",
+                        "x": 6798.333333333332,
+                        "y": 105.66666666666666,
+                        "width": 242,
+                        "height": 69,
+                        "color": {}
+                    },
+                    {
+                        "GUID": "3f48c697-6e81-4487-b54a-0623c8cd73df",
+                        "x": 7232.333333333332,
+                        "y": 86,
+                        "width": 177,
+                        "height": 69,
                         "color": {}
                     }
                 ],

@@ -2,9 +2,6 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.1.0.cdm.json"
-    },
-    {
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
@@ -20,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Workspace. to WorkspaceSensorMeasurement.",
+          "explanation": "fk WorkspaceSensor.WorkspaceId to Workspace.WorkspaceId",
           "entity": {
             "entityReference": "Workspace",
             "appliedTraits": [
@@ -49,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Sensor. to WorkspaceSensor.",
+          "explanation": "fk WorkspaceSensor.SensorId to Sensor.SensorId",
           "entity": {
             "entityReference": "Sensor",
             "appliedTraits": [

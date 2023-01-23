@@ -2,6 +2,9 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
+      "corpusPath": "cdm:/foundations.cdm.json"
+    },
+    {
       "corpusPath": "_allImports.cdm.json"
     },
     {
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk RentalContract. to RentalOption.",
+          "explanation": "fk RentalOption.RentalContractId to RentalContract.RentalContractId",
           "entity": {
             "entityReference": "RentalContract",
             "appliedTraits": [

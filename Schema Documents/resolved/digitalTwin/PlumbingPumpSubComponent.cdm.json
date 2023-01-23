@@ -40,57 +40,48 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "DomesticWaterPumpId",
+            "name": "PlumbingPumpSubComponentId",
             "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
-            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/DomesticWaterPumpId",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/PlumbingPumpSubComponentId",
             "contents": [
-              "PlumbingPumpSubComponent/hasAttributes/DomesticWaterPumpId"
+              "PlumbingPumpSubComponent/hasAttributes/PlumbingPumpSubComponentId"
             ]
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "PlumbingPumpId",
             "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
-            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/PlumbingPumpId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "PlumbingPump",
+                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PlumbingPumpId",
+                "definition": "resolvedFrom/PlumbingPump"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId",
+                "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PlumbingPumpId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PlumbingPumpId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PlumbingPumpId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/PlumbingPumpId/resolutionGuidance/foreignKeyAttribute/PlumbingPumpId",
                         "contents": [
-                          "PlumbingPumpSubComponent/hasAttributes/SubComponentTypeId"
+                          "PlumbingPumpSubComponent/hasAttributes/PlumbingPumpId"
                         ]
                       }
                     ]
                   }
                 ]
               }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
-            "name": "SubComponent",
-            "parent": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent",
-            "definition": "resolvedFrom/PlumbingPumpSubComponent/hasAttributes/SubComponent",
-            "contents": [
-              "PlumbingPumpSubComponent/hasAttributes/SubComponent"
             ]
           },
           {
@@ -142,20 +133,20 @@
       },
       "hasAttributes": [
         {
-          "name": "DomesticWaterPumpId",
+          "name": "PlumbingPumpSubComponentId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
             "is.dataFormat.array"
           ],
-          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/DomesticWaterPumpId",
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PlumbingPumpSubComponentId",
           "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "PlumbingPumpId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -168,8 +159,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/PlumbingPump.cdm.json/PlumbingPump",
+                        "PlumbingPumpId"
                       ]
                     ]
                   }
@@ -177,22 +168,9 @@
               ]
             }
           ],
-          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/PlumbingPumpId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
-          "maximumLength": 50
-        },
-        {
-          "name": "SubComponent",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array"
-          ],
-          "attributeContext": "PlumbingPumpSubComponent/attributeContext/PlumbingPumpSubComponent/SubComponent",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Plumbing pump sub component",
           "maximumLength": 50
         },
         {

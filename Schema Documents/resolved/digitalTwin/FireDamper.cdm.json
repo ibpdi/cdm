@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubComponentTypeId",
+            "name": "DamperId",
             "parent": "FireDamper/attributeContext/FireDamper",
-            "definition": "resolvedFrom/FireDamper/hasAttributes/SubComponentTypeId",
+            "definition": "resolvedFrom/FireDamper/hasAttributes/DamperId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubComponentType",
-                "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId",
-                "definition": "resolvedFrom/SubComponentType"
+                "name": "Damper",
+                "parent": "FireDamper/attributeContext/FireDamper/DamperId",
+                "definition": "resolvedFrom/Damper"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId",
+                "parent": "FireDamper/attributeContext/FireDamper/DamperId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FireDamper/attributeContext/FireDamper/DamperId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FireDamper/attributeContext/FireDamper/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FireDamper/hasAttributes/SubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubComponentTypeId",
+                        "parent": "FireDamper/attributeContext/FireDamper/DamperId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FireDamper/hasAttributes/DamperId/resolutionGuidance/foreignKeyAttribute/DamperId",
                         "contents": [
-                          "FireDamper/hasAttributes/SubComponentTypeId"
+                          "FireDamper/hasAttributes/DamperId"
                         ]
                       }
                     ]
@@ -279,7 +279,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubComponentTypeId",
+          "name": "DamperId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -292,8 +292,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubComponentType.cdm.json/SubComponentType",
-                        "SubComponentTypeId"
+                        "/core/digitalTwin/Damper.cdm.json/Damper",
+                        "DamperId"
                       ]
                     ]
                   }
@@ -301,7 +301,7 @@
               ]
             }
           ],
-          "attributeContext": "FireDamper/attributeContext/FireDamper/SubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FireDamper/attributeContext/FireDamper/DamperId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

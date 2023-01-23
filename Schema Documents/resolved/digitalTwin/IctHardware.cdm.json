@@ -86,6 +86,15 @@
           },
           {
             "type": "attributeDefinition",
+            "name": "Type",
+            "parent": "IctHardware/attributeContext/IctHardware",
+            "definition": "resolvedFrom/IctHardware/hasAttributes/Type",
+            "contents": [
+              "IctHardware/hasAttributes/Type"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
             "name": "MountedInRack",
             "parent": "IctHardware/attributeContext/IctHardware",
             "definition": "resolvedFrom/IctHardware/hasAttributes/MountedInRack",
@@ -144,6 +153,19 @@
           "attributeContext": "IctHardware/attributeContext/IctHardware/ComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
+          "maximumLength": 50
+        },
+        {
+          "name": "Type",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "IctHardware/attributeContext/IctHardware/Type",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Ict hardware type",
           "maximumLength": 50
         },
         {

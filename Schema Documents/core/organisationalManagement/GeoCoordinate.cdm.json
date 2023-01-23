@@ -2,10 +2,10 @@
   "jsonSchemaSemanticVersion": "1.1.0",
   "imports": [
     {
-      "corpusPath": "_allImports.cdm.json"
+      "corpusPath": "cdm:/foundations.cdm.json"
     },
     {
-      "corpusPath": "cdm:/foundations.cdm.json"
+      "corpusPath": "_allImports.cdm.json"
     },
     {
       "corpusPath": "Address.cdm.json"
@@ -24,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk Address. to GeoCoordinate.",
+          "explanation": "fk GeoCoordinate.AddressId to Address.AddressId",
           "entity": {
             "entityReference": "Address",
             "appliedTraits": [

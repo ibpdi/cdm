@@ -113,9 +113,25 @@
             "type": "attributeDefinition",
             "name": "Name",
             "parent": "GhgEmission/attributeContext/GhgEmission",
-            "definition": "resolvedFrom/GhgEmission/hasAttributes/Name",
+            "definition": "resolvedFrom/Name",
             "contents": [
-              "GhgEmission/hasAttributes/Name"
+              {
+                "type": "attributeGroup",
+                "name": "Name",
+                "parent": "GhgEmission/attributeContext/GhgEmission/Name",
+                "definition": "resolvedFrom/Name",
+                "contents": [
+                  {
+                    "type": "attributeDefinition",
+                    "name": "Name",
+                    "parent": "GhgEmission/attributeContext/GhgEmission/Name/Name",
+                    "definition": "resolvedFrom/Name/members/Name",
+                    "contents": [
+                      "GhgEmission/hasAttributes/Name"
+                    ]
+                  }
+                ]
+              }
             ]
           },
           {
@@ -308,8 +324,7 @@
             "is.dataFormat.array",
             "means.entityName"
           ],
-          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Name",
-          "isNullable": true,
+          "attributeContext": "GhgEmission/attributeContext/GhgEmission/Name/Name/Name",
           "dataFormat": "String",
           "description": "Name of entity.",
           "maximumLength": 200

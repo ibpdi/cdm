@@ -17,7 +17,7 @@
       "extendsEntity": "CdmEntity",
       "hasAttributes": [
         {
-          "explanation": "fk Component. to ComponentSite.",
+          "explanation": "fk ComponentSite.ComponentId to Component.ComponentId",
           "entity": {
             "entityReference": "Component",
             "appliedTraits": [
@@ -46,7 +46,7 @@
           "purpose": "identifiedBy"
         },
         {
-          "explanation": "fk Site. to ComponentSite.",
+          "explanation": "fk ComponentSite.SiteId to Site.SiteId",
           "entity": {
             "entityReference": "Site",
             "appliedTraits": [

@@ -49,33 +49,33 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "SubSubComponentTypeId",
+            "name": "TerminalUnitId",
             "parent": "FanPoweredBox/attributeContext/FanPoweredBox",
-            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/SubSubComponentTypeId",
+            "definition": "resolvedFrom/FanPoweredBox/hasAttributes/TerminalUnitId",
             "contents": [
               {
                 "type": "entity",
-                "name": "SubSubComponentType",
-                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId",
-                "definition": "resolvedFrom/SubSubComponentType"
+                "name": "TerminalUnit",
+                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/TerminalUnitId",
+                "definition": "resolvedFrom/TerminalUnit"
               },
               {
                 "type": "generatedSet",
                 "name": "_generatedAttributeSet",
-                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId",
+                "parent": "FanPoweredBox/attributeContext/FanPoweredBox/TerminalUnitId",
                 "contents": [
                   {
                     "type": "generatedRound",
                     "name": "_generatedAttributeRound0",
-                    "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId/_generatedAttributeSet",
+                    "parent": "FanPoweredBox/attributeContext/FanPoweredBox/TerminalUnitId/_generatedAttributeSet",
                     "contents": [
                       {
                         "type": "addedAttributeIdentity",
                         "name": "_foreignKey",
-                        "parent": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/FanPoweredBox/hasAttributes/SubSubComponentTypeId/resolutionGuidance/foreignKeyAttribute/SubSubComponentTypeId",
+                        "parent": "FanPoweredBox/attributeContext/FanPoweredBox/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0",
+                        "definition": "resolvedFrom/FanPoweredBox/hasAttributes/TerminalUnitId/resolutionGuidance/foreignKeyAttribute/TerminalUnitId",
                         "contents": [
-                          "FanPoweredBox/hasAttributes/SubSubComponentTypeId"
+                          "FanPoweredBox/hasAttributes/TerminalUnitId"
                         ]
                       }
                     ]
@@ -457,7 +457,7 @@
           "maximumLength": 50
         },
         {
-          "name": "SubSubComponentTypeId",
+          "name": "TerminalUnitId",
           "appliedTraits": [
             "is.dataFormat.character",
             "is.dataFormat.big",
@@ -470,8 +470,8 @@
                     "entityShape": "entityGroupSet",
                     "constantValues": [
                       [
-                        "/core/digitalTwin/SubSubComponentType.cdm.json/SubSubComponentType",
-                        "SubSubComponentTypeId"
+                        "/core/digitalTwin/TerminalUnit.cdm.json/TerminalUnit",
+                        "TerminalUnitId"
                       ]
                     ]
                   }
@@ -479,7 +479,7 @@
               ]
             }
           ],
-          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/SubSubComponentTypeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
+          "attributeContext": "FanPoweredBox/attributeContext/FanPoweredBox/TerminalUnitId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

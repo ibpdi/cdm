@@ -5,6 +5,9 @@
       "corpusPath": "cdm:/foundations.4.3.cdm.json"
     },
     {
+      "corpusPath": "_allImports.1.0.cdm.json"
+    },
+    {
       "corpusPath": "ComponentType.1.0.cdm.json"
     }
   ],
@@ -21,7 +24,7 @@
           "maximumLength": 50
         },
         {
-          "explanation": "fk ComponentType. to Damper.",
+          "explanation": "fk Damper.ComponentTypeId to ComponentType.ComponentTypeId",
           "entity": {
             "entityReference": "ComponentType",
             "appliedTraits": [
@@ -47,6 +50,14 @@
               }
             }
           }
+        },
+        {
+          "name": "Type",
+          "purpose": "hasA",
+          "dataType": "string",
+          "isNullable": true,
+          "description": "Define the specific damper type",
+          "maximumLength": 50
         },
         {
           "name": "LeakageClass",

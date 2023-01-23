@@ -86,43 +86,6 @@
           },
           {
             "type": "attributeDefinition",
-            "name": "ServitudeId",
-            "parent": "Land/attributeContext/Land",
-            "definition": "resolvedFrom/Land/hasAttributes/ServitudeId",
-            "contents": [
-              {
-                "type": "entity",
-                "name": "Servitude",
-                "parent": "Land/attributeContext/Land/ServitudeId",
-                "definition": "resolvedFrom/Servitude"
-              },
-              {
-                "type": "generatedSet",
-                "name": "_generatedAttributeSet",
-                "parent": "Land/attributeContext/Land/ServitudeId",
-                "contents": [
-                  {
-                    "type": "generatedRound",
-                    "name": "_generatedAttributeRound0",
-                    "parent": "Land/attributeContext/Land/ServitudeId/_generatedAttributeSet",
-                    "contents": [
-                      {
-                        "type": "addedAttributeIdentity",
-                        "name": "_foreignKey",
-                        "parent": "Land/attributeContext/Land/ServitudeId/_generatedAttributeSet/_generatedAttributeRound0",
-                        "definition": "resolvedFrom/Land/hasAttributes/ServitudeId/resolutionGuidance/foreignKeyAttribute/ServitudeId",
-                        "contents": [
-                          "Land/hasAttributes/ServitudeId"
-                        ]
-                      }
-                    ]
-                  }
-                ]
-              }
-            ]
-          },
-          {
-            "type": "attributeDefinition",
             "name": "Name",
             "parent": "Land/attributeContext/Land",
             "definition": "resolvedFrom/Name",
@@ -285,35 +248,6 @@
           "attributeContext": "Land/attributeContext/Land/SiteId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
           "dataFormat": "String",
           "description": "Reference to the site which the land belongs to",
-          "maximumLength": 50
-        },
-        {
-          "name": "ServitudeId",
-          "appliedTraits": [
-            "is.dataFormat.character",
-            "is.dataFormat.big",
-            "is.dataFormat.array",
-            {
-              "traitReference": "is.linkedEntity.identifier",
-              "arguments": [
-                {
-                  "entityReference": {
-                    "entityShape": "entityGroupSet",
-                    "constantValues": [
-                      [
-                        "/core/digitalTwin/Servitude.cdm.json/Servitude",
-                        "ServitudeId"
-                      ]
-                    ]
-                  }
-                }
-              ]
-            }
-          ],
-          "attributeContext": "Land/attributeContext/Land/ServitudeId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
-          "isNullable": true,
-          "dataFormat": "String",
-          "description": "Reference to the Servitude which belongs to the land",
           "maximumLength": 50
         },
         {

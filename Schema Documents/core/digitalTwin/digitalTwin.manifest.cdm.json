@@ -145,6 +145,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "CoGenerator",
+      "entityPath": "CoGenerator.cdm.json/CoGenerator",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "Component",
       "entityPath": "Component.cdm.json/Component",
       "dataPartitionPatterns": []
@@ -391,6 +397,12 @@
     },
     {
       "type": "LocalEntity",
+      "entityName": "HvacFanSubComponent",
+      "entityPath": "HvacFanSubComponent.cdm.json/HvacFanSubComponent",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
       "entityName": "HvacHeatTracing",
       "entityPath": "HvacHeatTracing.cdm.json/HvacHeatTracing",
       "dataPartitionPatterns": []
@@ -399,6 +411,12 @@
       "type": "LocalEntity",
       "entityName": "HvacPump",
       "entityPath": "HvacPump.cdm.json/HvacPump",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "HvacShutOffValve",
+      "entityPath": "HvacShutOffValve.cdm.json/HvacShutOffValve",
       "dataPartitionPatterns": []
     },
     {
@@ -475,12 +493,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "OtherHvacFan",
-      "entityPath": "OtherHvacFan.cdm.json/OtherHvacFan",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "PlumbingExpansionTank",
       "entityPath": "PlumbingExpansionTank.cdm.json/PlumbingExpansionTank",
       "dataPartitionPatterns": []
@@ -499,14 +511,14 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "PlumbingStorageTank",
-      "entityPath": "PlumbingStorageTank.cdm.json/PlumbingStorageTank",
+      "entityName": "PlumbingShutOffValve",
+      "entityPath": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve",
       "dataPartitionPatterns": []
     },
     {
       "type": "LocalEntity",
-      "entityName": "PlumbingShutOffValve",
-      "entityPath": "PlumbingShutOffValve.cdm.json/PlumbingShutOffValve",
+      "entityName": "PlumbingStorageTank",
+      "entityPath": "PlumbingStorageTank.cdm.json/PlumbingStorageTank",
       "dataPartitionPatterns": []
     },
     {
@@ -607,12 +619,6 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "Servitude",
-      "entityPath": "Servitude.cdm.json/Servitude",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
       "entityName": "Site",
       "entityPath": "Site.cdm.json/Site",
       "dataPartitionPatterns": []
@@ -639,18 +645,6 @@
       "type": "LocalEntity",
       "entityName": "SprinklerValve",
       "entityPath": "SprinklerValve.cdm.json/SprinklerValve",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "SubComponentType",
-      "entityPath": "SubComponentType.cdm.json/SubComponentType",
-      "dataPartitionPatterns": []
-    },
-    {
-      "type": "LocalEntity",
-      "entityName": "SubSubComponentType",
-      "entityPath": "SubSubComponentType.cdm.json/SubSubComponentType",
       "dataPartitionPatterns": []
     },
     {
@@ -781,8 +775,8 @@
     },
     {
       "type": "LocalEntity",
-      "entityName": "UnitHeaterSubComponent",
-      "entityPath": "UnitHeaterSubComponent.cdm.json/UnitHeaterSubComponent",
+      "entityName": "UnitHeater",
+      "entityPath": "UnitHeater.cdm.json/UnitHeater",
       "dataPartitionPatterns": []
     },
     {
@@ -819,6 +813,12 @@
       "type": "LocalEntity",
       "entityName": "VariableFrequencyDrive",
       "entityPath": "VariableFrequencyDrive.cdm.json/VariableFrequencyDrive",
+      "dataPartitionPatterns": []
+    },
+    {
+      "type": "LocalEntity",
+      "entityName": "VavBoxReheat",
+      "entityPath": "VavBoxReheat.cdm.json/VavBoxReheat",
       "dataPartitionPatterns": []
     },
     {

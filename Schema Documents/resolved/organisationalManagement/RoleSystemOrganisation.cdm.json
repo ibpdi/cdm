@@ -26,19 +26,6 @@
         "definition": "resolvedFrom/RoleSystemOrganisation",
         "contents": [
           {
-            "type": "entityReferenceExtends",
-            "name": "extends",
-            "parent": "RoleSystemOrganisation/attributeContext/RoleSystemOrganisation",
-            "contents": [
-              {
-                "type": "entity",
-                "name": "CdmEntity",
-                "parent": "RoleSystemOrganisation/attributeContext/RoleSystemOrganisation/extends",
-                "definition": "resolvedFrom/CdmEntity"
-              }
-            ]
-          },
-          {
             "type": "attributeDefinition",
             "name": "RoleId",
             "parent": "RoleSystemOrganisation/attributeContext/RoleSystemOrganisation",
@@ -241,8 +228,7 @@
         }
       ],
       "displayName": "RoleSystemOrganisation",
-      "description": "Linking entity between Role, System and Organisation",
-      "version": "4.3"
+      "description": "Linking entity between Role, System and Organisation"
     }
   ]
 }
