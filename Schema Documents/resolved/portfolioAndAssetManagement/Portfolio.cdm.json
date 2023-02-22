@@ -193,6 +193,24 @@
             "contents": [
               "Portfolio/hasAttributes/Currency"
             ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReportingDate",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/ReportingDate",
+            "contents": [
+              "Portfolio/hasAttributes/ReportingDate"
+            ]
+          },
+          {
+            "type": "attributeDefinition",
+            "name": "ReportingCycle",
+            "parent": "Portfolio/attributeContext/Portfolio",
+            "definition": "resolvedFrom/Portfolio/hasAttributes/ReportingCycle",
+            "contents": [
+              "Portfolio/hasAttributes/ReportingCycle"
+            ]
           }
         ]
       },
@@ -1390,6 +1408,32 @@
               "displayOrder": "168"
             }
           ]
+        },
+        {
+          "name": "ReportingDate",
+          "appliedTraits": [
+            "is.dataFormat.date",
+            "means.measurement.date",
+            "is.dataFormat.time",
+            "means.measurement.time"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/ReportingDate",
+          "isNullable": true,
+          "dataFormat": "DateTime",
+          "description": "Reporting date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)"
+        },
+        {
+          "name": "ReportingCycle",
+          "appliedTraits": [
+            "is.dataFormat.character",
+            "is.dataFormat.big",
+            "is.dataFormat.array"
+          ],
+          "attributeContext": "Portfolio/attributeContext/Portfolio/ReportingCycle",
+          "isNullable": true,
+          "dataFormat": "String",
+          "description": "Reporting cycle which is used to determine the next reporting date ",
+          "maximumLength": 50
         }
       ],
       "displayName": "Portfolio",
