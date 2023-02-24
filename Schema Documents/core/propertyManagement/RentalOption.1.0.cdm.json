@@ -49,8 +49,7 @@
                 "maximumLength": 50
               }
             }
-          },
-          "purpose": "identifiedBy"
+          }
         },
         {
           "attributeGroupReference": "Type"
