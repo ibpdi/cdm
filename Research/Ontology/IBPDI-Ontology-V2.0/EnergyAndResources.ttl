@@ -1,0 +1,240 @@
+@prefix : <http://www.ibpdi.org/ontologies/EnergyAndResources#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:ClimateBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ClimateSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:EmissionFactorBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:EmissionFactorId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:EmissionFactorOperationalMeasurement a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:EmissionFactorSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:GhgEmissionBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:GhgEmissionEmissionFactor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:GhgEmissionId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:GhgEmissionSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:OperationalMeasurementLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:OperationalMeasurementUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:SustainabilityIndicatorEmissionFactor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:Climate a owl:Class .
+
+:EmissionFactor a owl:Class .
+
+:GhgEmission a owl:Class .
+
+:OperationalMeasurement a owl:Class .
+
+:SustainabilityIndicator a owl:Class .
+
+:hasBaseYear a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCategory a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCity a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasClimateId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasClimateUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCoordinateSystem a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCountry a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmissionFactorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmissionFactorType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmissionFactorUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmissionScope a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEnsembleMember a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExperiment a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGhgEmissionAccuracy a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGhgEmissionId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGhgEmissionSubType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGhgEmissionType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGhgEmissionUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGlobalCirculationModel a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLatitude a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasLifeCycleAssessment a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLocation a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLocationType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLongitude a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMeasurementDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOperationalMeasurementAccuracy a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOperationalMeasurementId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOperationalMeasurementSubType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOperationalMeasurementType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOperationalMeasurementUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasParentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPosX a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPosY a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPostingDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasProcuredBy a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPurpose a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReferenceArea a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRegion a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRegionalClimateModel a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReportingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSensorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSimulationVersion a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSource a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpaceType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpatialResolution a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSustainabilityIndicatorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSustainabilityIndicatorSubType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSustainabilityIndicatorType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSustainabilityIndicatorUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTemporalResolution a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValue a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVariable a owl:DataProperty ;
+    rdfs:range xsd:string .
+

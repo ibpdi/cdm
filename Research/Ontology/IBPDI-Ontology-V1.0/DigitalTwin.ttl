@@ -1,0 +1,2169 @@
+@prefix : <http://www.ibpdi.org/ontologies/DigitalTwin#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AreaMeasurementBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AreaMeasurementFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AreaMeasurementId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:AreaMeasurementLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AreaMeasurementRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AreaMeasurementSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AreaMeasurementSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AreaMeasurementUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:BuildingId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:CertificateBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CertificateComponent a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CertificateId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:CertificateSystem a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CertificateValuation a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentSystem a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ComponentUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:FloorId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:LandId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:ServitudeId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:SiteId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:SpaceId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:SystemBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:SystemFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:SystemRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:SystemSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:SystemSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:SystemUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:UnitBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:UnitFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:UnitId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:UnitLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:UnitSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:UnitSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:AccessPanel a owl:Class .
+
+:AirCompressor a owl:Class .
+
+:AirFilter a owl:Class .
+
+:AirHandlingUnit a owl:Class .
+
+:AreaMeasurement a owl:Class .
+
+:AutomaticTransferSwitch a owl:Class .
+
+:BacNetController a owl:Class .
+
+:Boiler a owl:Class .
+
+:Building a owl:Class .
+
+:CeilingFan a owl:Class .
+
+:Certificate a owl:Class .
+
+:Chiller a owl:Class .
+
+:CoGenerator a owl:Class .
+
+:Component a owl:Class .
+
+:ComponentType a owl:Class .
+
+:CondensingUnit a owl:Class .
+
+:Controller a owl:Class .
+
+:CoolingTower a owl:Class .
+
+:Damper a owl:Class .
+
+:DataNetworkEquipment a owl:Class .
+
+:DataNetworkSubComponent a owl:Class .
+
+:ElectricalDistributionEquipmentSubComponent a owl:Class .
+
+:ElectricalMeter a owl:Class .
+
+:ElectricalPanelBoard a owl:Class .
+
+:ElectricalPanelBoardMcb a owl:Class .
+
+:ElectricalPanelBoardMlo a owl:Class .
+
+:ElectricalSystem a owl:Class .
+
+:ElectricalVehicleChargingStation a owl:Class .
+
+:ElectronicSafetyAndSecuritySystem a owl:Class .
+
+:Elevator a owl:Class .
+
+:ElevatorMachine a owl:Class .
+
+:Escalator a owl:Class .
+
+:EthernetSwitchPort a owl:Class .
+
+:FanCoilUnit a owl:Class .
+
+:FanCoilUnitReheat a owl:Class .
+
+:FanPoweredBox a owl:Class .
+
+:FanPoweredBoxReheat a owl:Class .
+
+:Faucet a owl:Class .
+
+:FireDamper a owl:Class .
+
+:FirePump a owl:Class .
+
+:FireSprinklerHead a owl:Class .
+
+:Floor a owl:Class .
+
+:FlushometerValve a owl:Class .
+
+:GasMeter a owl:Class .
+
+:Gateway a owl:Class .
+
+:Generator a owl:Class .
+
+:HvacFan a owl:Class .
+
+:HvacHeatTracing a owl:Class .
+
+:HvacPump a owl:Class .
+
+:HvacShutOffValve a owl:Class .
+
+:HvacSystem a owl:Class .
+
+:HvacTank a owl:Class .
+
+:HvacValve a owl:Class .
+
+:IctHardware a owl:Class .
+
+:InformationAndCommunicationSystem a owl:Class .
+
+:ItRack a owl:Class .
+
+:JockeyPump a owl:Class .
+
+:Land a owl:Class .
+
+:LightingSystem a owl:Class .
+
+:Luminaire a owl:Class .
+
+:ModbusController a owl:Class .
+
+:MovingWalkway a owl:Class .
+
+:OtherHvacFan a owl:Class .
+
+:PlumbingExpansionTank a owl:Class .
+
+:PlumbingPump a owl:Class .
+
+:PlumbingPumpSubComponent a owl:Class .
+
+:PlumbingShutOffValve a owl:Class .
+
+:PlumbingStorageTank a owl:Class .
+
+:PlumbingSystem a owl:Class .
+
+:PlumbingTank a owl:Class .
+
+:PlumbingValve a owl:Class .
+
+:PlumbingValveSubComponent a owl:Class .
+
+:SensorEquipment a owl:Class .
+
+:Server a owl:Class .
+
+:Servitudes a owl:Class .
+
+:Site a owl:Class .
+
+:Space a owl:Class .
+
+:SprinklerHeatTracing a owl:Class .
+
+:SprinklerTank a owl:Class .
+
+:SprinklerValve a owl:Class .
+
+:SubComponentType a owl:Class .
+
+:SubSubComponentType a owl:Class .
+
+:System a owl:Class .
+
+:TankWaterHeater a owl:Class .
+
+:TankWaterHeaterSubComponent a owl:Class .
+
+:TanklessWaterHeater a owl:Class .
+
+:TanklessWaterHeaterSubComponent a owl:Class .
+
+:TerminalUnit a owl:Class .
+
+:ThermalMeter a owl:Class .
+
+:Toilet a owl:Class .
+
+:ToiletFlushometer a owl:Class .
+
+:ToiletTank a owl:Class .
+
+:TransferSwitch a owl:Class .
+
+:Transformer a owl:Class .
+
+:Unit a owl:Class .
+
+:UnitHeaterSubComponent a owl:Class .
+
+:Ups a owl:Class .
+
+:UrinalFlushometer a owl:Class .
+
+:VariableFrequencyDrive a owl:Class .
+
+:WaterFiltration a owl:Class .
+
+:WaterHeater a owl:Class .
+
+:WaterMeter a owl:Class .
+
+:WirelessAccessPoint a owl:Class .
+
+:hasAccessPanelId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAccessPanelType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasActualExhaustAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasActualLoad a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasActualSupplyAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasAddress a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAirCompressorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAirConditioning a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasAirFilterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAirHandlingUnitId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAirflowModulation a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAirflowUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAlarmType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAreaMeasurementAccuracy a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAreaMeasurementId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAreaMeasurementType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAreaMeasurementUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasArrangement a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBacNetControllerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBackupBatteryCapacity a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasBarcode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBatteryPercentage a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasBladeDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasBladeType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBoilerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBoilerType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBuildingCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBuildingId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBuildingStatus a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBulkStorageCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasCableCategory a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCableRating a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCableType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCalculatedCoolingLoad a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasCalculatedHeatingLoad a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasCalculatedSupplyAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasCeIdentification a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCeilingFanId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCeilingFanType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCertificateId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCertificateType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCertificateUrl a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasChargingLevel a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasChillerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasChillerType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCircuitLoadName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCircuitName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCircuitNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasClass a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasClimateCooled a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasClimateHeated a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasCoGeneratorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCoUseArea a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasComponentType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasComponentTypeId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasComponentTypeType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCompressorType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCondensingUnitId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCondensingUnitType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasConditionStatus a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasConfiguration a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasConnectedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasConnectorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasConstructionYear a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasControllerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCoolingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasCoolingSensibleHeatRatio a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasCoolingTowerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCounter a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasCurrency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCurrentDraw a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDamperId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDataNetworkEquipmentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDataNetworkSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDayTankCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDedicatedCircuit a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasDehumidificationMethod a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDeltaTemperature a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDescription a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDesignCoolingLoad a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDesignHeatingLoad a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDesignLoadPerArea a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDetected a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasDischargeDuctworkConfiguration a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDisplayType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDocumentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDomesticWaterPumpId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDriveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletConfiguration a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletCurrency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDuctInletInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDuctInletInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletModel a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletShape a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDuctInletSize a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDuctInletTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDuctInletTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasEffectZonesCooling a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasEffectZonesHeating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasEffectZonesVentilation a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasElectricUnitHeaterPowerInput a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasElectricVehicleChargingStations a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasElectricalCurrentDensity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasElectricalDistributionEquipmentSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalMeterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalMeterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalPanelBoardId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalPanelBoardSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalPowerFactor a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasElectricalSource a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalSystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectricalVehicleChargingStationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElectronicSafetyAndSecuritySystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElevatorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElevatorMachineId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElevatorMachineType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasElevatorType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmergencyCommunicationOneWayVideo a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasEmergencyCommunicationTwoWayMessageDisplay a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasEmergencyCommunicationTwoWayVoice a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasEnabled a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasEnergyEfficiencyClass a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEnergyEfficiencyRating a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEnergyRate a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasEnergyTotal a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasEscalatorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEscalatorType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEstimatedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasEthernetSwitchPortId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanDriveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasExhaustFanExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExhaustFanInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExhaustFanInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanMaxAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExhaustFanMinAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExhaustFanModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanMotorPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExhaustFanName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanNominalAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExhaustFanSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExhaustFanTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasExpectedLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExportEnergy a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasExportPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFailSafeCapability a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasFanCoilUnitId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanCoilUnitReheatType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanCoilUnitType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanDriveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasFanExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFanInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFanInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanMaxAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFanMinAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFanModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanMotorPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFanName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanNominalAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFanPoweredBoxId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanPoweredBoxReheatId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFanTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFaucetId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFaucetType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFibreType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFilterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFilterationRating a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFireDamperId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFirePumpId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFireRating a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFireServiceAccessElevator a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasFireSprinklerHeadId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFireSprinklerHeadType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFirstHourDelivery a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFloorCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFloorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFloorNumber a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasFlowCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFlushingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFlushometerValveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFlushometerValveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFrameMaterial a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFreeAirDelivery a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasFrequency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFuelType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGasMeterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGasMeterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGatewayId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGeneratorId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGeometrySpatialReference a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGeorefId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGlareIndex a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasHVACConnectedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHVACEstimatedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeadCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeatingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeatingMethodCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasHeatingMethodExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeatingMethodInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeatingMethodInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodOutsideDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeatingMethodSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeatingMethodType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHeight a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHeightRUs a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHotWaterUnitHeaterFlowCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasHumidificationMethod a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacFanId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacHeatTracingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacPumpId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacPumpType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacShutOffValveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacSystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacTankId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacTankType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHvacValveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasIEEEIlluminationLevels a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasIctHardwareId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasIlluminationUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasImportEnergy a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasImportPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasInclination a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasInformationAndCommunicationSystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasInputPhases a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasInputVoltage a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasInstallationType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasIssuingDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasItRackId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasItRackType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasJockeyPumpId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasJockeyPumpType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasKFactorImperial a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasKFactorMetric a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasLandCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLandCoverage a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLandId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLandParcelNr a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLandStatus a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLeakageClass a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLightBrightness a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasLightingConnectedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasLightingEstimatedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasLightingSystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLoadUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLuminaireId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLuminaireType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusCurrentRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMainBusDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasMainBusExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMainBusInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMainBusInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusMaterial a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainBusTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainsRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaintenanceGroup a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMaintenanceRelevance a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasManufacturerCoilBypassFactor a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMass a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMassFlow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaterial a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMaxAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxFlowRate a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxLandings a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxLength a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxNumberOfPoles a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasMaxRotationSpeed a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxTravelDistance a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxTravelSpeed a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaxVerticalRise a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaximumCoolingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaximumNumberOfPoleBreakers a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasMaximumOccupancy a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasMcbRating a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMeasures a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMedium a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMinAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMixingBoxCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasMixingBoxEconomiser a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMixingBoxInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMixingBoxInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMixingBoxTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasModeOfOperation a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasModel a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMonumentProtection a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasMotorPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMountedInRack a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasMountedOn a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasMounting a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMovingWalkwayId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMovingWalkwayType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasNetEnergy a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNetPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNetSensibleCoolingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNetSensibleHeatingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNominalAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNominalCoolingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNominalHeatingCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasNumberOfHandles a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasNumberOfHotConductors a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasNumberOfNeutralConductors a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasNumberOfPoles a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasNumberOfPorts a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasNumberOfRuns a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasOtherConnectedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasOtherEstimatedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasOtherHvacFanId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOtherHvacFanType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOutputPhases a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOutputVoltage a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasParkingSpaces a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPersonCapacity a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPhases a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPipeDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPlumbingExpansionTankId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingExpansionTankType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingPumpId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingPumpSubComponentType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingPumpType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingShutOffValveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingShutOffValveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingStorageTankId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingStorageTankType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingSystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingTankId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingValveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingValveSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPlumbingVolume a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPoles a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPortSpeed a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPortType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPowerConnectedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPowerDensity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPowerEstimatedDemand a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPowerInput a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPowerOutput a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPowerOutputKva a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPreHeatingCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPreHeatingExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPreHeatingInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPreHeatingInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingOutsideDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPreHeatingSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreHeatingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPressureCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPrimaryCeilingMaterial a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasPrimaryCoolingExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPrimaryCoolingInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPrimaryCoolingInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingMethodRefrigerantType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingMethodType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingMethodefrigerantType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingOutsideDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPrimaryCoolingSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryCoolingTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryEnergyType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryFloorMaterial a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryHeatingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryTypeOfBuilding a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryWallMaterial a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryWaterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimePower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPrimePowerKva a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPumpingMedia a owl:DataProperty ;
+    rdfs:range xsd:decimal,
+        xsd:string .
+
+:hasRackPosition a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasReHeatingExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReHeatingInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReHeatingInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingOutsideDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReHeatingSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReHeatingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRecovery100FRise a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasRefrigerantType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRegistrationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRegistrationKey a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentability a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasReturnFanCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanDriveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasReturnFanExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReturnFanInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReturnFanInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanMaxAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReturnFanMinAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReturnFanModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanMotorPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReturnFanName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanNominalAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasReturnFanSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnFanTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReturnTemperature a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasRoomCavityRatio a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSecondaryCoolingCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasSecondaryCoolingExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSecondaryCoolingInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSecondaryCoolingInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingMethodRefrigerantType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingMethodType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingOutsideDiameter a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSecondaryCoolingSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryCoolingTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryHeatingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryTypeOfBuilding a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSelfUse a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasSensorEquipmentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSensorEquipmentType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasServerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasServitudeId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasServitudesType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasShortCircuitRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSignalType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSiteCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSiteId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSiteStatus a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSiteType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSizeKva a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSolarReflectanceIndex a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpaceCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpaceHeight a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpaceHeightUsable a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpaceId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpaceNumber a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpaceType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpaceVolumeGross a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpaceVolumeNet a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpecifiedExhaustAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSpecifiedSupplyAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSprinklerHeatTracingId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSprinklerHeatTracingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSprinklerTankId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSprinklerValveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStandard a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStandbyPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasStandbyPowerKva a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasStatusCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSteamUnitHeaterCondensate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStepWidth a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSubComponent a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSubComponentTypeId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSubComponentTypeType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSubSubComponent a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSubSubComponentTypeId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSubSubComponentTypeType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanCommissionDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanDriveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanDurationLifeYear a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasSupplyFanExpectedEndOfLife a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanExpectedReplacementCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSupplyFanInitialCost a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSupplyFanInstallationDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanMaintenanceInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanMaxAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSupplyFanMinAirflowRating a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSupplyFanModelNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanMotorPower a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSupplyFanName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanNominalAirflow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSupplyFanSerialNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyFanTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSupplyTemperature a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSwitchingMechanism a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSystemId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSystemPressure a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasSystemReferenceId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSystemStatus a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSystemType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTagNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTankCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasTankWaterHeaterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTankWaterHeaterSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTanklessWaterHeaterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTanklessWaterHeaterSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTechnology a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTenantStructure a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasThermalMeterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasThermalMeterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasThickness a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasToiletFlushometerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasToiletId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasToiletTankId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTotalPanels a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasTransferSwitchId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTransformerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTransformerType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTransitionType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTrueCurrent a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasTrueLoad a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasTurnoverDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTypeOfOwnership a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUnitCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUnitHeaterSubComponentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUnitHeaterSubComponentType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUnitId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUnitType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUpsId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUrinalFlushometerId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUrlLibrary a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValue a owl:DataProperty ;
+    rdfs:range xsd:decimal,
+        xsd:string .
+
+:hasVariableFrequencyDriveId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVariableFrequencyDriveType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVentilationConfiguration a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVentilationStrategy a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVentilationType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVoltagePrimary a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVoltageSecondary a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVolume a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVolumeDomesticColdWater a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasVolumeDomesticHotWater a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasVolumeFireDepartmentWater a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasVolumeFlow a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVolumeSanitaryWater a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasVolumeStormWater a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasVolumeTotal a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVolumeWasteWater a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasWarrantyDuration a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasWarrantyStartDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWaterFilterationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWaterFiltrationType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWaterHeaterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWaterMeterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWaterMeterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWaterPerFlush a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasWeightCapacity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasWidth a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasWifiSignalStrength a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWireSize a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasWireType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWirelessAccessPointId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWirelessAccessPointType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkingPressure a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasYearOfLastRefurbishment a owl:DataProperty ;
+    rdfs:range xsd:string .
+

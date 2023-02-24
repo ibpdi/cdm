@@ -1,0 +1,628 @@
+@prefix : <http://www.ibpdi.org/ontologies/PropertyManagement#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:Dunning a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Dunning level" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "DunningLevel" ;
+            sh:path :hasDunningLevel ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "DunningId" ;
+            sh:path :hasDunningId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalPaymentId" ;
+            sh:node :RentalPaymentId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Dunning Amount" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "DunningAmount" ;
+            sh:path :hasDunningAmount ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of payment" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PaymentAmount" ;
+            sh:path :hasPaymentAmount ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Initial due date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "InitialDueDate" ;
+            sh:path :hasInitialDueDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Currency of payment" ;
+            sh:in ( "AFN" "ALL" "DZD" "USD" "EUR" "AOA" "XCD" "ARS" "AMD" "AWG" "AUD" "AZN" "BSD" "BHD" "BDT" "BBD" "BYN" "BZD" "XOF" "BMD" "BTN" "INR" "BOB" "BOV" "BAM" "BWP" "NOK" "BRL" "BND" "BGN" "BIF" "CVE" "KHR" "XAF" "CAD" "KYD" "CLF" "CLP" "CNY" "COP" "COU" "KMF" "CDF" "NZD" "CRC" "HRK" "CUC" "CUP" "ANG" "CZK" "DKK" "DJF" "DOP" "EGP" "SVC" "ERN" "ETB" "FKP" "FJD" "XPF" "GMD" "GEL" "GHS" "GIP" "GTQ" "GBP" "GNF" "GYD" "HTG" "HNL" "HKD" "HUF" "ISK" "IDR" "XDR" "IRR" "IQD" "ILS" "JMD" "JPY" "JOD" "KZT" "KES" "KPW" "KRW" "KWD" "KGS" "LAK" "LBP" "LSL" "ZAR" "LRD" "LYD" "CHF" "MOP" "MGA" "MWK" "MYR" "MVR" "MRU" "MUR" "XUA" "MXN" "MXV" "MDL" "MNT" "MAD" "MZN" "MMK" "NAD" "NPR" "NIO" "NGN" "OMR" "PKR" "PAB" "PGK" "PYG" "PEN" "PHP" "PLN" "QAR" "MKD" "RON" "RUB" "RWF" "SHP" "WST" "STN" "SAR" "RSD" "SCR" "SLL" "SGD" "XSU" "SBD" "SOS" "SSP" "LKR" "SDG" "SRD" "SZL" "SEK" "CHE" "CHW" "SYP" "TWD" "TJS" "TZS" "THB" "TOP" "TTD" "TND" "TRY" "TMT" "UGX" "UAH" "AED" "USN" "UYI" "UYU" "UZS" "VUV" "VEF" "VED" "VND" "YER" "ZMW" "ZWL" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Currency" ;
+            sh:path :hasCurrency ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Payment date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PaymentDate" ;
+            sh:path :hasPaymentDate ] .
+
+:RentalContract a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date of first paying month in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Does the payment have to be conducted in advance (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "PaymentInAdvance" ;
+            sh:path :hasPaymentInAdvance ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:node :RentalContractId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date original contract starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentBeginDate" ;
+            sh:path :hasRentBeginDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Contract name" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "ContractName" ;
+            sh:path :hasContractName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Contract Code (e.g. SAP)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "ContractCode" ;
+            sh:path :hasContractCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Period of notice e.g. monthly; 3 month; 6 month etc." ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "PeriodOfNotice" ;
+            sh:path :hasPeriodOfNotice ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Company Code (e.g. SAP code)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minLength 1 ;
+            sh:name "CompanyCode" ;
+            sh:path :hasCompanyCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Contract type" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ContractType" ;
+            sh:path :hasContractType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date original contract ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentEndDate" ;
+            sh:path :hasRentEndDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Contract group" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ContractGroup" ;
+            sh:path :hasContractGroup ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Main contract code" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "MainContractId" ;
+            sh:path :hasMainContractId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Is this a short term lease (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "ShortTermLease" ;
+            sh:path :hasShortTermLease ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Sector / Business area of the tenant" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "TenantSector" ;
+            sh:path :hasTenantSector ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Frequency of payment e.g. weekly, monthly, quarterly etc." ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "PaymentFrequency" ;
+            sh:path :hasPaymentFrequency ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date of last paying month in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "If turnover rent, reporting interval for the tenant turnover: monthly, quarterly, etc." ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "TurnoverReportingInterval" ;
+            sh:path :hasTurnoverReportingInterval ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:RentalContractRentalUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:node :RentalContractId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:RentalOption a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Reference to corresponding rental contract" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:node :RentalContractId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Reference to document" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "DocumentId" ;
+            sh:path :hasDocumentId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Subtype of the option" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RentalOptionSubType" ;
+            sh:path :hasRentalOptionSubType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date option is valid from in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date option is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of option " ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RentalOptionType" ;
+            sh:path :hasRentalOptionType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RentalOptionId" ;
+            sh:path :hasRentalOptionId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:RentalPayment a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Currency of payment" ;
+            sh:in ( "AFN" "ALL" "DZD" "USD" "EUR" "AOA" "XCD" "ARS" "AMD" "AWG" "AUD" "AZN" "BSD" "BHD" "BDT" "BBD" "BYN" "BZD" "XOF" "BMD" "BTN" "INR" "BOB" "BOV" "BAM" "BWP" "NOK" "BRL" "BND" "BGN" "BIF" "CVE" "KHR" "XAF" "CAD" "KYD" "CLF" "CLP" "CNY" "COP" "COU" "KMF" "CDF" "NZD" "CRC" "HRK" "CUC" "CUP" "ANG" "CZK" "DKK" "DJF" "DOP" "EGP" "SVC" "ERN" "ETB" "FKP" "FJD" "XPF" "GMD" "GEL" "GHS" "GIP" "GTQ" "GBP" "GNF" "GYD" "HTG" "HNL" "HKD" "HUF" "ISK" "IDR" "XDR" "IRR" "IQD" "ILS" "JMD" "JPY" "JOD" "KZT" "KES" "KPW" "KRW" "KWD" "KGS" "LAK" "LBP" "LSL" "ZAR" "LRD" "LYD" "CHF" "MOP" "MGA" "MWK" "MYR" "MVR" "MRU" "MUR" "XUA" "MXN" "MXV" "MDL" "MNT" "MAD" "MZN" "MMK" "NAD" "NPR" "NIO" "NGN" "OMR" "PKR" "PAB" "PGK" "PYG" "PEN" "PHP" "PLN" "QAR" "MKD" "RON" "RUB" "RWF" "SHP" "WST" "STN" "SAR" "RSD" "SCR" "SLL" "SGD" "XSU" "SBD" "SOS" "SSP" "LKR" "SDG" "SRD" "SZL" "SEK" "CHE" "CHW" "SYP" "TWD" "TJS" "TZS" "THB" "TOP" "TTD" "TND" "TRY" "TMT" "UGX" "UAH" "AED" "USN" "UYI" "UYU" "UZS" "VUV" "VEF" "VED" "VND" "YER" "ZMW" "ZWL" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Currency" ;
+            sh:path :hasCurrency ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Is the vat payable  (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "VatOpted" ;
+            sh:path :hasVatOpted ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Starting date of payment in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Reference to index table" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "IndexId" ;
+            sh:path :hasIndexId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of payment per month" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValueMonth" ;
+            sh:path :hasValueMonth ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "End date of payment in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:description "Reference to rental contract" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:node :RentalContractId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of lease payment" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RentalPaymentType" ;
+            sh:path :hasRentalPaymentType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RentalPaymentId" ;
+            sh:path :hasRentalPaymentId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of payment per year" ;
+            sh:maxCount 1 ;
+            sh:name "ValueYear" ;
+            sh:path :hasValueYear ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Discount percentage of payment" ;
+            sh:maxCount 1 ;
+            sh:name "DiscountInPercentage" ;
+            sh:path :hasDiscountInPercentage ] .
+
+:RentalUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Is the RentalUnit rented out (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "RentedOut" ;
+            sh:path :hasRentedOut ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of rental unit" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific RentalUnit Code" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minLength 1 ;
+            sh:name "RentalUnitCode" ;
+            sh:path :hasRentalUnitCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Valid from in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Usage type of the rental unit" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "UsageType" ;
+            sh:path :hasUsageType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Is the rental unit vacant (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "Vacancy" ;
+            sh:path :hasVacancy ] .
+
+:RentalUnitBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:RentalUnitFloor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "FloorId" ;
+            sh:node :FloorId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:RentalUnitLand a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:RentalUnitSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ] .
+
+:RentalUnitSpace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SpaceId" ;
+            sh:node :SpaceId ;
+            sh:path base:hasForeignKey ] .
+
+:RentalUnitUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "UnitId" ;
+            sh:node :UnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:TenantCommunication a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "TenantCommunicationId" ;
+            sh:path :hasTenantCommunicationId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Medium of communication" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Medium" ;
+            sh:path :hasMedium ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Description of communciation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Description" ;
+            sh:path :hasDescription ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of communication" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "TenantCommunicationType" ;
+            sh:path :hasTenantCommunicationType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date communication occurred in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Status of communication" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "TenantCommunicationStatus" ;
+            sh:path :hasTenantCommunicationStatus ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date communication is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ] .
+
+:RentalContractId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:path :hasRentalContractId ] .
+
+:RentalUnitId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:path :hasRentalUnitId ] .
+

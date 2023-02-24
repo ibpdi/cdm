@@ -1,0 +1,958 @@
+@prefix : <http://www.ibpdi.org/ontologies/EnergyAndResources#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:Climate a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of simulation of regional climate model e.g. Historical, Evaluation, RCP2.6" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minLength 1 ;
+            sh:name "Experiment" ;
+            sh:path :hasExperiment ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Spatial resolution of data" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SpatialResolution" ;
+            sh:path :hasSpatialResolution ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Localisation of observed data in case of non-grid location types" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Location" ;
+            sh:path :hasLocation ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Latitude coordinate in case of geographic coordinates" ;
+            sh:maxCount 1 ;
+            sh:name "Latitude" ;
+            sh:path :hasLatitude ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date observation starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Observed variable" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Variable" ;
+            sh:path :hasVariable ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:integer ;
+            sh:description "Vertical coordinate in case of projected coordinates" ;
+            sh:maxCount 1 ;
+            sh:name "PosY" ;
+            sh:path :hasPosY ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Longitude coordinate in case of geographic coordinates" ;
+            sh:maxCount 1 ;
+            sh:name "Longitude" ;
+            sh:path :hasLongitude ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of spatial reference e.g. Zip code or geographic coordinates" ;
+            sh:in ( "NUTS3" "Zip Code" "Geographic coordinates" "Projected coordinates" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "LocationType" ;
+            sh:path :hasLocationType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Regional climate model used" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minLength 1 ;
+            sh:name "RegionalClimateModel" ;
+            sh:path :hasRegionalClimateModel ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Global circulation model used" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minLength 1 ;
+            sh:name "GlobalCirculationModel" ;
+            sh:path :hasGlobalCirculationModel ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:integer ;
+            sh:description "Horizontal coordinate in case of projected coordinates" ;
+            sh:maxCount 1 ;
+            sh:name "PosX" ;
+            sh:path :hasPosX ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Run number of certain climate model or model combination" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minLength 1 ;
+            sh:name "SimulationVersion" ;
+            sh:path :hasSimulationVersion ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:maxLength 36 ;
+            sh:minCount 1 ;
+            sh:minLength 36 ;
+            sh:name "ClimateId" ;
+            sh:path :hasClimateId ;
+            sh:pattern "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Specific coordinate system used" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "CoordinateSystem" ;
+            sh:path :hasCoordinateSystem ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Information on members of a model ensemble and changed conditions ('realisation', 'initialisation', 'physics'). Control member; 'r1i1p1'" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minLength 1 ;
+            sh:name "EnsembleMember" ;
+            sh:path :hasEnsembleMember ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Temporal resolution of data (can be the time period over which raw data is aggregated)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "TemporalResolution" ;
+            sh:path :hasTemporalResolution ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date observation ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of observed variable" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Value" ;
+            sh:path :hasValue ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of observed value" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "ClimateUnit" ;
+            sh:path :hasClimateUnit ;
+            sh:pattern "[^<>[]{}|/()\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:ClimateBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ClimateId" ;
+            sh:node :ClimateId ;
+            sh:path base:hasForeignKey ] .
+
+:ClimateSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ClimateId" ;
+            sh:node :ClimateId ;
+            sh:path base:hasForeignKey ] .
+
+:EmissionFactor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific emission factor name (this can also be the name of a scenario)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Specific type of emission factor e.g. district heating or water discharge" ;
+            sh:in ( "Electricity from grid (green electricity contract)" "Electricity self-generated & exported" "Electricity self-generated & consumed" "Electricity (unspecified)" "REC" "Natural gas (standard mix)" "Green natural gas" "Natural gas (unspecified)" "Oil-based fuels" "Fuel (unspecified)" "District heating" "District cooling" "Biomass" "Solar thermal" "Fresh water (municipal water supply)" "Ground water (collected on site)" "Rain water (collected on site)" "Reclaimed water" "Water discharge" "Water consumption (unspecified)" "Recycling: non-hazardous" "Incineration: non-hazardous" "Waste to energy: non-hazardous" "Other/Unknown: hazardous" "Other/Unknown: non-hazardous" "Electricity from grid (normal contract)" "Carbon dioxide (CO2)" "Methane (CH4)" "Nitrous oxide (N2O)" "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)" "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)" "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)" "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)" "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)" "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)" "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)" "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)" "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)" "R-10 | Carbon tetrachloride (CCl4)" "Bromomethane | Methyl bromide (CH3Br)" "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)" "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)" "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)" "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)" "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)" "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)" "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)" "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)" "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)" "R-23 | HFC-23 |" "R-32 | HFC-32 |" "R-41 | HFC-41 |" "R-125 | HFC-125 |" "R-134 | HFC-134 |" "R-134a | HFC-134a |" "R-143 | HFC-143 |" "R-143a | HFC-143a |" "R-152 | HFC-152 |" "R-152a | HFC-152a |" "R-161 | HFC-161 |" "R-227ea | HFC-227ea |" "R-236cb | HFC-236cb |" "R-236ea | HFC-236ea |" "R-236fa | HFC-236fa |" "R-245ca | HFC-245ca |" "R-245fa | HFC-245fa |" "R-365mfc | HFC-365mfc |" "R-43-10mee | HFC-43-10mee |" "Sulfur hexafluoride (SF6)" "Nitrogen trifluoride (NF3)" "Water supply" "Landfill: non-hazardous" "Reuse: non-hazardous" "Waste to energy: hazardous" "Incineration: hazardous" "Landfill: hazardous" "Recycling: hazardous" "Reuse: hazardous" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "EmissionFactorType" ;
+            sh:path :hasEmissionFactorType ;
+            sh:pattern "[^<>[]{}/°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Sovereign nations and their dependent territories, anything with an ISO-3166 ALPHA-2 code" ;
+            sh:in ( "AF" "AL" "DZ" "AS" "AD" "AO" "AI" "AQ" "AG" "AR" "AM" "AW" "AU" "AT" "AZ" "BS" "BH" "BD" "BB" "BY" "BE" "BZ" "BJ" "BM" "BT" "BO" "BQ" "BA" "BW" "BV" "BR" "IO" "BN" "BG" "BF" "BI" "CV" "KH" "CM" "CA" "KY" "CF" "TD" "CL" "CN" "CX" "CC" "CO" "KM" "CD" "CG" "CK" "CR" "HR" "CU" "CW" "CY" "CZ" "CI" "DK" "DJ" "DM" "DO" "EC" "EG" "SV" "GQ" "ER" "EE" "SZ" "ET" "FK" "FO" "FJ" "FI" "FR" "GF" "PF" "TF" "GA" "GM" "GE" "DE" "GH" "GI" "GR" "GL" "GD" "GP" "GU" "GT" "GG" "GN" "GW" "GY" "HT" "HM" "VA" "HN" "HK" "HU" "IS" "IN" "ID" "IR" "IQ" "IE" "IM" "IL" "IT" "JM" "JP" "JE" "JO" "KZ" "KE" "KI" "KP" "KR" "KW" "KG" "LA" "LV" "LB" "LS" "LR" "LY" "LI" "LT" "LU" "MO" "MG" "MW" "MY" "MV" "ML" "MT" "MH" "MQ" "MR" "MU" "YT" "MX" "FM" "MD" "MC" "MN" "ME" "MS" "MA" "MZ" "MM" "NA" "NR" "NP" "NL" "NC" "NZ" "NI" "NE" "NG" "NU" "NF" "MP" "NO" "OM" "PK" "PW" "PS" "PA" "PG" "PY" "PE" "PH" "PN" "PL" "PT" "PR" "QA" "MK" "RO" "RU" "RW" "RE" "BL" "SH" "KN" "LC" "MF" "PM" "VC" "WS" "SM" "ST" "SA" "SN" "RS" "SC" "SL" "SG" "SX" "SK" "SI" "SB" "SO" "ZA" "GS" "SS" "ES" "LK" "SD" "SR" "SJ" "SE" "CH" "SY" "TW" "TJ" "TZ" "TH" "TL" "TG" "TK" "TO" "TT" "TN" "TR" "TM" "TC" "TV" "UG" "UA" "AE" "GB" "UM" "US" "UY" "UZ" "VU" "VE" "VN" "VG" "VI" "WF" "EH" "YE" "ZM" "ZW" "AX" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Country" ;
+            sh:path :hasCountry ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of emission factor in terms of kgCO2e per unit of resource consumption" ;
+            sh:in ( "kgCO2e/kWh" "kgCO2e/kg" "kgCO2e/cubm" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "EmissionFactorUnit" ;
+            sh:path :hasEmissionFactorUnit ;
+            sh:pattern "[^<>[]{}|()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Differentiated emission factor for certain space type (within a building)" ;
+            sh:in ( "Shared services/Common spaces" "Tenant space" "Landlord space" "Whole building" "Unspecified" "Shared services" "Common spaces" "Outdoor" "Exterior area" "Parking" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SpaceType" ;
+            sh:path :hasSpaceType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of emission factor" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Value" ;
+            sh:path :hasValue ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Any official settlement including cities, towns, villages, hamlets, localities, etc." ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minLength 1 ;
+            sh:name "City" ;
+            sh:path :hasCity ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Source of emission factor e.g. 'International Energy Agency'" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Source" ;
+            sh:path :hasSource ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Areas that are broadly divided by physical characteristics, human impact characteristics, and the interaction of humanity and the environment" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minLength 1 ;
+            sh:name "Region" ;
+            sh:path :hasRegion ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:EmissionFactorBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ] .
+
+:EmissionFactorOperationalMeasurement a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ] .
+
+:EmissionFactorSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ] .
+
+:GhgEmission a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Approach of reporting emissions e.g. from 'green electricity consumption': Market-based or location-based" ;
+            sh:in ( "Location-based" "Market-based" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ReportingType" ;
+            sh:path :hasReportingType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of emission value: kgCO2e" ;
+            sh:in ( "kgCO2e" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "GhgEmissionUnit" ;
+            sh:path :hasGhgEmissionUnit ;
+            sh:pattern "[^<>[]{}|()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Specific type of ghg emission generation e.g. district heating or water discharge" ;
+            sh:in ( "Electricity from grid (green electricity contract)" "Electricity self-generated & exported" "Electricity self-generated & consumed" "Electricity (unspecified)" "REC" "Natural gas (standard mix)" "Green natural gas" "Natural gas (unspecified)" "Oil-based fuels" "Fuel (unspecified)" "District heating" "District cooling" "Biomass" "Solar thermal" "Fresh water (municipal water supply)" "Ground water (collected on site)" "Rain water (collected on site)" "Reclaimed water" "Water discharge" "Water consumption (unspecified)" "Recycling: non-hazardous" "Incineration: non-hazardous" "Waste to energy: non-hazardous" "Other/Unknown: hazardous" "Other/Unknown: non-hazardous" "Electricity from grid (normal contract)" "Carbon dioxide (CO2)" "Methane (CH4)" "Nitrous oxide (N2O)" "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)" "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)" "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)" "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)" "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)" "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)" "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)" "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)" "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)" "R-10 | Carbon tetrachloride (CCl4)" "Bromomethane | Methyl bromide (CH3Br)" "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)" "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)" "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)" "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)" "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)" "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)" "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)" "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)" "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)" "R-23 | HFC-23 |" "R-32 | HFC-32 |" "R-41 | HFC-41 |" "R-125 | HFC-125 |" "R-134 | HFC-134 |" "R-134a | HFC-134a |" "R-143 | HFC-143 |" "R-143a | HFC-143a |" "R-152 | HFC-152 |" "R-152a | HFC-152a |" "R-161 | HFC-161 |" "R-227ea | HFC-227ea |" "R-236cb | HFC-236cb |" "R-236ea | HFC-236ea |" "R-236fa | HFC-236fa |" "R-245ca | HFC-245ca |" "R-245fa | HFC-245fa |" "R-365mfc | HFC-365mfc |" "R-43-10mee | HFC-43-10mee |" "Sulfur hexafluoride (SF6)" "Nitrogen trifluoride (NF3)" "Water supply" "Landfill: non-hazardous" "Reuse: non-hazardous" "Waste to energy: hazardous" "Incineration: hazardous" "Landfill: hazardous" "Recycling: hazardous" "Reuse: hazardous" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "GhgEmissionSubType" ;
+            sh:path :hasGhgEmissionSubType ;
+            sh:pattern "[^<>[]{}/°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Parent (guid or id) of entity" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ParentId" ;
+            sh:path :hasParentId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of individual emission" ;
+            sh:maxCount 1 ;
+            sh:name "Value" ;
+            sh:path :hasValue ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of individual emission value (user-provided)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "GhgEmissionId" ;
+            sh:node :GhgEmissionId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "General source of emission e.g. energy, water or waste" ;
+            sh:in ( "Energy" "Fugitive" "Waste" "Water discharge" "Water supply" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "GhgEmissionType" ;
+            sh:path :hasGhgEmissionType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Information on accuracy of value e.g. 'metered' or 'extrapolated'" ;
+            sh:in ( "Calculated based on estimated data" "Calculated based on metered data" "Calculated based on extrapolated data" "Calculated based on planed data" "Calculated based on simulated data" "Calculated based on projected estimated data" "Calculated based on projected metered data" "Calculated based on projected extrapolated data" "Calculated based on projected planned data" "Calculated based on projected simulated data" "Estimated" "Metered" "Extrapolated" "Planned" "Unspecified" "Simulated" "Projection based on estimated data" "Projection based on metered data" "Projection based on extrapolated data" "Projection based on planned data" "Projection based on data with unspecified accuracy" "Projection based on simulated data" "Missing" "Calculated based on data with unspecified accuracy" "Calculated based on projected data with unspecified accuracy" "Retrofit scenario" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "GhgEmissionAccuracy" ;
+            sh:path :hasGhgEmissionAccuracy ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Emission scope 1, 2 or 3 according to the Greenhouse Gas Protocol" ;
+            sh:in ( "1" "2" "3" "Unspecified" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "EmissionScope" ;
+            sh:path :hasEmissionScope ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Related life cycle assessment stage according to ISO 14040" ;
+            sh:in ( "A1" "A2" "A3" "A4" "A5" "B1" "B2" "B3" "B4" "B5" "B6" "B7" "C1" "C2" "C3" "C4" "D" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "LifeCycleAssessment" ;
+            sh:path :hasLifeCycleAssessment ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:GhgEmissionBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "GhgEmissionId" ;
+            sh:node :GhgEmissionId ;
+            sh:path base:hasForeignKey ] .
+
+:GhgEmissionEmissionFactor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "GhgEmissionId" ;
+            sh:node :GhgEmissionId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ] .
+
+:GhgEmissionSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "GhgEmissionId" ;
+            sh:node :GhgEmissionId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurement a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Information on accuracy of value e.g. 'metered' or 'extrapolated'" ;
+            sh:in ( "Estimated" "Metered" "Extrapolated" "Planned" "Simulated" "Unspecified" "Projection based on estimated data" "Projection based on metered data" "Projection based on extrapolated data" "Projection based on planned data" "Projection based on simulated data" "Projection based on data with unspecified accuracy" "Missing" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "OperationalMeasurementAccuracy" ;
+            sh:path :hasOperationalMeasurementAccuracy ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Parent (guid or id) of entity" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ParentId" ;
+            sh:path :hasParentId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Information on operational control ('who bought it?') of resource consumption according to Greenhouse Gas Protocol" ;
+            sh:in ( "Procured by third party" "Self-procured" "Unspecified" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ProcuredBy" ;
+            sh:path :hasProcuredBy ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "General type of operational measurement e.g. energy, water or waste" ;
+            sh:in ( "Energy" "Water" "Waste" "Fugitive" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "OperationalMeasurementType" ;
+            sh:path :hasOperationalMeasurementType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of operational measurement e.g. 'kWh' or 'cubm'" ;
+            sh:in ( "kWh" "cubm" "kg" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "OperationalMeasurementUnit" ;
+            sh:path :hasOperationalMeasurementUnit ;
+            sh:pattern "[^<>[]{}|()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Specific purpose of resource consumption e.g. 'space heating' in case of burning natural gas" ;
+            sh:in ( "Space heating" "Water heating" "Heating (unspecified)" "Cooling" "Lighting" "Elevator" "Appliances" "Other" "Unspecified" "Heat pump" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Purpose" ;
+            sh:path :hasPurpose ;
+            sh:pattern "[^<>[]{}|/°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SensorId" ;
+            sh:path :hasSensorId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Specific type of operational measurement e.g. district heating or water discharge" ;
+            sh:in ( "Electricity from grid (green electricity contract)" "Electricity self-generated & exported" "Electricity self-generated & consumed" "Electricity (unspecified)" "REC" "Natural gas (standard mix)" "Green natural gas" "Natural gas (unspecified)" "Oil-based fuels" "Fuel (unspecified)" "District heating" "District cooling" "Biomass" "Solar thermal" "Fresh water (municipal water supply)" "Ground water (collected on site)" "Rain water (collected on site)" "Reclaimed water" "Water discharge" "Water consumption (unspecified)" "Recycling: non-hazardous" "Incineration: non-hazardous" "Waste to energy: non-hazardous" "Other/Unknown: hazardous" "Other/Unknown: non-hazardous" "Electricity from grid (normal contract)" "Carbon dioxide (CO2)" "Methane (CH4)" "Nitrous oxide (N2O)" "R-11 | CFC-11 | Trichlorofluoromethane (CCI3F)" "R-12 | CFC-12 | Dichlorofluoromethane (CCI2F2)" "R-13 | CFC-13 | Chlorodifluoromethane (CCIF3)" "R-113 | CFC-113 | 1,1,2-Trichloro-1,2,2-trifluoroethane (C2CI3F3)" "R-114 | CFC-114 | Halon-242 | 1,2-Dichlorotetrafluoroethane (C2Cl2F4)" "R-115 | CFC-115 | Chloropentafluoroethane (C2ClF5)" "R13 B1 | Halon-1301 | Bromotrifluoromethane (CBrF3)" "R-12B1 | Halon-1211 | Bromochlorodifluoromethane (CBrCIF2)" "R 114B2 | Halon-2402 | 1,2-Dibromotetrafluoroethane (C2Br2F4)" "R-10 | Carbon tetrachloride (CCl4)" "Bromomethane | Methyl bromide (CH3Br)" "R-140a | 1,1,1- Trichloroethane | Methyl chloroform (C2H3Cl3)" "R-21 | HCFC-21 | Dichlorofluoromethane (CHCl2F)" "R-22 | HCFC-22 | Chlorodifluoromethane (CHClF2)" "R-123 | HCFC-123 | 2,2-Dichloro-1,1,1-trifluoroethane (C2Cl2F3)" "R-124 | HCFC-124| 1-Chloro-1,2,2,2-tetrafluoroethane (C2ClF4)" "R-141b | HCFC-141b |1,1,-Dichloro-1-1-fluoroethane (C2H3Cl2F)" "R-142b | HCFC-142b | 1-Chloro-1,1,-difluoroethane (C2ClF2)" "R-225ca | HCFC-225ca | 3.3-dichloro-1,1,1,2,2-pentafluoropropane (C3HCl2F5)" "R-225cb | HCFC-225cb | 1,3-Dichloro-1,1,2,2,3-pentafluoropropane (C3HCl2F5)" "R-23 | HFC-23 |" "R-32 | HFC-32 |" "R-41 | HFC-41 |" "R-125 | HFC-125 |" "R-134 | HFC-134 |" "R-134a | HFC-134a |" "R-143 | HFC-143 |" "R-143a | HFC-143a |" "R-152 | HFC-152 |" "R-152a | HFC-152a |" "R-161 | HFC-161 |" "R-227ea | HFC-227ea |" "R-236cb | HFC-236cb |" "R-236ea | HFC-236ea |" "R-236fa | HFC-236fa |" "R-245ca | HFC-245ca |" "R-245fa | HFC-245fa |" "R-365mfc | HFC-365mfc |" "R-43-10mee | HFC-43-10mee |" "Sulfur hexafluoride (SF6)" "Nitrogen trifluoride (NF3)" "Water supply" "Landfill: non-hazardous" "Reuse: non-hazardous" "Waste to energy: hazardous" "Incineration: hazardous" "Landfill: hazardous" "Recycling: hazardous" "Reuse: hazardous" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "OperationalMeasurementSubType" ;
+            sh:path :hasOperationalMeasurementSubType ;
+            sh:pattern "[^<>[]{}/°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Related life cycle assessment stage according to ISO 14040" ;
+            sh:in ( "A1" "A2" "A3" "A4" "A5" "B1" "B2" "B3" "B4" "B5" "B6" "B7" "C1" "C2" "C3" "C4" "D" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "LifeCycleAssessment" ;
+            sh:path :hasLifeCycleAssessment ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of individual operational measurement. (user-provided)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of individual operational measurement" ;
+            sh:maxCount 1 ;
+            sh:name "Value" ;
+            sh:path :hasValue ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Reference to specific space type (or 'whole building')" ;
+            sh:in ( "Shared services/Common spaces" "Tenant space" "Landlord space" "Whole building" "Unspecified" "Shared services" "Common spaces" "Outdoor" "Exterior area" "Parking" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "SpaceType" ;
+            sh:path :hasSpaceType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date of measurement was taken in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "MeasurementDate" ;
+            sh:path :hasMeasurementDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date of measurement posting in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "PostingDate" ;
+            sh:path :hasPostingDate ] .
+
+:OperationalMeasurementBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurementFloor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "FloorId" ;
+            sh:node :FloorId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurementLand a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurementRentalUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurementSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurementSpace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SpaceId" ;
+            sh:node :SpaceId ;
+            sh:path base:hasForeignKey ] .
+
+:OperationalMeasurementUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "UnitId" ;
+            sh:node :UnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ] .
+
+:SustainabilityIndicator a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of sustainability indicator value" ;
+            sh:in ( "kgCO2e" "kgCO2e/sqm" "kWh" "kWh/sqm" "EUR" "sqm" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SustainabilityIndicatorUnit" ;
+            sh:path :hasSustainabilityIndicatorUnit ;
+            sh:pattern "[^<>[]{}|()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of sustainability indicator e.g. absolute or intensity figures or stranding" ;
+            sh:in ( "Absolute" "Intensity" "Excess emissions" "Stranding" "Target" "Budget" "Direct emissions" "Indirect emissions" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SustainabilityIndicatorType" ;
+            sh:path :hasSustainabilityIndicatorType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date validity ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Approach of reporting emissions e.g. from 'green electricity consumption': Market-based or location-based" ;
+            sh:in ( "Location-based" "Market-based" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ReportingType" ;
+            sh:path :hasReportingType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Identifier of building" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Overall category of sustainability indicator e.g. energy, greenhouse gas emissions or costs" ;
+            sh:in ( "Costs" "Energy" "Ghg" "Area" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Category" ;
+            sh:path :hasCategory ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of sustainability indicator" ;
+            sh:maxCount 1 ;
+            sh:name "Value" ;
+            sh:path :hasValue ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Base year of values projected into the future in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061). In case no exact date is used please use xxxx-01-01 00:00:00." ;
+            sh:maxCount 1 ;
+            sh:name "BaseYear" ;
+            sh:path :hasBaseYear ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Operational source of energy or emission figures e.g. electricity or water" ;
+            sh:in ( "Energy" "All" "Fuels" "Electricity" "District heating" "District cooling" "Fugitive" "Water supply" "Water discharge" "Water" "Waste" "District heating & fuel" "F-gases" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Source" ;
+            sh:path :hasSource ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Reference area of building used as denominator in intensity calculation" ;
+            sh:in ( "Net rentable area" "Gross internal area" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ReferenceArea" ;
+            sh:path :hasReferenceArea ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:maxLength 36 ;
+            sh:minCount 1 ;
+            sh:minLength 36 ;
+            sh:name "SustainabilityIndicatorId" ;
+            sh:path :hasSustainabilityIndicatorId ;
+            sh:pattern "^[0-9A-Fa-f]{8}(?:-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Subtype of sustainability indicator e.g. net-energy or  emission scope" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SustainabilityIndicatorSubType" ;
+            sh:path :hasSustainabilityIndicatorSubType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:SustainabilityIndicatorEmissionFactor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SustainabilityIndicatorId" ;
+            sh:node :SustainabilityIndicatorId ;
+            sh:path base:hasForeignKey ] .
+
+:GhgEmissionId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "GhgEmissionId" ;
+            sh:path :hasGhgEmissionId ] .
+
+:EmissionFactorId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:path :hasEmissionFactorId ] .
+
+:OperationalMeasurementId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:path :hasOperationalMeasurementId ] .
+

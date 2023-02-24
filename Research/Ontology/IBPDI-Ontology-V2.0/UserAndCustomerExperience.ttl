@@ -1,0 +1,155 @@
+@prefix : <http://www.ibpdi.org/ontologies/UserAndCustomerExperience#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AvailableResource a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AvailableResourceWorkspace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:BookingId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:BookingWorkspace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:Characteristic a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CharacteristicNeighbourhood a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CharacteristicWorkspace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CustomerFileId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:CustomerFileWorkArea a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CustomerFileWorkspace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:NeighbourhoodId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:NeighbourhoodWorkspace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:Tag a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:TagId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:TagNeighbourhood a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:WorkAreaFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:WorkAreaId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:WorkAreaSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:WorkspaceId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:WorkspaceSensor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:Booking a owl:Class .
+
+:CustomerFile a owl:Class .
+
+:Neighbourhood a owl:Class .
+
+:WorkArea a owl:Class .
+
+:WorkAreaType a owl:Class .
+
+:Workspace a owl:Class .
+
+:hasAvailableResourceId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBookable a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasBookingDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBookingId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCancelled a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasCapacity a owl:DataProperty ;
+    rdfs:range xsd:integer .
+
+:hasCharacteristicId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCheckInTime a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCheckOutTime a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasColor a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCustomerFileId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFileType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLink a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMetadata a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasNeighbourhoodId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTagId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkAreaCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkAreaId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkAreaTypeId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkspaceCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkspaceId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasWorkspaceType a owl:DataProperty ;
+    rdfs:range xsd:string .
+

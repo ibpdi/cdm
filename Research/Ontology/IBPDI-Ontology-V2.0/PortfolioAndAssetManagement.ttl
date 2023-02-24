@@ -1,0 +1,188 @@
+@prefix : <http://www.ibpdi.org/ontologies/PortfolioAndAssetManagement#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:PortfolioBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:PortfolioId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:PortfolioLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:PortfolioSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:PortfolioUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ValuationBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ValuationIndividualAccount a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ValuationLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ValuationOperationalMeasurement a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:Portfolio a owl:Class .
+
+:PortfolioStrategy a owl:Class .
+
+:Valuation a owl:Class .
+
+:hasAccountingStandard a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasApproach a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAssetCategory a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAssumptions a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasConstrains a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCurrency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDescription a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDiscountPremiums a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDiscountRate a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDocumentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEnergyEfficiency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasInvestmentType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasJurisdictionStandard a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasJurisdictionType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasKeywords a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLiquidity a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasMaintenanceBacklog a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasMarketValue a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOwnershipType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPortfolioCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPortfolioId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPortfolioStrategyId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPortfolioType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPreviousValuationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPrimaryUsageType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasProfessionalStandard a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReportingCycle a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasReportingDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSecondaryUsageType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSingleTenant a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasSource a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpaceEfficiency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSpecialAssumptions a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStrategyObjectiveTargets a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStrategyObjectiveTargetsSteering a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStrategyObjectiveUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStrategyObjectiveUnitSteering a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStrategyObjectiveValues a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasStrategyObjectiveValuesSteering a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasText a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUncertainty a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUrl a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValuationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValuationType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValuationUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValue a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+

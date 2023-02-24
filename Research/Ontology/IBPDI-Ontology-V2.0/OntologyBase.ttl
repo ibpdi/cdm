@@ -1,0 +1,33 @@
+@prefix : <http://www.ibpdi.org/ontologies/IBPDIBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:cdmAttribute a owlDataProperty ; 
+           rdfs:range xsd:string ;
+           rdfs:label "Attribute name in CDM"@en ;
+           rdfs:comment "CDM related - name of the attribute as defined in CDM."@en .
+
+:UniqueKey a owl:Class ;
+           rdfs:label "Unique key"@en ;
+           rdfs:comment "CDM related - represents a primary key in SQL"@en .
+
+:hasId a owl:DataProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "the unique key value"@en ;
+           rdfs:comment "CDM related - the value of the primary or foreign key in SQL"@en .
+
+:hasPrimaryKey a owl:ObjectProperty ;
+           rdfs:label "relation from entity to its primary key"@en ;
+           rdfs:comment "CDM related - represents relation to the entities primary key in SQL"@en .
+
+:hasForeignKey a owl:ObjectProperty ;
+           rdfs:label "relation to a foreign key"@en ;
+           rdfs:comment "CDM related - represents relation to a foreign key in SQL"@en .
+
+
+:MappingTable a owl:Class ;
+           rdfs:label "Mapping table"@en ;
+           rdfs:comment "CDM related - base class for all mapping tables required in SQL"@en .

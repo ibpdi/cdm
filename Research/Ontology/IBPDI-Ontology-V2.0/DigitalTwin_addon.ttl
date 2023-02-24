@@ -1,0 +1,96 @@
+@prefix : <http://www.ibpdi.org/ontologies/DigitalTwin_addon#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:BuildingType a owl:Class .
+
+:Retail a owl:Class ;
+    rdfs:subClassOf :BuildingType ;
+    rdfs:label "Retail"@en ;
+    rdfs:comment "building type retail"@en .
+
+:HighStreet a owl:Class ;
+    rdfs:subClassOf :Retail ;
+    rdfs:label "HighStreet"@en ;
+    rdfs:comment "building type HighStreet"@en .
+
+how to get the class from enum?
+What does it mean: primary and secondary???
+What do we do with "Other"? "Retail" == "Retail, Other" -> NO! "Retail" != "Retail, Other"
+
+:RetailOther a owl:Class ;
+    rdfs:subClassOf :Retail .
+
+# customer extention integrates in the existing clas hierarchy 
+xyz:PopupStore a owl:Class ;
+    rdfs:subClassOf :RetailOther .
+
+
+
+                   "enum": [
+                        "Retail",
+                        "Retail, High Street",
+                        "Retail, Retail Centers",
+                        "Retail, Shopping Center",
+                        "Retail, Strip Mall",
+                        "Retail, Lifestyle Center",
+                        "Retail, Warehouse",
+                        "Retail, Restaurants/Bars",
+                        "Retail, Other",
+                        "Office",
+                        "Office, Corporate",
+                        "Office, Low-Rise Office",
+                        "Office, Mid-Rise Office",
+                        "Office, High-Rise Office",
+                        "Office, Medical Office",
+                        "Office, Business Park",
+                        "Office, Other",
+                        "Industrial",
+                        "Industrial, Distribution Warehouse",
+                        "Industrial, Industrial Park",
+                        "Industrial, Manufacturing",
+                        "Industrial, Other",
+                        "Residential",
+                        "Residential, Multi-Family",
+                        "Residential, Low-Rise Multi-Family",
+                        "Residential, Mid-Rise Multi-Family",
+                        "Residential, High-Rise Multi-Family",
+                        "Residential, Family Homes",
+                        "Residential, Student Housing",
+                        "Residential, Retirement Living",
+                        "Residential, Other",
+                        "Hotel",
+                        "Lodging, Leisure & Recreation",
+                        "Lodging, Leisure & Recreation, Indoor Arena",
+                        "Lodging, Leisure & Recreation, Fitness Center",
+                        "Lodging, Leisure & Recreation, Performing Arts",
+                        "Lodging, Leisure & Recreation, Swimming Center",
+                        "Lodging, Leisure & Recreation, Museum/Gallery",
+                        "Lodging, Leisure & Recreation, Other",
+                        "Education",
+                        "Education, School",
+                        "Education, University",
+                        "Education, Library",
+                        "Education, Other",
+                        "Technology/Science",
+                        "Technology/Science, Data Center",
+                        "Technology/Science, Laboratory/Life sciences",
+                        "Technology/Science, Other",
+                        "Health Care",
+                        "Health Care, Health Care Center",
+                        "Health Care, Senior Homes",
+                        "Health Care, Other",
+                        "Mixed Use",
+                        "Mixed Use, Office/Retail",
+                        "Mixed Use, Office/Residential",
+                        "Mixed Use, Office/Industrial",
+                        "Mixed Use, Other",
+                        "Other",
+                        "Other, Parking (Indoors)",
+                        "Other, Self-Storage"
+                    ],
+ 

@@ -1,0 +1,201 @@
+@prefix : <http://www.ibpdi.org/ontologies/OrganisationalManagement#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:AddressBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AddressContact a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AddressLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AddressOrganisation a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AddressRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:AddressSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:ContactId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:Role a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:Address a owl:Class .
+
+:Contact a owl:Class .
+
+:Organisation a owl:Class .
+
+:RoleBuildingContact a owl:Class .
+
+:RoleBuildingOrganisation a owl:Class .
+
+:RoleComponentContact a owl:Class .
+
+:RoleComponentOrganisation a owl:Class .
+
+:RoleComponentTypeContact a owl:Class .
+
+:RoleComponentTypeOrganisation a owl:Class .
+
+:RoleEmissionFactorContact a owl:Class .
+
+:RoleEmissionFactorOrganisation a owl:Class .
+
+:RoleLandContact a owl:Class .
+
+:RoleLandOrganisation a owl:Class .
+
+:RoleOperationalMeasurementContact a owl:Class .
+
+:RoleOperationalMeasurementOrganisation a owl:Class .
+
+:RolePortfolioContact a owl:Class .
+
+:RolePortfolioOrganisation a owl:Class .
+
+:RolePortfolioStrategyContact a owl:Class .
+
+:RolePortfolioStrategyOrganisation a owl:Class .
+
+:RoleRentalContractContact a owl:Class .
+
+:RoleRentalContractOrganisation a owl:Class .
+
+:RoleRentalUnitContact a owl:Class .
+
+:RoleRentalUnitOrganisation a owl:Class .
+
+:RoleSiteContact a owl:Class .
+
+:RoleSiteOrganisation a owl:Class .
+
+:RoleSubComponentTypeContact a owl:Class .
+
+:RoleSubComponentTypeOrganisation a owl:Class .
+
+:RoleSubSubComponentTypeContact a owl:Class .
+
+:RoleSubSubComponentTypeOrganisation a owl:Class .
+
+:RoleSystemContact a owl:Class .
+
+:RoleSystemOrganisation a owl:Class .
+
+:RoleTenantCommunicationContact a owl:Class .
+
+:RoleTenantCommunicationOrganisation a owl:Class .
+
+:RoleValuationContact a owl:Class .
+
+:RoleValuationOrganisation a owl:Class .
+
+:hasAdditionalInformation a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAddressId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasAddressType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasApartmentOrUnit a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCity a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasContactId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCountry a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDistrict a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmail a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasEmployeeId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFax a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFirstName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasFiscalYearStartDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasHouseNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasIndustry a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasJobTitle a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLastName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasLatitude a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasLegalEntity a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasLongitude a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasOrganisationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasParentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPostalCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRoleId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRoleType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasSalutation a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStateProvincePrefecture a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStreetName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTelephone a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVatNumber a owl:DataProperty ;
+    rdfs:range xsd:string .
+

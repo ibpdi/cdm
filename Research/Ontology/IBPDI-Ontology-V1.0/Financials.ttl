@@ -1,0 +1,103 @@
+@prefix : <http://www.ibpdi.org/ontologies/Financials#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:CostCenterBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CostCenterLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CostCenterPortfolio a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CostCenterRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:CostCenterSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:IndividualAccountBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:IndividualAccountPortfolio a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:IndividualAccountSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:Account a owl:Class .
+
+:CostCenter a owl:Class .
+
+:IndividualAccount a owl:Class .
+
+:Transaction a owl:Class .
+
+:hasAccountId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBookingCurrency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasBookingType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCategory a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCostCenterId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCostCenterType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDocumentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGAAP a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasGroup a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasIndividualAccountId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPostingDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasProject a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRecordType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasStatementType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTransactionId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTransactionType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValue a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVersion a owl:DataProperty ;
+    rdfs:range xsd:string .
+

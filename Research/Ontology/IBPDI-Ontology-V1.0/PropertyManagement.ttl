@@ -1,0 +1,185 @@
+@prefix : <http://www.ibpdi.org/ontologies/PropertyManagement#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:RentalContractId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:RentalContractRentalUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:RentalUnitBuilding a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:RentalUnitFloor a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:RentalUnitId a rdfs:Class ;
+    rdfs:subClassOf base:UniqueKey .
+
+:RentalUnitLand a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:RentalUnitSite a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:RentalUnitSpace a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+:RentalUnitUnit a rdfs:Class ;
+    rdfs:subClassOf base:MappingTable .
+
+: a owl:Ontology .
+
+:Dunning a owl:Class .
+
+:RentalContract a owl:Class .
+
+:RentalOption a owl:Class .
+
+:RentalPayment a owl:Class .
+
+:RentalUnit a owl:Class .
+
+:TenantCommunication a owl:Class .
+
+:hasCompanyCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasContractCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasContractGroup a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasContractName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasContractType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasCurrency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDescription a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDiscountInPercentage a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDocumentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDunningAmount a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasDunningId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasDunningLevel a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasIndexId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasInitialDueDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMainContractId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasMedium a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasName a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPaymentAmount a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasPaymentDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPaymentFrequency a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasPaymentInAdvance a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasPeriodOfNotice a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentBeginDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentEndDate a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalContractId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalOptionId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalOptionSubType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalOptionType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalPaymentId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalPaymentType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalUnitCode a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentalUnitId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasRentedOut a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasShortTermLease a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasTenantCommunicationId a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTenantCommunicationStatus a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTenantCommunicationType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTenantSector a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasTurnoverReportingInterval a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasUsageType a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasVacancy a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+
+:hasValidFrom a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValidUntil a owl:DataProperty ;
+    rdfs:range xsd:string .
+
+:hasValueMonth a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasValueYear a owl:DataProperty ;
+    rdfs:range xsd:decimal .
+
+:hasVatOpted a owl:DataProperty ;
+    rdfs:range xsd:boolean .
+

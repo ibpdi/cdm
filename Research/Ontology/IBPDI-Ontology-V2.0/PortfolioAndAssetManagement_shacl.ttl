@@ -1,0 +1,621 @@
+@prefix : <http://www.ibpdi.org/ontologies/PortfolioAndAssetManagement#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:Portfolio a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific Portfolio Code e.g: MR003" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minLength 1 ;
+            sh:name "PortfolioCode" ;
+            sh:path :hasPortfolioCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Definition of the primary usage type/asset class of the portfolio (individual by portfolio owner)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "PrimaryUsageType" ;
+            sh:path :hasPrimaryUsageType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Reporting cycle which is used to determine the next reporting date " ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ReportingCycle" ;
+            sh:path :hasReportingCycle ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of the Portfolio" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "PortfolioType" ;
+            sh:path :hasPortfolioType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Current market value of Portfolio" ;
+            sh:maxCount 1 ;
+            sh:name "MarketValue" ;
+            sh:path :hasMarketValue ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Main/default currency of portfolio (depending on user it should be able to change this)" ;
+            sh:in ( "AFN" "ALL" "DZD" "USD" "EUR" "AOA" "XCD" "ARS" "AMD" "AWG" "AUD" "AZN" "BSD" "BHD" "BDT" "BBD" "BYN" "BZD" "XOF" "BMD" "BTN" "INR" "BOB" "BOV" "BAM" "BWP" "NOK" "BRL" "BND" "BGN" "BIF" "CVE" "KHR" "XAF" "CAD" "KYD" "CLF" "CLP" "CNY" "COP" "COU" "KMF" "CDF" "NZD" "CRC" "HRK" "CUC" "CUP" "ANG" "CZK" "DKK" "DJF" "DOP" "EGP" "SVC" "ERN" "ETB" "FKP" "FJD" "XPF" "GMD" "GEL" "GHS" "GIP" "GTQ" "GBP" "GNF" "GYD" "HTG" "HNL" "HKD" "HUF" "ISK" "IDR" "XDR" "IRR" "IQD" "ILS" "JMD" "JPY" "JOD" "KZT" "KES" "KPW" "KRW" "KWD" "KGS" "LAK" "LBP" "LSL" "ZAR" "LRD" "LYD" "CHF" "MOP" "MGA" "MWK" "MYR" "MVR" "MRU" "MUR" "XUA" "MXN" "MXV" "MDL" "MNT" "MAD" "MZN" "MMK" "NAD" "NPR" "NIO" "NGN" "OMR" "PKR" "PAB" "PGK" "PYG" "PEN" "PHP" "PLN" "QAR" "MKD" "RON" "RUB" "RWF" "SHP" "WST" "STN" "SAR" "RSD" "SCR" "SLL" "SGD" "XSU" "SBD" "SOS" "SSP" "LKR" "SDG" "SRD" "SZL" "SEK" "CHE" "CHW" "SYP" "TWD" "TJS" "TZS" "THB" "TOP" "TTD" "TND" "TRY" "TMT" "UGX" "UAH" "AED" "USN" "UYI" "UYU" "UZS" "VUV" "VEF" "VED" "VND" "YER" "ZMW" "ZWL" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Currency" ;
+            sh:path :hasCurrency ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Describes the asset category" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "AssetCategory" ;
+            sh:path :hasAssetCategory ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date the maturity of the  portfolio has been reached in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Definition of the secondary usage type/asset class of the portfolio (individual by portfolio owner)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SecondaryUsageType" ;
+            sh:path :hasSecondaryUsageType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of Portfolio " ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Describes the ownership structure of the portfolio" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "OwnershipType" ;
+            sh:path :hasOwnershipType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Reporting date in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ReportingDate" ;
+            sh:path :hasReportingDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date portfolio was set up in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ] .
+
+:PortfolioBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ] .
+
+:PortfolioLand a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ] .
+
+:PortfolioSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ] .
+
+:PortfolioStrategy a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date Strategy was implemented in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "PortfolioStrategyId" ;
+            sh:path :hasPortfolioStrategyId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Source of Portfolio strategy" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Source" ;
+            sh:path :hasSource ;
+            sh:pattern "[^<>[]|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Target type of Portfolio Strategy" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "StrategyObjectiveTargets" ;
+            sh:path :hasStrategyObjectiveTargets ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date strategy has to be adapted by in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of the portfolio strategy targets" ;
+            sh:maxCount 1 ;
+            sh:name "StrategyObjectiveValues" ;
+            sh:path :hasStrategyObjectiveValues ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of strategy objective values steering" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "StrategyObjectiveUnitSteering" ;
+            sh:path :hasStrategyObjectiveUnitSteering ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of strategy objective values" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "StrategyObjectiveUnit" ;
+            sh:path :hasStrategyObjectiveUnit ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of Strategy (user specific)" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of Strategy" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "InvestmentType" ;
+            sh:path :hasInvestmentType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Steering target type of Portfolio Strategy" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "StrategyObjectiveTargetsSteering" ;
+            sh:path :hasStrategyObjectiveTargetsSteering ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of the portfolio strategy steering targets" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "StrategyObjectiveValuesSteering" ;
+            sh:path :hasStrategyObjectiveValuesSteering ] .
+
+:PortfolioUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "UnitId" ;
+            sh:node :UnitId ;
+            sh:path base:hasForeignKey ] .
+
+:Valuation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Valuation approach" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Approach" ;
+            sh:path :hasApproach ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of Jurisdiction type used" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "JurisdictionStandard" ;
+            sh:path :hasJurisdictionStandard ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "LoV for uncertainty" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Uncertainty" ;
+            sh:path :hasUncertainty ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Important keywords" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Keywords" ;
+            sh:path :hasKeywords ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date valuation has to be redone in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "PreviousValuationId" ;
+            sh:path :hasPreviousValuationId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Concluded assumptions" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Assumptions" ;
+            sh:path :hasAssumptions ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date valuation is valid from  in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Does a maintenance backlog exist (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "MaintenanceBacklog" ;
+            sh:path :hasMaintenanceBacklog ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Valuation of single tenant building (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "SingleTenant" ;
+            sh:path :hasSingleTenant ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "DocumentId" ;
+            sh:path :hasDocumentId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of Jurisdiction" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "JurisdictionType" ;
+            sh:path :hasJurisdictionType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Stating the energy efficiency class" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "EnergyEfficiency" ;
+            sh:path :hasEnergyEfficiency ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Discount rate included" ;
+            sh:maxCount 1 ;
+            sh:name "DiscountRate" ;
+            sh:path :hasDiscountRate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Discount premiums included" ;
+            sh:maxCount 1 ;
+            sh:name "DiscountPremiums" ;
+            sh:path :hasDiscountPremiums ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of professional valuation standard used" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ProfessionalStandard" ;
+            sh:path :hasProfessionalStandard ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "ValuationId" ;
+            sh:path :hasValuationId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of valuation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "ValuationType" ;
+            sh:path :hasValuationType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Description of valuation implementation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Description" ;
+            sh:path :hasDescription ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Existing constrains" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Constrains" ;
+            sh:path :hasConstrains ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Text field" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Text" ;
+            sh:path :hasText ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Space usage efficiency" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "SpaceEfficiency" ;
+            sh:path :hasSpaceEfficiency ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "URL if existent" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Url" ;
+            sh:path :hasUrl ;
+            sh:pattern "https?://(?:www.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9].[^s]{2,}|www.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9].[^s]{2,}|https?://(?:www.|(?!www))[a-zA-Z0-9]+.[^s]{2,}|www.[a-zA-Z0-9]+.[^s]{2,}" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of Accounting standard used" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "AccountingStandard" ;
+            sh:path :hasAccountingStandard ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Concluded special assumptions" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "SpecialAssumptions" ;
+            sh:path :hasSpecialAssumptions ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of valuation " ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Value of Valuation" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Value" ;
+            sh:path :hasValue ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit of valuation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "ValuationUnit" ;
+            sh:path :hasValuationUnit ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Amount of cash" ;
+            sh:maxCount 1 ;
+            sh:name "Liquidity" ;
+            sh:path :hasLiquidity ] .
+
+:ValuationBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValuationId" ;
+            sh:node :ValuationId ;
+            sh:path base:hasForeignKey ] .
+
+:ValuationIndividualAccount a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValuationId" ;
+            sh:node :ValuationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "IndividualAccountId" ;
+            sh:node :IndividualAccountId ;
+            sh:path base:hasForeignKey ] .
+
+:ValuationLand a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValuationId" ;
+            sh:node :ValuationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ] .
+
+:ValuationOperationalMeasurement a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Globally Unique Identifier number" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValuationId" ;
+            sh:node :ValuationId ;
+            sh:path base:hasForeignKey ] .
+
+:PortfolioId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:path :hasPortfolioId ] .
+

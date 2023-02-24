@@ -1,0 +1,596 @@
+@prefix : <http://www.ibpdi.org/ontologies/UserAndCustomerExperience#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:AvailableResource a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of workplace" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Available resources workplace" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "AvailableResourceId" ;
+            sh:path :hasAvailableResourceId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:$%!?0-cZ]+$" ] .
+
+:AvailableResourceWorkspace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Available resources workplace" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AvailableResourceId" ;
+            sh:node :AvailableResourceId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasForeignKey ] .
+
+:Booking a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Check in time yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "CheckInTime" ;
+            sh:path :hasCheckInTime ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Has the reservation been cancelled" ;
+            sh:maxCount 1 ;
+            sh:name "Cancelled" ;
+            sh:path :hasCancelled ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date reservation ends in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date reservation starts in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BookingId" ;
+            sh:node :BookingId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Check out time yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "CheckOutTime" ;
+            sh:path :hasCheckOutTime ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Date booking was created in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BookingDate" ;
+            sh:path :hasBookingDate ] .
+
+:BookingWorkspace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BookingId" ;
+            sh:node :BookingId ;
+            sh:path base:hasForeignKey ] .
+
+:Characteristic a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "CharacteristicId" ;
+            sh:path :hasCharacteristicId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of workplace" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:CharacteristicNeighbourhood a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "NeighbourhoodId" ;
+            sh:node :NeighbourhoodId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CharacteristicId" ;
+            sh:node :CharacteristicId ;
+            sh:path base:hasForeignKey ] .
+
+:CharacteristicWorkspace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CharacteristicId" ;
+            sh:node :CharacteristicId ;
+            sh:path base:hasForeignKey ] .
+
+:CustomerFile a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CustomerFileId" ;
+            sh:node :CustomerFileId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Metadata information about the file stored in JSON format. This could be for example resolution and ordinal for an image. For different file types different metadata can be stored here" ;
+            sh:maxCount 1 ;
+            sh:maxLength 1000 ;
+            sh:minLength 1 ;
+            sh:name "Metadata" ;
+            sh:path :hasMetadata ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of file" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "FileType" ;
+            sh:path :hasFileType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Link to file location" ;
+            sh:maxCount 1 ;
+            sh:maxLength 2050 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Link" ;
+            sh:path :hasLink ;
+            sh:pattern "https?://(?:www.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9].[^s]{2,}|www.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9].[^s]{2,}|https?://(?:www.|(?!www))[a-zA-Z0-9]+.[^s]{2,}|www.[a-zA-Z0-9]+.[^s]{2,}" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name for file" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:CustomerFileWorkArea a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkAreaId" ;
+            sh:node :WorkAreaId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CustomerFileId" ;
+            sh:node :CustomerFileId ;
+            sh:path base:hasForeignKey ] .
+
+:CustomerFileWorkspace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "CustomerFileId" ;
+            sh:node :CustomerFileId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasForeignKey ] .
+
+:Neighbourhood a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific color code" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Color" ;
+            sh:path :hasColor ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The neighbourhood is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The neighbourhood is valid from in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of neighbourhood" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "NeighbourhoodId" ;
+            sh:node :NeighbourhoodId ;
+            sh:path base:hasPrimaryKey ] .
+
+:NeighbourhoodWorkspace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "NeighbourhoodId" ;
+            sh:node :NeighbourhoodId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasForeignKey ] .
+
+:Tag a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "TagId" ;
+            sh:node :TagId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of tag" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:TagNeighbourhood a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "NeighbourhoodId" ;
+            sh:node :NeighbourhoodId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "TagId" ;
+            sh:node :TagId ;
+            sh:path base:hasForeignKey ] .
+
+:WorkArea a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of work space" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The workspace template is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkAreaTypeId" ;
+            sh:node :WorkAreaTypeId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkAreaId" ;
+            sh:node :WorkAreaId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AreaMeasurementId" ;
+            sh:node :AreaMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific work area code" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minLength 1 ;
+            sh:name "WorkAreaCode" ;
+            sh:path :hasWorkAreaCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The workspace template is valid from in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ] .
+
+:WorkAreaFloor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkAreaId" ;
+            sh:node :WorkAreaId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "FloorId" ;
+            sh:node :FloorId ;
+            sh:path base:hasForeignKey ] .
+
+:WorkAreaSpace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkAreaId" ;
+            sh:node :WorkAreaId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SpaceId" ;
+            sh:node :SpaceId ;
+            sh:path base:hasForeignKey ] .
+
+:WorkAreaType a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The workspace template is valid from in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The workspace template is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of work space template (\"type of workspace\")" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Color code of specific workspace template" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Color" ;
+            sh:path :hasColor ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "WorkAreaTypeId" ;
+            sh:path :hasWorkAreaTypeId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:Workspace a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of workplace" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "WorkspaceType" ;
+            sh:path :hasWorkspaceType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The workplace is valid until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Is the workplace bookable (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "Bookable" ;
+            sh:path :hasBookable ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:integer ;
+            sh:description "Capacity of workplace" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "Capacity" ;
+            sh:path :hasCapacity ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkAreaId" ;
+            sh:node :WorkAreaId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific name of workplace" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "User specific work space code" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minLength 1 ;
+            sh:name "WorkspaceCode" ;
+            sh:path :hasWorkspaceCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "The workplace is valid from in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ] .
+
+:WorkspaceSensor a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:node :WorkspaceId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SensorId" ;
+            sh:node :SensorId ;
+            sh:path base:hasForeignKey ] .
+
+:BookingId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "BookingId" ;
+            sh:path :hasBookingId ] .
+
+:TagId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "TagId" ;
+            sh:path :hasTagId ] .
+
+:CustomerFileId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "CustomerFileId" ;
+            sh:path :hasCustomerFileId ] .
+
+:NeighbourhoodId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "NeighbourhoodId" ;
+            sh:path :hasNeighbourhoodId ] .
+
+:WorkAreaId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "WorkAreaId" ;
+            sh:path :hasWorkAreaId ] .
+
+:WorkspaceId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "WorkspaceId" ;
+            sh:path :hasWorkspaceId ] .
+

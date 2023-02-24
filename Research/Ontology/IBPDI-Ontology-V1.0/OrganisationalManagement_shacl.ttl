@@ -1,0 +1,1175 @@
+@prefix : <http://www.ibpdi.org/ontologies/OrganisationalManagement#> .
+@prefix base: <http://www.ibpdi.org/ontologies/OntologyBase#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+: a owl:Ontology .
+
+:Address a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Any official settlement including cities, towns, villages, hamlets, localities, etc." ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "City" ;
+            sh:path :hasCity ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "House number of the street" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "HouseNumber" ;
+            sh:path :hasHouseNumber ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of address" ;
+            sh:maxCount 1 ;
+            sh:maxLength 70 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "AddressType" ;
+            sh:path :hasAddressType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Sovereign nations and their dependent territories, anything with an ISO-3166 ALPHA-2 code" ;
+            sh:in ( "AF" "AL" "DZ" "AS" "AD" "AO" "AI" "AQ" "AG" "AR" "AM" "AW" "AU" "AT" "AZ" "BS" "BH" "BD" "BB" "BY" "BE" "BZ" "BJ" "BM" "BT" "BO" "BQ" "BA" "BW" "BV" "BR" "IO" "BN" "BG" "BF" "BI" "CV" "KH" "CM" "CA" "KY" "CF" "TD" "CL" "CN" "CX" "CC" "CO" "KM" "CD" "CG" "CK" "CR" "HR" "CU" "CW" "CY" "CZ" "CI" "DK" "DJ" "DM" "DO" "EC" "EG" "SV" "GQ" "ER" "EE" "SZ" "ET" "FK" "FO" "FJ" "FI" "FR" "GF" "PF" "TF" "GA" "GM" "GE" "DE" "GH" "GI" "GR" "GL" "GD" "GP" "GU" "GT" "GG" "GN" "GW" "GY" "HT" "HM" "VA" "HN" "HK" "HU" "IS" "IN" "ID" "IR" "IQ" "IE" "IM" "IL" "IT" "JM" "JP" "JE" "JO" "KZ" "KE" "KI" "KP" "KR" "KW" "KG" "LA" "LV" "LB" "LS" "LR" "LY" "LI" "LT" "LU" "MO" "MG" "MW" "MY" "MV" "ML" "MT" "MH" "MQ" "MR" "MU" "YT" "MX" "FM" "MD" "MC" "MN" "ME" "MS" "MA" "MZ" "MM" "NA" "NR" "NP" "NL" "NC" "NZ" "NI" "NE" "NG" "NU" "NF" "MP" "NO" "OM" "PK" "PW" "PS" "PA" "PG" "PY" "PE" "PH" "PN" "PL" "PT" "PR" "QA" "MK" "RO" "RU" "RW" "RE" "BL" "SH" "KN" "LC" "MF" "PM" "VC" "WS" "SM" "ST" "SA" "SN" "RS" "SC" "SL" "SG" "SX" "SK" "SI" "SB" "SO" "ZA" "GS" "SS" "ES" "LK" "SD" "SR" "SJ" "SE" "CH" "SY" "TW" "TJ" "TZ" "TH" "TL" "TG" "TK" "TO" "TT" "TN" "TR" "TM" "TC" "TV" "UG" "UA" "AE" "GB" "UM" "US" "UY" "UZ" "VU" "VE" "VN" "VG" "VI" "WF" "EH" "YE" "ZM" "ZW" "AX" ) ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Country" ;
+            sh:path :hasCountry ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "First-level administrative division, depending on the continent or country if might be named differently." ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "StateProvincePrefecture" ;
+            sh:path :hasStateProvincePrefecture ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Latitude coordinate in case of geographic coordinates" ;
+            sh:maxCount 1 ;
+            sh:name "Latitude" ;
+            sh:path :hasLatitude ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Additional information that can not be displayed in the other attributes such as Building, Door Nr. etc. " ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minLength 1 ;
+            sh:name "AdditionalInformation" ;
+            sh:path :hasAdditionalInformation ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "AddressId" ;
+            sh:path :hasAddressId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of the street" ;
+            sh:maxCount 1 ;
+            sh:maxLength 150 ;
+            sh:minLength 1 ;
+            sh:name "StreetName" ;
+            sh:path :hasStreetName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Boroughs or districts within a city that serve some official purpose" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "District" ;
+            sh:path :hasDistrict ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:decimal ;
+            sh:description "Longitude coordinate in case of geographic coordinates" ;
+            sh:maxCount 1 ;
+            sh:name "Longitude" ;
+            sh:path :hasLongitude ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unit number" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ApartmentOrUnit" ;
+            sh:path :hasApartmentOrUnit ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Postal codes used for mail sorting" ;
+            sh:maxCount 1 ;
+            sh:maxLength 15 ;
+            sh:minLength 1 ;
+            sh:name "PostalCode" ;
+            sh:path :hasPostalCode ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:AddressBuilding a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AddressId" ;
+            sh:node :AddressId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ] .
+
+:AddressContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AddressId" ;
+            sh:node :AddressId ;
+            sh:path base:hasForeignKey ] .
+
+:AddressLand a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AddressId" ;
+            sh:node :AddressId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ] .
+
+:AddressOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AddressId" ;
+            sh:node :AddressId ;
+            sh:path base:hasForeignKey ] .
+
+:AddressRentalUnit a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AddressId" ;
+            sh:node :AddressId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ] .
+
+:AddressSite a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "AddressId" ;
+            sh:node :AddressId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ] .
+
+:Contact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Fax number of contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Fax" ;
+            sh:path :hasFax ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Job title of the contact to make sure the contact is addressed correctly in sales calls, email, and marketing campaigns" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "JobTitle" ;
+            sh:path :hasJobTitle ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "First Name of Business Partner or responsible contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "FirstName" ;
+            sh:path :hasFirstName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "For internal reference to recored employed until in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidUntil" ;
+            sh:path :hasValidUntil ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Phone number of contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Telephone" ;
+            sh:path :hasTelephone ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasPrimaryKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Employee ID or number for the contact for reference in orders, service cases, or other communications with the contact's organisation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "EmployeeId" ;
+            sh:path :hasEmployeeId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Title of Business Partner" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Salutation" ;
+            sh:path :hasSalutation ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:description "Link to organisation" ;
+            sh:maxCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "For internal reference to recored employed since in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "ValidFrom" ;
+            sh:path :hasValidFrom ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Email address of contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minLength 1 ;
+            sh:name "Email" ;
+            sh:path :hasEmail ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Surname of Business Partner or responsible contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "LastName" ;
+            sh:path :hasLastName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:Organisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Start date of fiscal year for organisation in yyyy-mm-ddThh:mm:ssZ form (conform to ISO 8061)" ;
+            sh:maxCount 1 ;
+            sh:name "FiscalYearStartDate" ;
+            sh:path :hasFiscalYearStartDate ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Industry of organisation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Industry" ;
+            sh:path :hasIndustry ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Email address of contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 100 ;
+            sh:minLength 1 ;
+            sh:name "Email" ;
+            sh:path :hasEmail ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Name of organization" ;
+            sh:maxCount 1 ;
+            sh:maxLength 200 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "Name" ;
+            sh:path :hasName ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Phone number of contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Telephone" ;
+            sh:path :hasTelephone ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "OrganisationId" ;
+            sh:path :hasOrganisationId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Parent (guid or id) of entity" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "ParentId" ;
+            sh:path :hasParentId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:boolean ;
+            sh:description "Is the organisation an legal entity (Y/N)" ;
+            sh:maxCount 1 ;
+            sh:name "LegalEntity" ;
+            sh:path :hasLegalEntity ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Fax number of contact person" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "Fax" ;
+            sh:path :hasFax ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Vat number of organisation" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minLength 1 ;
+            sh:name "VatNumber" ;
+            sh:path :hasVatNumber ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:Role a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:maxLength 50 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RoleId" ;
+            sh:path :hasRoleId ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:description "Type of role" ;
+            sh:maxCount 1 ;
+            sh:maxLength 75 ;
+            sh:minCount 1 ;
+            sh:minLength 1 ;
+            sh:name "RoleType" ;
+            sh:path :hasRoleType ;
+            sh:pattern "[^<>[]{}|/()°\"&=+§^~:;$%!?0-cZ]+$" ] .
+
+:RoleBuildingContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleBuildingOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "BuildingId" ;
+            sh:node :BuildingId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleComponentContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ComponentId" ;
+            sh:node :ComponentId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleComponentOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ComponentId" ;
+            sh:node :ComponentId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleComponentTypeContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ComponentTypeId" ;
+            sh:node :ComponentTypeId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleComponentTypeOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ComponentTypeId" ;
+            sh:node :ComponentTypeId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleEmissionFactorContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Link to role" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleEmissionFactorOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "EmissionFactorId" ;
+            sh:node :EmissionFactorId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Link to role" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleLandContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleLandOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "LandId" ;
+            sh:node :LandId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleOperationalMeasurementContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleOperationalMeasurementOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be define" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OperationalMeasurementId" ;
+            sh:node :OperationalMeasurementId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RolePortfolioContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ] .
+
+:RolePortfolioOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioId" ;
+            sh:node :PortfolioId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RolePortfolioStrategyContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioStrategyId" ;
+            sh:node :PortfolioStrategyId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RolePortfolioStrategyOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "PortfolioStrategyId" ;
+            sh:node :PortfolioStrategyId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleRentalContractContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:node :RentalContractId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleRentalContractOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalContractId" ;
+            sh:node :RentalContractId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleRentalUnitContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleRentalUnitOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RentalUnitId" ;
+            sh:node :RentalUnitId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSiteContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSiteOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SiteId" ;
+            sh:node :SiteId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSubComponentTypeContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SubComponentTypeId" ;
+            sh:node :SubComponentTypeId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSubComponentTypeOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SubComponentTypeId" ;
+            sh:node :SubComponentTypeId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSubSubComponentTypeContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SubSubComponentTypeId" ;
+            sh:node :SubSubComponentTypeId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSubSubComponentTypeOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SubSubComponentTypeId" ;
+            sh:node :SubSubComponentTypeId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSystemContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SystemId" ;
+            sh:node :SystemId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleSystemOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "SystemId" ;
+            sh:node :SystemId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleTenantCommunicationContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "TenantCommunicationId" ;
+            sh:node :TenantCommunicationId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleTenantCommunicationOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "TenantCommunicationId" ;
+            sh:node :TenantCommunicationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleValuationContact a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValuationId" ;
+            sh:node :ValuationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ContactId" ;
+            sh:node :ContactId ;
+            sh:path base:hasForeignKey ] .
+
+:RoleValuationOrganisation a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "OrganisationId" ;
+            sh:node :OrganisationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "ValuationId" ;
+            sh:node :ValuationId ;
+            sh:path base:hasForeignKey ],
+        [ a sh:PropertyShape ;
+            sh:description "Unique identifier either coming from previous system otherwise it needs to be defined" ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:name "RoleId" ;
+            sh:node :RoleId ;
+            sh:path base:hasForeignKey ] .
+
+:ContactId a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:name "ContactId" ;
+            sh:path :hasContactId ] .
+
