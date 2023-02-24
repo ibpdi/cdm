@@ -201,7 +201,6 @@
             }
           ],
           "attributeContext": "RentalOption/attributeContext/RentalOption/RentalContractId/_generatedAttributeSet/_generatedAttributeRound0/_foreignKey",
-          "isPrimaryKey": true,
           "dataFormat": "String",
           "description": "Unique identifier either coming from previous system otherwise it needs to be defined",
           "maximumLength": 50

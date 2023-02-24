@@ -93,15 +93,7 @@
       "fromEntity": "RentalOption.cdm.json/RentalOption",
       "fromEntityAttribute": "RentalContractId",
       "toEntity": "RentalContract.cdm.json/RentalContract",
-      "toEntityAttribute": "RentalContractId",
-      "exhibitsTraits": [
-        {
-          "traitReference": "is.identifiedBy",
-          "arguments": [
-            "this.attribute"
-          ]
-        }
-      ]
+      "toEntityAttribute": "RentalContractId"
     },
     {
       "fromEntity": "RentalPayment.cdm.json/RentalPayment",
